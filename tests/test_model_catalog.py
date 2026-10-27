@@ -40,17 +40,15 @@ class ModelCatalogue(unittest.TestCase):
         lock = (ROOT / '.github/workflows/issue-triage.lock.yml').read_text(encoding='utf-8')
         match = re.search(r"GH_AW_CODEX_CONFIG_JSON: '([^\n]+)'", lock)
         config = json.loads(match.group(1))
-        for feature in ('goals', 'tool_search'):
+        for feature in ('goals', 'tool_search', 'code_mode', 'code_mode_only'):
             self.assertIs(config['overrides']['features'][feature], False)
-        features = config['overrides']['features']
-        self.assertTrue(features['code_mode_only'])
-        self.assertTrue(features['code_mode']['enabled'])
-        self.assertEqual(features['code_mode']['excluded_tool_namespaces'],
-                         ['functions', 'multi_agent_v1', 'multi_agent_v2'])
-        self.assertEqual(features['code_mode']['direct_only_tool_namespaces'], ['mcp__safeoutputs'])
         source = (ROOT / '.github/workflows/issue-triage.md').read_text(encoding='utf-8')
-        self.assertIn('`submit_triage` is a tool, not a resource', source)
-        self.assertIn('If a tool call fails, do not repeat it', source)
+        self.assertIn('not a resource URI', source)
+        self.assertIn('If submission fails, do not retry', source)
+        self.assertIn('resource-reading, user-input, goal, delegation or tool-search tools', source)
+        self.assertIn('ask the workflow operator', source)
+        self.assertIn('Plain-text output does not count as submission', source)
+        self.assertIn('including a null label/comment for no action, then stop', source)
         self.assertIn('call `report_incomplete` once, then stop', source)
         self.assertEqual(source.count('model: gpt-5-mini'), 2)
 

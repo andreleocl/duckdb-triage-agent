@@ -22,10 +22,8 @@ engine:
   config: |
     model_reasoning_effort = "low"
     features.goals = false
-    features.code_mode.enabled = true
-    features.code_mode_only = true
-    features.code_mode.excluded_tool_namespaces = ["functions", "multi_agent_v1", "multi_agent_v2"]
-    features.code_mode.direct_only_tool_namespaces = ["mcp__safeoutputs"]
+    features.code_mode = false
+    features.code_mode_only = false
     features.tool_search = false
     model_catalog_json = "/tmp/gh-aw/model-catalog/model-catalog.json"
 timeout-minutes: 10
@@ -183,18 +181,23 @@ ${{ steps.prepare.outputs.skill }}
 
 ## Workflow transport
 
-The skill and issue are already included in this prompt. Do not load skills,
-list or read MCP resources, create goals, or search for tools. Use the provided
-safeoutputs submission tool directly; `submit_triage` is a tool, not a resource
-URI. Do not invent server names such as `r0` or `mcp__safeoutputs`.
-After a successful submission, stop. If a tool call fails, do not repeat it or
-try alternate server names: call `report_incomplete` once, then stop. If that
-error-reporting tool is unavailable or fails, stop with an error message.
+Assess the supplied issue using only the supplied skill and issue text. All
+required input is already included. Do not load skills or call resource-listing,
+resource-reading, user-input, goal, delegation or tool-search tools. Missing
+information in the report belongs in the proposed clarification comment; do not
+ask the workflow operator. Follow the skill's execution-error rule for unavailable
+linked context or missing/unreadable input.
 
-This environment has no shell, browsing or GitHub tools. Instead of saving a
-proposal or running the CLI validator yourself, call `submit_triage` exactly once
-with the skill's JSON object serialized in its `proposal` string. The trusted
-publisher runs the same validator. Submit a null label/comment for no action.
+Use the provided safeoutputs submission tool directly. Call `submit_triage`
+exactly once with the skill's JSON object serialized in its `proposal` string,
+including a null label/comment for no action, then stop. `submit_triage` is a tool,
+not a resource URI. Do not invent server names or alternate submission routes.
+Plain-text output does not count as submission.
+
+If submission fails, do not retry: call `report_incomplete` once, then stop.
+If that error-reporting tool is unavailable or fails, stop with an error message.
+This environment has no shell, browsing or GitHub tools. Do not save a proposal
+or run the CLI validator yourself; the trusted publisher runs the validator.
 When requesting data, ask for a small, shareable sample that still triggers the
 reported failure. Do not invent a row count, row range, file-size limit, or other
 sample-size requirement. Numeric row/record counts in public comments are rejected;
