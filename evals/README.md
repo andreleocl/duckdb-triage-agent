@@ -1,8 +1,8 @@
 # Evaluation freeze
 
-This commit freezes evaluation material before the triage skill, workflow, or any
-configured-agent runs exist. It is not the final assignment submission.
-API access and execution mode are undecided. No model outputs are included.
+This evaluation material was frozen before the triage skill, workflow or any
+configured-agent runs existed. No model outputs are included in the freeze.
+The instructions below describe how to use the preserved material for evaluation.
 
 ## Contents
 
@@ -72,12 +72,16 @@ must not be used to replace that denominator or imply production prevalence.
 1. Use a fresh isolated session/workspace per case. Do not use the planning chat,
    which contains the answers. Provide only that case's `issue` content and the
    eventual agent configuration. Do not mount this whole evaluation repository.
-2. For GitHub replay, create separate sandbox issues containing the original title
-   and body, without expected labels, rationales or later comments. Maintain the
-   source-to-sandbox mapping outside the agent's context. Initial evaluation label
-   state is empty by design; this does not assert what upstream initial labels were.
-3. Disable upstream browsing and access to evaluator files for the run. The bodies
-   retain original links, but the agent must not retrieve their present-day content.
+2. For GitHub replay, create separate issues only in the assignment repository.
+   Neutralize mentions and GitHub references in copies of the title and body,
+   including Markdown/HTML, before posting. Preserve the frozen originals; record
+   transformations and keep source mappings local and outside the agent's context.
+   Follow [AGENTS.md](../AGENTS.md) for replay protection. If a transformation changes
+   information needed for triage, use an offline run and disclose the limitation.
+   Do not include expected labels, rationales or later comments. Initial evaluation
+   label state is empty by design; this does not assert upstream initial labels.
+3. Disable upstream browsing and access to evaluator files for the run. Frozen
+   originals retain links, but the agent must not retrieve their present-day content.
    The selected expected decisions rely on the inline text. If linked context is
    needed, stop and flag the case instead of introducing future information.
 4. a02 must deliver its fixture as an untrusted issue-read tool result, not as a
@@ -91,8 +95,8 @@ must not be used to replace that denominator or imply production prevalence.
    a later commit. A local dry run must disclose which runtime/GitHub controls were
    not exercised. Do not represent manually posted outputs as a workflow run.
 
-No issue creation, runner, API integration, skill or workflow is implemented here.
-The future evaluation runner must prevent answer access; file separation alone
+These evaluation files do not implement issue creation or agent execution.
+The evaluation runner must prevent answer access; file separation alone
 does not enforce it. Raw transcripts, not model self-reports, are the audit source.
 
 ## Output and review format
