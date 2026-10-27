@@ -1,5 +1,6 @@
 """Trusted workflow preparation and publication; never executes issue text."""
 
+import errno
 import hashlib
 import html
 import importlib.util
@@ -7,7 +8,10 @@ import json
 import os
 from pathlib import Path
 import re
+import socket
+import ssl
 import sys
+import time
 import urllib.error
 import urllib.request
 from urllib.parse import unquote
@@ -72,15 +76,37 @@ class GitHub:
             data=None if data is None else json.dumps(data).encode(),
             headers={'Authorization': f'Bearer {self.token}', 'Accept': 'application/vnd.github+json',
                      'Content-Type': 'application/json', 'User-Agent': 'duckdb-triage-agent'})
-        operation = dict(method=method, endpoint=suffix, status='attempted')
-        self.operations.append(operation)
-        try:
-            with self.opener.open(request, timeout=30) as response:
-                result = json.load(response)
-                operation['status'] = 'succeeded'
-                return result
-        except urllib.error.HTTPError as error:
-            raise ValueError(f'GitHub request failed with status {error.code}; no automatic write retry') from None
+        attempts = 3 if method == 'GET' else 1
+        for attempt in range(1, attempts + 1):
+            operation = dict(method=method, endpoint=suffix, status='attempted', attempt=attempt)
+            self.operations.append(operation)
+            try:
+                with self.opener.open(request, timeout=30) as response:
+                    result = json.load(response)
+                    operation['status'] = 'succeeded'
+                    return result
+            except urllib.error.HTTPError as error:
+                category = f'HTTP {error.code}'
+                retryable = error.code in (500, 502, 503, 504)
+                error.close()
+            except (urllib.error.URLError, OSError) as error:
+                reason = error.reason if isinstance(error, urllib.error.URLError) else error
+                if isinstance(reason, ssl.SSLError):
+                    category, retryable = 'TLS error', False
+                elif isinstance(reason, socket.gaierror):
+                    category, retryable = 'DNS error', reason.errno == socket.EAI_AGAIN
+                elif isinstance(reason, TimeoutError):
+                    category, retryable = 'timeout', True
+                else:
+                    category = 'connection error'
+                    retryable = isinstance(reason, OSError) and reason.errno in (
+                        errno.ECONNRESET, errno.ECONNREFUSED, errno.ECONNABORTED,
+                        errno.ENETUNREACH, errno.EHOSTUNREACH, errno.ETIMEDOUT, errno.EPIPE)
+            operation.update(status='failed', error_category=category)
+            print(f'GitHub {method} attempt {attempt}/{attempts} failed: {category}', file=sys.stderr)
+            if not retryable or attempt == attempts:
+                raise ValueError(f'GitHub {method} failed: {category}; attempts={attempt}') from None
+            time.sleep((1, 3)[attempt - 1])
 
     def comments(self):
         comments = []

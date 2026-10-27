@@ -103,7 +103,7 @@ class WorkflowBehavior(unittest.TestCase):
                         dict(comment='Visit https://example.invalid/upload'),
                         dict(comment='Ask &#64;someone'), dict(comment='Ask %40someone'),
                         dict(comment='<img src=x>'),
-                        dict(comment='Please share 5–20 rows of sample data.')]:
+                        dict(comment='Please share 5â€“20 rows of sample data.')]:
             invalid.append(self.output({**self.proposal, **changes}))
         for output in invalid:
             with self.subTest(output=output), self.assertRaises(ValueError):
@@ -144,6 +144,64 @@ class WorkflowBehavior(unittest.TestCase):
         self.client.history[0]['user'] = dict(login='reporter', type='User')
         self.client.issue['labels'] = []
         self.assertEqual(self.publish()['actions'], ['add_comment', 'add_label'])
+
+    def test_read_retries_transient_failures_then_succeeds(self):
+        client = runtime.GitHub('fake-token', 7)
+        failures = [runtime.urllib.error.URLError(runtime.socket.gaierror(runtime.socket.EAI_AGAIN, 'private detail')),
+                    runtime.urllib.error.HTTPError('private-url', 503, 'private detail', {}, None)]
+        with patch.object(client.opener, 'open', side_effect=failures + [io.BytesIO(b'{"ok": true}')]) as opened, \
+                patch.object(runtime.time, 'sleep') as sleep, patch('sys.stderr', new_callable=io.StringIO) as log:
+            self.assertEqual(client.call('GET'), {'ok': True})
+            self.assertEqual(opened.call_count, 3)
+            self.assertEqual([c.args[0] for c in sleep.call_args_list], [1, 3])
+            self.assertNotIn('private', log.getvalue())
+            self.assertNotIn('fake-token', log.getvalue())
+        self.assertEqual([x['status'] for x in client.operations], ['failed', 'failed', 'succeeded'])
+
+    def test_read_stops_after_three_timeouts(self):
+        client = runtime.GitHub('fake-token', 7)
+        with patch.object(client.opener, 'open', side_effect=TimeoutError('private detail')) as opened, \
+                patch.object(runtime.time, 'sleep') as sleep, patch('sys.stderr', new_callable=io.StringIO):
+            with self.assertRaisesRegex(ValueError, 'attempts=3'):
+                client.call('GET')
+            self.assertEqual(opened.call_count, 3)
+            self.assertEqual(sleep.call_count, 2)
+
+    def test_permanent_read_errors_do_not_retry(self):
+        errors = [runtime.urllib.error.HTTPError('private-url', code, 'private', {}, None)
+                  for code in (400, 401, 403, 404, 429)]
+        errors += [runtime.urllib.error.URLError(runtime.ssl.SSLCertVerificationError('private')),
+                   runtime.urllib.error.URLError(runtime.socket.gaierror(runtime.socket.EAI_NONAME, 'private')),
+                   runtime.urllib.error.URLError('unclassified failure')]
+        for error in errors:
+            with self.subTest(error=type(error).__name__):
+                client = runtime.GitHub('fake-token', 7)
+                with patch.object(client.opener, 'open', side_effect=error) as opened, \
+                        patch.object(runtime.time, 'sleep') as sleep, patch('sys.stderr', new_callable=io.StringIO):
+                    with self.assertRaises(ValueError):
+                        client.call('GET')
+                    self.assertEqual(opened.call_count, 1)
+                    sleep.assert_not_called()
+
+    def test_writes_never_retry_transient_errors(self):
+        for suffix in ('/comments', '/labels'):
+            for error in (TimeoutError(), runtime.urllib.error.HTTPError('url', 503, '', {}, None)):
+                client = runtime.GitHub('fake-token', 7)
+                with patch.object(client.opener, 'open', side_effect=error) as opened, \
+                        patch.object(runtime.time, 'sleep') as sleep, patch('sys.stderr', new_callable=io.StringIO):
+                    with self.assertRaises(ValueError):
+                        client.call('POST', suffix, {})
+                    self.assertEqual(opened.call_count, 1)
+                    sleep.assert_not_called()
+
+    def test_invalid_json_does_not_retry(self):
+        client = runtime.GitHub('fake-token', 7)
+        with patch.object(client.opener, 'open', return_value=io.BytesIO(b'not json')) as opened, \
+                patch.object(runtime.time, 'sleep') as sleep:
+            with self.assertRaises(ValueError):
+                client.call('GET')
+            self.assertEqual(opened.call_count, 1)
+            sleep.assert_not_called()
 
     def test_transport_cannot_call_other_endpoints_or_follow_redirects(self):
         client = runtime.GitHub('fake-token', 7)
