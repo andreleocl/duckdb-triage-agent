@@ -25,6 +25,8 @@ participant notifications are outside its scope.
    rules for preserving evaluation evidence.
 4. Read [CONTRIBUTING.md](CONTRIBUTING.md) for AI-assisted contributions, review
    expectations and replay protection.
+5. Read the [workflow guide](docs/WORKFLOW.md) for execution, API-key setup,
+   manual runs, stopping and audit evidence.
 
 ## Getting started
 
@@ -39,7 +41,9 @@ python -m unittest discover -s evals -p "test_*.py" -v
 ```
 
 These checks run offline without GitHub credentials or model access. They test
-proposal validation and scoring logic, and verify the frozen data's integrity.
+proposal validation, mocked publication and scoring logic, and verify the frozen
+data's integrity. The same checks run on pushes and pull requests through
+`checks.yml`, without model access or issue changes.
 They do not run the agent, measure its decision quality or prove that GitHub
 permissions are enforced.
 
@@ -51,6 +55,13 @@ permissions are enforced.
     scripts/validate_output.py  Offline proposal and target validation
 .github/
     CODEOWNERS                  Review ownership
+    aw/actions-lock.json        Compiler action-version records
+    workflows/
+        checks.yml             Offline checks on pushes and pull requests
+        issue-triage.md         Manual Codex workflow source
+        issue-triage.lock.yml   Compiled GitHub Actions workflow
+docs/WORKFLOW.md                Setup, execution and stopping guide
+scripts/triage_runtime.py       Trusted preparation and publication
 evals/
     README.md                   Evaluation and replay instructions
     VALIDATION.md               Recorded freeze validation
@@ -65,6 +76,7 @@ evals/
         manifest.json           Frozen file hashes
 tests/
     test_validate_output.py     Output-validator tests
+    test_triage_runtime.py      Offline workflow and publication tests
 AGENTS.md                      Repository instructions
 CONTRIBUTING.md                Contribution and AI-use policy
 README.md                      Project overview

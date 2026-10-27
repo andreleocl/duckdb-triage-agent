@@ -1,5 +1,5 @@
 # Owner review is project policy; enforced approval also needs GitHub rules.
-# Cover this ownership file, future workflow files, agent instructions and evidence.
+# Cover this ownership file, workflow files, agent instructions and evidence.
 /.github/          @andreleocl
 /.claude/          @andreleocl
 /AGENTS.md         @andreleocl
@@ -7,3 +7,5 @@
 /README.md         @andreleocl
 /tests/            @andreleocl
 /evals/            @andreleocl
+/scripts/          @andreleocl
+/docs/             @andreleocl

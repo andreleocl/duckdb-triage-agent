@@ -11,7 +11,9 @@ follow upstream links or notify its participants.
 | --- | --- |
 | `.claude/skills/duckdb-triage/SKILL.md` | Triage procedure and output contract |
 | `.claude/skills/duckdb-triage/scripts/` | Offline proposal validation |
-| `tests/` | Validator tests with invented proposals |
+| `.github/workflows/` | Offline CI checks, manual Codex workflow and compiled lock file |
+| `scripts/` | Trusted report preparation and publication |
+| `tests/` | Offline validator and workflow tests |
 | `evals/` | Evaluation instructions, scorer and scorer tests |
 | `evals/golden/` | Frozen inputs, expectations, provenance and hashes |
 
@@ -21,6 +23,8 @@ its use. Do not assume automatic discovery at this location.
 ## Build and test
 
 No application build is needed. Use Python 3.10+ and its standard library.
+After workflow changes, compile with `gh aw compile issue-triage --strict --no-check-update`
+using gh-aw v0.93.5. Never hand-edit the generated lock file.
 Run relevant checks before committing:
 
 ```sh
