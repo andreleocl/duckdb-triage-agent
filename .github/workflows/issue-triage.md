@@ -22,7 +22,10 @@ engine:
   config: |
     model_reasoning_effort = "low"
     features.goals = false
-    features.code_mode = false
+    features.code_mode.enabled = true
+    features.code_mode_only = true
+    features.code_mode.excluded_tool_namespaces = ["functions", "multi_agent_v1", "multi_agent_v2"]
+    features.code_mode.direct_only_tool_namespaces = ["mcp__safeoutputs"]
     features.tool_search = false
     model_catalog_json = "/tmp/gh-aw/model-catalog/model-catalog.json"
 timeout-minutes: 10
@@ -192,6 +195,9 @@ This environment has no shell, browsing or GitHub tools. Instead of saving a
 proposal or running the CLI validator yourself, call `submit_triage` exactly once
 with the skill's JSON object serialized in its `proposal` string. The trusted
 publisher runs the same validator. Submit a null label/comment for no action.
+When requesting data, ask for a small, shareable sample that still triggers the
+reported failure. Do not invent a row count, row range, file-size limit, or other
+sample-size requirement unless the supplied report establishes why it is needed.
 Keep a request comment below 1,000 characters to allow for bot attribution within
 the overall 1,200-character limit. Do not add attribution or hidden markers yourself.
 Do not request another action, repository, issue or tool. Missing context or tool

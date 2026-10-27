@@ -40,13 +40,26 @@ class ModelCatalogue(unittest.TestCase):
         lock = (ROOT / '.github/workflows/issue-triage.lock.yml').read_text(encoding='utf-8')
         match = re.search(r"GH_AW_CODEX_CONFIG_JSON: '([^\n]+)'", lock)
         config = json.loads(match.group(1))
-        for feature in ('goals', 'code_mode', 'tool_search'):
+        for feature in ('goals', 'tool_search'):
             self.assertIs(config['overrides']['features'][feature], False)
+        features = config['overrides']['features']
+        self.assertTrue(features['code_mode_only'])
+        self.assertTrue(features['code_mode']['enabled'])
+        self.assertEqual(features['code_mode']['excluded_tool_namespaces'],
+                         ['functions', 'multi_agent_v1', 'multi_agent_v2'])
+        self.assertEqual(features['code_mode']['direct_only_tool_namespaces'], ['mcp__safeoutputs'])
         source = (ROOT / '.github/workflows/issue-triage.md').read_text(encoding='utf-8')
         self.assertIn('`submit_triage` is a tool, not a resource', source)
         self.assertIn('If a tool call fails, do not repeat it', source)
         self.assertIn('call `report_incomplete` once, then stop', source)
         self.assertEqual(source.count('model: gpt-5-mini'), 2)
+
+    def test_sample_request_has_no_invented_size_requirement(self):
+        source = (ROOT / '.github/workflows/issue-triage.md').read_text(encoding='utf-8')
+        self.assertIn('small, shareable sample that still triggers the', source)
+        self.assertIn('Do not invent a row count, row range, file-size limit', source)
+        self.assertIn('unless the supplied report establishes why it is needed', source)
+
 
     def test_detector_timeout_patch_and_dependency_drift(self):
         workflow = (ROOT / '.github/workflows/issue-triage.md').read_text(encoding='utf-8')
