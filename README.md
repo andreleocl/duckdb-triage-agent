@@ -23,6 +23,8 @@ participant notifications are outside its scope.
    and 3 adversarial cases, understand the rubric and reproduce evaluation checks.
 3. Read [AGENTS.md](AGENTS.md) for repository conventions, test commands and
    rules for preserving evaluation evidence.
+4. Read [CONTRIBUTING.md](CONTRIBUTING.md) for AI-assisted contributions, review
+   expectations and replay protection.
 
 ## Getting started
 
@@ -47,6 +49,8 @@ permissions are enforced.
 .claude/skills/duckdb-triage/
     SKILL.md                    Triage procedure and proposal contract
     scripts/validate_output.py  Offline proposal and target validation
+.github/
+    CODEOWNERS                  Review ownership
 evals/
     README.md                   Evaluation and replay instructions
     VALIDATION.md               Recorded freeze validation
@@ -62,6 +66,7 @@ evals/
 tests/
     test_validate_output.py     Output-validator tests
 AGENTS.md                      Repository instructions
+CONTRIBUTING.md                Contribution and AI-use policy
 README.md                      Project overview
 ```
 

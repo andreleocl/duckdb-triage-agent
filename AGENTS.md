@@ -45,3 +45,4 @@ python -m unittest discover -s evals -p "test_*.py" -v
   copies, including Markdown/HTML. Keep source mappings local, preserve originals,
   and log transformations. Test notification protection before posting; use an
   offline run if sanitization changes information needed for triage.
+- Follow [CONTRIBUTING.md](CONTRIBUTING.md) for AI disclosure and contribution review.

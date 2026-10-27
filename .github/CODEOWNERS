@@ -1,0 +1,9 @@
+# Owner review is project policy; enforced approval also needs GitHub rules.
+# Cover this ownership file, future workflow files, agent instructions and evidence.
+/.github/          @andreleocl
+/.claude/          @andreleocl
+/AGENTS.md         @andreleocl
+/CONTRIBUTING.md   @andreleocl
+/README.md         @andreleocl
+/tests/            @andreleocl
+/evals/            @andreleocl
