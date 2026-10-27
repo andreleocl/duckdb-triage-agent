@@ -52,6 +52,18 @@ class OutputValidation(unittest.TestCase):
             with self.subTest(comment=comment), self.assertRaises(ValueError):
                 self.check({**self.request(), 'comment': comment})
 
+    def test_numeric_sample_counts_rejected(self):
+        for comment in ('Please share 5–20 rows.', 'Please share 5-20 rows.',
+                        'Please share 5 to 20 records.', 'Send a 10-row sample.',
+                        'Please share twenty rows.', 'Please share 1,000 records.'):
+            with self.subTest(comment=comment), self.assertRaisesRegex(ValueError, 'size-neutral'):
+                self.check({**self.request(), 'comment': comment})
+
+    def test_size_neutral_request_and_unrelated_numbers_allowed(self):
+        for comment in ('Could you share a small CSV sample that triggers the error and the complete error message?',
+                        'Does this occur on DuckDB 1.4.1?', 'Please include the error at line 20.'):
+            self.check({**self.request(), 'comment': comment})
+
     def test_target_from_caller(self):
         for repository, issue in [('other/repo', 7), (validator.REPOSITORY, 0),
                                   (validator.REPOSITORY, -1), (validator.REPOSITORY, True),

@@ -102,7 +102,8 @@ class WorkflowBehavior(unittest.TestCase):
                         dict(comment='Ask @someone'), dict(comment='See #42'),
                         dict(comment='Visit https://example.invalid/upload'),
                         dict(comment='Ask &#64;someone'), dict(comment='Ask %40someone'),
-                        dict(comment='<img src=x>')]:
+                        dict(comment='<img src=x>'),
+                        dict(comment='Please share 5–20 rows of sample data.')]:
             invalid.append(self.output({**self.proposal, **changes}))
         for output in invalid:
             with self.subTest(output=output), self.assertRaises(ValueError):

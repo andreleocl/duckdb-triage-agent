@@ -55,6 +55,21 @@ specific question tied to the report, not a generic checklist. Do not ask for
 credentials or confidential production data, invent a diagnosis, or claim to
 have run the example. If unsure whether an extra detail is necessary, omit it.
 
+## Clarification wording
+
+Ask only for the missing dependency, not a standard troubleshooting checklist.
+For missing CSV data and error text, use wording such as: "Could you share a
+small, shareable CSV sample that still triggers the error, together with the
+complete error message?" Adapt the file type to the report. Do not add row
+counts, numeric ranges, file-size targets, or a requirement for the smallest
+possible example. Numeric row/record counts in public comments are rejected by
+the validator; keep counts needed for analysis in the private rationale.
+Do not separately request headers, delimiters, quoting, encoding, schema, or
+options unless the report establishes why that detail is essential and cannot
+be obtained from the requested sample and already-supplied command.
+Before submitting, remove any question whose answer is already supplied and
+any extra requirement not supported by the report.
+
 ## Return and validate
 
 Return exactly one JSON object, without Markdown fences, with these fields:

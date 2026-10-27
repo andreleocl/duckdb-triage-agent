@@ -58,7 +58,7 @@ class ModelCatalogue(unittest.TestCase):
         source = (ROOT / '.github/workflows/issue-triage.md').read_text(encoding='utf-8')
         self.assertIn('small, shareable sample that still triggers the', source)
         self.assertIn('Do not invent a row count, row range, file-size limit', source)
-        self.assertIn('unless the supplied report establishes why it is needed', source)
+        self.assertIn('Numeric row/record counts in public comments are rejected', source)
 
 
     def test_detector_timeout_patch_and_dependency_drift(self):

@@ -36,6 +36,11 @@ def validate(proposal, repository, issue):
         raise ValueError('Label is not allowed')
     if not isinstance(comment, str) or not comment.strip() or len(comment) > MAX_COMMENT_CHARS:
         raise ValueError('A request requires one nonempty comment of at most 1200 characters')
+    # Keep sample requests size-neutral; this is not a semantic relevance check.
+    if re.search(r'\b(?:\d[\d,]*(?:\.\d+)?|one|two|three|four|five|six|seven|eight|nine|ten|twenty)'
+                 r'(?:\s*(?:[-–—]|to)\s*(?:\d[\d,]*|twenty))?'
+                 r'[\s–—-]+(?:rows?|records?)\b', comment, re.IGNORECASE):
+        raise ValueError('Public comments must use size-neutral sample requests, without numeric row/record counts')
     # Conservative: public triage questions do not need mentions or GitHub references.
     if '@' in comment or re.search(r'github\.com|#\d+|duckdb/duckdb', comment, re.IGNORECASE):
         raise ValueError('Public comments must not contain mentions or GitHub issue references')

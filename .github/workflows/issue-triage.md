@@ -197,7 +197,8 @@ with the skill's JSON object serialized in its `proposal` string. The trusted
 publisher runs the same validator. Submit a null label/comment for no action.
 When requesting data, ask for a small, shareable sample that still triggers the
 reported failure. Do not invent a row count, row range, file-size limit, or other
-sample-size requirement unless the supplied report establishes why it is needed.
+sample-size requirement. Numeric row/record counts in public comments are rejected;
+keep any necessary counts in the private rationale.
 Keep a request comment below 1,000 characters to allow for bot attribution within
 the overall 1,200-character limit. Do not add attribution or hidden markers yourself.
 Do not request another action, repository, issue or tool. Missing context or tool
