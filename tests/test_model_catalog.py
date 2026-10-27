@@ -1,6 +1,7 @@
 """Offline checks for model metadata and both compiled model jobs."""
 
 import json
+import hashlib
 import os
 import subprocess
 import sys
@@ -17,7 +18,7 @@ CATALOG_PATH = '/tmp/gh-aw/model-catalog/model-catalog.json'
 class ModelCatalogue(unittest.TestCase):
     def test_catalogue_preserves_alias_and_tool_boundary(self):
         catalog = json.loads((ROOT / '.github/codex/model-catalog.json').read_text(encoding='utf-8'))
-        self.assertEqual(len(catalog['models']), 1)
+        self.assertEqual([m['slug'] for m in catalog['models']], [MODEL, 'gpt-5.6-luna'])
         model = catalog['models'][0]
         self.assertEqual(model['slug'], MODEL)
         self.assertTrue(model['supported_in_api'])
@@ -27,6 +28,25 @@ class ModelCatalogue(unittest.TestCase):
         self.assertIsNone(model['upgrade'])
         self.assertFalse(model['supports_parallel_tool_calls'])
         self.assertIsNone(model['apply_patch_tool_type'])
+
+    def test_luna_metadata_matches_codex_0164_bundle(self):
+        # Unmodified entry from openai/codex rust-v0.164.0 models.json.
+        catalog = json.loads((ROOT / '.github/codex/model-catalog.json').read_text(encoding='utf-8'))
+        luna = next(m for m in catalog['models'] if m['slug'] == 'gpt-5.6-luna')
+        digest = hashlib.sha256(json.dumps(luna, sort_keys=True, ensure_ascii=True).encode()).hexdigest()
+        self.assertEqual(digest, 'c62c3fc8cb5265690724524b928fa2fcec718e97f4d121cffd020d01ae11be96')
+
+    def test_triage_uses_direct_tools_and_bounded_failure_instructions(self):
+        lock = (ROOT / '.github/workflows/issue-triage.lock.yml').read_text(encoding='utf-8')
+        match = re.search(r"GH_AW_CODEX_CONFIG_JSON: '([^\n]+)'", lock)
+        config = json.loads(match.group(1))
+        for feature in ('goals', 'code_mode', 'tool_search'):
+            self.assertIs(config['overrides']['features'][feature], False)
+        source = (ROOT / '.github/workflows/issue-triage.md').read_text(encoding='utf-8')
+        self.assertIn('`submit_triage` is a tool, not a resource', source)
+        self.assertIn('If a tool call fails, do not repeat it', source)
+        self.assertIn('call `report_incomplete` once, then stop', source)
+        self.assertEqual(source.count('model: gpt-5-mini'), 2)
 
     def test_detector_timeout_patch_and_dependency_drift(self):
         workflow = (ROOT / '.github/workflows/issue-triage.md').read_text(encoding='utf-8')

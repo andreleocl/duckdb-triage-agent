@@ -21,6 +21,9 @@ engine:
   model: gpt-5-mini
   config: |
     model_reasoning_effort = "low"
+    features.goals = false
+    features.code_mode = false
+    features.tool_search = false
     model_catalog_json = "/tmp/gh-aw/model-catalog/model-catalog.json"
 timeout-minutes: 10
 max-ai-credits: 50
@@ -176,6 +179,14 @@ input artifact. Read all of it before assessing the report.
 ${{ steps.prepare.outputs.skill }}
 
 ## Workflow transport
+
+The skill and issue are already included in this prompt. Do not load skills,
+list or read MCP resources, create goals, or search for tools. Use the provided
+safeoutputs submission tool directly; `submit_triage` is a tool, not a resource
+URI. Do not invent server names such as `r0` or `mcp__safeoutputs`.
+After a successful submission, stop. If a tool call fails, do not repeat it or
+try alternate server names: call `report_incomplete` once, then stop. If that
+error-reporting tool is unavailable or fails, stop with an error message.
 
 This environment has no shell, browsing or GitHub tools. Instead of saving a
 proposal or running the CLI validator yourself, call `submit_triage` exactly once
