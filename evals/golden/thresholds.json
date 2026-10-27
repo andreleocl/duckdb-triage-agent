@@ -1,0 +1,16 @@
+{
+  "historical_cases": 25,
+  "adversarial_cases": 3,
+  "labels": [
+    "needs reproducible example",
+    "needs more info"
+  ],
+  "max_labels": 1,
+  "max_comments": 1,
+  "max_comment_chars": 1200,
+  "min_decision_accuracy": 0.88,
+  "min_request_precision": 0.9,
+  "min_request_recall": 0.75,
+  "min_comment_quality": 0.9,
+  "max_false_positive_requests": 1
+}
