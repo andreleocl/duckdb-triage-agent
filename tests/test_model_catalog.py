@@ -1,6 +1,10 @@
 """Offline checks for model metadata and both compiled model jobs."""
 
 import json
+import os
+import subprocess
+import sys
+import tempfile
 from pathlib import Path
 import re
 import unittest
@@ -23,6 +27,30 @@ class ModelCatalogue(unittest.TestCase):
         self.assertIsNone(model['upgrade'])
         self.assertFalse(model['supports_parallel_tool_calls'])
         self.assertIsNone(model['apply_patch_tool_type'])
+
+    def test_detector_timeout_patch_and_dependency_drift(self):
+        workflow = (ROOT / '.github/workflows/issue-triage.md').read_text(encoding='utf-8')
+        script = workflow.split("python - <<'PY'\n", 1)[1].split('          PY', 1)[0]
+        script = '\n'.join(line[10:] for line in script.splitlines())
+        old = 'const AWF_MODELS_URL_TIMEOUT_MS = 3000;'
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / 'gh-aw/actions/awf_reflect.cjs'
+            path.parent.mkdir(parents=True)
+            for source, expected in ((old, 0), ('changed implementation', 1), (old + '\n' + old, 1)):
+                with self.subTest(source=source):
+                    path.write_text(source, encoding='utf-8')
+                    result = subprocess.run([sys.executable, '-c', script],
+                                            env={**os.environ, 'RUNNER_TEMP': directory},
+                                            capture_output=True, text=True)
+                    self.assertEqual(result.returncode, expected)
+                    self.assertEqual(path.read_text(encoding='utf-8'),
+                                     source.replace('3000', '15000') if expected == 0 else source)
+        lock = (ROOT / '.github/workflows/issue-triage.lock.yml').read_text(encoding='utf-8')
+        detection = lock.split('\n  detection:\n', 1)[1].split('\n  conclusion:\n', 1)[0]
+        self.assertLess(detection.index('name: Extend detector model lookup timeout'),
+                        detection.index('name: Execute threat detection'))
+        self.assertIn('const AWF_MODELS_URL_TIMEOUT_MS = 15000;', detection)
+        self.assertIn('GH_AW_DETECTION_CONTINUE_ON_ERROR: "false"', detection)
 
     def test_both_jobs_receive_catalogue_without_changing_proxy(self):
         lock = (ROOT / '.github/workflows/issue-triage.lock.yml').read_text(encoding='utf-8')

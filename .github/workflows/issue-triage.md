@@ -60,6 +60,18 @@ safe-outputs:
       env:
         CODEX_HOME: /tmp/gh-aw/detection-codex-home
     steps:
+      - name: Extend detector model lookup timeout
+        run: |
+          python - <<'PY'
+          import os
+          from pathlib import Path
+          path = Path(os.environ["RUNNER_TEMP"]) / "gh-aw/actions/awf_reflect.cjs"
+          source = path.read_text(encoding="utf-8")
+          old = "const AWF_MODELS_URL_TIMEOUT_MS = 3000;"
+          if source.count(old) != 1:
+              raise SystemExit("Unexpected gh-aw model lookup implementation; review timeout workaround")
+          path.write_text(source.replace(old, "const AWF_MODELS_URL_TIMEOUT_MS = 15000;"), encoding="utf-8")
+          PY
       - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
           name: codex-model-catalog
