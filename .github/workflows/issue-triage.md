@@ -22,6 +22,7 @@ engine:
   config: |
     model_reasoning_effort = "low"
     features.goals = false
+    features.multi_agent = false
     features.code_mode = false
     features.code_mode_only = false
     features.tool_search = false

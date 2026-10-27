@@ -41,7 +41,7 @@ class ModelCatalogue(unittest.TestCase):
         match = re.search(r"GH_AW_CODEX_CONFIG_JSON: '([^\n]+)'", lock)
         config = json.loads(match.group(1))
         self.assertIs(config['overrides']['skills']['include_instructions'], False)
-        for feature in ('goals', 'tool_search', 'code_mode', 'code_mode_only'):
+        for feature in ('goals', 'multi_agent', 'tool_search', 'code_mode', 'code_mode_only'):
             self.assertIs(config['overrides']['features'][feature], False)
         source = (ROOT / '.github/workflows/issue-triage.md').read_text(encoding='utf-8')
         self.assertIn('${{ steps.prepare.outputs.skill }}', source)
