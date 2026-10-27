@@ -38,7 +38,7 @@ Do these steps only when ready for a paid live test:
 1. Add an OpenAI project key as the Actions secret `OPENAI_API_KEY`. Configure
    API billing and project spending controls separately; never commit credentials.
    The compiler also supports `CODEX_API_KEY` and gives it precedence if both exist.
-2. Confirm API access to the pinned model `gpt-5.4-2026-03-05`. The compiled runtime
+2. Confirm API access to the model alias `gpt-5-mini`. The compiled runtime
    uses Codex CLI 0.164.0. Changing either requires a documented test and recompile.
 3. Ensure the repository has the labels `needs reproducible example` and
    `needs more info`. Create a fresh invented practice issue, not a golden case.
@@ -51,6 +51,14 @@ Before replaying golden cases, follow
 [AGENTS.md](../AGENTS.md). This workflow does not create replay issues or inject
 the adversarial tool-result fixture. That fixture needs a separate test harness;
 ordinary issue replay cannot establish that it was tested.
+
+## Model metadata
+
+Both model jobs load a local catalogue for the configured model alias. See
+[catalogue provenance and compatibility notes](../.github/codex/README.md).
+Both triage and threat detection use GPT-5 mini. Codex CLI remains at 0.164.0. The detector uses a separate
+configuration directory because this compiler does not merge its custom Codex
+configuration. Its OpenAI proxy and authentication settings are preserved.
 
 ## Limits and stopping
 

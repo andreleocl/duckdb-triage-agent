@@ -55,6 +55,7 @@ permissions are enforced.
     scripts/validate_output.py  Offline proposal and target validation
 .github/
     CODEOWNERS                  Review ownership
+    codex/                      Local model metadata and detector configuration
     aw/actions-lock.json        Compiler action-version records
     workflows/
         checks.yml             Offline checks on pushes and pull requests
@@ -77,6 +78,7 @@ evals/
 tests/
     test_validate_output.py     Output-validator tests
     test_triage_runtime.py      Offline workflow and publication tests
+    test_model_catalog.py       Model metadata and workflow wiring checks
 AGENTS.md                      Repository instructions
 CONTRIBUTING.md                Contribution and AI-use policy
 README.md                      Project overview

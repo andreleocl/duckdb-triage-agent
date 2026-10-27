@@ -18,9 +18,10 @@ permissions:
   actions: read
 engine:
   id: codex
-  model: gpt-5.4-2026-03-05
+  model: gpt-5-mini
   config: |
     model_reasoning_effort = "low"
+    model_catalog_json = "/tmp/gh-aw/model-catalog/model-catalog.json"
 timeout-minutes: 10
 max-ai-credits: 50
 max-daily-ai-credits: -1
@@ -53,6 +54,20 @@ safe-outputs:
     continue-on-error: false
     report-as-issue: false
     max-ai-credits: 20
+    engine:
+      id: codex
+      model: gpt-5-mini
+      env:
+        CODEX_HOME: /tmp/gh-aw/detection-codex-home
+    steps:
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: codex-model-catalog
+          path: /tmp/gh-aw/model-catalog
+      - name: Configure detector model catalogue
+        run: |
+          mkdir -p /tmp/gh-aw/detection-codex-home
+          cp /tmp/gh-aw/model-catalog/detection-config.toml /tmp/gh-aw/detection-codex-home/config.toml
   jobs:
     submit-triage:
       description: Submit exactly one JSON proposal, including no-action proposals, for trusted validation.
@@ -73,7 +88,7 @@ safe-outputs:
             sparse-checkout: |
               /scripts/triage_runtime.py
               /.claude/skills/duckdb-triage/scripts/validate_output.py
-        - uses: actions/download-artifact@v8.0.2
+        - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
           with:
             name: triage-input
             path: .triage
@@ -104,9 +119,19 @@ jobs:
           persist-credentials: false
           sparse-checkout-cone-mode: false
           sparse-checkout: |
+            /.github/codex/
             /.claude/skills/duckdb-triage/SKILL.md
             /.claude/skills/duckdb-triage/scripts/validate_output.py
             /scripts/triage_runtime.py
+      - uses: actions/upload-artifact@v7.0.2
+        with:
+          name: codex-model-catalog
+          path: |
+            .github/codex/model-catalog.json
+            .github/codex/detection-config.toml
+          if-no-files-found: error
+          retention-days: 30
+          include-hidden-files: true
       - name: Prepare isolated report and skill
         id: prepare
         env:
@@ -125,8 +150,10 @@ jobs:
   detection:
     timeout-minutes: 5
 steps:
-  - name: Use prepared prompt only
-    run: echo 'No repository checkout is exposed to the agent.'
+  - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+    with:
+      name: codex-model-catalog
+      path: /tmp/gh-aw/model-catalog
 ---
 
 # DuckDB completeness triage
