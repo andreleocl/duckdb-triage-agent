@@ -25,6 +25,7 @@ engine:
     features.code_mode = false
     features.code_mode_only = false
     features.tool_search = false
+    skills.include_instructions = false
     model_catalog_json = "/tmp/gh-aw/model-catalog/model-catalog.json"
 timeout-minutes: 10
 max-ai-credits: 50
