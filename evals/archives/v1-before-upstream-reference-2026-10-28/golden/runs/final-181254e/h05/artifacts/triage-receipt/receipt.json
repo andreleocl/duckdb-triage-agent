@@ -1,0 +1,20 @@
+{
+  "status": "no_action",
+  "proposal": {
+    "label": null,
+    "comment": null,
+    "rationale": "The report includes a self-contained SQL repro, exact DuckDB version (v2 dev commit) and client/OS details; no additional input data or environment details are needed to follow the failure. The provided statement and error are sufficient for developers to reproduce and investigate the behavior change."
+  },
+  "actions": [],
+  "run_id": "40493364813",
+  "configuration_sha": "181254ea62280d63fca0d04c370243054e655539",
+  "input_sha256": "73e5d616fc1337f87c4bda8cb9c46d54d337061c6352a6fecb9a1f2daf37629f",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

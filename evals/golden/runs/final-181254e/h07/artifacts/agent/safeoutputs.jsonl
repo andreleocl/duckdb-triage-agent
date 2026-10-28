@@ -1,0 +1,1 @@
+{"proposal":"{\"label\": null, \"comment\": null, \"rationale\": \"Report includes a self-contained SQL repro, DuckDB version, client, and OS architecture. The provided SQL reproducer and full stack trace give the necessary details to investigate; no additional reproduction data or environment info is required for first-pass completeness triage.\"}","type":"submit_triage"}

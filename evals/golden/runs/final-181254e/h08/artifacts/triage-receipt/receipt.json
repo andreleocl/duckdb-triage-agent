@@ -1,0 +1,47 @@
+{
+  "status": "published",
+  "proposal": {
+    "label": "needs reproducible example",
+    "comment": "Could you attach a small, shareable pair of the exact `.duckdb` and corresponding `.duckdb.wal` files that deterministically trigger: `TransactionContext Error: Failure while replaying WAL file \"...\": Conflict on tuple deletion!`, together with the minimal Node script/command you run to open the DB (the `require(\"duckdb\")` invocation and open/close sequence)? The attached files and script should be the ones used when you observed the error so maintainers can replay the reopen step exactly.",
+    "rationale": "The report describes the failure and environment, but the essential reproducer (the specific .duckdb + .wal pair and the exact script/commands used to reopen them) is not provided; without those files the failure cannot be replayed or diagnosed."
+  },
+  "actions": [
+    "add_comment",
+    "add_label"
+  ],
+  "run_id": "40495276977",
+  "configuration_sha": "181254ea62280d63fca0d04c370243054e655539",
+  "input_sha256": "76b3515b6a5d56b2f29763875002117b17b4ae7ba0a29a13996bc53d94fc4e06",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "/comments?per_page=100&page=1",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/comments",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/labels",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "body": "### What happens?\n\nHello, I encountered an error with using the c++ api example code below :\r\n\r\nDuckDB db(nullptr);\r\nduckdb::Connection con(db);\r\ncon.Query(\"CREATE TABLE integers (i INTEGER, j INTEGER)\");\r\n\r\nException thrown at 0x00007FFED4ED7937 (duckdb.dll) in ____.exe: 0xC0000005: Access violation reading location 0x000002DEE5029000.\r\n\r\nthe third line with con query will yield the exception mentioned above .\n\n### To Reproduce\n\nDuckDB db(nullptr);\r\nduckdb::Connection con(db);\r\ncon.Query(\"CREATE TABLE integers (i INTEGER, j INTEGER)\");\n\n### OS:\n\nwindows\n\n### DuckDB Version:\n\n1.0.0 stable\n\n### DuckDB Client:\n\nc++\n\n### Full Name:\n\nAnderson\n\n### Affiliation:\n\nn/a\n\n### What is the latest build you tested with? If possible, we recommend testing with the latest nightly build.\n\nI have tested with a stable release\n\n### Did you include all relevant data sets for reproducing the issue?\n\nNo - Other reason (please specify in the issue body)\n\n### Did you include all code required to reproduce the issue?\n\n- [X] Yes, I have\n\n### Did you include all relevant configuration (e.g., CPU architecture, Python version, Linux distribution) to reproduce the issue?\n\n- [X] Yes, I have",
+  "comments": [
+    {
+      "id": "IC_kwDOVYrnJM8AAAABf_2zDQ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "NONE",
+      "body": "Could you provide details about how you built or obtained `duckdb.dll` and how you compiled/linked your C++ program (compiler, flags or CMake command, and whether you target x86 or x64)? Also please include whether you used a prebuilt DLL or built DuckDB locally, the runtime (MSVC/MinGW) and the full exception stack trace or crash log produced when running the sample code. These environment and build/linking details are needed to reproduce and diagnose the access violation.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 baaab9cfb227a18935ae2554cd1dddae4e626380906c4484a6011fe56de58c4a needs more info -->",
+      "createdAt": "2026-10-27T12:49:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/28#issuecomment-6442300173",
+      "viewerDidAuthor": false
+    }
+  ],
+  "labels": [
+    {
+      "id": "LA_kwDOVYrnJM8AAAAC_f64vA",
+      "name": "needs more info",
+      "description": "Essential environment or version details need clarification.",
+      "color": "D4C5F9"
+    }
+  ],
+  "number": 28,
+  "title": "DUCKDB access violation with c++ api ",
+  "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/28"
+}

@@ -1,0 +1,1 @@
+{"items":[{"type":"submit_triage","proposal":"{\"label\": null, \"comment\": null, \"rationale\": \"The report includes a concrete, self-contained SQL reproducer (CREATE/INSERT/CHECKPOINT), exact DuckDB version, platform, error text and stack trace. No essential reproduction steps, data, or environment details are missing, so no clarification request is needed.\"}"}],"errors":[]}

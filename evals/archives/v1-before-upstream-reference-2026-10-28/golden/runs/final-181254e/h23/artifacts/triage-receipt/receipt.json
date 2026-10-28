@@ -1,0 +1,47 @@
+{
+  "status": "published",
+  "proposal": {
+    "label": "needs reproducible example",
+    "comment": "Could you share a small, shareable Parquet file (or equivalent SQL/CSV input and the exact commands you run to produce the Parquet) that still triggers this NOT NULL constraint error, together with the complete error message/stack trace and the exact `COPY ... TO` command you used?\n\nPlease avoid any private credentials; a tiny reproducible file and the precise commands are enough to reproduce the failure locally.",
+    "rationale": "The report describes corruption but does not provide a reproducer (Parquet file or input and exact export command) or the complete error message, so it is impossible to follow or validate the failure."
+  },
+  "actions": [
+    "add_comment",
+    "add_label"
+  ],
+  "run_id": "40505513644",
+  "configuration_sha": "181254ea62280d63fca0d04c370243054e655539",
+  "input_sha256": "6b302f42772e0455793f933408f60d0454bf94d1fb0d9b4e50abd953bea97137",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "/comments?per_page=100&page=1",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/comments",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/labels",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

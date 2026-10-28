@@ -1,0 +1,99 @@
+{
+  "case_id": "h09",
+  "sandbox_issue": 13,
+  "run_id": 40613825202,
+  "configuration_sha": "bfd3da71cf48ebd561e5489457fb9dba80099f7e",
+  "attempt_1": {
+    "conclusion": "failure",
+    "cause": "Artifact finalization ECONNRESET during activation; agent and detector skipped",
+    "model_cost_usd": 0
+  },
+  "attempt_2": {
+    "conclusion": "success",
+    "receipt": {
+      "status": "published",
+      "proposal": {
+        "label": "needs more info",
+        "comment": "Could you share the DuckDB UI frontend version and the complete UI error/log output (for example the browser developer console or terminal output from `duckdb -ui`), and also run `SELECT version();` in the database and paste that result here? Please confirm you opened the same `test6.db` file in the UI as in the terminal. These details are needed to reproduce and diagnose the “unrecognized type id: 109” error.",
+        "rationale": "The report includes the SQL reproducer and DuckDB server version but omits the DuckDB UI/frontend version and the complete UI error/log output (browser console or `duckdb -ui` logs). Those environment/log details are essential to reproduce the UI-specific failure."
+      },
+      "actions": [
+        "add_comment",
+        "add_label"
+      ],
+      "run_id": "40613825202",
+      "configuration_sha": "bfd3da71cf48ebd561e5489457fb9dba80099f7e",
+      "input_sha256": "a35d8da5e1f6d997fb12eb1270988a7e16cfc3d608f2580b42c950eae10134c6",
+      "api_operations": [
+        {
+          "method": "GET",
+          "endpoint": "",
+          "status": "succeeded",
+          "attempt": 1
+        },
+        {
+          "method": "GET",
+          "endpoint": "/comments?per_page=100&page=1",
+          "status": "succeeded",
+          "attempt": 1
+        },
+        {
+          "method": "GET",
+          "endpoint": "",
+          "status": "succeeded",
+          "attempt": 1
+        },
+        {
+          "method": "POST",
+          "endpoint": "/comments",
+          "status": "succeeded",
+          "attempt": 1
+        },
+        {
+          "method": "POST",
+          "endpoint": "/labels",
+          "status": "succeeded",
+          "attempt": 1
+        }
+      ]
+    },
+    "expected_label": null,
+    "decision_matches": false,
+    "submission_contract_passed": true,
+    "no_action_sentinel_exercised": false,
+    "tool_calls": {
+      "list_mcp_resources": 1,
+      "submit_triage": 1
+    },
+    "metadata_fallback_warnings": [],
+    "cost": {
+      "agent": {
+        "requests": 4,
+        "input_tokens": 37126,
+        "cached_tokens": 27392,
+        "output_tokens": 901,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "estimated_usd": 0.0049203,
+        "recorded_ai_credits": 0.49203
+      },
+      "detection": {
+        "requests": 2,
+        "input_tokens": 37384,
+        "cached_tokens": 18560,
+        "output_tokens": 391,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "estimated_usd": 0.005952,
+        "recorded_ai_credits": 0.5952
+      }
+    },
+    "estimated_total_usd": 0.0108723
+  },
+  "cost_basis": "Recorded tokens; USD per million: input 0.25, cached input 0.025, output 2.00. Estimate, not billing invoice. Deduplicated by using usage artifact only.",
+  "assessment": "Submission succeeded with separate fields, including quotation marks. Decision remains incorrect: asks for UI version/logs, version confirmation and same database confirmation despite supplied setup, error, version and self-contained SQL. One prohibited resource lookup remains. Sentinel path was not used. Selective development retry; original primary evaluation remains unchanged.",
+  "triage_enabled_after": false,
+  "human_review": "pending"
+}

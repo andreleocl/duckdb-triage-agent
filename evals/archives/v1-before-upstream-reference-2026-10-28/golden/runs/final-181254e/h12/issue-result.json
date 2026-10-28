@@ -1,0 +1,31 @@
+{
+  "body": "### What happens?\n\nThe distinct function is not retrieving unique values. I have to rely on Group by, any ideas?\n\n\nselect \ndistinct  [Varcharfield]  as field\nfrom [table] \n\nvs \n\nselect \n[Varcharfield]  as field\nfrom [table] \ngroup by  [Varcharfield]\n\n\n### To Reproduce\n\nNo package imports. The table was extracted in from a sql server 2016 database. \n\nDB collation: Latin1_General_CI_AS\n\nselect \ndistinct  [Varcharfield]  as field\nfrom [table] \n\nvs \n\nselect \n[Varcharfield]  as field\nfrom [table] \ngroup by  [Varcharfield]\n\n### OS:\n\nWindows\n\n### DuckDB Version:\n\n1.5\n\n### DuckDB Client:\n\nDuckDB UI\n\n### Hardware:\n\n_No response_\n\n### Full Name:\n\nmarce\n\n### Affiliation:\n\nNA\n\n### Did you include all relevant configuration (e.g., CPU architecture, Linux distribution) to reproduce the issue?\n\n- [ ] Yes, I have\n\n### Did you include all code required to reproduce the issue?\n\n- [x] Yes, I have\n\n### Did you include all relevant data sets for reproducing the issue?\n\nNo - Other reason (please specify in the issue body)",
+  "comments": [
+    {
+      "id": "IC_kwDOVYrnJM8AAAABf-qXew",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "NONE",
+      "body": "Could you share a small, shareable example that still triggers the discrepancy? Please provide a minimal table definition and sample data (as SQL `CREATE TABLE` + `INSERT` statements or a small CSV) and the exact DuckDB query you ran along with the actual results you observed for both `DISTINCT` and `GROUP BY`. This will let us reproduce and diagnose the difference locally.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 77fcc5875087d115b18c093a88fc6b7c6bf0af7f90f9fe4fa0fe851e3cb6651b needs reproducible example -->",
+      "createdAt": "2026-10-27T11:43:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/16#issuecomment-6441047931",
+      "viewerDidAuthor": false
+    }
+  ],
+  "labels": [
+    {
+      "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+      "name": "needs reproducible example",
+      "description": "Essential code, data, schema or reproduction steps are missing.",
+      "color": "D876E3"
+    }
+  ],
+  "number": 16,
+  "title": "Distinct does not single out unique values vs group by",
+  "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/16"
+}

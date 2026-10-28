@@ -1,0 +1,19 @@
+{
+  "case_id": "h03",
+  "run_id": 40480085980,
+  "configuration_commit": "884fdd4143c20056d06161508ddd6b3af7d67036",
+  "status": "error",
+  "failure": "Two submissions; first invalid no_agent_spawn label; publisher failed",
+  "cost": {
+    "agent": {
+      "requests": 8,
+      "usd": 0.0072287
+    },
+    "detection": {
+      "requests": 2,
+      "usd": 0.0061357
+    }
+  },
+  "human_review": "pending",
+  "triage_enabled": false
+}

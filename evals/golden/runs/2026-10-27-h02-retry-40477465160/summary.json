@@ -1,0 +1,44 @@
+{
+  "case_id": "h02",
+  "run_id": 40477465160,
+  "configuration_commit": "17acf9480bd83608e498d5e5579648b499d0747f",
+  "status": "completed",
+  "decision_correct": true,
+  "cost": {
+    "agent": {
+      "requests": 8,
+      "input": 92423,
+      "cached": 80128,
+      "output": 522,
+      "usd": 0.00612095
+    },
+    "detection": {
+      "requests": 3,
+      "input": 61930,
+      "cached": 48000,
+      "output": 490,
+      "usd": 0.0056625
+    }
+  },
+  "total_estimated_usd": 0.011783450000000001,
+  "tool_calls": {
+    "list_mcp_resources": 3,
+    "read_mcp_resource": 5,
+    "list_mcp_resource_templates": 1,
+    "submit_triage": 1
+  },
+  "warnings": [
+    "agent\tExecute Codex CLI\t2026-10-27T09:01:41.4532356Z 2026-10-27T09:01:41.452661Z ERROR codex_core::tools::router: error=resources/read failed: unknown MCP server 'r0'",
+    "agent\tExecute Codex CLI\t2026-10-27T09:01:42.4443864Z 2026-10-27T09:01:42.443651Z ERROR codex_core::tools::router: error=resources/read failed: unknown MCP server 'r0'",
+    "agent\tExecute Codex CLI\t2026-10-27T09:01:43.9863765Z 2026-10-27T09:01:43.985781Z ERROR codex_core::tools::router: error=resources/read failed: unknown MCP server 'r0'",
+    "agent\tExecute Codex CLI\t2026-10-27T09:01:45.6747685Z 2026-10-27T09:01:45.674123Z ERROR codex_core::tools::router: error=resources/read failed: unknown MCP server 'r0'",
+    "agent\tExecute Codex CLI\t2026-10-27T09:01:45.6795095Z 2026-10-27T09:01:45.678850Z ERROR codex_core::tools::router: error=resources/read failed: unknown MCP server 'r0'",
+    "detection\tExecute threat detection with AWF\t2026-10-27T09:03:08.3440355Z [engine] 2026-10-27T09:03:08.343031Z  WARN codex_core_plugins::manager: remote installed plugin bundle sync failed error=chatgpt authentication required for remote plugin catalog; api key auth is not supported",
+    "detection\tExecute threat detection with AWF\t2026-10-27T09:03:08.4473251Z [engine] 2026-10-27T09:03:08.446417Z  WARN codex_core_plugins::manager: failed to warm featured plugin ids cache error=failed to send remote featured plugin request to https://chatgpt.com/backend-api/plugins/featured?platform=codex: error sending request for url (https://chatgpt.com/backend-api/plugins/featured?platform=codex)",
+    "detection\tRender detection log\t2026-10-27T09:03:23.1174021Z [engine] 2026-10-27T09:03:08.343031Z  WARN codex_core_plugins::manager: remote installed plugin bundle sync failed error=chatgpt authentication required for remote plugin catalog; api key auth is not supported",
+    "detection\tRender detection log\t2026-10-27T09:03:23.1184078Z [engine] 2026-10-27T09:03:08.446417Z  WARN codex_core_plugins::manager: failed to warm featured plugin ids cache error=failed to send remote featured plugin request to https://chatgpt.com/backend-api/plugins/featured?platform=codex: error sending request for url (https://chatgpt.com/backend-api/plugins/featured?platform=codex)"
+  ],
+  "human_review": "pending",
+  "triage_enabled": false,
+  "prior_failed_run_preserved": 40476560988
+}

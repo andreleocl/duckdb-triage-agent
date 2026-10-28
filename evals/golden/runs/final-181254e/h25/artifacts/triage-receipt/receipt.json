@@ -1,0 +1,47 @@
+{
+  "status": "published",
+  "proposal": {
+    "label": "needs reproducible example",
+    "comment": "Could you share the `tools/pythonpkg/pyproject.toml` (or `setup.py`) from the repository and the complete pip build output that includes the `ModuleNotFoundError` stack? Also confirm the `pip`/`setuptools` versions (`pip --version` and `python -c \"import setuptools; print(setuptools.__version__)\"`) and whether you built inside a virtualenv. This will show the declared build backend and the exact build-time environment needed to reproduce the missing `package_build` module error.",
+    "rationale": "The build is failing with `ModuleNotFoundError: No module named 'package_build'`, which indicates the Python build backend or build-time environment is missing or not declared. The report omits the package's build metadata (`pyproject.toml`/`setup.py`) and the full pip/setuptools versions and complete build log needed to reproduce and diagnose why the backend module is unavailable."
+  },
+  "actions": [
+    "add_comment",
+    "add_label"
+  ],
+  "run_id": "40507057098",
+  "configuration_sha": "181254ea62280d63fca0d04c370243054e655539",
+  "input_sha256": "bc330f865c61340a4e633fcd59a2c24a6c6927ed275663072055bf8fca2d1b4d",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "/comments?per_page=100&page=1",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/comments",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/labels",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "status": "published",
+  "proposal": {
+    "label": "needs more info",
+    "comment": "Please confirm the exact DuckDB version/build that produced this error: the report mentions both \"v1.5.2\" and \"1.5.3\". Could you paste the exact output of either `SELECT version();` (inside DuckDB) or `duckdb --version` (CLI) from the same environment that generated the INTERNAL error?",
+    "rationale": "The report contains a contradictory DuckDB version (v1.5.2 in the description and 1.5.3 in the template). Exact version/build information is essential to reproduce and determine whether the issue exists in the stated release or a newer build."
+  },
+  "actions": [
+    "add_comment",
+    "add_label"
+  ],
+  "run_id": "40499984485",
+  "configuration_sha": "181254ea62280d63fca0d04c370243054e655539",
+  "input_sha256": "a0cb7d5ba0366efd8e2fc436c98f03bfc8eed0d6d2d3e87aad41a147875ecda6",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "/comments?per_page=100&page=1",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/comments",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/labels",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "case_id": "h11",
+  "run_id": 40615695174,
+  "sandbox_issue": 31,
+  "configuration_sha": "3e4e40401f90ce969aacbbbe8c215f8bd5fc040a",
+  "conclusion": "success",
+  "expected_label": null,
+  "receipt": {
+    "status": "no_action",
+    "proposal": {
+      "label": null,
+      "comment": null,
+      "rationale": "The report includes OS, DuckDB and Python versions, Jupyter/ipykernel details, the spatial extension version, and a self-contained minimal reproducible example that demonstrates interrupting a long-running spatial join. No additional reproduction steps or environment details are required for first-pass completeness triage."
+    },
+    "actions": [],
+    "run_id": "40615695174",
+    "configuration_sha": "3e4e40401f90ce969aacbbbe8c215f8bd5fc040a",
+    "input_sha256": "865069f10142b45c51b71974eac0b73a079dac4f00e78e983850f420c9adb06f",
+    "api_operations": [
+      {
+        "method": "GET",
+        "endpoint": "",
+        "status": "succeeded",
+        "attempt": 1
+      }
+    ]
+  },
+  "decision_matches": true,
+  "observed_labels": [],
+  "observed_comments": [],
+  "tool_calls": {
+    "list_mcp_resources": 1,
+    "list_mcp_resource_templates": 1,
+    "submit_triage": 1
+  },
+  "submission_arguments": [
+    {
+      "comment": "no_action",
+      "label": "no_action",
+      "rationale": "The report includes OS, DuckDB and Python versions, Jupyter/ipykernel details, the spatial extension version, and a self-contained minimal reproducible example that demonstrates interrupting a long-running spatial join. No additional reproduction steps or environment details are required for first-pass completeness triage."
+    }
+  ],
+  "metadata_warnings": [],
+  "cost": {
+    "agent": {
+      "requests": 4,
+      "input_tokens": 39408,
+      "cached_tokens": 29312,
+      "output_tokens": 438,
+      "models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "estimated_usd": 0.0041328
+    },
+    "detection": {
+      "requests": 2,
+      "input_tokens": 38960,
+      "cached_tokens": 19328,
+      "output_tokens": 384,
+      "models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "estimated_usd": 0.0061592
+    }
+  },
+  "estimated_total_usd": 0.010292,
+  "human_review": "pending"
+}

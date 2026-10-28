@@ -1,0 +1,47 @@
+{
+  "status": "published",
+  "proposal": {
+    "label": "needs reproducible example",
+    "comment": "Could you share a small, shareable Parquet sample (or equivalent SQL-generated data) that still triggers the crash, together with the exact command you use to run the script and the complete stderr/backtrace? The provided script references '../raw_metars' which isn\u2019t included, so a minimal reproducible input is needed to follow the failure.",
+    "rationale": "The report supplies a SQL script that references external data directory '../raw_metars' but no sample data or generated equivalent is provided, preventing local reproduction of the crash."
+  },
+  "actions": [
+    "add_comment",
+    "add_label"
+  ],
+  "run_id": "40499137828",
+  "configuration_sha": "181254ea62280d63fca0d04c370243054e655539",
+  "input_sha256": "b9eecacd5b9aa4feb1d84480dd539c1abb4d4533785c6e572703a7589149ea3d",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "/comments?per_page=100&page=1",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/comments",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/labels",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

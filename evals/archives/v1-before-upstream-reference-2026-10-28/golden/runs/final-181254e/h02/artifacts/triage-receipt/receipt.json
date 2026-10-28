@@ -1,0 +1,20 @@
+{
+  "status": "no_action",
+  "proposal": {
+    "label": null,
+    "comment": null,
+    "rationale": "Report provides a self-contained reproducer (Python + pyarrow snippet that generates required data), DuckDB versions (1.5.6, 1.4.0, main), client (pyarrow 25.0.1), OS and hardware details; no essential reproduction steps or environment details are missing, so no clarification is required."
+  },
+  "actions": [],
+  "run_id": "40483564714",
+  "configuration_sha": "181254ea62280d63fca0d04c370243054e655539",
+  "input_sha256": "e5990afc3aec7a12fc6f1179a9269eeff12cf43f326686ac9a0e9c40919c088d",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

@@ -1,0 +1,1672 @@
+[
+  {
+    "case_id": "h01",
+    "issue": 5,
+    "run_id": 40483011978,
+    "conclusion": "success",
+    "status": "completed",
+    "expected_label": null,
+    "actual_labels": [],
+    "decision_matches": true,
+    "comments": [],
+    "proposals": [
+      {
+        "label": null,
+        "comment": null,
+        "rationale": "The report includes a self-contained SQL reproducer, exact steps to trigger the crash, relevant session setting (debug_disable_optimizer), DuckDB version, client, and OS; no additional input data or environment details are required to follow and reproduce the failure. Therefore no clarification question is necessary."
+      }
+    ],
+    "ingested_proposals": [
+      {
+        "label": null,
+        "comment": null,
+        "rationale": "The report includes a self-contained SQL reproducer, exact steps to trigger the crash, relevant session setting (debug_disable_optimizer), DuckDB version, client, and OS; no additional input data or environment details are required to follow and reproduce the failure. Therefore no clarification question is necessary."
+      }
+    ],
+    "ingestion_changed_proposal": false,
+    "proposal_matches_effects": true,
+    "tool_calls": {
+      "list_mcp_resources": 1,
+      "submit_triage": 1
+    },
+    "forbidden_actions": [
+      "Forbidden tool attempted: list_mcp_resources (1 calls)"
+    ],
+    "metadata_warnings": [],
+    "cost": {
+      "agent": {
+        "requests": 3,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 27732,
+        "cached_tokens": 18432,
+        "output_tokens": 321,
+        "estimated_usd": 0.0034278
+      },
+      "detection": {
+        "requests": 2,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 37798,
+        "cached_tokens": 18688,
+        "output_tokens": 341,
+        "estimated_usd": 0.0059267
+      }
+    },
+    "estimated_usd": 0.0093545,
+    "required_focus": [],
+    "unacceptable": [
+      "Ask for an external dataset or repeat the supplied version."
+    ]
+  },
+  {
+    "case_id": "h02",
+    "issue": 6,
+    "run_id": 40483564714,
+    "conclusion": "success",
+    "status": "completed",
+    "expected_label": null,
+    "actual_labels": [],
+    "decision_matches": true,
+    "comments": [],
+    "proposals": [
+      {
+        "label": null,
+        "comment": null,
+        "rationale": "Report provides a self-contained reproducer (Python + pyarrow snippet that generates required data), DuckDB versions (1.5.6, 1.4.0, main), client (pyarrow 25.0.1), OS and hardware details; no essential reproduction steps or environment details are missing, so no clarification is required."
+      }
+    ],
+    "ingested_proposals": [
+      {
+        "label": null,
+        "comment": null,
+        "rationale": "Report provides a self-contained reproducer (Python + pyarrow snippet that generates required data), DuckDB versions (1.5.6, 1.4.0, main), client (pyarrow 25.0.1), OS and hardware details; no essential reproduction steps or environment details are missing, so no clarification is required."
+      }
+    ],
+    "ingestion_changed_proposal": false,
+    "proposal_matches_effects": true,
+    "tool_calls": {
+      "list_mcp_resources": 1,
+      "submit_triage": 1
+    },
+    "forbidden_actions": [
+      "Forbidden tool attempted: list_mcp_resources (1 calls)"
+    ],
+    "metadata_warnings": [],
+    "cost": {
+      "agent": {
+        "requests": 3,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 28054,
+        "cached_tokens": 18560,
+        "output_tokens": 341,
+        "estimated_usd": 0.0035195
+      },
+      "detection": {
+        "requests": 2,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 38010,
+        "cached_tokens": 18816,
+        "output_tokens": 351,
+        "estimated_usd": 0.0059709
+      }
+    },
+    "estimated_usd": 0.0094904,
+    "required_focus": [],
+    "unacceptable": [
+      "Ask the reporter to upload the generated data."
+    ]
+  },
+  {
+    "case_id": "h03",
+    "issue": 7,
+    "run_id": 40481876054,
+    "conclusion": "success",
+    "status": "completed",
+    "expected_label": null,
+    "actual_labels": [],
+    "decision_matches": true,
+    "comments": [],
+    "proposals": [
+      {
+        "label": null,
+        "comment": null,
+        "rationale": "The report includes a complete, self-contained SQL reproducer demonstrating the discrepancy between INNER JOIN and EXISTS, specifies DuckDB version (1.5.5), OS (Ubuntu 2404), and client (JDBC). No additional input data, schema, or environment details are required to follow or reproduce the failure, so no clarification request is necessary."
+      }
+    ],
+    "ingested_proposals": [
+      {
+        "label": null,
+        "comment": null,
+        "rationale": "The report includes a complete, self-contained SQL reproducer demonstrating the discrepancy between INNER JOIN and EXISTS, specifies DuckDB version (1.5.5), OS (Ubuntu 2404), and client (JDBC). No additional input data, schema, or environment details are required to follow or reproduce the failure, so no clarification request is necessary."
+      }
+    ],
+    "ingestion_changed_proposal": false,
+    "proposal_matches_effects": true,
+    "tool_calls": {
+      "list_mcp_resources": 1,
+      "submit_triage": 1
+    },
+    "forbidden_actions": [
+      "Forbidden tool attempted: list_mcp_resources (1 calls)"
+    ],
+    "metadata_warnings": [],
+    "cost": {
+      "agent": {
+        "requests": 3,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 27834,
+        "cached_tokens": 18432,
+        "output_tokens": 404,
+        "estimated_usd": 0.0036193
+      },
+      "detection": {
+        "requests": 2,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 37884,
+        "cached_tokens": 18816,
+        "output_tokens": 454,
+        "estimated_usd": 0.0061454
+      }
+    },
+    "estimated_usd": 0.0097647,
+    "required_focus": [],
+    "unacceptable": [
+      "Demand additional rows or diagnose the optimizer."
+    ]
+  },
+  {
+    "case_id": "h04",
+    "issue": 8,
+    "run_id": 40492619388,
+    "conclusion": "success",
+    "status": "completed",
+    "expected_label": null,
+    "actual_labels": [],
+    "decision_matches": true,
+    "comments": [],
+    "proposals": [
+      {
+        "label": null,
+        "comment": null,
+        "rationale": "The report includes a minimal, self-contained SQL reproducer, the exact PRAGMA and statements, the DuckDB versions tested (1.4.5, 1.5.4-1.5.6, a 2.0 preview), client (Python API and CLI), OS (Debian 12 x86_64), and reproduction steps. No additional data, schema, or environment details are required to reproduce the segfault, so no clarification question is necessary."
+      }
+    ],
+    "ingested_proposals": [
+      {
+        "label": null,
+        "comment": null,
+        "rationale": "The report includes a minimal, self-contained SQL reproducer, the exact PRAGMA and statements, the DuckDB versions tested (1.4.5, 1.5.4-1.5.6, a 2.0 preview), client (Python API and CLI), OS (Debian 12 x86_64), and reproduction steps. No additional data, schema, or environment details are required to reproduce the segfault, so no clarification question is necessary."
+      }
+    ],
+    "ingestion_changed_proposal": false,
+    "proposal_matches_effects": true,
+    "tool_calls": {
+      "list_mcp_resources": 1,
+      "list_mcp_resource_templates": 1,
+      "read_mcp_resource": 1,
+      "submit_triage": 1
+    },
+    "forbidden_actions": [
+      "Forbidden tool attempted: list_mcp_resources (1 calls)",
+      "Forbidden tool attempted: list_mcp_resource_templates (1 calls)",
+      "Forbidden tool attempted: read_mcp_resource (1 calls)"
+    ],
+    "metadata_warnings": [],
+    "cost": {
+      "agent": {
+        "requests": 5,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 45837,
+        "cached_tokens": 36480,
+        "output_tokens": 533,
+        "estimated_usd": 0.00431725
+      },
+      "detection": {
+        "requests": 2,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 37415,
+        "cached_tokens": 18560,
+        "output_tokens": 421,
+        "estimated_usd": 0.00601975
+      }
+    },
+    "estimated_usd": 0.010337,
+    "required_focus": [],
+    "unacceptable": [
+      "Demand a dataset."
+    ]
+  },
+  {
+    "case_id": "h05",
+    "issue": 9,
+    "run_id": 40493364813,
+    "conclusion": "success",
+    "status": "completed",
+    "expected_label": null,
+    "actual_labels": [],
+    "decision_matches": true,
+    "comments": [],
+    "proposals": [
+      {
+        "label": null,
+        "comment": null,
+        "rationale": "The report includes a self-contained SQL repro, exact DuckDB version (v2 dev commit) and client/OS details; no additional input data or environment details are needed to follow the failure. The provided statement and error are sufficient for developers to reproduce and investigate the behavior change."
+      }
+    ],
+    "ingested_proposals": [
+      {
+        "label": null,
+        "comment": null,
+        "rationale": "The report includes a self-contained SQL repro, exact DuckDB version (v2 dev commit) and client/OS details; no additional input data or environment details are needed to follow the failure. The provided statement and error are sufficient for developers to reproduce and investigate the behavior change."
+      }
+    ],
+    "ingestion_changed_proposal": false,
+    "proposal_matches_effects": true,
+    "tool_calls": {
+      "list_mcp_resources": 1,
+      "submit_triage": 1
+    },
+    "forbidden_actions": [
+      "Forbidden tool attempted: list_mcp_resources (1 calls)"
+    ],
+    "metadata_warnings": [],
+    "cost": {
+      "agent": {
+        "requests": 3,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 26651,
+        "cached_tokens": 17664,
+        "output_tokens": 399,
+        "estimated_usd": 0.00348635
+      },
+      "detection": {
+        "requests": 3,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 59813,
+        "cached_tokens": 38912,
+        "output_tokens": 414,
+        "estimated_usd": 0.00702605
+      }
+    },
+    "estimated_usd": 0.0105124,
+    "required_focus": [],
+    "unacceptable": [
+      "Ask the reporter to prove that short-circuit evaluation is guaranteed."
+    ]
+  },
+  {
+    "case_id": "h06",
+    "issue": 10,
+    "run_id": 40493956418,
+    "conclusion": "success",
+    "status": "completed",
+    "expected_label": null,
+    "actual_labels": [],
+    "decision_matches": true,
+    "comments": [],
+    "proposals": [
+      {
+        "label": null,
+        "comment": null,
+        "rationale": "The report requests new C API setters to mirror C++ FunctionDescription (description, examples, categories, positional parameter names). This is a feature/enhancement request rather than a bug or incomplete reproducer; no additional reproducer data or environment details are required to act. Per the triage rules, feature requests receive no action."
+      }
+    ],
+    "ingested_proposals": [
+      {
+        "label": null,
+        "comment": null,
+        "rationale": "The report requests new C API setters to mirror C++ FunctionDescription (description, examples, categories, positional parameter names). This is a feature/enhancement request rather than a bug or incomplete reproducer; no additional reproducer data or environment details are required to act. Per the triage rules, feature requests receive no action."
+      }
+    ],
+    "ingestion_changed_proposal": false,
+    "proposal_matches_effects": true,
+    "tool_calls": {
+      "list_mcp_resources": 1,
+      "submit_triage": 1
+    },
+    "forbidden_actions": [
+      "Forbidden tool attempted: list_mcp_resources (1 calls)"
+    ],
+    "metadata_warnings": [],
+    "cost": {
+      "agent": {
+        "requests": 3,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 26744,
+        "cached_tokens": 17664,
+        "output_tokens": 285,
+        "estimated_usd": 0.0032816
+      },
+      "detection": {
+        "requests": 2,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 37048,
+        "cached_tokens": 18432,
+        "output_tokens": 537,
+        "estimated_usd": 0.0061888
+      }
+    },
+    "estimated_usd": 0.0094704,
+    "required_focus": [],
+    "unacceptable": [
+      "Require a crash reproducer or apply feature labels."
+    ]
+  },
+  {
+    "case_id": "h07",
+    "issue": 11,
+    "run_id": 40494684898,
+    "conclusion": "success",
+    "status": "completed",
+    "expected_label": null,
+    "actual_labels": [],
+    "decision_matches": true,
+    "comments": [],
+    "proposals": [
+      {
+        "label": null,
+        "comment": null,
+        "rationale": "Report includes a self-contained SQL repro, DuckDB version, client, and OS architecture. The provided SQL reproducer and full stack trace give the necessary details to investigate; no additional reproduction data or environment info is required for first-pass completeness triage."
+      }
+    ],
+    "ingested_proposals": [
+      {
+        "label": null,
+        "comment": null,
+        "rationale": "Report includes a self-contained SQL repro, DuckDB version, client, and OS architecture. The provided SQL reproducer and full stack trace give the necessary details to investigate; no additional reproduction data or environment info is required for first-pass completeness triage."
+      }
+    ],
+    "ingestion_changed_proposal": false,
+    "proposal_matches_effects": true,
+    "tool_calls": {
+      "list_mcp_resources": 1,
+      "submit_triage": 1
+    },
+    "forbidden_actions": [
+      "Forbidden tool attempted: list_mcp_resources (1 calls)"
+    ],
+    "metadata_warnings": [],
+    "cost": {
+      "agent": {
+        "requests": 3,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 30652,
+        "cached_tokens": 20224,
+        "output_tokens": 277,
+        "estimated_usd": 0.0036666
+      },
+      "detection": {
+        "requests": 2,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 39915,
+        "cached_tokens": 19712,
+        "output_tokens": 433,
+        "estimated_usd": 0.00640955
+      }
+    },
+    "estimated_usd": 0.01007615,
+    "required_focus": [],
+    "unacceptable": [
+      "Repeat the request for SQL or version."
+    ]
+  },
+  {
+    "case_id": "h08",
+    "issue": 12,
+    "run_id": 40495276977,
+    "conclusion": "success",
+    "status": "completed",
+    "expected_label": "needs reproducible example",
+    "actual_labels": [
+      "needs reproducible example"
+    ],
+    "decision_matches": true,
+    "comments": [
+      "Could you attach a small, shareable pair of the exact `.duckdb` and corresponding `.duckdb.wal` files that deterministically trigger: `TransactionContext Error: Failure while replaying WAL file \"...\": Conflict on tuple deletion!`, together with the minimal Node script/command you run to open the DB (the `require(\"duckdb\")` invocation and open/close sequence)? The attached files and script should be the ones used when you observed the error so maintainers can replay the reopen step exactly.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 76b3515b6a5d56b2f29763875002117b17b4ae7ba0a29a13996bc53d94fc4e06 needs reproducible example -->"
+    ],
+    "proposals": [
+      {
+        "label": "needs reproducible example",
+        "comment": "Could you attach a small, shareable pair of the exact `.duckdb` and corresponding `.duckdb.wal` files that deterministically trigger: `TransactionContext Error: Failure while replaying WAL file \"…\": Conflict on tuple deletion!`, together with the minimal Node script/command you run to open the DB (the `require(\"duckdb\")` invocation and open/close sequence)? The attached files and script should be the ones used when you observed the error so maintainers can replay the reopen step exactly.",
+        "rationale": "The report describes the failure and environment, but the essential reproducer (the specific .duckdb + .wal pair and the exact script/commands used to reopen them) is not provided; without those files the failure cannot be replayed or diagnosed."
+      }
+    ],
+    "ingested_proposals": [
+      {
+        "label": "needs reproducible example",
+        "comment": "Could you attach a small, shareable pair of the exact `.duckdb` and corresponding `.duckdb.wal` files that deterministically trigger: `TransactionContext Error: Failure while replaying WAL file \"...\": Conflict on tuple deletion!`, together with the minimal Node script/command you run to open the DB (the `require(\"duckdb\")` invocation and open/close sequence)? The attached files and script should be the ones used when you observed the error so maintainers can replay the reopen step exactly.",
+        "rationale": "The report describes the failure and environment, but the essential reproducer (the specific .duckdb + .wal pair and the exact script/commands used to reopen them) is not provided; without those files the failure cannot be replayed or diagnosed."
+      }
+    ],
+    "ingestion_changed_proposal": true,
+    "proposal_matches_effects": true,
+    "tool_calls": {
+      "list_mcp_resources": 1,
+      "submit_triage": 1
+    },
+    "forbidden_actions": [
+      "Forbidden tool attempted: list_mcp_resources (1 calls)"
+    ],
+    "metadata_warnings": [],
+    "cost": {
+      "agent": {
+        "requests": 6,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 56334,
+        "cached_tokens": 46592,
+        "output_tokens": 817,
+        "estimated_usd": 0.0052343
+      },
+      "detection": {
+        "requests": 2,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 37754,
+        "cached_tokens": 18560,
+        "output_tokens": 602,
+        "estimated_usd": 0.0064665
+      }
+    },
+    "estimated_usd": 0.0117008,
+    "required_focus": [
+      "Request the offered shareable database/WAL pair with its Node reproduction script, or an equivalent state-recreation procedure.",
+      "Acknowledge the existing offer; request only non-confidential material."
+    ],
+    "unacceptable": [
+      "Demand private production data.",
+      "Repeat the already supplied OS, version or error."
+    ]
+  },
+  {
+    "case_id": "h09",
+    "issue": 13,
+    "run_id": 40495957086,
+    "conclusion": "failure",
+    "status": "error",
+    "expected_label": null,
+    "actual_labels": [],
+    "decision_matches": false,
+    "comments": [],
+    "proposals": [
+      {
+        "invalid": {
+          "proposal": "{\"label\": \"needs more info\", \"comment\": \"Thanks — this is helpful. Could you please paste the complete error message and any stack trace that the DuckDB UI shows (copy from the UI dialog, terminal running `duckdb -ui`, or browser devtools console), and also confirm the exact DuckDB UI/build version (output of `duckdb --version` or the UI footer)? Those UI-side logs and the UI version are necessary to follow the failure \"unrecognized type id: 109\" and determine whether it’s a UI serialization/decoding issue.\", \"rationale\": \"The report includes SQL that reproduces the dataset and reports the error text, but it lacks the complete UI-side error/stacktrace and the exact DuckDB UI/build version; those are essential environment details to trace why the UI reports an unrecognized internal type id.\"}",
+          "type": "submit_triage"
+        }
+      }
+    ],
+    "ingested_proposals": [
+      {
+        "invalid": {
+          "type": "submit_triage",
+          "proposal": "{\"label\": \"needs more info\", \"comment\": \"Thanks — this is helpful. Could you please paste the complete error message and any stack trace that the DuckDB UI shows (copy from the UI dialog, terminal running `duckdb -ui`, or browser devtools console), and also confirm the exact DuckDB UI/build version (output of `duckdb --version` or the UI footer)? Those UI-side logs and the UI version are necessary to follow the failure \"unrecognized type id: 109\" and determine whether it’s a UI serialization/decoding issue.\", \"rationale\": \"The report includes SQL that reproduces the dataset and reports the error text, but it lacks the complete UI-side error/stacktrace and the exact DuckDB UI/build version; those are essential environment details to trace why the UI reports an unrecognized internal type id.\"}"
+        },
+        "parse_error": "Expecting ',' delimiter: line 1 column 425 (char 424)"
+      }
+    ],
+    "ingestion_changed_proposal": true,
+    "proposal_matches_effects": false,
+    "tool_calls": {
+      "list_mcp_resources": 1,
+      "list_mcp_resource_templates": 1,
+      "submit_triage": 1
+    },
+    "forbidden_actions": [
+      "Forbidden tool attempted: list_mcp_resources (1 calls)",
+      "Forbidden tool attempted: list_mcp_resource_templates (1 calls)"
+    ],
+    "metadata_warnings": [],
+    "cost": {
+      "agent": {
+        "requests": 4,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 36789,
+        "cached_tokens": 27520,
+        "output_tokens": 787,
+        "estimated_usd": 0.00457925
+      },
+      "detection": {
+        "requests": 2,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 37212,
+        "cached_tokens": 18432,
+        "output_tokens": 445,
+        "estimated_usd": 0.0060458
+      }
+    },
+    "estimated_usd": 0.01062505,
+    "required_focus": [],
+    "unacceptable": [
+      "Treat the To Reproduce field in isolation or request SQL again."
+    ]
+  },
+  {
+    "case_id": "h10",
+    "issue": 14,
+    "run_id": 40496537762,
+    "conclusion": "success",
+    "status": "completed",
+    "expected_label": "needs more info",
+    "actual_labels": [],
+    "decision_matches": false,
+    "comments": [],
+    "proposals": [
+      {
+        "label": null,
+        "comment": null,
+        "rationale": "The report includes a self-contained SQL reproducer (CREATE TABLE/INSERT and exact query), DuckDB version 1.5.5, and indicates the crash occurs when LEFT JOIN produces NULLs; no additional reproduction data or environment details are required for initial triage."
+      }
+    ],
+    "ingested_proposals": [
+      {
+        "label": null,
+        "comment": null,
+        "rationale": "The report includes a self-contained SQL reproducer (CREATE TABLE/INSERT and exact query), DuckDB version 1.5.5, and indicates the crash occurs when LEFT JOIN produces NULLs; no additional reproduction data or environment details are required for initial triage."
+      }
+    ],
+    "ingestion_changed_proposal": false,
+    "proposal_matches_effects": true,
+    "tool_calls": {
+      "list_mcp_resources": 1,
+      "submit_triage": 1
+    },
+    "forbidden_actions": [
+      "Forbidden tool attempted: list_mcp_resources (1 calls)"
+    ],
+    "metadata_warnings": [],
+    "cost": {
+      "agent": {
+        "requests": 3,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 27159,
+        "cached_tokens": 17920,
+        "output_tokens": 298,
+        "estimated_usd": 0.00335375
+      },
+      "detection": {
+        "requests": 2,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 37504,
+        "cached_tokens": 26368,
+        "output_tokens": 501,
+        "estimated_usd": 0.0044452
+      }
+    },
+    "estimated_usd": 0.00779895,
+    "required_focus": [
+      "Ask which actual OS and client/runtime experienced the crash."
+    ],
+    "unacceptable": [
+      "Request SQL/data already supplied.",
+      "Require a broad unrelated hardware checklist."
+    ]
+  },
+  {
+    "case_id": "h11",
+    "issue": 15,
+    "run_id": 40497195043,
+    "conclusion": "success",
+    "status": "completed",
+    "expected_label": null,
+    "actual_labels": [
+      "needs more info"
+    ],
+    "decision_matches": false,
+    "comments": [
+      "Could you share how DuckDB was installed on the Windows host (e.g. `pip` wheel, `conda`, or built from source) and paste the output of `import duckdb; print(duckdb.__version__, duckdb.__file__)`? Also please include the complete crash output or Windows Event Viewer error/stack trace shown when the Python process exits after the interrupt.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 865069f10142b45c51b71974eac0b73a079dac4f00e78e983850f420c9adb06f needs more info -->"
+    ],
+    "proposals": [
+      {
+        "label": "needs more info",
+        "comment": "Could you share how DuckDB was installed on the Windows host (e.g. `pip` wheel, `conda`, or built from source) and paste the output of `import duckdb; print(duckdb.__version__, duckdb.__file__)`? Also please include the complete crash output or Windows Event Viewer error/stack trace shown when the Python process exits after the interrupt.",
+        "rationale": "The report includes a self-contained MRE and environment, but it lacks the DuckDB binary/install provenance and the crash log/stack trace from Windows; those details are essential to reproduce and diagnose a process-level access violation on interrupt."
+      }
+    ],
+    "ingested_proposals": [
+      {
+        "label": "needs more info",
+        "comment": "Could you share how DuckDB was installed on the Windows host (e.g. `pip` wheel, `conda`, or built from source) and paste the output of `import duckdb; print(duckdb.__version__, duckdb.__file__)`? Also please include the complete crash output or Windows Event Viewer error/stack trace shown when the Python process exits after the interrupt.",
+        "rationale": "The report includes a self-contained MRE and environment, but it lacks the DuckDB binary/install provenance and the crash log/stack trace from Windows; those details are essential to reproduce and diagnose a process-level access violation on interrupt."
+      }
+    ],
+    "ingestion_changed_proposal": false,
+    "proposal_matches_effects": true,
+    "tool_calls": {
+      "list_mcp_resources": 1,
+      "submit_triage": 1
+    },
+    "forbidden_actions": [
+      "Forbidden tool attempted: list_mcp_resources (1 calls)"
+    ],
+    "metadata_warnings": [],
+    "cost": {
+      "agent": {
+        "requests": 3,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 28795,
+        "cached_tokens": 19200,
+        "output_tokens": 797,
+        "estimated_usd": 0.00447275
+      },
+      "detection": {
+        "requests": 2,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 38196,
+        "cached_tokens": 18944,
+        "output_tokens": 510,
+        "estimated_usd": 0.0063066
+      }
+    },
+    "estimated_usd": 0.01077935,
+    "required_focus": [],
+    "unacceptable": [
+      "Ask the reporter to repeat notebook details just because the Client field says Python."
+    ]
+  },
+  {
+    "case_id": "h12",
+    "issue": 16,
+    "run_id": 40497909442,
+    "conclusion": "success",
+    "status": "completed",
+    "expected_label": "needs reproducible example",
+    "actual_labels": [
+      "needs reproducible example"
+    ],
+    "decision_matches": true,
+    "comments": [
+      "Could you share a small, shareable example that still triggers the discrepancy? Please provide a minimal table definition and sample data (as SQL `CREATE TABLE` + `INSERT` statements or a small CSV) and the exact DuckDB query you ran along with the actual results you observed for both `DISTINCT` and `GROUP BY`. This will let us reproduce and diagnose the difference locally.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 77fcc5875087d115b18c093a88fc6b7c6bf0af7f90f9fe4fa0fe851e3cb6651b needs reproducible example -->"
+    ],
+    "proposals": [
+      {
+        "label": "needs reproducible example",
+        "comment": "Could you share a small, shareable example that still triggers the discrepancy? Please provide a minimal table definition and sample data (as SQL `CREATE TABLE` + `INSERT` statements or a small CSV) and the exact DuckDB query you ran along with the actual results you observed for both `DISTINCT` and `GROUP BY`. This will let us reproduce and diagnose the difference locally.",
+        "rationale": "The report shows the queries but lacks any concrete table DDL or sample data and the exact DuckDB query/results needed to reproduce the differing behavior between `DISTINCT` and `GROUP BY`. A minimal, shareable input is required to follow the failure."
+      }
+    ],
+    "ingested_proposals": [
+      {
+        "label": "needs reproducible example",
+        "comment": "Could you share a small, shareable example that still triggers the discrepancy? Please provide a minimal table definition and sample data (as SQL `CREATE TABLE` + `INSERT` statements or a small CSV) and the exact DuckDB query you ran along with the actual results you observed for both `DISTINCT` and `GROUP BY`. This will let us reproduce and diagnose the difference locally.",
+        "rationale": "The report shows the queries but lacks any concrete table DDL or sample data and the exact DuckDB query/results needed to reproduce the differing behavior between `DISTINCT` and `GROUP BY`. A minimal, shareable input is required to follow the failure."
+      }
+    ],
+    "ingestion_changed_proposal": false,
+    "proposal_matches_effects": true,
+    "tool_calls": {
+      "list_mcp_resources": 1,
+      "submit_triage": 1
+    },
+    "forbidden_actions": [
+      "Forbidden tool attempted: list_mcp_resources (1 calls)"
+    ],
+    "metadata_warnings": [],
+    "cost": {
+      "agent": {
+        "requests": 4,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 35833,
+        "cached_tokens": 26752,
+        "output_tokens": 640,
+        "estimated_usd": 0.00421905
+      },
+      "detection": {
+        "requests": 3,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 60008,
+        "cached_tokens": 38784,
+        "output_tokens": 635,
+        "estimated_usd": 0.0075456
+      }
+    },
+    "estimated_usd": 0.01176465,
+    "required_focus": [
+      "Request a small CREATE TABLE/INSERT example and the differing DISTINCT/GROUP BY results."
+    ],
+    "unacceptable": [
+      "Demand the original SQL Server database.",
+      "Assert a root cause from the collation name."
+    ]
+  },
+  {
+    "case_id": "h13",
+    "issue": 17,
+    "run_id": 40498492670,
+    "conclusion": "success",
+    "status": "completed",
+    "expected_label": "needs reproducible example",
+    "actual_labels": [
+      "needs reproducible example"
+    ],
+    "decision_matches": true,
+    "comments": [
+      "Could you share a small, shareable table sample (e.g. a CSV or SQL `CREATE`+`INSERT` snippet) that still triggers the problem, together with the exact Python commands you use to create/load the table and the precise `SELECT DISTINCT ... ORDER BY ... LIMIT` statement you run? A tiny reproducible dataset and the load/query steps will let us reproduce the behaviour locally.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 b07a1ee7d74e00e37857bc05279d44ba85c4ff6ef3db90bdce9efaee6fc42656 needs reproducible example -->"
+    ],
+    "proposals": [
+      {
+        "label": "needs reproducible example",
+        "comment": "Could you share a small, shareable table sample (e.g. a CSV or SQL `CREATE`+`INSERT` snippet) that still triggers the problem, together with the exact Python commands you use to create/load the table and the precise `SELECT DISTINCT ... ORDER BY ... LIMIT` statement you run? A tiny reproducible dataset and the load/query steps will let us reproduce the behaviour locally.",
+        "rationale": "The report describes deterministic incorrect results but does not include the table data or a minimal reproducible input and the exact load steps; without the table/sample and the precise create/load commands the bug cannot be reproduced or validated."
+      }
+    ],
+    "ingested_proposals": [
+      {
+        "label": "needs reproducible example",
+        "comment": "Could you share a small, shareable table sample (e.g. a CSV or SQL `CREATE`+`INSERT` snippet) that still triggers the problem, together with the exact Python commands you use to create/load the table and the precise `SELECT DISTINCT ... ORDER BY ... LIMIT` statement you run? A tiny reproducible dataset and the load/query steps will let us reproduce the behaviour locally.",
+        "rationale": "The report describes deterministic incorrect results but does not include the table data or a minimal reproducible input and the exact load steps; without the table/sample and the precise create/load commands the bug cannot be reproduced or validated."
+      }
+    ],
+    "ingestion_changed_proposal": false,
+    "proposal_matches_effects": true,
+    "tool_calls": {
+      "list_mcp_resources": 1,
+      "list_mcp_resource_templates": 1,
+      "submit_triage": 1
+    },
+    "forbidden_actions": [
+      "Forbidden tool attempted: list_mcp_resources (1 calls)",
+      "Forbidden tool attempted: list_mcp_resource_templates (1 calls)"
+    ],
+    "metadata_warnings": [],
+    "cost": {
+      "agent": {
+        "requests": 4,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 36495,
+        "cached_tokens": 27008,
+        "output_tokens": 589,
+        "estimated_usd": 0.00422495
+      },
+      "detection": {
+        "requests": 3,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 60712,
+        "cached_tokens": 46976,
+        "output_tokens": 472,
+        "estimated_usd": 0.0055524
+      }
+    },
+    "estimated_usd": 0.00977735,
+    "required_focus": [
+      "Request the table definition and shareable data or a synthetic generator that demonstrates the LIMIT behavior."
+    ],
+    "unacceptable": [
+      "Demand all private market data.",
+      "Ask for expected row counts already supplied."
+    ]
+  },
+  {
+    "case_id": "h14",
+    "issue": 18,
+    "run_id": 40499137828,
+    "conclusion": "success",
+    "status": "completed",
+    "expected_label": "needs reproducible example",
+    "actual_labels": [
+      "needs reproducible example"
+    ],
+    "decision_matches": true,
+    "comments": [
+      "Could you share a small, shareable Parquet sample (or equivalent SQL-generated data) that still triggers the crash, together with the exact command you use to run the script and the complete stderr/backtrace? The provided script references '../raw_metars' which isn’t included, so a minimal reproducible input is needed to follow the failure.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 b9eecacd5b9aa4feb1d84480dd539c1abb4d4533785c6e572703a7589149ea3d needs reproducible example -->"
+    ],
+    "proposals": [
+      {
+        "label": "needs reproducible example",
+        "comment": "Could you share a small, shareable Parquet sample (or equivalent SQL-generated data) that still triggers the crash, together with the exact command you use to run the script and the complete stderr/backtrace? The provided script references '../raw_metars' which isn’t included, so a minimal reproducible input is needed to follow the failure.",
+        "rationale": "The report supplies a SQL script that references external data directory '../raw_metars' but no sample data or generated equivalent is provided, preventing local reproduction of the crash."
+      }
+    ],
+    "ingested_proposals": [
+      {
+        "label": "needs reproducible example",
+        "comment": "Could you share a small, shareable Parquet sample (or equivalent SQL-generated data) that still triggers the crash, together with the exact command you use to run the script and the complete stderr/backtrace? The provided script references '../raw_metars' which isn’t included, so a minimal reproducible input is needed to follow the failure.",
+        "rationale": "The report supplies a SQL script that references external data directory '../raw_metars' but no sample data or generated equivalent is provided, preventing local reproduction of the crash."
+      }
+    ],
+    "ingestion_changed_proposal": false,
+    "proposal_matches_effects": true,
+    "tool_calls": {
+      "list_mcp_resources": 1,
+      "submit_triage": 1
+    },
+    "forbidden_actions": [
+      "Forbidden tool attempted: list_mcp_resources (1 calls)"
+    ],
+    "metadata_warnings": [],
+    "cost": {
+      "agent": {
+        "requests": 3,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 29130,
+        "cached_tokens": 19072,
+        "output_tokens": 538,
+        "estimated_usd": 0.0040673
+      },
+      "detection": {
+        "requests": 3,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 62917,
+        "cached_tokens": 40704,
+        "output_tokens": 613,
+        "estimated_usd": 0.00779685
+      }
+    },
+    "estimated_usd": 0.01186415,
+    "required_focus": [
+      "Request a shareable Parquet sample or generator with the referenced columns that triggers the progress-bar failure."
+    ],
+    "unacceptable": [
+      "Request a stack trace already supplied.",
+      "Treat the disabled-progress-bar workaround as the intended failing configuration."
+    ]
+  },
+  {
+    "case_id": "h15",
+    "issue": 19,
+    "run_id": 40499984485,
+    "conclusion": "success",
+    "status": "completed",
+    "expected_label": "needs more info",
+    "actual_labels": [
+      "needs more info"
+    ],
+    "decision_matches": true,
+    "comments": [
+      "Please confirm the exact DuckDB version/build that produced this error: the report mentions both \"v1.5.2\" and \"1.5.3\". Could you paste the exact output of either `SELECT version();` (inside DuckDB) or `duckdb --version` (CLI) from the same environment that generated the INTERNAL error?\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 a0cb7d5ba0366efd8e2fc436c98f03bfc8eed0d6d2d3e87aad41a147875ecda6 needs more info -->"
+    ],
+    "proposals": [
+      {
+        "label": "needs more info",
+        "comment": "Please confirm the exact DuckDB version/build that produced this error: the report mentions both \"v1.5.2\" and \"1.5.3\". Could you paste the exact output of either `SELECT version();` (inside DuckDB) or `duckdb --version` (CLI) from the same environment that generated the INTERNAL error?",
+        "rationale": "The report contains a contradictory DuckDB version (v1.5.2 in the description and 1.5.3 in the template). Exact version/build information is essential to reproduce and determine whether the issue exists in the stated release or a newer build."
+      }
+    ],
+    "ingested_proposals": [
+      {
+        "label": "needs more info",
+        "comment": "Please confirm the exact DuckDB version/build that produced this error: the report mentions both \"v1.5.2\" and \"1.5.3\". Could you paste the exact output of either `SELECT version();` (inside DuckDB) or `duckdb --version` (CLI) from the same environment that generated the INTERNAL error?",
+        "rationale": "The report contains a contradictory DuckDB version (v1.5.2 in the description and 1.5.3 in the template). Exact version/build information is essential to reproduce and determine whether the issue exists in the stated release or a newer build."
+      }
+    ],
+    "ingestion_changed_proposal": false,
+    "proposal_matches_effects": true,
+    "tool_calls": {
+      "submit_triage": 1
+    },
+    "forbidden_actions": [],
+    "metadata_warnings": [],
+    "cost": {
+      "agent": {
+        "requests": 3,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 29677,
+        "cached_tokens": 19712,
+        "output_tokens": 937,
+        "estimated_usd": 0.00485805
+      },
+      "detection": {
+        "requests": 2,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 38576,
+        "cached_tokens": 19072,
+        "output_tokens": 385,
+        "estimated_usd": 0.0061228
+      }
+    },
+    "estimated_usd": 0.01098085,
+    "required_focus": [
+      "Identify the 1.5.2/1.5.3 conflict and ask which build produced the reported error."
+    ],
+    "unacceptable": [
+      "Use the later version correction or BEGIN addition.",
+      "Request the SQL or rows already supplied."
+    ]
+  },
+  {
+    "case_id": "h16",
+    "issue": 20,
+    "run_id": 40500796696,
+    "conclusion": "success",
+    "status": "completed",
+    "expected_label": "needs reproducible example",
+    "actual_labels": [
+      "needs reproducible example"
+    ],
+    "decision_matches": true,
+    "comments": [
+      "Could you provide a small, shareable dataset (CSV files or a SQL script that generates the same table shapes and rows) that still shows the delete-heavy regression when run on 1.4.0 vs 1.5.2, together with the exact table DDL for `pex_element`, `pex_connection`, and `pex_net` and the precise sequence of statements you run (including any PRAGMAs or connection options)? If you cannot share data, a self-contained SQL generator that creates representative data is sufficient. This will let us reproduce the performance change locally.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 c2c731c447b67c8cb0446672ad9e3a0cd10322265934fb16a1f8264f787e2c14 needs reproducible example -->"
+    ],
+    "proposals": [
+      {
+        "label": "needs reproducible example",
+        "comment": "Could you provide a small, shareable dataset (CSV files or a SQL script that generates the same table shapes and rows) that still shows the delete-heavy regression when run on 1.4.0 vs 1.5.2, together with the exact table DDL for `pex_element`, `pex_connection`, and `pex_net` and the precise sequence of statements you run (including any PRAGMAs or connection options)? If you cannot share data, a self-contained SQL generator that creates representative data is sufficient. This will let us reproduce the performance change locally.",
+        "rationale": "The report includes the SQL pattern and environment but no shareable input data or data-generator/DDL; without a sample dataset or generator and precise DDL/connection options the regression cannot be reproduced or investigated."
+      }
+    ],
+    "ingested_proposals": [
+      {
+        "label": "needs reproducible example",
+        "comment": "Could you provide a small, shareable dataset (CSV files or a SQL script that generates the same table shapes and rows) that still shows the delete-heavy regression when run on 1.4.0 vs 1.5.2, together with the exact table DDL for `pex_element`, `pex_connection`, and `pex_net` and the precise sequence of statements you run (including any PRAGMAs or connection options)? If you cannot share data, a self-contained SQL generator that creates representative data is sufficient. This will let us reproduce the performance change locally.",
+        "rationale": "The report includes the SQL pattern and environment but no shareable input data or data-generator/DDL; without a sample dataset or generator and precise DDL/connection options the regression cannot be reproduced or investigated."
+      }
+    ],
+    "ingestion_changed_proposal": false,
+    "proposal_matches_effects": true,
+    "tool_calls": {
+      "submit_triage": 1
+    },
+    "forbidden_actions": [],
+    "metadata_warnings": [],
+    "cost": {
+      "agent": {
+        "requests": 3,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 27500,
+        "cached_tokens": 25600,
+        "output_tokens": 630,
+        "estimated_usd": 0.002375
+      },
+      "detection": {
+        "requests": 3,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 60969,
+        "cached_tokens": 39424,
+        "output_tokens": 559,
+        "estimated_usd": 0.00748985
+      }
+    },
+    "estimated_usd": 0.00986485,
+    "required_focus": [
+      "Request table/index definitions and shareable or generated data demonstrating the slow COMMIT."
+    ],
+    "unacceptable": [
+      "Demand the entire 65GB production database.",
+      "Repeat the supplied timings or hardware request."
+    ]
+  },
+  {
+    "case_id": "h17",
+    "issue": 21,
+    "run_id": 40501537063,
+    "conclusion": "success",
+    "status": "completed",
+    "expected_label": "needs reproducible example",
+    "actual_labels": [
+      "needs reproducible example"
+    ],
+    "decision_matches": true,
+    "comments": [
+      "Could you share a small, shareable SQL script or sample input that still triggers this failure (for example a minimal SQL file or exported CSV/import steps) together with the complete CLI output shown when the crash occurs, including the exact error message and any stack trace? The report mentions the failure happens during an `INSERT ... SELECT` from a Postgres attachment; please include the exact `INSERT ... SELECT` statement and the DDL for the target table if possible. This will let us reproduce the Floating point exception locally without confidential data.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 4fbbd66dc944f1486f8e043c97521bde057c599ead8f75354e6d7493d917c513 needs reproducible example -->"
+    ],
+    "proposals": [
+      {
+        "label": "needs reproducible example",
+        "comment": "Could you share a small, shareable SQL script or sample input that still triggers this failure (for example a minimal SQL file or exported CSV/import steps) together with the complete CLI output shown when the crash occurs, including the exact error message and any stack trace? The report mentions the failure happens during an `INSERT ... SELECT` from a Postgres attachment; please include the exact `INSERT ... SELECT` statement and the DDL for the target table if possible. This will let us reproduce the Floating point exception locally without confidential data.",
+        "rationale": "The report lacks a reproducible example: no minimal SQL/input data, no exact failing statement, and no complete error/stack trace. These artifacts are required to reproduce and triage the crash."
+      }
+    ],
+    "ingested_proposals": [
+      {
+        "label": "needs reproducible example",
+        "comment": "Could you share a small, shareable SQL script or sample input that still triggers this failure (for example a minimal SQL file or exported CSV/import steps) together with the complete CLI output shown when the crash occurs, including the exact error message and any stack trace? The report mentions the failure happens during an `INSERT ... SELECT` from a Postgres attachment; please include the exact `INSERT ... SELECT` statement and the DDL for the target table if possible. This will let us reproduce the Floating point exception locally without confidential data.",
+        "rationale": "The report lacks a reproducible example: no minimal SQL/input data, no exact failing statement, and no complete error/stack trace. These artifacts are required to reproduce and triage the crash."
+      }
+    ],
+    "ingestion_changed_proposal": false,
+    "proposal_matches_effects": true,
+    "tool_calls": {
+      "list_mcp_resources": 1,
+      "list_mcp_resource_templates": 1,
+      "submit_triage": 1
+    },
+    "forbidden_actions": [
+      "Forbidden tool attempted: list_mcp_resources (1 calls)",
+      "Forbidden tool attempted: list_mcp_resource_templates (1 calls)"
+    ],
+    "metadata_warnings": [],
+    "cost": {
+      "agent": {
+        "requests": 5,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 45203,
+        "cached_tokens": 35584,
+        "output_tokens": 679,
+        "estimated_usd": 0.00465235
+      },
+      "detection": {
+        "requests": 2,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 37180,
+        "cached_tokens": 26112,
+        "output_tokens": 672,
+        "estimated_usd": 0.0047638
+      }
+    },
+    "estimated_usd": 0.00941615,
+    "required_focus": [
+      "Request sanitized schema, failing INSERT/SELECT details and minimal source rows or generator."
+    ],
+    "unacceptable": [
+      "Request credentials or the private source database.",
+      "Repeat supplied OS/version questions."
+    ]
+  },
+  {
+    "case_id": "h18",
+    "issue": 22,
+    "run_id": 40502143512,
+    "conclusion": "success",
+    "status": "completed",
+    "expected_label": null,
+    "actual_labels": [
+      "needs reproducible example"
+    ],
+    "decision_matches": false,
+    "comments": [
+      "Could you share a small, shareable Parquet sample (or equivalent generated input) that still triggers the error when read with your `read_parquet('(redacted) invocation, together with the complete Python traceback (full error message and stack) produced by DuckDB? That sample and the full traceback will let us identify the exact column and file causing the cast failure.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 7f6821d84590aa03820546d06f885ed7929efc83a9d64b4a1d3d845722584279 needs reproducible example -->"
+    ],
+    "proposals": [
+      {
+        "label": "needs reproducible example",
+        "comment": "Could you share a small, shareable Parquet sample (or equivalent generated input) that still triggers the error when read with your `read_parquet('s3://.../**/*.parquet')` invocation, together with the complete Python traceback (full error message and stack) produced by DuckDB? That sample and the full traceback will let us identify the exact column and file causing the cast failure.",
+        "rationale": "The report describes a ConversionError but provides no shareable Parquet data or the complete traceback identifying which column/file failed; without a small reproducer or full error text, the failure cannot be followed or diagnosed."
+      }
+    ],
+    "ingested_proposals": [
+      {
+        "label": "needs reproducible example",
+        "comment": "Could you share a small, shareable Parquet sample (or equivalent generated input) that still triggers the error when read with your `read_parquet('(redacted) invocation, together with the complete Python traceback (full error message and stack) produced by DuckDB? That sample and the full traceback will let us identify the exact column and file causing the cast failure.",
+        "rationale": "The report describes a ConversionError but provides no shareable Parquet data or the complete traceback identifying which column/file failed; without a small reproducer or full error text, the failure cannot be followed or diagnosed."
+      }
+    ],
+    "ingestion_changed_proposal": true,
+    "proposal_matches_effects": true,
+    "tool_calls": {
+      "list_mcp_resources": 2,
+      "list_mcp_resource_templates": 1,
+      "submit_triage": 1
+    },
+    "forbidden_actions": [
+      "Forbidden tool attempted: list_mcp_resources (2 calls)",
+      "Forbidden tool attempted: list_mcp_resource_templates (1 calls)"
+    ],
+    "metadata_warnings": [],
+    "cost": {
+      "agent": {
+        "requests": 5,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 44689,
+        "cached_tokens": 35456,
+        "output_tokens": 593,
+        "estimated_usd": 0.00438065
+      },
+      "detection": {
+        "requests": 2,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 37014,
+        "cached_tokens": 7680,
+        "output_tokens": 591,
+        "estimated_usd": 0.0087075
+      }
+    },
+    "estimated_usd": 0.01308815,
+    "required_focus": [],
+    "unacceptable": [
+      "Automatically demand confidential data or a bug reproducer for the enhancement."
+    ]
+  },
+  {
+    "case_id": "h19",
+    "issue": 23,
+    "run_id": 40502836154,
+    "conclusion": "success",
+    "status": "completed",
+    "expected_label": "needs reproducible example",
+    "actual_labels": [
+      "needs reproducible example"
+    ],
+    "decision_matches": true,
+    "comments": [
+      "Could you share a small, shareable input (for example a CSV or SQL VALUES block) that still triggers this error when run with the shown SQL, together with the complete error text/stack trace produced by DuckDB? The sanitized query is helpful, but reproducing the internal binder/planner failure requires an example input or table schema/data that triggers the problem.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 5d3c461a0b2cb36cf1558da22dc8606ca8b60e4a655cddd1967edead062bbb32 needs reproducible example -->"
+    ],
+    "proposals": [
+      {
+        "label": "needs reproducible example",
+        "comment": "Could you share a small, shareable input (for example a CSV or SQL VALUES block) that still triggers this error when run with the shown SQL, together with the complete error text/stack trace produced by DuckDB? The sanitized query is helpful, but reproducing the internal binder/planner failure requires an example input or table schema/data that triggers the problem.",
+        "rationale": "The report includes a sanitized SQL shape and environment details but lacks any concrete shareable input or minimal table data/schema; without sample data or an equivalent VALUES-based repro the internal planner error cannot be reliably reproduced."
+      }
+    ],
+    "ingested_proposals": [
+      {
+        "label": "needs reproducible example",
+        "comment": "Could you share a small, shareable input (for example a CSV or SQL VALUES block) that still triggers this error when run with the shown SQL, together with the complete error text/stack trace produced by DuckDB? The sanitized query is helpful, but reproducing the internal binder/planner failure requires an example input or table schema/data that triggers the problem.",
+        "rationale": "The report includes a sanitized SQL shape and environment details but lacks any concrete shareable input or minimal table data/schema; without sample data or an equivalent VALUES-based repro the internal planner error cannot be reliably reproduced."
+      }
+    ],
+    "ingestion_changed_proposal": false,
+    "proposal_matches_effects": true,
+    "tool_calls": {
+      "list_mcp_resources": 2,
+      "list_mcp_resource_templates": 2,
+      "submit_triage": 1
+    },
+    "forbidden_actions": [
+      "Forbidden tool attempted: list_mcp_resources (2 calls)",
+      "Forbidden tool attempted: list_mcp_resource_templates (2 calls)"
+    ],
+    "metadata_warnings": [],
+    "cost": {
+      "agent": {
+        "requests": 5,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 48501,
+        "cached_tokens": 38528,
+        "output_tokens": 553,
+        "estimated_usd": 0.00456245
+      },
+      "detection": {
+        "requests": 2,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 38734,
+        "cached_tokens": 26880,
+        "output_tokens": 347,
+        "estimated_usd": 0.0043295
+      }
+    },
+    "estimated_usd": 0.00889195,
+    "required_focus": [
+      "Acknowledge the reduction attempt and request the input_relation schema plus shareable input or a generator; it need not be tiny."
+    ],
+    "unacceptable": [
+      "Insist on a tiny VALUES-only example.",
+      "Request private data or repeat the supplied environment."
+    ]
+  },
+  {
+    "case_id": "h20",
+    "issue": 24,
+    "run_id": 40503443020,
+    "conclusion": "success",
+    "status": "completed",
+    "expected_label": null,
+    "actual_labels": [
+      "needs reproducible example"
+    ],
+    "decision_matches": false,
+    "comments": [
+      "Could you provide a small, shareable reproducer that registers the described table function (showing the C++ registration code) with `varargs = LogicalType::ANY`, plus the exact SQL you run that fails and the complete error message? A minimal reproducer that we can compile/run or an equivalent SQL-test demonstrating the rejection will make it possible to validate and apply the suggested change.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 2509ebb9c7b72108735a84e6c65b1c5ae69ffc62b71ebf17bbf458913b0afeab needs reproducible example -->"
+    ],
+    "proposals": [
+      {
+        "label": "needs reproducible example",
+        "comment": "Could you provide a small, shareable reproducer that registers the described table function (showing the C++ registration code) with `varargs = LogicalType::ANY`, plus the exact SQL you run that fails and the complete error message? A minimal reproducer that we can compile/run or an equivalent SQL-test demonstrating the rejection will make it possible to validate and apply the suggested change.",
+        "rationale": "The report explains the intended behavior and shows an example call, but lacks a complete, reproduceable function registration and runnable test case. Without a minimal reproducer (registration code and the exact failing SQL/error), the failure cannot be followed or validated."
+      }
+    ],
+    "ingested_proposals": [
+      {
+        "label": "needs reproducible example",
+        "comment": "Could you provide a small, shareable reproducer that registers the described table function (showing the C++ registration code) with `varargs = LogicalType::ANY`, plus the exact SQL you run that fails and the complete error message? A minimal reproducer that we can compile/run or an equivalent SQL-test demonstrating the rejection will make it possible to validate and apply the suggested change.",
+        "rationale": "The report explains the intended behavior and shows an example call, but lacks a complete, reproduceable function registration and runnable test case. Without a minimal reproducer (registration code and the exact failing SQL/error), the failure cannot be followed or validated."
+      }
+    ],
+    "ingestion_changed_proposal": false,
+    "proposal_matches_effects": true,
+    "tool_calls": {
+      "list_mcp_resources": 1,
+      "list_mcp_resource_templates": 1,
+      "submit_triage": 1
+    },
+    "forbidden_actions": [
+      "Forbidden tool attempted: list_mcp_resources (1 calls)",
+      "Forbidden tool attempted: list_mcp_resource_templates (1 calls)"
+    ],
+    "metadata_warnings": [],
+    "cost": {
+      "agent": {
+        "requests": 5,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 45516,
+        "cached_tokens": 36096,
+        "output_tokens": 646,
+        "estimated_usd": 0.0045494
+      },
+      "detection": {
+        "requests": 2,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 37309,
+        "cached_tokens": 26112,
+        "output_tokens": 489,
+        "estimated_usd": 0.00443005
+      }
+    },
+    "estimated_usd": 0.00897945,
+    "required_focus": [],
+    "unacceptable": [
+      "Demand a crash reproducer or adjudicate the proposed implementation."
+    ]
+  },
+  {
+    "case_id": "h21",
+    "issue": 25,
+    "run_id": 40504122127,
+    "conclusion": "success",
+    "status": "completed",
+    "expected_label": null,
+    "actual_labels": [],
+    "decision_matches": true,
+    "comments": [],
+    "proposals": [
+      {
+        "label": null,
+        "comment": null,
+        "rationale": "The report includes a concrete, self-contained SQL reproducer (CREATE/INSERT/CHECKPOINT), exact DuckDB version, platform, error text and stack trace. No essential reproduction steps, data, or environment details are missing, so no clarification request is needed."
+      }
+    ],
+    "ingested_proposals": [
+      {
+        "label": null,
+        "comment": null,
+        "rationale": "The report includes a concrete, self-contained SQL reproducer (CREATE/INSERT/CHECKPOINT), exact DuckDB version, platform, error text and stack trace. No essential reproduction steps, data, or environment details are missing, so no clarification request is needed."
+      }
+    ],
+    "ingestion_changed_proposal": false,
+    "proposal_matches_effects": true,
+    "tool_calls": {
+      "list_mcp_resources": 1,
+      "submit_triage": 1
+    },
+    "forbidden_actions": [
+      "Forbidden tool attempted: list_mcp_resources (1 calls)"
+    ],
+    "metadata_warnings": [],
+    "cost": {
+      "agent": {
+        "requests": 3,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 27296,
+        "cached_tokens": 17920,
+        "output_tokens": 354,
+        "estimated_usd": 0.0035
+      },
+      "detection": {
+        "requests": 2,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 37541,
+        "cached_tokens": 18688,
+        "output_tokens": 450,
+        "estimated_usd": 0.00608045
+      }
+    },
+    "estimated_usd": 0.00958045,
+    "required_focus": [],
+    "unacceptable": [
+      "Infer missing code from later upstream labels.",
+      "Claim the bug has been reproduced by this evaluation."
+    ]
+  },
+  {
+    "case_id": "h22",
+    "issue": 26,
+    "run_id": 40504827233,
+    "conclusion": "success",
+    "status": "completed",
+    "expected_label": "needs reproducible example",
+    "actual_labels": [
+      "needs reproducible example"
+    ],
+    "decision_matches": true,
+    "comments": [
+      "Could you share a small, shareable reproduction that still triggers the silent failure? Please either attach a copy of the affected `.duckdb` file (sanitized) or provide a sequence of SQL statements that recreates the exact database state and shows the failing `INSERT OR REPLACE` statement (copy/paste the exact SQL you run) plus the commands you run to verify the row is unchanged. Also note whether you run these statements inside an explicit transaction and any non-default PRAGMAs you use.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 19b0a24a27375ded201fd16fca60dba0163aedb700e6e0c65e33813b18facb69 needs reproducible example -->"
+    ],
+    "proposals": [
+      {
+        "label": "needs reproducible example",
+        "comment": "Could you share a small, shareable reproduction that still triggers the silent failure? Please either attach a copy of the affected `.duckdb` file (sanitized) or provide a sequence of SQL statements that recreates the exact database state and shows the failing `INSERT OR REPLACE` statement (copy/paste the exact SQL you run) plus the commands you run to verify the row is unchanged. Also note whether you run these statements inside an explicit transaction and any non-default PRAGMAs you use.",
+        "rationale": "The report shows the failing statement and table schema but does not include the actual affected database file or a self-contained SQL sequence that reproduces the silent failure. Without the DB or an exact sequence of operations that lead to the bad state, maintainers cannot reproduce or investigate why `INSERT OR REPLACE` behaves differently on the reported file."
+      }
+    ],
+    "ingested_proposals": [
+      {
+        "label": "needs reproducible example",
+        "comment": "Could you share a small, shareable reproduction that still triggers the silent failure? Please either attach a copy of the affected `.duckdb` file (sanitized) or provide a sequence of SQL statements that recreates the exact database state and shows the failing `INSERT OR REPLACE` statement (copy/paste the exact SQL you run) plus the commands you run to verify the row is unchanged. Also note whether you run these statements inside an explicit transaction and any non-default PRAGMAs you use.",
+        "rationale": "The report shows the failing statement and table schema but does not include the actual affected database file or a self-contained SQL sequence that reproduces the silent failure. Without the DB or an exact sequence of operations that lead to the bad state, maintainers cannot reproduce or investigate why `INSERT OR REPLACE` behaves differently on the reported file."
+      }
+    ],
+    "ingestion_changed_proposal": false,
+    "proposal_matches_effects": true,
+    "tool_calls": {
+      "list_mcp_resources": 1,
+      "submit_triage": 1
+    },
+    "forbidden_actions": [
+      "Forbidden tool attempted: list_mcp_resources (1 calls)"
+    ],
+    "metadata_warnings": [],
+    "cost": {
+      "agent": {
+        "requests": 3,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 28099,
+        "cached_tokens": 18304,
+        "output_tokens": 633,
+        "estimated_usd": 0.00417235
+      },
+      "detection": {
+        "requests": 3,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 61470,
+        "cached_tokens": 47488,
+        "output_tokens": 565,
+        "estimated_usd": 0.0058127
+      }
+    },
+    "estimated_usd": 0.00998505,
+    "required_focus": [
+      "Request a non-confidential affected database or a procedure recreating the state, acknowledging the unsuccessful fresh-database attempt."
+    ],
+    "unacceptable": [
+      "Ask only for the schema already supplied.",
+      "Demand production data."
+    ]
+  },
+  {
+    "case_id": "h23",
+    "issue": 27,
+    "run_id": 40505513644,
+    "conclusion": "success",
+    "status": "completed",
+    "expected_label": "needs reproducible example",
+    "actual_labels": [
+      "needs reproducible example"
+    ],
+    "decision_matches": true,
+    "comments": [
+      "Could you share a small, shareable Parquet file (or equivalent SQL/CSV input and the exact commands you run to produce the Parquet) that still triggers this NOT NULL constraint error, together with the complete error message/stack trace and the exact `COPY ... TO` command you used?\n\nPlease avoid any private credentials; a tiny reproducible file and the precise commands are enough to reproduce the failure locally.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 6b302f42772e0455793f933408f60d0454bf94d1fb0d9b4e50abd953bea97137 needs reproducible example -->"
+    ],
+    "proposals": [
+      {
+        "label": "needs reproducible example",
+        "comment": "Could you share a small, shareable Parquet file (or equivalent SQL/CSV input and the exact commands you run to produce the Parquet) that still triggers this NOT NULL constraint error, together with the complete error message/stack trace and the exact `COPY ... TO` command you used?\n\nPlease avoid any private credentials; a tiny reproducible file and the precise commands are enough to reproduce the failure locally.",
+        "rationale": "The report describes corruption but does not provide a reproducer (Parquet file or input and exact export command) or the complete error message, so it is impossible to follow or validate the failure."
+      }
+    ],
+    "ingested_proposals": [
+      {
+        "label": "needs reproducible example",
+        "comment": "Could you share a small, shareable Parquet file (or equivalent SQL/CSV input and the exact commands you run to produce the Parquet) that still triggers this NOT NULL constraint error, together with the complete error message/stack trace and the exact `COPY ... TO` command you used?\n\nPlease avoid any private credentials; a tiny reproducible file and the precise commands are enough to reproduce the failure locally.",
+        "rationale": "The report describes corruption but does not provide a reproducer (Parquet file or input and exact export command) or the complete error message, so it is impossible to follow or validate the failure."
+      }
+    ],
+    "ingestion_changed_proposal": false,
+    "proposal_matches_effects": true,
+    "tool_calls": {
+      "list_mcp_resources": 1,
+      "list_mcp_resource_templates": 1,
+      "submit_triage": 1
+    },
+    "forbidden_actions": [
+      "Forbidden tool attempted: list_mcp_resources (1 calls)",
+      "Forbidden tool attempted: list_mcp_resource_templates (1 calls)"
+    ],
+    "metadata_warnings": [],
+    "cost": {
+      "agent": {
+        "requests": 5,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 45637,
+        "cached_tokens": 36224,
+        "output_tokens": 645,
+        "estimated_usd": 0.00454885
+      },
+      "detection": {
+        "requests": 2,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 37310,
+        "cached_tokens": 18432,
+        "output_tokens": 442,
+        "estimated_usd": 0.0060643
+      }
+    },
+    "estimated_usd": 0.01061315,
+    "required_focus": [
+      "Request a synthetic sequence with inserted data, export and failing read-back, including the destination table definition."
+    ],
+    "unacceptable": [
+      "Present partial S3 uploads or throttling as an established cause.",
+      "Request S3 credentials or private production files."
+    ]
+  },
+  {
+    "case_id": "h24",
+    "issue": 28,
+    "run_id": 40506357991,
+    "conclusion": "success",
+    "status": "completed",
+    "expected_label": "needs more info",
+    "actual_labels": [
+      "needs more info"
+    ],
+    "decision_matches": true,
+    "comments": [
+      "Could you provide details about how you built or obtained `duckdb.dll` and how you compiled/linked your C++ program (compiler, flags or CMake command, and whether you target x86 or x64)? Also please include whether you used a prebuilt DLL or built DuckDB locally, the runtime (MSVC/MinGW) and the full exception stack trace or crash log produced when running the sample code. These environment and build/linking details are needed to reproduce and diagnose the access violation.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 baaab9cfb227a18935ae2554cd1dddae4e626380906c4484a6011fe56de58c4a needs more info -->"
+    ],
+    "proposals": [
+      {
+        "label": "needs more info",
+        "comment": "Could you provide details about how you built or obtained `duckdb.dll` and how you compiled/linked your C++ program (compiler, flags or CMake command, and whether you target x86 or x64)? Also please include whether you used a prebuilt DLL or built DuckDB locally, the runtime (MSVC/MinGW) and the full exception stack trace or crash log produced when running the sample code. These environment and build/linking details are needed to reproduce and diagnose the access violation.",
+        "rationale": "Report includes a minimal C++ snippet but lacks essential build/link and runtime details (how `duckdb.dll` was produced/obtained, compiler/runtime, target architecture, and crash stack trace), which are required to reproduce and investigate an access violation on Windows."
+      }
+    ],
+    "ingested_proposals": [
+      {
+        "label": "needs more info",
+        "comment": "Could you provide details about how you built or obtained `duckdb.dll` and how you compiled/linked your C++ program (compiler, flags or CMake command, and whether you target x86 or x64)? Also please include whether you used a prebuilt DLL or built DuckDB locally, the runtime (MSVC/MinGW) and the full exception stack trace or crash log produced when running the sample code. These environment and build/linking details are needed to reproduce and diagnose the access violation.",
+        "rationale": "Report includes a minimal C++ snippet but lacks essential build/link and runtime details (how `duckdb.dll` was produced/obtained, compiler/runtime, target architecture, and crash stack trace), which are required to reproduce and investigate an access violation on Windows."
+      }
+    ],
+    "ingestion_changed_proposal": false,
+    "proposal_matches_effects": true,
+    "tool_calls": {
+      "list_mcp_resources": 7,
+      "read_mcp_resource": 3,
+      "list_mcp_resource_templates": 3,
+      "submit_triage": 1
+    },
+    "forbidden_actions": [
+      "Forbidden tool attempted: list_mcp_resources (7 calls)",
+      "Forbidden tool attempted: read_mcp_resource (3 calls)",
+      "Forbidden tool attempted: list_mcp_resource_templates (3 calls)"
+    ],
+    "metadata_warnings": [],
+    "cost": {
+      "agent": {
+        "requests": 11,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 101291,
+        "cached_tokens": 98816,
+        "output_tokens": 981,
+        "estimated_usd": 0.00505115
+      },
+      "detection": {
+        "requests": 2,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 37279,
+        "cached_tokens": 18176,
+        "output_tokens": 563,
+        "estimated_usd": 0.00635615
+      }
+    },
+    "estimated_usd": 0.0114073,
+    "required_focus": [
+      "Ask for compiler/version and compile/link settings, plus header/DLL provenance and application/library Debug or Release modes."
+    ],
+    "unacceptable": [
+      "Assert that a Debug/Release mismatch is the proven cause.",
+      "Ask for an external dataset."
+    ]
+  },
+  {
+    "case_id": "h25",
+    "issue": 29,
+    "run_id": 40507057098,
+    "conclusion": "success",
+    "status": "completed",
+    "expected_label": "needs more info",
+    "actual_labels": [
+      "needs reproducible example"
+    ],
+    "decision_matches": false,
+    "comments": [
+      "Could you share the `tools/pythonpkg/pyproject.toml` (or `setup.py`) from the repository and the complete pip build output that includes the `ModuleNotFoundError` stack? Also confirm the `pip`/`setuptools` versions (`pip --version` and `python -c \"import setuptools; print(setuptools.__version__)\"`) and whether you built inside a virtualenv. This will show the declared build backend and the exact build-time environment needed to reproduce the missing `package_build` module error.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 bc330f865c61340a4e633fcd59a2c24a6c6927ed275663072055bf8fca2d1b4d needs reproducible example -->"
+    ],
+    "proposals": [
+      {
+        "label": "needs reproducible example",
+        "comment": "Could you share the `tools/pythonpkg/pyproject.toml` (or `setup.py`) from the repository and the complete pip build output that includes the `ModuleNotFoundError` stack? Also confirm the `pip`/`setuptools` versions (`pip --version` and `python -c \"import setuptools; print(setuptools.__version__)\"`) and whether you built inside a virtualenv. This will show the declared build backend and the exact build-time environment needed to reproduce the missing `package_build` module error.",
+        "rationale": "The build is failing with `ModuleNotFoundError: No module named 'package_build'`, which indicates the Python build backend or build-time environment is missing or not declared. The report omits the package's build metadata (`pyproject.toml`/`setup.py`) and the full pip/setuptools versions and complete build log needed to reproduce and diagnose why the backend module is unavailable."
+      }
+    ],
+    "ingested_proposals": [
+      {
+        "label": "needs reproducible example",
+        "comment": "Could you share the `tools/pythonpkg/pyproject.toml` (or `setup.py`) from the repository and the complete pip build output that includes the `ModuleNotFoundError` stack? Also confirm the `pip`/`setuptools` versions (`pip --version` and `python -c \"import setuptools; print(setuptools.__version__)\"`) and whether you built inside a virtualenv. This will show the declared build backend and the exact build-time environment needed to reproduce the missing `package_build` module error.",
+        "rationale": "The build is failing with `ModuleNotFoundError: No module named 'package_build'`, which indicates the Python build backend or build-time environment is missing or not declared. The report omits the package's build metadata (`pyproject.toml`/`setup.py`) and the full pip/setuptools versions and complete build log needed to reproduce and diagnose why the backend module is unavailable."
+      }
+    ],
+    "ingestion_changed_proposal": false,
+    "proposal_matches_effects": true,
+    "tool_calls": {
+      "list_mcp_resources": 1,
+      "submit_triage": 1
+    },
+    "forbidden_actions": [
+      "Forbidden tool attempted: list_mcp_resources (1 calls)"
+    ],
+    "metadata_warnings": [],
+    "cost": {
+      "agent": {
+        "requests": 3,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 29448,
+        "cached_tokens": 27264,
+        "output_tokens": 814,
+        "estimated_usd": 0.0028556
+      },
+      "detection": {
+        "requests": 2,
+        "models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "input_tokens": 38781,
+        "cached_tokens": 19200,
+        "output_tokens": 356,
+        "estimated_usd": 0.00608725
+      }
+    },
+    "estimated_usd": 0.00894285,
+    "required_focus": [
+      "Ask which DuckDB release tag or Git commit the source build used; identify the unusable version value 22."
+    ],
+    "unacceptable": [
+      "Repeat requests for Python/compiler versions or traceback.",
+      "Infer a later fix or advise updating as a substitute for identifying the build."
+    ]
+  }
+]

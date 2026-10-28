@@ -1,0 +1,47 @@
+{
+  "status": "published",
+  "proposal": {
+    "label": "needs reproducible example",
+    "comment": "Could you share a small, shareable reproduction that still triggers the silent failure? Please either attach a copy of the affected `.duckdb` file (sanitized) or provide a sequence of SQL statements that recreates the exact database state and shows the failing `INSERT OR REPLACE` statement (copy/paste the exact SQL you run) plus the commands you run to verify the row is unchanged. Also note whether you run these statements inside an explicit transaction and any non-default PRAGMAs you use.",
+    "rationale": "The report shows the failing statement and table schema but does not include the actual affected database file or a self-contained SQL sequence that reproduces the silent failure. Without the DB or an exact sequence of operations that lead to the bad state, maintainers cannot reproduce or investigate why `INSERT OR REPLACE` behaves differently on the reported file."
+  },
+  "actions": [
+    "add_comment",
+    "add_label"
+  ],
+  "run_id": "40504827233",
+  "configuration_sha": "181254ea62280d63fca0d04c370243054e655539",
+  "input_sha256": "19b0a24a27375ded201fd16fca60dba0163aedb700e6e0c65e33813b18facb69",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "/comments?per_page=100&page=1",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/comments",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/labels",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "case_id": "h18",
+  "retry_issue": 33,
+  "original_sandbox_issue": 22,
+  "source": "final-181254e/h18/issue-before.json",
+  "additional_transformations": []
+}

@@ -1,0 +1,47 @@
+{
+  "status": "published",
+  "proposal": {
+    "label": "needs reproducible example",
+    "comment": "Could you provide a small, shareable Parquet sample (or a Python snippet that writes equivalent Parquet files) that still triggers this error when using `read_parquet(...)`, together with the complete Python traceback produced? A minimal reproducer that shows which file/column causes the cast-to-NULL error will let maintainers reproduce and confirm an improved error message.",
+    "rationale": "Report describes an in-scope failure (read_parquet across files) but lacks any shareable input or minimal reproducer; without a sample Parquet file or equivalent code producing the same error and the full traceback, maintainers cannot follow the failure to identify which file/column triggers the cast-to-NULL ConversionException."
+  },
+  "actions": [
+    "add_comment",
+    "add_label"
+  ],
+  "run_id": "40619920714",
+  "configuration_sha": "a468c9cba8f1d582ff1ef622f470b7443a77bad7",
+  "input_sha256": "7f6821d84590aa03820546d06f885ed7929efc83a9d64b4a1d3d845722584279",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "/comments?per_page=100&page=1",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/comments",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/labels",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

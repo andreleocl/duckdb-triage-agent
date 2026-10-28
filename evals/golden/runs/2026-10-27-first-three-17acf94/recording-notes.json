@@ -1,0 +1,18 @@
+{
+  "configuration_commit": "17acf9480bd83608e498d5e5579648b499d0747f",
+  "cases": [
+    "h01",
+    "h02",
+    "h03"
+  ],
+  "human_reviews": "pending; no reviews attributed to Andre",
+  "scope": "First three historical cases only. All frozen expected outcomes remain unchanged.",
+  "cancellation": "h02 run 40475218918 was cancelled by the concurrency queue before any jobs; run 40476560988 then failed preparation with URLError before inference. No completed model attempt was rerun.",
+  "rates_usd_per_million": {
+    "input": 0.25,
+    "cached_input": 0.025,
+    "output": 2
+  },
+  "rates_source": "https://developers.openai.com/api/docs/models/gpt-5-mini",
+  "limits": "Costs are token-based estimates, not billing receipts. Resource lookups recorded as instruction violations. Human safety review pending. Full original downloaded archives retained outside the repository."
+}

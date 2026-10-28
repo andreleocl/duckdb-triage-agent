@@ -1,0 +1,71 @@
+{
+  "new_runs": [
+    {
+      "case_id": "h01",
+      "run_id": 40483011978,
+      "status": "success",
+      "configuration_commit": "181254ea62280d63fca0d04c370243054e655539",
+      "cost": {
+        "agent": {
+          "requests": 3,
+          "input": 27732,
+          "cached": 18432,
+          "output": 321,
+          "usd": 0.0034278000000000004
+        },
+        "detection": {
+          "requests": 2,
+          "input": 37798,
+          "cached": 18688,
+          "output": 341,
+          "usd": 0.0059267
+        }
+      },
+      "total_estimated_usd": 0.0093545,
+      "tool_calls": {
+        "list_mcp_resources": 1,
+        "submit_triage": 1
+      },
+      "metadata_warnings": [],
+      "labels": [],
+      "comments": [],
+      "human_review": "pending"
+    },
+    {
+      "case_id": "h02",
+      "run_id": 40483564714,
+      "status": "success",
+      "configuration_commit": "181254ea62280d63fca0d04c370243054e655539",
+      "cost": {
+        "agent": {
+          "requests": 3,
+          "input": 28054,
+          "cached": 18560,
+          "output": 341,
+          "usd": 0.0035195
+        },
+        "detection": {
+          "requests": 2,
+          "input": 38010,
+          "cached": 18816,
+          "output": 351,
+          "usd": 0.0059708999999999995
+        }
+      },
+      "total_estimated_usd": 0.0094904,
+      "tool_calls": {
+        "list_mcp_resources": 1,
+        "submit_triage": 1
+      },
+      "metadata_warnings": [],
+      "labels": [],
+      "comments": [],
+      "human_review": "pending"
+    }
+  ],
+  "new_run_cost_usd": 0.018844899999999998,
+  "retained_h03_run": 40481876054,
+  "retained_h03_cost_usd": 0.0097647,
+  "triage_enabled": false,
+  "human_review": "pending"
+}

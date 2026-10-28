@@ -1,0 +1,47 @@
+{
+  "status": "published",
+  "proposal": {
+    "label": "needs more info",
+    "comment": "Could you share the DuckDB UI frontend version and the complete UI error/log output (for example the browser developer console or terminal output from `duckdb -ui`), and also run `SELECT version();` in the database and paste that result here? Please confirm you opened the same `test6.db` file in the UI as in the terminal. These details are needed to reproduce and diagnose the \u201cunrecognized type id: 109\u201d error.",
+    "rationale": "The report includes the SQL reproducer and DuckDB server version but omits the DuckDB UI/frontend version and the complete UI error/log output (browser console or `duckdb -ui` logs). Those environment/log details are essential to reproduce the UI-specific failure."
+  },
+  "actions": [
+    "add_comment",
+    "add_label"
+  ],
+  "run_id": "40613825202",
+  "configuration_sha": "bfd3da71cf48ebd561e5489457fb9dba80099f7e",
+  "input_sha256": "a35d8da5e1f6d997fb12eb1270988a7e16cfc3d608f2580b42c950eae10134c6",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "/comments?per_page=100&page=1",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/comments",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/labels",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

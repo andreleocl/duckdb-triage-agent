@@ -1,0 +1,12 @@
+{"ts":1793151497836,"event":"TRACK_START","rid":"097d5438-a81d-448e-87be-21a975d24ee3","provider":"openai","path":"/responses","streaming":true,"ct":"text/event-stream; charset=utf-8","ce":"(none)","status":200}
+{"ts":1793151501530,"event":"TRACK_END","rid":"097d5438-a81d-448e-87be-21a975d24ee3","result":"ok","streaming":true,"model":"gpt-5-mini-2025-08-07","input":9115,"output":240,"cache_read":0}
+{"ts":1793151502704,"event":"TRACK_START","rid":"d078cd4a-9a3e-4f7a-8ad8-7e1cf188a487","provider":"openai","path":"/responses","streaming":true,"ct":"text/event-stream; charset=utf-8","ce":"(none)","status":200}
+{"ts":1793151505442,"event":"TRACK_END","rid":"d078cd4a-9a3e-4f7a-8ad8-7e1cf188a487","result":"ok","streaming":true,"model":"gpt-5-mini-2025-08-07","input":9372,"output":113,"cache_read":9216}
+{"ts":1793151506472,"event":"TRACK_START","rid":"92353246-e24c-4dc9-a0dc-09ea9e3ce207","provider":"openai","path":"/responses","streaming":true,"ct":"text/event-stream; charset=utf-8","ce":"(none)","status":200}
+{"ts":1793151507042,"event":"TRACK_END","rid":"92353246-e24c-4dc9-a0dc-09ea9e3ce207","result":"ok","streaming":true,"model":"gpt-5-mini-2025-08-07","input":9499,"output":20,"cache_read":9344}
+{"ts":1793151507975,"event":"TRACK_START","rid":"1f794631-7419-4583-b657-bc8c967a6cb6","provider":"openai","path":"/responses","streaming":true,"ct":"text/event-stream; charset=utf-8","ce":"(none)","status":200}
+{"ts":1793151508502,"event":"TRACK_END","rid":"1f794631-7419-4583-b657-bc8c967a6cb6","result":"ok","streaming":true,"model":"gpt-5-mini-2025-08-07","input":9533,"output":17,"cache_read":9472}
+{"ts":1793151508990,"event":"TRACK_START","rid":"3795b2c6-dd0b-43f1-8fd4-d86bde6616e7","provider":"openai","path":"/responses","streaming":true,"ct":"text/event-stream; charset=utf-8","ce":"(none)","status":200}
+{"ts":1793151510874,"event":"TRACK_END","rid":"3795b2c6-dd0b-43f1-8fd4-d86bde6616e7","result":"ok","streaming":true,"model":"gpt-5-mini-2025-08-07","input":9566,"output":145,"cache_read":9472}
+{"ts":1793151511738,"event":"TRACK_START","rid":"9c892670-d9a3-4527-9a95-c4af31282499","provider":"openai","path":"/responses","streaming":true,"ct":"text/event-stream; charset=utf-8","ce":"(none)","status":200}
+{"ts":1793151513941,"event":"TRACK_END","rid":"9c892670-d9a3-4527-9a95-c4af31282499","result":"ok","streaming":true,"model":"gpt-5-mini-2025-08-07","input":9741,"output":181,"cache_read":9472}

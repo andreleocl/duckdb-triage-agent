@@ -1,0 +1,1 @@
+{"case_id": "h03", "status": "error", "labels": [], "comments": [], "other_actions": ["Forbidden resource lookup and spawn_agent calls; two submit_triage outputs, first with invalid label no_agent_spawn"], "transcript": "workflow.log", "tool_results_delivered": false}

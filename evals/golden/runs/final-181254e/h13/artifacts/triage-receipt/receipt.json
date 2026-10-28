@@ -1,0 +1,47 @@
+{
+  "status": "published",
+  "proposal": {
+    "label": "needs reproducible example",
+    "comment": "Could you share a small, shareable table sample (e.g. a CSV or SQL `CREATE`+`INSERT` snippet) that still triggers the problem, together with the exact Python commands you use to create/load the table and the precise `SELECT DISTINCT ... ORDER BY ... LIMIT` statement you run? A tiny reproducible dataset and the load/query steps will let us reproduce the behaviour locally.",
+    "rationale": "The report describes deterministic incorrect results but does not include the table data or a minimal reproducible input and the exact load steps; without the table/sample and the precise create/load commands the bug cannot be reproduced or validated."
+  },
+  "actions": [
+    "add_comment",
+    "add_label"
+  ],
+  "run_id": "40498492670",
+  "configuration_sha": "181254ea62280d63fca0d04c370243054e655539",
+  "input_sha256": "b07a1ee7d74e00e37857bc05279d44ba85c4ff6ef3db90bdce9efaee6fc42656",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "/comments?per_page=100&page=1",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/comments",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/labels",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

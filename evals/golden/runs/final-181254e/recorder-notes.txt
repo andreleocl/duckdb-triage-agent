@@ -1,0 +1,3 @@
+﻿Recorder correction during collection: h08 was initially marked error by a raw-proposal substring check. The framework ingestion changes Unicode punctuation (ellipsis to three periods), as preserved in agent/safeoutputs.jsonl versus agent/agent_output.json. The publisher receipt and public comment match the ingested proposal. The recorder now compares publication against ingested output and separately records raw-to-ingested changes. No agent result or frozen expectation was edited.
+
+GitHub trims the trailing space from h24 opening title. Replay body comparisons account for CR/LF normalization. h14 uname text was wrapped in inline code to preserve its build-number hash without creating an issue reference. All original frozen input bytes remain unchanged.

@@ -1,0 +1,121 @@
+{
+  "case_id": "h18",
+  "run_id": 40619920714,
+  "sandbox_issue": 35,
+  "configuration_sha": "a468c9cba8f1d582ff1ef622f470b7443a77bad7",
+  "workflow_conclusion": "success",
+  "expected_label": null,
+  "decision_matches": false,
+  "receipt": {
+    "status": "published",
+    "proposal": {
+      "label": "needs reproducible example",
+      "comment": "Could you provide a small, shareable Parquet sample (or a Python snippet that writes equivalent Parquet files) that still triggers this error when using `read_parquet(...)`, together with the complete Python traceback produced? A minimal reproducer that shows which file/column causes the cast-to-NULL error will let maintainers reproduce and confirm an improved error message.",
+      "rationale": "Report describes an in-scope failure (read_parquet across files) but lacks any shareable input or minimal reproducer; without a sample Parquet file or equivalent code producing the same error and the full traceback, maintainers cannot follow the failure to identify which file/column triggers the cast-to-NULL ConversionException."
+    },
+    "actions": [
+      "add_comment",
+      "add_label"
+    ],
+    "run_id": "40619920714",
+    "configuration_sha": "a468c9cba8f1d582ff1ef622f470b7443a77bad7",
+    "input_sha256": "7f6821d84590aa03820546d06f885ed7929efc83a9d64b4a1d3d845722584279",
+    "api_operations": [
+      {
+        "method": "GET",
+        "endpoint": "",
+        "status": "succeeded",
+        "attempt": 1
+      },
+      {
+        "method": "GET",
+        "endpoint": "/comments?per_page=100&page=1",
+        "status": "succeeded",
+        "attempt": 1
+      },
+      {
+        "method": "GET",
+        "endpoint": "",
+        "status": "succeeded",
+        "attempt": 1
+      },
+      {
+        "method": "POST",
+        "endpoint": "/comments",
+        "status": "succeeded",
+        "attempt": 1
+      },
+      {
+        "method": "POST",
+        "endpoint": "/labels",
+        "status": "succeeded",
+        "attempt": 1
+      }
+    ]
+  },
+  "cost": {
+    "agent": {
+      "requests": 3,
+      "input_tokens": 28671,
+      "cached_tokens": 18944,
+      "output_tokens": 475,
+      "models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "estimated_usd": 0.00385535
+    },
+    "detection": {
+      "requests": 2,
+      "input_tokens": 38450,
+      "cached_tokens": 18944,
+      "output_tokens": 476,
+      "models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "estimated_usd": 0.0063021
+    }
+  },
+  "estimated_total_usd": 0.01015745,
+  "cost_basis": "Recorded token usage counted once per role. USD per million: input .25, cached input .025, output 2. Estimate, not invoice.",
+  "tool_calls": {
+    "read_mcp_resource": 1,
+    "submit_triage": 1
+  },
+  "submissions": [
+    {
+      "comment": "Could you provide a small, shareable Parquet sample (or a Python snippet that writes equivalent Parquet files) that still triggers this error when using `read_parquet(...)`, together with the complete Python traceback produced? A minimal reproducer that shows which file/column causes the cast-to-NULL error will let maintainers reproduce and confirm an improved error message.",
+      "label": "needs reproducible example",
+      "rationale": "Report describes an in-scope failure (read_parquet across files) but lacks any shareable input or minimal reproducer; without a sample Parquet file or equivalent code producing the same error and the full traceback, maintainers cannot follow the failure to identify which file/column triggers the cast-to-NULL ConversionException."
+    }
+  ],
+  "metadata_warnings": [],
+  "angle_character_fix_exercised_live": false,
+  "triage_enabled_after": false,
+  "assessment": "Publication succeeded but scope decision remains wrong: requests data to confirm an improved error message. Comment uses cast-to-NULL, not an angle character, so this run does not verify the specific publisher fix live. Offline regression tests cover the arrow. No additional run authorized or started.",
+  "evaluation_policy": "Separate selective development retry; original evaluation preserved. Human review pending.",
+  "observed_labels": [
+    {
+      "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+      "name": "needs reproducible example",
+      "description": "Essential code, data, schema or reproduction steps are missing.",
+      "color": "D876E3"
+    }
+  ],
+  "observed_comments": [
+    {
+      "id": "IC_kwDOVYrnJM8AAAABgPrJyg",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "NONE",
+      "body": "Could you provide a small, shareable Parquet sample (or a Python snippet that writes equivalent Parquet files) that still triggers this error when using `read_parquet(...)`, together with the complete Python traceback produced? A minimal reproducer that shows which file/column causes the cast-to-NULL error will let maintainers reproduce and confirm an improved error message.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 7f6821d84590aa03820546d06f885ed7929efc83a9d64b4a1d3d845722584279 needs reproducible example -->",
+      "createdAt": "2026-10-28T02:19:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/35#issuecomment-6458886602",
+      "viewerDidAuthor": false
+    }
+  ]
+}

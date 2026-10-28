@@ -1,0 +1,52 @@
+## Problem
+
+When a table function is registered with `varargs = LogicalType::ANY`, it accepts any number of positional arguments. However, `BindNamedParameters` still validates named parameters against the function's `named_parameters` map and rejects any that aren't explicitly declared.
+
+This makes it impossible to create a generic "forward everything" table function that accepts arbitrary named parameters — which is needed for the Airport extension's passthrough mode (forwarding SQL to a remote DuckDB).
+
+## Example
+
+```cpp
+TableFunction table_func({}, my_execute_fn, my_bind_fn, ...);
+table_func.varargs = LogicalType::ANY;
+// No named_parameters declared
+```
+
+```sql
+-- This works (positional only):
+SELECT * FROM my_func('file.csv');
+
+-- This fails:
+SELECT * FROM my_func('file.csv', header:=true);
+-- Error: Invalid named parameter "header" for function my_func
+-- Function does not accept any named parameters.
+```
+
+The bind function never gets a chance to handle `header:=true` because `BindNamedParameters` rejects it first.
+
+## Proposed fix
+
+In `src/planner/binder/tableref/bind_named_parameters.cpp`, skip validation when the function has `varargs = ANY`:
+
+```cpp
+void Binder::BindNamedParameters(named_parameter_type_map_t &types, named_parameter_map_t &values,
+                                 QueryErrorContext &error_context, string &func_name) {
+    for (auto &kv : values) {
+        auto entry = types.find(kv.first);
+        if (entry == types.end()) {
+            // If function accepts varargs ANY, allow any named parameter too
+            if (types.empty()) {
+                // No declared params — treat as passthrough, skip validation
+                continue;
+            }
+            // ... existing error handling ...
+        }
+    }
+}
+```
+
+## Use case
+
+The Airport extension (upstream source reference) attaches remote DuckDB instances. In passthrough mode, function calls should be forwarded as SQL to the remote. The remote DuckDB validates the params — the local binder shouldn't need to.
+
+See: upstream reference: Query-farm/airport/pull/49

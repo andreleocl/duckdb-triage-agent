@@ -1,0 +1,47 @@
+{
+  "status": "published",
+  "proposal": {
+    "label": "needs reproducible example",
+    "comment": "Could you provide a small, shareable dataset (CSV files or a SQL script that generates the same table shapes and rows) that still shows the delete-heavy regression when run on 1.4.0 vs 1.5.2, together with the exact table DDL for `pex_element`, `pex_connection`, and `pex_net` and the precise sequence of statements you run (including any PRAGMAs or connection options)? If you cannot share data, a self-contained SQL generator that creates representative data is sufficient. This will let us reproduce the performance change locally.",
+    "rationale": "The report includes the SQL pattern and environment but no shareable input data or data-generator/DDL; without a sample dataset or generator and precise DDL/connection options the regression cannot be reproduced or investigated."
+  },
+  "actions": [
+    "add_comment",
+    "add_label"
+  ],
+  "run_id": "40500796696",
+  "configuration_sha": "181254ea62280d63fca0d04c370243054e655539",
+  "input_sha256": "c2c731c447b67c8cb0446672ad9e3a0cd10322265934fb16a1f8264f787e2c14",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "/comments?per_page=100&page=1",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/comments",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/labels",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

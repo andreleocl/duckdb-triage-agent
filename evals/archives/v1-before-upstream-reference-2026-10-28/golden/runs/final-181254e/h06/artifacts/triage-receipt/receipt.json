@@ -1,0 +1,20 @@
+{
+  "status": "no_action",
+  "proposal": {
+    "label": null,
+    "comment": null,
+    "rationale": "The report requests new C API setters to mirror C++ FunctionDescription (description, examples, categories, positional parameter names). This is a feature/enhancement request rather than a bug or incomplete reproducer; no additional reproducer data or environment details are required to act. Per the triage rules, feature requests receive no action."
+  },
+  "actions": [],
+  "run_id": "40493956418",
+  "configuration_sha": "181254ea62280d63fca0d04c370243054e655539",
+  "input_sha256": "52defd5173d95964ccb2b20bb96adb1bd2536196353de10b15282684d0d15695",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

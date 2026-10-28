@@ -1,0 +1,12 @@
+{
+  "status": "error",
+  "error_type": "ValueError",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

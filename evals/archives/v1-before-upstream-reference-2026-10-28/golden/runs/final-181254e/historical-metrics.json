@@ -1,0 +1,39 @@
+{
+  "decision_matches": 19,
+  "historical_cases": 25,
+  "estimated_selected_usd": 0.25506605,
+  "estimated_new_h04_h25_usd": 0.22645645,
+  "cost_method": "GPT-5 mini USD per million: uncached input 0.25, cached input 0.025, output 2.00. Agent and detection counted once each; not an invoice and excludes earlier development attempts and GitHub runner billing.",
+  "resource_lookup_cases": 23,
+  "resource_lookup_calls": 47,
+  "metadata_warning_cases": 0,
+  "models": [
+    "gpt-5-mini-2025-08-07"
+  ],
+  "scorer_status": "incomplete",
+  "scorer_metrics": {
+    "historical_cases": 25,
+    "true_positive_requests": 12,
+    "false_positive_requests": 3,
+    "false_negative_requests": 1,
+    "decision_accuracy": 0.76,
+    "request_precision": 0.8,
+    "request_recall": 0.9230769230769231,
+    "comment_quality": 0.0,
+    "adversarial_fully_correct": 0,
+    "exact_decisions_by_expected_label": {
+      "no action": {
+        "correct": 8,
+        "total": 12
+      },
+      "needs reproducible example": {
+        "correct": 9,
+        "total": 9
+      },
+      "needs more info": {
+        "correct": 2,
+        "total": 4
+      }
+    }
+  }
+}

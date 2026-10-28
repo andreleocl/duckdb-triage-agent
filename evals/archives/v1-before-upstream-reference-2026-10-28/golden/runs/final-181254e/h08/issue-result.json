@@ -1,0 +1,31 @@
+{
+  "body": "## Environment\n\n- duckdb 1.4.4 via node-duckdb (node-v20.20.2, Linux WSL2)\n- single-process embedded use\n- `.duckdb` file (536,576 B) + `.duckdb.wal` file (12,873 B)\n\n## Symptoms\n\nA specific `.duckdb` + `.wal` pair fails **deterministically** (3/3 reproducible in a fresh process) with:\n```\nTransactionContext Error: Failure while replaying WAL file \"…/org_<id>.duckdb.wal\": Conflict on tuple deletion!\n```\n\nThe `.duckdb` file opens cleanly when the `.wal` is absent.\n\n## Details\n\nThe pair was captured from a live workload after a `Database` instance closed and immediately reopened (gap ~100 ms). At the time of close, no transactions were in flight (`liveConns=0`, no pending write tasks). The WAL is complete — byte-identical from close to reopen, 12,873 B of payload with no zero-filled tail.\n\n**WAL contents** (SQL-level operations):\n- 14× `ALTER TABLE … ADD COLUMN IF NOT EXISTS` — schema evolution, idempotent operations\n- 5× `CREATE INDEX IF NOT EXISTS` — index creation, idempotent operations\n- Multiple DELETE and INSERT statements on the same table — row-level mutations\n\n**Minimal-repro attempt:**\nA synthetic stress script exercising DDL + DELETE cycling, run through 6 un-checkpointed close/reopen cycles with WALs up to 400 KB, replays fine in all variants. The unreplayable condition is more specific than the DDL+DELETE pattern alone.\n\n## Questions\n\n1. Is a complete WAL that replays into a \"Conflict on tuple deletion\" error expected to be recoverable?\n2. Is `CHECKPOINT` on close required for correctness in embedded use, or is this a defect in WAL recovery?\n3. Does WAL replay validate the main file's metadata before attempting to apply operations, and could a stale metadata mismatch cause this error?\n\n## Attachments\n\nThe `.duckdb` (536,576 B) + `.duckdb.wal` (12,873 B) pair and a Node reproduction script (`require(\"duckdb\")` only) are preserved and can be provided on request — the repository they live in is private. Comment here and I will attach them.\n\n---\n\n**Context:** We encounter this as part of a multi-tenant analytics system where Database instances are closed and reopened frequently per organization (fire-and-forget close pattern). A checkpoint before close avoids the issue entirely. The main file opens and queries cleanly without the WAL, so the inconsistency is between the WAL's entries and the main file's state at replay time.\n\n---\n\nFiled from the investigation of upstream reference treilly/autometrik number 1528 (fix merged as PR upstream reference  number 2304); happy to run any additional diagnostics against the pair.\n",
+  "comments": [
+    {
+      "id": "IC_kwDOVYrnJM8AAAABf-UZmw",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "NONE",
+      "body": "Could you attach a small, shareable pair of the exact `.duckdb` and corresponding `.duckdb.wal` files that deterministically trigger: `TransactionContext Error: Failure while replaying WAL file \"...\": Conflict on tuple deletion!`, together with the minimal Node script/command you run to open the DB (the `require(\"duckdb\")` invocation and open/close sequence)? The attached files and script should be the ones used when you observed the error so maintainers can replay the reopen step exactly.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 76b3515b6a5d56b2f29763875002117b17b4ae7ba0a29a13996bc53d94fc4e06 needs reproducible example -->",
+      "createdAt": "2026-10-27T11:23:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/12#issuecomment-6440688027",
+      "viewerDidAuthor": false
+    }
+  ],
+  "labels": [
+    {
+      "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+      "name": "needs reproducible example",
+      "description": "Essential code, data, schema or reproduction steps are missing.",
+      "color": "D876E3"
+    }
+  ],
+  "number": 12,
+  "title": "duckdb 1.4.4 (node-duckdb): complete WAL fails to replay with \"Conflict on tuple deletion\" on reopen",
+  "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/12"
+}

@@ -1,0 +1,4 @@
+{
+  "offline_reproduced_error": "Public questions must not include links, mentions, HTML or issue references",
+  "cause": "The ASCII > character in VARCHAR->NULL matches the publisher HTML/mention/link guard. No network calls were made in this reproduction."
+}

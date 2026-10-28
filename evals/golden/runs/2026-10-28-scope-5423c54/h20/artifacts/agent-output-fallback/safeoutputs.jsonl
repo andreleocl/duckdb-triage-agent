@@ -1,0 +1,1 @@
+{"comment":"no_action","label":"no_action","rationale":"The report describes an in-scope binder validation failure, includes concrete C++ snippets, the failing SQL, and a clear proposed code change and file path. No missing reproducer data or environment details were identified that would block following the described failure.","type":"submit_triage"}

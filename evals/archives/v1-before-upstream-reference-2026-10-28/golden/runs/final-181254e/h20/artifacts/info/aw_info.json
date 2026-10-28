@@ -1,0 +1,48 @@
+{
+  "engine_id": "codex",
+  "engine_name": "Codex",
+  "model": "gpt-5-mini",
+  "version": "0.164.0",
+  "agent_version": "0.164.0",
+  "workflow_name": "DuckDB issue triage",
+  "workflow_id": "andreleocl/duckdb-triage-agent/.github/workflows/issue-triage.lock.yml@refs/heads/main",
+  "workflow_call_id": "40503443020-1:andreleocl/duckdb-triage-agent/.github/workflows/issue-triage.lock.yml@refs/heads/main",
+  "caller_workflow_ref": "andreleocl/duckdb-triage-agent/.github/workflows/issue-triage.lock.yml@refs/heads/main",
+  "experimental": false,
+  "supports_tools_allowlist": true,
+  "cache_memory": false,
+  "run_id": 40503443020,
+  "run_number": 34,
+  "run_attempt": "1",
+  "repository": "andreleocl/duckdb-triage-agent",
+  "ref": "refs/heads/main",
+  "sha": "181254ea62280d63fca0d04c370243054e655539",
+  "actor": "andreleocl",
+  "event_name": "workflow_dispatch",
+  "target_repo": "",
+  "staged": false,
+  "dry_run": false,
+  "allowed_domains": [],
+  "firewall_enabled": true,
+  "awf_version": "v0.28.70",
+  "awmg_version": "",
+  "agent_runtime": "",
+  "steps": {
+    "firewall": "squid"
+  },
+  "created_at": "2026-10-27T12:25:00.079Z",
+  "cli_version": "v0.93.5",
+  "workflow_ref": "andreleocl/duckdb-triage-agent/.github/workflows/issue-triage.lock.yml@refs/heads/main",
+  "server_url": "https://github.com",
+  "model_config": {
+    "routing": {
+      "enabled": false
+    },
+    "models": {
+      "allowed": [],
+      "blocked": []
+    },
+    "max_ai_credits_source": "frontmatter",
+    "max_ai_credits": 50
+  }
+}

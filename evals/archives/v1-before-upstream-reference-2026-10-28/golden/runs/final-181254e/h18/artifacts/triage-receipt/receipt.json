@@ -1,0 +1,47 @@
+{
+  "status": "published",
+  "proposal": {
+    "label": "needs reproducible example",
+    "comment": "Could you share a small, shareable Parquet sample (or equivalent generated input) that still triggers the error when read with your `read_parquet('(redacted) invocation, together with the complete Python traceback (full error message and stack) produced by DuckDB? That sample and the full traceback will let us identify the exact column and file causing the cast failure.",
+    "rationale": "The report describes a ConversionError but provides no shareable Parquet data or the complete traceback identifying which column/file failed; without a small reproducer or full error text, the failure cannot be followed or diagnosed."
+  },
+  "actions": [
+    "add_comment",
+    "add_label"
+  ],
+  "run_id": "40502143512",
+  "configuration_sha": "181254ea62280d63fca0d04c370243054e655539",
+  "input_sha256": "7f6821d84590aa03820546d06f885ed7929efc83a9d64b4a1d3d845722584279",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "/comments?per_page=100&page=1",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/comments",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/labels",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

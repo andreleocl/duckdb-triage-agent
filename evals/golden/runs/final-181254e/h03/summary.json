@@ -1,0 +1,33 @@
+{
+  "case_id": "h03",
+  "run_id": 40481876054,
+  "configuration_commit": "181254ea62280d63fca0d04c370243054e655539",
+  "workflow_conclusion": "success",
+  "cost": {
+    "agent": {
+      "requests": 3,
+      "input_tokens": 27834,
+      "cached_input_tokens": 18432,
+      "output_tokens": 404,
+      "usd": 0.0036193
+    },
+    "detection": {
+      "requests": 2,
+      "input_tokens": 37884,
+      "cached_input_tokens": 18816,
+      "output_tokens": 454,
+      "usd": 0.0061454
+    }
+  },
+  "total_estimated_usd": 0.0097647,
+  "metadata_warnings": [],
+  "http_retry_log": [],
+  "tool_calls": {
+    "list_mcp_resources": 1,
+    "submit_triage": 1
+  },
+  "observed_labels": [],
+  "observed_comments": [],
+  "human_review": "pending",
+  "triage_enabled": false
+}

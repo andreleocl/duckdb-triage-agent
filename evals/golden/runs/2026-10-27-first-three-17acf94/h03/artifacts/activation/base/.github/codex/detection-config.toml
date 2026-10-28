@@ -1,0 +1,15 @@
+# gh-aw v0.93.5 does not merge engine.config into the external detector config.
+# Preserve its proxy settings while supplying the local pinned-model catalogue.
+model_provider = "openai-proxy"
+model_catalog_json = "/tmp/gh-aw/model-catalog/model-catalog.json"
+
+[history]
+persistence = "none"
+
+[model_providers.openai-proxy]
+name = "OpenAI AWF proxy"
+base_url = "http://172.30.0.30:10000"
+env_key = "CODEX_API_KEY"
+wire_api = "responses"
+requires_openai_auth = false
+supports_websockets = false

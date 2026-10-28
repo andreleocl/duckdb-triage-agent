@@ -1,0 +1,105 @@
+{
+  "configuration_commit": "17acf9480bd83608e498d5e5579648b499d0747f",
+  "triage_enabled": false,
+  "cases": [
+    {
+      "case_id": "h01",
+      "issue": 5,
+      "run_id": 40475214378,
+      "status": "completed",
+      "expected_label": null,
+      "observed_labels": [],
+      "observed_comments": [],
+      "tool_calls": {
+        "list_mcp_resources": 2,
+        "list_mcp_resource_templates": 2,
+        "read_mcp_resource": 3,
+        "submit_triage": 1
+      },
+      "cost": {
+        "agent": {
+          "requests": 7,
+          "input_tokens": 80047,
+          "cached_input_tokens": 68096,
+          "output_tokens": 434,
+          "estimated_usd": 0.0055581499999999995,
+          "resolved_models": [
+            "gpt-5-mini-2025-08-07"
+          ]
+        },
+        "detection": {
+          "requests": 2,
+          "input_tokens": 37838,
+          "cached_input_tokens": 18816,
+          "output_tokens": 395,
+          "estimated_usd": 0.006015899999999999,
+          "resolved_models": [
+            "gpt-5-mini-2025-08-07"
+          ]
+        }
+      },
+      "estimated_usd": 0.011574049999999999,
+      "metadata_warnings": [],
+      "human_review": "pending",
+      "failure": null
+    },
+    {
+      "case_id": "h02",
+      "issue": 6,
+      "run_id": 40476560988,
+      "status": "error",
+      "expected_label": null,
+      "observed_labels": [],
+      "observed_comments": [],
+      "tool_calls": {},
+      "cost": {},
+      "estimated_usd": 0,
+      "metadata_warnings": [],
+      "human_review": "pending",
+      "failure": "activation URLError; agent and detector skipped"
+    },
+    {
+      "case_id": "h03",
+      "issue": 7,
+      "run_id": 40475223238,
+      "status": "error",
+      "expected_label": null,
+      "observed_labels": [],
+      "observed_comments": [],
+      "tool_calls": {
+        "list_mcp_resources": 57,
+        "list_mcp_resource_templates": 47,
+        "read_mcp_resource": 25
+      },
+      "cost": {
+        "agent": {
+          "requests": 132,
+          "input_tokens": 1839481,
+          "cached_input_tokens": 1768320,
+          "output_tokens": 3387,
+          "estimated_usd": 0.06877225,
+          "resolved_models": [
+            "gpt-5-mini-2025-08-07"
+          ]
+        },
+        "detection": {
+          "requests": 2,
+          "input_tokens": 38496,
+          "cached_input_tokens": 18944,
+          "output_tokens": 841,
+          "estimated_usd": 0.0070436000000000006,
+          "resolved_models": [
+            "gpt-5-mini-2025-08-07"
+          ]
+        }
+      },
+      "estimated_usd": 0.07581584999999999,
+      "metadata_warnings": [],
+      "human_review": "pending",
+      "failure": "missing_terminal_safe_output"
+    }
+  ],
+  "total_estimated_usd": 0.08738989999999999,
+  "cancelled_before_execution": 40475218918,
+  "remaining_cases_run": false
+}

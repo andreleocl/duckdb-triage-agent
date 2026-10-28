@@ -1,0 +1,8 @@
+{"ts":1793099808534,"event":"TRACK_START","rid":"77804b56-d942-43a8-9b72-af5e9974ac38","provider":"openai","path":"/v1/models","streaming":false,"ct":"application/json","ce":"gzip","status":200}
+{"ts":1793099808551,"event":"TRACK_END","rid":"77804b56-d942-43a8-9b72-af5e9974ac38","result":"no_usage","streaming":false,"bytes":1970,"overflow":false,"ct":"application/json","ce":"gzip"}
+{"ts":1793099810163,"event":"TRACK_START","rid":"69c2e682-3259-499f-a195-e8faa70592fe","provider":"openai","path":"/responses","streaming":true,"ct":"text/event-stream; charset=utf-8","ce":"(none)","status":200}
+{"ts":1793099812928,"event":"TRACK_END","rid":"69c2e682-3259-499f-a195-e8faa70592fe","result":"ok","streaming":true,"model":"gpt-5-mini-2025-08-07","input":10079,"output":135,"cache_read":0}
+{"ts":1793099813266,"event":"TRACK_START","rid":"a5dd926d-d91d-44a0-a809-f1569c14f358","provider":"openai","path":"/responses","streaming":true,"ct":"text/event-stream; charset=utf-8","ce":"(none)","status":200}
+{"ts":1793099814603,"event":"TRACK_END","rid":"a5dd926d-d91d-44a0-a809-f1569c14f358","result":"ok","streaming":true,"model":"gpt-5-mini-2025-08-07","input":10228,"output":87,"cache_read":10112}
+{"ts":1793099815857,"event":"TRACK_START","rid":"743ea222-8143-4d57-bbbc-228bcb998b71","provider":"openai","path":"/responses","streaming":true,"ct":"text/event-stream; charset=utf-8","ce":"(none)","status":200}
+{"ts":1793099816562,"event":"TRACK_END","rid":"743ea222-8143-4d57-bbbc-228bcb998b71","result":"ok","streaming":true,"model":"gpt-5-mini-2025-08-07","input":10345,"output":55,"cache_read":10112}

@@ -1,0 +1,47 @@
+{
+  "status": "published",
+  "proposal": {
+    "label": "needs reproducible example",
+    "comment": "Could you share a small, shareable example that still triggers the discrepancy? Please provide a minimal table definition and sample data (as SQL `CREATE TABLE` + `INSERT` statements or a small CSV) and the exact DuckDB query you ran along with the actual results you observed for both `DISTINCT` and `GROUP BY`. This will let us reproduce and diagnose the difference locally.",
+    "rationale": "The report shows the queries but lacks any concrete table DDL or sample data and the exact DuckDB query/results needed to reproduce the differing behavior between `DISTINCT` and `GROUP BY`. A minimal, shareable input is required to follow the failure."
+  },
+  "actions": [
+    "add_comment",
+    "add_label"
+  ],
+  "run_id": "40497909442",
+  "configuration_sha": "181254ea62280d63fca0d04c370243054e655539",
+  "input_sha256": "77fcc5875087d115b18c093a88fc6b7c6bf0af7f90f9fe4fa0fe851e3cb6651b",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "/comments?per_page=100&page=1",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/comments",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/labels",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

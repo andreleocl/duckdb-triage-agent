@@ -1,0 +1,31 @@
+{
+  "body": "## What happens?\n\n`INSERT OR REPLACE` silently fails to update existing rows on certain database files. The statement executes without error, but the data is not modified. The same operation works correctly with `INSERT ... ON CONFLICT DO UPDATE SET`.\n\n## To Reproduce\n\nThe bug appears to be specific to certain database files and I haven't been able to reproduce it with a fresh database. However, here's what I observe:\n\n```python\nimport duckdb\n\n# On the affected database file:\nconn = duckdb.connect('affected_database.duckdb')\n\n# This fails silently - data is NOT updated\nconn.execute('''\n    INSERT OR REPLACE INTO my_table (id, col1, col2, col3)\n    VALUES ('existing_id', 'new_val1', 'new_val2', 'new_val3')\n''')\n\n# Verify: values are UNCHANGED (bug!)\nresult = conn.execute(\"SELECT * FROM my_table WHERE id = 'existing_id'\").fetchone()\n# Returns OLD values, not new ones\n\n# Workaround that DOES work:\nconn.execute('''\n    INSERT INTO my_table (id, col1, col2, col3)\n    VALUES ('existing_id', 'new_val1', 'new_val2', 'new_val3')\n    ON CONFLICT (id) DO UPDATE SET \n        col1 = excluded.col1,\n        col2 = excluded.col2,\n        col3 = excluded.col3\n''')\n# This correctly updates the row\n```\n\n## Schema of affected table\n\n```sql\nCREATE TABLE aggregation_documents (\n    document_id VARCHAR NOT NULL PRIMARY KEY,\n    url VARCHAR NOT NULL,\n    timestamp VARCHAR NOT NULL,\n    ner_entity_count BIGINT,\n    coreference_mentions_added BIGINT,\n    total_mentions BIGINT,\n    primary_entity VARCHAR,\n    primary_entity_count BIGINT,\n    primary_changed BIGINT DEFAULT 0,\n    previous_primary VARCHAR,\n    batch_id VARCHAR,\n    consolidated_counts JSON NOT NULL,\n    pipeline_name VARCHAR NOT NULL DEFAULT 'default'\n);\nCREATE INDEX idx_agg_url ON aggregation_documents(url);\nCREATE INDEX idx_agg_pipeline ON aggregation_documents(pipeline_name);\n```\n\n## Observations\n\n1. The bug is **silent** - no error is raised, the execute() call succeeds\n2. The bug is **consistent** - `INSERT OR REPLACE` never works on the affected database\n3. `CHECKPOINT` and `VACUUM` do not fix the issue\n4. `INSERT ... ON CONFLICT DO UPDATE SET` works correctly as a workaround\n5. Fresh databases with identical schema work correctly with `INSERT OR REPLACE`\n6. The affected database was created over multiple sessions with inserts, updates, and deletes\n\n## OS\n\nLinux 6.17.0-8-generic (Ubuntu)\n\n## DuckDB Version\n\n1.4.2\n\n## DuckDB Client\n\nPython 3.13.9\n\n## Hardware\n\nx86_64\n\n## Full Name\n\nAndrea Moro\n\n## Affiliation\n\nPersonal project\n\n## Have you tried this on the latest `main` branch?\n\n- [ ] I have tested with a `main` build\n\n## Have you tried the steps to reproduce? Do they include all relevant data and configuration?\n\n- [x] Yes, I have",
+  "comments": [
+    {
+      "id": "IC_kwDOVYrnJM8AAAABf_paUQ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "NONE",
+      "body": "Could you share a small, shareable reproduction that still triggers the silent failure? Please either attach a copy of the affected `.duckdb` file (sanitized) or provide a sequence of SQL statements that recreates the exact database state and shows the failing `INSERT OR REPLACE` statement (copy/paste the exact SQL you run) plus the commands you run to verify the row is unchanged. Also note whether you run these statements inside an explicit transaction and any non-default PRAGMAs you use.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 19b0a24a27375ded201fd16fca60dba0163aedb700e6e0c65e33813b18facb69 needs reproducible example -->",
+      "createdAt": "2026-10-27T12:38:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/26#issuecomment-6442080849",
+      "viewerDidAuthor": false
+    }
+  ],
+  "labels": [
+    {
+      "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+      "name": "needs reproducible example",
+      "description": "Essential code, data, schema or reproduction steps are missing.",
+      "color": "D876E3"
+    }
+  ],
+  "number": 26,
+  "title": "INSERT OR REPLACE silently fails to update existing rows on certain databases",
+  "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/26"
+}

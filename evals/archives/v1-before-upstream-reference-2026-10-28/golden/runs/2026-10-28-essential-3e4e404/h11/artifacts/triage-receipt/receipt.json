@@ -1,0 +1,20 @@
+{
+  "status": "no_action",
+  "proposal": {
+    "label": null,
+    "comment": null,
+    "rationale": "The report includes OS, DuckDB and Python versions, Jupyter/ipykernel details, the spatial extension version, and a self-contained minimal reproducible example that demonstrates interrupting a long-running spatial join. No additional reproduction steps or environment details are required for first-pass completeness triage."
+  },
+  "actions": [],
+  "run_id": "40615695174",
+  "configuration_sha": "3e4e40401f90ce969aacbbbe8c215f8bd5fc040a",
+  "input_sha256": "865069f10142b45c51b71974eac0b73a079dac4f00e78e983850f420c9adb06f",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

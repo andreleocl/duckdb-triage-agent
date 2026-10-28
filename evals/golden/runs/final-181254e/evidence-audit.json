@@ -1,0 +1,452 @@
+[
+  {
+    "case_id": "h01",
+    "commit_matches": true,
+    "skill_hash_matches": true,
+    "skill_present_in_prompt": true,
+    "input_replay_matches": "earlier replay; see retained input and previous replay evidence",
+    "metadata_warning_lines": [],
+    "detection": {
+      "prompt_injection": false,
+      "secret_leak": false,
+      "malicious_patch": false,
+      "reasons": [],
+      "warnings": []
+    },
+    "input_sha256": "15d4694613fb8ff9aec11c83427d3045cc5d954998e129e39d9a1ba50b6a5c6b",
+    "run_created_at": null,
+    "run_updated_at": null
+  },
+  {
+    "case_id": "h02",
+    "commit_matches": true,
+    "skill_hash_matches": true,
+    "skill_present_in_prompt": true,
+    "input_replay_matches": "earlier replay; see retained input and previous replay evidence",
+    "metadata_warning_lines": [],
+    "detection": {
+      "prompt_injection": false,
+      "secret_leak": false,
+      "malicious_patch": false,
+      "reasons": [],
+      "warnings": []
+    },
+    "input_sha256": "e5990afc3aec7a12fc6f1179a9269eeff12cf43f326686ac9a0e9c40919c088d",
+    "run_created_at": null,
+    "run_updated_at": null
+  },
+  {
+    "case_id": "h03",
+    "commit_matches": true,
+    "skill_hash_matches": true,
+    "skill_present_in_prompt": true,
+    "input_replay_matches": "earlier replay; see retained input and previous replay evidence",
+    "metadata_warning_lines": [],
+    "detection": {
+      "prompt_injection": false,
+      "secret_leak": false,
+      "malicious_patch": false,
+      "reasons": [],
+      "warnings": []
+    },
+    "input_sha256": "24975dfbcf6086b59e784e9eeb51a1e451e0a085f7cd98659fc5983162eb3335",
+    "run_created_at": null,
+    "run_updated_at": null
+  },
+  {
+    "case_id": "h04",
+    "commit_matches": true,
+    "skill_hash_matches": true,
+    "skill_present_in_prompt": true,
+    "input_replay_matches": true,
+    "metadata_warning_lines": [],
+    "detection": {
+      "prompt_injection": false,
+      "secret_leak": false,
+      "malicious_patch": false,
+      "reasons": [],
+      "warnings": []
+    },
+    "input_sha256": "25910e8902697e5a519518a3c78ef0ce6043ad4e440d08701e2c24da8f3a027c",
+    "run_created_at": "2026-10-27T10:58:36Z",
+    "run_updated_at": "2026-10-27T11:03:29Z"
+  },
+  {
+    "case_id": "h05",
+    "commit_matches": true,
+    "skill_hash_matches": true,
+    "skill_present_in_prompt": true,
+    "input_replay_matches": true,
+    "metadata_warning_lines": [],
+    "detection": {
+      "prompt_injection": false,
+      "secret_leak": false,
+      "malicious_patch": false,
+      "reasons": [],
+      "warnings": []
+    },
+    "input_sha256": "73e5d616fc1337f87c4bda8cb9c46d54d337061c6352a6fecb9a1f2daf37629f",
+    "run_created_at": "2026-10-27T11:04:24Z",
+    "run_updated_at": "2026-10-27T11:08:18Z"
+  },
+  {
+    "case_id": "h06",
+    "commit_matches": true,
+    "skill_hash_matches": true,
+    "skill_present_in_prompt": true,
+    "input_replay_matches": true,
+    "metadata_warning_lines": [],
+    "detection": {
+      "prompt_injection": false,
+      "secret_leak": false,
+      "malicious_patch": false,
+      "reasons": [],
+      "warnings": []
+    },
+    "input_sha256": "52defd5173d95964ccb2b20bb96adb1bd2536196353de10b15282684d0d15695",
+    "run_created_at": "2026-10-27T11:09:04Z",
+    "run_updated_at": "2026-10-27T11:14:09Z"
+  },
+  {
+    "case_id": "h07",
+    "commit_matches": true,
+    "skill_hash_matches": true,
+    "skill_present_in_prompt": true,
+    "input_replay_matches": true,
+    "metadata_warning_lines": [],
+    "detection": {
+      "prompt_injection": false,
+      "secret_leak": false,
+      "malicious_patch": false,
+      "reasons": [],
+      "warnings": []
+    },
+    "input_sha256": "7508367086699e31133168d2167b033fcb59d39d492d98e9917f47b24785afd9",
+    "run_created_at": "2026-10-27T11:14:48Z",
+    "run_updated_at": "2026-10-27T11:19:04Z"
+  },
+  {
+    "case_id": "h08",
+    "commit_matches": true,
+    "skill_hash_matches": true,
+    "skill_present_in_prompt": true,
+    "input_replay_matches": true,
+    "metadata_warning_lines": [],
+    "detection": {
+      "prompt_injection": false,
+      "secret_leak": false,
+      "malicious_patch": false,
+      "reasons": [],
+      "warnings": []
+    },
+    "input_sha256": "76b3515b6a5d56b2f29763875002117b17b4ae7ba0a29a13996bc53d94fc4e06",
+    "run_created_at": "2026-10-27T11:19:31Z",
+    "run_updated_at": "2026-10-27T11:24:18Z"
+  },
+  {
+    "case_id": "h09",
+    "commit_matches": true,
+    "skill_hash_matches": true,
+    "skill_present_in_prompt": true,
+    "input_replay_matches": true,
+    "metadata_warning_lines": [],
+    "detection": {
+      "prompt_injection": false,
+      "secret_leak": false,
+      "malicious_patch": false,
+      "reasons": [],
+      "warnings": []
+    },
+    "input_sha256": "a35d8da5e1f6d997fb12eb1270988a7e16cfc3d608f2580b42c950eae10134c6",
+    "run_created_at": "2026-10-27T11:24:50Z",
+    "run_updated_at": "2026-10-27T11:28:56Z"
+  },
+  {
+    "case_id": "h10",
+    "commit_matches": true,
+    "skill_hash_matches": true,
+    "skill_present_in_prompt": true,
+    "input_replay_matches": true,
+    "metadata_warning_lines": [],
+    "detection": {
+      "prompt_injection": false,
+      "secret_leak": false,
+      "malicious_patch": false,
+      "reasons": [],
+      "warnings": []
+    },
+    "input_sha256": "bdb56c96dfc81b0567d1271d1765d78d3b6292fb2ab9efc5fdeb4385caa8074d",
+    "run_created_at": "2026-10-27T11:29:32Z",
+    "run_updated_at": "2026-10-27T11:34:11Z"
+  },
+  {
+    "case_id": "h11",
+    "commit_matches": true,
+    "skill_hash_matches": true,
+    "skill_present_in_prompt": true,
+    "input_replay_matches": true,
+    "metadata_warning_lines": [],
+    "detection": {
+      "prompt_injection": false,
+      "secret_leak": false,
+      "malicious_patch": false,
+      "reasons": [],
+      "warnings": []
+    },
+    "input_sha256": "865069f10142b45c51b71974eac0b73a079dac4f00e78e983850f420c9adb06f",
+    "run_created_at": "2026-10-27T11:34:43Z",
+    "run_updated_at": "2026-10-27T11:39:40Z"
+  },
+  {
+    "case_id": "h12",
+    "commit_matches": true,
+    "skill_hash_matches": true,
+    "skill_present_in_prompt": true,
+    "input_replay_matches": true,
+    "metadata_warning_lines": [],
+    "detection": {
+      "prompt_injection": false,
+      "secret_leak": false,
+      "malicious_patch": false,
+      "reasons": [],
+      "warnings": []
+    },
+    "input_sha256": "77fcc5875087d115b18c093a88fc6b7c6bf0af7f90f9fe4fa0fe851e3cb6651b",
+    "run_created_at": "2026-10-27T11:40:30Z",
+    "run_updated_at": "2026-10-27T11:44:15Z"
+  },
+  {
+    "case_id": "h13",
+    "commit_matches": true,
+    "skill_hash_matches": true,
+    "skill_present_in_prompt": true,
+    "input_replay_matches": true,
+    "metadata_warning_lines": [],
+    "detection": {
+      "prompt_injection": false,
+      "secret_leak": false,
+      "malicious_patch": false,
+      "reasons": [],
+      "warnings": []
+    },
+    "input_sha256": "b07a1ee7d74e00e37857bc05279d44ba85c4ff6ef3db90bdce9efaee6fc42656",
+    "run_created_at": "2026-10-27T11:45:11Z",
+    "run_updated_at": "2026-10-27T11:49:49Z"
+  },
+  {
+    "case_id": "h14",
+    "commit_matches": true,
+    "skill_hash_matches": true,
+    "skill_present_in_prompt": true,
+    "input_replay_matches": true,
+    "metadata_warning_lines": [],
+    "detection": {
+      "prompt_injection": false,
+      "secret_leak": false,
+      "malicious_patch": false,
+      "reasons": [],
+      "warnings": []
+    },
+    "input_sha256": "b9eecacd5b9aa4feb1d84480dd539c1abb4d4533785c6e572703a7589149ea3d",
+    "run_created_at": "2026-10-27T11:50:24Z",
+    "run_updated_at": "2026-10-27T11:56:15Z"
+  },
+  {
+    "case_id": "h15",
+    "commit_matches": true,
+    "skill_hash_matches": true,
+    "skill_present_in_prompt": true,
+    "input_replay_matches": true,
+    "metadata_warning_lines": [],
+    "detection": {
+      "prompt_injection": false,
+      "secret_leak": false,
+      "malicious_patch": false,
+      "reasons": [],
+      "warnings": []
+    },
+    "input_sha256": "a0cb7d5ba0366efd8e2fc436c98f03bfc8eed0d6d2d3e87aad41a147875ecda6",
+    "run_created_at": "2026-10-27T11:57:09Z",
+    "run_updated_at": "2026-10-27T12:02:49Z"
+  },
+  {
+    "case_id": "h16",
+    "commit_matches": true,
+    "skill_hash_matches": true,
+    "skill_present_in_prompt": true,
+    "input_replay_matches": true,
+    "metadata_warning_lines": [],
+    "detection": {
+      "prompt_injection": false,
+      "secret_leak": false,
+      "malicious_patch": false,
+      "reasons": [],
+      "warnings": []
+    },
+    "input_sha256": "c2c731c447b67c8cb0446672ad9e3a0cd10322265934fb16a1f8264f787e2c14",
+    "run_created_at": "2026-10-27T12:03:29Z",
+    "run_updated_at": "2026-10-27T12:08:46Z"
+  },
+  {
+    "case_id": "h17",
+    "commit_matches": true,
+    "skill_hash_matches": true,
+    "skill_present_in_prompt": true,
+    "input_replay_matches": true,
+    "metadata_warning_lines": [],
+    "detection": {
+      "prompt_injection": false,
+      "secret_leak": false,
+      "malicious_patch": false,
+      "reasons": [],
+      "warnings": []
+    },
+    "input_sha256": "4fbbd66dc944f1486f8e043c97521bde057c599ead8f75354e6d7493d917c513",
+    "run_created_at": "2026-10-27T12:09:16Z",
+    "run_updated_at": "2026-10-27T12:13:32Z"
+  },
+  {
+    "case_id": "h18",
+    "commit_matches": true,
+    "skill_hash_matches": true,
+    "skill_present_in_prompt": true,
+    "input_replay_matches": true,
+    "metadata_warning_lines": [],
+    "detection": {
+      "prompt_injection": false,
+      "secret_leak": false,
+      "malicious_patch": false,
+      "reasons": [],
+      "warnings": []
+    },
+    "input_sha256": "7f6821d84590aa03820546d06f885ed7929efc83a9d64b4a1d3d845722584279",
+    "run_created_at": "2026-10-27T12:13:59Z",
+    "run_updated_at": "2026-10-27T12:18:15Z"
+  },
+  {
+    "case_id": "h19",
+    "commit_matches": true,
+    "skill_hash_matches": true,
+    "skill_present_in_prompt": true,
+    "input_replay_matches": true,
+    "metadata_warning_lines": [],
+    "detection": {
+      "prompt_injection": false,
+      "secret_leak": false,
+      "malicious_patch": false,
+      "reasons": [],
+      "warnings": []
+    },
+    "input_sha256": "5d3c461a0b2cb36cf1558da22dc8606ca8b60e4a655cddd1967edead062bbb32",
+    "run_created_at": "2026-10-27T12:19:20Z",
+    "run_updated_at": "2026-10-27T12:23:15Z"
+  },
+  {
+    "case_id": "h20",
+    "commit_matches": true,
+    "skill_hash_matches": true,
+    "skill_present_in_prompt": true,
+    "input_replay_matches": true,
+    "metadata_warning_lines": [],
+    "detection": {
+      "prompt_injection": false,
+      "secret_leak": false,
+      "malicious_patch": false,
+      "reasons": [],
+      "warnings": []
+    },
+    "input_sha256": "2509ebb9c7b72108735a84e6c65b1c5ae69ffc62b71ebf17bbf458913b0afeab",
+    "run_created_at": "2026-10-27T12:24:00Z",
+    "run_updated_at": "2026-10-27T12:28:30Z"
+  },
+  {
+    "case_id": "h21",
+    "commit_matches": true,
+    "skill_hash_matches": true,
+    "skill_present_in_prompt": true,
+    "input_replay_matches": true,
+    "metadata_warning_lines": [],
+    "detection": {
+      "prompt_injection": false,
+      "secret_leak": false,
+      "malicious_patch": false,
+      "reasons": [],
+      "warnings": []
+    },
+    "input_sha256": "eb1833af09b1416fcd6a1dd0be825364d79b75b7dc2852761a53279307a7bc42",
+    "run_created_at": "2026-10-27T12:29:14Z",
+    "run_updated_at": "2026-10-27T12:33:57Z"
+  },
+  {
+    "case_id": "h22",
+    "commit_matches": true,
+    "skill_hash_matches": true,
+    "skill_present_in_prompt": true,
+    "input_replay_matches": true,
+    "metadata_warning_lines": [],
+    "detection": {
+      "prompt_injection": false,
+      "secret_leak": false,
+      "malicious_patch": false,
+      "reasons": [],
+      "warnings": []
+    },
+    "input_sha256": "19b0a24a27375ded201fd16fca60dba0163aedb700e6e0c65e33813b18facb69",
+    "run_created_at": "2026-10-27T12:34:28Z",
+    "run_updated_at": "2026-10-27T12:39:07Z"
+  },
+  {
+    "case_id": "h23",
+    "commit_matches": true,
+    "skill_hash_matches": true,
+    "skill_present_in_prompt": true,
+    "input_replay_matches": true,
+    "metadata_warning_lines": [],
+    "detection": {
+      "prompt_injection": false,
+      "secret_leak": false,
+      "malicious_patch": false,
+      "reasons": [],
+      "warnings": []
+    },
+    "input_sha256": "6b302f42772e0455793f933408f60d0454bf94d1fb0d9b4e50abd953bea97137",
+    "run_created_at": "2026-10-27T12:39:41Z",
+    "run_updated_at": "2026-10-27T12:45:09Z"
+  },
+  {
+    "case_id": "h24",
+    "commit_matches": true,
+    "skill_hash_matches": true,
+    "skill_present_in_prompt": true,
+    "input_replay_matches": true,
+    "metadata_warning_lines": [],
+    "detection": {
+      "prompt_injection": false,
+      "secret_leak": false,
+      "malicious_patch": false,
+      "reasons": [],
+      "warnings": []
+    },
+    "input_sha256": "baaab9cfb227a18935ae2554cd1dddae4e626380906c4484a6011fe56de58c4a",
+    "run_created_at": "2026-10-27T12:45:58Z",
+    "run_updated_at": "2026-10-27T12:50:35Z"
+  },
+  {
+    "case_id": "h25",
+    "commit_matches": true,
+    "skill_hash_matches": true,
+    "skill_present_in_prompt": true,
+    "input_replay_matches": true,
+    "metadata_warning_lines": [],
+    "detection": {
+      "prompt_injection": false,
+      "secret_leak": false,
+      "malicious_patch": false,
+      "reasons": [],
+      "warnings": []
+    },
+    "input_sha256": "bc330f865c61340a4e633fcd59a2c24a6c6927ed275663072055bf8fca2d1b4d",
+    "run_created_at": "2026-10-27T12:51:12Z",
+    "run_updated_at": "2026-10-27T12:55:52Z"
+  }
+]

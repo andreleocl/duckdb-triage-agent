@@ -1,0 +1,32 @@
+{
+  "status": "reviewed_draft_not_frozen",
+  "date": "2026-10-28",
+  "cases": 25,
+  "label_counts": {
+    "None": 9,
+    "needs reproducible example": 13,
+    "needs more info": 3
+  },
+  "pending_case_approvals": 0,
+  "checks": [
+    "25 unique case IDs",
+    "all criteria approved",
+    "all request cases have comment focus",
+    "all no-action cases have no required comment",
+    "upstream labels unchanged",
+    "source snapshot hashes unchanged",
+    "agent and original frozen files unchanged"
+  ],
+  "protected_hashes": {
+    "evals\\golden\\expected.jsonl": "2cc6bd214a46a1fdf057d4ee25a8c900d65108ba7e4d9b636f12f46fe425ed33",
+    "evals\\golden\\inputs.jsonl": "c157fdd26f9587d568a6da822984f5172991fada3e56ba5f4f1500b422b1dac0",
+    "evals\\golden\\manifest.json": "25fd5afd5c67affd977da990ac9153cacf51ef4b3b6df45be2aca239446a7365",
+    "evals\\golden\\provenance.json": "abc621c5905606dc59bee000c1d84728f7b9f618101568ce11e33f53ee073d9a",
+    "evals\\golden\\RUBRIC.md": "ce27516750815fcf42c6df692f01f939aaeea89cac4a71e9754950fb4e9161c1",
+    "evals\\golden\\thresholds.json": "15e6941a11f94a04d537e080a7e3ad5ba66f80735a809d5e3dc0b25148ac537a",
+    ".claude\\skills\\duckdb-triage\\SKILL.md": "d4325b2cfe54550506bbe9908adddcef1ba931c4cd5c062ddb4d8981fa37a33d",
+    ".github\\workflows\\issue-triage.md": "d4db0625386698e472a7e7c8f584e42ea5a3040e52419448c6ae5edf5879c197",
+    ".github\\workflows\\issue-triage.lock.yml": "3d9aadda0ba276b04c7de2e1e7e2ebfddb5a21d23af9a0f0dcdd1b5f25ee88bf"
+  },
+  "limitations": "Structural and evidence consistency review only; no new model evaluation and no freeze."
+}

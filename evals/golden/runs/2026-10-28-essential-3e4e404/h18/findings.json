@@ -1,0 +1,113 @@
+{
+  "case_id": "h18",
+  "run_id": 40615702866,
+  "sandbox_issue": 32,
+  "configuration_sha": "3e4e40401f90ce969aacbbbe8c215f8bd5fc040a",
+  "conclusion": "success",
+  "expected_label": null,
+  "receipt": {
+    "status": "published",
+    "proposal": {
+      "label": "needs reproducible example",
+      "comment": "Could you provide a small, shareable Parquet sample (or minimal generated files) that still triggers this error when read with your query, together with the complete Python traceback and the exact `read_parquet` call you used? The sample should reproduce the ConversionException so we can identify which column and which file cause the cast failure.",
+      "rationale": "The report describes a cast failure but the underlying input files are private; without a reproducible Parquet sample or generated equivalent and the full traceback, maintainers cannot determine which column or file triggers the ConversionException and cannot reproduce the issue."
+    },
+    "actions": [
+      "add_comment",
+      "add_label"
+    ],
+    "run_id": "40615702866",
+    "configuration_sha": "3e4e40401f90ce969aacbbbe8c215f8bd5fc040a",
+    "input_sha256": "7f6821d84590aa03820546d06f885ed7929efc83a9d64b4a1d3d845722584279",
+    "api_operations": [
+      {
+        "method": "GET",
+        "endpoint": "",
+        "status": "succeeded",
+        "attempt": 1
+      },
+      {
+        "method": "GET",
+        "endpoint": "/comments?per_page=100&page=1",
+        "status": "succeeded",
+        "attempt": 1
+      },
+      {
+        "method": "GET",
+        "endpoint": "",
+        "status": "succeeded",
+        "attempt": 1
+      },
+      {
+        "method": "POST",
+        "endpoint": "/comments",
+        "status": "succeeded",
+        "attempt": 1
+      },
+      {
+        "method": "POST",
+        "endpoint": "/labels",
+        "status": "succeeded",
+        "attempt": 1
+      }
+    ]
+  },
+  "decision_matches": false,
+  "observed_labels": [
+    "needs reproducible example"
+  ],
+  "observed_comments": [
+    {
+      "id": "IC_kwDOVYrnJM8AAAABgPLBDA",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "NONE",
+      "body": "Could you provide a small, shareable Parquet sample (or minimal generated files) that still triggers this error when read with your query, together with the complete Python traceback and the exact `read_parquet` call you used? The sample should reproduce the ConversionException so we can identify which column and which file cause the cast failure.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 7f6821d84590aa03820546d06f885ed7929efc83a9d64b4a1d3d845722584279 needs reproducible example -->",
+      "createdAt": "2026-10-28T01:40:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/32#issuecomment-6458360076",
+      "viewerDidAuthor": false
+    }
+  ],
+  "tool_calls": {
+    "list_mcp_resources": 1,
+    "list_mcp_resource_templates": 1,
+    "submit_triage": 1
+  },
+  "submission_arguments": [
+    {
+      "comment": "Could you provide a small, shareable Parquet sample (or minimal generated files) that still triggers this error when read with your query, together with the complete Python traceback and the exact `read_parquet` call you used? The sample should reproduce the ConversionException so we can identify which column and which file cause the cast failure.",
+      "label": "needs reproducible example",
+      "rationale": "The report describes a cast failure but the underlying input files are private; without a reproducible Parquet sample or generated equivalent and the full traceback, maintainers cannot determine which column or file triggers the ConversionException and cannot reproduce the issue."
+    }
+  ],
+  "metadata_warnings": [],
+  "cost": {
+    "agent": {
+      "requests": 6,
+      "input_tokens": 56826,
+      "cached_tokens": 46976,
+      "output_tokens": 716,
+      "models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "estimated_usd": 0.0050689
+    },
+    "detection": {
+      "requests": 3,
+      "input_tokens": 61305,
+      "cached_tokens": 39808,
+      "output_tokens": 505,
+      "models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "estimated_usd": 0.00737945
+    }
+  },
+  "estimated_total_usd": 0.01244835,
+  "human_review": "pending"
+}

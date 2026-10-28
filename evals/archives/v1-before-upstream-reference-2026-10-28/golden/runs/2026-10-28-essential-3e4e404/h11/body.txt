@@ -1,0 +1,115 @@
+### What happens?
+
+#### **Description**
+
+**Environment:**
+- **OS**: Windows 11 / Windows Server (x86_64)
+- **DuckDB Version**: 1.5.5
+- **Python Version**: 3.13.9
+- **Environment**: Jupyter / ipykernel 7.3.0 (VS Code / JupyterLab)
+- **Extension**: `spatial` (v1.5.5)
+
+---
+
+**Summary:**
+When executing a long-running spatial query (e.g., spatial join with `ST_Intersects` on hundreds of thousands of geometry rows) within a Jupyter/ipykernel session on Windows, interrupting the execution (via `Kernel -> Interrupt` or `SIGINT` / `GenerateConsoleCtrlEvent`) causes the Python process to crash with `ExitCode: 3221225477` (`STATUS_ACCESS_VIOLATION` / `0xC0000005`).
+
+Additionally, calling `INSTALL spatial;` in a notebook environment attempts to display interactive widget progress bars (`FloatProgress`), which fails when CDN access (`unpkg.com`) is blocked or restricted in corporate environments.
+
+
+**Expected Behavior:**
+The query should cleanly abort and raise a `KeyboardInterrupt` / query cancellation error without terminating or crashing the host Python process.
+
+---
+
+**Actual Behavior:**
+The host Python kernel terminates abruptly with `ExitCode: 3221225477` (`0xC0000005`):
+
+```text
+[info] Interrupt kernel execution
+[info] Interrupting kernel via custom event (Win32)
+[error] Disposing session as kernel process died ExitCode: 3221225477
+```
+
+### To Reproduce
+
+
+---
+
+**Minimal Reproducible Example (MRE):**
+
+```python
+import duckdb
+
+con = duckdb.connect()
+
+# 1. Install & Load spatial extension
+con.sql("INSTALL spatial;")
+con.sql("LOAD spatial;")
+
+# 2. Create synthetic dataset (points and bounding polygons)
+con.sql("""
+    CREATE OR REPLACE TABLE test_points AS
+    SELECT 
+        range AS id,
+        ST_Point(2.0 + (range % 1000) * 0.001, 48.0 + (range % 1000) * 0.001) AS geom
+    FROM range(250000);
+""")
+
+con.sql("""
+    CREATE OR REPLACE TABLE test_polygons AS
+    SELECT 
+        range AS poly_id,
+        ST_Buffer(ST_Point(2.0 + (range % 100) * 0.01, 48.0 + (range % 100) * 0.01), 0.05) AS poly_geom
+    FROM range(1000);
+""")
+
+# 3. Heavy spatial join
+query = """
+    SELECT p.id, poly.poly_id
+    FROM test_points p
+    LEFT JOIN test_polygons poly
+    ON ST_Intersects(p.geom, poly.poly_geom);
+"""
+
+# While this query is executing, send an Interrupt (Kernel -> Interrupt / Ctrl+C):
+con.sql(query).show()
+```
+
+---
+
+### OS:
+
+Windows
+
+### DuckDB Version:
+
+1.5.5
+
+### DuckDB Client:
+
+Python
+
+### Hardware:
+
+_No response_
+
+### Full Name:
+
+Mathis Derenne
+
+### Affiliation:
+
+CoSpirit
+
+### Did you include all relevant configuration (e.g., CPU architecture, Linux distribution) to reproduce the issue?
+
+- [x] Yes, I have
+
+### Did you include all code required to reproduce the issue?
+
+- [x] Yes, I have
+
+### Did you include all relevant data sets for reproducing the issue?
+
+Yes

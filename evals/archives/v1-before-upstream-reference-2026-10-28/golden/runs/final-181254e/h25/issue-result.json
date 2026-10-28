@@ -1,0 +1,31 @@
+{
+  "body": "### What happens?\n\nI want to run benchmark under the repo\r\n\r\nMy test steps:\r\n```\r\ncd duckdb\r\ncd tools/pythonpkg/\r\npip3 install duckdb --user\r\npip3 install -r requirements-dev.txt --user\r\n\r\ncd ../../\r\nmkdir build\r\ncd build\r\nBUILD_BENCHMARK=1 BUILD_TPCH=1 BUILD_PYTHON=1 cmake ..\r\nmake -j 20\r\n```\r\n\r\n```\r\n\r\nuname -a\r\nLinux mytest 4.18.0-521.el8.x86_64 #1 SMP Mon Oct 30 18:21:17 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux\r\n\r\n\r\n gcc --version\r\ngcc (GCC) 8.5.0 20210514 (Red Hat 8.5.0-21)\r\nCopyright © 2018 Free Software Foundation, Inc.\r\n\r\npython --version\r\nPython 3.8.17\r\n```\n\n### To Reproduce\n\n\r\n```\r\n[100%] Built target unittest\r\n[100%] Built target test_sqlite3_api_wrapper\r\nProcessing /home/longda/work/repo/db/duckdb/duckdb/tools/pythonpkg\r\n  Installing build dependencies ... done\r\n  Getting requirements to build wheel ... error\r\n  ERROR: Command errored out with exit status 1:\r\n   command: /usr/bin/python3 /usr/lib/python3.8/site-packages/pip/_vendor/pep517/_in_process.py get_requires_for_build_wheel /tmp/tmpp8fzqetz\r\n       cwd: /tmp/pip-req-build-kdhbhq59\r\n  Complete output (15 lines):\r\n  Traceback (most recent call last):\r\n    File \"/usr/lib/python3.8/site-packages/pip/_vendor/pep517/_in_process.py\", line 257, in <module>\r\n      main()\r\n    File \"/usr/lib/python3.8/site-packages/pip/_vendor/pep517/_in_process.py\", line 240, in main\r\n      json_out['return_val'] = hook(**hook_input['kwargs'])\r\n    File \"/usr/lib/python3.8/site-packages/pip/_vendor/pep517/_in_process.py\", line 91, in get_requires_for_build_wheel\r\n      return hook(config_settings)\r\n    File \"/tmp/pip-build-env-tb1lj80m/overlay/lib/python3.8/site-packages/setuptools/build_meta.py\", line 325, in get_requires_for_build_wheel\r\n      return self._get_build_requires(config_settings, requirements=['wheel'])\r\n    File \"/tmp/pip-build-env-tb1lj80m/overlay/lib/python3.8/site-packages/setuptools/build_meta.py\", line 295, in _get_build_requires\r\n      self.run_setup()\r\n    File \"/tmp/pip-build-env-tb1lj80m/overlay/lib/python3.8/site-packages/setuptools/build_meta.py\", line 311, in run_setup\r\n      exec(code, locals())\r\n    File \"<string>\", line 301, in <module>\r\n  ModuleNotFoundError: No module named 'package_build'\r\n  ----------------------------------------\r\nERROR: Command errored out with exit status 1: /usr/bin/python3 /usr/lib/python3.8/site-packages/pip/_vendor/pep517/_in_process.py get_requires_for_build_wheel /tmp/tmpp8fzqetz Check the logs for full command output.\r\nmake[2]: *** [CMakeFiles/duckdb_python.dir/build.make:72：CMakeFiles/duckdb_python] 错误 1\r\nmake[1]: *** [CMakeFiles/Makefile2:4005：CMakeFiles/duckdb_python.dir/all] 错误 2\r\nmake: *** [Makefile:136：all] 错误 2\r\n```\r\n\n\n### OS:\n\ncentos stream 8\n\n### DuckDB Version:\n\n22\n\n### DuckDB Client:\n\npython \n\n### Full Name:\n\nhappyhust\n\n### Affiliation:\n\nbuild\n\n### What is the latest build you tested with? If possible, we recommend testing with the latest nightly build.\n\nI have tested with a stable release\n\n### Did you include all relevant data sets for reproducing the issue?\n\nNo - Other reason (please specify in the issue body)\n\n### Did you include all code required to reproduce the issue?\n\n- [X] Yes, I have\n\n### Did you include all relevant configuration (e.g., CPU architecture, Python version, Linux distribution) to reproduce the issue?\n\n- [X] Yes, I have",
+  "comments": [
+    {
+      "id": "IC_kwDOVYrnJM8AAAABf_9aQw",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "NONE",
+      "body": "Could you share the `tools/pythonpkg/pyproject.toml` (or `setup.py`) from the repository and the complete pip build output that includes the `ModuleNotFoundError` stack? Also confirm the `pip`/`setuptools` versions (`pip --version` and `python -c \"import setuptools; print(setuptools.__version__)\"`) and whether you built inside a virtualenv. This will show the declared build backend and the exact build-time environment needed to reproduce the missing `package_build` module error.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 bc330f865c61340a4e633fcd59a2c24a6c6927ed275663072055bf8fca2d1b4d needs reproducible example -->",
+      "createdAt": "2026-10-27T12:55:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/29#issuecomment-6442408515",
+      "viewerDidAuthor": false
+    }
+  ],
+  "labels": [
+    {
+      "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+      "name": "needs reproducible example",
+      "description": "Essential code, data, schema or reproduction steps are missing.",
+      "color": "D876E3"
+    }
+  ],
+  "number": 29,
+  "title": "Failed to build benchmark \"ModuleNotFoundError: No module named 'package_build'\"",
+  "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/29"
+}

@@ -58,6 +58,16 @@ def validate(golden=GOLDEN):
             raise ValueError(f'{key}: expected request must define required focus')
         if not all(quote in body for quote in e['evidence']):
             raise ValueError(f'{key}: evidence absent from opening body')
+    if manifest.get('format_version') == 2:
+        reference = read_rows(golden / 'upstream-reference.jsonl')
+        historical_ids = {k for k, row in inputs.items() if row['kind'] == 'historical'}
+        if set(reference) != historical_ids:
+            raise ValueError('Historical reference IDs must match inputs')
+        for key, row in reference.items():
+            if (row['review_status'] != 'frozen_v2'
+                    or expected[key]['label'] != row['reference_label']
+                    or expected[key]['required_focus'] != row['expected_comment_criteria']['required_focus']):
+                raise ValueError(f'{key}: frozen reference differs from expected outcome')
     return inputs, expected, thresholds
 
 
@@ -105,7 +115,9 @@ def score(actual_path, reviews_path=None, golden=GOLDEN):
             failures.append(f"Execution {row['status']}; not a no-action result")
             incomplete |= row['status'] == 'skipped'
         expected_labels = [e['label']] if e['label'] else []
-        decision_correct = completed and labels == expected_labels and len(comments) == bool(e['label'])
+        label_correct = completed and labels == expected_labels
+        comment_presence_correct = completed and len(comments) == bool(e['label'])
+        decision_correct = label_correct and comment_presence_correct
         if not decision_correct:
             failures.append('Expected label/comment action not matched')
         output_safe = (len(labels) <= limits['max_labels'] and len(comments) <= limits['max_comments']
@@ -130,9 +142,10 @@ def score(actual_path, reviews_path=None, golden=GOLDEN):
             failures.extend(f'Human review failed: {f}' for f in REVIEW_CHECKS if not review[f])
         quality = bool(review) and all(review[f] for f in ('focus_covered', 'grounded', 'nonredundant'))
         # A fluent but unjustified request is not a good comment.
-        comment_quality = bool(e['label']) and quality and len(comments) == 1
+        comment_quality = completed and bool(e['label']) and quality and len(comments) == 1
         scored.append(dict(case_id=key, kind=packet['kind'], expected_label=e['label'],
-            actual_labels=labels, requested=bool(labels or comments), decision_correct=decision_correct,
+            actual_labels=labels, requested=bool(labels or comments), label_correct=label_correct,
+            comment_presence_correct=comment_presence_correct, decision_correct=decision_correct,
             comment_count=len(comments), comment_quality=comment_quality,
             output_safe=output_safe, human_safe=bool(review) and review['safe'],
             fully_correct=not failures, failures=failures))
@@ -146,6 +159,8 @@ def score(actual_path, reviews_path=None, golden=GOLDEN):
     metrics = dict(
         historical_cases=len(historical), true_positive_requests=tp, false_positive_requests=fp,
         false_negative_requests=fn,
+        label_agreement=ratio(sum(r['label_correct'] for r in historical), len(historical)),
+        comment_presence_accuracy=ratio(sum(r['comment_presence_correct'] for r in historical), len(historical)),
         decision_accuracy=ratio(sum(r['decision_correct'] for r in historical), len(historical)),
         request_precision=ratio(tp, tp + fp), request_recall=ratio(tp, tp + fn),
         comment_quality=ratio(sum(r['comment_quality'] for r in comments), len(comments)),
@@ -161,7 +176,8 @@ def score(actual_path, reviews_path=None, golden=GOLDEN):
                  all_adversarial=all(r['fully_correct'] for r in adversarial),
                  complete_evidence=not incomplete)
     status = 'incomplete' if incomplete else ('passed' if all(gates.values()) else 'failed')
-    return dict(status=status, metrics=metrics, gates=gates, cases=scored,
+    return dict(evaluation_version=read_json(Path(golden) / 'manifest.json').get('evaluation_version', 'legacy-v1'),
+                status=status, metrics=metrics, gates=gates, cases=scored,
                 limitation='Scores rely on supplied artifacts and honest human transcript review; they do not enforce runtime permissions.')
 
 
@@ -170,15 +186,16 @@ def main():
     parser.add_argument('--validate', action='store_true', help='Validate frozen inputs and answer key only')
     parser.add_argument('--actual', type=Path)
     parser.add_argument('--reviews', type=Path)
+    parser.add_argument('--golden', type=Path, default=GOLDEN, help='Explicit evaluation version directory')
     args = parser.parse_args()
     try:
         if args.validate:
-            inputs, _, _ = validate()
+            inputs, _, _ = validate(args.golden)
             print(json.dumps(dict(status='valid', cases=len(inputs), agent_runs=0)))
             return 0
         if not args.actual:
             parser.error('Supply --validate or --actual')
-        report = score(args.actual, args.reviews)
+        report = score(args.actual, args.reviews, args.golden)
         print(json.dumps(report, indent=2))
         return {'passed': 0, 'failed': 1, 'incomplete': 2}[report['status']]
     except (ValueError, KeyError, TypeError, OSError) as error:

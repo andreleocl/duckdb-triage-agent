@@ -1,0 +1,1 @@
+{"proposal":"{\"label\": null, \"comment\": null, \"rationale\": \"The report includes a self-contained SQL reproducer (CREATE TABLE/INSERT and exact query), DuckDB version 1.5.5, and indicates the crash occurs when LEFT JOIN produces NULLs; no additional reproduction data or environment details are required for initial triage.\"}","type":"submit_triage"}

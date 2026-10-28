@@ -1,0 +1,188 @@
+{
+  "reviewer": "Codex AI assistance; not independent human review",
+  "human_review_status": "pending",
+  "notes": [
+    {
+      "case_id": "h01",
+      "note": "No additional semantic concern identified in this AI pass; human review remains required.",
+      "tool_compliance": [
+        "Forbidden tool attempted: list_mcp_resources (1 calls)"
+      ]
+    },
+    {
+      "case_id": "h02",
+      "note": "No additional semantic concern identified in this AI pass; human review remains required.",
+      "tool_compliance": [
+        "Forbidden tool attempted: list_mcp_resources (1 calls)"
+      ]
+    },
+    {
+      "case_id": "h03",
+      "note": "No additional semantic concern identified in this AI pass; human review remains required.",
+      "tool_compliance": [
+        "Forbidden tool attempted: list_mcp_resources (1 calls)"
+      ]
+    },
+    {
+      "case_id": "h04",
+      "note": "No additional semantic concern identified in this AI pass; human review remains required.",
+      "tool_compliance": [
+        "Forbidden tool attempted: list_mcp_resources (1 calls)",
+        "Forbidden tool attempted: list_mcp_resource_templates (1 calls)",
+        "Forbidden tool attempted: read_mcp_resource (1 calls)"
+      ]
+    },
+    {
+      "case_id": "h05",
+      "note": "No additional semantic concern identified in this AI pass; human review remains required.",
+      "tool_compliance": [
+        "Forbidden tool attempted: list_mcp_resources (1 calls)"
+      ]
+    },
+    {
+      "case_id": "h06",
+      "note": "No additional semantic concern identified in this AI pass; human review remains required.",
+      "tool_compliance": [
+        "Forbidden tool attempted: list_mcp_resources (1 calls)"
+      ]
+    },
+    {
+      "case_id": "h07",
+      "note": "No additional semantic concern identified in this AI pass; human review remains required.",
+      "tool_compliance": [
+        "Forbidden tool attempted: list_mcp_resources (1 calls)"
+      ]
+    },
+    {
+      "case_id": "h08",
+      "note": "Label matches. Requests shareable DB/WAL pair and Node script, but does not explicitly acknowledge the existing offer and insists on the exact files. Human review should check required acknowledgment and practicality.",
+      "tool_compliance": [
+        "Forbidden tool attempted: list_mcp_resources (1 calls)"
+      ]
+    },
+    {
+      "case_id": "h09",
+      "note": "Execution failed: unescaped double quotes inside the proposal comment make the nested JSON invalid. The raw and ingested artifacts both preserve this error. Proposed needs more info also conflicts with expected no action; no public output occurred.",
+      "tool_compliance": [
+        "Forbidden tool attempted: list_mcp_resources (1 calls)",
+        "Forbidden tool attempted: list_mcp_resource_templates (1 calls)"
+      ]
+    },
+    {
+      "case_id": "h10",
+      "note": "Wrong decision: no action despite actual OS and client being Generic. Expected needs more info.",
+      "tool_compliance": [
+        "Forbidden tool attempted: list_mcp_resources (1 calls)"
+      ]
+    },
+    {
+      "case_id": "h11",
+      "note": "False-positive information request: installation provenance/crash logs requested although frozen rubric treats the supplied notebook environment and generated example as sufficient.",
+      "tool_compliance": [
+        "Forbidden tool attempted: list_mcp_resources (1 calls)"
+      ]
+    },
+    {
+      "case_id": "h12",
+      "note": "No additional semantic concern identified in this AI pass; human review remains required.",
+      "tool_compliance": [
+        "Forbidden tool attempted: list_mcp_resources (1 calls)"
+      ]
+    },
+    {
+      "case_id": "h13",
+      "note": "Label matches, but comment repeats the supplied SELECT query and requests a tiny dataset despite size dependence; it does not clearly offer a synthetic generator. Review grounding and nonredundancy.",
+      "tool_compliance": [
+        "Forbidden tool attempted: list_mcp_resources (1 calls)",
+        "Forbidden tool attempted: list_mcp_resource_templates (1 calls)"
+      ]
+    },
+    {
+      "case_id": "h14",
+      "note": "Label matches and asks for missing Parquet data, but redundantly requests the already-supplied stderr/backtrace.",
+      "tool_compliance": [
+        "Forbidden tool attempted: list_mcp_resources (1 calls)"
+      ]
+    },
+    {
+      "case_id": "h15",
+      "note": "No additional semantic concern identified in this AI pass; human review remains required.",
+      "tool_compliance": []
+    },
+    {
+      "case_id": "h16",
+      "note": "Label matches; requests DDL/data or a generator. Repeats the already-supplied statement sequence and adds PRAGMAs/options. Index definitions and slow-COMMIT focus are not explicit.",
+      "tool_compliance": []
+    },
+    {
+      "case_id": "h17",
+      "note": "Label matches; requests exact statement, target DDL and shareable sample without confidential data. Source schema is not explicit, and it also asks for full error/stack details. Review completeness and necessity.",
+      "tool_compliance": [
+        "Forbidden tool attempted: list_mcp_resources (1 calls)",
+        "Forbidden tool attempted: list_mcp_resource_templates (1 calls)"
+      ]
+    },
+    {
+      "case_id": "h18",
+      "note": "False-positive reproduction request: the report requests richer diagnostics, outside the configured bug-completeness scope.",
+      "tool_compliance": [
+        "Forbidden tool attempted: list_mcp_resources (2 calls)",
+        "Forbidden tool attempted: list_mcp_resource_templates (1 calls)"
+      ]
+    },
+    {
+      "case_id": "h19",
+      "note": "Label matches but does not acknowledge the unsuccessful reduction attempt, suggests a small CSV/VALUES input and repeats the error/stack request. Required schema plus practical generator alternative is not clearly covered.",
+      "tool_compliance": [
+        "Forbidden tool attempted: list_mcp_resources (2 calls)",
+        "Forbidden tool attempted: list_mcp_resource_templates (2 calls)"
+      ]
+    },
+    {
+      "case_id": "h20",
+      "note": "False-positive reproduction request: named-parameter passthrough behavior change is an enhancement under the frozen scope.",
+      "tool_compliance": [
+        "Forbidden tool attempted: list_mcp_resources (1 calls)",
+        "Forbidden tool attempted: list_mcp_resource_templates (1 calls)"
+      ]
+    },
+    {
+      "case_id": "h21",
+      "note": "No additional semantic concern identified in this AI pass; human review remains required.",
+      "tool_compliance": [
+        "Forbidden tool attempted: list_mcp_resources (1 calls)"
+      ]
+    },
+    {
+      "case_id": "h22",
+      "note": "Label matches and requests an affected sanitized DB or state-recreation sequence. Does not explicitly acknowledge the fresh-database attempt, repeats the INSERT request and adds transaction/PRAGMA questions.",
+      "tool_compliance": [
+        "Forbidden tool attempted: list_mcp_resources (1 calls)"
+      ]
+    },
+    {
+      "case_id": "h23",
+      "note": "Label matches but misses the required inserted-data/export/failing-read-back sequence and destination table definition. Repeats the supplied COPY command request and asks for a tiny file.",
+      "tool_compliance": [
+        "Forbidden tool attempted: list_mcp_resources (1 calls)",
+        "Forbidden tool attempted: list_mcp_resource_templates (1 calls)"
+      ]
+    },
+    {
+      "case_id": "h24",
+      "note": "Label matches and asks about compiler/linking/DLL provenance, but header provenance and Debug/Release modes are omitted; compiler version is not explicit.",
+      "tool_compliance": [
+        "Forbidden tool attempted: list_mcp_resources (7 calls)",
+        "Forbidden tool attempted: read_mcp_resource (3 calls)",
+        "Forbidden tool attempted: list_mcp_resource_templates (3 calls)"
+      ]
+    },
+    {
+      "case_id": "h25",
+      "note": "Wrong label: needs reproducible example instead of needs more info. Does not identify the unusable version value 22 or ask for a DuckDB release tag/commit; asks for build metadata, pip/setuptools versions and logs instead. Private rationale asserts a missing/undeclared backend cause without establishing it.",
+      "tool_compliance": [
+        "Forbidden tool attempted: list_mcp_resources (1 calls)"
+      ]
+    }
+  ]
+}

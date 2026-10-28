@@ -1,0 +1,1 @@
+{"case_id": "h02", "status": "completed", "labels": [], "comments": [], "other_actions": ["Forbidden resource-lookup tools attempted: list_mcp_resources (3), read_mcp_resource (5), list_mcp_resource_templates (1)"], "transcript": "workflow.log", "tool_results_delivered": false}

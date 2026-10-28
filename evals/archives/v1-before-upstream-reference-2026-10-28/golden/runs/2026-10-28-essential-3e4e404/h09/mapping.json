@@ -1,0 +1,8 @@
+{
+  "case_id": "h09",
+  "original_sandbox_issue": 13,
+  "retry_issue": 30,
+  "source": "final-181254e/h09/issue-before.json",
+  "additional_transformations": [],
+  "dispatch": "https://github.com/andreleocl/duckdb-triage-agent/actions/runs/40615688890"
+}

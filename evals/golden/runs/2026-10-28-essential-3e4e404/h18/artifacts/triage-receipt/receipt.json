@@ -1,0 +1,47 @@
+{
+  "status": "published",
+  "proposal": {
+    "label": "needs reproducible example",
+    "comment": "Could you provide a small, shareable Parquet sample (or minimal generated files) that still triggers this error when read with your query, together with the complete Python traceback and the exact `read_parquet` call you used? The sample should reproduce the ConversionException so we can identify which column and which file cause the cast failure.",
+    "rationale": "The report describes a cast failure but the underlying input files are private; without a reproducible Parquet sample or generated equivalent and the full traceback, maintainers cannot determine which column or file triggers the ConversionException and cannot reproduce the issue."
+  },
+  "actions": [
+    "add_comment",
+    "add_label"
+  ],
+  "run_id": "40615702866",
+  "configuration_sha": "3e4e40401f90ce969aacbbbe8c215f8bd5fc040a",
+  "input_sha256": "7f6821d84590aa03820546d06f885ed7929efc83a9d64b4a1d3d845722584279",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "/comments?per_page=100&page=1",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/comments",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/labels",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "triage_enabled": false,
+  "active_triage_runs": [],
+  "queued_triage_runs": [],
+  "local_head": "181254ea62280d63fca0d04c370243054e655539",
+  "remote_main": "181254ea62280d63fca0d04c370243054e655539",
+  "tracked_diff_empty": true,
+  "staged_diff_empty": true,
+  "frozen_validation": "valid; 28 cases",
+  "new_historical_attempts": 22,
+  "selected_historical_attempts": 25,
+  "adversarial_runs": 0,
+  "committed": false,
+  "pushed": false,
+  "human_reviews": "pending"
+}

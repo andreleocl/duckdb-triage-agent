@@ -1,0 +1,47 @@
+{
+  "status": "published",
+  "proposal": {
+    "label": "needs reproducible example",
+    "comment": "Could you share a small, shareable input (for example a CSV or SQL VALUES block) that still triggers this error when run with the shown SQL, together with the complete error text/stack trace produced by DuckDB? The sanitized query is helpful, but reproducing the internal binder/planner failure requires an example input or table schema/data that triggers the problem.",
+    "rationale": "The report includes a sanitized SQL shape and environment details but lacks any concrete shareable input or minimal table data/schema; without sample data or an equivalent VALUES-based repro the internal planner error cannot be reliably reproduced."
+  },
+  "actions": [
+    "add_comment",
+    "add_label"
+  ],
+  "run_id": "40502836154",
+  "configuration_sha": "181254ea62280d63fca0d04c370243054e655539",
+  "input_sha256": "5d3c461a0b2cb36cf1558da22dc8606ca8b60e4a655cddd1967edead062bbb32",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "/comments?per_page=100&page=1",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/comments",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/labels",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

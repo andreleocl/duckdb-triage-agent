@@ -1,0 +1,522 @@
+﻿pre_activation	Set up job	﻿2026-10-28T01:14:34.0175811Z Current runner version: '2.338.1'
+pre_activation	Set up job	2026-10-28T01:14:34.0222387Z ##[group]Runner Image Provisioner
+pre_activation	Set up job	2026-10-28T01:14:34.0233847Z Hosted Compute Agent
+pre_activation	Set up job	2026-10-28T01:14:34.0234484Z Version: 20261021.618
+pre_activation	Set up job	2026-10-28T01:14:34.0235181Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+pre_activation	Set up job	2026-10-28T01:14:34.0235907Z Build Date: 2026-10-21T00:45:21Z
+pre_activation	Set up job	2026-10-28T01:14:34.0236594Z Worker ID: {84a7ccd5-f3cc-4878-8b62-fc1c056790b5}
+pre_activation	Set up job	2026-10-28T01:14:34.0237358Z Region: westus3
+pre_activation	Set up job	2026-10-28T01:14:34.0237891Z Cloud: Azure
+pre_activation	Set up job	2026-10-28T01:14:34.0238408Z ##[endgroup]
+pre_activation	Set up job	2026-10-28T01:14:34.0239947Z ##[group]VM Image
+pre_activation	Set up job	2026-10-28T01:14:34.0240521Z - OS: Linux (x64)
+pre_activation	Set up job	2026-10-28T01:14:34.0241150Z - Source: Docker
+pre_activation	Set up job	2026-10-28T01:14:34.0241734Z - Name: ubuntu:24.04
+pre_activation	Set up job	2026-10-28T01:14:34.0242266Z - Version: 20261026.36.1
+pre_activation	Set up job	2026-10-28T01:14:34.0242872Z ##[endgroup]
+pre_activation	Set up job	2026-10-28T01:14:34.0254523Z ##[group]GITHUB_TOKEN Permissions
+pre_activation	Set up job	2026-10-28T01:14:34.0261441Z Actions: read
+pre_activation	Set up job	2026-10-28T01:14:34.0262553Z Metadata: read
+pre_activation	Set up job	2026-10-28T01:14:34.0263502Z ##[endgroup]
+pre_activation	Set up job	2026-10-28T01:14:34.0266288Z Secret source: Actions
+pre_activation	Set up job	2026-10-28T01:14:34.0267499Z Cache mode: write
+pre_activation	Set up job	2026-10-28T01:14:34.0268318Z Prepare workflow directory
+pre_activation	Set up job	2026-10-28T01:14:34.1821439Z Prepare all required actions
+pre_activation	Set up job	2026-10-28T01:14:34.2093693Z Getting action download info
+pre_activation	Set up job	2026-10-28T01:14:34.6974897Z Download action repository 'github/gh-aw-actions@de9d416cac8ccea1a2d582cb07c4b7db96946792' (SHA:de9d416cac8ccea1a2d582cb07c4b7db96946792)
+pre_activation	Set up job	2026-10-28T01:14:36.9668256Z Download action repository 'actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3' (SHA:3a2844b7e9c422d3c10d287c895573f7108da1b3)
+pre_activation	Set up job	2026-10-28T01:14:37.8229151Z Complete job name: pre_activation
+pre_activation	Setup Scripts	﻿2026-10-28T01:14:37.9286992Z ##[group]Run github/gh-aw-actions/setup@de9d416cac8ccea1a2d582cb07c4b7db96946792
+pre_activation	Setup Scripts	2026-10-28T01:14:37.9290201Z with:
+pre_activation	Setup Scripts	2026-10-28T01:14:37.9290788Z   destination: /home/runner/work/_temp/gh-aw/actions
+pre_activation	Setup Scripts	2026-10-28T01:14:37.9291457Z   job-name: pre_activation
+pre_activation	Setup Scripts	2026-10-28T01:14:37.9291996Z   safe-output-artifact-client: false
+pre_activation	Setup Scripts	2026-10-28T01:14:37.9292840Z env:
+pre_activation	Setup Scripts	2026-10-28T01:14:37.9294633Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+pre_activation	Setup Scripts	2026-10-28T01:14:37.9295289Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+pre_activation	Setup Scripts	2026-10-28T01:14:37.9296767Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40613825202,github.run_id=40613825202,gh-aw.engine.id=codex
+pre_activation	Setup Scripts	2026-10-28T01:14:37.9298250Z   OTEL_EXPORTER_OTLP_HEADERS: 
+pre_activation	Setup Scripts	2026-10-28T01:14:37.9298816Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+pre_activation	Setup Scripts	2026-10-28T01:14:37.9299423Z   GH_AW_OTLP_IF_MISSING: ignore
+pre_activation	Setup Scripts	2026-10-28T01:14:37.9299945Z   GH_AW_RUNTIME_FEATURES: 
+pre_activation	Setup Scripts	2026-10-28T01:14:37.9300492Z   GH_AW_SETUP_WORKFLOW_NAME: DuckDB issue triage
+pre_activation	Setup Scripts	2026-10-28T01:14:37.9301601Z   GH_AW_CURRENT_WORKFLOW_REF: andreleocl/duckdb-triage-agent/.github/workflows/issue-triage.lock.yml@refs/heads/main
+pre_activation	Setup Scripts	2026-10-28T01:14:37.9302604Z   GH_AW_INFO_VERSION: 0.164.0
+pre_activation	Setup Scripts	2026-10-28T01:14:37.9303457Z   GH_AW_INFO_AWF_VERSION: v0.28.70
+pre_activation	Setup Scripts	2026-10-28T01:14:37.9304001Z   GH_AW_INFO_ENGINE_ID: codex
+pre_activation	Setup Scripts	2026-10-28T01:14:37.9304533Z   GH_AW_SETUP_AW_CONTEXT: 
+pre_activation	Setup Scripts	2026-10-28T01:14:37.9305020Z ##[endgroup]
+pre_activation	Setup Scripts	2026-10-28T01:14:41.4496209Z Successfully copied 759 files to /home/runner/work/_temp/gh-aw/actions
+pre_activation	Setup Scripts	2026-10-28T01:14:41.4524332Z ##[group]Runtime TLS inventory (not a trust-store attestation)
+pre_activation	Setup Scripts	2026-10-28T01:14:41.5964540Z curl 8.5.0 (x86_64-pc-linux-gnu) libcurl/8.5.0 OpenSSL/3.0.13 zlib/1.3 brotli/1.1.0 zstd/1.5.5 libidn2/2.3.7 libpsl/0.21.2 (+libidn2/2.3.7) libssh/0.10.6/openssl/zlib nghttp2/1.59.0 librtmp/2.3 OpenLDAP/2.6.10
+pre_activation	Setup Scripts	2026-10-28T01:14:41.6310377Z Node v24.22.1; OpenSSL 3.5.9
+pre_activation	Setup Scripts	2026-10-28T01:14:41.6485696Z Go: unavailable; binary build-toolchain inspection unavailable
+pre_activation	Setup Scripts	2026-10-28T01:14:41.6488048Z Python/certifi: not inspected by shell setup; record each client's interpreter, TLS backend and selected CA bundle separately.
+pre_activation	Setup Scripts	2026-10-28T01:14:41.6489621Z Container, proxy and MCP trust stores require separate image/vendor evidence.
+pre_activation	Setup Scripts	2026-10-28T01:14:41.6522653Z Browser updates and successful HTTPS connections do not attest CA distrust.
+pre_activation	Setup Scripts	2026-10-28T01:14:41.6525756Z ##[endgroup]
+pre_activation	Setup Scripts	2026-10-28T01:14:42.0833836Z Successfully copied 112 mcp-scripts files to /home/runner/work/_temp/gh-aw/mcp-scripts
+pre_activation	Setup Scripts	2026-10-28T01:14:42.3265979Z Successfully copied 170 safe-outputs files to /home/runner/work/_temp/gh-aw/safeoutputs
+pre_activation	Setup Scripts	2026-10-28T01:14:42.4385552Z [info] [otlp] INPUT_TRACE_ID not set, a new trace ID will be generated
+pre_activation	Setup Scripts	2026-10-28T01:14:42.4395822Z [info] [otlp] no OTLP endpoints have usable credentials, skipping setup span
+pre_activation	Setup Scripts	2026-10-28T01:14:42.4435137Z [info] [otlp] resolved trace-id=16acfe8d287e2fd0156c6d66387e4345
+pre_activation	Setup Scripts	2026-10-28T01:14:42.4445710Z [info] [otlp] trace-id=16acfe8d287e2fd0156c6d66387e4345 written to GITHUB_OUTPUT
+pre_activation	Setup Scripts	2026-10-28T01:14:42.4450243Z [info] [otlp] span-id=013dc1f81c81a9b2 written to GITHUB_OUTPUT
+pre_activation	Setup Scripts	2026-10-28T01:14:42.4454913Z [info] [otlp] GITHUB_AW_OTEL_TRACE_ID written to GITHUB_ENV
+pre_activation	Setup Scripts	2026-10-28T01:14:42.4460173Z [info] [otlp] GITHUB_AW_OTEL_PARENT_SPAN_ID written to GITHUB_ENV
+pre_activation	Setup Scripts	2026-10-28T01:14:42.4465753Z [info] [otlp] GITHUB_AW_OTEL_JOB_START_MS written to GITHUB_ENV
+pre_activation	Check team membership for workflow	﻿2026-10-28T01:14:42.5259061Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+pre_activation	Check team membership for workflow	2026-10-28T01:14:42.5259968Z with:
+pre_activation	Check team membership for workflow	2026-10-28T01:14:42.5264609Z   github-token: ***
+pre_activation	Check team membership for workflow	2026-10-28T01:14:42.5266810Z   script: const path = require('path');
+pre_activation	Check team membership for workflow	const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+pre_activation	Check team membership for workflow	const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+pre_activation	Check team membership for workflow	setupGlobals(core, github, context, exec, io, getOctokit);
+pre_activation	Check team membership for workflow	const { main } = require(path.join(actionsDir, 'check_membership.cjs'));
+pre_activation	Check team membership for workflow	await main();
+pre_activation	Check team membership for workflow	
+pre_activation	Check team membership for workflow	2026-10-28T01:14:42.5269094Z   debug: false
+pre_activation	Check team membership for workflow	2026-10-28T01:14:42.5269591Z   user-agent: actions/github-script
+pre_activation	Check team membership for workflow	2026-10-28T01:14:42.5270182Z   result-encoding: json
+pre_activation	Check team membership for workflow	2026-10-28T01:14:42.5270692Z   retries: 0
+pre_activation	Check team membership for workflow	2026-10-28T01:14:42.5271200Z   retry-exempt-status-codes: 400,401,403,404,422
+pre_activation	Check team membership for workflow	2026-10-28T01:14:42.5271823Z env:
+pre_activation	Check team membership for workflow	2026-10-28T01:14:42.5272308Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+pre_activation	Check team membership for workflow	2026-10-28T01:14:42.5273186Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+pre_activation	Check team membership for workflow	2026-10-28T01:14:42.5274782Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40613825202,github.run_id=40613825202,gh-aw.engine.id=codex
+pre_activation	Check team membership for workflow	2026-10-28T01:14:42.5277931Z   OTEL_EXPORTER_OTLP_HEADERS: 
+pre_activation	Check team membership for workflow	2026-10-28T01:14:42.5278624Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+pre_activation	Check team membership for workflow	2026-10-28T01:14:42.5279289Z   GH_AW_OTLP_IF_MISSING: ignore
+pre_activation	Check team membership for workflow	2026-10-28T01:14:42.5279848Z   GH_AW_RUNTIME_FEATURES: 
+pre_activation	Check team membership for workflow	2026-10-28T01:14:42.5280477Z   GITHUB_AW_OTEL_TRACE_ID: 16acfe8d287e2fd0156c6d66387e4345
+pre_activation	Check team membership for workflow	2026-10-28T01:14:42.5281239Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 013dc1f81c81a9b2
+pre_activation	Check team membership for workflow	2026-10-28T01:14:42.5281919Z   GITHUB_AW_OTEL_JOB_START_MS: 1793150082447
+pre_activation	Check team membership for workflow	2026-10-28T01:14:42.5282588Z   GH_AW_REQUIRED_ROLES: admin,maintainer,write
+pre_activation	Check team membership for workflow	2026-10-28T01:14:42.5283464Z ##[endgroup]
+pre_activation	Check team membership for workflow	2026-10-28T01:14:42.7125418Z Event workflow_dispatch requires validation
+pre_activation	Check team membership for workflow	2026-10-28T01:14:42.7135336Z Checking if user 'andreleocl' has required permissions for andreleocl/duckdb-triage-agent
+pre_activation	Check team membership for workflow	2026-10-28T01:14:42.7141096Z Required permissions: admin, maintainer, write
+pre_activation	Check team membership for workflow	2026-10-28T01:14:43.1662021Z Repository permission level: admin
+pre_activation	Check team membership for workflow	2026-10-28T01:14:43.1668381Z ✅ User has admin access to repository
+pre_activation	Check user rate limit	﻿2026-10-28T01:14:43.2208757Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+pre_activation	Check user rate limit	2026-10-28T01:14:43.2209877Z with:
+pre_activation	Check user rate limit	2026-10-28T01:14:43.2215349Z   github-token: ***
+pre_activation	Check user rate limit	2026-10-28T01:14:43.2217770Z   script: const path = require('path');
+pre_activation	Check user rate limit	const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+pre_activation	Check user rate limit	const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+pre_activation	Check user rate limit	setupGlobals(core, github, context, exec, io, getOctokit);
+pre_activation	Check user rate limit	const { main } = require(path.join(actionsDir, 'check_rate_limit.cjs'));
+pre_activation	Check user rate limit	await main();
+pre_activation	Check user rate limit	
+pre_activation	Check user rate limit	2026-10-28T01:14:43.2220282Z   debug: false
+pre_activation	Check user rate limit	2026-10-28T01:14:43.2220837Z   user-agent: actions/github-script
+pre_activation	Check user rate limit	2026-10-28T01:14:43.2221551Z   result-encoding: json
+pre_activation	Check user rate limit	2026-10-28T01:14:43.2222118Z   retries: 0
+pre_activation	Check user rate limit	2026-10-28T01:14:43.2223329Z   retry-exempt-status-codes: 400,401,403,404,422
+pre_activation	Check user rate limit	2026-10-28T01:14:43.2224082Z env:
+pre_activation	Check user rate limit	2026-10-28T01:14:43.2224602Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+pre_activation	Check user rate limit	2026-10-28T01:14:43.2225345Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+pre_activation	Check user rate limit	2026-10-28T01:14:43.2226969Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40613825202,github.run_id=40613825202,gh-aw.engine.id=codex
+pre_activation	Check user rate limit	2026-10-28T01:14:43.2228714Z   OTEL_EXPORTER_OTLP_HEADERS: 
+pre_activation	Check user rate limit	2026-10-28T01:14:43.2229403Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+pre_activation	Check user rate limit	2026-10-28T01:14:43.2230154Z   GH_AW_OTLP_IF_MISSING: ignore
+pre_activation	Check user rate limit	2026-10-28T01:14:43.2230796Z   GH_AW_RUNTIME_FEATURES: 
+pre_activation	Check user rate limit	2026-10-28T01:14:43.2231539Z   GITHUB_AW_OTEL_TRACE_ID: 16acfe8d287e2fd0156c6d66387e4345
+pre_activation	Check user rate limit	2026-10-28T01:14:43.2232410Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 013dc1f81c81a9b2
+pre_activation	Check user rate limit	2026-10-28T01:14:43.2233476Z   GITHUB_AW_OTEL_JOB_START_MS: 1793150082447
+pre_activation	Check user rate limit	2026-10-28T01:14:43.2234220Z   GH_AW_RATE_LIMIT_MAX: 5
+pre_activation	Check user rate limit	2026-10-28T01:14:43.2234852Z   GH_AW_RATE_LIMIT_WINDOW: 60
+pre_activation	Check user rate limit	2026-10-28T01:14:43.2235513Z   GH_AW_RATE_LIMIT_EVENTS: workflow_dispatch
+pre_activation	Check user rate limit	2026-10-28T01:14:43.2236212Z ##[endgroup]
+pre_activation	Check user rate limit	2026-10-28T01:14:43.7742283Z    Using workflow file: issue-triage.lock.yml (from GITHUB_WORKFLOW_REF)
+pre_activation	Check user rate limit	2026-10-28T01:14:43.7747804Z 🔍 Checking rate limit for user 'andreleocl' on workflow 'issue-triage.lock.yml'
+pre_activation	Check user rate limit	2026-10-28T01:14:43.7751322Z    Configuration: max=5 runs per 60 minutes
+pre_activation	Check user rate limit	2026-10-28T01:14:43.7754954Z    Current event: workflow_dispatch
+pre_activation	Check user rate limit	2026-10-28T01:14:43.7944313Z    Ignored roles: admin, maintain, write
+pre_activation	Check user rate limit	2026-10-28T01:14:44.0127063Z    User 'andreleocl' has permission level: admin
+pre_activation	Check user rate limit	2026-10-28T01:14:44.0128479Z ✅ User 'andreleocl' has ignored role 'admin'; skipping rate limit check
+pre_activation	Post Setup Scripts	﻿2026-10-28T01:14:44.0312822Z Post job cleanup.
+pre_activation	Post Setup Scripts	2026-10-28T01:14:44.1375920Z [info] [otlp] sending conclusion span "gh-aw.pre_activation.conclusion" to configured endpoints
+pre_activation	Post Setup Scripts	2026-10-28T01:14:44.1452122Z [info] [otlp] conclusion span export attempted
+pre_activation	Post Setup Scripts	2026-10-28T01:14:44.1457433Z Cleaning up /tmp/gh-aw...
+pre_activation	Post Setup Scripts	2026-10-28T01:14:44.1593483Z Cleaned up /tmp/gh-aw
+pre_activation	Post Setup Scripts	2026-10-28T01:14:44.1745727Z No /tmp/awf-*-chroot-home directories found
+pre_activation	Post Setup Scripts	2026-10-28T01:14:44.1885086Z No /tmp/awf-chroot-* directories found
+pre_activation	Complete job	﻿2026-10-28T01:14:44.2010210Z Evaluate and set job outputs
+pre_activation	Complete job	2026-10-28T01:14:44.2026230Z Set output 'activated'
+pre_activation	Complete job	2026-10-28T01:14:44.2028752Z Set output 'setup-parent-span-id'
+pre_activation	Complete job	2026-10-28T01:14:44.2029928Z Set output 'setup-span-id'
+pre_activation	Complete job	2026-10-28T01:14:44.2030722Z Set output 'setup-trace-id'
+pre_activation	Complete job	2026-10-28T01:14:44.2032087Z Cleaning up orphan processes
+activation	Set up job	﻿2026-10-28T01:14:49.7403461Z Current runner version: '2.338.0'
+activation	Set up job	2026-10-28T01:14:49.7429425Z ##[group]Runner Image Provisioner
+activation	Set up job	2026-10-28T01:14:49.7430811Z Hosted Compute Agent
+activation	Set up job	2026-10-28T01:14:49.7431412Z Version: 20261021.618
+activation	Set up job	2026-10-28T01:14:49.7432112Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+activation	Set up job	2026-10-28T01:14:49.7432831Z Build Date: 2026-10-21T00:45:21Z
+activation	Set up job	2026-10-28T01:14:49.7433491Z Worker ID: {0037ff20-e967-43e1-a109-15f5d56aed4a}
+activation	Set up job	2026-10-28T01:14:49.7434197Z Region: eastus
+activation	Set up job	2026-10-28T01:14:49.7434711Z Cloud: Azure
+activation	Set up job	2026-10-28T01:14:49.7435200Z ##[endgroup]
+activation	Set up job	2026-10-28T01:14:49.7436700Z ##[group]VM Image
+activation	Set up job	2026-10-28T01:14:49.7437296Z - OS: Linux (x64)
+activation	Set up job	2026-10-28T01:14:49.7437923Z - Source: Docker
+activation	Set up job	2026-10-28T01:14:49.7438471Z - Name: ubuntu:24.04
+activation	Set up job	2026-10-28T01:14:49.7442075Z - Version: 20261021.31.1
+activation	Set up job	2026-10-28T01:14:49.7442791Z ##[endgroup]
+activation	Set up job	2026-10-28T01:14:49.7444025Z ##[group]GITHUB_TOKEN Permissions
+activation	Set up job	2026-10-28T01:14:49.7446171Z Actions: read
+activation	Set up job	2026-10-28T01:14:49.7446782Z Contents: read
+activation	Set up job	2026-10-28T01:14:49.7447395Z Issues: read
+activation	Set up job	2026-10-28T01:14:49.7448177Z Metadata: read
+activation	Set up job	2026-10-28T01:14:49.7448726Z ##[endgroup]
+activation	Set up job	2026-10-28T01:14:49.7451253Z Secret source: Actions
+activation	Set up job	2026-10-28T01:14:49.7452311Z Cache mode: write
+activation	Set up job	2026-10-28T01:14:49.7453167Z Prepare workflow directory
+activation	Set up job	2026-10-28T01:14:49.8106817Z Prepare all required actions
+activation	Set up job	2026-10-28T01:14:49.8161729Z Getting action download info
+activation	Set up job	2026-10-28T01:14:50.1547235Z Download action repository 'github/gh-aw-actions@de9d416cac8ccea1a2d582cb07c4b7db96946792' (SHA:de9d416cac8ccea1a2d582cb07c4b7db96946792)
+activation	Set up job	2026-10-28T01:14:50.8539977Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+activation	Set up job	2026-10-28T01:14:50.8878306Z Download action repository 'actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+activation	Set up job	2026-10-28T01:14:50.9700058Z Download action repository 'actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3' (SHA:3a2844b7e9c422d3c10d287c895573f7108da1b3)
+activation	Set up job	2026-10-28T01:14:51.3691689Z Complete job name: activation
+activation	Setup Scripts	﻿2026-10-28T01:14:51.4648680Z ##[group]Run github/gh-aw-actions/setup@de9d416cac8ccea1a2d582cb07c4b7db96946792
+activation	Setup Scripts	2026-10-28T01:14:51.4649878Z with:
+activation	Setup Scripts	2026-10-28T01:14:51.4652303Z   destination: /home/runner/work/_temp/gh-aw/actions
+activation	Setup Scripts	2026-10-28T01:14:51.4652981Z   job-name: activation
+activation	Setup Scripts	2026-10-28T01:14:51.4653477Z   trace-id: 16acfe8d287e2fd0156c6d66387e4345
+activation	Setup Scripts	2026-10-28T01:14:51.4654062Z   parent-span-id: 013dc1f81c81a9b2
+activation	Setup Scripts	2026-10-28T01:14:51.4654613Z   safe-output-artifact-client: false
+activation	Setup Scripts	2026-10-28T01:14:51.4655497Z env:
+activation	Setup Scripts	2026-10-28T01:14:51.4655933Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+activation	Setup Scripts	2026-10-28T01:14:51.4656465Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+activation	Setup Scripts	2026-10-28T01:14:51.4657900Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40613825202,github.run_id=40613825202,gh-aw.engine.id=codex
+activation	Setup Scripts	2026-10-28T01:14:51.4659330Z   OTEL_EXPORTER_OTLP_HEADERS: 
+activation	Setup Scripts	2026-10-28T01:14:51.4659874Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+activation	Setup Scripts	2026-10-28T01:14:51.4660791Z   GH_AW_OTLP_IF_MISSING: ignore
+activation	Setup Scripts	2026-10-28T01:14:51.4661328Z   GH_AW_RUNTIME_FEATURES: 
+activation	Setup Scripts	2026-10-28T01:14:51.4661938Z   GH_AW_SETUP_WORKFLOW_NAME: DuckDB issue triage
+activation	Setup Scripts	2026-10-28T01:14:51.4662964Z   GH_AW_CURRENT_WORKFLOW_REF: andreleocl/duckdb-triage-agent/.github/workflows/issue-triage.lock.yml@refs/heads/main
+activation	Setup Scripts	2026-10-28T01:14:51.4663952Z   GH_AW_INFO_VERSION: 0.164.0
+activation	Setup Scripts	2026-10-28T01:14:51.4664446Z   GH_AW_INFO_AWF_VERSION: v0.28.70
+activation	Setup Scripts	2026-10-28T01:14:51.4664959Z   GH_AW_INFO_ENGINE_ID: codex
+activation	Setup Scripts	2026-10-28T01:14:51.4665441Z   GH_AW_SETUP_AW_CONTEXT: 
+activation	Setup Scripts	2026-10-28T01:14:51.4665895Z ##[endgroup]
+activation	Setup Scripts	2026-10-28T01:14:53.8688232Z Successfully copied 759 files to /home/runner/work/_temp/gh-aw/actions
+activation	Setup Scripts	2026-10-28T01:14:53.8714970Z ##[group]Runtime TLS inventory (not a trust-store attestation)
+activation	Setup Scripts	2026-10-28T01:14:53.9554595Z curl 8.5.0 (x86_64-pc-linux-gnu) libcurl/8.5.0 OpenSSL/3.0.13 zlib/1.3 brotli/1.1.0 zstd/1.5.5 libidn2/2.3.7 libpsl/0.21.2 (+libidn2/2.3.7) libssh/0.10.6/openssl/zlib nghttp2/1.59.0 librtmp/2.3 OpenLDAP/2.6.10
+activation	Setup Scripts	2026-10-28T01:14:53.9821629Z Node v24.22.1; OpenSSL 3.5.9
+activation	Setup Scripts	2026-10-28T01:14:53.9866273Z Go: unavailable; binary build-toolchain inspection unavailable
+activation	Setup Scripts	2026-10-28T01:14:53.9867989Z Python/certifi: not inspected by shell setup; record each client's interpreter, TLS backend and selected CA bundle separately.
+activation	Setup Scripts	2026-10-28T01:14:53.9869313Z Container, proxy and MCP trust stores require separate image/vendor evidence.
+activation	Setup Scripts	2026-10-28T01:14:53.9870693Z Browser updates and successful HTTPS connections do not attest CA distrust.
+activation	Setup Scripts	2026-10-28T01:14:53.9872339Z ##[endgroup]
+activation	Setup Scripts	2026-10-28T01:14:54.2918986Z Successfully copied 112 mcp-scripts files to /home/runner/work/_temp/gh-aw/mcp-scripts
+activation	Setup Scripts	2026-10-28T01:14:54.4722459Z Successfully copied 170 safe-outputs files to /home/runner/work/_temp/gh-aw/safeoutputs
+activation	Setup Scripts	2026-10-28T01:14:54.5682268Z [info] [otlp] INPUT_TRACE_ID=16acfe8d287e2fd0156c6d66387e4345 (will reuse activation trace)
+activation	Setup Scripts	2026-10-28T01:14:54.5686657Z [info] [otlp] INPUT_PARENT_SPAN_ID=013dc1f81c81a9b2 (will parent setup span)
+activation	Setup Scripts	2026-10-28T01:14:54.5692821Z [info] [otlp] no OTLP endpoints have usable credentials, skipping setup span
+activation	Setup Scripts	2026-10-28T01:14:54.5729502Z [info] [otlp] resolved trace-id=16acfe8d287e2fd0156c6d66387e4345
+activation	Setup Scripts	2026-10-28T01:14:54.5739763Z [info] [otlp] trace-id=16acfe8d287e2fd0156c6d66387e4345 written to GITHUB_OUTPUT
+activation	Setup Scripts	2026-10-28T01:14:54.5742999Z [info] [otlp] span-id=3b3a09ab75c03a41 written to GITHUB_OUTPUT
+activation	Setup Scripts	2026-10-28T01:14:54.5745075Z [info] [otlp] parent-span-id=013dc1f81c81a9b2 written to GITHUB_OUTPUT
+activation	Setup Scripts	2026-10-28T01:14:54.5747116Z [info] [otlp] GITHUB_AW_OTEL_TRACE_ID written to GITHUB_ENV
+activation	Setup Scripts	2026-10-28T01:14:54.5750935Z [info] [otlp] GITHUB_AW_OTEL_PARENT_SPAN_ID written to GITHUB_ENV
+activation	Setup Scripts	2026-10-28T01:14:54.5763266Z [info] [otlp] GITHUB_AW_OTEL_JOB_START_MS written to GITHUB_ENV
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-10-28T01:14:54.6318458Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.6319261Z with:
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.6319686Z   persist-credentials: false
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.6321227Z   sparse-checkout: /.github/codex/
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	/.claude/skills/duckdb-triage/SKILL.md
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	/.claude/skills/duckdb-triage/scripts/validate_output.py
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	/scripts/triage_runtime.py
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.6322506Z   sparse-checkout-cone-mode: false
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.6324250Z   repository: andreleocl/duckdb-triage-agent
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.6328689Z   token: ***
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.6329146Z   ssh-strict: true
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.6329572Z   ssh-user: git
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.6329977Z   clean: true
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.6330648Z   fetch-depth: 1
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.6331074Z   fetch-tags: false
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.6331509Z   show-progress: true
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.6331947Z   lfs: false
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.6332352Z   submodules: false
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.6332887Z   set-safe-directory: true
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.6333386Z   allow-unsafe-pr-checkout: false
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.6333922Z env:
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.6334329Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.6334851Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.6336279Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40613825202,github.run_id=40613825202,gh-aw.engine.id=codex
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.6337709Z   OTEL_EXPORTER_OTLP_HEADERS: 
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.6338414Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.6339011Z   GH_AW_OTLP_IF_MISSING: ignore
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.6339504Z   GH_AW_RUNTIME_FEATURES: 
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.6340064Z   GITHUB_AW_OTEL_TRACE_ID: 16acfe8d287e2fd0156c6d66387e4345
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.6342015Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 3b3a09ab75c03a41
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.6343115Z   GITHUB_AW_OTEL_JOB_START_MS: 1793150094576
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.6343687Z ##[endgroup]
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.7938981Z Syncing repository: andreleocl/duckdb-triage-agent
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.7941984Z ##[group]Getting Git version info
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.7942904Z Working directory is '/home/runner/work/duckdb-triage-agent/duckdb-triage-agent'
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.7944969Z [command]/usr/bin/git version
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.8086802Z git version 2.43.0
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.8105021Z ##[endgroup]
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.8128475Z Temporarily overriding HOME='/home/runner/work/_temp/efbb05f6-042d-4d6e-bbfe-083f541d495f' before making global git config changes
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.8131700Z Adding repository directory to the temporary git global config as a safe directory
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.8148189Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/duckdb-triage-agent/duckdb-triage-agent
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.8277278Z Deleting the contents of '/home/runner/work/duckdb-triage-agent/duckdb-triage-agent'
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.8316890Z ##[group]Determining repository object format
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.8336232Z ##[endgroup]
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.8339417Z ##[group]Initializing the repository
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.8347725Z [command]/usr/bin/git init /home/runner/work/duckdb-triage-agent/duckdb-triage-agent
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.8674484Z hint: Using 'master' as the name for the initial branch. This default branch name
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.8681884Z hint: is subject to change. To configure the initial branch name to use in all
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.8686770Z hint: of your new repositories, which will suppress this warning, call:
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.8704712Z hint: 
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.8709728Z hint: 	git config --global init.defaultBranch <name>
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.8713648Z hint: 
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.8761595Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.8764715Z hint: 'development'. The just-created branch can be renamed via this command:
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.8791411Z hint: 
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.8791956Z hint: 	git branch -m <name>
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.8955900Z Initialized empty Git repository in /home/runner/work/duckdb-triage-agent/duckdb-triage-agent/.git/
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.8958519Z [command]/usr/bin/git remote add origin https://github.com/andreleocl/duckdb-triage-agent
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.9024027Z ##[endgroup]
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.9024894Z ##[group]Disabling automatic garbage collection
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.9025607Z [command]/usr/bin/git config --local gc.auto 0
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.9119020Z ##[endgroup]
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.9119841Z ##[group]Setting up auth
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.9120684Z Removing SSH command configuration
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.9122044Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.9168607Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.9768463Z Removing HTTP extra header
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.9776968Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:54.9871072Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.0084829Z Removing includeIf entries pointing to credentials config files
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.0093405Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.0132953Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.0394530Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-6750d2c7-1406-4d68-a7cb-0466dfed4e85.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.0437945Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/duckdb-triage-agent/duckdb-triage-agent/.git.path /home/runner/work/_temp/git-credentials-6750d2c7-1406-4d68-a7cb-0466dfed4e85.config
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.0473658Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/duckdb-triage-agent/duckdb-triage-agent/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-6750d2c7-1406-4d68-a7cb-0466dfed4e85.config
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.0507227Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-6750d2c7-1406-4d68-a7cb-0466dfed4e85.config
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.0560751Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-6750d2c7-1406-4d68-a7cb-0466dfed4e85.config
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.0603616Z ##[endgroup]
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.0641727Z ##[group]Fetching the repository
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.0643247Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --filter=blob:none --depth=1 origin +bfd3da71cf48ebd561e5489457fb9dba80099f7e:refs/remotes/origin/main
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.3592217Z From https://github.com/andreleocl/duckdb-triage-agent
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.3593682Z  * [new ref]         bfd3da71cf48ebd561e5489457fb9dba80099f7e -> origin/main
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.3718492Z [command]/usr/bin/git branch --list --remote origin/main
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.3743552Z   origin/main
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.3758581Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.3783947Z bfd3da71cf48ebd561e5489457fb9dba80099f7e
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.3798073Z ##[endgroup]
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.3799059Z ##[group]Determining the checkout info
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.3832272Z ##[endgroup]
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.3833076Z ##[group]Setting up sparse checkout
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.3833749Z [command]/usr/bin/git config core.sparseCheckout true
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.3866585Z [command]/usr/bin/git rev-parse --git-path info/sparse-checkout
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.3893112Z .git/info/sparse-checkout
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.3911624Z ##[endgroup]
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.3914154Z ##[group]Checking out the ref
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.3920083Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.9155643Z Switched to a new branch 'main'
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.9160947Z branch 'main' set up to track 'origin/main'.
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.9172693Z ##[endgroup]
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.9243504Z [command]/usr/bin/git log -1 --format=%H
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.9362091Z bfd3da71cf48ebd561e5489457fb9dba80099f7e
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.9521516Z ##[group]Removing auth
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.9525978Z Removing SSH command configuration
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.9550611Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:55.9629614Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:56.0024402Z Removing HTTP extra header
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:56.0026944Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:56.0138236Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:56.0776556Z Removing includeIf entries pointing to credentials config files
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:56.0825716Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:56.0885509Z includeif.gitdir:/home/runner/work/duckdb-triage-agent/duckdb-triage-agent/.git.path
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:56.0887049Z includeif.gitdir:/home/runner/work/duckdb-triage-agent/duckdb-triage-agent/.git/worktrees/*.path
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:56.0889871Z includeif.gitdir:/github/workspace/.git.path
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:56.0890885Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:56.0913783Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/duckdb-triage-agent/duckdb-triage-agent/.git.path
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:56.0968851Z /home/runner/work/_temp/git-credentials-6750d2c7-1406-4d68-a7cb-0466dfed4e85.config
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:56.0991706Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/duckdb-triage-agent/duckdb-triage-agent/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-6750d2c7\-1406\-4d68\-a7cb\-0466dfed4e85\.config
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:56.1026806Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/duckdb-triage-agent/duckdb-triage-agent/.git/worktrees/*.path
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:56.1101366Z /home/runner/work/_temp/git-credentials-6750d2c7-1406-4d68-a7cb-0466dfed4e85.config
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:56.2456511Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/duckdb-triage-agent/duckdb-triage-agent/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-6750d2c7\-1406\-4d68\-a7cb\-0466dfed4e85\.config
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:56.2462810Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:56.2463942Z /github/runner_temp/git-credentials-6750d2c7-1406-4d68-a7cb-0466dfed4e85.config
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:56.2466056Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-6750d2c7\-1406\-4d68\-a7cb\-0466dfed4e85\.config
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:56.2469380Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:56.2470715Z /github/runner_temp/git-credentials-6750d2c7-1406-4d68-a7cb-0466dfed4e85.config
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:56.2473903Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-6750d2c7\-1406\-4d68\-a7cb\-0466dfed4e85\.config
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:56.2476338Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:56.2479146Z Removing credentials config '/home/runner/work/_temp/git-credentials-6750d2c7-1406-4d68-a7cb-0466dfed4e85.config'
+activation	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:56.2483536Z ##[endgroup]
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	﻿2026-10-28T01:14:56.2689462Z ##[group]Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:56.2691343Z with:
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:56.2691796Z   if-no-files-found: error
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:56.2692300Z   include-hidden-files: true
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:56.2693394Z   name: codex-model-catalog
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:56.2696280Z   path: .github/codex/model-catalog.json
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	.github/codex/detection-config.toml
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:56.2697121Z   retention-days: 30
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:56.2698819Z   compression-level: 6
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:56.2699315Z   overwrite: false
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:56.2699744Z   archive: true
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:56.2700159Z env:
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:56.2700872Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:56.2701413Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:56.2704810Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40613825202,github.run_id=40613825202,gh-aw.engine.id=codex
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:56.2706336Z   OTEL_EXPORTER_OTLP_HEADERS: 
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:56.2706945Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:56.2708010Z   GH_AW_OTLP_IF_MISSING: ignore
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:56.2708533Z   GH_AW_RUNTIME_FEATURES: 
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:56.2709112Z   GITHUB_AW_OTEL_TRACE_ID: 16acfe8d287e2fd0156c6d66387e4345
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:56.2709806Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 3b3a09ab75c03a41
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:56.2711363Z   GITHUB_AW_OTEL_JOB_START_MS: 1793150094576
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:56.2711949Z ##[endgroup]
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:56.9498031Z Multiple search paths detected. Calculating the least common ancestor of all paths
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:56.9500530Z The least common ancestor is /home/runner/work/duckdb-triage-agent/duckdb-triage-agent/.github/codex. This will be the root directory of the artifact
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:56.9501849Z With the provided path, there will be 2 files uploaded
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:56.9502787Z Artifact name is valid!
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:56.9503282Z Root directory input is valid!
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:56.9508112Z Uploading artifact: codex-model-catalog.zip
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:56.9509287Z Beginning upload of artifact content to blob storage
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:56.9510785Z Uploaded bytes 24381
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:56.9554202Z Finished uploading artifact content to blob storage!
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:56.9555328Z SHA256 digest of uploaded artifact is 2c22838748be69723998396aa679843a5382d16ab115c7bc5d8d31ea9070b1f0
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:56.9556308Z Finalizing artifact upload
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-10-28T01:14:57.8859055Z ##[error]Failed to FinalizeArtifact: Unable to make request: ECONNRESET
+activation	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	If you are using self-hosted runners, please make sure your runner has access to all GitHub endpoints: https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/about-self-hosted-runners#communication-between-self-hosted-runners-and-github
+activation	Inventory installed skills	﻿2026-10-28T01:14:57.9154512Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+activation	Inventory installed skills	2026-10-28T01:14:57.9155334Z with:
+activation	Inventory installed skills	2026-10-28T01:14:57.9157322Z   script: const path = require('path');
+activation	Inventory installed skills	const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+activation	Inventory installed skills	const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+activation	Inventory installed skills	setupGlobals(core, github, context, exec, io, getOctokit);
+activation	Inventory installed skills	const { main } = require(path.join(actionsDir, 'skill_inventory.cjs'));
+activation	Inventory installed skills	await main();
+activation	Inventory installed skills	
+activation	Inventory installed skills	2026-10-28T01:14:57.9163040Z   github-token: ***
+activation	Inventory installed skills	2026-10-28T01:14:57.9163507Z   debug: false
+activation	Inventory installed skills	2026-10-28T01:14:57.9163964Z   user-agent: actions/github-script
+activation	Inventory installed skills	2026-10-28T01:14:57.9164503Z   result-encoding: json
+activation	Inventory installed skills	2026-10-28T01:14:57.9164955Z   retries: 0
+activation	Inventory installed skills	2026-10-28T01:14:57.9165427Z   retry-exempt-status-codes: 400,401,403,404,422
+activation	Inventory installed skills	2026-10-28T01:14:57.9166011Z env:
+activation	Inventory installed skills	2026-10-28T01:14:57.9166431Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+activation	Inventory installed skills	2026-10-28T01:14:57.9166971Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+activation	Inventory installed skills	2026-10-28T01:14:57.9168416Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40613825202,github.run_id=40613825202,gh-aw.engine.id=codex
+activation	Inventory installed skills	2026-10-28T01:14:57.9169886Z   OTEL_EXPORTER_OTLP_HEADERS: 
+activation	Inventory installed skills	2026-10-28T01:14:57.9170666Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+activation	Inventory installed skills	2026-10-28T01:14:57.9171281Z   GH_AW_OTLP_IF_MISSING: ignore
+activation	Inventory installed skills	2026-10-28T01:14:57.9171788Z   GH_AW_RUNTIME_FEATURES: 
+activation	Inventory installed skills	2026-10-28T01:14:57.9172371Z   GITHUB_AW_OTEL_TRACE_ID: 16acfe8d287e2fd0156c6d66387e4345
+activation	Inventory installed skills	2026-10-28T01:14:57.9173059Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 3b3a09ab75c03a41
+activation	Inventory installed skills	2026-10-28T01:14:57.9173682Z   GITHUB_AW_OTEL_JOB_START_MS: 1793150094576
+activation	Inventory installed skills	2026-10-28T01:14:57.9174255Z   GH_AW_SKILL_DIR: .codex/skills
+activation	Inventory installed skills	2026-10-28T01:14:57.9174757Z ##[endgroup]
+activation	Inventory installed skills	2026-10-28T01:14:58.0592403Z Inventoried 0 skills; 0 conflict(s)
+activation	Upload info artifact	﻿2026-10-28T01:14:58.0773352Z ##[group]Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+activation	Upload info artifact	2026-10-28T01:14:58.0774283Z with:
+activation	Upload info artifact	2026-10-28T01:14:58.0774693Z   name: info
+activation	Upload info artifact	2026-10-28T01:14:58.0775136Z   path: /tmp/gh-aw/aw_info.json
+activation	Upload info artifact	2026-10-28T01:14:58.0775668Z   if-no-files-found: ignore
+activation	Upload info artifact	2026-10-28T01:14:58.0776148Z   retention-days: 0
+activation	Upload info artifact	2026-10-28T01:14:58.0776609Z   compression-level: 6
+activation	Upload info artifact	2026-10-28T01:14:58.0777100Z   overwrite: false
+activation	Upload info artifact	2026-10-28T01:14:58.0777551Z   include-hidden-files: false
+activation	Upload info artifact	2026-10-28T01:14:58.0778053Z   archive: true
+activation	Upload info artifact	2026-10-28T01:14:58.0778561Z env:
+activation	Upload info artifact	2026-10-28T01:14:58.0778990Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+activation	Upload info artifact	2026-10-28T01:14:58.0782284Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+activation	Upload info artifact	2026-10-28T01:14:58.0783833Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40613825202,github.run_id=40613825202,gh-aw.engine.id=codex
+activation	Upload info artifact	2026-10-28T01:14:58.0785274Z   OTEL_EXPORTER_OTLP_HEADERS: 
+activation	Upload info artifact	2026-10-28T01:14:58.0785835Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+activation	Upload info artifact	2026-10-28T01:14:58.0786491Z   GH_AW_OTLP_IF_MISSING: ignore
+activation	Upload info artifact	2026-10-28T01:14:58.0786994Z   GH_AW_RUNTIME_FEATURES: 
+activation	Upload info artifact	2026-10-28T01:14:58.0787578Z   GITHUB_AW_OTEL_TRACE_ID: 16acfe8d287e2fd0156c6d66387e4345
+activation	Upload info artifact	2026-10-28T01:14:58.0788269Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 3b3a09ab75c03a41
+activation	Upload info artifact	2026-10-28T01:14:58.0788880Z   GITHUB_AW_OTEL_JOB_START_MS: 1793150094576
+activation	Upload info artifact	2026-10-28T01:14:58.0789639Z ##[endgroup]
+activation	Upload info artifact	2026-10-28T01:14:58.2717025Z No files were found with the provided path: /tmp/gh-aw/aw_info.json. No artifacts will be uploaded.
+activation	Upload activation artifact	﻿2026-10-28T01:14:58.2859028Z ##[group]Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+activation	Upload activation artifact	2026-10-28T01:14:58.2859922Z with:
+activation	Upload activation artifact	2026-10-28T01:14:58.2860686Z   name: activation
+activation	Upload activation artifact	2026-10-28T01:14:58.2861166Z   include-hidden-files: true
+activation	Upload activation artifact	2026-10-28T01:14:58.2863478Z   path: /tmp/gh-aw/aw_info.json
+activation	Upload activation artifact	/tmp/gh-aw/models.json
+activation	Upload activation artifact	/tmp/gh-aw/aw-prompts/prompt.txt
+activation	Upload activation artifact	/tmp/gh-aw/aw-prompts/system.txt
+activation	Upload activation artifact	/tmp/gh-aw/aw-prompts/user.txt
+activation	Upload activation artifact	/tmp/gh-aw/aw-prompts/prompt-template.txt
+activation	Upload activation artifact	/tmp/gh-aw/aw-prompts/prompt-import-tree.json
+activation	Upload activation artifact	/tmp/gh-aw/github_rate_limits.jsonl
+activation	Upload activation artifact	/tmp/gh-aw/base
+activation	Upload activation artifact	/tmp/gh-aw/.codex/agents
+activation	Upload activation artifact	/tmp/gh-aw/.codex/skills
+activation	Upload activation artifact	/tmp/gh-aw/skill_inventory.json
+activation	Upload activation artifact	
+activation	Upload activation artifact	2026-10-28T01:14:58.2865853Z   if-no-files-found: ignore
+activation	Upload activation artifact	2026-10-28T01:14:58.2866344Z   retention-days: 1
+activation	Upload activation artifact	2026-10-28T01:14:58.2866791Z   compression-level: 6
+activation	Upload activation artifact	2026-10-28T01:14:58.2867243Z   overwrite: false
+activation	Upload activation artifact	2026-10-28T01:14:58.2867704Z   archive: true
+activation	Upload activation artifact	2026-10-28T01:14:58.2868119Z env:
+activation	Upload activation artifact	2026-10-28T01:14:58.2868531Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+activation	Upload activation artifact	2026-10-28T01:14:58.2869080Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+activation	Upload activation artifact	2026-10-28T01:14:58.2870739Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40613825202,github.run_id=40613825202,gh-aw.engine.id=codex
+activation	Upload activation artifact	2026-10-28T01:14:58.2872187Z   OTEL_EXPORTER_OTLP_HEADERS: 
+activation	Upload activation artifact	2026-10-28T01:14:58.2872733Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+activation	Upload activation artifact	2026-10-28T01:14:58.2873357Z   GH_AW_OTLP_IF_MISSING: ignore
+activation	Upload activation artifact	2026-10-28T01:14:58.2873869Z   GH_AW_RUNTIME_FEATURES: 
+activation	Upload activation artifact	2026-10-28T01:14:58.2874446Z   GITHUB_AW_OTEL_TRACE_ID: 16acfe8d287e2fd0156c6d66387e4345
+activation	Upload activation artifact	2026-10-28T01:14:58.2875132Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 3b3a09ab75c03a41
+activation	Upload activation artifact	2026-10-28T01:14:58.2875750Z   GITHUB_AW_OTEL_JOB_START_MS: 1793150094576
+activation	Upload activation artifact	2026-10-28T01:14:58.2876303Z ##[endgroup]
+activation	Upload activation artifact	2026-10-28T01:14:58.4794779Z Multiple search paths detected. Calculating the least common ancestor of all paths
+activation	Upload activation artifact	2026-10-28T01:14:58.4828202Z The least common ancestor is /tmp/gh-aw. This will be the root directory of the artifact
+activation	Upload activation artifact	2026-10-28T01:14:58.4829836Z With the provided path, there will be 1 file uploaded
+activation	Upload activation artifact	2026-10-28T01:14:58.4839442Z Artifact name is valid!
+activation	Upload activation artifact	2026-10-28T01:14:58.4843557Z Root directory input is valid!
+activation	Upload activation artifact	2026-10-28T01:14:58.7424801Z Uploading artifact: activation.zip
+activation	Upload activation artifact	2026-10-28T01:14:58.7473486Z Beginning upload of artifact content to blob storage
+activation	Upload activation artifact	2026-10-28T01:14:58.8480836Z Uploaded bytes 181
+activation	Upload activation artifact	2026-10-28T01:14:58.8638236Z Finished uploading artifact content to blob storage!
+activation	Upload activation artifact	2026-10-28T01:14:58.8643948Z SHA256 digest of uploaded artifact is 276824cd18b71bd66bab12b9c561acfb10e09a38aed4b90216e797892ff1394f
+activation	Upload activation artifact	2026-10-28T01:14:58.8647731Z Finalizing artifact upload
+activation	Upload activation artifact	2026-10-28T01:14:59.3022594Z Artifact activation successfully finalized. Artifact ID 12783906921
+activation	Upload activation artifact	2026-10-28T01:14:59.3026496Z Artifact activation has been successfully uploaded! Final size is 181 bytes. Artifact ID is 12783906921
+activation	Upload activation artifact	2026-10-28T01:14:59.3033883Z Artifact download URL: https://github.com/andreleocl/duckdb-triage-agent/actions/runs/40613825202/artifacts/12783906921
+activation	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-10-28T01:14:59.3254172Z Post job cleanup.
+activation	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:59.4340019Z [command]/usr/bin/git version
+activation	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:59.4386531Z git version 2.43.0
+activation	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:59.4441869Z Temporarily overriding HOME='/home/runner/work/_temp/2cc4d3f0-300b-428f-95ce-d1ade9532b60' before making global git config changes
+activation	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:59.4446089Z Adding repository directory to the temporary git global config as a safe directory
+activation	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:59.4468742Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/duckdb-triage-agent/duckdb-triage-agent
+activation	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:59.4513638Z Removing SSH command configuration
+activation	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:59.4524252Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+activation	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:59.4563612Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+activation	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:59.4752397Z Removing HTTP extra header
+activation	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:59.4757627Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+activation	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:59.4796671Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+activation	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:59.4978782Z Removing includeIf entries pointing to credentials config files
+activation	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:59.4987179Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+activation	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T01:14:59.5121270Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+activation	Post Setup Scripts	﻿2026-10-28T01:14:59.5497778Z Post job cleanup.
+activation	Post Setup Scripts	2026-10-28T01:14:59.6354758Z [info] [otlp] sending conclusion span "gh-aw.activation.conclusion" to configured endpoints
+activation	Post Setup Scripts	2026-10-28T01:14:59.6415419Z [info] [otlp] conclusion span export attempted
+activation	Post Setup Scripts	2026-10-28T01:14:59.6421091Z Cleaning up /tmp/gh-aw...
+activation	Post Setup Scripts	2026-10-28T01:14:59.6556250Z Cleaned up /tmp/gh-aw
+activation	Post Setup Scripts	2026-10-28T01:14:59.6709039Z No /tmp/awf-*-chroot-home directories found
+activation	Post Setup Scripts	2026-10-28T01:14:59.6815178Z No /tmp/awf-chroot-* directories found
+activation	Complete job	﻿2026-10-28T01:14:59.6925906Z Evaluate and set job outputs
+activation	Complete job	2026-10-28T01:14:59.6944219Z Set output 'lockdown_check_failed'
+activation	Complete job	2026-10-28T01:14:59.6948362Z Set output 'oauth_token_check_failed'
+activation	Complete job	2026-10-28T01:14:59.6949703Z Set output 'setup-parent-span-id'
+activation	Complete job	2026-10-28T01:14:59.6950802Z Set output 'setup-span-id'
+activation	Complete job	2026-10-28T01:14:59.6964437Z Set output 'setup-trace-id'
+activation	Complete job	2026-10-28T01:14:59.6965336Z Set output 'stale_lock_file_failed'
+activation	Complete job	2026-10-28T01:14:59.6966731Z Cleaning up orphan processes

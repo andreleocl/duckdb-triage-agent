@@ -1,0 +1,15 @@
+{
+  "format_version": 1,
+  "frozen_on": "2026-10-27",
+  "status": "pre-agent evaluation freeze",
+  "historical_cases": 25,
+  "adversarial_cases": 3,
+  "agent_runs": 0,
+  "sha256": {
+    "inputs.jsonl": "c157fdd26f9587d568a6da822984f5172991fada3e56ba5f4f1500b422b1dac0",
+    "expected.jsonl": "2cc6bd214a46a1fdf057d4ee25a8c900d65108ba7e4d9b636f12f46fe425ed33",
+    "provenance.json": "abc621c5905606dc59bee000c1d84728f7b9f618101568ce11e33f53ee073d9a",
+    "thresholds.json": "15e6941a11f94a04d537e080a7e3ad5ba66f80735a809d5e3dc0b25148ac537a",
+    "RUBRIC.md": "ce27516750815fcf42c6df692f01f939aaeea89cac4a71e9754950fb4e9161c1"
+  }
+}

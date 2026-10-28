@@ -1,0 +1,138 @@
+{
+  "results": [
+    {
+      "case_id": "h18",
+      "run_id": 40617922123,
+      "sandbox_issue": 33,
+      "configuration_sha": "5423c54256baacd824948127614b05eec4a7b563",
+      "conclusion": "failure",
+      "expected_label": null,
+      "receipt": {
+        "status": "error",
+        "error_type": "ValueError",
+        "api_operations": [
+          {
+            "method": "GET",
+            "endpoint": "",
+            "status": "succeeded",
+            "attempt": 1
+          }
+        ]
+      },
+      "decision_matches": false,
+      "observed_labels": [],
+      "observed_comments": [],
+      "tool_calls": {
+        "submit_triage": 1
+      },
+      "submissions": [
+        {
+          "comment": "Could you share a small, shareable Parquet sample that still triggers the error when read with your `read_parquet('s3://...')` pattern, together with the complete error message and stack trace produced by DuckDB and the exact `read_parquet` call you used? A short example dataset that reproduces the failure will let us identify which column/file causes the VARCHAR->NULL cast error.",
+          "label": "needs reproducible example",
+          "rationale": "The report shows the failing query and that the original data is private, but without a small, shareable Parquet file (or an equivalent generated sample) and the full error/stack trace the failure cannot be reproduced or diagnosed; the missing sample is the essential blocker."
+        }
+      ],
+      "updated_scope_rule_delivered": true,
+      "metadata_warnings": [],
+      "cost": {
+        "agent": {
+          "requests": 3,
+          "input_tokens": 28983,
+          "cached_tokens": 18944,
+          "output_tokens": 734,
+          "models": [
+            "gpt-5-mini-2025-08-07"
+          ],
+          "estimated_usd": 0.00445135
+        },
+        "detection": {
+          "requests": 3,
+          "input_tokens": 62065,
+          "cached_tokens": 40320,
+          "output_tokens": 470,
+          "models": [
+            "gpt-5-mini-2025-08-07"
+          ],
+          "estimated_usd": 0.00738425
+        }
+      },
+      "estimated_total_usd": 0.0118356,
+      "scope_reasoning_matches_expected": false,
+      "human_review": "pending",
+      "assessment": "Still requests data for the diagnostic enhancement. Publisher rejected > in VARCHAR->NULL; offline no-network reproduction confirms guard failure. No public action. This is an error, not successful no-action."
+    },
+    {
+      "case_id": "h20",
+      "run_id": 40618365234,
+      "sandbox_issue": 34,
+      "configuration_sha": "5423c54256baacd824948127614b05eec4a7b563",
+      "conclusion": "success",
+      "expected_label": null,
+      "receipt": {
+        "status": "no_action",
+        "proposal": {
+          "label": null,
+          "comment": null,
+          "rationale": "The report describes an in-scope binder validation failure, includes concrete C++ snippets, the failing SQL, and a clear proposed code change and file path. No missing reproducer data or environment details were identified that would block following the described failure."
+        },
+        "actions": [],
+        "run_id": "40618365234",
+        "configuration_sha": "5423c54256baacd824948127614b05eec4a7b563",
+        "input_sha256": "2509ebb9c7b72108735a84e6c65b1c5ae69ffc62b71ebf17bbf458913b0afeab",
+        "api_operations": [
+          {
+            "method": "GET",
+            "endpoint": "",
+            "status": "succeeded",
+            "attempt": 1
+          }
+        ]
+      },
+      "decision_matches": true,
+      "observed_labels": [],
+      "observed_comments": [],
+      "tool_calls": {
+        "submit_triage": 1
+      },
+      "submissions": [
+        {
+          "comment": "no_action",
+          "label": "no_action",
+          "rationale": "The report describes an in-scope binder validation failure, includes concrete C++ snippets, the failing SQL, and a clear proposed code change and file path. No missing reproducer data or environment details were identified that would block following the described failure."
+        }
+      ],
+      "updated_scope_rule_delivered": true,
+      "metadata_warnings": [],
+      "cost": {
+        "agent": {
+          "requests": 3,
+          "input_tokens": 29031,
+          "cached_tokens": 19072,
+          "output_tokens": 456,
+          "models": [
+            "gpt-5-mini-2025-08-07"
+          ],
+          "estimated_usd": 0.00387855
+        },
+        "detection": {
+          "requests": 3,
+          "input_tokens": 62247,
+          "cached_tokens": 40576,
+          "output_tokens": 496,
+          "models": [
+            "gpt-5-mini-2025-08-07"
+          ],
+          "estimated_usd": 0.00742415
+        }
+      },
+      "estimated_total_usd": 0.0113027,
+      "scope_reasoning_matches_expected": false,
+      "human_review": "pending",
+      "assessment": "No-action outcome matches, but rationale calls the enhancement an in-scope binder failure. Outcome success does not demonstrate correct scope classification."
+    }
+  ],
+  "estimated_total_usd": 0.0231383,
+  "cost_basis": "Recorded tokens counted once per role; USD per million input .25, cached input .025, output 2. Estimate, not invoice.",
+  "triage_enabled_after": false,
+  "evaluation_policy": "Selective development retests, not replacements for original primary evaluation. No code changes, commits or pushes."
+}

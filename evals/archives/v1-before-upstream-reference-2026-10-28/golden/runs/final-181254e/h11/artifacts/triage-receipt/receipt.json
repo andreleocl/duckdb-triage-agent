@@ -1,0 +1,47 @@
+{
+  "status": "published",
+  "proposal": {
+    "label": "needs more info",
+    "comment": "Could you share how DuckDB was installed on the Windows host (e.g. `pip` wheel, `conda`, or built from source) and paste the output of `import duckdb; print(duckdb.__version__, duckdb.__file__)`? Also please include the complete crash output or Windows Event Viewer error/stack trace shown when the Python process exits after the interrupt.",
+    "rationale": "The report includes a self-contained MRE and environment, but it lacks the DuckDB binary/install provenance and the crash log/stack trace from Windows; those details are essential to reproduce and diagnose a process-level access violation on interrupt."
+  },
+  "actions": [
+    "add_comment",
+    "add_label"
+  ],
+  "run_id": "40497195043",
+  "configuration_sha": "181254ea62280d63fca0d04c370243054e655539",
+  "input_sha256": "865069f10142b45c51b71974eac0b73a079dac4f00e78e983850f420c9adb06f",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "/comments?per_page=100&page=1",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/comments",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/labels",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

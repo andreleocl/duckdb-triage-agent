@@ -1,0 +1,20 @@
+{
+  "status": "no_action",
+  "proposal": {
+    "label": null,
+    "comment": null,
+    "rationale": "The report includes a concrete, self-contained SQL reproducer (CREATE/INSERT/CHECKPOINT), exact DuckDB version, platform, error text and stack trace. No essential reproduction steps, data, or environment details are missing, so no clarification request is needed."
+  },
+  "actions": [],
+  "run_id": "40504122127",
+  "configuration_sha": "181254ea62280d63fca0d04c370243054e655539",
+  "input_sha256": "eb1833af09b1416fcd6a1dd0be825364d79b75b7dc2852761a53279307a7bc42",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

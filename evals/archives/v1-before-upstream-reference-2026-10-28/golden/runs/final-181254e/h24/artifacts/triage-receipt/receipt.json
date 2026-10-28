@@ -1,0 +1,47 @@
+{
+  "status": "published",
+  "proposal": {
+    "label": "needs more info",
+    "comment": "Could you provide details about how you built or obtained `duckdb.dll` and how you compiled/linked your C++ program (compiler, flags or CMake command, and whether you target x86 or x64)? Also please include whether you used a prebuilt DLL or built DuckDB locally, the runtime (MSVC/MinGW) and the full exception stack trace or crash log produced when running the sample code. These environment and build/linking details are needed to reproduce and diagnose the access violation.",
+    "rationale": "Report includes a minimal C++ snippet but lacks essential build/link and runtime details (how `duckdb.dll` was produced/obtained, compiler/runtime, target architecture, and crash stack trace), which are required to reproduce and investigate an access violation on Windows."
+  },
+  "actions": [
+    "add_comment",
+    "add_label"
+  ],
+  "run_id": "40506357991",
+  "configuration_sha": "181254ea62280d63fca0d04c370243054e655539",
+  "input_sha256": "baaab9cfb227a18935ae2554cd1dddae4e626380906c4484a6011fe56de58c4a",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "/comments?per_page=100&page=1",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/comments",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/labels",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

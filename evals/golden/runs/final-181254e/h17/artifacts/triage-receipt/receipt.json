@@ -1,0 +1,47 @@
+{
+  "status": "published",
+  "proposal": {
+    "label": "needs reproducible example",
+    "comment": "Could you share a small, shareable SQL script or sample input that still triggers this failure (for example a minimal SQL file or exported CSV/import steps) together with the complete CLI output shown when the crash occurs, including the exact error message and any stack trace? The report mentions the failure happens during an `INSERT ... SELECT` from a Postgres attachment; please include the exact `INSERT ... SELECT` statement and the DDL for the target table if possible. This will let us reproduce the Floating point exception locally without confidential data.",
+    "rationale": "The report lacks a reproducible example: no minimal SQL/input data, no exact failing statement, and no complete error/stack trace. These artifacts are required to reproduce and triage the crash."
+  },
+  "actions": [
+    "add_comment",
+    "add_label"
+  ],
+  "run_id": "40501537063",
+  "configuration_sha": "181254ea62280d63fca0d04c370243054e655539",
+  "input_sha256": "4fbbd66dc944f1486f8e043c97521bde057c599ead8f75354e6d7493d917c513",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "/comments?per_page=100&page=1",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/comments",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/labels",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

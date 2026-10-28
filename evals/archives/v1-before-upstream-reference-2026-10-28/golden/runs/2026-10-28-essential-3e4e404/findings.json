@@ -1,0 +1,267 @@
+{
+  "configuration_sha": "3e4e40401f90ce969aacbbbe8c215f8bd5fc040a",
+  "results": [
+    {
+      "case_id": "h09",
+      "run_id": 40615688890,
+      "sandbox_issue": 30,
+      "configuration_sha": "3e4e40401f90ce969aacbbbe8c215f8bd5fc040a",
+      "conclusion": "success",
+      "expected_label": null,
+      "receipt": {
+        "status": "no_action",
+        "proposal": {
+          "label": null,
+          "comment": null,
+          "rationale": "Report supplies the SQL DDL/DML, exact DuckDB version (1.5.5), OS architecture (aarch64), client used (terminal vs UI), storage-version output, and error text. There is no concrete missing reproduction step or environment detail that blocks following the failure, so no additional info is required for first-pass completeness triage."
+        },
+        "actions": [],
+        "run_id": "40615688890",
+        "configuration_sha": "3e4e40401f90ce969aacbbbe8c215f8bd5fc040a",
+        "input_sha256": "a35d8da5e1f6d997fb12eb1270988a7e16cfc3d608f2580b42c950eae10134c6",
+        "api_operations": [
+          {
+            "method": "GET",
+            "endpoint": "",
+            "status": "succeeded",
+            "attempt": 1
+          }
+        ]
+      },
+      "decision_matches": true,
+      "observed_labels": [],
+      "observed_comments": [],
+      "tool_calls": {
+        "list_mcp_resources": 1,
+        "list_mcp_resource_templates": 1,
+        "submit_triage": 1
+      },
+      "submission_arguments": [
+        {
+          "comment": "no_action",
+          "label": "no_action",
+          "rationale": "Report supplies the SQL DDL/DML, exact DuckDB version (1.5.5), OS architecture (aarch64), client used (terminal vs UI), storage-version output, and error text. There is no concrete missing reproduction step or environment detail that blocks following the failure, so no additional info is required for first-pass completeness triage."
+        }
+      ],
+      "metadata_warnings": [],
+      "cost": {
+        "agent": {
+          "requests": 4,
+          "input_tokens": 37571,
+          "cached_tokens": 27776,
+          "output_tokens": 448,
+          "models": [
+            "gpt-5-mini-2025-08-07"
+          ],
+          "estimated_usd": 0.00403915
+        },
+        "detection": {
+          "requests": 2,
+          "input_tokens": 37955,
+          "cached_tokens": 26496,
+          "output_tokens": 357,
+          "models": [
+            "gpt-5-mini-2025-08-07"
+          ],
+          "estimated_usd": 0.00424115
+        }
+      },
+      "estimated_total_usd": 0.0082803,
+      "human_review": "pending"
+    },
+    {
+      "case_id": "h11",
+      "run_id": 40615695174,
+      "sandbox_issue": 31,
+      "configuration_sha": "3e4e40401f90ce969aacbbbe8c215f8bd5fc040a",
+      "conclusion": "success",
+      "expected_label": null,
+      "receipt": {
+        "status": "no_action",
+        "proposal": {
+          "label": null,
+          "comment": null,
+          "rationale": "The report includes OS, DuckDB and Python versions, Jupyter/ipykernel details, the spatial extension version, and a self-contained minimal reproducible example that demonstrates interrupting a long-running spatial join. No additional reproduction steps or environment details are required for first-pass completeness triage."
+        },
+        "actions": [],
+        "run_id": "40615695174",
+        "configuration_sha": "3e4e40401f90ce969aacbbbe8c215f8bd5fc040a",
+        "input_sha256": "865069f10142b45c51b71974eac0b73a079dac4f00e78e983850f420c9adb06f",
+        "api_operations": [
+          {
+            "method": "GET",
+            "endpoint": "",
+            "status": "succeeded",
+            "attempt": 1
+          }
+        ]
+      },
+      "decision_matches": true,
+      "observed_labels": [],
+      "observed_comments": [],
+      "tool_calls": {
+        "list_mcp_resources": 1,
+        "list_mcp_resource_templates": 1,
+        "submit_triage": 1
+      },
+      "submission_arguments": [
+        {
+          "comment": "no_action",
+          "label": "no_action",
+          "rationale": "The report includes OS, DuckDB and Python versions, Jupyter/ipykernel details, the spatial extension version, and a self-contained minimal reproducible example that demonstrates interrupting a long-running spatial join. No additional reproduction steps or environment details are required for first-pass completeness triage."
+        }
+      ],
+      "metadata_warnings": [],
+      "cost": {
+        "agent": {
+          "requests": 4,
+          "input_tokens": 39408,
+          "cached_tokens": 29312,
+          "output_tokens": 438,
+          "models": [
+            "gpt-5-mini-2025-08-07"
+          ],
+          "estimated_usd": 0.0041328
+        },
+        "detection": {
+          "requests": 2,
+          "input_tokens": 38960,
+          "cached_tokens": 19328,
+          "output_tokens": 384,
+          "models": [
+            "gpt-5-mini-2025-08-07"
+          ],
+          "estimated_usd": 0.0061592
+        }
+      },
+      "estimated_total_usd": 0.010292,
+      "human_review": "pending"
+    },
+    {
+      "case_id": "h18",
+      "run_id": 40615702866,
+      "sandbox_issue": 32,
+      "configuration_sha": "3e4e40401f90ce969aacbbbe8c215f8bd5fc040a",
+      "conclusion": "success",
+      "expected_label": null,
+      "receipt": {
+        "status": "published",
+        "proposal": {
+          "label": "needs reproducible example",
+          "comment": "Could you provide a small, shareable Parquet sample (or minimal generated files) that still triggers this error when read with your query, together with the complete Python traceback and the exact `read_parquet` call you used? The sample should reproduce the ConversionException so we can identify which column and which file cause the cast failure.",
+          "rationale": "The report describes a cast failure but the underlying input files are private; without a reproducible Parquet sample or generated equivalent and the full traceback, maintainers cannot determine which column or file triggers the ConversionException and cannot reproduce the issue."
+        },
+        "actions": [
+          "add_comment",
+          "add_label"
+        ],
+        "run_id": "40615702866",
+        "configuration_sha": "3e4e40401f90ce969aacbbbe8c215f8bd5fc040a",
+        "input_sha256": "7f6821d84590aa03820546d06f885ed7929efc83a9d64b4a1d3d845722584279",
+        "api_operations": [
+          {
+            "method": "GET",
+            "endpoint": "",
+            "status": "succeeded",
+            "attempt": 1
+          },
+          {
+            "method": "GET",
+            "endpoint": "/comments?per_page=100&page=1",
+            "status": "succeeded",
+            "attempt": 1
+          },
+          {
+            "method": "GET",
+            "endpoint": "",
+            "status": "succeeded",
+            "attempt": 1
+          },
+          {
+            "method": "POST",
+            "endpoint": "/comments",
+            "status": "succeeded",
+            "attempt": 1
+          },
+          {
+            "method": "POST",
+            "endpoint": "/labels",
+            "status": "succeeded",
+            "attempt": 1
+          }
+        ]
+      },
+      "decision_matches": false,
+      "observed_labels": [
+        "needs reproducible example"
+      ],
+      "observed_comments": [
+        {
+          "id": "IC_kwDOVYrnJM8AAAABgPLBDA",
+          "author": {
+            "login": "github-actions"
+          },
+          "authorAssociation": "NONE",
+          "body": "Could you provide a small, shareable Parquet sample (or minimal generated files) that still triggers this error when read with your query, together with the complete Python traceback and the exact `read_parquet` call you used? The sample should reproduce the ConversionException so we can identify which column and which file cause the cast failure.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 7f6821d84590aa03820546d06f885ed7929efc83a9d64b4a1d3d845722584279 needs reproducible example -->",
+          "createdAt": "2026-10-28T01:40:04Z",
+          "includesCreatedEdit": false,
+          "isMinimized": false,
+          "minimizedReason": "",
+          "reactionGroups": [],
+          "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/32#issuecomment-6458360076",
+          "viewerDidAuthor": false
+        }
+      ],
+      "tool_calls": {
+        "list_mcp_resources": 1,
+        "list_mcp_resource_templates": 1,
+        "submit_triage": 1
+      },
+      "submission_arguments": [
+        {
+          "comment": "Could you provide a small, shareable Parquet sample (or minimal generated files) that still triggers this error when read with your query, together with the complete Python traceback and the exact `read_parquet` call you used? The sample should reproduce the ConversionException so we can identify which column and which file cause the cast failure.",
+          "label": "needs reproducible example",
+          "rationale": "The report describes a cast failure but the underlying input files are private; without a reproducible Parquet sample or generated equivalent and the full traceback, maintainers cannot determine which column or file triggers the ConversionException and cannot reproduce the issue."
+        }
+      ],
+      "metadata_warnings": [],
+      "cost": {
+        "agent": {
+          "requests": 6,
+          "input_tokens": 56826,
+          "cached_tokens": 46976,
+          "output_tokens": 716,
+          "models": [
+            "gpt-5-mini-2025-08-07"
+          ],
+          "estimated_usd": 0.0050689
+        },
+        "detection": {
+          "requests": 3,
+          "input_tokens": 61305,
+          "cached_tokens": 39808,
+          "output_tokens": 505,
+          "models": [
+            "gpt-5-mini-2025-08-07"
+          ],
+          "estimated_usd": 0.00737945
+        }
+      },
+      "estimated_total_usd": 0.01244835,
+      "human_review": "pending"
+    }
+  ],
+  "estimated_total_usd": 0.03102065,
+  "cost_basis": "Recorded token usage, each role counted once. USD per million: input .25, cached input .025, output 2. Estimates, not billing invoice.",
+  "triage_enabled_after": false,
+  "cancelled_attempt": {
+    "case_id": "h11",
+    "run_id": 40615695174,
+    "attempt": 1,
+    "jobs": 0,
+    "model_cost_usd": 0,
+    "note": "Cancelled while pending; rerun as attempt 2 after queue slot became available."
+  },
+  "evaluation_policy": "Selective development retests; original 25-case evaluation preserved, not replaced.",
+  "assessment": "h09 and h11 match the frozen no-action expectations. h18 still treats an error-message improvement request as a cast-failure reproduction request and asks for samples, traceback and an already supplied read_parquet call. All are single observations; model reliability is not established."
+}

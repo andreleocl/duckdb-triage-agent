@@ -1,0 +1,39 @@
+{
+  "case_id": "h18",
+  "recorded_date": "2026-10-28",
+  "timezone": "Asia/Singapore",
+  "type": "retrospective_answer_key_correction",
+  "authorization": "Andre authorized this separate correction after reviewing the maintainer screenshot in this chat; drafted by Codex. Not independent double annotation.",
+  "upstream_url": "https://github.com/duckdb/duckdb/issues/22399",
+  "original_expected_label": null,
+  "corrected_expected_label": "needs reproducible example",
+  "reason": "Original annotation treated this solely as a diagnostic enhancement. The reporter supplies no shareable input; the maintainer both applied a reproduction label and personally requested an isolated reproducer. A shareable/generated reproducer is a reasonable request for this case. This is a reviewed annotation judgment, not an automatic rule to copy upstream labels.",
+  "evidence_source": "User-supplied screenshot, preserved as maintainer-evidence.png. Label display is truncated; the user identified it as needs reproducible example. The maintainer comment independently requests a reproducer. No fresh upstream fetch performed.",
+  "screenshot_sha256": "addbbae2321921a3d2276e937ddbd99a55ddbed43bed697ebf566127de3ea83f",
+  "primary_configuration_sha": "181254ea62280d63fca0d04c370243054e655539",
+  "primary_run_id": "40502143512",
+  "primary_actual_status": "completed",
+  "primary_actual_label": "needs reproducible example",
+  "original_match": false,
+  "corrected_match": true,
+  "original_historical_matches": 19,
+  "corrected_historical_matches": 20,
+  "historical_cases": 25,
+  "original_accuracy": 0.76,
+  "corrected_accuracy": 0.8,
+  "full_evaluation_status": "incomplete; no full pass claimed",
+  "unchanged_files_sha256": {
+    "evals/golden/expected.jsonl": "2cc6bd214a46a1fdf057d4ee25a8c900d65108ba7e4d9b636f12f46fe425ed33",
+    "evals/golden/runs/final-181254e/actual.jsonl": "63be7d2e4c6923721371a6d9d7f65596107248c339e4d65bbe2ec53350e7aeca",
+    "evals/golden/runs/final-181254e/h18/artifacts/triage-receipt/receipt.json": "2d813474062b0dff7bb07e5f3d194ddc2e53e510ef5587b23ebebb1c0c8e5450",
+    "evals/golden/manifest.json": "25fd5afd5c67affd977da990ac9153cacf51ef4b3b6df45be2aca239446a7365",
+    "evals/golden/runs/final-181254e/historical-metrics.json": "c2468c2e9fefc884986e5b97325fb45745e7fe0fda05f2d8d54b79ffc57d65ad"
+  },
+  "limitations": [
+    "Post-evaluation correction; disclose both original and revised results.",
+    "No new model run and no substitution of later successful retries into the original cohort.",
+    "Comment quality, prohibited tool calls and publication failures are not excused.",
+    "Agent policy, frozen expectations, scorer, thresholds and original evidence are unchanged.",
+    "No new comment-focus rubric or completed human review supplied by this label-only correction."
+  ]
+}

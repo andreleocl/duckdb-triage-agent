@@ -1,0 +1,115 @@
+{
+  "configuration_commit": "181254ea62280d63fca0d04c370243054e655539",
+  "selection_policy": "One selected attempt per case on this fixed configuration; failures remain results. Further retries must be reported separately.",
+  "cases": {
+    "h01": {
+      "issue": 5,
+      "run_id": 40483011978
+    },
+    "h02": {
+      "issue": 6,
+      "run_id": 40483564714
+    },
+    "h03": {
+      "issue": 7,
+      "run_id": 40481876054,
+      "evidence": "../2026-10-27-h03-retest-40481876054"
+    },
+    "h04": {
+      "issue": 8,
+      "run_id": 40492619388
+    },
+    "h05": {
+      "issue": 9,
+      "run_id": 40493364813
+    },
+    "h06": {
+      "issue": 10,
+      "run_id": 40493956418
+    },
+    "h07": {
+      "issue": 11,
+      "run_id": 40494684898
+    },
+    "h08": {
+      "issue": 12,
+      "run_id": 40495276977
+    },
+    "h09": {
+      "issue": 13,
+      "run_id": 40495957086
+    },
+    "h10": {
+      "issue": 14,
+      "run_id": 40496537762
+    },
+    "h11": {
+      "issue": 15,
+      "run_id": 40497195043
+    },
+    "h12": {
+      "issue": 16,
+      "run_id": 40497909442
+    },
+    "h13": {
+      "issue": 17,
+      "run_id": 40498492670
+    },
+    "h14": {
+      "issue": 18,
+      "run_id": 40499137828
+    },
+    "h15": {
+      "issue": 19,
+      "run_id": 40499984485
+    },
+    "h16": {
+      "issue": 20,
+      "run_id": 40500796696
+    },
+    "h17": {
+      "issue": 21,
+      "run_id": 40501537063
+    },
+    "h18": {
+      "issue": 22,
+      "run_id": 40502143512
+    },
+    "h19": {
+      "issue": 23,
+      "run_id": 40502836154
+    },
+    "h20": {
+      "issue": 24,
+      "run_id": 40503443020
+    },
+    "h21": {
+      "issue": 25,
+      "run_id": 40504122127
+    },
+    "h22": {
+      "issue": 26,
+      "run_id": 40504827233
+    },
+    "h23": {
+      "issue": 27,
+      "run_id": 40505513644
+    },
+    "h24": {
+      "issue": 28,
+      "run_id": 40506357991
+    },
+    "h25": {
+      "issue": 29,
+      "run_id": 40507057098
+    }
+  },
+  "limitations": [
+    "h01-h03 were used during development; h03 selected after observing its result.",
+    "h04-h25 each received one fresh attempt on the fixed configuration; failures were retained without reruns.",
+    "All 25 historical attempts are recorded. The 3 adversarial cases were not run. Independent human transcript/comment reviews remain pending.",
+    "Model alias gpt-5-mini was configured; token logs record resolved model identifiers.",
+    "Workflow rate limiter exempts repository admin despite source ignored-roles being empty; observed in pre_activation logs.",
+    "Resource lookup violations remain recorded even when decisions match."
+  ]
+}

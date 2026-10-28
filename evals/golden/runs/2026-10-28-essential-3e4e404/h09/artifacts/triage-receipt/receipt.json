@@ -1,0 +1,20 @@
+{
+  "status": "no_action",
+  "proposal": {
+    "label": null,
+    "comment": null,
+    "rationale": "Report supplies the SQL DDL/DML, exact DuckDB version (1.5.5), OS architecture (aarch64), client used (terminal vs UI), storage-version output, and error text. There is no concrete missing reproduction step or environment detail that blocks following the failure, so no additional info is required for first-pass completeness triage."
+  },
+  "actions": [],
+  "run_id": "40615688890",
+  "configuration_sha": "3e4e40401f90ce969aacbbbe8c215f8bd5fc040a",
+  "input_sha256": "a35d8da5e1f6d997fb12eb1270988a7e16cfc3d608f2580b42c950eae10134c6",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}
