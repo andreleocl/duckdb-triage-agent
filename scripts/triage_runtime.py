@@ -133,10 +133,17 @@ def proposal_from_output(output):
     if not isinstance(items, list) or len(items) != 1:
         raise ValueError('Exactly one safe-output item is required')
     item = items[0]
-    if (not isinstance(item, dict) or set(item) != {'type', 'proposal'}
-            or item['type'] != 'submit_triage' or not isinstance(item['proposal'], str)):
+    fields = ('label', 'comment', 'rationale')
+    if (not isinstance(item, dict) or set(item) != {'type', *fields}
+            or item['type'] != 'submit_triage'
+            or any(not isinstance(item[field], str) for field in fields)):
         raise ValueError('Unexpected safe-output action or fields')
-    return json.loads(item['proposal'], object_pairs_hook=validator.unique_fields)
+    proposal = {field: item[field] for field in fields}
+    if proposal['label'] == 'no_action' or proposal['comment'] == 'no_action':
+        if proposal['label'] != 'no_action' or proposal['comment'] != 'no_action':
+            raise ValueError('No action requires the exact sentinel pair')
+        proposal.update(label=None, comment=None)
+    return proposal
 
 
 def publish(client, number, snapshot, output, sha):

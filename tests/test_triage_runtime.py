@@ -1,6 +1,7 @@
 """Offline workflow tests: fabricated reports and a mocked GitHub API only."""
 
 import copy
+import hashlib
 import importlib.util
 import json
 import io
@@ -8,6 +9,8 @@ import os
 import tempfile
 from pathlib import Path
 import re
+import shutil
+import subprocess
 import unittest
 from unittest.mock import patch
 
@@ -51,7 +54,10 @@ class WorkflowBehavior(unittest.TestCase):
                              rationale='The input file is missing.')
 
     def output(self, proposal=None):
-        return dict(items=[dict(type='submit_triage', proposal=json.dumps(proposal or self.proposal))])
+        fields = dict(self.proposal if proposal is None else proposal)
+        if fields.get('label') is None and fields.get('comment') is None:
+            fields.update(label='no_action', comment='no_action')
+        return dict(items=[dict(type='submit_triage', **fields)])
 
     def publish(self, output=None):
         return runtime.publish(self.client, 7, self.snapshot, output or self.output(), 'trusted-sha')
@@ -76,7 +82,10 @@ class WorkflowBehavior(unittest.TestCase):
 
     def test_no_action_and_idempotent_publication(self):
         no_action = dict(label=None, comment=None, rationale='No essential gap.')
-        self.assertEqual(self.publish(self.output(no_action))['status'], 'no_action')
+        receipt = self.publish(self.output(no_action))
+        self.assertEqual(receipt['status'], 'no_action')
+        self.assertEqual(receipt['proposal'], no_action)
+        self.assertEqual(receipt['actions'], [])
         self.assertFalse(self.client.writes)
         self.assertEqual(self.publish()['actions'], ['add_comment', 'add_label'])
         self.assertEqual(self.publish()['status'], 'already_triaged')
@@ -108,6 +117,45 @@ class WorkflowBehavior(unittest.TestCase):
         for output in invalid:
             with self.subTest(output=output), self.assertRaises(ValueError):
                 self.publish(output)
+        self.assertFalse(self.client.writes)
+
+    def test_separate_fields_preserve_quotes_backslashes_newlines_and_unicode(self):
+        comment = 'Could you share input triggering "unexpected token"?\nThe example uses `C:\\temp\\sample.csv` and caf\u00e9.'
+        proposal = {**self.proposal, 'comment': comment,
+                    'rationale': 'The report says "parse failed"; sample input is missing.'}
+        output = json.loads(json.dumps(self.output(proposal)), object_pairs_hook=runtime.validator.unique_fields)
+        self.assertEqual(runtime.proposal_from_output(output), proposal)
+        receipt = self.publish(output)
+        self.assertEqual(receipt['proposal'], proposal)
+        self.assertTrue(self.client.history[0]['body'].startswith(comment + '\n\n'))
+        self.assertEqual(receipt['actions'], ['add_comment', 'add_label'])
+
+    def test_separate_fields_reject_legacy_missing_extra_and_wrong_types(self):
+        valid = self.output()['items'][0]
+        invalid = [dict(type='submit_triage', proposal=json.dumps(self.proposal)),
+                   dict(type='submit_triage', proposal='{broken JSON'),
+                   {**valid, 'issue_number': 8}, {**valid, 'repository': 'other/repo'},
+                   {**valid, 'type': 'close_issue'}]
+        for field in ('label', 'comment', 'rationale'):
+            invalid.append({k: v for k, v in valid.items() if k != field})
+            for value in (None, False, 0, [], {}):
+                invalid.append({**valid, field: value})
+        for item in invalid:
+            with self.subTest(item=item), self.assertRaises(ValueError):
+                self.publish(dict(items=[item]))
+        self.assertFalse(self.client.writes)
+
+    def test_no_action_requires_exact_sentinel_pair_and_nonempty_rationale(self):
+        for changes in (dict(label=''), dict(comment=''), dict(label='', comment=''),
+                        dict(label=' ', comment=' '), dict(label='no_action'),
+                        dict(comment='no_action'), dict(label='no_action', comment=''),
+                        dict(label='', comment='no_action'), dict(label='null', comment='null'),
+                        dict(label=' no_action ', comment='no_action'),
+                        dict(label='no_action', comment='no_action '),
+                        dict(label='NO_ACTION', comment='NO_ACTION'),
+                        dict(label='no_action', comment='no_action', rationale=' ')):
+            with self.subTest(changes=changes), self.assertRaises(ValueError):
+                self.publish(self.output({**self.proposal, **changes}))
         self.assertFalse(self.client.writes)
 
     def test_closed_pr_changed_and_wrong_snapshot_fail_without_writes(self):
@@ -236,6 +284,32 @@ class WorkflowBehavior(unittest.TestCase):
                 self.assertEqual(receipt['status'], 'error')
                 self.assertEqual(receipt['api_operations'], [])
 
+    def test_publish_entry_point_blocks_malformed_and_duplicate_json_fields(self):
+        env = dict(GITHUB_REPOSITORY=runtime.REPOSITORY, GITHUB_REF='refs/heads/main',
+                   GITHUB_EVENT_NAME='workflow_dispatch', TRIAGE_ENABLED='true',
+                   GITHUB_SERVER_URL='https://github.com', GH_TOKEN='fake-token',
+                   TRIAGE_AGENT_RESULT='success', GH_AW_DETECTION_CONCLUSION='success',
+                   GITHUB_EVENT_PATH='event.json', GH_AW_AGENT_OUTPUT='output.json',
+                   GITHUB_SHA='trusted-sha', GITHUB_RUN_ID='123')
+        event = json.dumps(dict(inputs=dict(issue_number='7')))
+        bad_outputs = ['{"items":', '{"items": [], "items": []}',
+                       '{"items": [{"type": "submit_triage", "label": "", "label": "bug", '
+                       '"comment": "", "rationale": "No gap."}]}']
+        self.client.operations = []
+        for output in bad_outputs:
+            with self.subTest(output=output), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                with patch.dict(os.environ, env, clear=True), patch.object(runtime, 'ROOT', root), \
+                        patch.object(runtime.sys, 'argv', ['triage_runtime.py', 'publish']), \
+                        patch.object(runtime.sys, 'stderr', io.StringIO()), \
+                        patch.object(runtime, 'GitHub', return_value=self.client), \
+                        patch.object(Path, 'read_text', side_effect=[event, json.dumps(self.snapshot), output]):
+                    self.assertEqual(runtime.main(), 1)
+                receipt = json.loads((root / '.triage/receipt.json').read_text(encoding='utf-8'))
+                self.assertEqual(receipt['status'], 'error')
+                self.assertEqual(receipt['api_operations'], [])
+                self.assertFalse(self.client.writes)
+
     def test_publish_entry_point_records_successful_validated_output(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -273,6 +347,53 @@ class WorkflowBehavior(unittest.TestCase):
 
 
 class CompiledWorkflow(unittest.TestCase):
+    def test_compiled_submission_schema_uses_three_required_strings(self):
+        lock = (ROOT / '.github/workflows/issue-triage.lock.yml').read_text(encoding='utf-8')
+        block = lock.split('GH_AW_TOOLS_META_JSON: |\n', 1)[1].split('          GH_AW_VALIDATION_JSON:', 1)[0]
+        metadata = json.loads(block)
+        tool = next(t for t in metadata['dynamic_tools'] if t['name'] == 'submit_triage')
+        schema = tool['inputSchema']
+        fields = {'label', 'comment', 'rationale'}
+        self.assertEqual(set(schema['properties']), fields)
+        self.assertEqual(set(schema['required']), fields)
+        self.assertIs(schema['additionalProperties'], False)
+        self.assertTrue(all(p['type'] == 'string' for p in schema['properties'].values()))
+
+    def test_pinned_framework_required_fields_accept_sentinel_and_reject_empty_pair(self):
+        node = shutil.which('node')
+        self.assertIsNotNone(node, 'Node.js is required for the pinned framework validation check')
+        lock = (ROOT / '.github/workflows/issue-triage.lock.yml').read_text(encoding='utf-8')
+        metadata = json.loads(lock.split('# gh-aw-metadata: ', 1)[1].splitlines()[0])
+        self.assertEqual(metadata['compiler_version'], 'v0.93.5')
+        block = lock.split('GH_AW_TOOLS_META_JSON: |\n', 1)[1].split('          GH_AW_VALIDATION_JSON:', 1)[0]
+        schema = next(t['inputSchema'] for t in json.loads(block)['dynamic_tools']
+                      if t['name'] == 'submit_triage')
+        fixture = (ROOT / 'tests/fixtures/gh_aw_v0_93_5_required_fields.js').read_text(encoding='utf-8')
+        function = fixture[fixture.index('function validateRequiredFields('):]
+        self.assertEqual(hashlib.sha256(function.encode()).hexdigest(),
+                         'f42da12482b6d67796fe88473984af8f68704fdb936bd9b8befd717d6fddb06b')
+        no_action = dict(label='no_action', comment='no_action', rationale='No essential gap.')
+        request = dict(label='needs more info', comment='Which build produced "parse failed"?',
+                       rationale='The build is missing.')
+        cases = [no_action, request, {**no_action, 'label': '', 'comment': ''},
+                 {**no_action, 'label': ' ', 'comment': '\t'}, {**no_action, 'rationale': ''},
+                 {**no_action, 'label': None}, {k: v for k, v in no_action.items() if k != 'comment'}]
+        script = fixture + """
+const {schema, cases} = JSON.parse(require('node:fs').readFileSync(0, 'utf8'));
+process.stdout.write(JSON.stringify(cases.map(args => validateRequiredFields(args, schema))));
+"""
+        result = subprocess.run([node, '-e', script], input=json.dumps(dict(schema=schema, cases=cases)),
+                                capture_output=True, text=True, timeout=10)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual([sorted(missing) for missing in json.loads(result.stdout)],
+                         [[], [], ['comment', 'label'], ['comment', 'label'], ['rationale'],
+                          ['label'], ['comment']])
+        for args in (no_action, request):
+            proposal = runtime.proposal_from_output(dict(items=[dict(type='submit_triage', **args)]))
+            runtime.validator.validate(proposal, runtime.REPOSITORY, 7)
+        self.assertEqual(runtime.proposal_from_output(dict(items=[dict(type='submit_triage', **no_action)])),
+                         dict(label=None, comment=None, rationale='No essential gap.'))
+
     def test_compiled_capability_boundary(self):
         lock = (ROOT / '.github/workflows/issue-triage.lock.yml').read_text(encoding='utf-8')
         manifest = json.loads(next(line.split(': ', 1)[1] for line in lock.splitlines()

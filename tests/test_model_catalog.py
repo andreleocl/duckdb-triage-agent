@@ -50,7 +50,9 @@ class ModelCatalogue(unittest.TestCase):
         self.assertIn('resource-reading, user-input, goal, delegation or tool-search tools', source)
         self.assertIn('ask the workflow operator', source)
         self.assertIn('Plain-text output does not count as submission', source)
-        self.assertIn('including a null label/comment for no action, then stop', source)
+        self.assertIn('separate `label`, `comment`, and `rationale` string arguments', source)
+        self.assertIn('exact string `no_action` for both `label` and `comment`', source)
+        self.assertIn("skill's null/null proposal", source)
         self.assertIn('call `report_incomplete` once, then stop', source)
         self.assertEqual(source.count('model: gpt-5-mini'), 2)
 

@@ -88,14 +88,22 @@ safe-outputs:
           cp /tmp/gh-aw/model-catalog/detection-config.toml /tmp/gh-aw/detection-codex-home/config.toml
   jobs:
     submit-triage:
-      description: Submit exactly one JSON proposal, including no-action proposals, for trusted validation.
+      description: Submit exactly one triage decision as separate fields for trusted validation.
       runs-on: ubuntu-latest
       permissions:
         contents: read
         issues: write
       inputs:
-        proposal:
-          description: JSON string containing exactly label, comment and rationale
+        label:
+          description: 'needs reproducible example, needs more info, or no_action (requires comment no_action)'
+          required: true
+          type: string
+        comment:
+          description: Public clarification text, or no_action (requires label no_action)
+          required: true
+          type: string
+        rationale:
+          description: Nonempty private justification for the decision
           required: true
           type: string
       steps:
@@ -191,9 +199,15 @@ ask the workflow operator. Follow the skill's execution-error rule for unavailab
 linked context or missing/unreadable input.
 
 Use the provided safeoutputs submission tool directly. Call `submit_triage`
-exactly once with the skill's JSON object serialized in its `proposal` string,
-including a null label/comment for no action, then stop. `submit_triage` is a tool,
-not a resource URI. Do not invent server names or alternate submission routes.
+exactly once with separate `label`, `comment`, and `rationale` string arguments,
+then stop. Do not serialize a JSON object into a `proposal` string. For a request,
+pass the allowed label and plain comment text directly. For no action, pass the
+exact string `no_action` for both `label` and `comment`. Never use empty strings
+or null tool arguments. The trusted publisher converts only that exact sentinel
+pair to the skill's null/null proposal; the sentinel is never published.
+Always include a nonempty `rationale`.
+`submit_triage` is a tool, not a resource URI. Do not invent server names or
+alternate submission routes.
 Plain-text output does not count as submission.
 
 If submission fails, do not retry: call `report_incomplete` once, then stop.
