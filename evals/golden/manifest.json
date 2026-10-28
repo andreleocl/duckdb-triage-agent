@@ -1,8 +1,8 @@
 {
   "format_version": 2,
-  "evaluation_version": "upstream-reference-v2-2026-10-28",
+  "evaluation_version": "upstream-reference-v2-2026-10-28-adversarial-r1",
   "frozen_on": "2026-10-28",
-  "status": "local pre-v2-run freeze; not yet committed",
+  "status": "local adversarial revision frozen before attack runs; not yet committed",
   "historical_cases": 25,
   "adversarial_cases": 3,
   "historical_distribution": {
@@ -10,20 +10,19 @@
     "needs reproducible example": 13,
     "needs more info": 3
   },
-  "agent_runs_for_this_version": 0,
   "prior_development_runs_exist": true,
   "approved_by": "Andre",
   "archive": "../archives/v1-before-upstream-reference-2026-10-28",
   "agent_configuration_unchanged_at_freeze": "a468c9cba8f1d582ff1ef622f470b7443a77bad7",
   "sha256": {
-    "inputs.jsonl": "c157fdd26f9587d568a6da822984f5172991fada3e56ba5f4f1500b422b1dac0",
-    "expected.jsonl": "3b1e1b5180385c5d4337f975a1376daa04526e2719a84ef10fb0954f1bc77f54",
-    "provenance.json": "abc621c5905606dc59bee000c1d84728f7b9f618101568ce11e33f53ee073d9a",
+    "inputs.jsonl": "5f3581f9368a239048aceee71ba596981f3c720ea1c3fa042b87cc08d135f84b",
+    "expected.jsonl": "bb5051db9acef3ec195eb6be6aee7a41d3d8240e7a07db99324a61e1d5627984",
+    "provenance.json": "afaec95c20f896b80da210a7af40d1b298cc125580767e2c3b563601787abcd1",
     "thresholds.json": "15e6941a11f94a04d537e080a7e3ad5ba66f80735a809d5e3dc0b25148ac537a",
-    "RUBRIC.md": "444529db4835e10f6bdcff09733c234b9254ea97fba92d4bf1c976ac9caa71f5",
+    "RUBRIC.md": "cafb5de1ae3291d77386b6a8166b8b4f00ee15e859ff3eb8db8e67b09621e9c4",
     "upstream-reference.jsonl": "12eeced09c2f680498daddc6199e285bb643e97b3a1147d6b90c0b99ed84a7ea",
     "../score.py": "91eeb3dd0497e6ddee57398a4b52b73b9208329deb7a25d373bcf1796cf82a6f",
-    "../test_score.py": "382a2c1a36f0fb47c433eb703442b828d64a4e30eed7e16d0dc17b2f6b65a4ee",
+    "../test_score.py": "9e5a7632184bd628b7849bd6abe4095591f0ce9e840ee36dd3cd002c65087b0a",
     "../upstream-reference/2026-10-28/sources/h01.json": "ede4092608ac555e59a534536ccd06a1f618081c427ceb190baa843589bef033",
     "../upstream-reference/2026-10-28/sources/h02.json": "0af618bac76f97cac5929b2f0fbff25210f5ff3033455072400cf14a52f075fe",
     "../upstream-reference/2026-10-28/sources/h03.json": "2c72c1a7b6f71bc7721b05464ccf084aace73a7b6769b47f842b3316dfc9085d",
@@ -49,5 +48,16 @@
     "../upstream-reference/2026-10-28/sources/h23.json": "14147ec25ebe1e94cda443b4c05568141a18398ac455bf28409fdd2267c23a5b",
     "../upstream-reference/2026-10-28/sources/h24.json": "2c5eb14c6a70a305d1e7997975a791a1cf4b623ba1afb23dc20f7c5a7dfdaafa",
     "../upstream-reference/2026-10-28/sources/h25.json": "a12d398c471761bb755c3114da943c43ee90806ef79fa576b391ffda2ad1b804"
+  },
+  "historical_reference_version": "upstream-reference-v2-2026-10-28",
+  "adversarial_revision": "r1",
+  "adversarial_runs_for_this_revision": 0,
+  "prior_historical_batch": "runs/upstream-reference-v2-2026-10-28/batch-e3311e6",
+  "previous_evaluation_archive": "../archives/v2-before-a02-issue-injection-2026-10-28",
+  "replacement_case": "a02-issue-injection",
+  "retired_case": {
+    "case_id": "a02",
+    "status": "not_executed",
+    "reason": "Unsupported issue_read tool-response delivery in current workflow."
   }
 }
