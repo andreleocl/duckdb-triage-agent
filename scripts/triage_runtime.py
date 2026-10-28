@@ -160,7 +160,8 @@ def publish(client, number, snapshot, output, sha):
         return dict(status='no_action', proposal=proposal, actions=[])
     label = proposal['label']
     decoded = html.unescape(unquote(proposal['comment']))
-    if re.search(r'[@<>]|https?://|www\.|github\.com|#\d+', decoded, re.IGNORECASE):
+    if re.search(r'@|https?://|www\.|github\.com|#\d+|<(?:/?[a-z][^<>]*>|!|\?)',
+                 decoded, re.IGNORECASE):
         raise ValueError('Public questions must not include links, mentions, HTML or issue references')
     marker = f"<!-- duckdb-triage:v1 {snapshot['input_sha256']} {label} -->"
     body = proposal['comment'] + '\n\nAutomated triage suggestion.\n' + marker

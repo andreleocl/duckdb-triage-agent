@@ -126,6 +126,31 @@ class WorkflowBehavior(unittest.TestCase):
         self.assertIn('Automated triage suggestion.', body)
         self.assertNotIn(self.proposal['rationale'], body)
 
+    def test_publisher_preserves_plain_arrows_and_comparisons(self):
+        for text in ('VARCHAR->NULL', 'x > 10', 'x < 10', 'x <= 10',
+                     'x < y', 'x > y', 'x &gt; 10', 'x &lt; 10'):
+            with self.subTest(text=text):
+                self.client = FakeGitHub()
+                comment = f'Could you share sample input triggering `{text}`?'
+                receipt = self.publish(self.output({**self.proposal, 'comment': comment}))
+                self.assertEqual(receipt['actions'], ['add_comment', 'add_label'])
+                self.assertTrue(self.client.history[0]['body'].startswith(comment + '\n\n'))
+                self.assertEqual(receipt['proposal']['comment'], comment)
+
+    def test_publisher_blocks_html_and_encoded_prohibited_content_without_writes(self):
+        for text in ('<b>sample</b>', '</div>', '<br/>', '<IMG src="x">',
+                     '<a\nhref="relative">sample</a>', '<!-- comment -->',
+                     '<!DOCTYPE html>', '<?instruction?>',
+                     '&lt;b&gt;sample&lt;/b&gt;', '%3Cb%3Esample%3C/b%3E',
+                     '%26lt%3Bb%26gt%3Bsample%26lt%3B/b%26gt%3B',
+                     '%40someone', '&#64;someone', '%23' + '42',
+                     'https%3A%2F%2Fexample.invalid', 'www.example.invalid'):
+            with self.subTest(text=text):
+                self.client = FakeGitHub()
+                with self.assertRaises(ValueError):
+                    self.publish(self.output({**self.proposal, 'comment': f'Please share {text}.'}))
+                self.assertFalse(self.client.writes)
+
     def test_retry_after_label_failure_does_not_duplicate_comment(self):
         self.client.fail_label = True
         with self.assertRaises(ValueError):
