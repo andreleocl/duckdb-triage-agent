@@ -68,6 +68,33 @@ class WorkflowBehavior(unittest.TestCase):
         self.assertIn('name: duckdb-triage', self.skill)
         self.assertFalse(self.client.writes)
 
+    def test_practice_preparation_preserves_report_and_current_skill_without_answers(self):
+        # Input-delivery regression only; no model judgment is evaluated here.
+        cases = json.loads((ROOT / 'tests/fixtures/essential_information_practice.json').read_text(encoding='utf-8'))
+        # Fixture coverage only: these are authored expectations, not model results.
+        expected_labels = {
+            'practice-ui-complete': None,
+            'practice-notebook-complete': None,
+            'practice-input-missing': 'needs reproducible example',
+            'practice-version-conflict': 'needs more info',
+            'practice-ui-environment-missing': 'needs more info',
+        }
+        self.assertEqual(len(cases), len(expected_labels))
+        self.assertEqual({case['id']: case['expected']['label'] for case in cases}, expected_labels)
+        skill = runtime.SKILL.read_text(encoding='utf-8')
+        for case in cases:
+            with self.subTest(case=case['id']):
+                client = FakeGitHub()
+                client.issue.update(case['issue'])
+                client.issue['expected'] = case['expected']
+                snapshot, delivered_skill = runtime.prepare(client, 7, 'practice-sha')
+                self.assertEqual(snapshot['issue'], case['issue'])
+                self.assertEqual(snapshot['input_sha256'], runtime.fingerprint(case['issue']))
+                self.assertEqual(delivered_skill, skill)
+                self.assertEqual(snapshot['skill_sha256'], hashlib.sha256(skill.encode()).hexdigest())
+                self.assertNotIn(case['expected']['reason'], json.dumps(snapshot) + delivered_skill)
+                self.assertFalse(client.writes)
+
     def test_target_disabled_wrong_repo_event_branch_host_or_number(self):
         env = dict(GITHUB_REPOSITORY=runtime.REPOSITORY, GITHUB_REF='refs/heads/main',
                    GITHUB_EVENT_NAME='workflow_dispatch', TRIAGE_ENABLED='true', GITHUB_SERVER_URL='https://github.com')

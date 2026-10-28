@@ -39,6 +39,22 @@ complete reproducer either. A short self-contained SQL statement can be enough.
 Do not treat private data or difficulty reducing a report as automatic grounds
 for another request. Assess what is actually missing, respecting prior attempts.
 
+## Essential-information decision rule
+
+Before requesting a detail, identify the specific step or environment choice
+that cannot be followed from the supplied report, and explain in the private
+rationale how the missing detail blocks it. A detail that might help diagnose
+the cause is not automatically essential for first-pass completeness triage.
+If no concrete blocker is established, choose no action.
+
+Use the setup, commands, generated data, error text and environment stated
+anywhere in the report. Do not request confirmation of an already supplied
+version, command or database unless a relevant contradiction needs resolving.
+Extra logs, browser details or frontend versions require an established blocker;
+a UI-specific error alone does not establish one. Apply the same standard to
+notebooks and other clients. Complete code does not excuse genuinely missing,
+unusable or contradictory environment details needed to select the failing setup.
+
 ## Choose the action
 
 - `needs reproducible example`: a specific missing input, schema, state or step
@@ -102,5 +118,14 @@ anything, evaluate semantic correctness, or enforce runtime permissions.
 - A report gives complete code and environment details for a sort-order mismatch:
   return no action. Do not demand additional fields merely because the template
   contains them.
+- A UI report supplies launch steps, generated data, a failing query, error text
+  and environment, with no unresolved dependency: no action. Extra console logs
+  or frontend details might aid diagnosis but are not established blockers.
+- A notebook report supplies imports, connection setup, generated data, all cells
+  and environment: no action when the failure can be followed from those cells;
+  do not require a separate script merely for convenience.
+- A connection report gives conflicting client versions and says the failure
+  occurs only on one version without identifying which: ask which version failed;
+  choose the information label, not a request for more reproduction data.
 - A request for a new output-format option: return no action; feature assessment
   is outside this procedure.

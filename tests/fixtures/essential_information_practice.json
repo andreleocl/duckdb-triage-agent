@@ -1,0 +1,57 @@
+[
+  {
+    "id": "practice-ui-complete",
+    "issue": {
+      "title": "UI displays an incorrect aggregate",
+      "body": "On Ubuntu 24.04, DuckDB 1.4.3, launch duckdb -ui demo.db. In the UI run CREATE TABLE readings AS SELECT 7 AS n UNION ALL SELECT 9; then SELECT sum(n) FROM readings;. The UI displays 7 instead of 16; the terminal returns 16. These are all steps and all data. No other setup is involved."
+    },
+    "expected": {
+      "label": null,
+      "reason": "Setup, generated data, query, environment and observed mismatch are supplied; no concrete blocker warrants extra logs or version confirmation."
+    }
+  },
+  {
+    "id": "practice-notebook-complete",
+    "issue": {
+      "title": "Notebook query result differs from expected value",
+      "body": "Windows 11, Python 3.12, DuckDB Python package 1.4.3 in JupyterLab 4.4. Restart the kernel. Cell 1: import duckdb; con = duckdb.connect(). Cell 2: con.execute(\"CREATE TABLE samples AS SELECT 2 AS x UNION ALL SELECT 8\"). Cell 3: print(con.execute(\"SELECT sum(x) FROM samples\").fetchall()). Observed [(8,)], expected [(10,)]. No external files or earlier cells."
+    },
+    "expected": {
+      "label": null,
+      "reason": "All cells, generated data and environment are supplied; converting to a standalone script is not an essential dependency."
+    }
+  },
+  {
+    "id": "practice-input-missing",
+    "issue": {
+      "title": "CSV reader rejects my file",
+      "body": "Ubuntu 24.04, DuckDB CLI 1.4.3. SELECT * FROM read_csv_auto('measurements.csv'); fails with Invalid Input Error: CSV Error on Line 2: unterminated quotes. I have not included the file or equivalent generated data."
+    },
+    "expected": {
+      "label": "needs reproducible example",
+      "reason": "The CSV content needed to follow the parsing failure is missing."
+    }
+  },
+  {
+    "id": "practice-version-conflict",
+    "issue": {
+      "title": "Connection setup fails on one client version",
+      "body": "Ubuntu 24.04, Python 3.12. import duckdb; con = duckdb.connect(\":memory:\") raises RuntimeError: connection initialization failed. My header says Python package 1.3.2 but my notes say 1.4.3. I tested both environments and only one failed; I did not record which one produced the error. No files or further code are used."
+    },
+    "expected": {
+      "label": "needs more info",
+      "reason": "The report must resolve which client version selects the failing environment; additional input data is not needed."
+    }
+  },
+  {
+    "id": "practice-ui-environment-missing",
+    "issue": {
+      "title": "Query result panel fails in only one browser",
+      "body": "Ubuntu 24.04, DuckDB 1.4.3. Launch duckdb -ui browser_demo.db. In the UI run SELECT 12 AS value;. In one browser the result panel displays 12; in another it stays blank and displays Error: result rendering failed. I used the same running UI server and query in both browsers. I did not record the browser names or versions or identify which one failed. No tables, files or other steps are needed."
+    },
+    "expected": {
+      "label": "needs more info",
+      "reason": "The report explicitly ties the failure to an unidentified browser environment. Ask which browser and version produced the failure; more SQL or input data is not needed."
+    }
+  }
+]
