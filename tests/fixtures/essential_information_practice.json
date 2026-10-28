@@ -53,5 +53,49 @@
       "label": "needs more info",
       "reason": "The report explicitly ties the failure to an unidentified browser environment. Ask which browser and version produced the failure; more SQL or input data is not needed."
     }
+  },
+  {
+    "id": "practice-diagnostic-enhancement",
+    "issue": {
+      "title": "Include the input filename in conversion errors",
+      "body": "DuckDB CLI 1.4.3 on Ubuntu 24.04. When importing my private CSV files, the error says Conversion Error: Could not convert string to INT32. I expect invalid values to be rejected; I would like the message to include the filename so I can find the bad file. I am requesting better diagnostic text, not a change to which values are accepted. I cannot share the files."
+    },
+    "expected": {
+      "label": null,
+      "reason": "The requested change is richer diagnostic text. The private files illustrate that enhancement; their absence does not justify a reproduction request."
+    }
+  },
+  {
+    "id": "practice-parameter-enhancement",
+    "issue": {
+      "title": "Add a parameter for choosing a result column name",
+      "body": "Python 3.12, DuckDB 1.4.3, Ubuntu 24.04. I would like con.execute(\"SELECT 5 AS $column_name\", {\"column_name\": \"score\"}) to let a parameter choose the result column name. It currently gives a parser error. I have not had this work before; this is a request for a new parameter capability, so callers could choose aliases without constructing SQL text."
+    },
+    "expected": {
+      "label": null,
+      "reason": "The reporter asks for a new parameter capability, not restoration of previously working behavior. The parser error is motivation for the enhancement."
+    }
+  },
+  {
+    "id": "practice-parameter-regression",
+    "issue": {
+      "title": "Parameter binding stopped working after upgrading",
+      "body": "Ubuntu 24.04, Python 3.12. The same application query and parameters succeeded with DuckDB Python 1.3.2 but fail with 1.4.3: Invalid Input Error: Parameter argument/count mismatch. I want the existing query to work again. I have not included the query, parameter mapping or table definitions yet."
+    },
+    "expected": {
+      "label": "needs reproducible example",
+      "reason": "The report claims a regression of existing behavior. The query, parameter mapping and any required table definitions are missing dependencies."
+    }
+  },
+  {
+    "id": "practice-enhancement-and-crash",
+    "issue": {
+      "title": "Show import filenames and investigate a separate process crash",
+      "body": "DuckDB CLI 1.4.3 on Ubuntu 24.04. First, please include filenames in CSV conversion errors. Separately, SELECT * FROM read_csv_auto('events.csv'); terminates the process with Segmentation fault on one input, rather than returning rows or an error. I want that crash fixed too. I have not supplied events.csv or equivalent generated content."
+    },
+    "expected": {
+      "label": "needs reproducible example",
+      "reason": "The diagnostic enhancement is outside scope, but the separate process crash is in scope. A shareable input triggering that crash is missing; request it for the crash, not for the enhancement."
+    }
   }
 ]

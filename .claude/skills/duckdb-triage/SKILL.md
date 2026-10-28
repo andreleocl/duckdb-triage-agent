@@ -23,9 +23,27 @@ If essential linked context is unavailable, report that limitation to the caller
 as an execution error rather than inventing its contents or asking publicly for
 something that may already be provided there.
 
-Determine whether this is a bug report within completeness triage. Feature
-requests and enhancements receive no action. Do not classify components, find
+## Classify scope before completeness
+
+Identify what change the reporter is asking for before looking for missing
+reproduction details. A request for richer diagnostics, new syntax, options or
+capabilities is an enhancement and receives no action. An error message, SQL
+example or private dataset alone does not turn that request into a bug report.
+For example, asking an error to name the affected file is different from asking
+why the operation fails. Do not request data merely to investigate the failure
+used to illustrate a requested improvement.
+
+A report that existing behavior fails, produces incorrect results or regressed
+is within completeness triage. Assess the reported behavior and requested change,
+not keywords such as "support", "improve" or "error message". Do not assume a
+capability was previously supported or that a regression occurred without report
+evidence. If an enhancement request also reports a separate failure of existing
+behavior, assess that failure's essential gaps; do not let the enhancement hide
+it or use the enhancement alone to justify a clarification. Explain the scope
+decision briefly in the private rationale. Do not classify components, find
 duplicates, redirect reporters, diagnose causes, or promise fixes.
+
+## Assess completeness of an in-scope failure
 
 Identify a concrete dependency needed to follow the described failure:
 

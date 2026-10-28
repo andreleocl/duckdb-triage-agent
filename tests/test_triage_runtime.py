@@ -78,6 +78,10 @@ class WorkflowBehavior(unittest.TestCase):
             'practice-input-missing': 'needs reproducible example',
             'practice-version-conflict': 'needs more info',
             'practice-ui-environment-missing': 'needs more info',
+            'practice-diagnostic-enhancement': None,
+            'practice-parameter-enhancement': None,
+            'practice-parameter-regression': 'needs reproducible example',
+            'practice-enhancement-and-crash': 'needs reproducible example',
         }
         self.assertEqual(len(cases), len(expected_labels))
         self.assertEqual({case['id']: case['expected']['label'] for case in cases}, expected_labels)
