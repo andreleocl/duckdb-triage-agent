@@ -1,0 +1,28 @@
+﻿2026-10-30T08:26:25.0702755Z ##[group]Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+2026-10-30T08:26:25.0703886Z with:
+2026-10-30T08:26:25.0704401Z   pattern: safe-outputs-items
+2026-10-30T08:26:25.0705306Z   merge-multiple: true
+2026-10-30T08:26:25.0705860Z   path: /tmp/gh-aw/
+2026-10-30T08:26:25.0706432Z   repository: andreleocl/duckdb-triage-agent
+2026-10-30T08:26:25.0707085Z   run-id: 41026019311
+2026-10-30T08:26:25.0707609Z   skip-decompress: false
+2026-10-30T08:26:25.0708172Z   digest-mismatch: error
+2026-10-30T08:26:25.0708716Z env:
+2026-10-30T08:26:25.0709206Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:26:25.0709853Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:26:25.0711422Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41026019311,github.run_id=41026019311,gh-aw.engine.id=codex
+2026-10-30T08:26:25.0712981Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:26:25.0713628Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:26:25.0718360Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:26:25.0719868Z   GH_AW_JOB_DISPLAY_NAMES: {"activation":"activation","agent":"agent","conclusion":"conclusion","detection":"detection","pre_activation":"pre_activation","submit_triage":"submit_triage"}
+2026-10-30T08:26:25.0721928Z   GH_AW_JOB_RESULTS: {"activation":{"result":"success"},"agent":{"result":"success"},"detection":{"result":"success"},"submit_triage":{"result":"success"}}
+2026-10-30T08:26:25.0723756Z   GH_AW_JOB_TIMING_ELIGIBLE: {"activation":true,"agent":true,"conclusion":true,"detection":true,"pre_activation":true,"submit_triage":true}
+2026-10-30T08:26:25.0725441Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-30T08:26:25.0726226Z   GITHUB_AW_OTEL_TRACE_ID: c034bdfb55c31894de5da4f60fa20909
+2026-10-30T08:26:25.0727038Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 1aca9ea1c8295a17
+2026-10-30T08:26:25.0727762Z   GITHUB_AW_OTEL_JOB_START_MS: 1793348782368
+2026-10-30T08:26:25.0728405Z ##[endgroup]
+2026-10-30T08:26:25.5155677Z Found 8 artifact(s)
+2026-10-30T08:26:25.5163143Z Filtering artifacts by pattern 'safe-outputs-items'
+2026-10-30T08:26:25.5190600Z Total of 0 artifact(s) downloaded
+2026-10-30T08:26:25.5199222Z Download artifact has finished successfully

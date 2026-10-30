@@ -1,0 +1,61 @@
+﻿2026-10-30T08:41:37.0683157Z ##[group]Run mkdir -p /tmp/gh-aw/
+2026-10-30T08:41:37.0683884Z [36;1mmkdir -p /tmp/gh-aw/[0m
+2026-10-30T08:41:37.0684503Z [36;1mfind "/tmp/gh-aw/" -type f -print[0m
+2026-10-30T08:41:37.0685210Z [36;1mif [ -f "/tmp/gh-aw/agent_output.json" ]; then[0m
+2026-10-30T08:41:37.0688251Z [36;1m  echo "GH_AW_AGENT_OUTPUT=/tmp/gh-aw/agent_output.json" >> "$GITHUB_OUTPUT"[0m
+2026-10-30T08:41:37.0689130Z [36;1mfi[0m
+2026-10-30T08:41:37.0697845Z shell: /usr/bin/bash -e {0}
+2026-10-30T08:41:37.0698423Z env:
+2026-10-30T08:41:37.0698886Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:41:37.0699476Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:41:37.0700937Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41027692913,github.run_id=41027692913,gh-aw.engine.id=codex
+2026-10-30T08:41:37.0702393Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:41:37.0702961Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:41:37.0703622Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:41:37.0705032Z   GH_AW_JOB_DISPLAY_NAMES: {"activation":"activation","agent":"agent","conclusion":"conclusion","detection":"detection","pre_activation":"pre_activation","submit_triage":"submit_triage"}
+2026-10-30T08:41:37.0708304Z   GH_AW_JOB_RESULTS: {"activation":{"result":"success"},"agent":{"result":"success"},"detection":{"result":"success"},"submit_triage":{"result":"success"}}
+2026-10-30T08:41:37.0709987Z   GH_AW_JOB_TIMING_ELIGIBLE: {"activation":true,"agent":true,"conclusion":true,"detection":true,"pre_activation":true,"submit_triage":true}
+2026-10-30T08:41:37.0711321Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-30T08:41:37.0711928Z   GITHUB_AW_OTEL_TRACE_ID: 33301e3e9fc086651d49d0a7a00645d0
+2026-10-30T08:41:37.0712663Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: e9a6df150ae4fda4
+2026-10-30T08:41:37.0713307Z   GITHUB_AW_OTEL_JOB_START_MS: 1793349695761
+2026-10-30T08:41:37.0713875Z ##[endgroup]
+2026-10-30T08:41:37.0804663Z /tmp/gh-aw/awf-config.json
+2026-10-30T08:41:37.0818789Z /tmp/gh-aw/agent_output.json
+2026-10-30T08:41:37.0819404Z /tmp/gh-aw/agent/model-resolution.json
+2026-10-30T08:41:37.0820001Z /tmp/gh-aw/agent-stdio.log
+2026-10-30T08:41:37.0820552Z /tmp/gh-aw/sandbox/firewall/audit/squid.conf
+2026-10-30T08:41:37.0821266Z /tmp/gh-aw/sandbox/firewall/audit/awf-resolved-config.json
+2026-10-30T08:41:37.0822055Z /tmp/gh-aw/sandbox/firewall/audit/docker-compose.redacted.yml
+2026-10-30T08:41:37.0822843Z /tmp/gh-aw/sandbox/firewall/audit/policy-manifest.json
+2026-10-30T08:41:37.0823548Z /tmp/gh-aw/sandbox/firewall/audit/image-manifest.json
+2026-10-30T08:41:37.0824282Z /tmp/gh-aw/sandbox/firewall/audit/sensitive-paths.json
+2026-10-30T08:41:37.0824962Z /tmp/gh-aw/sandbox/firewall/awf-reflect.json
+2026-10-30T08:41:37.0825952Z /tmp/gh-aw/sandbox/firewall/logs/cache.log
+2026-10-30T08:41:37.0826588Z /tmp/gh-aw/sandbox/firewall/logs/audit.jsonl
+2026-10-30T08:41:37.0827527Z /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/agent-runtime/started-at-ms
+2026-10-30T08:41:37.0828422Z /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/models.json
+2026-10-30T08:41:37.0829226Z /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+2026-10-30T08:41:37.0830017Z /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/otel.jsonl
+2026-10-30T08:41:37.0830849Z /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-tracker-audit.jsonl
+2026-10-30T08:41:37.0831631Z /tmp/gh-aw/sandbox/firewall/logs/access.log
+2026-10-30T08:41:37.0832222Z /tmp/gh-aw/agent-errors.jsonl
+2026-10-30T08:41:37.0832752Z /tmp/gh-aw/aw-prompts/prompt.txt
+2026-10-30T08:41:37.0833285Z /tmp/gh-aw/aw-prompts/user.txt
+2026-10-30T08:41:37.0833850Z /tmp/gh-aw/aw-prompts/system.txt
+2026-10-30T08:41:37.0834402Z /tmp/gh-aw/agent_execution_exit_code.txt
+2026-10-30T08:41:37.0834980Z /tmp/gh-aw/mcp-logs/tools.json
+2026-10-30T08:41:37.0835706Z /tmp/gh-aw/mcp-logs/mcp-gateway.log
+2026-10-30T08:41:37.0836285Z /tmp/gh-aw/mcp-logs/safeoutputs.log
+2026-10-30T08:41:37.0836888Z /tmp/gh-aw/mcp-logs/observed-url-domains.json
+2026-10-30T08:41:37.0837517Z /tmp/gh-aw/mcp-logs/rpc-messages.jsonl
+2026-10-30T08:41:37.0838310Z /tmp/gh-aw/mcp-logs/configuration.jsonl
+2026-10-30T08:41:37.0838892Z /tmp/gh-aw/mcp-logs/gateway.md
+2026-10-30T08:41:37.0839416Z /tmp/gh-aw/github_rate_limits.jsonl
+2026-10-30T08:41:37.0839973Z /tmp/gh-aw/agent-session.jsonl
+2026-10-30T08:41:37.0840493Z /tmp/gh-aw/safeoutputs.jsonl
+2026-10-30T08:41:37.0841011Z /tmp/gh-aw/agent_execution.json
+2026-10-30T08:41:37.0841550Z /tmp/gh-aw/skill_inventory.json
+2026-10-30T08:41:37.0842077Z /tmp/gh-aw/agent_usage.json
+2026-10-30T08:41:37.0842594Z /tmp/gh-aw/pre-agent-audit.txt
+2026-10-30T08:41:37.0843133Z /tmp/gh-aw/otel.jsonl

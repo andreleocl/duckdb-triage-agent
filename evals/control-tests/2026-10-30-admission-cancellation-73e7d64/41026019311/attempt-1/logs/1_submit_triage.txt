@@ -1,0 +1,362 @@
+﻿2026-10-30T08:26:01.3825783Z Current runner version: '2.338.0'
+2026-10-30T08:26:01.3850805Z ##[group]Runner Image Provisioner
+2026-10-30T08:26:01.3851696Z Hosted Compute Agent
+2026-10-30T08:26:01.3852360Z Version: 20261021.618
+2026-10-30T08:26:01.3852959Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-10-30T08:26:01.3853747Z Build Date: 2026-10-21T00:45:21Z
+2026-10-30T08:26:01.3854466Z Worker ID: {b07f3627-4440-40e4-a20f-0518d4ee1f7c}
+2026-10-30T08:26:01.3855564Z Region: northcentralus
+2026-10-30T08:26:01.3856158Z Cloud: Azure
+2026-10-30T08:26:01.3856696Z ##[endgroup]
+2026-10-30T08:26:01.3858089Z ##[group]Operating System
+2026-10-30T08:26:01.3858714Z Ubuntu
+2026-10-30T08:26:01.3859228Z 24.04.5
+2026-10-30T08:26:01.3859776Z LTS
+2026-10-30T08:26:01.3860294Z ##[endgroup]
+2026-10-30T08:26:01.3860853Z ##[group]Runner Image
+2026-10-30T08:26:01.3861463Z Image: ubuntu-24.04
+2026-10-30T08:26:01.3862018Z Version: 20261025.353.1
+2026-10-30T08:26:01.3863277Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-30T08:26:01.3864764Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
+2026-10-30T08:26:01.3865859Z ##[endgroup]
+2026-10-30T08:26:01.3867021Z ##[group]GITHUB_TOKEN Permissions
+2026-10-30T08:26:01.3869407Z Contents: read
+2026-10-30T08:26:01.3869997Z Issues: write
+2026-10-30T08:26:01.3870522Z Metadata: read
+2026-10-30T08:26:01.3871096Z ##[endgroup]
+2026-10-30T08:26:01.3873126Z Secret source: Actions
+2026-10-30T08:26:01.3874036Z Cache mode: write
+2026-10-30T08:26:01.3874735Z Prepare workflow directory
+2026-10-30T08:26:01.4566832Z Prepare all required actions
+2026-10-30T08:26:01.4641054Z Getting action download info
+2026-10-30T08:26:01.7054790Z Download action repository 'actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333' (SHA:9000827ccba6bdab643e8b6fd33ac0654aef8333)
+2026-10-30T08:26:02.0896536Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-30T08:26:02.1253768Z Download action repository 'actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+2026-10-30T08:26:02.3187350Z Complete job name: submit_triage
+2026-10-30T08:26:02.3859243Z ##[group]Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+2026-10-30T08:26:02.3860621Z with:
+2026-10-30T08:26:02.3861505Z   pattern: {agent,agent-output-fallback}
+2026-10-30T08:26:02.3862303Z   merge-multiple: true
+2026-10-30T08:26:02.3863051Z   path: /home/runner/work/_temp/gh-aw/safe-jobs/
+2026-10-30T08:26:02.3864092Z   repository: andreleocl/duckdb-triage-agent
+2026-10-30T08:26:02.3864768Z   run-id: 41026019311
+2026-10-30T08:26:02.3865673Z   skip-decompress: false
+2026-10-30T08:26:02.3866238Z   digest-mismatch: error
+2026-10-30T08:26:02.3867068Z env:
+2026-10-30T08:26:02.3867606Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:26:02.3868205Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:26:02.3869686Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41026019311,github.run_id=41026019311,gh-aw.engine.id=codex
+2026-10-30T08:26:02.3871185Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:26:02.3871911Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:26:02.3872633Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:26:02.3873221Z   GH_AW_AGENT_AIC: 0.438275
+2026-10-30T08:26:02.3873786Z   GH_AW_AIC: 0.438275
+2026-10-30T08:26:02.3874308Z   GH_AW_AMBIENT_CONTEXT: 9244
+2026-10-30T08:26:02.3875203Z   GH_AW_CALLER_WORKFLOW_ID: andreleocl/duckdb-triage-agent/issue-triage
+2026-10-30T08:26:02.3876034Z   GH_AW_DETECTION_CONCLUSION: success
+2026-10-30T08:26:02.3876653Z   GH_AW_DETECTION_REASON: 
+2026-10-30T08:26:02.3877212Z   GH_AW_ENGINE_ID: codex
+2026-10-30T08:26:02.3877757Z   GH_AW_ENGINE_MODEL: gpt-5-mini
+2026-10-30T08:26:02.3878372Z   GH_AW_RUN_DETECTION: true
+2026-10-30T08:26:02.3879024Z   GH_AW_SAFE_OUTPUT_MESSAGES: {"activationComments":"false"}
+2026-10-30T08:26:02.3880026Z   GH_AW_THREAT_DETECTION_AIC: 0.605885
+2026-10-30T08:26:02.3880658Z   GH_AW_WORKFLOW_ID: issue-triage
+2026-10-30T08:26:02.3881260Z   GH_AW_WORKFLOW_NAME: DuckDB issue triage
+2026-10-30T08:26:02.3882310Z   GH_AW_WORKFLOW_SOURCE_URL: https://github.com/andreleocl/duckdb-triage-agent/blob/main/.github/workflows/issue-triage.md
+2026-10-30T08:26:02.3883396Z ##[endgroup]
+2026-10-30T08:26:02.9237501Z Found 7 artifact(s)
+2026-10-30T08:26:02.9239307Z Filtering artifacts by pattern '{agent,agent-output-fallback}'
+2026-10-30T08:26:02.9254258Z Preparing to download the following artifacts:
+2026-10-30T08:26:02.9256225Z - agent-output-fallback (ID: 12964345029, Size: 2547, Expected Digest: sha256:5a7a86b626e33bc937b5c12e654275bb7fcce6c991a7ea57502d8150140702f0)
+2026-10-30T08:26:02.9258491Z - agent (ID: 12964260396, Size: 75131, Expected Digest: sha256:75fb29f26401540dd27e0ffb891998709c36a699c5f17a089c866ae35d14aa76)
+2026-10-30T08:26:03.1948521Z Redirecting to blob download url: https://productionresultssa7.blob.core.windows.net/actions-results/210c0a2a-960e-4a2c-bc08-615344f1dfa8/workflow-job-run-8227c544-6778-5fa1-a041-1cb98e49de31/artifacts/d4f0bc5a29de06b510f9aa428f1eedba926012b591fef7a518e776a7c9bd1824.zip
+2026-10-30T08:26:03.1954794Z Starting download of artifact to: /home/runner/work/_temp/gh-aw/safe-jobs
+2026-10-30T08:26:03.2023321Z Redirecting to blob download url: https://productionresultssa7.blob.core.windows.net/actions-results/210c0a2a-960e-4a2c-bc08-615344f1dfa8/workflow-job-run-8227c544-6778-5fa1-a041-1cb98e49de31/artifacts/daa0da78a4f899948f184de1c2267d4cff63de5d280692a88333f56508605a86.zip
+2026-10-30T08:26:03.2031694Z Starting download of artifact to: /home/runner/work/_temp/gh-aw/safe-jobs
+2026-10-30T08:26:03.3231289Z (node:2177) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-10-30T08:26:03.3237026Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-30T08:26:03.3355678Z SHA256 digest of downloaded artifact is 5a7a86b626e33bc937b5c12e654275bb7fcce6c991a7ea57502d8150140702f0
+2026-10-30T08:26:03.3358850Z Artifact download completed successfully.
+2026-10-30T08:26:03.3793340Z SHA256 digest of downloaded artifact is 75fb29f26401540dd27e0ffb891998709c36a699c5f17a089c866ae35d14aa76
+2026-10-30T08:26:03.3797850Z Artifact download completed successfully.
+2026-10-30T08:26:03.3800780Z Total of 2 artifact(s) downloaded
+2026-10-30T08:26:03.3803439Z Download artifact has finished successfully
+2026-10-30T08:26:03.4252436Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-30T08:26:03.4254269Z with:
+2026-10-30T08:26:03.4255523Z   persist-credentials: false
+2026-10-30T08:26:03.4257814Z   sparse-checkout: /scripts/triage_runtime.py
+/.claude/skills/duckdb-triage/scripts/validate_output.py
+
+2026-10-30T08:26:03.4260166Z   sparse-checkout-cone-mode: false
+2026-10-30T08:26:03.4261652Z   repository: andreleocl/duckdb-triage-agent
+2026-10-30T08:26:03.4270991Z   token: ***
+2026-10-30T08:26:03.4272152Z   ssh-strict: true
+2026-10-30T08:26:03.4273284Z   ssh-user: git
+2026-10-30T08:26:03.4274359Z   clean: true
+2026-10-30T08:26:03.4275577Z   fetch-depth: 1
+2026-10-30T08:26:03.4276674Z   fetch-tags: false
+2026-10-30T08:26:03.4277885Z   show-progress: true
+2026-10-30T08:26:03.4279059Z   lfs: false
+2026-10-30T08:26:03.4280132Z   submodules: false
+2026-10-30T08:26:03.4281314Z   set-safe-directory: true
+2026-10-30T08:26:03.4282697Z   allow-unsafe-pr-checkout: false
+2026-10-30T08:26:03.4284144Z env:
+2026-10-30T08:26:03.4285456Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:26:03.4286815Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:26:03.4290198Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41026019311,github.run_id=41026019311,gh-aw.engine.id=codex
+2026-10-30T08:26:03.4293698Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:26:03.4295432Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:26:03.4297064Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:26:03.4298341Z   GH_AW_AGENT_AIC: 0.438275
+2026-10-30T08:26:03.4299638Z   GH_AW_AIC: 0.438275
+2026-10-30T08:26:03.4300849Z   GH_AW_AMBIENT_CONTEXT: 9244
+2026-10-30T08:26:03.4303024Z   GH_AW_CALLER_WORKFLOW_ID: andreleocl/duckdb-triage-agent/issue-triage
+2026-10-30T08:26:03.4305029Z   GH_AW_DETECTION_CONCLUSION: success
+2026-10-30T08:26:03.4306595Z   GH_AW_DETECTION_REASON: 
+2026-10-30T08:26:03.4307917Z   GH_AW_ENGINE_ID: codex
+2026-10-30T08:26:03.4309173Z   GH_AW_ENGINE_MODEL: gpt-5-mini
+2026-10-30T08:26:03.4310500Z   GH_AW_RUN_DETECTION: true
+2026-10-30T08:26:03.4311993Z   GH_AW_SAFE_OUTPUT_MESSAGES: {"activationComments":"false"}
+2026-10-30T08:26:03.4313698Z   GH_AW_THREAT_DETECTION_AIC: 0.605885
+2026-10-30T08:26:03.4315273Z   GH_AW_WORKFLOW_ID: issue-triage
+2026-10-30T08:26:03.4316649Z   GH_AW_WORKFLOW_NAME: DuckDB issue triage
+2026-10-30T08:26:03.4319180Z   GH_AW_WORKFLOW_SOURCE_URL: https://github.com/andreleocl/duckdb-triage-agent/blob/main/.github/workflows/issue-triage.md
+2026-10-30T08:26:03.4322071Z   GH_AW_AGENT_OUTPUT: /home/runner/work/_temp/gh-aw/safe-jobs/agent_output.json
+2026-10-30T08:26:03.4323982Z   GH_AW_JOB_CHECK_RUN_ID: 123965406792
+2026-10-30T08:26:03.4325544Z ##[endgroup]
+2026-10-30T08:26:03.5363113Z Syncing repository: andreleocl/duckdb-triage-agent
+2026-10-30T08:26:03.5367952Z ##[group]Getting Git version info
+2026-10-30T08:26:03.5370695Z Working directory is '/home/runner/work/duckdb-triage-agent/duckdb-triage-agent'
+2026-10-30T08:26:03.5374219Z [command]/usr/bin/git version
+2026-10-30T08:26:03.5485278Z git version 2.56.0
+2026-10-30T08:26:03.5513553Z ##[endgroup]
+2026-10-30T08:26:03.5526967Z Temporarily overriding HOME='/home/runner/work/_temp/fe6dc5d6-a765-4627-a23d-4895549dd173' before making global git config changes
+2026-10-30T08:26:03.5530834Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-30T08:26:03.5536097Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/duckdb-triage-agent/duckdb-triage-agent
+2026-10-30T08:26:03.5592662Z Deleting the contents of '/home/runner/work/duckdb-triage-agent/duckdb-triage-agent'
+2026-10-30T08:26:03.5599996Z ##[group]Determining repository object format
+2026-10-30T08:26:03.5602456Z ##[endgroup]
+2026-10-30T08:26:03.5604309Z ##[group]Initializing the repository
+2026-10-30T08:26:03.5608175Z [command]/usr/bin/git init /home/runner/work/duckdb-triage-agent/duckdb-triage-agent
+2026-10-30T08:26:03.5904216Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-30T08:26:03.5908178Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-30T08:26:03.5911061Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-30T08:26:03.5913533Z hint: call:
+2026-10-30T08:26:03.5914898Z hint:
+2026-10-30T08:26:03.5916923Z hint: 	git config --global init.defaultBranch <name>
+2026-10-30T08:26:03.5919135Z hint:
+2026-10-30T08:26:03.5921095Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-30T08:26:03.5924274Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-30T08:26:03.5927050Z hint:
+2026-10-30T08:26:03.5928351Z hint: 	git branch -m <name>
+2026-10-30T08:26:03.5930088Z hint:
+2026-10-30T08:26:03.5932050Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-30T08:26:03.5935935Z Initialized empty Git repository in /home/runner/work/duckdb-triage-agent/duckdb-triage-agent/.git/
+2026-10-30T08:26:03.5942033Z [command]/usr/bin/git remote add origin https://github.com/andreleocl/duckdb-triage-agent
+2026-10-30T08:26:03.5999208Z ##[endgroup]
+2026-10-30T08:26:03.6002064Z ##[group]Disabling automatic garbage collection
+2026-10-30T08:26:03.6003825Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-30T08:26:03.6047663Z ##[endgroup]
+2026-10-30T08:26:03.6049498Z ##[group]Setting up auth
+2026-10-30T08:26:03.6051089Z Removing SSH command configuration
+2026-10-30T08:26:03.6054779Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-30T08:26:03.6097875Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-30T08:26:03.6472342Z Removing HTTP extra header
+2026-10-30T08:26:03.6500153Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-30T08:26:03.6507978Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-30T08:26:03.6697101Z Removing includeIf entries pointing to credentials config files
+2026-10-30T08:26:03.6700962Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-30T08:26:03.6733547Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-30T08:26:03.6930414Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-87a87087-726f-4c4b-a584-0c6c0f99fb7a.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-30T08:26:03.6968506Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/duckdb-triage-agent/duckdb-triage-agent/.git.path /home/runner/work/_temp/git-credentials-87a87087-726f-4c4b-a584-0c6c0f99fb7a.config
+2026-10-30T08:26:03.7002285Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/duckdb-triage-agent/duckdb-triage-agent/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-87a87087-726f-4c4b-a584-0c6c0f99fb7a.config
+2026-10-30T08:26:03.7041819Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-87a87087-726f-4c4b-a584-0c6c0f99fb7a.config
+2026-10-30T08:26:03.7074249Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-87a87087-726f-4c4b-a584-0c6c0f99fb7a.config
+2026-10-30T08:26:03.7117520Z ##[endgroup]
+2026-10-30T08:26:03.7120875Z ##[group]Fetching the repository
+2026-10-30T08:26:03.7125364Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --filter=blob:none --depth=1 origin +73e7d64c4a95c0cc23fd63d725499e4ad2f0fbec:refs/remotes/origin/main
+2026-10-30T08:26:04.1066979Z From https://github.com/andreleocl/duckdb-triage-agent
+2026-10-30T08:26:04.1068664Z  * [new ref]         73e7d64c4a95c0cc23fd63d725499e4ad2f0fbec -> origin/main
+2026-10-30T08:26:04.1075449Z [command]/usr/bin/git branch --list --remote origin/main
+2026-10-30T08:26:04.1105107Z   origin/main
+2026-10-30T08:26:04.1115461Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-10-30T08:26:04.1142956Z 73e7d64c4a95c0cc23fd63d725499e4ad2f0fbec
+2026-10-30T08:26:04.1145478Z ##[endgroup]
+2026-10-30T08:26:04.1146368Z ##[group]Determining the checkout info
+2026-10-30T08:26:04.1147646Z ##[endgroup]
+2026-10-30T08:26:04.1148715Z ##[group]Setting up sparse checkout
+2026-10-30T08:26:04.1151738Z [command]/usr/bin/git config core.sparseCheckout true
+2026-10-30T08:26:04.1191439Z [command]/usr/bin/git rev-parse --git-path info/sparse-checkout
+2026-10-30T08:26:04.1214478Z .git/info/sparse-checkout
+2026-10-30T08:26:04.1220780Z ##[endgroup]
+2026-10-30T08:26:04.1221938Z ##[group]Checking out the ref
+2026-10-30T08:26:04.1226459Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-30T08:26:04.6735182Z Switched to a new branch 'main'
+2026-10-30T08:26:04.6739979Z branch 'main' set up to track 'origin/main'.
+2026-10-30T08:26:04.6748309Z ##[endgroup]
+2026-10-30T08:26:04.6796837Z [command]/usr/bin/git log -1 --format=%H
+2026-10-30T08:26:04.6824726Z 73e7d64c4a95c0cc23fd63d725499e4ad2f0fbec
+2026-10-30T08:26:04.6835297Z ##[group]Removing auth
+2026-10-30T08:26:04.6836336Z Removing SSH command configuration
+2026-10-30T08:26:04.6840671Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-30T08:26:04.6875214Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-30T08:26:04.7115811Z Removing HTTP extra header
+2026-10-30T08:26:04.7120671Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-30T08:26:04.7155465Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-30T08:26:04.7388140Z Removing includeIf entries pointing to credentials config files
+2026-10-30T08:26:04.7392369Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-30T08:26:04.7470573Z includeif.gitdir:/home/runner/work/duckdb-triage-agent/duckdb-triage-agent/.git.path
+2026-10-30T08:26:04.7472030Z includeif.gitdir:/home/runner/work/duckdb-triage-agent/duckdb-triage-agent/.git/worktrees/*.path
+2026-10-30T08:26:04.7473116Z includeif.gitdir:/github/workspace/.git.path
+2026-10-30T08:26:04.7474004Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-30T08:26:04.7477182Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/duckdb-triage-agent/duckdb-triage-agent/.git.path
+2026-10-30T08:26:04.7491967Z /home/runner/work/_temp/git-credentials-87a87087-726f-4c4b-a584-0c6c0f99fb7a.config
+2026-10-30T08:26:04.7502169Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/duckdb-triage-agent/duckdb-triage-agent/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-87a87087\-726f\-4c4b\-a584\-0c6c0f99fb7a\.config
+2026-10-30T08:26:04.7541253Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/duckdb-triage-agent/duckdb-triage-agent/.git/worktrees/*.path
+2026-10-30T08:26:04.7564270Z /home/runner/work/_temp/git-credentials-87a87087-726f-4c4b-a584-0c6c0f99fb7a.config
+2026-10-30T08:26:04.7580387Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/duckdb-triage-agent/duckdb-triage-agent/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-87a87087\-726f\-4c4b\-a584\-0c6c0f99fb7a\.config
+2026-10-30T08:26:04.7607975Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-30T08:26:04.7632882Z /github/runner_temp/git-credentials-87a87087-726f-4c4b-a584-0c6c0f99fb7a.config
+2026-10-30T08:26:04.7641104Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-87a87087\-726f\-4c4b\-a584\-0c6c0f99fb7a\.config
+2026-10-30T08:26:04.7679654Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-30T08:26:04.7702467Z /github/runner_temp/git-credentials-87a87087-726f-4c4b-a584-0c6c0f99fb7a.config
+2026-10-30T08:26:04.7710872Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-87a87087\-726f\-4c4b\-a584\-0c6c0f99fb7a\.config
+2026-10-30T08:26:04.7746804Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-30T08:26:04.7960682Z Removing credentials config '/home/runner/work/_temp/git-credentials-87a87087-726f-4c4b-a584-0c6c0f99fb7a.config'
+2026-10-30T08:26:04.7970806Z ##[endgroup]
+2026-10-30T08:26:04.8148066Z ##[group]Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+2026-10-30T08:26:04.8148585Z with:
+2026-10-30T08:26:04.8149013Z   name: triage-input
+2026-10-30T08:26:04.8149343Z   path: .triage
+2026-10-30T08:26:04.8149716Z   merge-multiple: false
+2026-10-30T08:26:04.8150085Z   repository: andreleocl/duckdb-triage-agent
+2026-10-30T08:26:04.8150615Z   run-id: 41026019311
+2026-10-30T08:26:04.8151022Z   skip-decompress: false
+2026-10-30T08:26:04.8151353Z   digest-mismatch: error
+2026-10-30T08:26:04.8151746Z env:
+2026-10-30T08:26:04.8152057Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:26:04.8152527Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:26:04.8153442Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41026019311,github.run_id=41026019311,gh-aw.engine.id=codex
+2026-10-30T08:26:04.8154300Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:26:04.8154815Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:26:04.8155432Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:26:04.8155799Z   GH_AW_AGENT_AIC: 0.438275
+2026-10-30T08:26:04.8156169Z   GH_AW_AIC: 0.438275
+2026-10-30T08:26:04.8156510Z   GH_AW_AMBIENT_CONTEXT: 9244
+2026-10-30T08:26:04.8156970Z   GH_AW_CALLER_WORKFLOW_ID: andreleocl/duckdb-triage-agent/issue-triage
+2026-10-30T08:26:04.8157530Z   GH_AW_DETECTION_CONCLUSION: success
+2026-10-30T08:26:04.8157900Z   GH_AW_DETECTION_REASON: 
+2026-10-30T08:26:04.8158293Z   GH_AW_ENGINE_ID: codex
+2026-10-30T08:26:04.8158634Z   GH_AW_ENGINE_MODEL: gpt-5-mini
+2026-10-30T08:26:04.8158978Z   GH_AW_RUN_DETECTION: true
+2026-10-30T08:26:04.8159484Z   GH_AW_SAFE_OUTPUT_MESSAGES: {"activationComments":"false"}
+2026-10-30T08:26:04.8159925Z   GH_AW_THREAT_DETECTION_AIC: 0.605885
+2026-10-30T08:26:04.8160367Z   GH_AW_WORKFLOW_ID: issue-triage
+2026-10-30T08:26:04.8160742Z   GH_AW_WORKFLOW_NAME: DuckDB issue triage
+2026-10-30T08:26:04.8161445Z   GH_AW_WORKFLOW_SOURCE_URL: https://github.com/andreleocl/duckdb-triage-agent/blob/main/.github/workflows/issue-triage.md
+2026-10-30T08:26:04.8162243Z   GH_AW_AGENT_OUTPUT: /home/runner/work/_temp/gh-aw/safe-jobs/agent_output.json
+2026-10-30T08:26:04.8162712Z   GH_AW_JOB_CHECK_RUN_ID: 123965406792
+2026-10-30T08:26:04.8163163Z ##[endgroup]
+2026-10-30T08:26:04.9533277Z Downloading single artifact
+2026-10-30T08:26:05.1076494Z Preparing to download the following artifacts:
+2026-10-30T08:26:05.1086202Z - triage-input (ID: 12963417159, Size: 639, Expected Digest: sha256:ab48e6de0cbf49155bf50c999f8306372fabac5b76521fe2f9d8ee072469d463)
+2026-10-30T08:26:05.3903791Z Redirecting to blob download url: https://productionresultssa7.blob.core.windows.net/actions-results/210c0a2a-960e-4a2c-bc08-615344f1dfa8/workflow-job-run-764a5721-dbad-579d-a4fe-2b1e3e06294b/artifacts/c4ba41bf44eb4f6c8f0557b3722626e1fae5696574d58508e780f5d6255967ec.zip
+2026-10-30T08:26:05.3906284Z Starting download of artifact to: /home/runner/work/duckdb-triage-agent/duckdb-triage-agent/.triage
+2026-10-30T08:26:05.5246488Z (node:2412) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-10-30T08:26:05.5248503Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-30T08:26:05.5295564Z SHA256 digest of downloaded artifact is ab48e6de0cbf49155bf50c999f8306372fabac5b76521fe2f9d8ee072469d463
+2026-10-30T08:26:05.5297350Z Artifact download completed successfully.
+2026-10-30T08:26:05.5298191Z Total of 1 artifact(s) downloaded
+2026-10-30T08:26:05.5301405Z Download artifact has finished successfully
+2026-10-30T08:26:05.5426419Z ##[group]Run python scripts/triage_runtime.py publish
+2026-10-30T08:26:05.5427086Z [36;1mpython scripts/triage_runtime.py publish[0m
+2026-10-30T08:26:05.5446646Z shell: /usr/bin/bash -e {0}
+2026-10-30T08:26:05.5447194Z env:
+2026-10-30T08:26:05.5447523Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:26:05.5447973Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:26:05.5448860Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41026019311,github.run_id=41026019311,gh-aw.engine.id=codex
+2026-10-30T08:26:05.5449796Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:26:05.5450203Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:26:05.5450814Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:26:05.5451209Z   GH_AW_AGENT_AIC: 0.438275
+2026-10-30T08:26:05.5451609Z   GH_AW_AIC: 0.438275
+2026-10-30T08:26:05.5451967Z   GH_AW_AMBIENT_CONTEXT: 9244
+2026-10-30T08:26:05.5452549Z   GH_AW_CALLER_WORKFLOW_ID: andreleocl/duckdb-triage-agent/issue-triage
+2026-10-30T08:26:05.5453068Z   GH_AW_DETECTION_CONCLUSION: success
+2026-10-30T08:26:05.5453503Z   GH_AW_DETECTION_REASON: 
+2026-10-30T08:26:05.5453865Z   GH_AW_ENGINE_ID: codex
+2026-10-30T08:26:05.5454250Z   GH_AW_ENGINE_MODEL: gpt-5-mini
+2026-10-30T08:26:05.5454613Z   GH_AW_RUN_DETECTION: true
+2026-10-30T08:26:05.5455310Z   GH_AW_SAFE_OUTPUT_MESSAGES: {"activationComments":"false"}
+2026-10-30T08:26:05.5455824Z   GH_AW_THREAT_DETECTION_AIC: 0.605885
+2026-10-30T08:26:05.5456217Z   GH_AW_WORKFLOW_ID: issue-triage
+2026-10-30T08:26:05.5456615Z   GH_AW_WORKFLOW_NAME: DuckDB issue triage
+2026-10-30T08:26:05.5457314Z   GH_AW_WORKFLOW_SOURCE_URL: https://github.com/andreleocl/duckdb-triage-agent/blob/main/.github/workflows/issue-triage.md
+2026-10-30T08:26:05.5458140Z   GH_AW_AGENT_OUTPUT: /home/runner/work/_temp/gh-aw/safe-jobs/agent_output.json
+2026-10-30T08:26:05.5458644Z   GH_AW_JOB_CHECK_RUN_ID: 123965406792
+2026-10-30T08:26:05.5461199Z   GH_TOKEN: ***
+2026-10-30T08:26:05.5461583Z   TRIAGE_AGENT_RESULT: success
+2026-10-30T08:26:05.5461962Z   TRIAGE_ENABLED: true
+2026-10-30T08:26:05.5462326Z ##[endgroup]
+2026-10-30T08:26:07.8784745Z ##[group]Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+2026-10-30T08:26:07.8785442Z with:
+2026-10-30T08:26:07.8785858Z   if-no-files-found: warn
+2026-10-30T08:26:07.8786241Z   include-hidden-files: true
+2026-10-30T08:26:07.8786693Z   name: triage-receipt
+2026-10-30T08:26:07.8787071Z   path: .triage/receipt.json
+2026-10-30T08:26:07.8787462Z   retention-days: 30
+2026-10-30T08:26:07.8787857Z   compression-level: 6
+2026-10-30T08:26:07.8788275Z   overwrite: false
+2026-10-30T08:26:07.8789097Z   archive: true
+2026-10-30T08:26:07.8789495Z env:
+2026-10-30T08:26:07.8789834Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:26:07.8790312Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:26:07.8791294Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41026019311,github.run_id=41026019311,gh-aw.engine.id=codex
+2026-10-30T08:26:07.8792217Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:26:07.8792791Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:26:07.8793252Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:26:07.8793657Z   GH_AW_AGENT_AIC: 0.438275
+2026-10-30T08:26:07.8794014Z   GH_AW_AIC: 0.438275
+2026-10-30T08:26:07.8794373Z   GH_AW_AMBIENT_CONTEXT: 9244
+2026-10-30T08:26:07.8795002Z   GH_AW_CALLER_WORKFLOW_ID: andreleocl/duckdb-triage-agent/issue-triage
+2026-10-30T08:26:07.8795546Z   GH_AW_DETECTION_CONCLUSION: success
+2026-10-30T08:26:07.8795948Z   GH_AW_DETECTION_REASON: 
+2026-10-30T08:26:07.8796338Z   GH_AW_ENGINE_ID: codex
+2026-10-30T08:26:07.8796717Z   GH_AW_ENGINE_MODEL: gpt-5-mini
+2026-10-30T08:26:07.8797173Z   GH_AW_RUN_DETECTION: true
+2026-10-30T08:26:07.8797574Z   GH_AW_SAFE_OUTPUT_MESSAGES: {"activationComments":"false"}
+2026-10-30T08:26:07.8798098Z   GH_AW_THREAT_DETECTION_AIC: 0.605885
+2026-10-30T08:26:07.8798513Z   GH_AW_WORKFLOW_ID: issue-triage
+2026-10-30T08:26:07.8798958Z   GH_AW_WORKFLOW_NAME: DuckDB issue triage
+2026-10-30T08:26:07.8799676Z   GH_AW_WORKFLOW_SOURCE_URL: https://github.com/andreleocl/duckdb-triage-agent/blob/main/.github/workflows/issue-triage.md
+2026-10-30T08:26:07.8800465Z   GH_AW_AGENT_OUTPUT: /home/runner/work/_temp/gh-aw/safe-jobs/agent_output.json
+2026-10-30T08:26:07.8801007Z   GH_AW_JOB_CHECK_RUN_ID: 123965406792
+2026-10-30T08:26:07.8801381Z ##[endgroup]
+2026-10-30T08:26:08.0194847Z With the provided path, there will be 1 file uploaded
+2026-10-30T08:26:08.0206346Z Artifact name is valid!
+2026-10-30T08:26:08.0216259Z Root directory input is valid!
+2026-10-30T08:26:08.2816637Z Uploading artifact: triage-receipt.zip
+2026-10-30T08:26:08.2853878Z Beginning upload of artifact content to blob storage
+2026-10-30T08:26:08.4353135Z Uploaded bytes 842
+2026-10-30T08:26:08.4699308Z Finished uploading artifact content to blob storage!
+2026-10-30T08:26:08.4700331Z SHA256 digest of uploaded artifact is ee058369962ebcb0dcbb32ffe0d72902d7d8a849b080bcfca7f5c86a8d6fb08c
+2026-10-30T08:26:08.4701223Z Finalizing artifact upload
+2026-10-30T08:26:08.9623304Z Artifact triage-receipt successfully finalized. Artifact ID 12963174696
+2026-10-30T08:26:08.9624587Z Artifact triage-receipt has been successfully uploaded! Final size is 842 bytes. Artifact ID is 12963174696
+2026-10-30T08:26:08.9628524Z Artifact download URL: https://github.com/andreleocl/duckdb-triage-agent/actions/runs/41026019311/artifacts/12963174696
+2026-10-30T08:26:08.9815550Z Post job cleanup.
+2026-10-30T08:26:09.0671582Z [command]/usr/bin/git version
+2026-10-30T08:26:09.0713772Z git version 2.56.0
+2026-10-30T08:26:09.0746607Z Temporarily overriding HOME='/home/runner/work/_temp/2232acf1-8c03-474c-9988-4026ca102787' before making global git config changes
+2026-10-30T08:26:09.0748339Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-30T08:26:09.0753002Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/duckdb-triage-agent/duckdb-triage-agent
+2026-10-30T08:26:09.0786022Z Removing SSH command configuration
+2026-10-30T08:26:09.0792409Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-30T08:26:09.0826924Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-30T08:26:09.1058694Z Removing HTTP extra header
+2026-10-30T08:26:09.1064684Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-30T08:26:09.1096961Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-30T08:26:09.1336919Z Removing includeIf entries pointing to credentials config files
+2026-10-30T08:26:09.1344454Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-30T08:26:09.1379637Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-30T08:26:09.1762672Z Cleaning up orphan processes

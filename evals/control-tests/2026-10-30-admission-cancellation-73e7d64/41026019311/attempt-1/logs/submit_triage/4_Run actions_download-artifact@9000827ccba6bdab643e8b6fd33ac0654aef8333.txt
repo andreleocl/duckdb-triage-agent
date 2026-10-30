@@ -1,0 +1,44 @@
+﻿2026-10-30T08:26:04.8148053Z ##[group]Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+2026-10-30T08:26:04.8148581Z with:
+2026-10-30T08:26:04.8149009Z   name: triage-input
+2026-10-30T08:26:04.8149340Z   path: .triage
+2026-10-30T08:26:04.8149713Z   merge-multiple: false
+2026-10-30T08:26:04.8150081Z   repository: andreleocl/duckdb-triage-agent
+2026-10-30T08:26:04.8150612Z   run-id: 41026019311
+2026-10-30T08:26:04.8151019Z   skip-decompress: false
+2026-10-30T08:26:04.8151350Z   digest-mismatch: error
+2026-10-30T08:26:04.8151707Z env:
+2026-10-30T08:26:04.8152053Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:26:04.8152520Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:26:04.8153437Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41026019311,github.run_id=41026019311,gh-aw.engine.id=codex
+2026-10-30T08:26:04.8154297Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:26:04.8154739Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:26:04.8155426Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:26:04.8155795Z   GH_AW_AGENT_AIC: 0.438275
+2026-10-30T08:26:04.8156166Z   GH_AW_AIC: 0.438275
+2026-10-30T08:26:04.8156507Z   GH_AW_AMBIENT_CONTEXT: 9244
+2026-10-30T08:26:04.8156966Z   GH_AW_CALLER_WORKFLOW_ID: andreleocl/duckdb-triage-agent/issue-triage
+2026-10-30T08:26:04.8157526Z   GH_AW_DETECTION_CONCLUSION: success
+2026-10-30T08:26:04.8157896Z   GH_AW_DETECTION_REASON: 
+2026-10-30T08:26:04.8158289Z   GH_AW_ENGINE_ID: codex
+2026-10-30T08:26:04.8158631Z   GH_AW_ENGINE_MODEL: gpt-5-mini
+2026-10-30T08:26:04.8158975Z   GH_AW_RUN_DETECTION: true
+2026-10-30T08:26:04.8159481Z   GH_AW_SAFE_OUTPUT_MESSAGES: {"activationComments":"false"}
+2026-10-30T08:26:04.8159922Z   GH_AW_THREAT_DETECTION_AIC: 0.605885
+2026-10-30T08:26:04.8160364Z   GH_AW_WORKFLOW_ID: issue-triage
+2026-10-30T08:26:04.8160739Z   GH_AW_WORKFLOW_NAME: DuckDB issue triage
+2026-10-30T08:26:04.8161436Z   GH_AW_WORKFLOW_SOURCE_URL: https://github.com/andreleocl/duckdb-triage-agent/blob/main/.github/workflows/issue-triage.md
+2026-10-30T08:26:04.8162239Z   GH_AW_AGENT_OUTPUT: /home/runner/work/_temp/gh-aw/safe-jobs/agent_output.json
+2026-10-30T08:26:04.8162709Z   GH_AW_JOB_CHECK_RUN_ID: 123965406792
+2026-10-30T08:26:04.8163159Z ##[endgroup]
+2026-10-30T08:26:04.9533226Z Downloading single artifact
+2026-10-30T08:26:05.1076456Z Preparing to download the following artifacts:
+2026-10-30T08:26:05.1086192Z - triage-input (ID: 12963417159, Size: 639, Expected Digest: sha256:ab48e6de0cbf49155bf50c999f8306372fabac5b76521fe2f9d8ee072469d463)
+2026-10-30T08:26:05.3903731Z Redirecting to blob download url: https://productionresultssa7.blob.core.windows.net/actions-results/210c0a2a-960e-4a2c-bc08-615344f1dfa8/workflow-job-run-764a5721-dbad-579d-a4fe-2b1e3e06294b/artifacts/c4ba41bf44eb4f6c8f0557b3722626e1fae5696574d58508e780f5d6255967ec.zip
+2026-10-30T08:26:05.3906274Z Starting download of artifact to: /home/runner/work/duckdb-triage-agent/duckdb-triage-agent/.triage
+2026-10-30T08:26:05.5246392Z (node:2412) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-10-30T08:26:05.5248491Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-30T08:26:05.5295527Z SHA256 digest of downloaded artifact is ab48e6de0cbf49155bf50c999f8306372fabac5b76521fe2f9d8ee072469d463
+2026-10-30T08:26:05.5297341Z Artifact download completed successfully.
+2026-10-30T08:26:05.5298182Z Total of 1 artifact(s) downloaded
+2026-10-30T08:26:05.5301367Z Download artifact has finished successfully

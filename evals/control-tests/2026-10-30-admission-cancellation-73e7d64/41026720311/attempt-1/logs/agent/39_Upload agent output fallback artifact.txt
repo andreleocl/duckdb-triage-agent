@@ -1,0 +1,68 @@
+﻿2026-10-30T08:30:48.0339223Z ##[group]Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+2026-10-30T08:30:48.0339474Z with:
+2026-10-30T08:30:48.0339601Z   name: agent-output-fallback
+2026-10-30T08:30:48.0340902Z   path: /tmp/gh-aw/agent_output.json
+/tmp/gh-aw/safeoutputs.jsonl
+/tmp/gh-aw/agent_execution.json
+/tmp/gh-aw/agent_execution_exit_code.txt
+/tmp/gh-aw/agent_usage.jsonl
+/tmp/gh-aw/agent_usage.json
+/tmp/gh-aw/agent/model-endpoint-mismatch.json
+/tmp/gh-aw/sandbox/firewall-audit-logs/api-proxy-logs/token-usage.jsonl
+/tmp/gh-aw/sandbox/firewall-audit-logs/api-proxy-logs/model-routing.jsonl
+/tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+/tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/model-routing.jsonl
+/tmp/gh-aw/sandbox/firewall/audit/api-proxy-logs/token-usage.jsonl
+/tmp/gh-aw/sandbox/firewall/audit/api-proxy-logs/model-routing.jsonl
+/tmp/gh-aw/awf-resolved-config.json
+
+2026-10-30T08:30:48.0342218Z   if-no-files-found: ignore
+2026-10-30T08:30:48.0342360Z   retention-days: 0
+2026-10-30T08:30:48.0342501Z   compression-level: 6
+2026-10-30T08:30:48.0342657Z   overwrite: false
+2026-10-30T08:30:48.0342786Z   include-hidden-files: false
+2026-10-30T08:30:48.0342928Z   archive: true
+2026-10-30T08:30:48.0343042Z env:
+2026-10-30T08:30:48.0343163Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:30:48.0343441Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:30:48.0343877Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41026720311,github.run_id=41026720311,gh-aw.engine.id=codex
+2026-10-30T08:30:48.0344297Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:30:48.0344649Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:30:48.0344822Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:30:48.0344965Z   DEFAULT_BRANCH: main
+2026-10-30T08:30:48.0345096Z   GH_AW_ASSETS_ALLOWED_EXTS: 
+2026-10-30T08:30:48.0345239Z   GH_AW_ASSETS_BRANCH: 
+2026-10-30T08:30:48.0345368Z   GH_AW_ASSETS_MAX_SIZE_KB: 0
+2026-10-30T08:30:48.0345532Z   GH_AW_MCP_LOG_DIR: /tmp/gh-aw/mcp-logs/safeoutputs
+2026-10-30T08:30:48.0345708Z   GH_AW_PR_HEAD_BASE_BRANCH: 
+2026-10-30T08:30:48.0345851Z   GH_AW_PR_HEAD_BASE_PR_NUMBER: 
+2026-10-30T08:30:48.0345995Z   GH_AW_PR_HEAD_BASE_REF: 
+2026-10-30T08:30:48.0346136Z   GH_AW_PR_HEAD_BASE_REPO: 
+2026-10-30T08:30:48.0346280Z   GH_AW_PR_HEAD_BASE_SHA: 
+2026-10-30T08:30:48.0346415Z   GH_AW_PR_HEAD_REPO: 
+2026-10-30T08:30:48.0346543Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-30T08:30:48.0346678Z   GH_AW_TARGET_REPO_SLUG: 
+2026-10-30T08:30:48.0346820Z   GH_AW_WORKFLOW_ID_SANITIZED: issuetriage
+2026-10-30T08:30:48.0347016Z   GITHUB_AW_OTEL_TRACE_ID: ef6fa8a265a86f16ca653656bda8b8d2
+2026-10-30T08:30:48.0347216Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 7215bed34cd97fe6
+2026-10-30T08:30:48.0347398Z   GITHUB_AW_OTEL_JOB_START_MS: 1793348984723
+2026-10-30T08:30:48.0347637Z   AWF_TOKEN_USAGE_LOG: /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+2026-10-30T08:30:48.0347894Z   GH_AW_AGENT_OUTPUT: /tmp/gh-aw/agent_output.json
+2026-10-30T08:30:48.0348068Z   GH_AW_AIC: 0.70353
+2026-10-30T08:30:48.0348195Z   GH_AW_AMBIENT_CONTEXT: 9244
+2026-10-30T08:30:48.0348350Z   GH_AW_PRIMARY_MODEL: gpt-5-mini-2025-08-07
+2026-10-30T08:30:48.0348505Z ##[endgroup]
+2026-10-30T08:30:48.1388247Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-10-30T08:30:48.1392550Z The least common ancestor is /tmp/gh-aw. This will be the root directory of the artifact
+2026-10-30T08:30:48.1393240Z With the provided path, there will be 6 files uploaded
+2026-10-30T08:30:48.1395111Z Artifact name is valid!
+2026-10-30T08:30:48.1395717Z Root directory input is valid!
+2026-10-30T08:30:48.4338969Z Uploading artifact: agent-output-fallback.zip
+2026-10-30T08:30:48.4364142Z Beginning upload of artifact content to blob storage
+2026-10-30T08:30:48.6041006Z Uploaded bytes 2678
+2026-10-30T08:30:48.6407546Z Finished uploading artifact content to blob storage!
+2026-10-30T08:30:48.6408227Z SHA256 digest of uploaded artifact is 6487a1c92d7cdb489f9f0a9092712ca64002c41fb0eb42b1965920888bb9e64b
+2026-10-30T08:30:48.6409251Z Finalizing artifact upload
+2026-10-30T08:30:49.1998979Z Artifact agent-output-fallback successfully finalized. Artifact ID 12963754291
+2026-10-30T08:30:49.1999783Z Artifact agent-output-fallback has been successfully uploaded! Final size is 2678 bytes. Artifact ID is 12963754291
+2026-10-30T08:30:49.2002720Z Artifact download URL: https://github.com/andreleocl/duckdb-triage-agent/actions/runs/41026720311/artifacts/12963754291

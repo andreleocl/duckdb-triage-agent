@@ -1,0 +1,33 @@
+﻿2026-10-30T08:37:40.4169468Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-10-30T08:37:40.4170334Z with:
+2026-10-30T08:37:40.4174463Z   github-token: ***
+2026-10-30T08:37:40.4176512Z   script: const path = require('path');
+const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require(path.join(actionsDir, 'check_membership.cjs'));
+await main();
+
+2026-10-30T08:37:40.4178898Z   debug: false
+2026-10-30T08:37:40.4179372Z   user-agent: actions/github-script
+2026-10-30T08:37:40.4179932Z   result-encoding: json
+2026-10-30T08:37:40.4180400Z   retries: 0
+2026-10-30T08:37:40.4180878Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-10-30T08:37:40.4181509Z env:
+2026-10-30T08:37:40.4181933Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:37:40.4182479Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:37:40.4183920Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41027692913,github.run_id=41027692913,gh-aw.engine.id=codex
+2026-10-30T08:37:40.4187411Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:37:40.4188043Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:37:40.4188963Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:37:40.4189511Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-30T08:37:40.4190104Z   GITHUB_AW_OTEL_TRACE_ID: 33301e3e9fc086651d49d0a7a00645d0
+2026-10-30T08:37:40.4190825Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 083b6a04ef2945a0
+2026-10-30T08:37:40.4191870Z   GITHUB_AW_OTEL_JOB_START_MS: 1793349460355
+2026-10-30T08:37:40.4192512Z   GH_AW_REQUIRED_ROLES: admin,maintainer,write
+2026-10-30T08:37:40.4193121Z ##[endgroup]
+2026-10-30T08:37:40.5779374Z Event workflow_dispatch requires validation
+2026-10-30T08:37:40.5788835Z Checking if user 'andreleocl' has required permissions for andreleocl/duckdb-triage-agent
+2026-10-30T08:37:40.5792477Z Required permissions: admin, maintainer, write
+2026-10-30T08:37:41.0061806Z Repository permission level: admin
+2026-10-30T08:37:41.0066136Z ✅ User has admin access to repository

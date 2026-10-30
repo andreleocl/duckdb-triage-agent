@@ -1,0 +1,143 @@
+﻿2026-10-30T08:41:15.9454664Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-30T08:41:15.9455567Z with:
+2026-10-30T08:41:15.9455962Z   persist-credentials: false
+2026-10-30T08:41:15.9456627Z   sparse-checkout: /scripts/triage_runtime.py
+/.claude/skills/duckdb-triage/scripts/validate_output.py
+
+2026-10-30T08:41:15.9457336Z   sparse-checkout-cone-mode: false
+2026-10-30T08:41:15.9457807Z   repository: andreleocl/duckdb-triage-agent
+2026-10-30T08:41:15.9460543Z   token: ***
+2026-10-30T08:41:15.9460919Z   ssh-strict: true
+2026-10-30T08:41:15.9461289Z   ssh-user: git
+2026-10-30T08:41:15.9461647Z   clean: true
+2026-10-30T08:41:15.9462047Z   fetch-depth: 1
+2026-10-30T08:41:15.9462415Z   fetch-tags: false
+2026-10-30T08:41:15.9536258Z   show-progress: true
+2026-10-30T08:41:15.9537123Z   lfs: false
+2026-10-30T08:41:15.9537893Z   submodules: false
+2026-10-30T08:41:15.9538548Z   set-safe-directory: true
+2026-10-30T08:41:15.9539377Z   allow-unsafe-pr-checkout: false
+2026-10-30T08:41:15.9540104Z env:
+2026-10-30T08:41:15.9540804Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:41:15.9541621Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:41:15.9543427Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41027692913,github.run_id=41027692913,gh-aw.engine.id=codex
+2026-10-30T08:41:15.9545566Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:41:15.9546714Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:41:15.9547545Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:41:15.9548281Z   GH_AW_AGENT_AIC: 0.38702
+2026-10-30T08:41:15.9548970Z   GH_AW_AIC: 0.38702
+2026-10-30T08:41:15.9549647Z   GH_AW_AMBIENT_CONTEXT: 9244
+2026-10-30T08:41:15.9550591Z   GH_AW_CALLER_WORKFLOW_ID: andreleocl/duckdb-triage-agent/issue-triage
+2026-10-30T08:41:15.9551576Z   GH_AW_DETECTION_CONCLUSION: success
+2026-10-30T08:41:15.9552510Z   GH_AW_DETECTION_REASON: 
+2026-10-30T08:41:15.9553219Z   GH_AW_ENGINE_ID: codex
+2026-10-30T08:41:15.9553777Z   GH_AW_ENGINE_MODEL: gpt-5-mini
+2026-10-30T08:41:15.9554238Z   GH_AW_RUN_DETECTION: true
+2026-10-30T08:41:15.9554719Z   GH_AW_SAFE_OUTPUT_MESSAGES: {"activationComments":"false"}
+2026-10-30T08:41:15.9555549Z   GH_AW_THREAT_DETECTION_AIC: 0.735505
+2026-10-30T08:41:15.9556004Z   GH_AW_WORKFLOW_ID: issue-triage
+2026-10-30T08:41:15.9556454Z   GH_AW_WORKFLOW_NAME: DuckDB issue triage
+2026-10-30T08:41:15.9557237Z   GH_AW_WORKFLOW_SOURCE_URL: https://github.com/andreleocl/duckdb-triage-agent/blob/main/.github/workflows/issue-triage.md
+2026-10-30T08:41:15.9558136Z   GH_AW_AGENT_OUTPUT: /home/runner/work/_temp/gh-aw/safe-jobs/agent_output.json
+2026-10-30T08:41:15.9558725Z   GH_AW_JOB_CHECK_RUN_ID: 123970998869
+2026-10-30T08:41:15.9559154Z ##[endgroup]
+2026-10-30T08:41:16.0612195Z Syncing repository: andreleocl/duckdb-triage-agent
+2026-10-30T08:41:16.0615541Z ##[group]Getting Git version info
+2026-10-30T08:41:16.0616812Z Working directory is '/home/runner/work/duckdb-triage-agent/duckdb-triage-agent'
+2026-10-30T08:41:16.0624754Z [command]/usr/bin/git version
+2026-10-30T08:41:16.0796461Z git version 2.56.0
+2026-10-30T08:41:16.0813740Z ##[endgroup]
+2026-10-30T08:41:16.0827375Z Temporarily overriding HOME='/home/runner/work/_temp/52b2a2b6-5142-4002-bd3f-beb8c7106278' before making global git config changes
+2026-10-30T08:41:16.0829294Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-30T08:41:16.0839371Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/duckdb-triage-agent/duckdb-triage-agent
+2026-10-30T08:41:16.0903479Z Deleting the contents of '/home/runner/work/duckdb-triage-agent/duckdb-triage-agent'
+2026-10-30T08:41:16.0907977Z ##[group]Determining repository object format
+2026-10-30T08:41:16.0910106Z ##[endgroup]
+2026-10-30T08:41:16.0911468Z ##[group]Initializing the repository
+2026-10-30T08:41:16.0917502Z [command]/usr/bin/git init /home/runner/work/duckdb-triage-agent/duckdb-triage-agent
+2026-10-30T08:41:16.1048054Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-30T08:41:16.1050855Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-30T08:41:16.1052895Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-30T08:41:16.1054537Z hint: call:
+2026-10-30T08:41:16.1070855Z hint:
+2026-10-30T08:41:16.1081087Z hint: 	git config --global init.defaultBranch <name>
+2026-10-30T08:41:16.1082407Z hint:
+2026-10-30T08:41:16.1083649Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-30T08:41:16.1085481Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-30T08:41:16.1086903Z hint:
+2026-10-30T08:41:16.1087893Z hint: 	git branch -m <name>
+2026-10-30T08:41:16.1088928Z hint:
+2026-10-30T08:41:16.1090169Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-30T08:41:16.1092079Z Initialized empty Git repository in /home/runner/work/duckdb-triage-agent/duckdb-triage-agent/.git/
+2026-10-30T08:41:16.1095923Z [command]/usr/bin/git remote add origin https://github.com/andreleocl/duckdb-triage-agent
+2026-10-30T08:41:16.1159682Z ##[endgroup]
+2026-10-30T08:41:16.1161197Z ##[group]Disabling automatic garbage collection
+2026-10-30T08:41:16.1164245Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-30T08:41:16.1230025Z ##[endgroup]
+2026-10-30T08:41:16.1231420Z ##[group]Setting up auth
+2026-10-30T08:41:16.1232892Z Removing SSH command configuration
+2026-10-30T08:41:16.1238757Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-30T08:41:16.1312534Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-30T08:41:16.1689068Z Removing HTTP extra header
+2026-10-30T08:41:16.1696653Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-30T08:41:16.1745785Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-30T08:41:16.2019406Z Removing includeIf entries pointing to credentials config files
+2026-10-30T08:41:16.2025944Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-30T08:41:16.2079790Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-30T08:41:16.2356075Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-a5c1dcec-9063-4078-9945-898e393c620e.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-30T08:41:16.2409102Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/duckdb-triage-agent/duckdb-triage-agent/.git.path /home/runner/work/_temp/git-credentials-a5c1dcec-9063-4078-9945-898e393c620e.config
+2026-10-30T08:41:16.2457132Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/duckdb-triage-agent/duckdb-triage-agent/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-a5c1dcec-9063-4078-9945-898e393c620e.config
+2026-10-30T08:41:16.2507439Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-a5c1dcec-9063-4078-9945-898e393c620e.config
+2026-10-30T08:41:16.2551285Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-a5c1dcec-9063-4078-9945-898e393c620e.config
+2026-10-30T08:41:16.2592967Z ##[endgroup]
+2026-10-30T08:41:16.2593628Z ##[group]Fetching the repository
+2026-10-30T08:41:16.2600507Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --filter=blob:none --depth=1 origin +73e7d64c4a95c0cc23fd63d725499e4ad2f0fbec:refs/remotes/origin/main
+2026-10-30T08:41:16.6158298Z From https://github.com/andreleocl/duckdb-triage-agent
+2026-10-30T08:41:16.6160623Z  * [new ref]         73e7d64c4a95c0cc23fd63d725499e4ad2f0fbec -> origin/main
+2026-10-30T08:41:16.6172388Z [command]/usr/bin/git branch --list --remote origin/main
+2026-10-30T08:41:16.6212747Z   origin/main
+2026-10-30T08:41:16.6222599Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-10-30T08:41:16.6261363Z 73e7d64c4a95c0cc23fd63d725499e4ad2f0fbec
+2026-10-30T08:41:16.6266014Z ##[endgroup]
+2026-10-30T08:41:16.6267015Z ##[group]Determining the checkout info
+2026-10-30T08:41:16.6273363Z ##[endgroup]
+2026-10-30T08:41:16.6274392Z ##[group]Setting up sparse checkout
+2026-10-30T08:41:16.6275503Z [command]/usr/bin/git config core.sparseCheckout true
+2026-10-30T08:41:16.6324702Z [command]/usr/bin/git rev-parse --git-path info/sparse-checkout
+2026-10-30T08:41:16.6361911Z .git/info/sparse-checkout
+2026-10-30T08:41:16.6370143Z ##[endgroup]
+2026-10-30T08:41:16.6370884Z ##[group]Checking out the ref
+2026-10-30T08:41:16.6375102Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-30T08:41:17.1464060Z Switched to a new branch 'main'
+2026-10-30T08:41:17.1468815Z branch 'main' set up to track 'origin/main'.
+2026-10-30T08:41:17.1478230Z ##[endgroup]
+2026-10-30T08:41:17.1536583Z [command]/usr/bin/git log -1 --format=%H
+2026-10-30T08:41:17.1573960Z 73e7d64c4a95c0cc23fd63d725499e4ad2f0fbec
+2026-10-30T08:41:17.1583672Z ##[group]Removing auth
+2026-10-30T08:41:17.1584364Z Removing SSH command configuration
+2026-10-30T08:41:17.1588326Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-30T08:41:17.1633805Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-30T08:41:17.1908956Z Removing HTTP extra header
+2026-10-30T08:41:17.1913996Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-30T08:41:17.1959932Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-30T08:41:17.2229399Z Removing includeIf entries pointing to credentials config files
+2026-10-30T08:41:17.2236781Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-30T08:41:17.2280911Z includeif.gitdir:/home/runner/work/duckdb-triage-agent/duckdb-triage-agent/.git.path
+2026-10-30T08:41:17.2282576Z includeif.gitdir:/home/runner/work/duckdb-triage-agent/duckdb-triage-agent/.git/worktrees/*.path
+2026-10-30T08:41:17.2283827Z includeif.gitdir:/github/workspace/.git.path
+2026-10-30T08:41:17.2284751Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-30T08:41:17.2291821Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/duckdb-triage-agent/duckdb-triage-agent/.git.path
+2026-10-30T08:41:17.2326698Z /home/runner/work/_temp/git-credentials-a5c1dcec-9063-4078-9945-898e393c620e.config
+2026-10-30T08:41:17.2338409Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/duckdb-triage-agent/duckdb-triage-agent/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-a5c1dcec\-9063\-4078\-9945\-898e393c620e\.config
+2026-10-30T08:41:17.2386525Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/duckdb-triage-agent/duckdb-triage-agent/.git/worktrees/*.path
+2026-10-30T08:41:17.2421236Z /home/runner/work/_temp/git-credentials-a5c1dcec-9063-4078-9945-898e393c620e.config
+2026-10-30T08:41:17.2430416Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/duckdb-triage-agent/duckdb-triage-agent/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-a5c1dcec\-9063\-4078\-9945\-898e393c620e\.config
+2026-10-30T08:41:17.2477137Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-30T08:41:17.2512809Z /github/runner_temp/git-credentials-a5c1dcec-9063-4078-9945-898e393c620e.config
+2026-10-30T08:41:17.2524157Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-a5c1dcec\-9063\-4078\-9945\-898e393c620e\.config
+2026-10-30T08:41:17.2572385Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-30T08:41:17.2607312Z /github/runner_temp/git-credentials-a5c1dcec-9063-4078-9945-898e393c620e.config
+2026-10-30T08:41:17.2617620Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-a5c1dcec\-9063\-4078\-9945\-898e393c620e\.config
+2026-10-30T08:41:17.2663297Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-30T08:41:17.2928052Z Removing credentials config '/home/runner/work/_temp/git-credentials-a5c1dcec-9063-4078-9945-898e393c620e.config'
+2026-10-30T08:41:17.2936424Z ##[endgroup]

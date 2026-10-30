@@ -1,0 +1,60 @@
+﻿2026-10-30T08:43:58.0544388Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-10-30T08:43:58.0544632Z with:
+2026-10-30T08:43:58.0545272Z   script: const path = require('path');
+const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require(path.join(actionsDir, 'parse_token_usage.cjs'));
+await main();
+
+2026-10-30T08:43:58.0547909Z   github-token: ***
+2026-10-30T08:43:58.0548041Z   debug: false
+2026-10-30T08:43:58.0548179Z   user-agent: actions/github-script
+2026-10-30T08:43:58.0548346Z   result-encoding: json
+2026-10-30T08:43:58.0548478Z   retries: 0
+2026-10-30T08:43:58.0548621Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-10-30T08:43:58.0548794Z env:
+2026-10-30T08:43:58.0548922Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:43:58.0549087Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:43:58.0549538Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41027810949,github.run_id=41027810949,gh-aw.engine.id=codex
+2026-10-30T08:43:58.0550005Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:43:58.0550174Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:43:58.0550356Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:43:58.0550507Z   DEFAULT_BRANCH: main
+2026-10-30T08:43:58.0550649Z   GH_AW_ASSETS_ALLOWED_EXTS: 
+2026-10-30T08:43:58.0550798Z   GH_AW_ASSETS_BRANCH: 
+2026-10-30T08:43:58.0550935Z   GH_AW_ASSETS_MAX_SIZE_KB: 0
+2026-10-30T08:43:58.0551109Z   GH_AW_MCP_LOG_DIR: /tmp/gh-aw/mcp-logs/safeoutputs
+2026-10-30T08:43:58.0551291Z   GH_AW_PR_HEAD_BASE_BRANCH: 
+2026-10-30T08:43:58.0551442Z   GH_AW_PR_HEAD_BASE_PR_NUMBER: 
+2026-10-30T08:43:58.0551595Z   GH_AW_PR_HEAD_BASE_REF: 
+2026-10-30T08:43:58.0551740Z   GH_AW_PR_HEAD_BASE_REPO: 
+2026-10-30T08:43:58.0551885Z   GH_AW_PR_HEAD_BASE_SHA: 
+2026-10-30T08:43:58.0552027Z   GH_AW_PR_HEAD_REPO: 
+2026-10-30T08:43:58.0552164Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-30T08:43:58.0552304Z   GH_AW_TARGET_REPO_SLUG: 
+2026-10-30T08:43:58.0552454Z   GH_AW_WORKFLOW_ID_SANITIZED: issuetriage
+2026-10-30T08:43:58.0552658Z   GITHUB_AW_OTEL_TRACE_ID: 9d9e374efe250ce24a37fb96e053d68e
+2026-10-30T08:43:58.0552872Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 3bfe3baf37138159
+2026-10-30T08:43:58.0553059Z   GITHUB_AW_OTEL_JOB_START_MS: 1793349766382
+2026-10-30T08:43:58.0553319Z   AWF_TOKEN_USAGE_LOG: /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+2026-10-30T08:43:58.0553589Z   GH_AW_AGENT_OUTPUT: /tmp/gh-aw/agent_output.json
+2026-10-30T08:43:58.0553766Z   GH_AW_AIC: 0.44434
+2026-10-30T08:43:58.0553901Z   GH_AW_AMBIENT_CONTEXT: 9244
+2026-10-30T08:43:58.0554047Z ##[endgroup]
+2026-10-30T08:43:58.1404811Z Parsing token usage from 1 file(s): /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl (2420 bytes)
+2026-10-30T08:43:58.1496467Z Token Usage
+2026-10-30T08:43:58.1496644Z 
+2026-10-30T08:43:58.1497178Z # | Alias | Input | Output | Cache Read | Cache Write | ΔAI Credits | AI Credits | Duration 
+2026-10-30T08:43:58.1497413Z 
+2026-10-30T08:43:58.1497528Z  1 | gpt50mini | 9,244 | 251 | 0 | 0 | 0.2813 | 0.2813 | 5.9s 
+2026-10-30T08:43:58.1497829Z  2 | gpt50mini | 9,509 | 71 | 9,472 | 0 | 0.038805 | 0.320105 | 5.2s 
+2026-10-30T08:43:58.1498207Z  3 | gpt50mini | 9,581 | 155 | 9,472 | 0 | 0.057405 | 0.37751 | 2.7s 
+2026-10-30T08:43:58.1498576Z  4 | gpt50mini | 9,766 | 179 | 9,472 | 0 | 0.06683 | 0.44434 | 4.1s 
+2026-10-30T08:43:58.1498832Z  Total |  | 38,100 | 656 | 28,416 | 0 |  | 0.44434 | 18.0s 
+2026-10-30T08:43:58.1498959Z 
+2026-10-30T08:43:58.1499455Z Legend: `Alias` shows the model shorthand used in the table. `ΔAI Credits` is the per-request cost, and `AI Credits` is the running total mirrored from AWF fields for reporting.
+2026-10-30T08:43:58.1499887Z Token usage summary appended to step summary
+2026-10-30T08:43:58.1511367Z Primary model: gpt-5-mini-2025-08-07
+2026-10-30T08:43:58.1511734Z AI Credits: 0.44434
+2026-10-30T08:43:58.1512262Z Ambient context: 9244

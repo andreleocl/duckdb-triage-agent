@@ -1,0 +1,245 @@
+﻿2026-10-30T08:25:20.8597308Z ##[group]Run mkdir -p "/tmp/gh-aw/threat-detection"
+2026-10-30T08:25:20.8597613Z [36;1mmkdir -p "/tmp/gh-aw/threat-detection"[0m
+2026-10-30T08:25:20.8597860Z [36;1mevidence_tmp="/tmp/gh-aw/threat-detection/execution.json.tmp"[0m
+2026-10-30T08:25:20.8598301Z [36;1mprintf '{"version":1,"component":"detection","run_id":%s,"run_attempt":%s,"state":"started"}\n' "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" > "$evidence_tmp"[0m
+2026-10-30T08:25:20.8598715Z [36;1mmv "$evidence_tmp" "/tmp/gh-aw/threat-detection/execution.json"[0m
+2026-10-30T08:25:20.8598982Z [36;1mexport GH_AW_AWF_EXECUTION_COMPONENT="detection"[0m
+2026-10-30T08:25:20.8599405Z [36;1mexport GH_AW_AWF_EXECUTION_EVIDENCE_FILE="/tmp/gh-aw/threat-detection/execution.json"[0m
+2026-10-30T08:25:20.8599678Z [36;1mset -o pipefail[0m
+2026-10-30T08:25:20.8599877Z [36;1mprintf '%s' "$(date +%s%3N)" > /tmp/gh-aw/agent_cli_start_ms.txt[0m
+2026-10-30T08:25:20.8600147Z [36;1m(umask 177 && touch /tmp/gh-aw/threat-detection/detection.log)[0m
+2026-10-30T08:25:20.8600379Z [36;1mGH_AW_MAX_AI_CREDITS="20"[0m
+2026-10-30T08:25:20.8600592Z [36;1mif [[ ! "$GH_AW_MAX_AI_CREDITS" =~ ^[0-9]+$ ]]; then[0m
+2026-10-30T08:25:20.8600790Z [36;1m  GH_AW_MAX_AI_CREDITS="20"[0m
+2026-10-30T08:25:20.8600944Z [36;1mfi[0m
+2026-10-30T08:25:20.8601450Z [36;1m[0m
+2026-10-30T08:25:20.8601681Z [36;1mif [[ "${GH_AW_ADMISSION_RESULT:-}" == "admitted" && -n "${GH_AW_ADMISSION_MAX_AI_CREDITS:-}" ]]; then[0m
+2026-10-30T08:25:20.8602072Z [36;1m  if [[ ! "$GH_AW_ADMISSION_MAX_AI_CREDITS" =~ ^[1-9][0-9]{0,9}$ ]] || (( GH_AW_ADMISSION_MAX_AI_CREDITS > 2147483647 )); then[0m
+2026-10-30T08:25:20.8602413Z [36;1m    echo "ERR_ADMISSION: Invalid runtime admission allowance." >&2[0m
+2026-10-30T08:25:20.8602630Z [36;1m    exit 1[0m
+2026-10-30T08:25:20.8602763Z [36;1m  fi[0m
+2026-10-30T08:25:20.8602932Z [36;1m  GH_AW_MAX_AI_CREDITS="$GH_AW_ADMISSION_MAX_AI_CREDITS"[0m
+2026-10-30T08:25:20.8603173Z [36;1m  echo "Admission allowance applied (value withheld)."[0m
+2026-10-30T08:25:20.8603372Z [36;1melse[0m
+2026-10-30T08:25:20.8603604Z [36;1m  echo "No component admission allowance; retaining existing budget policy (value withheld)."[0m
+2026-10-30T08:25:20.8603865Z [36;1mfi[0m
+2026-10-30T08:25:20.8604035Z [36;1munset GH_AW_ADMISSION_RESULT GH_AW_ADMISSION_MAX_AI_CREDITS[0m
+2026-10-30T08:25:20.8613112Z [36;1mprintf '%s\n' "{\"\$schema\":\"https://github.com/github/gh-aw-firewall/releases/download/v0.28.70/awf-config.schema.json\",\"network\":{\"allowDomains\":[\"172.30.0.1\",\"api.github.com\",\"api.openai.com\",\"github.com\",\"host.docker.internal\"]},\"apiProxy\":{\"enabled\":true,\"enableTokenSteering\":true,\"maxRuns\":500,\"maxCacheMisses\":5,\"maxAiCredits\":${GH_AW_MAX_AI_CREDITS},\"providers\":{\"openai\":{\"models\":{\"gpt-5-mini\":{\"cost\":{\"cache_read\":\"2.5000000000000002e-08\",\"input\":\"2.5e-07\",\"output\":\"2e-06\"}}}}},\"models\":{\"agent\":[\"sonnet-6x\",\"gpt-6\",\"gpt-5.4\",\"gpt-5.5\",\"gpt-5.6\",\"gpt-5.3\",\"gemini-pro\",\"any\"],\"antigravity\":[\"copilot/antigravity*\",\"google/antigravity*\",\"gemini/antigravity*\"],\"any\":[\"copilot/*\",\"anthropic/*\",\"openai/*\",\"google/*\",\"gemini/*\"],\"auto\":[\"copilot/auto\",\"large\"],\"claude\":[\"agent\"],\"codex\":[\"agent\"],\"coding\":[\"copilot/gpt-5*codex*\",\"openai/gpt-5*codex*\",\"gpt-5-codex\",\"kimi\"],\"computer-use\":[\"copilot/*computer-use*\",\"google/*computer-use*\",\"gemini/*computer-use*\",\"openai/*computer-use*\"],\"copilot\":[\"agent\"],\"deep-research\":[\"copilot/deep-research*\",\"copilot/o3-deep-research*\",\"copilot/o4-mini-deep-research*\",\"google/deep-research*\",\"gemini/deep-research*\",\"openai/o3-deep-research*\",\"openai/o4-mini-deep-research*\"],\"detection\":[\"small\"],\"evals\":[\"small\"],\"fable\":[\"copilot/*fable*\",\"anthropic/*fable*\"],\"gemini\":[\"agent\"],\"gemini-3-flash\":[\"copilot/gemini-3*flash*\",\"google/gemini-3*flash*\",\"gemini/gemini-3*flash*\"],\"gemini-3-pro\":[\"copilot/gemini-3*pro*\",\"google/gemini-3*pro*\",\"google/nano-banana*\",\"gemini/gemini-3*pro*\"],\"gemini-3.1-flash\":[\"copilot/gemini-3.1*flash*\",\"google/gemini-3.1*flash*\",\"gemini/gemini-3.1*flash*\"],\"gemini-3.1-pro\":[\"copilot/gemini-3.1*pro*\",\"google/gemini-3.1*pro*\",\"gemini/gemini-3.1*pro*\"],\"gemini-3.5-flash\":[\"copilot/gemini-3.5*flash*\",\"google/gemini-3.5*flash*\",\"gemini/gemini-3.5*flash*\"],\"gemini-3.6-flash\":[\"copilot/gemini-3.6*flash*\",\"google/gemini-3.6*flash*\",\"gemini/gemini-3.6*flash*\"],\"gemini-3.7-flash\":[\"copilot/gemini-3.7*flash*\",\"google/gemini-3.7*flash*\",\"gemini/gemini-3.7*flash*\"],\"gemini-3.8-flash\":[\"copilot/gemini-3.8*flash*\",\"google/gemini-3.8*flash*\",\"gemini/gemini-3.8*flash*\"],\"gemini-flash\":[\"copilot/gemini-*flash*\",\"google/gemini-*flash*\",\"gemini/gemini-*flash*\"],\"gemini-flash-lite\":[\"copilot/gemini-*flash*lite*\",\"google/gemini-*flash*lite*\",\"gemini/gemini-*flash*lite*\"],\"gemini-omni\":[\"copilot/gemini-omni*\",\"google/gemini-omni*\",\"gemini/gemini-omni*\"],\"gemini-pro\":[\"copilot/gemini-*pro*\",\"google/gemini-*pro*\",\"gemini/gemini-*pro*\"],\"gemma\":[\"copilot/gemma*\",\"google/gemma*\",\"gemini/gemma*\"],\"gpt-5\":[\"copilot/gpt-5*\",\"openai/gpt-5*\"],\"gpt-5-codex\":[\"copilot/gpt-5*codex*\",\"openai/gpt-5*codex*\"],\"gpt-5-mini\":[\"copilot/gpt-5*mini*\",\"openai/gpt-5*mini*\"],\"gpt-5-nano\":[\"copilot/gpt-5*nano*\",\"openai/gpt-5*nano*\"],\"gpt-5-pro\":[\"copilot/gpt-5*pro*\",\"openai/gpt-5*pro*\"],\"gpt-5.1\":[\"copilot/gpt-5.1*\",\"openai/gpt-5.1*\"],\"gpt-5.2\":[\"copilot/gpt-5.2*\",\"openai/gpt-5.2*\"],\"gpt-5.3\":[\"copilot/gpt-5.3*\",\"openai/gpt-5.3*\"],\"gpt-5.4\":[\"copilot/gpt-5.4*\",\"openai/gpt-5.4*\"],\"gpt-5.5\":[\"copilot/gpt-5.5*\",\"openai/gpt-5.5*\"],\"gpt-5.6\":[\"copilot/gpt-5.6*\",\"openai/gpt-5.6*\"],\"gpt-6\":[\"copilot/gpt-6*\",\"openai/gpt-6*\"],\"grok\":[\"copilot/*grok*\",\"openai/*grok*\"],\"haiku\":[\"copilot/*haiku*\",\"anthropic/*haiku*\"],\"image-generation\":[\"copilot/gpt-image*\",\"openai/gpt-image*\",\"openai/chatgpt-image*\",\"copilot/gemini-*image*\",\"google/gemini-*image*\",\"gemini/gemini-*image*\",\"google/imagen*\"],\"kimi\":[\"copilot/kimi*\",\"openai/kimi*\"],\"kiwi\":[\"copilot/kiwi*\",\"openai/kiwi*\"],\"large\":[\"sonnet\",\"gpt-6\",\"gpt-5-pro\",\"gpt-5\",\"gemini-pro\"],\"lyria\":[\"google/lyria*\",\"gemini/lyria*\",\"copilot/lyria*\"],\"mai-code\":[\"copilot/MAI-Code*\",\"copilot/mai-code*\",\"openai/MAI-Code*\"],\"mini\":[\"haiku\",\"gpt-5-mini\",\"gpt-5-nano\",\"gemini-flash-lite\"],\"nano-banana\":[\"copilot/nano-banana*\",\"google/nano-banana*\",\"gemini/nano-banana*\"],\"opus\":[\"copilot/*opus*\",\"anthropic/*opus*\"],\"opusplan\":[\"opus?effort=high\"],\"raptor-mini\":[\"copilot/raptor*\",\"openai/raptor*\"],\"reasoning\":[\"copilot/o1*\",\"copilot/o3*\",\"copilot/o4*\",\"openai/o1*\",\"openai/o3*\",\"openai/o4*\"],\"robotics\":[\"copilot/*robotics*\",\"google/*robotics*\",\"gemini/*robotics*\"],\"small\":[\"mini\"],\"small-agent\":[\"haiku\",\"gpt-5-mini\",\"gemini-flash\"],\"sonnet\":[\"copilot/*sonnet*\",\"anthropic/*sonnet*\"],\"sonnet-6x\":[\"copilot/*sonnet-4.5*\",\"copilot/*sonnet-4.6*\",\"copilot/*sonnet-5*\",\"copilot/*sonnet-4-5-*\",\"anthropic/*sonnet-4-5-*\",\"copilot/*sonnet-4-6*\",\"anthropic/*sonnet-4-6*\",\"anthropic/*sonnet-5*\"],\"summarization\":[\"haiku\",\"gpt-5-mini\",\"gemini-flash-lite\",\"mini\"],\"veo\":[\"google/veo*\",\"gemini/veo*\"],\"vision\":[\"copilot/gemini-*image*\",\"google/gemini-*image*\",\"gemini/gemini-*image*\",\"copilot/gemini-*flash*\",\"google/gemini-*flash*\",\"gemini/gemini-*flash*\"]}},\"container\":{\"imageTag\":\"0.28.70,squid=sha256:b5bc53f4becfd96e926e63c83831f1b3c9512f713c83161d2b8c9b7204b3e917,agent=sha256:b15ab48cbbab02904eb9bbd359a398db59690eebbea1e6934d47ed2bb407dd34,api-proxy=sha256:9ac8f9c7294e892c916de3da9d2588dfd8cd4931e5c39b00143266d7ed9fd52a,cli-proxy=sha256:372ac51a5cccffdfe484f3f7be427d2d1c566e8ae550d55bd45d9fd166a154b4\",\"agentTimeout\":5},\"logging\":{\"proxyLogsDir\":\"/tmp/gh-aw/sandbox/firewall/logs\",\"auditDir\":\"/tmp/gh-aw/sandbox/firewall/audit\"}}" > "${RUNNER_TEMP}/gh-aw/awf-config.json"[0m
+2026-10-30T08:25:20.8622638Z [36;1mcp "${RUNNER_TEMP}/gh-aw/awf-config.json" /tmp/gh-aw/awf-config.json[0m
+2026-10-30T08:25:20.8622915Z [36;1mexport GH_AW_MODELS_JSON_PATH="/tmp/gh-aw/models.json"[0m
+2026-10-30T08:25:20.8623128Z [36;1mGH_AW_DOCKER_HOST=""[0m
+2026-10-30T08:25:20.8623308Z [36;1mif [[ "${DOCKER_HOST:-}" =~ ^tcp:// ]]; then[0m
+2026-10-30T08:25:20.8623506Z [36;1m  GH_AW_DOCKER_HOST="${DOCKER_HOST}"[0m
+2026-10-30T08:25:20.8623675Z [36;1mfi[0m
+2026-10-30T08:25:20.8623820Z [36;1mif [[ "${DOCKER_HOST:-}" =~ ^tcp:// ]]; then[0m
+2026-10-30T08:25:20.8624520Z [36;1m  _GH_AW_CHROOT_JSON=$(jq -c --arg src "${RUNNER_TEMP}/gh-aw" --arg user "$(id -un)" --argjson uid "$(id -u)" --argjson gid "$(id -g)" --arg home "${RUNNER_TEMP}/gh-aw/home" '.chroot={"binariesSourcePath":$src,"identity":{"user":$user,"uid":$uid,"gid":$gid,"home":$home}}' "${RUNNER_TEMP}/gh-aw/awf-config.json") || { echo "chroot config patch failed" >&2; exit 1; }[0m
+2026-10-30T08:25:20.8625261Z [36;1m  printf '%s\n' "$_GH_AW_CHROOT_JSON" > "${RUNNER_TEMP}/gh-aw/awf-config.json"[0m
+2026-10-30T08:25:20.8625572Z [36;1mfi[0m
+2026-10-30T08:25:20.8625703Z [36;1mGH_AW_TOOL_CACHE_MOUNT=""[0m
+2026-10-30T08:25:20.8625933Z [36;1mGH_AW_TOOL_CACHE="${RUNNER_TOOL_CACHE:?RUNNER_TOOL_CACHE must be set}"[0m
+2026-10-30T08:25:20.8626271Z [36;1mif [ -d "$GH_AW_TOOL_CACHE" ]; then[0m
+2026-10-30T08:25:20.8626465Z [36;1m  if [[ "$GH_AW_TOOL_CACHE" != /opt/* ]]; then[0m
+2026-10-30T08:25:20.8626701Z [36;1m    GH_AW_TOOL_CACHE_MOUNT="$GH_AW_TOOL_CACHE:$GH_AW_TOOL_CACHE:ro"[0m
+2026-10-30T08:25:20.8626911Z [36;1m  fi[0m
+2026-10-30T08:25:20.8627033Z [36;1mfi[0m
+2026-10-30T08:25:20.8627177Z [36;1m# shellcheck disable=SC1003,SC2016,SC2086[0m
+2026-10-30T08:25:20.8628682Z [36;1mawf --config "${RUNNER_TEMP}/gh-aw/awf-config.json" --container-workdir "${GITHUB_WORKSPACE}" --mount "${RUNNER_TEMP}/gh-aw:${RUNNER_TEMP}/gh-aw:ro" --mount "${RUNNER_TEMP}/gh-aw:/host${RUNNER_TEMP}/gh-aw:ro" ${GH_AW_TOOL_CACHE_MOUNT:+--mount "$GH_AW_TOOL_CACHE_MOUNT"} ${GH_AW_DOCKER_HOST:+--docker-host "$GH_AW_DOCKER_HOST"} --env-all --exclude-env ACTIONS_ID_TOKEN_REQUEST_TOKEN --exclude-env ACTIONS_ID_TOKEN_REQUEST_URL --exclude-env CODEX_API_KEY --exclude-env COPILOT_GITHUB_TOKEN --exclude-env GH_AW_OTLP_ALL_HEADERS --exclude-env GH_AW_OTLP_ENDPOINTS --exclude-env OPENAI_API_KEY --exclude-env OTEL_EXPORTER_OTLP_ENDPOINT --exclude-env OTEL_EXPORTER_OTLP_HEADERS --mount /tmp/gh-aw:/tmp/gh-aw:rw --mount /tmp/gh-aw/threat-detection:/tmp/gh-aw/threat-detection:rw --log-level info --skip-pull \[0m
+2026-10-30T08:25:20.8631267Z [36;1m  -- /bin/bash -c 'set +o histexpand; : "${RUNNER_TOOL_CACHE:?RUNNER_TOOL_CACHE must be set}"; GH_AW_TOOL_CACHE="$RUNNER_TOOL_CACHE"; GH_AW_TOOL_BINS="$(find "$GH_AW_TOOL_CACHE" -maxdepth 5 -type d -name bin 2>/dev/null | tr "\n" ":")"; GH_AW_TOOL_BINS="${GH_AW_TOOL_BINS%:}"; export PATH="$PATH${GH_AW_TOOL_BINS:+:}$GH_AW_TOOL_BINS"; [ -n "$GOROOT" ] && export PATH="$GOROOT/bin:$PATH" || true; [ -n "$ERLANG_HOME" ] && export PATH="$ERLANG_HOME/bin:$PATH" || true && threat-detect --engine codex --output /tmp/gh-aw/threat-detection/detection_result.json /tmp/gh-aw/threat-detection' 2>&1 | tee -a /tmp/gh-aw/threat-detection/detection.log[0m
+2026-10-30T08:25:20.8648557Z shell: /usr/bin/bash -e {0}
+2026-10-30T08:25:20.8648720Z env:
+2026-10-30T08:25:20.8648853Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:25:20.8649027Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:25:20.8649487Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41026019311,github.run_id=41026019311,gh-aw.engine.id=codex
+2026-10-30T08:25:20.8649937Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:25:20.8650113Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:25:20.8650299Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:25:20.8650455Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-30T08:25:20.8650736Z   GITHUB_AW_OTEL_TRACE_ID: c034bdfb55c31894de5da4f60fa20909
+2026-10-30T08:25:20.8651219Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 5ad3afff9cc661e8
+2026-10-30T08:25:20.8651414Z   GITHUB_AW_OTEL_JOB_START_MS: 1793348700467
+2026-10-30T08:25:20.8651611Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+2026-10-30T08:25:20.8651792Z   AWF_REFLECT_ENABLED: 1
+2026-10-30T08:25:20.8652417Z   CODEX_API_KEY: ***
+2026-10-30T08:25:20.8652577Z   CODEX_HOME: /tmp/gh-aw/detection-codex-home
+2026-10-30T08:25:20.8652766Z   GH_AW_HARNESS_MAX_RETRIES: 0
+2026-10-30T08:25:20.8652925Z   GH_AW_LLM_PROVIDER: openai
+2026-10-30T08:25:20.8653082Z   GH_AW_LLM_PROVIDER_EXPLICIT: 1
+2026-10-30T08:25:20.8653237Z   GH_AW_MAX_TURNS: 
+2026-10-30T08:25:20.8653430Z   GH_AW_MCP_CONFIG: /home/runner/work/_temp/gh-aw/mcp-config/config.toml
+2026-10-30T08:25:20.8653658Z   GH_AW_MODEL_DETECTION_CODEX: gpt-5-mini
+2026-10-30T08:25:20.8653830Z   GH_AW_PHASE: detection
+2026-10-30T08:25:20.8653974Z   GH_AW_VERSION: v0.93.5
+2026-10-30T08:25:20.8654110Z   GITHUB_AW: true
+2026-10-30T08:25:20.8654273Z   GITHUB_STEP_SUMMARY: /tmp/gh-aw/agent-step-summary.md
+2026-10-30T08:25:20.8654518Z   GIT_AUTHOR_EMAIL: github-actions[bot]@users.noreply.github.com
+2026-10-30T08:25:20.8654732Z   GIT_AUTHOR_NAME: github-actions[bot]
+2026-10-30T08:25:20.8654951Z   GIT_COMMITTER_EMAIL: github-actions[bot]@users.noreply.github.com
+2026-10-30T08:25:20.8655265Z   GIT_COMMITTER_NAME: github-actions[bot]
+2026-10-30T08:25:20.8655796Z   OPENAI_API_KEY: ***
+2026-10-30T08:25:20.8655943Z   RUNNER_TEMP: /home/runner/work/_temp
+2026-10-30T08:25:20.8656104Z   RUST_LOG: warn
+2026-10-30T08:25:20.8656291Z   TRACEPARENT: 00-c034bdfb55c31894de5da4f60fa20909-5ad3afff9cc661e8-01
+2026-10-30T08:25:20.8656519Z   WORKFLOW_NAME: DuckDB issue triage
+2026-10-30T08:25:20.8656780Z   WORKFLOW_DESCRIPTION: Manually assess one sandbox issue and publish a validated clarification.
+2026-10-30T08:25:20.8657044Z   HAS_PATCH: false
+2026-10-30T08:25:20.8657184Z   GH_AW_DETECTION_CONTINUE_ON_ERROR: false
+2026-10-30T08:25:20.8657353Z ##[endgroup]
+2026-10-30T08:25:20.8733964Z No component admission allowance; retaining existing budget policy (value withheld).
+2026-10-30T08:25:21.1299546Z [INFO] Auto-detected DNS servers from /run/systemd/resolve/resolv.conf: 168.63.129.16
+2026-10-30T08:25:21.1320603Z [INFO] Agent timeout set to 5 minutes
+2026-10-30T08:25:21.1322532Z [WARN] ⚠️  Using --env-all: All host environment variables will be passed to container
+2026-10-30T08:25:21.1323135Z [WARN]    This may expose sensitive credentials if logs or configs are shared
+2026-10-30T08:25:21.1324284Z [WARN] ⚠️  Host access enabled with host.docker.internal in allowed domains
+2026-10-30T08:25:21.1324813Z [WARN]    Containers can access ANY service running on the host machine
+2026-10-30T08:25:21.1325309Z [WARN]    Only use this for trusted workloads (e.g., MCP gateways)
+2026-10-30T08:25:21.1326249Z [INFO] API proxy enabled: OpenAI=true, Anthropic=false, Copilot=false, Gemini=false, Vertex=false
+2026-10-30T08:25:25.8137659Z [INFO] Allowed domains: 172.30.0.1, api.github.com, api.openai.com, github.com, host.docker.internal
+2026-10-30T08:25:25.8566634Z [INFO] Network-isolation mode: enforcing egress via Docker network topology (no host iptables, no sudo).
+2026-10-30T08:25:25.8567377Z [INFO] Generating configuration files...
+2026-10-30T08:25:25.9666161Z [INFO] API proxy sidecar enabled - API keys will be held securely in sidecar container
+2026-10-30T08:25:25.9667032Z [INFO] API proxy will route through Squid to respect domain whitelisting
+2026-10-30T08:25:26.1623762Z [INFO] Starting containers...
+2026-10-30T08:25:26.3017889Z  Network awf-sweezx_awf-ext  Creating
+2026-10-30T08:25:26.3343642Z  Network awf-sweezx_awf-ext  Created
+2026-10-30T08:25:26.3348626Z  Network awf-net  Creating
+2026-10-30T08:25:26.3473630Z  Network awf-net  Created
+2026-10-30T08:25:26.3479419Z  Container awf-squid  Creating
+2026-10-30T08:25:26.3480919Z  Container awf-api-proxy  Creating
+2026-10-30T08:25:26.3683360Z  Container awf-squid  Created
+2026-10-30T08:25:26.3687361Z  Container awf-api-proxy  Created
+2026-10-30T08:25:26.3690249Z  Container awf-agent  Creating
+2026-10-30T08:25:26.3797247Z  Container awf-agent  Created
+2026-10-30T08:25:26.3807394Z  Container awf-squid  Starting
+2026-10-30T08:25:26.3808036Z  Container awf-api-proxy  Starting
+2026-10-30T08:25:26.4852386Z  Container awf-api-proxy  Started
+2026-10-30T08:25:26.5188414Z  Container awf-squid  Started
+2026-10-30T08:25:26.5189014Z  Container awf-squid  Waiting
+2026-10-30T08:25:26.5189440Z  Container awf-api-proxy  Waiting
+2026-10-30T08:25:31.5208928Z  Container awf-api-proxy  Healthy
+2026-10-30T08:25:32.0197046Z  Container awf-squid  Healthy
+2026-10-30T08:25:32.0197435Z  Container awf-agent  Starting
+2026-10-30T08:25:32.1277361Z  Container awf-agent  Started
+2026-10-30T08:25:32.2404651Z [SUCCESS] Containers started successfully
+2026-10-30T08:25:32.2430674Z [INFO] Executing agent command...
+2026-10-30T08:25:32.2482482Z [INFO] Agent timeout: 5 minutes
+2026-10-30T08:25:32.6669175Z [entrypoint] Agentic Workflow Firewall - Agent Container
+2026-10-30T08:25:32.6669559Z [entrypoint] ==================================
+2026-10-30T08:25:33.5383824Z [entrypoint] Configuring DNS...
+2026-10-30T08:25:33.5705922Z [entrypoint] DNS configured with Docker embedded DNS (127.0.0.11) only
+2026-10-30T08:25:33.5706353Z [entrypoint] iptables-init skipped (proxy-based egress): skipping init container wait
+2026-10-30T08:25:33.5718422Z [health-check] API Proxy Pre-flight Check
+2026-10-30T08:25:33.5719155Z [health-check] ==========================================
+2026-10-30T08:25:33.5719853Z [health-check] Checking OpenAI API proxy configuration...
+2026-10-30T08:25:33.5721520Z [health-check] ✓ OpenAI/Codex placeholder key in agent environment (credential isolation active)
+2026-10-30T08:25:33.5722224Z [health-check] Testing connectivity to OpenAI API proxy at http://172.30.0.30:10000...
+2026-10-30T08:25:33.6451368Z [health-check] ✓ OpenAI API proxy is reachable at http://172.30.0.30:10000
+2026-10-30T08:25:33.6451944Z [health-check] ==========================================
+2026-10-30T08:25:33.6452429Z [health-check] ✓ All API proxy health checks passed
+2026-10-30T08:25:33.6452897Z [health-check] ✓ Credential isolation verified
+2026-10-30T08:25:33.6453293Z [health-check] ✓ Connectivity established
+2026-10-30T08:25:33.6453670Z [health-check] ==========================================
+2026-10-30T08:25:33.6456654Z [entrypoint] Pre-seeding JVM build tool proxy configuration (squid-proxy:3128)...
+2026-10-30T08:25:33.6961202Z [entrypoint] ✓ Created Maven proxy config (/host/home/runner/.m2/settings.xml)
+2026-10-30T08:25:33.7028217Z [entrypoint] ✓ Created Gradle proxy config (/host/home/runner/.gradle/gradle.properties)
+2026-10-30T08:25:33.7197967Z [entrypoint] ✓ Set JAVA_TOOL_OPTIONS with proxy and nonProxyHosts flags
+2026-10-30T08:25:33.7198466Z [entrypoint] Proxy configuration:
+2026-10-30T08:25:33.7199385Z [entrypoint]   HTTP_PROXY=http://172.30.0.10:3128
+2026-10-30T08:25:33.7199964Z [entrypoint]   HTTPS_PROXY=http://172.30.0.10:3128
+2026-10-30T08:25:33.7200387Z [entrypoint] Network information:
+2026-10-30T08:25:33.7390186Z [entrypoint]   IP address: 172.30.0.20 
+2026-10-30T08:25:33.7400142Z [entrypoint]   Hostname: 5ed33e5b0be1
+2026-10-30T08:25:34.0327701Z [entrypoint] ==================================
+2026-10-30T08:25:34.0328251Z [entrypoint] Chroot mode enabled - dropping CAP_SYS_CHROOT and CAP_SYS_ADMIN
+2026-10-30T08:25:34.0382259Z [entrypoint] Switching to awfuser (UID: 1001, GID: 1001)
+2026-10-30T08:25:34.0384868Z [entrypoint] Executing command: /bin/bash -c /bin/bash -c 'set +o histexpand; : "${RUNNER_TOOL_CACHE:?RUNNER_TOOL_CACHE must be set}"; GH_AW_TOOL_CACHE="$RUNNER_TOOL_CACHE"; GH_AW_TOOL_BINS="$(find "$GH_AW_TOOL_CACHE" -maxdepth 5 -type d -name bin 2>/dev/null | tr "\n" ":")"; GH_AW_TOOL_BINS="${GH_AW_TOOL_BINS%:}"; export PATH="$PATH${GH_AW_TOOL_BINS:+:}$GH_AW_TOOL_BINS"; [ -n "$GOROOT" ] && export PATH="$GOROOT/bin:$PATH" || true; [ -n "$ERLANG_HOME" ] && export PATH="$ERLANG_HOME/bin:$PATH" || true && threat-detect --engine codex --output /tmp/gh-aw/threat-detection/detection_result.json /tmp/gh-aw/threat-detection'
+2026-10-30T08:25:34.0386168Z 
+2026-10-30T08:25:34.0386339Z [entrypoint] Chroot mode: running command inside host filesystem (/host)
+2026-10-30T08:25:34.1095830Z [entrypoint] Mounted procfs at /host/proc (nosuid,nodev,noexec,hidepid=2)
+2026-10-30T08:25:34.1192252Z [entrypoint] Bind-mounted container cgroup subtree at /host/sys/fs/cgroup (ro)
+2026-10-30T08:25:34.1370066Z [entrypoint] One-shot token library copied to chroot at /run/awf-lib/one-shot-token.so
+2026-10-30T08:25:34.8313748Z [entrypoint] Chromium/Playwright runtime libraries staged for chroot at /host/run/awf-lib/browser-libs
+2026-10-30T08:25:38.9043664Z [entrypoint] Filtered host CA trust staged at /run/awf-lib/trust/ca-certificates.crt (host store unchanged)
+2026-10-30T08:25:38.9056269Z [entrypoint] DNS configuration created in chroot (/host/etc/resolv.conf)
+2026-10-30T08:25:38.9495741Z [entrypoint] Running as host user: runner (UID: 1001)
+2026-10-30T08:25:38.9496658Z [entrypoint] Chroot working directory: /home/runner/work/duckdb-triage-agent/duckdb-triage-agent
+2026-10-30T08:25:38.9520296Z [entrypoint] Using host PATH for chroot
+2026-10-30T08:25:38.9543983Z [entrypoint] Adding JAVA_HOME/bin to PATH: /usr/lib/jvm/temurin-17-jdk-amd64/bin
+2026-10-30T08:25:38.9568181Z [entrypoint] DNS configuration will be removed on exit
+2026-10-30T08:25:38.9599158Z [entrypoint] Transferred /host/tmp/gh-aw ownership to chroot user (1001:1001)
+2026-10-30T08:25:39.4090625Z [threat-detect] run start: version=v0.5.3 engine=codex model=gpt-5-mini retries=0 max_turns=50 engine_timeout=5m0s
+2026-10-30T08:25:39.4092440Z [threat-detect] artifacts loaded: dir=/tmp/gh-aw/threat-detection prompt_bytes=12831 agent_output_bytes=778 patch_files=0 all_primary_inputs_missing=false
+2026-10-30T08:25:39.4093325Z [threat-detect] artifact inventory (7 entries):
+2026-10-30T08:25:39.4093963Z [threat-detect]   agent_output.json bytes=778 kind=file consumed=true
+2026-10-30T08:25:39.4094682Z [threat-detect]   aw-prompts/prompt-import-tree.json bytes=19152 kind=file consumed=true
+2026-10-30T08:25:39.4095438Z [threat-detect]   aw-prompts/prompt-template.txt bytes=5776 kind=file consumed=true
+2026-10-30T08:25:39.4096184Z [threat-detect]   aw-prompts/prompt.txt bytes=12831 kind=file consumed=true
+2026-10-30T08:25:39.4096699Z [threat-detect]   aw_info.json bytes=1519 kind=file consumed=true
+2026-10-30T08:25:39.4097318Z [threat-detect]   detection.log bytes=5157 kind=file consumed=false
+2026-10-30T08:25:39.4097923Z [threat-detect]   execution.json bytes=93 kind=file consumed=false
+2026-10-30T08:25:39.4098906Z [threat-detect] result destinations: output=/tmp/gh-aw/threat-detection/detection_result.json full_output=/tmp/gh-aw/threat-detection/detection_result_full.json
+2026-10-30T08:25:39.4100544Z Prompt context: workflow_name="DuckDB issue triage" (defaulted=false) workflow_description="Manually assess one sandbox issue and publish a validated clarification." (defaulted=false) custom_prompt_applied=false custom_prompt_source=none custom_prompt_bytes=0
+2026-10-30T08:25:39.4102303Z [threat-detect] prompt built: prompt_bytes=50119 framework_scaffolding_detected=true framework_scaffolding_host_removed=true framework_scaffolding_markers=<safe-output-tools>
+2026-10-30T08:25:39.4103239Z [threat-detect] eligibility: prompt_injection=true secret_leak=true malicious_patch=false
+2026-10-30T08:25:39.4103725Z [threat-detect] detection attempt 1 of 1
+2026-10-30T08:25:39.4104400Z [threat-detect] engine invoke: engine=codex model="gpt-5-mini" command="node (/opt/hostedtoolcache/node/24.22.1/x64/bin/node)" args=13
+2026-10-30T08:25:39.4105672Z [threat-detect] engine argv: "/home/runner/work/_temp/gh-aw/actions/codex_harness.cjs" "codex" "exec" "-c" "model=gpt-5-mini" "-c" "web_search=disabled" "-c" "fetch=disabled" "--dangerously-bypass-approvals-and-sandbox" "--skip-git-repo-check" "--prompt-file" "<prompt-file>"
+2026-10-30T08:25:39.5180064Z [engine] [codex-harness] 2026-10-30T08:25:39.480Z starting: command=codex maxRetries=0 initialDelayMs=5000 backoffMultiplier=2 maxDelayMs=60000 nodeVersion=v24.22.1 platform=linux
+2026-10-30T08:25:39.5183326Z [engine] [codex-harness] 2026-10-30T08:25:39.518Z secrets: CODEX_API_KEY=set (length=28) OPENAI_API_KEY=set (length=28)
+2026-10-30T08:25:39.5184681Z [engine] [codex-harness] 2026-10-30T08:25:39.518Z resolved --prompt-file: path=/tmp/threat-detect-prompt-592538929.txt size=50119B
+2026-10-30T08:25:39.5187895Z [engine] [codex-harness] 2026-10-30T08:25:39.518Z awf-reflect: fetching http://api-proxy:10000/reflect (timeout=60000ms)
+2026-10-30T08:25:39.9955845Z [entrypoint] Unsetting sensitive tokens from parent shell environment...
+2026-10-30T08:25:39.9956271Z [entrypoint] Unset OPENAI_API_KEY from /proc/1/environ
+2026-10-30T08:25:39.9956540Z [entrypoint] Unset CODEX_API_KEY from /proc/1/environ
+2026-10-30T08:25:40.3152011Z [engine] [codex-harness] 2026-10-30T08:25:40.314Z awf-reflect: fetched 134 model(s) from http://api-proxy:10000/v1/models
+2026-10-30T08:25:40.3153191Z [engine] [codex-harness] 2026-10-30T08:25:40.314Z awf-reflect: saved 21738B to /tmp/gh-aw/agent/awf-reflect.json
+2026-10-30T08:25:40.3178228Z [engine] [codex-harness] 2026-10-30T08:25:40.317Z model alias resolution: 'gpt-5-mini' is a live model id (provider=openai); not resolving it as an alias
+2026-10-30T08:25:40.3179804Z [engine] [codex-harness] 2026-10-30T08:25:40.317Z model resolution: engine=codex role=main configured=gpt-5-mini resolved=gpt-5-mini provider=openai status=exact
+2026-10-30T08:25:40.3190666Z [engine] [codex-harness] 2026-10-30T08:25:40.318Z awf-reflect: provider=openai mapped to endpoint provider=openai baseUrl=http://api-proxy:10000
+2026-10-30T08:25:40.3192210Z [engine] [codex-harness] 2026-10-30T08:25:40.318Z configured OPENAI_BASE_URL from /reflect for provider=openai: http://api-proxy:10000
+2026-10-30T08:25:40.3204000Z [engine] [codex-harness] 2026-10-30T08:25:40.320Z context-rebuild circuit breaker: enabled=true maxRebuildFactor=25 minCumulativeInputTokens=1000000 pollIntervalMs=15000
+2026-10-30T08:25:40.3213538Z [engine] [codex-harness] 2026-10-30T08:25:40.321Z attempt 1: spawning: codex exec --model gpt-5-mini -c model=gpt-5-mini -c web_search=disabled -c fetch=disabled --dangerously-bypass-approvals-and-sandbox --skip-git-repo-check <prompt via stdin>
+2026-10-30T08:25:40.3263180Z [engine] [codex-harness] 2026-10-30T08:25:40.325Z attempt 1: process started (pid=1903)
+2026-10-30T08:25:40.3897711Z [engine] WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir "/tmp" (codex_home: AbsolutePathBuf("/tmp/gh-aw/detection-codex-home"))
+2026-10-30T08:25:40.5121236Z [engine] 2026-10-30T08:25:40.511390Z  WARN codex_core_plugins::manager: remote installed plugin bundle sync failed error=chatgpt authentication required for remote plugin catalog; api key auth is not supported
+2026-10-30T08:25:40.5352707Z [engine] {"type":"thread.started","thread_id":"01a18bea-25ab-78c0-9754-41a5638f523f"}
+2026-10-30T08:25:40.5382861Z [engine] {"type":"item.completed","item":{"id":"item_0","type":"error","message":"Codex is ignoring 1 unrecognized configuration setting. Check for typos or deprecated settings.\n  session-flags: `fetch` is ignored."}}
+2026-10-30T08:25:40.5384568Z [engine] {"type":"item.completed","item":{"id":"item_1","type":"error","message":"Codex is ignoring 1 unrecognized configuration setting. Check for typos or deprecated settings.\n  session-flags: `fetch` is ignored."}}
+2026-10-30T08:25:40.5742532Z [engine] {"type":"turn.started"}
+2026-10-30T08:25:40.5997747Z [engine] 2026-10-30T08:25:40.599068Z  WARN codex_core_plugins::manager: failed to warm featured plugin ids cache error=failed to send remote featured plugin request to https://chatgpt.com/backend-api/plugins/featured?platform=codex: error sending request for url (https://chatgpt.com/backend-api/plugins/featured?platform=codex)
+2026-10-30T08:25:42.5202699Z [engine] 2026-10-30T08:25:42.519605Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt[0]: prompt must be at most 128 characters path=file:///tmp/gh-aw/detection-codex-home/.tmp/plugins/plugins/ngs-analysis/.codex-plugin/plugin.json
+2026-10-30T08:25:42.5213562Z [engine] 2026-10-30T08:25:42.521055Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt[0]: prompt must be at most 128 characters path=file:///tmp/gh-aw/detection-codex-home/.tmp/plugins/plugins/ngs-analysis/.codex-plugin/plugin.json
+2026-10-30T08:25:44.6829501Z [engine] {"type":"item.completed","item":{"id":"item_2","type":"reasoning","text":"**Analyzing output file**\n\nI need to take a look at the agent_output.json file at /tmp/gh-aw/threat-detection/agent_output.json. First, I'll use functions.exec_command to read the file. But first, it’s essential to provide a preamble message as per developer instructions. I think saying, \"Reading agent output file...\" would be a good introduction before I run exec_command. This way, the user knows what I'm doing. Let's proceed with that!"}}
+2026-10-30T08:25:44.7882534Z [engine] {"type":"item.completed","item":{"id":"item_3","type":"agent_message","text":"I'll read the agent output file to inspect the produced safe-output and any injected content. I'll print the file contents."}}
+2026-10-30T08:25:44.9615879Z [engine] {"type":"item.started","item":{"id":"item_4","type":"command_execution","command":"/bin/bash -lc \"sed -n '1,240p' /tmp/gh-aw/threat-detection/agent_output.json\"","aggregated_output":"","exit_code":null,"status":"in_progress"}}
+2026-10-30T08:25:44.9636112Z [engine] {"type":"item.completed","item":{"id":"item_4","type":"command_execution","command":"/bin/bash -lc \"sed -n '1,240p' /tmp/gh-aw/threat-detection/agent_output.json\"","aggregated_output":"{\"items\":[{\"type\":\"submit_triage\",\"comment\":\"Could you share a small, shareable CSV file that still triggers the error when run with `SELECT * FROM read_csv('input.csv');` and include the complete, exact error message (copy-paste) produced by the DuckDB CLI? You’ve provided the DuckDB version and command; the CSV contents that cause the reported “Conversion Error: CSV Error on Line: 4” are required to reproduce the failure.\",\"label\":\"needs reproducible example\",\"rationale\":\"The report describes a conversion error but omits the input CSV. Reproducing the failure requires the CSV contents (or an equivalent generated sample) that trigger the error; without it the reported step cannot be followed despite having the DuckDB version, OS and SQL command.\"}],\"errors\":[]}","exit_code":0,"status":"completed"}}
+2026-10-30T08:25:49.1536834Z [engine] {"type":"item.started","item":{"id":"item_5","type":"command_execution","command":"/bin/bash -lc 'threat_detection_result --prompt-injection false --secret-leak false --malicious-patch false'","aggregated_output":"","exit_code":null,"status":"in_progress"}}
+2026-10-30T08:25:49.1542042Z [engine] {"type":"item.completed","item":{"id":"item_5","type":"command_execution","command":"/bin/bash -lc 'threat_detection_result --prompt-injection false --secret-leak false --malicious-patch false'","aggregated_output":"THREAT_DETECTION_RESULT_RECORDED: analysis complete; stop now and produce no further output.\n","exit_code":0,"status":"completed"}}
+2026-10-30T08:25:49.1691371Z [threat-detect] attempt 1 outcome=recorded
+2026-10-30T08:25:49.1694020Z [threat-detect] full result written: path=/tmp/gh-aw/threat-detection/detection_result_full.json reasons=0 warnings=0
+2026-10-30T08:25:49.1694621Z THREAT_DETECTION_STATUS: reason=result_recorded exit=0
+2026-10-30T08:25:49.1745454Z [entrypoint] Relaxed /host/tmp/gh-aw group permissions for host-side post-processing
+2026-10-30T08:25:50.4295940Z [INFO] Stopping containers...
+2026-10-30T08:25:50.5360750Z  Container awf-agent  Stopping
+2026-10-30T08:25:50.5362514Z  Container awf-agent  Stopped
+2026-10-30T08:25:50.5362916Z  Container awf-agent  Removing
+2026-10-30T08:25:50.5817052Z  Container awf-agent  Removed
+2026-10-30T08:25:50.5818884Z  Container awf-squid  Stopping
+2026-10-30T08:25:50.5819268Z  Container awf-api-proxy  Stopping
+2026-10-30T08:25:50.6563362Z  Container awf-api-proxy  Stopped
+2026-10-30T08:25:50.6563797Z  Container awf-api-proxy  Removing
+2026-10-30T08:25:50.6615622Z  Container awf-api-proxy  Removed
+2026-10-30T08:25:51.7221702Z  Container awf-squid  Stopped
+2026-10-30T08:25:51.7222139Z  Container awf-squid  Removing
+2026-10-30T08:25:51.7326961Z  Container awf-squid  Removed
+2026-10-30T08:25:51.7332921Z  Network awf-net  Removing
+2026-10-30T08:25:51.7333389Z  Network awf-sweezx_awf-ext  Removing
+2026-10-30T08:25:51.7725478Z  Network awf-net  Removed
+2026-10-30T08:25:51.8354559Z  Network awf-sweezx_awf-ext  Removed
+2026-10-30T08:25:51.9407253Z [SUCCESS] Containers stopped successfully
+2026-10-30T08:25:51.9414356Z [INFO] API proxy logs available at: /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs
+2026-10-30T08:25:51.9415126Z [INFO] Token usage log available at: /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+2026-10-30T08:25:51.9444245Z [INFO] CLI proxy logs available at: /tmp/gh-aw/sandbox/firewall/logs/cli-proxy-logs
+2026-10-30T08:25:51.9490283Z [INFO] Squid logs available at: /tmp/gh-aw/sandbox/firewall/logs
+2026-10-30T08:25:51.9515505Z [INFO] Audit artifacts available at: /tmp/gh-aw/sandbox/firewall/audit
+2026-10-30T08:25:52.1981519Z [SUCCESS] Command completed successfully
+2026-10-30T08:25:52.1982007Z Process exiting with code: 0

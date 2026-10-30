@@ -1,0 +1,107 @@
+﻿2026-10-30T08:23:12.6543017Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-10-30T08:23:12.6544722Z with:
+2026-10-30T08:23:12.6549452Z   script: const path = require('path');
+const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require(path.join(actionsDir, 'generate_aw_info.cjs'));
+await main(core, context);
+
+2026-10-30T08:23:12.6564422Z   github-token: ***
+2026-10-30T08:23:12.6565457Z   debug: false
+2026-10-30T08:23:12.6566413Z   user-agent: actions/github-script
+2026-10-30T08:23:12.6568403Z   result-encoding: json
+2026-10-30T08:23:12.6569674Z   retries: 0
+2026-10-30T08:23:12.6570693Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-10-30T08:23:12.6571925Z env:
+2026-10-30T08:23:12.6572818Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:23:12.6573954Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:23:12.6576968Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41026019311,github.run_id=41026019311,gh-aw.engine.id=codex
+2026-10-30T08:23:12.6580284Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:23:12.6581496Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:23:12.6582783Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:23:12.6583866Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-30T08:23:12.6585108Z   GITHUB_AW_OTEL_TRACE_ID: c034bdfb55c31894de5da4f60fa20909
+2026-10-30T08:23:12.6586572Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: fa22f8d0929b4c4b
+2026-10-30T08:23:12.6588466Z   GITHUB_AW_OTEL_JOB_START_MS: 1793348585271
+2026-10-30T08:23:12.6590978Z   GH_AW_INFO_ENGINE_ID: codex
+2026-10-30T08:23:12.6592154Z   GH_AW_INFO_ENGINE_NAME: Codex
+2026-10-30T08:23:12.6593244Z   GH_AW_INFO_MODEL: gpt-5-mini
+2026-10-30T08:23:12.6594329Z   GH_AW_INFO_VERSION: 0.164.0
+2026-10-30T08:23:12.6595434Z   GH_AW_INFO_AGENT_VERSION: 0.164.0
+2026-10-30T08:23:12.6596577Z   GH_AW_INFO_CLI_VERSION: v0.93.5
+2026-10-30T08:23:12.6598040Z   GH_AW_INFO_WORKFLOW_NAME: DuckDB issue triage
+2026-10-30T08:23:12.6600393Z   GH_AW_INFO_WORKFLOW_ID: andreleocl/duckdb-triage-agent/.github/workflows/issue-triage.lock.yml@refs/heads/main
+2026-10-30T08:23:12.6602461Z   GH_AW_INFO_EXPERIMENTAL: false
+2026-10-30T08:23:12.6603632Z   GH_AW_INFO_SUPPORTS_TOOLS_ALLOWLIST: true
+2026-10-30T08:23:12.6604843Z   GH_AW_INFO_STAGED: false
+2026-10-30T08:23:12.6605886Z   GH_AW_INFO_ALLOWED_DOMAINS: []
+2026-10-30T08:23:12.6609947Z   GH_AW_INFO_FIREWALL_ENABLED: true
+2026-10-30T08:23:12.6611196Z   GH_AW_INFO_AWF_VERSION: v0.28.70
+2026-10-30T08:23:12.6612324Z   GH_AW_INFO_AWMG_VERSION: 
+2026-10-30T08:23:12.6613443Z   GH_AW_INFO_FIREWALL_TYPE: squid
+2026-10-30T08:23:12.6614571Z   GH_AW_INFO_AGENT_RUNTIME: 
+2026-10-30T08:23:12.6616539Z   GH_AW_INFO_MODEL_CONFIG: {"routing":{"enabled":false},"models":{"allowed":[],"blocked":[]},"max_ai_credits_source":"frontmatter"}
+2026-10-30T08:23:12.6620455Z   GH_AW_INFO_MAX_AI_CREDITS: 50
+2026-10-30T08:23:12.6621736Z   GH_AW_COMPILED_STRICT: true
+2026-10-30T08:23:12.6624010Z   GH_AW_INFO_MODEL_COSTS: {"providers":{"openai":{"models":{"gpt-5-mini":{"cost":{"cache_read":"2.5000000000000002e-08","input":"2.5e-07","output":"2e-06"}}}}}}
+2026-10-30T08:23:12.6626869Z ##[endgroup]
+2026-10-30T08:23:12.8040689Z Starting context variable validation...
+2026-10-30T08:23:12.8060614Z ✓ github.event.repository.id is valid: 1435166500
+2026-10-30T08:23:12.8075280Z ✓ github.event.sender.id is valid: 144984893
+2026-10-30T08:23:12.8089238Z Validated 2 context variables
+2026-10-30T08:23:12.8097299Z ✅ All context variables validated successfully
+2026-10-30T08:23:12.8105552Z Lockdown mode not explicitly enabled, skipping validation
+2026-10-30T08:23:12.8111560Z Repository visibility: unknown
+2026-10-30T08:23:12.8117749Z Compiled with strict mode: true
+2026-10-30T08:23:12.8145679Z Generated merged models.json at: /tmp/gh-aw/models.json
+2026-10-30T08:23:12.8153671Z Generated aw_info.json at: /tmp/gh-aw/aw_info.json
+2026-10-30T08:23:12.8162584Z {
+2026-10-30T08:23:12.8163649Z   "engine_id": "codex",
+2026-10-30T08:23:12.8164691Z   "engine_name": "Codex",
+2026-10-30T08:23:12.8165734Z   "model": "gpt-5-mini",
+2026-10-30T08:23:12.8166744Z   "version": "0.164.0",
+2026-10-30T08:23:12.8167754Z   "agent_version": "0.164.0",
+2026-10-30T08:23:12.8169340Z   "workflow_name": "DuckDB issue triage",
+2026-10-30T08:23:12.8171377Z   "workflow_id": "andreleocl/duckdb-triage-agent/.github/workflows/issue-triage.lock.yml@refs/heads/main",
+2026-10-30T08:23:12.8174356Z   "workflow_call_id": "41026019311-1:andreleocl/duckdb-triage-agent/.github/workflows/issue-triage.lock.yml@refs/heads/main",
+2026-10-30T08:23:12.8177396Z   "caller_workflow_ref": "andreleocl/duckdb-triage-agent/.github/workflows/issue-triage.lock.yml@refs/heads/main",
+2026-10-30T08:23:12.8179682Z   "experimental": false,
+2026-10-30T08:23:12.8180769Z   "supports_tools_allowlist": true,
+2026-10-30T08:23:12.8181908Z   "cache_memory": false,
+2026-10-30T08:23:12.8182910Z   "run_id": 41026019311,
+2026-10-30T08:23:12.8183929Z   "run_number": 81,
+2026-10-30T08:23:12.8184852Z   "run_attempt": "1",
+2026-10-30T08:23:12.8187382Z   "repository": "andreleocl/duckdb-triage-agent",
+2026-10-30T08:23:12.8189594Z   "ref": "refs/heads/main",
+2026-10-30T08:23:12.8190794Z   "sha": "73e7d64c4a95c0cc23fd63d725499e4ad2f0fbec",
+2026-10-30T08:23:12.8192621Z   "actor": "andreleocl",
+2026-10-30T08:23:12.8193697Z   "event_name": "workflow_dispatch",
+2026-10-30T08:23:12.8195799Z   "target_repo": "",
+2026-10-30T08:23:12.8196828Z   "staged": false,
+2026-10-30T08:23:12.8197757Z   "dry_run": false,
+2026-10-30T08:23:12.8213493Z   "allowed_domains": [],
+2026-10-30T08:23:12.8214729Z   "firewall_enabled": true,
+2026-10-30T08:23:12.8216463Z   "awf_version": "v0.28.70",
+2026-10-30T08:23:12.8217560Z   "awmg_version": "",
+2026-10-30T08:23:12.8218833Z   "agent_runtime": "",
+2026-10-30T08:23:12.8220375Z   "steps": {
+2026-10-30T08:23:12.8221327Z     "firewall": "squid"
+2026-10-30T08:23:12.8222299Z   },
+2026-10-30T08:23:12.8224032Z   "created_at": "2026-10-30T08:23:12.812Z",
+2026-10-30T08:23:12.8225440Z   "cli_version": "v0.93.5",
+2026-10-30T08:23:12.8227352Z   "workflow_ref": "andreleocl/duckdb-triage-agent/.github/workflows/issue-triage.lock.yml@refs/heads/main",
+2026-10-30T08:23:12.8260519Z   "server_url": "https://github.com",
+2026-10-30T08:23:12.8261819Z   "model_config": {
+2026-10-30T08:23:12.8263329Z     "routing": {
+2026-10-30T08:23:12.8264835Z       "enabled": false
+2026-10-30T08:23:12.8265903Z     },
+2026-10-30T08:23:12.8266787Z     "models": {
+2026-10-30T08:23:12.8339565Z       "allowed": [],
+2026-10-30T08:23:12.8340810Z       "blocked": []
+2026-10-30T08:23:12.8341944Z     },
+2026-10-30T08:23:12.8343108Z     "max_ai_credits_source": "frontmatter",
+2026-10-30T08:23:12.8344748Z     "max_ai_credits": 50
+2026-10-30T08:23:12.8345970Z   }
+2026-10-30T08:23:12.8346985Z }
+2026-10-30T08:23:12.8348264Z Generated workflow overview in step summary

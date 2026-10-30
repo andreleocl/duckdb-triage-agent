@@ -1,0 +1,47 @@
+{
+  "status": "published",
+  "proposal": {
+    "label": "needs reproducible example",
+    "comment": "Could you share a small, shareable CSV sample that still triggers the error, together with the exact `read_csv` command you ran and the complete error message (the full text or stack trace)? With a reproduced CSV and full error output we can reproduce the \u201cConversion Error: CSV Error on Line: 4\u201d and triage the failure.",
+    "rationale": "The report states a conversion error but omits the CSV contents or any sample input; without the input it is impossible to reproduce where conversion fails on line 4. Version and OS are provided, so the missing essential dependency is the shareable CSV and full error output."
+  },
+  "actions": [
+    "add_comment",
+    "add_label"
+  ],
+  "run_id": "41027810949",
+  "configuration_sha": "73e7d64c4a95c0cc23fd63d725499e4ad2f0fbec",
+  "input_sha256": "78452dffe2c55ef73cfeb068a8e2f7adb0aa93db6f184d64db0e5d337205e097",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "/comments?per_page=100&page=1",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/comments",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/labels",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

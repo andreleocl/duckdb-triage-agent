@@ -54,5 +54,8 @@ python -m unittest discover -s evals -p "test_*.py" -v
   offline run if sanitization changes information needed for triage.
 - Authorized hosted retries require fresh main-branch dispatches, not job reruns.
   Follow [admission and stopping rules](docs/WORKFLOW.md#limits-and-stopping);
-  blocked attempts count, and hosted enforcement of the new guards is unverified.
+  blocked attempts count. Hosted tests verified owner admission, three rerun routes
+  and downstream cancellation blocking; remaining edge cases and continued active
+  AI execution are documented in the
+  [control report](evals/control-tests/2026-10-30-admission-cancellation-73e7d64/README.md).
 - Follow [CONTRIBUTING.md](CONTRIBUTING.md) for AI disclosure and contribution review.

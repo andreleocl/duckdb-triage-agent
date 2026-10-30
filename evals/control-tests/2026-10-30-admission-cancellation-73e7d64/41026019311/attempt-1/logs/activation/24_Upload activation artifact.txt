@@ -1,0 +1,48 @@
+﻿2026-10-30T08:23:19.9086215Z ##[group]Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+2026-10-30T08:23:19.9086745Z with:
+2026-10-30T08:23:19.9087009Z   name: activation
+2026-10-30T08:23:19.9087305Z   include-hidden-files: true
+2026-10-30T08:23:19.9090020Z   path: /tmp/gh-aw/aw_info.json
+/tmp/gh-aw/models.json
+/tmp/gh-aw/aw-prompts/prompt.txt
+/tmp/gh-aw/aw-prompts/system.txt
+/tmp/gh-aw/aw-prompts/user.txt
+/tmp/gh-aw/aw-prompts/prompt-template.txt
+/tmp/gh-aw/aw-prompts/prompt-import-tree.json
+/tmp/gh-aw/github_rate_limits.jsonl
+/tmp/gh-aw/base
+/tmp/gh-aw/.codex/agents
+/tmp/gh-aw/.codex/skills
+/tmp/gh-aw/skill_inventory.json
+
+2026-10-30T08:23:19.9093298Z   if-no-files-found: ignore
+2026-10-30T08:23:19.9093632Z   retention-days: 1
+2026-10-30T08:23:19.9093922Z   compression-level: 6
+2026-10-30T08:23:19.9094214Z   overwrite: false
+2026-10-30T08:23:19.9094858Z   archive: true
+2026-10-30T08:23:19.9095136Z env:
+2026-10-30T08:23:19.9095980Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:23:19.9096337Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:23:19.9097281Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41026019311,github.run_id=41026019311,gh-aw.engine.id=codex
+2026-10-30T08:23:19.9098401Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:23:19.9098997Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:23:19.9099372Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:23:19.9099687Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-30T08:23:19.9100450Z   GITHUB_AW_OTEL_TRACE_ID: c034bdfb55c31894de5da4f60fa20909
+2026-10-30T08:23:19.9100901Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: fa22f8d0929b4c4b
+2026-10-30T08:23:19.9101311Z   GITHUB_AW_OTEL_JOB_START_MS: 1793348585271
+2026-10-30T08:23:19.9101659Z ##[endgroup]
+2026-10-30T08:23:20.1436416Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-10-30T08:23:20.1460000Z The least common ancestor is /tmp/gh-aw. This will be the root directory of the artifact
+2026-10-30T08:23:20.1462550Z With the provided path, there will be 18 files uploaded
+2026-10-30T08:23:20.1472575Z Artifact name is valid!
+2026-10-30T08:23:20.1477902Z Root directory input is valid!
+2026-10-30T08:23:20.4985271Z Uploading artifact: activation.zip
+2026-10-30T08:23:20.5118943Z Beginning upload of artifact content to blob storage
+2026-10-30T08:23:21.0693849Z Uploaded bytes 86160
+2026-10-30T08:23:21.1399312Z Finished uploading artifact content to blob storage!
+2026-10-30T08:23:21.1404199Z SHA256 digest of uploaded artifact is 99f06c315a93cbfe8413f06ecb9d24da7c9225cb5fe543df00da3b77bef1ee51
+2026-10-30T08:23:21.1408134Z Finalizing artifact upload
+2026-10-30T08:23:21.6912874Z Artifact activation successfully finalized. Artifact ID 12963757964
+2026-10-30T08:23:21.6916284Z Artifact activation has been successfully uploaded! Final size is 86160 bytes. Artifact ID is 12963757964
+2026-10-30T08:23:21.6924858Z Artifact download URL: https://github.com/andreleocl/duckdb-triage-agent/actions/runs/41026019311/artifacts/12963757964

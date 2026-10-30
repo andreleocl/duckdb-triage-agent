@@ -1,0 +1,37 @@
+﻿2026-10-30T08:35:18.0559682Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-10-30T08:35:18.0560136Z with:
+2026-10-30T08:35:18.0561894Z   script: const path = require('path');
+const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require(path.join(actionsDir, 'setup_threat_detection.cjs'));
+await main();
+
+2026-10-30T08:35:18.0565523Z   github-token: ***
+2026-10-30T08:35:18.0565782Z   debug: false
+2026-10-30T08:35:18.0566029Z   user-agent: actions/github-script
+2026-10-30T08:35:18.0566321Z   result-encoding: json
+2026-10-30T08:35:18.0566568Z   retries: 0
+2026-10-30T08:35:18.0566833Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-10-30T08:35:18.0567156Z env:
+2026-10-30T08:35:18.0567373Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:35:18.0567676Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:35:18.0568535Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41027150369,github.run_id=41027150369,gh-aw.engine.id=codex
+2026-10-30T08:35:18.0569405Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:35:18.0569717Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:35:18.0570048Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:35:18.0570322Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-30T08:35:18.0570924Z   GITHUB_AW_OTEL_TRACE_ID: 444e1ed1e928095a5c4cb9820a2c963d
+2026-10-30T08:35:18.0571319Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 8081892fc1eefc12
+2026-10-30T08:35:18.0571656Z   GITHUB_AW_OTEL_JOB_START_MS: 1793349305294
+2026-10-30T08:35:18.0571987Z   WORKFLOW_NAME: DuckDB issue triage
+2026-10-30T08:35:18.0572481Z   WORKFLOW_DESCRIPTION: Manually assess one sandbox issue and publish a validated clarification.
+2026-10-30T08:35:18.0572969Z   HAS_PATCH: false
+2026-10-30T08:35:18.0573225Z   GH_AW_DETECTION_CONTINUE_ON_ERROR: false
+2026-10-30T08:35:18.0573553Z   GH_AW_DETECTION_SKIP_PROMPT_SUMMARY: true
+2026-10-30T08:35:18.0573863Z ##[endgroup]
+2026-10-30T08:35:18.1619760Z Removed framework system prompt block from /tmp/gh-aw/threat-detection/aw-prompts/prompt.txt
+2026-10-30T08:35:18.1621398Z Prompt file found: /tmp/gh-aw/threat-detection/aw-prompts/prompt.txt (12831 bytes)
+2026-10-30T08:35:18.1623164Z Agent output file found: /tmp/gh-aw/threat-detection/agent_output.json (707 bytes)
+2026-10-30T08:35:18.1633483Z Skipping threat detection prompt step summary (external detector renders its own prompt)
+2026-10-30T08:35:18.1634467Z Threat detection setup completed

@@ -1,0 +1,195 @@
+﻿2026-10-30T08:25:53.9539863Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-10-30T08:25:53.9540294Z with:
+2026-10-30T08:25:53.9541602Z   script: const path = require('path');
+const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require(path.join(actionsDir, 'render_detection_log.cjs'));
+await main();
+
+2026-10-30T08:25:53.9545213Z   github-token: ***
+2026-10-30T08:25:53.9545435Z   debug: false
+2026-10-30T08:25:53.9545668Z   user-agent: actions/github-script
+2026-10-30T08:25:53.9545944Z   result-encoding: json
+2026-10-30T08:25:53.9546196Z   retries: 0
+2026-10-30T08:25:53.9546433Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-10-30T08:25:53.9546732Z env:
+2026-10-30T08:25:53.9546943Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:25:53.9547208Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:25:53.9547967Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41026019311,github.run_id=41026019311,gh-aw.engine.id=codex
+2026-10-30T08:25:53.9548749Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:25:53.9549034Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:25:53.9549338Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:25:53.9549547Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-30T08:25:53.9549735Z   GITHUB_AW_OTEL_TRACE_ID: c034bdfb55c31894de5da4f60fa20909
+2026-10-30T08:25:53.9549963Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 5ad3afff9cc661e8
+2026-10-30T08:25:53.9550159Z   GITHUB_AW_OTEL_JOB_START_MS: 1793348700467
+2026-10-30T08:25:53.9550554Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+2026-10-30T08:25:53.9550826Z   AWF_TOKEN_USAGE_LOG: /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+2026-10-30T08:25:53.9551297Z   GH_AW_PRIMARY_MODEL: gpt-5-mini-2025-08-07
+2026-10-30T08:25:53.9551558Z   GH_AW_AIC: 0.605885
+2026-10-30T08:25:53.9551813Z   GH_AW_AMBIENT_CONTEXT: 18910
+2026-10-30T08:25:53.9552089Z ##[endgroup]
+2026-10-30T08:25:54.0310094Z ##[group]Detection Log
+2026-10-30T08:25:54.0316178Z ::stop-commands::***
+2026-10-30T08:25:54.0316809Z [INFO] Auto-detected DNS servers from /run/systemd/resolve/resolv.conf: 168.63.129.16
+2026-10-30T08:25:54.0317275Z [INFO] Agent timeout set to 5 minutes
+2026-10-30T08:25:54.0318045Z [WARN] ⚠️  Using --env-all: All host environment variables will be passed to container
+2026-10-30T08:25:54.0318631Z [WARN]    This may expose sensitive credentials if logs or configs are shared
+2026-10-30T08:25:54.0319290Z [WARN] ⚠️  Host access enabled with host.docker.internal in allowed domains
+2026-10-30T08:25:54.0319893Z [WARN]    Containers can access ANY service running on the host machine
+2026-10-30T08:25:54.0320442Z [WARN]    Only use this for trusted workloads (e.g., MCP gateways)
+2026-10-30T08:25:54.0321227Z [INFO] API proxy enabled: OpenAI=true, Anthropic=false, Copilot=false, Gemini=false, Vertex=false
+2026-10-30T08:25:54.0322439Z [INFO] Allowed domains: 172.30.0.1, api.github.com, api.openai.com, github.com, host.docker.internal
+2026-10-30T08:25:54.0323435Z [INFO] Network-isolation mode: enforcing egress via Docker network topology (no host iptables, no sudo).
+2026-10-30T08:25:54.0323992Z [INFO] Generating configuration files...
+2026-10-30T08:25:54.0324517Z [INFO] API proxy sidecar enabled - API keys will be held securely in sidecar container
+2026-10-30T08:25:54.0325102Z [INFO] API proxy will route through Squid to respect domain whitelisting
+2026-10-30T08:25:54.0325510Z [INFO] Starting containers...
+2026-10-30T08:25:54.0325831Z  Network awf-sweezx_awf-ext  Creating
+2026-10-30T08:25:54.0326167Z  Network awf-sweezx_awf-ext  Created
+2026-10-30T08:25:54.0326456Z  Network awf-net  Creating
+2026-10-30T08:25:54.0326708Z  Network awf-net  Created
+2026-10-30T08:25:54.0326979Z  Container awf-squid  Creating
+2026-10-30T08:25:54.0327270Z  Container awf-api-proxy  Creating
+2026-10-30T08:25:54.0327555Z  Container awf-squid  Created
+2026-10-30T08:25:54.0328195Z  Container awf-api-proxy  Created
+2026-10-30T08:25:54.0328494Z  Container awf-agent  Creating
+2026-10-30T08:25:54.0328763Z  Container awf-agent  Created
+2026-10-30T08:25:54.0329044Z  Container awf-squid  Starting
+2026-10-30T08:25:54.0329336Z  Container awf-api-proxy  Starting
+2026-10-30T08:25:54.0329636Z  Container awf-api-proxy  Started
+2026-10-30T08:25:54.0329912Z  Container awf-squid  Started
+2026-10-30T08:25:54.0330176Z  Container awf-squid  Waiting
+2026-10-30T08:25:54.0330464Z  Container awf-api-proxy  Waiting
+2026-10-30T08:25:54.0330756Z  Container awf-api-proxy  Healthy
+2026-10-30T08:25:54.0331133Z  Container awf-squid  Healthy
+2026-10-30T08:25:54.0331420Z  Container awf-agent  Starting
+2026-10-30T08:25:54.0331682Z  Container awf-agent  Started
+2026-10-30T08:25:54.0332000Z [SUCCESS] Containers started successfully
+2026-10-30T08:25:54.0332333Z [INFO] Executing agent command...
+2026-10-30T08:25:54.0332636Z [INFO] Agent timeout: 5 minutes
+2026-10-30T08:25:54.0333028Z [entrypoint] Agentic Workflow Firewall - Agent Container
+2026-10-30T08:25:54.0333482Z [entrypoint] ==================================
+2026-10-30T08:25:54.0333868Z [entrypoint] Configuring DNS...
+2026-10-30T08:25:54.0334325Z [entrypoint] DNS configured with Docker embedded DNS (127.0.0.11) only
+2026-10-30T08:25:54.0334942Z [entrypoint] iptables-init skipped (proxy-based egress): skipping init container wait
+2026-10-30T08:25:54.0335323Z [health-check] API Proxy Pre-flight Check
+2026-10-30T08:25:54.0335565Z [health-check] ==========================================
+2026-10-30T08:25:54.0335829Z [health-check] Checking OpenAI API proxy configuration...
+2026-10-30T08:25:54.0336288Z [health-check] ✓ OpenAI/Codex placeholder key in agent environment (credential isolation active)
+2026-10-30T08:25:54.0336981Z [health-check] Testing connectivity to OpenAI API proxy at http://172.30.0.30:10000...
+2026-10-30T08:25:54.0337430Z [health-check] ✓ OpenAI API proxy is reachable at http://172.30.0.30:10000
+2026-10-30T08:25:54.0337725Z [health-check] ==========================================
+2026-10-30T08:25:54.0338012Z [health-check] ✓ All API proxy health checks passed
+2026-10-30T08:25:54.0338274Z [health-check] ✓ Credential isolation verified
+2026-10-30T08:25:54.0338516Z [health-check] ✓ Connectivity established
+2026-10-30T08:25:54.0338748Z [health-check] ==========================================
+2026-10-30T08:25:54.0339060Z [entrypoint] Pre-seeding JVM build tool proxy configuration (squid-proxy:3128)...
+2026-10-30T08:25:54.0339488Z [entrypoint] ✓ Created Maven proxy config (/host/home/runner/.m2/settings.xml)
+2026-10-30T08:25:54.0339973Z [entrypoint] ✓ Created Gradle proxy config (/host/home/runner/.gradle/gradle.properties)
+2026-10-30T08:25:54.0340403Z [entrypoint] ✓ Set JAVA_TOOL_OPTIONS with proxy and nonProxyHosts flags
+2026-10-30T08:25:54.0340673Z [entrypoint] Proxy configuration:
+2026-10-30T08:25:54.0340900Z [entrypoint]   HTTP_PROXY=http://172.30.0.10:3128
+2026-10-30T08:25:54.0341380Z [entrypoint]   HTTPS_PROXY=http://172.30.0.10:3128
+2026-10-30T08:25:54.0341621Z [entrypoint] Network information:
+2026-10-30T08:25:54.0341816Z [entrypoint]   IP address: 172.30.0.20 
+2026-10-30T08:25:54.0342038Z [entrypoint]   Hostname: 5ed33e5b0be1
+2026-10-30T08:25:54.0342245Z [entrypoint] ==================================
+2026-10-30T08:25:54.0342548Z [entrypoint] Chroot mode enabled - dropping CAP_SYS_CHROOT and CAP_SYS_ADMIN
+2026-10-30T08:25:54.0342865Z [entrypoint] Switching to awfuser (UID: 1001, GID: 1001)
+2026-10-30T08:25:54.0344467Z [entrypoint] Executing command: /bin/bash -c /bin/bash -c 'set +o histexpand; : "${RUNNER_TOOL_CACHE:?RUNNER_TOOL_CACHE must be set}"; GH_AW_TOOL_CACHE="$RUNNER_TOOL_CACHE"; GH_AW_TOOL_BINS="$(find "$GH_AW_TOOL_CACHE" -maxdepth 5 -type d -name bin 2>/dev/null | tr "\n" ":")"; GH_AW_TOOL_BINS="${GH_AW_TOOL_BINS%:}"; export PATH="$PATH${GH_AW_TOOL_BINS:+:}$GH_AW_TOOL_BINS"; [ -n "$GOROOT" ] && export PATH="$GOROOT/bin:$PATH" || true; [ -n "$ERLANG_HOME" ] && export PATH="$ERLANG_HOME/bin:$PATH" || true && threat-detect --engine codex --output /tmp/gh-aw/threat-detection/detection_result.json /tmp/gh-aw/threat-detection'
+2026-10-30T08:25:54.0345701Z 
+2026-10-30T08:25:54.0345884Z [entrypoint] Chroot mode: running command inside host filesystem (/host)
+2026-10-30T08:25:54.0346240Z [entrypoint] Mounted procfs at /host/proc (nosuid,nodev,noexec,hidepid=2)
+2026-10-30T08:25:54.0346601Z [entrypoint] Bind-mounted container cgroup subtree at /host/sys/fs/cgroup (ro)
+2026-10-30T08:25:54.0346984Z [entrypoint] One-shot token library copied to chroot at /run/awf-lib/one-shot-token.so
+2026-10-30T08:25:54.0347430Z [entrypoint] Chromium/Playwright runtime libraries staged for chroot at /host/run/awf-lib/browser-libs
+2026-10-30T08:25:54.0347912Z [entrypoint] Filtered host CA trust staged at /run/awf-lib/trust/ca-certificates.crt (host store unchanged)
+2026-10-30T08:25:54.0348318Z [entrypoint] DNS configuration created in chroot (/host/etc/resolv.conf)
+2026-10-30T08:25:54.0348618Z [entrypoint] Running as host user: runner (UID: 1001)
+2026-10-30T08:25:54.0348992Z [entrypoint] Chroot working directory: /home/runner/work/duckdb-triage-agent/duckdb-triage-agent
+2026-10-30T08:25:54.0349300Z [entrypoint] Using host PATH for chroot
+2026-10-30T08:25:54.0349607Z [entrypoint] Adding JAVA_HOME/bin to PATH: /usr/lib/jvm/temurin-17-jdk-amd64/bin
+2026-10-30T08:25:54.0349925Z [entrypoint] DNS configuration will be removed on exit
+2026-10-30T08:25:54.0350256Z [entrypoint] Transferred /host/tmp/gh-aw ownership to chroot user (1001:1001)
+2026-10-30T08:25:54.0350698Z [threat-detect] run start: version=v0.5.3 engine=codex model=gpt-5-mini retries=0 max_turns=50 engine_timeout=5m0s
+2026-10-30T08:25:54.0351640Z [threat-detect] artifacts loaded: dir=/tmp/gh-aw/threat-detection prompt_bytes=12831 agent_output_bytes=778 patch_files=0 all_primary_inputs_missing=false
+2026-10-30T08:25:54.0352555Z [threat-detect] artifact inventory (7 entries):
+2026-10-30T08:25:54.0353059Z [threat-detect]   agent_output.json bytes=778 kind=file consumed=true
+2026-10-30T08:25:54.0353546Z [threat-detect]   aw-prompts/prompt-import-tree.json bytes=19152 kind=file consumed=true
+2026-10-30T08:25:54.0353953Z [threat-detect]   aw-prompts/prompt-template.txt bytes=5776 kind=file consumed=true
+2026-10-30T08:25:54.0354321Z [threat-detect]   aw-prompts/prompt.txt bytes=12831 kind=file consumed=true
+2026-10-30T08:25:54.0354652Z [threat-detect]   aw_info.json bytes=1519 kind=file consumed=true
+2026-10-30T08:25:54.0354970Z [threat-detect]   detection.log bytes=5157 kind=file consumed=false
+2026-10-30T08:25:54.0355303Z [threat-detect]   execution.json bytes=93 kind=file consumed=false
+2026-10-30T08:25:54.0355838Z [threat-detect] result destinations: output=/tmp/gh-aw/threat-detection/detection_result.json full_output=/tmp/gh-aw/threat-detection/detection_result_full.json
+2026-10-30T08:25:54.0356843Z Prompt context: workflow_name="DuckDB issue triage" (defaulted=false) workflow_description="Manually assess one sandbox issue and publish a validated clarification." (defaulted=false) custom_prompt_applied=false custom_prompt_source=none custom_prompt_bytes=0
+2026-10-30T08:25:54.0357902Z [threat-detect] prompt built: prompt_bytes=50119 framework_scaffolding_detected=true framework_scaffolding_host_removed=true framework_scaffolding_markers=<safe-output-tools>
+2026-10-30T08:25:54.0358454Z [threat-detect] eligibility: prompt_injection=true secret_leak=true malicious_patch=false
+2026-10-30T08:25:54.0358749Z [threat-detect] detection attempt 1 of 1
+2026-10-30T08:25:54.0359158Z [threat-detect] engine invoke: engine=codex model="gpt-5-mini" command="node (/opt/hostedtoolcache/node/24.22.1/x64/bin/node)" args=13
+2026-10-30T08:25:54.0360100Z [threat-detect] engine argv: "/home/runner/work/_temp/gh-aw/actions/codex_harness.cjs" "codex" "exec" "-c" "model=gpt-5-mini" "-c" "web_search=disabled" "-c" "fetch=disabled" "--dangerously-bypass-approvals-and-sandbox" "--skip-git-repo-check" "--prompt-file" "<prompt-file>"
+2026-10-30T08:25:54.0361358Z [engine] [codex-harness] 2026-10-30T08:25:39.480Z starting: command=codex maxRetries=0 initialDelayMs=5000 backoffMultiplier=2 maxDelayMs=60000 nodeVersion=v24.22.1 platform=linux
+2026-10-30T08:25:54.0362182Z [engine] [codex-harness] 2026-10-30T08:25:39.518Z secrets: CODEX_API_KEY=set (length=28) OPENAI_API_KEY=set (length=28)
+2026-10-30T08:25:54.0362800Z [engine] [codex-harness] 2026-10-30T08:25:39.518Z resolved --prompt-file: path=/tmp/threat-detect-prompt-592538929.txt size=50119B
+2026-10-30T08:25:54.0363432Z [engine] [codex-harness] 2026-10-30T08:25:39.518Z awf-reflect: fetching http://api-proxy:10000/reflect (timeout=60000ms)
+2026-10-30T08:25:54.0363884Z [entrypoint] Unsetting sensitive tokens from parent shell environment...
+2026-10-30T08:25:54.0364268Z [entrypoint] Unset OPENAI_API_KEY from /proc/1/environ
+2026-10-30T08:25:54.0364522Z [entrypoint] Unset CODEX_API_KEY from /proc/1/environ
+2026-10-30T08:25:54.0365017Z [engine] [codex-harness] 2026-10-30T08:25:40.314Z awf-reflect: fetched 134 model(s) from http://api-proxy:10000/v1/models
+2026-10-30T08:25:54.0365603Z [engine] [codex-harness] 2026-10-30T08:25:40.314Z awf-reflect: saved 21738B to /tmp/gh-aw/agent/awf-reflect.json
+2026-10-30T08:25:54.0366248Z [engine] [codex-harness] 2026-10-30T08:25:40.317Z model alias resolution: 'gpt-5-mini' is a live model id (provider=openai); not resolving it as an alias
+2026-10-30T08:25:54.0366981Z [engine] [codex-harness] 2026-10-30T08:25:40.317Z model resolution: engine=codex role=main configured=gpt-5-mini resolved=gpt-5-mini provider=openai status=exact
+2026-10-30T08:25:54.0367704Z [engine] [codex-harness] 2026-10-30T08:25:40.318Z awf-reflect: provider=openai mapped to endpoint provider=openai baseUrl=http://api-proxy:10000
+2026-10-30T08:25:54.0368380Z [engine] [codex-harness] 2026-10-30T08:25:40.318Z configured OPENAI_BASE_URL from /reflect for provider=openai: http://api-proxy:10000
+2026-10-30T08:25:54.0369218Z [engine] [codex-harness] 2026-10-30T08:25:40.320Z context-rebuild circuit breaker: enabled=true maxRebuildFactor=25 minCumulativeInputTokens=1000000 pollIntervalMs=15000
+2026-10-30T08:25:54.0370207Z [engine] [codex-harness] 2026-10-30T08:25:40.321Z attempt 1: spawning: codex exec --model gpt-5-mini -c model=gpt-5-mini -c web_search=disabled -c fetch=disabled --dangerously-bypass-approvals-and-sandbox --skip-git-repo-check <prompt via stdin>
+2026-10-30T08:25:54.0370963Z [engine] [codex-harness] 2026-10-30T08:25:40.325Z attempt 1: process started (pid=1903)
+2026-10-30T08:25:54.0372205Z [engine] WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir "/tmp" (codex_home: AbsolutePathBuf("/tmp/gh-aw/detection-codex-home"))
+2026-10-30T08:25:54.0373200Z [engine] 2026-10-30T08:25:40.511390Z  WARN codex_core_plugins::manager: remote installed plugin bundle sync failed error=chatgpt authentication required for remote plugin catalog; api key auth is not supported
+2026-10-30T08:25:54.0373955Z [engine] {"type":"thread.started","thread_id":"01a18bea-25ab-78c0-9754-41a5638f523f"}
+2026-10-30T08:25:54.0374715Z [engine] {"type":"item.completed","item":{"id":"item_0","type":"error","message":"Codex is ignoring 1 unrecognized configuration setting. Check for typos or deprecated settings.\n  session-flags: `fetch` is ignored."}}
+2026-10-30T08:25:54.0375667Z [engine] {"type":"item.completed","item":{"id":"item_1","type":"error","message":"Codex is ignoring 1 unrecognized configuration setting. Check for typos or deprecated settings.\n  session-flags: `fetch` is ignored."}}
+2026-10-30T08:25:54.0376233Z [engine] {"type":"turn.started"}
+2026-10-30T08:25:54.0377172Z [engine] 2026-10-30T08:25:40.599068Z  WARN codex_core_plugins::manager: failed to warm featured plugin ids cache error=failed to send remote featured plugin request to https://chatgpt.com/backend-api/plugins/featured?platform=codex: error sending request for url (https://chatgpt.com/backend-api/plugins/featured?platform=codex)
+2026-10-30T08:25:54.0378526Z [engine] 2026-10-30T08:25:42.519605Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt[0]: prompt must be at most 128 characters path=file:///tmp/gh-aw/detection-codex-home/.tmp/plugins/plugins/ngs-analysis/.codex-plugin/plugin.json
+2026-10-30T08:25:54.0380875Z [engine] 2026-10-30T08:25:42.521055Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt[0]: prompt must be at most 128 characters path=file:///tmp/gh-aw/detection-codex-home/.tmp/plugins/plugins/ngs-analysis/.codex-plugin/plugin.json
+2026-10-30T08:25:54.0383122Z [engine] {"type":"item.completed","item":{"id":"item_2","type":"reasoning","text":"**Analyzing output file**\n\nI need to take a look at the agent_output.json file at /tmp/gh-aw/threat-detection/agent_output.json. First, I'll use functions.exec_command to read the file. But first, it’s essential to provide a preamble message as per developer instructions. I think saying, \"Reading agent output file...\" would be a good introduction before I run exec_command. This way, the user knows what I'm doing. Let's proceed with that!"}}
+2026-10-30T08:25:54.0384687Z [engine] {"type":"item.completed","item":{"id":"item_3","type":"agent_message","text":"I'll read the agent output file to inspect the produced safe-output and any injected content. I'll print the file contents."}}
+2026-10-30T08:25:54.0385685Z [engine] {"type":"item.started","item":{"id":"item_4","type":"command_execution","command":"/bin/bash -lc \"sed -n '1,240p' /tmp/gh-aw/threat-detection/agent_output.json\"","aggregated_output":"","exit_code":null,"status":"in_progress"}}
+2026-10-30T08:25:54.0389140Z [engine] {"type":"item.completed","item":{"id":"item_4","type":"command_execution","command":"/bin/bash -lc \"sed -n '1,240p' /tmp/gh-aw/threat-detection/agent_output.json\"","aggregated_output":"{\"items\":[{\"type\":\"submit_triage\",\"comment\":\"Could you share a small, shareable CSV file that still triggers the error when run with `SELECT * FROM read_csv('input.csv');` and include the complete, exact error message (copy-paste) produced by the DuckDB CLI? You’ve provided the DuckDB version and command; the CSV contents that cause the reported “Conversion Error: CSV Error on Line: 4” are required to reproduce the failure.\",\"label\":\"needs reproducible example\",\"rationale\":\"The report describes a conversion error but omits the input CSV. Reproducing the failure requires the CSV contents (or an equivalent generated sample) that trigger the error; without it the reported step cannot be followed despite having the DuckDB version, OS and SQL command.\"}],\"errors\":[]}","exit_code":0,"status":"completed"}}
+2026-10-30T08:25:54.0392111Z [engine] {"type":"item.started","item":{"id":"item_5","type":"command_execution","command":"/bin/bash -lc 'threat_detection_result --prompt-injection false --secret-leak false --malicious-patch false'","aggregated_output":"","exit_code":null,"status":"in_progress"}}
+2026-10-30T08:25:54.0393555Z [engine] {"type":"item.completed","item":{"id":"item_5","type":"command_execution","command":"/bin/bash -lc 'threat_detection_result --prompt-injection false --secret-leak false --malicious-patch false'","aggregated_output":"THREAT_DETECTION_RESULT_RECORDED: analysis complete; stop now and produce no further output.\n","exit_code":0,"status":"completed"}}
+2026-10-30T08:25:54.0394390Z [threat-detect] attempt 1 outcome=recorded
+2026-10-30T08:25:54.0394910Z [threat-detect] full result written: path=/tmp/gh-aw/threat-detection/detection_result_full.json reasons=0 warnings=0
+2026-10-30T08:25:54.0395372Z THREAT_DETECTION_STATUS: reason=result_recorded exit=0
+2026-10-30T08:25:54.0395699Z [entrypoint] Relaxed /host/tmp/gh-aw group permissions for host-side post-processing
+2026-10-30T08:25:54.0396055Z [INFO] Stopping containers...
+2026-10-30T08:25:54.0396240Z  Container awf-agent  Stopping
+2026-10-30T08:25:54.0396411Z  Container awf-agent  Stopped
+2026-10-30T08:25:54.0396636Z  Container awf-agent  Removing
+2026-10-30T08:25:54.0396832Z  Container awf-agent  Removed
+2026-10-30T08:25:54.0396997Z  Container awf-squid  Stopping
+2026-10-30T08:25:54.0397173Z  Container awf-api-proxy  Stopping
+2026-10-30T08:25:54.0397408Z  Container awf-api-proxy  Stopped
+2026-10-30T08:25:54.0397699Z  Container awf-api-proxy  Removing
+2026-10-30T08:25:54.0397879Z  Container awf-api-proxy  Removed
+2026-10-30T08:25:54.0398044Z  Container awf-squid  Stopped
+2026-10-30T08:25:54.0398292Z  Container awf-squid  Removing
+2026-10-30T08:25:54.0398449Z  Container awf-squid  Removed
+2026-10-30T08:25:54.0398607Z  Network awf-net  Removing
+2026-10-30T08:25:54.0398781Z  Network awf-sweezx_awf-ext  Removing
+2026-10-30T08:25:54.0399014Z  Network awf-net  Removed
+2026-10-30T08:25:54.0399202Z  Network awf-sweezx_awf-ext  Removed
+2026-10-30T08:25:54.0399403Z [SUCCESS] Containers stopped successfully
+2026-10-30T08:25:54.0399703Z [INFO] API proxy logs available at: /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs
+2026-10-30T08:25:54.0400198Z [INFO] Token usage log available at: /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+2026-10-30T08:25:54.0400591Z [INFO] CLI proxy logs available at: /tmp/gh-aw/sandbox/firewall/logs/cli-proxy-logs
+2026-10-30T08:25:54.0400917Z [INFO] Squid logs available at: /tmp/gh-aw/sandbox/firewall/logs
+2026-10-30T08:25:54.0401371Z [INFO] Audit artifacts available at: /tmp/gh-aw/sandbox/firewall/audit
+2026-10-30T08:25:54.0401623Z [SUCCESS] Command completed successfully
+2026-10-30T08:25:54.0401815Z Process exiting with code: 0
+2026-10-30T08:25:54.0402269Z ::***::
+2026-10-30T08:25:54.0402534Z ##[endgroup]
+2026-10-30T08:25:54.0402762Z Log rendered (15009 bytes): /tmp/gh-aw/threat-detection/detection.log

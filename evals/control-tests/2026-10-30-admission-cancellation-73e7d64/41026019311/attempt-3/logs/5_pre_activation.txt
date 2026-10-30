@@ -1,0 +1,112 @@
+﻿2026-10-30T08:28:12.1252231Z Current runner version: '2.338.1'
+2026-10-30T08:28:12.1420414Z ##[group]Runner Image Provisioner
+2026-10-30T08:28:12.1442798Z Hosted Compute Agent
+2026-10-30T08:28:12.1443579Z Version: 20261021.618
+2026-10-30T08:28:12.1444347Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-10-30T08:28:12.1445074Z Build Date: 2026-10-21T00:45:21Z
+2026-10-30T08:28:12.1445765Z Worker ID: {15a393c9-705c-48e1-a95d-b065307aecfe}
+2026-10-30T08:28:12.1446489Z Region: northcentralus
+2026-10-30T08:28:12.1447065Z Cloud: Azure
+2026-10-30T08:28:12.1447635Z ##[endgroup]
+2026-10-30T08:28:12.1449294Z ##[group]VM Image
+2026-10-30T08:28:12.1449935Z - OS: Linux (x64)
+2026-10-30T08:28:12.1450542Z - Source: Docker
+2026-10-30T08:28:12.1451085Z - Name: ubuntu:24.04
+2026-10-30T08:28:12.1465993Z - Version: 20261026.36.1
+2026-10-30T08:28:12.1466794Z ##[endgroup]
+2026-10-30T08:28:12.1467993Z ##[group]GITHUB_TOKEN Permissions
+2026-10-30T08:28:12.1470405Z Metadata: read
+2026-10-30T08:28:12.1471051Z ##[endgroup]
+2026-10-30T08:28:12.1484163Z Secret source: Actions
+2026-10-30T08:28:12.1485315Z Cache mode: write
+2026-10-30T08:28:12.1486300Z Prepare workflow directory
+2026-10-30T08:28:12.5917317Z Prepare all required actions
+2026-10-30T08:28:12.6246125Z Getting action download info
+2026-10-30T08:28:12.8183480Z Download action repository 'github/gh-aw-actions@de9d416cac8ccea1a2d582cb07c4b7db96946792' (SHA:de9d416cac8ccea1a2d582cb07c4b7db96946792)
+2026-10-30T08:28:17.1376087Z Download action repository 'actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3' (SHA:3a2844b7e9c422d3c10d287c895573f7108da1b3)
+2026-10-30T08:28:18.1414408Z Complete job name: pre_activation
+2026-10-30T08:28:18.3824361Z ##[group]Run github/gh-aw-actions/setup@de9d416cac8ccea1a2d582cb07c4b7db96946792
+2026-10-30T08:28:18.3825624Z with:
+2026-10-30T08:28:18.3826170Z   destination: /home/runner/work/_temp/gh-aw/actions
+2026-10-30T08:28:18.3826839Z   job-name: pre_activation
+2026-10-30T08:28:18.3834776Z   safe-output-artifact-client: false
+2026-10-30T08:28:18.3840363Z env:
+2026-10-30T08:28:18.3847969Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:28:18.3848688Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:28:18.3850582Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41026019311,github.run_id=41026019311,gh-aw.engine.id=codex
+2026-10-30T08:28:18.3855286Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:28:18.3855879Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:28:18.3856496Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:28:18.3857021Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-30T08:28:18.3857628Z   GH_AW_SETUP_WORKFLOW_NAME: DuckDB issue triage
+2026-10-30T08:28:18.3858670Z   GH_AW_CURRENT_WORKFLOW_REF: andreleocl/duckdb-triage-agent/.github/workflows/issue-triage.lock.yml@refs/heads/main
+2026-10-30T08:28:18.3861607Z   GH_AW_INFO_VERSION: 0.164.0
+2026-10-30T08:28:18.3862932Z   GH_AW_INFO_AWF_VERSION: v0.28.70
+2026-10-30T08:28:18.3863502Z   GH_AW_INFO_ENGINE_ID: codex
+2026-10-30T08:28:18.3864023Z   GH_AW_SETUP_AW_CONTEXT: 
+2026-10-30T08:28:18.3864507Z ##[endgroup]
+2026-10-30T08:28:32.4621134Z Successfully copied 759 files to /home/runner/work/_temp/gh-aw/actions
+2026-10-30T08:28:32.4751031Z ##[group]Runtime TLS inventory (not a trust-store attestation)
+2026-10-30T08:28:34.4992753Z curl 8.5.0 (x86_64-pc-linux-gnu) libcurl/8.5.0 OpenSSL/3.0.13 zlib/1.3 brotli/1.1.0 zstd/1.5.5 libidn2/2.3.7 libpsl/0.21.2 (+libidn2/2.3.7) libssh/0.10.6/openssl/zlib nghttp2/1.59.0 librtmp/2.3 OpenLDAP/2.6.10
+2026-10-30T08:28:34.5647142Z Node v24.22.1; OpenSSL 3.5.9
+2026-10-30T08:28:34.5936707Z Go: unavailable; binary build-toolchain inspection unavailable
+2026-10-30T08:28:34.5965446Z Python/certifi: not inspected by shell setup; record each client's interpreter, TLS backend and selected CA bundle separately.
+2026-10-30T08:28:34.5969325Z Container, proxy and MCP trust stores require separate image/vendor evidence.
+2026-10-30T08:28:34.5970688Z Browser updates and successful HTTPS connections do not attest CA distrust.
+2026-10-30T08:28:34.5973775Z ##[endgroup]
+2026-10-30T08:28:35.0406220Z Successfully copied 112 mcp-scripts files to /home/runner/work/_temp/gh-aw/mcp-scripts
+2026-10-30T08:28:35.3113594Z Successfully copied 170 safe-outputs files to /home/runner/work/_temp/gh-aw/safeoutputs
+2026-10-30T08:28:37.1575917Z [info] [otlp] INPUT_TRACE_ID not set, a new trace ID will be generated
+2026-10-30T08:28:37.1585570Z [info] [otlp] no OTLP endpoints have usable credentials, skipping setup span
+2026-10-30T08:28:37.2060954Z [info] [otlp] resolved trace-id=41f3324cf7ee956a7b0a0d2ec5979f42
+2026-10-30T08:28:37.2070080Z [info] [otlp] trace-id=41f3324cf7ee956a7b0a0d2ec5979f42 written to GITHUB_OUTPUT
+2026-10-30T08:28:37.2074453Z [info] [otlp] span-id=df44bcc32e30da54 written to GITHUB_OUTPUT
+2026-10-30T08:28:37.2078143Z [info] [otlp] GITHUB_AW_OTEL_TRACE_ID written to GITHUB_ENV
+2026-10-30T08:28:37.2083014Z [info] [otlp] GITHUB_AW_OTEL_PARENT_SPAN_ID written to GITHUB_ENV
+2026-10-30T08:28:37.2086361Z [info] [otlp] GITHUB_AW_OTEL_JOB_START_MS written to GITHUB_ENV
+2026-10-30T08:28:37.4004910Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-10-30T08:28:37.4005701Z with:
+2026-10-30T08:28:37.4029013Z   github-token: ***
+2026-10-30T08:28:37.4030431Z   script: const path = require('path');
+const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require(path.join(actionsDir, 'check_membership.cjs'));
+await main();
+
+2026-10-30T08:28:37.4032081Z   debug: false
+2026-10-30T08:28:37.4032374Z   user-agent: actions/github-script
+2026-10-30T08:28:37.4032715Z   result-encoding: json
+2026-10-30T08:28:37.4033022Z   retries: 0
+2026-10-30T08:28:37.4033389Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-10-30T08:28:37.4033758Z env:
+2026-10-30T08:28:37.4034071Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:28:37.4034429Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:28:37.4036790Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41026019311,github.run_id=41026019311,gh-aw.engine.id=codex
+2026-10-30T08:28:37.4037731Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:28:37.4038067Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:28:37.4040111Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:28:37.4040454Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-30T08:28:37.4044877Z   GITHUB_AW_OTEL_TRACE_ID: 41f3324cf7ee956a7b0a0d2ec5979f42
+2026-10-30T08:28:37.4057827Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: df44bcc32e30da54
+2026-10-30T08:28:37.4058334Z   GITHUB_AW_OTEL_JOB_START_MS: 1793348917210
+2026-10-30T08:28:37.4058711Z   GH_AW_REQUIRED_ROLES: admin,maintainer,write
+2026-10-30T08:28:37.4059061Z ##[endgroup]
+2026-10-30T08:28:38.0300723Z Event workflow_dispatch requires validation
+2026-10-30T08:28:38.0308857Z Checking if user 'andreleocl' has required permissions for andreleocl/duckdb-triage-agent
+2026-10-30T08:28:38.0314752Z Required permissions: admin, maintainer, write
+2026-10-30T08:28:38.5727319Z Repository permission level: admin
+2026-10-30T08:28:38.6052668Z ✅ User has admin access to repository
+2026-10-30T08:28:38.6758548Z Post job cleanup.
+2026-10-30T08:28:38.7940157Z [info] [otlp] sending conclusion span "gh-aw.pre_activation.conclusion" to configured endpoints
+2026-10-30T08:28:38.8127959Z [info] [otlp] conclusion span export attempted
+2026-10-30T08:28:38.8136205Z Cleaning up /tmp/gh-aw...
+2026-10-30T08:28:38.8428121Z Cleaned up /tmp/gh-aw
+2026-10-30T08:28:38.9523292Z No /tmp/awf-*-chroot-home directories found
+2026-10-30T08:28:38.9638261Z No /tmp/awf-chroot-* directories found
+2026-10-30T08:28:38.9779758Z Evaluate and set job outputs
+2026-10-30T08:28:38.9790669Z Set output 'activated'
+2026-10-30T08:28:38.9793335Z Set output 'setup-parent-span-id'
+2026-10-30T08:28:38.9794364Z Set output 'setup-span-id'
+2026-10-30T08:28:38.9794969Z Set output 'setup-trace-id'
+2026-10-30T08:28:38.9796218Z Cleaning up orphan processes

@@ -28,8 +28,10 @@ The archived original a02 is not part of this 28-case suite and remains untested
 Run sequentially on fresh sandbox issues with the configuration fixed throughout.
 Use fresh main-branch dispatches rather than GitHub job reruns, and pace batches
 within the [admission policy](WORKFLOW.md#limits-and-stopping). Blocked attempts
-also count; do not repeatedly dispatch while waiting for capacity. Hosted enforcement
-of the new admission and cancellation guards remains unverified.
+also count; do not repeatedly dispatch while waiting for capacity. Hosted tests
+verified owner admission, three rerun routes and downstream cancellation blocking;
+remaining edge cases are documented in the
+[control report](../evals/control-tests/2026-10-30-admission-cancellation-73e7d64/README.md).
 Keep the frozen inputs and expectations unchanged and inaccessible to the model.
 
 Record new results in a separate run directory. Preserve the configuration commit,
@@ -46,10 +48,13 @@ is pending, disable triage and cancel queued/running jobs using the
 Andre cancelled an actual triage run from a phone under an earlier configuration.
 Publication did not execute, but detector inference continued afterward. The test
 confirms cancellation of that workflow, not immediate cessation of model activity
-or spending. The new guard requires successful activation/agent jobs and no
-cancellation; it is offline-tested but hosted enforcement is unverified. It does
-not retrofit older revisions or guarantee interruption of in-flight provider requests.
-See the unchanged [cancellation test report](../evals/control-tests/2026-10-29-actual-triage-cancellation/README.md).
+or spending. See the unchanged
+[historical cancellation report](../evals/control-tests/2026-10-29-actual-triage-cancellation/README.md).
+The later [hosted control tests](../evals/control-tests/2026-10-30-admission-cancellation-73e7d64/README.md)
+verified that cancelling triage prevented detector startup and cancelling either
+model stage prevented publication. Active Codex execution nevertheless continued
+and completed after cancellation requests. These controls do not retrofit older
+revisions or guarantee an immediate stop to model activity or spending.
 
 ## What Andre reviews
 

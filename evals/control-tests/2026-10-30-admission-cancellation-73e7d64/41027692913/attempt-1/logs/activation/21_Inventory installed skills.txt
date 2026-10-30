@@ -1,0 +1,29 @@
+﻿2026-10-30T08:37:58.1904894Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-10-30T08:37:58.1906014Z with:
+2026-10-30T08:37:58.1908157Z   script: const path = require('path');
+const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require(path.join(actionsDir, 'skill_inventory.cjs'));
+await main();
+
+2026-10-30T08:37:58.1914156Z   github-token: ***
+2026-10-30T08:37:58.1914706Z   debug: false
+2026-10-30T08:37:58.1915241Z   user-agent: actions/github-script
+2026-10-30T08:37:58.1915863Z   result-encoding: json
+2026-10-30T08:37:58.1916391Z   retries: 0
+2026-10-30T08:37:58.1916946Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-10-30T08:37:58.1917622Z env:
+2026-10-30T08:37:58.1918108Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:37:58.1918720Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:37:58.1920289Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41027692913,github.run_id=41027692913,gh-aw.engine.id=codex
+2026-10-30T08:37:58.1921924Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:37:58.1922572Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:37:58.1923502Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:37:58.1924098Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-30T08:37:58.1924771Z   GITHUB_AW_OTEL_TRACE_ID: 33301e3e9fc086651d49d0a7a00645d0
+2026-10-30T08:37:58.1925579Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 103b5ff4d73a43f9
+2026-10-30T08:37:58.1926284Z   GITHUB_AW_OTEL_JOB_START_MS: 1793349471247
+2026-10-30T08:37:58.1926947Z   GH_AW_SKILL_DIR: .codex/skills
+2026-10-30T08:37:58.1927526Z ##[endgroup]
+2026-10-30T08:37:58.3211704Z Inventoried 0 skills; 0 conflict(s)

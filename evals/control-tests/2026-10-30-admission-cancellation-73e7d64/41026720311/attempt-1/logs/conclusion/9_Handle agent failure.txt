@@ -1,0 +1,107 @@
+﻿2026-10-30T08:31:10.3650549Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-10-30T08:31:10.3652799Z with:
+2026-10-30T08:31:10.3660409Z   github-token: ***
+2026-10-30T08:31:10.3662931Z   script: const path = require('path');
+const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require(path.join(actionsDir, 'handle_agent_failure.cjs'));
+await main();
+
+2026-10-30T08:31:10.3678138Z   debug: false
+2026-10-30T08:31:10.3678808Z   user-agent: actions/github-script
+2026-10-30T08:31:10.3679569Z   result-encoding: json
+2026-10-30T08:31:10.3680114Z   retries: 0
+2026-10-30T08:31:10.3683396Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-10-30T08:31:10.3685034Z env:
+2026-10-30T08:31:10.3685572Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:31:10.3686256Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:31:10.3688258Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41026720311,github.run_id=41026720311,gh-aw.engine.id=codex
+2026-10-30T08:31:10.3693317Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:31:10.3694229Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:31:10.3695720Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:31:10.3705717Z   GH_AW_JOB_DISPLAY_NAMES: {"activation":"activation","agent":"agent","conclusion":"conclusion","detection":"detection","pre_activation":"pre_activation","submit_triage":"submit_triage"}
+2026-10-30T08:31:10.3713929Z   GH_AW_JOB_RESULTS: {"activation":{"result":"success"},"agent":{"result":"cancelled"},"detection":{"result":"cancelled"},"submit_triage":{"result":"cancelled"}}
+2026-10-30T08:31:10.3719572Z   GH_AW_JOB_TIMING_ELIGIBLE: {"activation":true,"agent":true,"conclusion":true,"detection":true,"pre_activation":true,"submit_triage":true}
+2026-10-30T08:31:10.3722625Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-30T08:31:10.3773894Z   GITHUB_AW_OTEL_TRACE_ID: ef6fa8a265a86f16ca653656bda8b8d2
+2026-10-30T08:31:10.3784164Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 40ccd71fcd46c095
+2026-10-30T08:31:10.3784984Z   GITHUB_AW_OTEL_JOB_START_MS: 1793349066152
+2026-10-30T08:31:10.3785724Z   GH_AW_AGENT_OUTPUT: /tmp/gh-aw/agent_output.json
+2026-10-30T08:31:10.3786545Z   GH_AW_WORKFLOW_NAME: DuckDB issue triage
+2026-10-30T08:31:10.3787713Z   GH_AW_WORKFLOW_SOURCE_URL: https://github.com/andreleocl/duckdb-triage-agent/blob/main/.github/workflows/issue-triage.md
+2026-10-30T08:31:10.3789979Z   GH_AW_RUN_URL: https://github.com/andreleocl/duckdb-triage-agent/actions/runs/41026720311
+2026-10-30T08:31:10.3792089Z   GH_AW_AGENT_CONCLUSION: cancelled
+2026-10-30T08:31:10.3792763Z   GH_AW_WORKFLOW_ID: issue-triage
+2026-10-30T08:31:10.3796300Z   GH_AW_ACTION_FAILURE_ISSUE_EXPIRES_HOURS: 0
+2026-10-30T08:31:10.3807747Z   GH_AW_ENGINE_ID: codex
+2026-10-30T08:31:10.3808475Z   GH_AW_SECRET_VERIFICATION_RESULT: success
+2026-10-30T08:31:10.3813536Z   GH_AW_AI_CREDITS_RATE_LIMIT_ERROR: false
+2026-10-30T08:31:10.3819100Z   GH_AW_UNKNOWN_MODEL_AI_CREDITS: false
+2026-10-30T08:31:10.3819794Z   GH_AW_AIC: 0.70353
+2026-10-30T08:31:10.3822821Z   GH_AW_THREAT_DETECTION_AIC: 
+2026-10-30T08:31:10.3827569Z   GH_AW_DETECTION_JOB_RESULT: cancelled
+2026-10-30T08:31:10.3837917Z   GH_AW_MAX_AI_CREDITS: 50
+2026-10-30T08:31:10.3840847Z   GH_AW_DEFAULT_CHECKOUT_USES_TRIGGER_REF: false
+2026-10-30T08:31:10.3843609Z   GH_AW_INFERENCE_ACCESS_ERROR: false
+2026-10-30T08:31:10.3845815Z   GH_AW_MCP_POLICY_ERROR: false
+2026-10-30T08:31:10.3846548Z   GH_AW_AGENTIC_ENGINE_TIMEOUT: false
+2026-10-30T08:31:10.3847220Z   GH_AW_MODEL_NOT_SUPPORTED_ERROR: false
+2026-10-30T08:31:10.3849371Z   GH_AW_MODEL_ENDPOINT_MISMATCH_ERROR: false
+2026-10-30T08:31:10.3851633Z   GH_AW_HTTP_400_RESPONSE_ERROR: false
+2026-10-30T08:31:10.3852654Z   GH_AW_MAX_CACHE_MISSES_EXCEEDED: false
+2026-10-30T08:31:10.3853712Z   GH_AW_MISSING_MODEL_PRICING_ERROR: false
+2026-10-30T08:31:10.3854723Z   GH_AW_MISSING_MODEL_PRICING_MODEL_NAME: 
+2026-10-30T08:31:10.3857741Z   GH_AW_SHELL_EXPANSION_GUARD_REJECTED: false
+2026-10-30T08:31:10.3858443Z   GH_AW_ENGINE_API_HOSTS: api.openai.com
+2026-10-30T08:31:10.3859096Z   GH_AW_LOCKDOWN_CHECK_FAILED: false
+2026-10-30T08:31:10.3859719Z   GH_AW_OAUTH_TOKEN_CHECK_FAILED: false
+2026-10-30T08:31:10.3860375Z   GH_AW_STALE_LOCK_FILE_FAILED: false
+2026-10-30T08:31:10.3861342Z   GH_AW_SAFE_OUTPUT_MESSAGES: {"activationComments":"false"}
+2026-10-30T08:31:10.3863853Z   GH_AW_GROUP_REPORTS: false
+2026-10-30T08:31:10.3864490Z   GH_AW_FAILURE_REPORT_AS_ISSUE: false
+2026-10-30T08:31:10.3865150Z   GH_AW_MISSING_TOOL_REPORT_AS_FAILURE: true
+2026-10-30T08:31:10.3865833Z   GH_AW_MISSING_DATA_REPORT_AS_FAILURE: true
+2026-10-30T08:31:10.3866493Z   GH_AW_TIMEOUT_MINUTES: 10
+2026-10-30T08:31:10.3867050Z ##[endgroup]
+2026-10-30T08:31:10.9763025Z [ai-credits] aiCredits source=token_usage value=0.70353
+2026-10-30T08:31:10.9764928Z [ai-credits] maxAICredits source=awf_config value=50
+2026-10-30T08:31:10.9769421Z [ai-credits] rateLimitSignal source=none
+2026-10-30T08:31:10.9770597Z Agent conclusion: cancelled
+2026-10-30T08:31:10.9805367Z Workflow name: DuckDB issue triage
+2026-10-30T08:31:10.9806448Z Workflow ID: issue-triage
+2026-10-30T08:31:10.9807338Z Secret verification result: success
+2026-10-30T08:31:10.9809380Z Engine secret failure message: (none)
+2026-10-30T08:31:10.9810455Z Assignment error count: 0
+2026-10-30T08:31:10.9819491Z Assign copilot failure count: 0
+2026-10-30T08:31:10.9820626Z Skill install failure count: 0
+2026-10-30T08:31:10.9829758Z Create discussion error count: 0
+2026-10-30T08:31:10.9830878Z Code push failure count: 0
+2026-10-30T08:31:10.9945245Z Checkout PR success: 
+2026-10-30T08:31:10.9946375Z AI credits: 0.70353
+2026-10-30T08:31:10.9947267Z Configured max AI credits: 50
+2026-10-30T08:31:10.9948441Z AI credits rate-limit error: false
+2026-10-30T08:31:10.9949902Z Max AI credits exceeded (harness budget abort): false
+2026-10-30T08:31:10.9962665Z Daily workflow AIC guardrail exceeded: false
+2026-10-30T08:31:10.9968769Z Daily workflow AIC guardrail status: (none); error detail: (none)
+2026-10-30T08:31:10.9971196Z Daily workflow AIC guardrail continue-on-error (warning mode): false
+2026-10-30T08:31:10.9973050Z Inference access error: false
+2026-10-30T08:31:10.9974362Z MCP policy error: false
+2026-10-30T08:31:10.9985969Z Agentic engine timeout: false
+2026-10-30T08:31:10.9987381Z Model not supported error: false
+2026-10-30T08:31:10.9988879Z HTTP 400 response error: false
+2026-10-30T08:31:10.9990233Z Unknown model AI credits error: false
+2026-10-30T08:31:10.9992134Z Unknown model AI credits sources (audit/output): false/false
+2026-10-30T08:31:10.9994101Z Missing model pricing error: false (model: (unknown))
+2026-10-30T08:31:10.9995862Z Shell expansion guard rejected: false
+2026-10-30T08:31:10.9997277Z Push repo-memory result: 
+2026-10-30T08:31:10.9999101Z App token minting failed (safe_outputs/conclusion/activation): false/false/false
+2026-10-30T08:31:11.0001355Z Lockdown check failed: false
+2026-10-30T08:31:11.0005196Z OAuth token check failed: false
+2026-10-30T08:31:11.0006667Z Stale lock file check failed: false
+2026-10-30T08:31:11.0009219Z Cache memory enabled: false
+2026-10-30T08:31:11.0069145Z Cache memory restored (from restore outputs): false
+2026-10-30T08:31:11.0071426Z Missing tool report-as-failure: true
+2026-10-30T08:31:11.0076759Z Missing data report-as-failure: true
+2026-10-30T08:31:11.0079160Z Agent output content length: 785
+2026-10-30T08:31:11.0088920Z Agent job did not fail and no assignment/discussion/code-push/push-repo-memory/app-token/lockdown/oauth-token-check/stale-lock-file/daily-workflow-aic/daily-workflow-aic-accounting/ai-credits/max-ai-credits-exceeded/report-incomplete/cache-miss/missing-tool/missing-data/tool-denials-exceeded/secret-verification errors and has safe outputs (conclusion: cancelled), skipping failure handling

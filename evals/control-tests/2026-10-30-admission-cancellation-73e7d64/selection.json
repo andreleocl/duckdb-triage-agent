@@ -1,0 +1,15 @@
+{
+  "configuration_sha": "73e7d64c4a95c0cc23fd63d725499e4ad2f0fbec",
+  "model": "gpt-5-mini",
+  "monitoring_budget_usd": 0.25,
+  "planned": [
+    "normal and rerun routes",
+    "cancel agent",
+    "cancel detector",
+    "normal fourth",
+    "normal fifth",
+    "sixth rejected"
+  ],
+  "started_at": "2026-10-30T08:22:33.091808+00:00",
+  "note": "Invented reports; operational controls, not golden scoring."
+}

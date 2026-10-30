@@ -1,0 +1,43 @@
+﻿2026-10-30T08:23:15.8669473Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-10-30T08:23:15.8670016Z with:
+2026-10-30T08:23:15.8671860Z   script: const path = require('path');
+const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require(path.join(actionsDir, 'check_workflow_timestamp_api.cjs'));
+await main();
+
+2026-10-30T08:23:15.8676280Z   github-token: ***
+2026-10-30T08:23:15.8676594Z   debug: false
+2026-10-30T08:23:15.8676880Z   user-agent: actions/github-script
+2026-10-30T08:23:15.8677222Z   result-encoding: json
+2026-10-30T08:23:15.8677508Z   retries: 0
+2026-10-30T08:23:15.8677808Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-10-30T08:23:15.8678417Z env:
+2026-10-30T08:23:15.8678965Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:23:15.8679313Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:23:15.8680209Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41026019311,github.run_id=41026019311,gh-aw.engine.id=codex
+2026-10-30T08:23:15.8682746Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:23:15.8683138Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:23:15.8683995Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:23:15.8684364Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-30T08:23:15.8684732Z   GITHUB_AW_OTEL_TRACE_ID: c034bdfb55c31894de5da4f60fa20909
+2026-10-30T08:23:15.8685427Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: fa22f8d0929b4c4b
+2026-10-30T08:23:15.8685828Z   GITHUB_AW_OTEL_JOB_START_MS: 1793348585271
+2026-10-30T08:23:15.8686584Z   GH_AW_WORKFLOW_FILE: issue-triage.lock.yml
+2026-10-30T08:23:15.8687239Z   GH_AW_CONTEXT_WORKFLOW_REF: andreleocl/duckdb-triage-agent/.github/workflows/issue-triage.lock.yml@refs/heads/main
+2026-10-30T08:23:15.8687861Z ##[endgroup]
+2026-10-30T08:23:16.0016593Z Checking for stale lock file using frontmatter hash:
+2026-10-30T08:23:16.0024525Z   Source: .github/workflows/issue-triage.md
+2026-10-30T08:23:16.0027408Z   Lock file: .github/workflows/issue-triage.lock.yml
+2026-10-30T08:23:16.0046045Z Env workflow ref already identifies this workflow, skipping referenced_workflows API lookup
+2026-10-30T08:23:16.0050197Z GITHUB_WORKFLOW_REF: andreleocl/duckdb-triage-agent/.github/workflows/issue-triage.lock.yml@refs/heads/main
+2026-10-30T08:23:16.0052624Z GH_AW_CONTEXT_WORKFLOW_REF: andreleocl/duckdb-triage-agent/.github/workflows/issue-triage.lock.yml@refs/heads/main (available as env fallback)
+2026-10-30T08:23:16.0054545Z GITHUB_REPOSITORY: andreleocl/duckdb-triage-agent
+2026-10-30T08:23:16.0056161Z Resolved source repo: andreleocl/duckdb-triage-agent @ refs/heads/main
+2026-10-30T08:23:16.0057676Z Same-repo invocation: checking out andreleocl/duckdb-triage-agent @ refs/heads/main
+2026-10-30T08:23:16.8803368Z Frontmatter hash comparison:
+2026-10-30T08:23:16.8806954Z   Lock file hash:    909bad13870f0ea90a63f785ba9dbe7e9c21c700fd18c3771aaef4c5d4677b15
+2026-10-30T08:23:16.8812154Z   Recomputed hash:   909bad13870f0ea90a63f785ba9dbe7e9c21c700fd18c3771aaef4c5d4677b15
+2026-10-30T08:23:16.8816944Z   Status: ✅ Hashes match
+2026-10-30T08:23:16.8820651Z ✅ Lock file is up to date (hashes match)

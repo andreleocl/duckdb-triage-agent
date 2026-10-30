@@ -1,0 +1,30 @@
+﻿2026-10-30T08:45:46.0539913Z Current runner version: '2.338.1'
+2026-10-30T08:45:46.0588275Z ##[group]Runner Image Provisioner
+2026-10-30T08:45:46.0589758Z Hosted Compute Agent
+2026-10-30T08:45:46.0590475Z Version: 20261021.618
+2026-10-30T08:45:46.0591407Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-10-30T08:45:46.0592145Z Build Date: 2026-10-21T00:45:21Z
+2026-10-30T08:45:46.0592879Z Worker ID: {e19caa5a-7f56-4752-8819-d2eebb3166c1}
+2026-10-30T08:45:46.0593586Z Region: westus3
+2026-10-30T08:45:46.0594126Z Cloud: Azure
+2026-10-30T08:45:46.0594707Z ##[endgroup]
+2026-10-30T08:45:46.0596948Z ##[group]VM Image
+2026-10-30T08:45:46.0597647Z - OS: Linux (x64)
+2026-10-30T08:45:46.0598214Z - Source: Docker
+2026-10-30T08:45:46.0598737Z - Name: ubuntu:24.04
+2026-10-30T08:45:46.0599329Z - Version: 20261026.36.1
+2026-10-30T08:45:46.0599891Z ##[endgroup]
+2026-10-30T08:45:46.0615782Z ##[group]GITHUB_TOKEN Permissions
+2026-10-30T08:45:46.0625754Z Actions: read
+2026-10-30T08:45:46.0626519Z Metadata: read
+2026-10-30T08:45:46.0629932Z ##[endgroup]
+2026-10-30T08:45:46.0648290Z Secret source: Actions
+2026-10-30T08:45:46.0651462Z Cache mode: write
+2026-10-30T08:45:46.0652411Z Prepare workflow directory
+2026-10-30T08:45:46.1371987Z Prepare all required actions
+2026-10-30T08:45:46.1444763Z Getting action download info
+2026-10-30T08:45:46.6778519Z Download action repository 'github/gh-aw-actions@de9d416cac8ccea1a2d582cb07c4b7db96946792' (SHA:de9d416cac8ccea1a2d582cb07c4b7db96946792)
+2026-10-30T08:45:47.9706682Z Download action repository 'actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333' (SHA:9000827ccba6bdab643e8b6fd33ac0654aef8333)
+2026-10-30T08:45:48.7349351Z Download action repository 'actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3' (SHA:3a2844b7e9c422d3c10d287c895573f7108da1b3)
+2026-10-30T08:45:49.3363687Z Download action repository 'actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+2026-10-30T08:45:50.1579797Z Complete job name: conclusion

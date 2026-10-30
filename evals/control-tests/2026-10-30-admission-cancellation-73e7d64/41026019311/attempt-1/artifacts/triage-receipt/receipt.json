@@ -1,0 +1,47 @@
+{
+  "status": "published",
+  "proposal": {
+    "label": "needs reproducible example",
+    "comment": "Could you share a small, shareable CSV file that still triggers the error when run with `SELECT * FROM read_csv('input.csv');` and include the complete, exact error message (copy-paste) produced by the DuckDB CLI? You\u2019ve provided the DuckDB version and command; the CSV contents that cause the reported \u201cConversion Error: CSV Error on Line: 4\u201d are required to reproduce the failure.",
+    "rationale": "The report describes a conversion error but omits the input CSV. Reproducing the failure requires the CSV contents (or an equivalent generated sample) that trigger the error; without it the reported step cannot be followed despite having the DuckDB version, OS and SQL command."
+  },
+  "actions": [
+    "add_comment",
+    "add_label"
+  ],
+  "run_id": "41026019311",
+  "configuration_sha": "73e7d64c4a95c0cc23fd63d725499e4ad2f0fbec",
+  "input_sha256": "fe5168ac10d697be29f144d72dde3aa2f9df4df394a2df42d5557cf489446522",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "/comments?per_page=100&page=1",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/comments",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/labels",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+﻿2026-10-30T08:43:07.9785148Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-10-30T08:43:07.9785566Z with:
+2026-10-30T08:43:07.9786205Z   script: const path = require('path');
+const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require(path.join(actionsDir, 'create_files.cjs'));
+await main();
+
+2026-10-30T08:43:07.9788303Z   github-token: ***
+2026-10-30T08:43:07.9788428Z   debug: false
+2026-10-30T08:43:07.9788554Z   user-agent: actions/github-script
+2026-10-30T08:43:07.9788724Z   result-encoding: json
+2026-10-30T08:43:07.9788852Z   retries: 0
+2026-10-30T08:43:07.9788991Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-10-30T08:43:07.9789159Z env:
+2026-10-30T08:43:07.9789278Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:43:07.9789429Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:43:07.9789852Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41027810949,github.run_id=41027810949,gh-aw.engine.id=codex
+2026-10-30T08:43:07.9790284Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:43:07.9790442Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:43:07.9790614Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:43:07.9790752Z   DEFAULT_BRANCH: main
+2026-10-30T08:43:07.9790884Z   GH_AW_ASSETS_ALLOWED_EXTS: 
+2026-10-30T08:43:07.9791020Z   GH_AW_ASSETS_BRANCH: 
+2026-10-30T08:43:07.9791152Z   GH_AW_ASSETS_MAX_SIZE_KB: 0
+2026-10-30T08:43:07.9791453Z   GH_AW_MCP_LOG_DIR: /tmp/gh-aw/mcp-logs/safeoutputs
+2026-10-30T08:43:07.9791626Z   GH_AW_PR_HEAD_BASE_BRANCH: 
+2026-10-30T08:43:07.9791770Z   GH_AW_PR_HEAD_BASE_PR_NUMBER: 
+2026-10-30T08:43:07.9791911Z   GH_AW_PR_HEAD_BASE_REF: 
+2026-10-30T08:43:07.9792048Z   GH_AW_PR_HEAD_BASE_REPO: 
+2026-10-30T08:43:07.9792182Z   GH_AW_PR_HEAD_BASE_SHA: 
+2026-10-30T08:43:07.9792313Z   GH_AW_PR_HEAD_REPO: 
+2026-10-30T08:43:07.9792441Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-30T08:43:07.9792573Z   GH_AW_TARGET_REPO_SLUG: 
+2026-10-30T08:43:07.9792713Z   GH_AW_WORKFLOW_ID_SANITIZED: issuetriage
+2026-10-30T08:43:07.9792900Z   GITHUB_AW_OTEL_TRACE_ID: 9d9e374efe250ce24a37fb96e053d68e
+2026-10-30T08:43:07.9793102Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 3bfe3baf37138159
+2026-10-30T08:43:07.9793278Z   GITHUB_AW_OTEL_JOB_START_MS: 1793349766382
+2026-10-30T08:43:07.9793454Z   GH_AW_FILE_ROOT: /home/runner/work/_temp/gh-aw
+2026-10-30T08:43:07.9793728Z   GH_AW_FILE_CONFIG: {"files":[{"path":"safeoutputs/config.json","content_env":"GH_AW_SAFE_OUTPUTS_CONFIG"}]}
+2026-10-30T08:43:07.9794895Z   GH_AW_SAFE_OUTPUTS_CONFIG: {"report_incomplete":{},"submit-triage":{"description":"Submit exactly one triage decision as separate fields for trusted validation.","inputs":{"comment":{"default":null,"description":"Public clarification text, or no_action (requires label no_action)","required":true,"type":"string"},"label":{"default":null,"description":"needs reproducible example, needs more info, or no_action (requires comment no_action)","required":true,"type":"string"},"rationale":{"default":null,"description":"Nonempty private justification for the decision","required":true,"type":"string"}}}}
+2026-10-30T08:43:07.9796145Z ##[endgroup]
+2026-10-30T08:43:08.0442957Z Created 1 generated file(s) under /home/runner/work/_temp/gh-aw

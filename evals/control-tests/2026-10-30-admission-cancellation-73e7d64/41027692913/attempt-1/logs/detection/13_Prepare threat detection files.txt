@@ -1,0 +1,23 @@
+﻿2026-10-30T08:40:16.7633755Z ##[group]Run bash "${RUNNER_TEMP}/gh-aw/actions/prepare_threat_detection_files.sh"
+2026-10-30T08:40:16.7634236Z [36;1mbash "${RUNNER_TEMP}/gh-aw/actions/prepare_threat_detection_files.sh"[0m
+2026-10-30T08:40:16.7649356Z shell: /usr/bin/bash -e {0}
+2026-10-30T08:40:16.7649578Z env:
+2026-10-30T08:40:16.7649763Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:40:16.7650007Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:40:16.7650646Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41027692913,github.run_id=41027692913,gh-aw.engine.id=codex
+2026-10-30T08:40:16.7651273Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:40:16.7651522Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:40:16.7651780Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:40:16.7652004Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-30T08:40:16.7652263Z   GITHUB_AW_OTEL_TRACE_ID: 33301e3e9fc086651d49d0a7a00645d0
+2026-10-30T08:40:16.7652565Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 76b6af3d819a8537
+2026-10-30T08:40:16.7652859Z   GITHUB_AW_OTEL_JOB_START_MS: 1793349597060
+2026-10-30T08:40:16.7653097Z ##[endgroup]
+2026-10-30T08:40:16.7777018Z Prepared threat detection files:
+2026-10-30T08:40:16.7787975Z total 24
+2026-10-30T08:40:16.7788198Z drwxr-xr-x 3 runner runner 4096 Oct 30 08:40 .
+2026-10-30T08:40:16.7788514Z drwxr-xr-x 8 runner runner 4096 Oct 30 08:40 ..
+2026-10-30T08:40:16.7788846Z -rw-r--r-- 1 runner runner  668 Oct 30 08:40 agent_output.json
+2026-10-30T08:40:16.7789384Z drwxr-xr-x 2 runner runner 4096 Oct 30 08:40 aw-prompts
+2026-10-30T08:40:16.7789717Z -rw-r--r-- 1 runner runner 1519 Oct 30 08:40 aw_info.json
+2026-10-30T08:40:16.7790023Z -rw-r--r-- 1 runner runner   97 Oct 30 08:39 execution.json

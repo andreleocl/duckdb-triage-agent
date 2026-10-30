@@ -1,0 +1,35 @@
+﻿2026-10-30T08:26:01.3824872Z Current runner version: '2.338.0'
+2026-10-30T08:26:01.3850767Z ##[group]Runner Image Provisioner
+2026-10-30T08:26:01.3851692Z Hosted Compute Agent
+2026-10-30T08:26:01.3852305Z Version: 20261021.618
+2026-10-30T08:26:01.3852956Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-10-30T08:26:01.3853738Z Build Date: 2026-10-21T00:45:21Z
+2026-10-30T08:26:01.3854462Z Worker ID: {b07f3627-4440-40e4-a20f-0518d4ee1f7c}
+2026-10-30T08:26:01.3855554Z Region: northcentralus
+2026-10-30T08:26:01.3856154Z Cloud: Azure
+2026-10-30T08:26:01.3856693Z ##[endgroup]
+2026-10-30T08:26:01.3858083Z ##[group]Operating System
+2026-10-30T08:26:01.3858711Z Ubuntu
+2026-10-30T08:26:01.3859225Z 24.04.5
+2026-10-30T08:26:01.3859711Z LTS
+2026-10-30T08:26:01.3860292Z ##[endgroup]
+2026-10-30T08:26:01.3860850Z ##[group]Runner Image
+2026-10-30T08:26:01.3861460Z Image: ubuntu-24.04
+2026-10-30T08:26:01.3862015Z Version: 20261025.353.1
+2026-10-30T08:26:01.3863025Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-30T08:26:01.3864761Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
+2026-10-30T08:26:01.3865850Z ##[endgroup]
+2026-10-30T08:26:01.3866980Z ##[group]GITHUB_TOKEN Permissions
+2026-10-30T08:26:01.3869390Z Contents: read
+2026-10-30T08:26:01.3869994Z Issues: write
+2026-10-30T08:26:01.3870520Z Metadata: read
+2026-10-30T08:26:01.3871094Z ##[endgroup]
+2026-10-30T08:26:01.3873121Z Secret source: Actions
+2026-10-30T08:26:01.3874033Z Cache mode: write
+2026-10-30T08:26:01.3874732Z Prepare workflow directory
+2026-10-30T08:26:01.4566786Z Prepare all required actions
+2026-10-30T08:26:01.4640973Z Getting action download info
+2026-10-30T08:26:01.7054752Z Download action repository 'actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333' (SHA:9000827ccba6bdab643e8b6fd33ac0654aef8333)
+2026-10-30T08:26:02.0896484Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-30T08:26:02.1253734Z Download action repository 'actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+2026-10-30T08:26:02.3187320Z Complete job name: submit_triage

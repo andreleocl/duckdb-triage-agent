@@ -1,0 +1,34 @@
+﻿2026-10-30T08:29:30.2687257Z ##[group]Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+2026-10-30T08:29:30.2687869Z with:
+2026-10-30T08:29:30.2688238Z   name: info
+2026-10-30T08:29:30.2688622Z   path: /tmp/gh-aw/aw_info.json
+2026-10-30T08:29:30.2689074Z   if-no-files-found: ignore
+2026-10-30T08:29:30.2689490Z   retention-days: 0
+2026-10-30T08:29:30.2689876Z   compression-level: 6
+2026-10-30T08:29:30.2690274Z   overwrite: false
+2026-10-30T08:29:30.2690663Z   include-hidden-files: false
+2026-10-30T08:29:30.2691080Z   archive: true
+2026-10-30T08:29:30.2691443Z env:
+2026-10-30T08:29:30.2691805Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:29:30.2692242Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:29:30.2693563Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41026720311,github.run_id=41026720311,gh-aw.engine.id=codex
+2026-10-30T08:29:30.2694515Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:29:30.2694967Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:29:30.2695495Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:29:30.2695923Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-30T08:29:30.2696432Z   GITHUB_AW_OTEL_TRACE_ID: ef6fa8a265a86f16ca653656bda8b8d2
+2026-10-30T08:29:30.2696971Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 4442defca639ee18
+2026-10-30T08:29:30.2697451Z   GITHUB_AW_OTEL_JOB_START_MS: 1793348959215
+2026-10-30T08:29:30.2697887Z ##[endgroup]
+2026-10-30T08:29:30.4504548Z With the provided path, there will be 1 file uploaded
+2026-10-30T08:29:30.4511448Z Artifact name is valid!
+2026-10-30T08:29:30.4513888Z Root directory input is valid!
+2026-10-30T08:29:30.7387964Z Uploading artifact: info.zip
+2026-10-30T08:29:30.7425345Z Beginning upload of artifact content to blob storage
+2026-10-30T08:29:30.9610334Z Uploaded bytes 714
+2026-10-30T08:29:31.0090648Z Finished uploading artifact content to blob storage!
+2026-10-30T08:29:31.0096730Z SHA256 digest of uploaded artifact is 07fd0d220f3b684b22cb01d30c168a0a9bb334026083e01321456ba81245e0ac
+2026-10-30T08:29:31.0100404Z Finalizing artifact upload
+2026-10-30T08:29:31.5078896Z Artifact info successfully finalized. Artifact ID 12964256666
+2026-10-30T08:29:31.5079821Z Artifact info has been successfully uploaded! Final size is 714 bytes. Artifact ID is 12964256666
+2026-10-30T08:29:31.5081169Z Artifact download URL: https://github.com/andreleocl/duckdb-triage-agent/actions/runs/41026720311/artifacts/12964256666

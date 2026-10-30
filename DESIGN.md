@@ -89,9 +89,9 @@ Exposed resource tools permitted prohibited calls; prompts alone do not enforce 
 | Least privilege | Agent-side contents/issues/actions read; trusted publisher issues write. See workflow permissions. |
 | Safe outputs | At most one allowed label and one comment per run on a sandbox issue, with fixed-target, length and replay checks. These limits constrain actions, not accuracy; outputs can still be wrong. |
 | Human approval | Automatic publication tests actual bot effects on owner-selected sandbox issues; Andre reviews afterward. No per-comment approval gate. CODEOWNERS routes configuration review; enforced branch approval is not claimed. |
-| Budgets | [Trusted admission](scripts/triage_runtime.py) requires at most five dispatch IDs in the preceding hour across users/outcomes; unverifiable history blocks inference. Hosted enforcement is unverified. This is not a model-start or dollar cap. Agent/publisher timeouts: 10/3 minutes; AI credits: 50 triage, 20 detection; daily limiting disabled. |
-| Audit trail | Per-run inputs, commits, resolved models, tools, proposals, effects and cost estimates are saved under evals/golden/runs/. |
-| Kill switch | [Disabled-start test](evals/control-tests/2026-10-29-disabled-gate/README.md) blocked all jobs. The [historical cancellation test](evals/control-tests/2026-10-29-actual-triage-cancellation/README.md) blocked publication but detection continued. The new cancellation guard is offline-tested; hosted enforcement remains unverified. |
+| Budgets | [Trusted admission](scripts/triage_runtime.py) checks at most five dispatch IDs in the preceding hour across users/outcomes. Hosted owner/admin tests admitted five and blocked the sixth before inference; malformed-history handling remains offline-tested. This is not a model-start or dollar cap. Agent/publisher timeouts: 10/3 minutes; AI credits: 50 triage, 20 detection; daily limiting disabled. |
+| Audit trail | Inputs, commits, resolved models, tools, proposals, effects and cost estimates are retained under evals/, with separate historical, regression and control-test evidence. |
+| Kill switch | [Disabled-start test](evals/control-tests/2026-10-29-disabled-gate/README.md) blocked all jobs. [Hosted controls](evals/control-tests/2026-10-30-admission-cancellation-73e7d64/README.md) verified downstream blocking after cancellation and three rerun guards; active AI execution continued after cancellation. Six dispatches cost an estimated $0.05258080; triage was disabled afterward. |
 | Drift detection | [Manual review policy](docs/drift-review.md): Andre reviews authorized golden reruns before accepting model/runtime changes. No scheduled monitoring or automatic policy enforcement. |
 | Accountability | Andre (andreleocl) is responsible for configuration, review and disabling; see CODEOWNERS and CONTRIBUTING.md. |
 
@@ -110,10 +110,10 @@ Exposed resource tools permitted prohibited calls; prompts alone do not enforce 
    update or unexpected output. Compare labels, comments and tools, separating new
    regressions from known failures. Drift can go unnoticed until a rerun; CI is offline.
 3. **Would 300 incoming issues trigger 300 paid runs?**
-   No: issues alone start zero calls. Admission checks up to five dispatches across users in the preceding hour.
-   Failed, cancelled and blocked attempts count; incomplete history blocks admission. Old queued runs expire.
-   Retries require fresh dispatches. This checks dispatch history, not model starts or dollars per hour.
-   Hosted enforcement is unverified; see [operating limits](docs/WORKFLOW.md#limits-and-stopping) for precise rules.
+   No: issues alone start zero calls. Hosted tests admitted five owner/admin dispatches and blocked the sixth.
+   Cancelled runs counted; a short-queued fifth run passed. Full, failed-job and publisher-only retries were blocked.
+   Malformed-history, hour-long queue expiry and concurrent-actor edge cases were not exercised live.
+   The limit checks dispatch history, not model starts or dollars; see [operating limits](docs/WORKFLOW.md#limits-and-stopping).
 4. **What if malicious instructions arrive through a tool or MCP response?**
    Issue text remains untrusted despite trusted preparation. No external content
    retrieval server is configured; safeoutputs records proposals and acknowledges them.
@@ -124,8 +124,8 @@ Exposed resource tools permitted prohibited calls; prompts alone do not enforce 
 5. **How could the owner stop triage using only a phone?**
    In a phone browser, disable Issue triage, cancel queued/running runs, and set TRIAGE_ENABLED=false.
    Andre's historical phone test blocked publication but detection continued; estimated cost was $0.00986.
-   The new guard requires successful activation/agent jobs and no cancellation; hosted enforcement is unverified.
-   Cancellation is not immediate provider interruption. New controls do not retrofit older workflow revisions.
+   New API-driven tests prevented detector startup after triage cancellation and publication after either cancellation.
+   Active Codex execution still completed after cancellation; no immediate billing stop or retrofit to old revisions is claimed.
 
 ## Agent bill of materials
 

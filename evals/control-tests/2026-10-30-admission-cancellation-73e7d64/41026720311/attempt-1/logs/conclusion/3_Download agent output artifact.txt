@@ -1,0 +1,41 @@
+﻿2026-10-30T08:31:06.2098768Z ##[group]Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+2026-10-30T08:31:06.2099849Z with:
+2026-10-30T08:31:06.2100383Z   pattern: {agent,agent-output-fallback}
+2026-10-30T08:31:06.2102090Z   merge-multiple: true
+2026-10-30T08:31:06.2104969Z   path: /tmp/gh-aw/
+2026-10-30T08:31:06.2105581Z   repository: andreleocl/duckdb-triage-agent
+2026-10-30T08:31:06.2106226Z   run-id: 41026720311
+2026-10-30T08:31:06.2106745Z   skip-decompress: false
+2026-10-30T08:31:06.2108016Z   digest-mismatch: error
+2026-10-30T08:31:06.2108613Z env:
+2026-10-30T08:31:06.2110047Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:31:06.2110731Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:31:06.2118963Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41026720311,github.run_id=41026720311,gh-aw.engine.id=codex
+2026-10-30T08:31:06.2120656Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:31:06.2125765Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:31:06.2126573Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:31:06.2129461Z   GH_AW_JOB_DISPLAY_NAMES: {"activation":"activation","agent":"agent","conclusion":"conclusion","detection":"detection","pre_activation":"pre_activation","submit_triage":"submit_triage"}
+2026-10-30T08:31:06.2140719Z   GH_AW_JOB_RESULTS: {"activation":{"result":"success"},"agent":{"result":"cancelled"},"detection":{"result":"cancelled"},"submit_triage":{"result":"cancelled"}}
+2026-10-30T08:31:06.2146677Z   GH_AW_JOB_TIMING_ELIGIBLE: {"activation":true,"agent":true,"conclusion":true,"detection":true,"pre_activation":true,"submit_triage":true}
+2026-10-30T08:31:06.2148263Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-30T08:31:06.2148914Z   GITHUB_AW_OTEL_TRACE_ID: ef6fa8a265a86f16ca653656bda8b8d2
+2026-10-30T08:31:06.2149678Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 40ccd71fcd46c095
+2026-10-30T08:31:06.2151800Z   GITHUB_AW_OTEL_JOB_START_MS: 1793349066152
+2026-10-30T08:31:06.2153192Z ##[endgroup]
+2026-10-30T08:31:06.8145596Z Found 6 artifact(s)
+2026-10-30T08:31:06.8170473Z Filtering artifacts by pattern '{agent,agent-output-fallback}'
+2026-10-30T08:31:06.8333411Z Preparing to download the following artifacts:
+2026-10-30T08:31:06.8348444Z - agent (ID: 12964326634, Size: 75302, Expected Digest: sha256:b7ad0f551e4b537b2af293037fbab21032167dbbfdb449a26607d8b401f2cf32)
+2026-10-30T08:31:06.8368422Z - agent-output-fallback (ID: 12963754291, Size: 2678, Expected Digest: sha256:6487a1c92d7cdb489f9f0a9092712ca64002c41fb0eb42b1965920888bb9e64b)
+2026-10-30T08:31:07.0291698Z Redirecting to blob download url: https://productionresultssa16.blob.core.windows.net/actions-results/6bd7c852-ee1f-4183-afde-c9c48600c510/workflow-job-run-2390cd5c-a3be-59bc-b497-54521590de48/artifacts/daa0da78a4f899948f184de1c2267d4cff63de5d280692a88333f56508605a86.zip
+2026-10-30T08:31:07.0295623Z Starting download of artifact to: /tmp/gh-aw
+2026-10-30T08:31:07.0624661Z Redirecting to blob download url: https://productionresultssa16.blob.core.windows.net/actions-results/6bd7c852-ee1f-4183-afde-c9c48600c510/workflow-job-run-2390cd5c-a3be-59bc-b497-54521590de48/artifacts/d4f0bc5a29de06b510f9aa428f1eedba926012b591fef7a518e776a7c9bd1824.zip
+2026-10-30T08:31:07.0631591Z Starting download of artifact to: /tmp/gh-aw
+2026-10-30T08:31:07.0987538Z (node:2215) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-10-30T08:31:07.1048541Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-30T08:31:07.1438252Z SHA256 digest of downloaded artifact is 6487a1c92d7cdb489f9f0a9092712ca64002c41fb0eb42b1965920888bb9e64b
+2026-10-30T08:31:07.1444470Z Artifact download completed successfully.
+2026-10-30T08:31:07.3292585Z SHA256 digest of downloaded artifact is b7ad0f551e4b537b2af293037fbab21032167dbbfdb449a26607d8b401f2cf32
+2026-10-30T08:31:07.3297859Z Artifact download completed successfully.
+2026-10-30T08:31:07.3302365Z Total of 2 artifact(s) downloaded
+2026-10-30T08:31:07.3313124Z Download artifact has finished successfully

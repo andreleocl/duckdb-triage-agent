@@ -139,9 +139,12 @@ reports are not available to the agent (notably h10/h11/h21).
 Use fresh isolated sessions and sandbox issues only in andreleocl/duckdb-triage-agent.
 For hosted retries, create fresh main-branch dispatches; do not use GitHub job reruns.
 Pace authorized batches within the [admission policy](../docs/WORKFLOW.md#limits-and-stopping).
-The new dispatch-history limit and cancellation guard are offline-tested; hosted
-enforcement remains unverified. Existing runs predate these controls and do not
-validate them; retain each run's configuration attribution and record new tests separately.
+Hosted tests verified owner admission, three rerun routes and downstream cancellation
+blocking; remaining edge cases and continued active AI execution are documented in
+the separate [control report](control-tests/2026-10-30-admission-cancellation-73e7d64/README.md).
+The original historical/adversarial batches and revised-skill regression runs predate
+these controls and do not validate them. Retain each run's configuration attribution;
+control-test results do not change golden scores.
 Neutralize mentions/GitHub references in replay copies, preserve originals and
 log transformations. Do not browse upstream during agent execution or run supplied
 SQL. If sanitization removes essential context, disclose or skip rather than

@@ -1,0 +1,12 @@
+﻿2026-10-30T08:33:31.3583966Z Evaluate and set job outputs
+2026-10-30T08:33:31.3601351Z Set output 'aw_context'
+2026-10-30T08:33:31.3603911Z Set output 'engine_id'
+2026-10-30T08:33:31.3604974Z Set output 'lockdown_check_failed'
+2026-10-30T08:33:31.3605689Z Set output 'model'
+2026-10-30T08:33:31.3606294Z Set output 'oauth_token_check_failed'
+2026-10-30T08:33:31.3606959Z Set output 'secret_verification_result'
+2026-10-30T08:33:31.3607634Z Set output 'setup-parent-span-id'
+2026-10-30T08:33:31.3608280Z Set output 'setup-span-id'
+2026-10-30T08:33:31.3608911Z Set output 'setup-trace-id'
+2026-10-30T08:33:31.3609518Z Set output 'stale_lock_file_failed'
+2026-10-30T08:33:31.3610574Z Cleaning up orphan processes

@@ -1,0 +1,34 @@
+﻿2026-10-30T08:37:57.3411097Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-10-30T08:37:57.3412031Z with:
+2026-10-30T08:37:57.3414541Z   script: const path = require('path');
+const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require(path.join(actionsDir, 'check_version_updates.cjs'));
+await main();
+
+2026-10-30T08:37:57.3420538Z   github-token: ***
+2026-10-30T08:37:57.3421126Z   debug: false
+2026-10-30T08:37:57.3421668Z   user-agent: actions/github-script
+2026-10-30T08:37:57.3422307Z   result-encoding: json
+2026-10-30T08:37:57.3423072Z   retries: 0
+2026-10-30T08:37:57.3423667Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-10-30T08:37:57.3424355Z env:
+2026-10-30T08:37:57.3424848Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:37:57.3425463Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:37:57.3427032Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41027692913,github.run_id=41027692913,gh-aw.engine.id=codex
+2026-10-30T08:37:57.3428635Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:37:57.3429293Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:37:57.3429980Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:37:57.3430597Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-30T08:37:57.3431270Z   GITHUB_AW_OTEL_TRACE_ID: 33301e3e9fc086651d49d0a7a00645d0
+2026-10-30T08:37:57.3432099Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 103b5ff4d73a43f9
+2026-10-30T08:37:57.3433014Z   GITHUB_AW_OTEL_JOB_START_MS: 1793349471247
+2026-10-30T08:37:57.3433709Z   GH_AW_COMPILED_VERSION: v0.93.5
+2026-10-30T08:37:57.3434343Z   GH_AW_HAS_SAFE_OUTPUTS: true
+2026-10-30T08:37:57.3434991Z   GH_AW_BLOCKED_VERSION_REPORT_AS_ISSUE: false
+2026-10-30T08:37:57.3435717Z   GH_AW_WORKFLOW_NAME: DuckDB issue triage
+2026-10-30T08:37:57.3436366Z ##[endgroup]
+2026-10-30T08:37:57.4736953Z Checking compile-agentic version: v0.93.5
+2026-10-30T08:37:57.4743595Z Fetching update configuration from: https://raw.githubusercontent.com/github/gh-aw-actions/main/.github/aw/compat.json
+2026-10-30T08:37:57.5417860Z ✅ Version check passed: v0.93.5

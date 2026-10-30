@@ -1,0 +1,52 @@
+﻿2026-10-30T08:31:11.0246541Z ##[group]Run bash "${RUNNER_TEMP}/gh-aw/actions/collect_usage_artifact_files.sh"
+2026-10-30T08:31:11.0249262Z [36;1mbash "${RUNNER_TEMP}/gh-aw/actions/collect_usage_artifact_files.sh"[0m
+2026-10-30T08:31:11.0259486Z shell: /usr/bin/bash -e {0}
+2026-10-30T08:31:11.0260587Z env:
+2026-10-30T08:31:11.0261758Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:31:11.0262957Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:31:11.0267248Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41026720311,github.run_id=41026720311,gh-aw.engine.id=codex
+2026-10-30T08:31:11.0271290Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:31:11.0272583Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:31:11.0274487Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:31:11.0280252Z   GH_AW_JOB_DISPLAY_NAMES: {"activation":"activation","agent":"agent","conclusion":"conclusion","detection":"detection","pre_activation":"pre_activation","submit_triage":"submit_triage"}
+2026-10-30T08:31:11.0294244Z   GH_AW_JOB_RESULTS: {"activation":{"result":"success"},"agent":{"result":"cancelled"},"detection":{"result":"cancelled"},"submit_triage":{"result":"cancelled"}}
+2026-10-30T08:31:11.0301438Z   GH_AW_JOB_TIMING_ELIGIBLE: {"activation":true,"agent":true,"conclusion":true,"detection":true,"pre_activation":true,"submit_triage":true}
+2026-10-30T08:31:11.0304633Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-30T08:31:11.0306492Z   GITHUB_AW_OTEL_TRACE_ID: ef6fa8a265a86f16ca653656bda8b8d2
+2026-10-30T08:31:11.0308124Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 40ccd71fcd46c095
+2026-10-30T08:31:11.0310321Z   GITHUB_AW_OTEL_JOB_START_MS: 1793349066152
+2026-10-30T08:31:11.0313328Z   GH_AW_DETECTION_JOB_RESULT: cancelled
+2026-10-30T08:31:11.0314617Z   GH_AW_DETECTION_CONCLUSION: 
+2026-10-30T08:31:11.0315721Z   GH_AW_DETECTION_REASON: 
+2026-10-30T08:31:11.0316738Z ##[endgroup]
+2026-10-30T08:31:11.0423513Z Usage artifact source file status:
+2026-10-30T08:31:11.0425037Z MISSING: /tmp/gh-aw/aw_info.json
+2026-10-30T08:31:11.0426449Z MISSING: /tmp/gh-aw/runtime/aw_info.json
+2026-10-30T08:31:11.0430522Z MISSING: /tmp/gh-aw/aw-info.jsonl
+2026-10-30T08:31:11.0435259Z FOUND: /tmp/gh-aw/agent_usage.json
+2026-10-30T08:31:11.0436512Z MISSING: /tmp/gh-aw/agent_usage.jsonl
+2026-10-30T08:31:11.0439096Z MISSING: /tmp/gh-aw/detection_usage.jsonl
+2026-10-30T08:31:11.0442118Z MISSING: /tmp/gh-aw/threat-detection/detection_usage.jsonl
+2026-10-30T08:31:11.0447984Z MISSING: /tmp/gh-aw/evals/evals.jsonl
+2026-10-30T08:31:11.0449466Z MISSING: /tmp/gh-aw/evals/evals_token_usage.jsonl
+2026-10-30T08:31:11.0452605Z MISSING: /tmp/gh-aw/evals/execution.json
+2026-10-30T08:31:11.0454019Z MISSING: /tmp/gh-aw/evals/evals/execution.json
+2026-10-30T08:31:11.0455464Z MISSING: /tmp/gh-aw/experiments/state.jsonl
+2026-10-30T08:31:11.0460193Z MISSING: /tmp/gh-aw/experiments/state.json
+2026-10-30T08:31:11.0461903Z MISSING: /tmp/gh-aw/experiments/assignments.json
+2026-10-30T08:31:11.0463382Z FOUND: /tmp/gh-aw/github_rate_limits.jsonl
+2026-10-30T08:31:11.0464776Z MISSING: /tmp/gh-aw/safe-output-items.jsonl
+2026-10-30T08:31:11.0474160Z MISSING: /tmp/gh-aw/sandbox/firewall-audit-logs/api-proxy-logs/token-usage.jsonl
+2026-10-30T08:31:11.0476774Z MISSING: /tmp/gh-aw/sandbox/firewall-audit-logs/api-proxy-logs/model-routing.jsonl
+2026-10-30T08:31:11.0480431Z FOUND: /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+2026-10-30T08:31:11.0493205Z MISSING: /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/model-routing.jsonl
+2026-10-30T08:31:11.0509811Z MISSING: /tmp/gh-aw/sandbox/firewall/audit/api-proxy-logs/token-usage.jsonl
+2026-10-30T08:31:11.0514670Z MISSING: /tmp/gh-aw/sandbox/firewall/audit/api-proxy-logs/model-routing.jsonl
+2026-10-30T08:31:11.0518095Z MISSING: /tmp/gh-aw/threat-detection/sandbox/firewall-audit-logs/api-proxy-logs/token-usage.jsonl
+2026-10-30T08:31:11.0524388Z MISSING: /tmp/gh-aw/threat-detection/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+2026-10-30T08:31:11.0527235Z MISSING: /tmp/gh-aw/threat-detection/sandbox/firewall/audit/api-proxy-logs/token-usage.jsonl
+2026-10-30T08:31:11.3973768Z /tmp/gh-aw/usage/agent/execution.json
+2026-10-30T08:31:11.3975192Z /tmp/gh-aw/usage/agent/token_usage.jsonl
+2026-10-30T08:31:11.3976455Z /tmp/gh-aw/usage/agent_usage.json
+2026-10-30T08:31:11.3979272Z /tmp/gh-aw/usage/detection/token_usage.jsonl
+2026-10-30T08:31:11.3997757Z /tmp/gh-aw/usage/github_rate_limits.jsonl

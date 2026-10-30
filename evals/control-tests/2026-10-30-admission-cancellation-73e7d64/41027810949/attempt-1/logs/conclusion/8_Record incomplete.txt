@@ -1,0 +1,38 @@
+﻿2026-10-30T08:45:59.2924395Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-10-30T08:45:59.2926362Z with:
+2026-10-30T08:45:59.2938561Z   github-token: ***
+2026-10-30T08:45:59.2944677Z   script: const path = require('path');
+const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require(path.join(actionsDir, 'report_incomplete_handler.cjs'));
+await main();
+
+2026-10-30T08:45:59.2951637Z   debug: false
+2026-10-30T08:45:59.2953103Z   user-agent: actions/github-script
+2026-10-30T08:45:59.2954448Z   result-encoding: json
+2026-10-30T08:45:59.2955550Z   retries: 0
+2026-10-30T08:45:59.2956681Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-10-30T08:45:59.2958083Z env:
+2026-10-30T08:45:59.2959080Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:45:59.2960692Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:45:59.2964424Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41027810949,github.run_id=41027810949,gh-aw.engine.id=codex
+2026-10-30T08:45:59.2968365Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:45:59.2970031Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:45:59.2971683Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:45:59.2975522Z   GH_AW_JOB_DISPLAY_NAMES: {"activation":"activation","agent":"agent","conclusion":"conclusion","detection":"detection","pre_activation":"pre_activation","submit_triage":"submit_triage"}
+2026-10-30T08:45:59.2980466Z   GH_AW_JOB_RESULTS: {"activation":{"result":"success"},"agent":{"result":"success"},"detection":{"result":"success"},"submit_triage":{"result":"success"}}
+2026-10-30T08:45:59.2984973Z   GH_AW_JOB_TIMING_ELIGIBLE: {"activation":true,"agent":true,"conclusion":true,"detection":true,"pre_activation":true,"submit_triage":true}
+2026-10-30T08:45:59.2987630Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-30T08:45:59.2991486Z   GITHUB_AW_OTEL_TRACE_ID: 9d9e374efe250ce24a37fb96e053d68e
+2026-10-30T08:45:59.2993225Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 816b0b9c6584ce17
+2026-10-30T08:45:59.2995207Z   GITHUB_AW_OTEL_JOB_START_MS: 1793349955686
+2026-10-30T08:45:59.2996748Z   GH_AW_AGENT_OUTPUT: /tmp/gh-aw/agent_output.json
+2026-10-30T08:45:59.2998314Z   GH_AW_REPORT_INCOMPLETE_CREATE_ISSUE: false
+2026-10-30T08:45:59.3000557Z   GH_AW_REPORT_INCOMPLETE_TITLE_PREFIX: [incomplete]
+2026-10-30T08:45:59.3002283Z   GH_AW_WORKFLOW_NAME: DuckDB issue triage
+2026-10-30T08:45:59.3005802Z   GH_AW_WORKFLOW_SOURCE_URL: https://github.com/andreleocl/duckdb-triage-agent/blob/main/.github/workflows/issue-triage.md
+2026-10-30T08:45:59.3009693Z   GH_AW_ENGINE_ID: codex
+2026-10-30T08:45:59.3010883Z   GH_AW_ENGINE_MODEL: gpt-5-mini
+2026-10-30T08:45:59.3012514Z ##[endgroup]
+2026-10-30T08:45:59.4580784Z Max count: unlimited

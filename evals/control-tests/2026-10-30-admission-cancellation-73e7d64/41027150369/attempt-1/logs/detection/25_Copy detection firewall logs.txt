@@ -1,0 +1,19 @@
+﻿2026-10-30T08:35:58.7401737Z ##[group]Run mkdir -p /tmp/gh-aw/threat-detection/sandbox/firewall
+2026-10-30T08:35:58.7402420Z [36;1mmkdir -p /tmp/gh-aw/threat-detection/sandbox/firewall[0m
+2026-10-30T08:35:58.7403397Z [36;1mif [ -d /tmp/gh-aw/sandbox/firewall/logs ]; then mkdir -p /tmp/gh-aw/threat-detection/sandbox/firewall/logs && cp -r /tmp/gh-aw/sandbox/firewall/logs/. /tmp/gh-aw/threat-detection/sandbox/firewall/logs/; fi[0m
+2026-10-30T08:35:58.7404852Z [36;1mif [ -d /tmp/gh-aw/sandbox/firewall/audit ]; then mkdir -p /tmp/gh-aw/threat-detection/sandbox/firewall/audit && cp -r /tmp/gh-aw/sandbox/firewall/audit/. /tmp/gh-aw/threat-detection/sandbox/firewall/audit/; fi[0m
+2026-10-30T08:35:58.7426660Z shell: /usr/bin/bash -e {0}
+2026-10-30T08:35:58.7426954Z env:
+2026-10-30T08:35:58.7427179Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:35:58.7427489Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:35:58.7428379Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41027150369,github.run_id=41027150369,gh-aw.engine.id=codex
+2026-10-30T08:35:58.7429256Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:35:58.7429556Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:35:58.7429897Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:35:58.7430176Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-30T08:35:58.7430734Z   GITHUB_AW_OTEL_TRACE_ID: 444e1ed1e928095a5c4cb9820a2c963d
+2026-10-30T08:35:58.7431186Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 8081892fc1eefc12
+2026-10-30T08:35:58.7431533Z   GITHUB_AW_OTEL_JOB_START_MS: 1793349305294
+2026-10-30T08:35:58.7431894Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+2026-10-30T08:35:58.7432396Z   AWF_TOKEN_USAGE_LOG: /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+2026-10-30T08:35:58.7432850Z ##[endgroup]

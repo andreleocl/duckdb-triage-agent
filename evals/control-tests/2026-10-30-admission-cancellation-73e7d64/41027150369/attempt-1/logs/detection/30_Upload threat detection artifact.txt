@@ -1,0 +1,47 @@
+﻿2026-10-30T08:36:01.7339857Z ##[group]Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+2026-10-30T08:36:01.7340389Z with:
+2026-10-30T08:36:01.7340895Z   name: detection
+2026-10-30T08:36:01.7342147Z   path: /tmp/gh-aw/threat-detection/detection_result.json
+/tmp/gh-aw/threat-detection/execution.json
+/tmp/gh-aw/threat-detection/detection_usage.json
+/tmp/gh-aw/threat-detection/detection_usage.jsonl
+/tmp/gh-aw/threat-detection/sandbox/firewall/logs/
+/tmp/gh-aw/threat-detection/sandbox/firewall/audit/
+
+2026-10-30T08:36:01.7343609Z   if-no-files-found: ignore
+2026-10-30T08:36:01.7343970Z   retention-days: 0
+2026-10-30T08:36:01.7344364Z   compression-level: 6
+2026-10-30T08:36:01.7344676Z   overwrite: false
+2026-10-30T08:36:01.7345002Z   include-hidden-files: false
+2026-10-30T08:36:01.7345591Z   archive: true
+2026-10-30T08:36:01.7346032Z env:
+2026-10-30T08:36:01.7346325Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:36:01.7346658Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:36:01.7347515Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41027150369,github.run_id=41027150369,gh-aw.engine.id=codex
+2026-10-30T08:36:01.7348389Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:36:01.7348704Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:36:01.7349040Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:36:01.7349352Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-30T08:36:01.7349683Z   GITHUB_AW_OTEL_TRACE_ID: 444e1ed1e928095a5c4cb9820a2c963d
+2026-10-30T08:36:01.7350125Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 8081892fc1eefc12
+2026-10-30T08:36:01.7350769Z   GITHUB_AW_OTEL_JOB_START_MS: 1793349305294
+2026-10-30T08:36:01.7351143Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+2026-10-30T08:36:01.7351631Z   AWF_TOKEN_USAGE_LOG: /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+2026-10-30T08:36:01.7352117Z   GH_AW_PRIMARY_MODEL: gpt-5-mini-2025-08-07
+2026-10-30T08:36:01.7352418Z   GH_AW_AIC: 0.736685
+2026-10-30T08:36:01.7352668Z   GH_AW_AMBIENT_CONTEXT: 18910
+2026-10-30T08:36:01.7352943Z ##[endgroup]
+2026-10-30T08:36:01.9100282Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-10-30T08:36:01.9105595Z The least common ancestor is /tmp/gh-aw/threat-detection. This will be the root directory of the artifact
+2026-10-30T08:36:01.9107156Z With the provided path, there will be 17 files uploaded
+2026-10-30T08:36:01.9114040Z Artifact name is valid!
+2026-10-30T08:36:01.9115019Z Root directory input is valid!
+2026-10-30T08:36:02.1698139Z Uploading artifact: detection.zip
+2026-10-30T08:36:02.1743632Z Beginning upload of artifact content to blob storage
+2026-10-30T08:36:02.3363489Z Uploaded bytes 21622
+2026-10-30T08:36:02.3647527Z Finished uploading artifact content to blob storage!
+2026-10-30T08:36:02.3649342Z SHA256 digest of uploaded artifact is aaff9063e55ec8a8844feeaedbbd7260bc146391edf561201ff5f7a70b9c7d5f
+2026-10-30T08:36:02.3651130Z Finalizing artifact upload
+2026-10-30T08:36:02.8798737Z Artifact detection successfully finalized. Artifact ID 12964272934
+2026-10-30T08:36:02.8800285Z Artifact detection has been successfully uploaded! Final size is 21622 bytes. Artifact ID is 12964272934
+2026-10-30T08:36:02.8803467Z Artifact download URL: https://github.com/andreleocl/duckdb-triage-agent/actions/runs/41027150369/artifacts/12964272934

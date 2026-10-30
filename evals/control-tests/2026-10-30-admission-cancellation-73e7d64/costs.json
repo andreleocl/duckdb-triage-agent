@@ -1,0 +1,150 @@
+{
+  "runs": [
+    {
+      "run_id": 41026019311,
+      "stages": {
+        "agent": {
+          "recorded_requests": 4,
+          "estimated_usd": 0.00438275,
+          "models": [
+            "gpt-5-mini-2025-08-07"
+          ],
+          "usage_files": [
+            "41026019311/attempt-1/artifacts/agent/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl"
+          ]
+        },
+        "detection": {
+          "recorded_requests": 2,
+          "estimated_usd": 0.00605885,
+          "models": [
+            "gpt-5-mini-2025-08-07"
+          ],
+          "usage_files": [
+            "41026019311/attempt-1/artifacts/detection/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl"
+          ]
+        }
+      },
+      "estimated_usd": 0.0104416
+    },
+    {
+      "run_id": 41026720311,
+      "stages": {
+        "agent": {
+          "recorded_requests": 6,
+          "estimated_usd": 0.0070353,
+          "models": [
+            "gpt-5-mini-2025-08-07"
+          ],
+          "usage_files": [
+            "41026720311/attempt-1/artifacts/agent/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl"
+          ]
+        },
+        "detection": {
+          "recorded_requests": 0,
+          "estimated_usd": 0,
+          "models": [],
+          "usage_files": []
+        }
+      },
+      "estimated_usd": 0.0070353
+    },
+    {
+      "run_id": 41027150369,
+      "stages": {
+        "agent": {
+          "recorded_requests": 3,
+          "estimated_usd": 0.00381925,
+          "models": [
+            "gpt-5-mini-2025-08-07"
+          ],
+          "usage_files": [
+            "41027150369/attempt-1/artifacts/agent/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl"
+          ]
+        },
+        "detection": {
+          "recorded_requests": 3,
+          "estimated_usd": 0.00736685,
+          "models": [
+            "gpt-5-mini-2025-08-07"
+          ],
+          "usage_files": [
+            "41027150369/attempt-1/artifacts/detection/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl"
+          ]
+        }
+      },
+      "estimated_usd": 0.0111861
+    },
+    {
+      "run_id": 41027692913,
+      "stages": {
+        "agent": {
+          "recorded_requests": 3,
+          "estimated_usd": 0.0038702,
+          "models": [
+            "gpt-5-mini-2025-08-07"
+          ],
+          "usage_files": [
+            "41027692913/attempt-1/artifacts/agent/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl"
+          ]
+        },
+        "detection": {
+          "recorded_requests": 3,
+          "estimated_usd": 0.00735505,
+          "models": [
+            "gpt-5-mini-2025-08-07"
+          ],
+          "usage_files": [
+            "41027692913/attempt-1/artifacts/detection/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl"
+          ]
+        }
+      },
+      "estimated_usd": 0.01122525
+    },
+    {
+      "run_id": 41027810949,
+      "stages": {
+        "agent": {
+          "recorded_requests": 4,
+          "estimated_usd": 0.0044434,
+          "models": [
+            "gpt-5-mini-2025-08-07"
+          ],
+          "usage_files": [
+            "41027810949/attempt-1/artifacts/agent/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl"
+          ]
+        },
+        "detection": {
+          "recorded_requests": 3,
+          "estimated_usd": 0.00824915,
+          "models": [
+            "gpt-5-mini-2025-08-07"
+          ],
+          "usage_files": [
+            "41027810949/attempt-1/artifacts/detection/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl"
+          ]
+        }
+      },
+      "estimated_usd": 0.01269255
+    },
+    {
+      "run_id": 41028388343,
+      "stages": {
+        "agent": {
+          "recorded_requests": 0,
+          "estimated_usd": 0,
+          "models": [],
+          "usage_files": []
+        },
+        "detection": {
+          "recorded_requests": 0,
+          "estimated_usd": 0,
+          "models": [],
+          "usage_files": []
+        }
+      },
+      "estimated_usd": 0
+    }
+  ],
+  "total_recorded_estimate_usd": 0.0525808,
+  "note": "Recorded token estimates, not provider invoice; cancelled/in-flight requests may be absent."
+}

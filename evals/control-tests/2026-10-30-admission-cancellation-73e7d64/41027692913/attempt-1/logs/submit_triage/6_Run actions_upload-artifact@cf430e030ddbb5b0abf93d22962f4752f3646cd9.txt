@@ -1,0 +1,46 @@
+﻿2026-10-30T08:41:20.6105132Z ##[group]Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+2026-10-30T08:41:20.6105625Z with:
+2026-10-30T08:41:20.6105854Z   if-no-files-found: warn
+2026-10-30T08:41:20.6106118Z   include-hidden-files: true
+2026-10-30T08:41:20.6106389Z   name: triage-receipt
+2026-10-30T08:41:20.6106631Z   path: .triage/receipt.json
+2026-10-30T08:41:20.6106887Z   retention-days: 30
+2026-10-30T08:41:20.6107114Z   compression-level: 6
+2026-10-30T08:41:20.6107342Z   overwrite: false
+2026-10-30T08:41:20.6107550Z   archive: true
+2026-10-30T08:41:20.6107768Z env:
+2026-10-30T08:41:20.6107967Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:41:20.6108248Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:41:20.6109078Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41027692913,github.run_id=41027692913,gh-aw.engine.id=codex
+2026-10-30T08:41:20.6109898Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:41:20.6110192Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:41:20.6110535Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:41:20.6110791Z   GH_AW_AGENT_AIC: 0.38702
+2026-10-30T08:41:20.6111021Z   GH_AW_AIC: 0.38702
+2026-10-30T08:41:20.6111248Z   GH_AW_AMBIENT_CONTEXT: 9244
+2026-10-30T08:41:20.6111600Z   GH_AW_CALLER_WORKFLOW_ID: andreleocl/duckdb-triage-agent/issue-triage
+2026-10-30T08:41:20.6112000Z   GH_AW_DETECTION_CONCLUSION: success
+2026-10-30T08:41:20.6112271Z   GH_AW_DETECTION_REASON: 
+2026-10-30T08:41:20.6112512Z   GH_AW_ENGINE_ID: codex
+2026-10-30T08:41:20.6112759Z   GH_AW_ENGINE_MODEL: gpt-5-mini
+2026-10-30T08:41:20.6113022Z   GH_AW_RUN_DETECTION: true
+2026-10-30T08:41:20.6113330Z   GH_AW_SAFE_OUTPUT_MESSAGES: {"activationComments":"false"}
+2026-10-30T08:41:20.6113687Z   GH_AW_THREAT_DETECTION_AIC: 0.735505
+2026-10-30T08:41:20.6113968Z   GH_AW_WORKFLOW_ID: issue-triage
+2026-10-30T08:41:20.6114244Z   GH_AW_WORKFLOW_NAME: DuckDB issue triage
+2026-10-30T08:41:20.6115037Z   GH_AW_WORKFLOW_SOURCE_URL: https://github.com/andreleocl/duckdb-triage-agent/blob/main/.github/workflows/issue-triage.md
+2026-10-30T08:41:20.6115869Z   GH_AW_AGENT_OUTPUT: /home/runner/work/_temp/gh-aw/safe-jobs/agent_output.json
+2026-10-30T08:41:20.6116298Z   GH_AW_JOB_CHECK_RUN_ID: 123970998869
+2026-10-30T08:41:20.6116560Z ##[endgroup]
+2026-10-30T08:41:20.7560413Z With the provided path, there will be 1 file uploaded
+2026-10-30T08:41:20.7566998Z Artifact name is valid!
+2026-10-30T08:41:20.7567726Z Root directory input is valid!
+2026-10-30T08:41:21.1333530Z Uploading artifact: triage-receipt.zip
+2026-10-30T08:41:21.1375167Z Beginning upload of artifact content to blob storage
+2026-10-30T08:41:21.4587398Z Uploaded bytes 797
+2026-10-30T08:41:21.5351669Z Finished uploading artifact content to blob storage!
+2026-10-30T08:41:21.5353309Z SHA256 digest of uploaded artifact is 86dc53295ab01a8ca66fe2251c6c06102e14cdf087dddbe1d075e289e799e265
+2026-10-30T08:41:21.5354731Z Finalizing artifact upload
+2026-10-30T08:41:22.1369410Z Artifact triage-receipt successfully finalized. Artifact ID 12964457703
+2026-10-30T08:41:22.1370344Z Artifact triage-receipt has been successfully uploaded! Final size is 797 bytes. Artifact ID is 12964457703
+2026-10-30T08:41:22.1374575Z Artifact download URL: https://github.com/andreleocl/duckdb-triage-agent/actions/runs/41027692913/artifacts/12964457703

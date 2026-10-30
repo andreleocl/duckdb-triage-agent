@@ -1,0 +1,19 @@
+﻿2026-10-30T08:31:07.4780337Z ##[group]Run echo "::warning::Threat detection produced no security verdict. Review the detection job logs before trusting the agent outputs."
+2026-10-30T08:31:07.4852646Z [36;1mecho "::warning::Threat detection produced no security verdict. Review the detection job logs before trusting the agent outputs."[0m
+2026-10-30T08:31:07.4870538Z shell: /usr/bin/bash -e {0}
+2026-10-30T08:31:07.4872695Z env:
+2026-10-30T08:31:07.4873345Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:31:07.4874012Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:31:07.4875808Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41026720311,github.run_id=41026720311,gh-aw.engine.id=codex
+2026-10-30T08:31:07.4877631Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:31:07.4932636Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:31:07.4933978Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:31:07.4935458Z   GH_AW_JOB_DISPLAY_NAMES: {"activation":"activation","agent":"agent","conclusion":"conclusion","detection":"detection","pre_activation":"pre_activation","submit_triage":"submit_triage"}
+2026-10-30T08:31:07.4937677Z   GH_AW_JOB_RESULTS: {"activation":{"result":"success"},"agent":{"result":"cancelled"},"detection":{"result":"cancelled"},"submit_triage":{"result":"cancelled"}}
+2026-10-30T08:31:07.4939550Z   GH_AW_JOB_TIMING_ELIGIBLE: {"activation":true,"agent":true,"conclusion":true,"detection":true,"pre_activation":true,"submit_triage":true}
+2026-10-30T08:31:07.4940810Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-30T08:31:07.4941882Z   GITHUB_AW_OTEL_TRACE_ID: ef6fa8a265a86f16ca653656bda8b8d2
+2026-10-30T08:31:07.4942742Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 40ccd71fcd46c095
+2026-10-30T08:31:07.4943471Z   GITHUB_AW_OTEL_JOB_START_MS: 1793349066152
+2026-10-30T08:31:07.4944120Z ##[endgroup]
+2026-10-30T08:31:07.5045127Z ##[warning]Threat detection produced no security verdict. Review the detection job logs before trusting the agent outputs.

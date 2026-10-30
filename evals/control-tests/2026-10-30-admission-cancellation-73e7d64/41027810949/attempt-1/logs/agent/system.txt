@@ -1,0 +1,9 @@
+2026-10-30T08:42:38.2600000Z Evaluating agent.if
+2026-10-30T08:42:38.2600000Z Evaluating: (success() && ((github.run_attempt == 1)))
+2026-10-30T08:42:38.2600000Z Expanded: (true && ('1' == 1))
+2026-10-30T08:42:38.2600000Z Result: true
+2026-10-30T08:42:38.2630000Z Requested labels: ubuntu-latest
+2026-10-30T08:42:38.2630000Z Job defined at: andreleocl/duckdb-triage-agent/.github/workflows/issue-triage.lock.yml@refs/heads/main
+2026-10-30T08:42:38.2630000Z Waiting for a runner to pick up this job...
+2026-10-30T08:42:38.4950000Z Job is about to start running on the hosted runner: GitHub Actions 1000002172
+2026-10-30T08:42:38.4950000Z Job is waiting for a hosted runner to come online.

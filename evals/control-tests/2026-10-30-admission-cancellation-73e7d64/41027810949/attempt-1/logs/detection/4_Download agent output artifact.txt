@@ -1,0 +1,38 @@
+﻿2026-10-30T08:44:14.2475154Z ##[group]Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+2026-10-30T08:44:14.2475586Z with:
+2026-10-30T08:44:14.2475819Z   pattern: {agent,agent-output-fallback}
+2026-10-30T08:44:14.2476108Z   merge-multiple: true
+2026-10-30T08:44:14.2476336Z   path: /tmp/gh-aw/
+2026-10-30T08:44:14.2476587Z   repository: andreleocl/duckdb-triage-agent
+2026-10-30T08:44:14.2476877Z   run-id: 41027810949
+2026-10-30T08:44:14.2477097Z   skip-decompress: false
+2026-10-30T08:44:14.2477397Z   digest-mismatch: error
+2026-10-30T08:44:14.2477778Z env:
+2026-10-30T08:44:14.2478026Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:44:14.2478313Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:44:14.2479406Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41027810949,github.run_id=41027810949,gh-aw.engine.id=codex
+2026-10-30T08:44:14.2480235Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:44:14.2480517Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:44:14.2480853Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:44:14.2481099Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-30T08:44:14.2481393Z   GITHUB_AW_OTEL_TRACE_ID: 9d9e374efe250ce24a37fb96e053d68e
+2026-10-30T08:44:14.2481753Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 4b4e4eec2a649766
+2026-10-30T08:44:14.2482058Z   GITHUB_AW_OTEL_JOB_START_MS: 1793349853397
+2026-10-30T08:44:14.2482333Z ##[endgroup]
+2026-10-30T08:44:14.4867874Z Found 6 artifact(s)
+2026-10-30T08:44:14.4869960Z Filtering artifacts by pattern '{agent,agent-output-fallback}'
+2026-10-30T08:44:14.4920438Z Preparing to download the following artifacts:
+2026-10-30T08:44:14.4922140Z - agent-output-fallback (ID: 12964054081, Size: 2434, Expected Digest: sha256:c476b0e3e762a67ad27b3627885ff13715fcf4082101028c7ad88f74d6458224)
+2026-10-30T08:44:14.4927354Z - agent (ID: 12963989182, Size: 74951, Expected Digest: sha256:45c28813ba37eff53260fc188af3f40a5a433b6826bd5de2ff64712e8f38d730)
+2026-10-30T08:44:14.6563118Z Redirecting to blob download url: https://productionresultssa12.blob.core.windows.net/actions-results/c96acafa-1689-4e90-87e5-cd43abafe058/workflow-job-run-65135628-5adc-59dd-a3ce-1ddf5740fea1/artifacts/daa0da78a4f899948f184de1c2267d4cff63de5d280692a88333f56508605a86.zip
+2026-10-30T08:44:14.6565750Z Starting download of artifact to: /tmp/gh-aw
+2026-10-30T08:44:14.6769078Z Redirecting to blob download url: https://productionresultssa12.blob.core.windows.net/actions-results/c96acafa-1689-4e90-87e5-cd43abafe058/workflow-job-run-65135628-5adc-59dd-a3ce-1ddf5740fea1/artifacts/d4f0bc5a29de06b510f9aa428f1eedba926012b591fef7a518e776a7c9bd1824.zip
+2026-10-30T08:44:14.6771708Z Starting download of artifact to: /tmp/gh-aw
+2026-10-30T08:44:14.6858468Z (node:4383) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-10-30T08:44:14.6860619Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-30T08:44:14.6986363Z SHA256 digest of downloaded artifact is c476b0e3e762a67ad27b3627885ff13715fcf4082101028c7ad88f74d6458224
+2026-10-30T08:44:14.6987494Z Artifact download completed successfully.
+2026-10-30T08:44:14.7376038Z SHA256 digest of downloaded artifact is 45c28813ba37eff53260fc188af3f40a5a433b6826bd5de2ff64712e8f38d730
+2026-10-30T08:44:14.7377115Z Artifact download completed successfully.
+2026-10-30T08:44:14.7377691Z Total of 2 artifact(s) downloaded
+2026-10-30T08:44:14.7381549Z Download artifact has finished successfully

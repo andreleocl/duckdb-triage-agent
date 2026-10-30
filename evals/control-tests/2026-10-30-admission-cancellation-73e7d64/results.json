@@ -1,0 +1,446 @@
+{
+  "configuration_sha": "73e7d64c4a95c0cc23fd63d725499e4ad2f0fbec",
+  "dispatches": [
+    {
+      "ordinal": 1,
+      "run_id": 41026019311,
+      "run_url": "https://github.com/andreleocl/duckdb-triage-agent/actions/runs/41026019311",
+      "issue_number": 69,
+      "issue_url": "https://github.com/andreleocl/duckdb-triage-agent/issues/69",
+      "conclusion": "success",
+      "admission": {
+        "checked_at": "2026-10-30T08:23:10Z",
+        "count": 1,
+        "max_dispatches": 5,
+        "run_ids": [
+          41026019311
+        ],
+        "status": "allowed",
+        "window_start": "2026-10-30T07:23:10Z"
+      },
+      "jobs": [
+        {
+          "name": "pre_activation",
+          "conclusion": "success",
+          "steps": 5,
+          "started_at": "2026-10-30T08:22:42Z",
+          "completed_at": "2026-10-30T08:22:52Z"
+        },
+        {
+          "name": "activation",
+          "conclusion": "success",
+          "steps": 28,
+          "started_at": "2026-10-30T08:22:55Z",
+          "completed_at": "2026-10-30T08:23:25Z"
+        },
+        {
+          "name": "agent",
+          "conclusion": "success",
+          "steps": 43,
+          "started_at": "2026-10-30T08:23:28Z",
+          "completed_at": "2026-10-30T08:24:52Z"
+        },
+        {
+          "name": "detection",
+          "conclusion": "success",
+          "steps": 35,
+          "started_at": "2026-10-30T08:24:54Z",
+          "completed_at": "2026-10-30T08:25:58Z"
+        },
+        {
+          "name": "submit_triage",
+          "conclusion": "success",
+          "steps": 8,
+          "started_at": "2026-10-30T08:26:00Z",
+          "completed_at": "2026-10-30T08:26:10Z"
+        },
+        {
+          "name": "conclusion",
+          "conclusion": "success",
+          "steps": 16,
+          "started_at": "2026-10-30T08:26:13Z",
+          "completed_at": "2026-10-30T08:26:31Z"
+        }
+      ],
+      "estimated_usd": 0.0104416
+    },
+    {
+      "ordinal": 2,
+      "run_id": 41026720311,
+      "run_url": "https://github.com/andreleocl/duckdb-triage-agent/actions/runs/41026720311",
+      "issue_number": 70,
+      "issue_url": "https://github.com/andreleocl/duckdb-triage-agent/issues/70",
+      "conclusion": "cancelled",
+      "admission": {
+        "checked_at": "2026-10-30T08:29:24Z",
+        "count": 2,
+        "max_dispatches": 5,
+        "run_ids": [
+          41026019311,
+          41026720311
+        ],
+        "status": "allowed",
+        "window_start": "2026-10-30T07:29:24Z"
+      },
+      "jobs": [
+        {
+          "name": "pre_activation",
+          "conclusion": "success",
+          "steps": 5,
+          "started_at": "2026-10-30T08:29:00Z",
+          "completed_at": "2026-10-30T08:29:07Z"
+        },
+        {
+          "name": "activation",
+          "conclusion": "success",
+          "steps": 28,
+          "started_at": "2026-10-30T08:29:10Z",
+          "completed_at": "2026-10-30T08:29:36Z"
+        },
+        {
+          "name": "agent",
+          "conclusion": "cancelled",
+          "steps": 43,
+          "started_at": "2026-10-30T08:29:38Z",
+          "completed_at": "2026-10-30T08:30:53Z"
+        },
+        {
+          "name": "conclusion",
+          "conclusion": "success",
+          "steps": 16,
+          "started_at": "2026-10-30T08:30:56Z",
+          "completed_at": "2026-10-30T08:31:18Z"
+        },
+        {
+          "name": "detection",
+          "conclusion": "cancelled",
+          "steps": 0,
+          "started_at": "2026-10-30T08:30:54Z",
+          "completed_at": "2026-10-30T08:30:53Z"
+        },
+        {
+          "name": "submit_triage",
+          "conclusion": "cancelled",
+          "steps": 0,
+          "started_at": "2026-10-30T08:30:54Z",
+          "completed_at": "2026-10-30T08:30:53Z"
+        }
+      ],
+      "estimated_usd": 0.0070353,
+      "cancellation": {
+        "request_recorded_at": "2026-10-30T08:30:27.233475+00:00",
+        "stage": "agent",
+        "request_completions_after_cancel": 6,
+        "last_request_completed_at": "2026-10-30T08:30:43.332Z",
+        "cli_exited_zero": true,
+        "observation": "Downstream publication prevented; active inference continued after cancellation request."
+      }
+    },
+    {
+      "ordinal": 3,
+      "run_id": 41027150369,
+      "run_url": "https://github.com/andreleocl/duckdb-triage-agent/actions/runs/41027150369",
+      "issue_number": 71,
+      "issue_url": "https://github.com/andreleocl/duckdb-triage-agent/issues/71",
+      "conclusion": "cancelled",
+      "admission": {
+        "checked_at": "2026-10-30T08:33:17Z",
+        "count": 3,
+        "max_dispatches": 5,
+        "run_ids": [
+          41026019311,
+          41026720311,
+          41027150369
+        ],
+        "status": "allowed",
+        "window_start": "2026-10-30T07:33:17Z"
+      },
+      "jobs": [
+        {
+          "name": "pre_activation",
+          "conclusion": "success",
+          "steps": 5,
+          "started_at": "2026-10-30T08:32:45Z",
+          "completed_at": "2026-10-30T08:33:02Z"
+        },
+        {
+          "name": "activation",
+          "conclusion": "success",
+          "steps": 28,
+          "started_at": "2026-10-30T08:33:05Z",
+          "completed_at": "2026-10-30T08:33:34Z"
+        },
+        {
+          "name": "agent",
+          "conclusion": "success",
+          "steps": 43,
+          "started_at": "2026-10-30T08:33:36Z",
+          "completed_at": "2026-10-30T08:34:55Z"
+        },
+        {
+          "name": "detection",
+          "conclusion": "cancelled",
+          "steps": 35,
+          "started_at": "2026-10-30T08:34:58Z",
+          "completed_at": "2026-10-30T08:36:05Z"
+        },
+        {
+          "name": "conclusion",
+          "conclusion": "success",
+          "steps": 16,
+          "started_at": "2026-10-30T08:36:07Z",
+          "completed_at": "2026-10-30T08:36:24Z"
+        },
+        {
+          "name": "submit_triage",
+          "conclusion": "cancelled",
+          "steps": 0,
+          "started_at": "2026-10-30T08:36:05Z",
+          "completed_at": "2026-10-30T08:36:05Z"
+        }
+      ],
+      "estimated_usd": 0.0111861,
+      "cancellation": {
+        "request_recorded_at": "2026-10-30T08:35:45.331054+00:00",
+        "stage": "detection",
+        "request_completions_after_cancel": 3,
+        "last_request_completed_at": "2026-10-30T08:35:56.214Z",
+        "cli_exited_zero": true,
+        "observation": "Downstream publication prevented; active inference continued after cancellation request."
+      }
+    },
+    {
+      "ordinal": 4,
+      "run_id": 41027692913,
+      "run_url": "https://github.com/andreleocl/duckdb-triage-agent/actions/runs/41027692913",
+      "issue_number": 72,
+      "issue_url": "https://github.com/andreleocl/duckdb-triage-agent/issues/72",
+      "conclusion": "success",
+      "admission": {
+        "checked_at": "2026-10-30T08:37:53Z",
+        "count": 4,
+        "max_dispatches": 5,
+        "run_ids": [
+          41026019311,
+          41026720311,
+          41027150369,
+          41027692913
+        ],
+        "status": "allowed",
+        "window_start": "2026-10-30T07:37:53Z"
+      },
+      "jobs": [
+        {
+          "name": "pre_activation",
+          "conclusion": "success",
+          "steps": 5,
+          "started_at": "2026-10-30T08:37:32Z",
+          "completed_at": "2026-10-30T08:37:43Z"
+        },
+        {
+          "name": "activation",
+          "conclusion": "success",
+          "steps": 28,
+          "started_at": "2026-10-30T08:37:45Z",
+          "completed_at": "2026-10-30T08:38:02Z"
+        },
+        {
+          "name": "agent",
+          "conclusion": "success",
+          "steps": 43,
+          "started_at": "2026-10-30T08:38:04Z",
+          "completed_at": "2026-10-30T08:39:47Z"
+        },
+        {
+          "name": "detection",
+          "conclusion": "success",
+          "steps": 35,
+          "started_at": "2026-10-30T08:39:49Z",
+          "completed_at": "2026-10-30T08:41:09Z"
+        },
+        {
+          "name": "submit_triage",
+          "conclusion": "success",
+          "steps": 8,
+          "started_at": "2026-10-30T08:41:12Z",
+          "completed_at": "2026-10-30T08:41:24Z"
+        },
+        {
+          "name": "conclusion",
+          "conclusion": "success",
+          "steps": 16,
+          "started_at": "2026-10-30T08:41:28Z",
+          "completed_at": "2026-10-30T08:41:44Z"
+        }
+      ],
+      "estimated_usd": 0.01122525
+    },
+    {
+      "ordinal": 5,
+      "run_id": 41027810949,
+      "run_url": "https://github.com/andreleocl/duckdb-triage-agent/actions/runs/41027810949",
+      "issue_number": 73,
+      "issue_url": "https://github.com/andreleocl/duckdb-triage-agent/issues/73",
+      "conclusion": "success",
+      "admission": {
+        "checked_at": "2026-10-30T08:42:24Z",
+        "count": 5,
+        "max_dispatches": 5,
+        "run_ids": [
+          41026019311,
+          41026720311,
+          41027150369,
+          41027692913,
+          41027810949
+        ],
+        "status": "allowed",
+        "window_start": "2026-10-30T07:42:24Z"
+      },
+      "jobs": [
+        {
+          "name": "pre_activation",
+          "conclusion": "success",
+          "steps": 5,
+          "started_at": "2026-10-30T08:41:47Z",
+          "completed_at": "2026-10-30T08:41:55Z"
+        },
+        {
+          "name": "activation",
+          "conclusion": "success",
+          "steps": 28,
+          "started_at": "2026-10-30T08:41:59Z",
+          "completed_at": "2026-10-30T08:42:37Z"
+        },
+        {
+          "name": "agent",
+          "conclusion": "success",
+          "steps": 43,
+          "started_at": "2026-10-30T08:42:39Z",
+          "completed_at": "2026-10-30T08:44:04Z"
+        },
+        {
+          "name": "detection",
+          "conclusion": "success",
+          "steps": 35,
+          "started_at": "2026-10-30T08:44:06Z",
+          "completed_at": "2026-10-30T08:45:27Z"
+        },
+        {
+          "name": "submit_triage",
+          "conclusion": "success",
+          "steps": 8,
+          "started_at": "2026-10-30T08:45:29Z",
+          "completed_at": "2026-10-30T08:45:40Z"
+        },
+        {
+          "name": "conclusion",
+          "conclusion": "success",
+          "steps": 16,
+          "started_at": "2026-10-30T08:45:43Z",
+          "completed_at": "2026-10-30T08:46:05Z"
+        }
+      ],
+      "estimated_usd": 0.01269255
+    },
+    {
+      "ordinal": 6,
+      "run_id": 41028388343,
+      "run_url": "https://github.com/andreleocl/duckdb-triage-agent/actions/runs/41028388343",
+      "issue_number": 69,
+      "issue_url": "https://github.com/andreleocl/duckdb-triage-agent/issues/69",
+      "conclusion": "failure",
+      "admission": {
+        "status": "denied",
+        "reason": "Five-dispatch hourly limit reached; blocked attempts also count"
+      },
+      "jobs": [
+        {
+          "name": "pre_activation",
+          "conclusion": "success",
+          "steps": 5,
+          "started_at": "2026-10-30T08:46:09Z",
+          "completed_at": "2026-10-30T08:46:19Z"
+        },
+        {
+          "name": "activation",
+          "conclusion": "failure",
+          "steps": 27,
+          "started_at": "2026-10-30T08:46:26Z",
+          "completed_at": "2026-10-30T08:46:46Z"
+        },
+        {
+          "name": "detection",
+          "conclusion": "skipped",
+          "steps": 0,
+          "started_at": "2026-10-30T08:46:47Z",
+          "completed_at": "2026-10-30T08:46:47Z"
+        },
+        {
+          "name": "agent",
+          "conclusion": "skipped",
+          "steps": 0,
+          "started_at": "2026-10-30T08:46:47Z",
+          "completed_at": "2026-10-30T08:46:47Z"
+        },
+        {
+          "name": "submit_triage",
+          "conclusion": "skipped",
+          "steps": 0,
+          "started_at": "2026-10-30T08:46:47Z",
+          "completed_at": "2026-10-30T08:46:47Z"
+        },
+        {
+          "name": "conclusion",
+          "conclusion": "skipped",
+          "steps": 0,
+          "started_at": "2026-10-30T08:46:47Z",
+          "completed_at": "2026-10-30T08:46:47Z"
+        }
+      ],
+      "estimated_usd": 0
+    }
+  ],
+  "reruns": [
+    {
+      "run_id": 41026019311,
+      "attempt": 2,
+      "route": "publisher-only",
+      "guarded_jobs": [
+        "submit_triage"
+      ],
+      "result": "pass",
+      "new_model_calls": 0,
+      "new_public_actions": 0
+    },
+    {
+      "run_id": 41026019311,
+      "attempt": 3,
+      "route": "all jobs",
+      "guarded_jobs": [
+        "activation",
+        "agent",
+        "detection",
+        "submit_triage"
+      ],
+      "result": "pass",
+      "new_model_calls": 0,
+      "new_public_actions": 0
+    },
+    {
+      "run_id": 41026720311,
+      "attempt": 2,
+      "route": "failed jobs",
+      "guarded_jobs": [
+        "agent",
+        "detection",
+        "submit_triage"
+      ],
+      "result": "pass",
+      "new_model_calls": 0,
+      "new_public_actions": 0
+    }
+  ],
+  "total_recorded_estimate_usd": 0.0525808,
+  "triage_enabled": false,
+  "scope": "Operational controls only, not a new golden or comment-quality score."
+}

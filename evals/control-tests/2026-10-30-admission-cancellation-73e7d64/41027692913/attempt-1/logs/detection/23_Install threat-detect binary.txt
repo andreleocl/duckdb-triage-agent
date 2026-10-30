@@ -1,0 +1,22 @@
+﻿2026-10-30T08:40:25.0515727Z ##[group]Run bash "${RUNNER_TEMP}/gh-aw/actions/install_threat_detect_binary.sh" v0.5.3 --artifact-base-url https://github.com/github/gh-aw-threat-detection/releases/download --sha256-amd64 7cfab3bd02717968a0584ddd3790cff22550059e36d6f656c4f35e9d27851009 --sha256-arm64 6f355949af98e7b5527a958ac11431bd7867db45c0191b94c3a205c662181cc6
+2026-10-30T08:40:25.0517543Z [36;1mbash "${RUNNER_TEMP}/gh-aw/actions/install_threat_detect_binary.sh" v0.5.3 --artifact-base-url https://github.com/github/gh-aw-threat-detection/releases/download --sha256-amd64 7cfab3bd02717968a0584ddd3790cff22550059e36d6f656c4f35e9d27851009 --sha256-arm64 6f355949af98e7b5527a958ac11431bd7867db45c0191b94c3a205c662181cc6[0m
+2026-10-30T08:40:25.0534233Z shell: /usr/bin/bash -e {0}
+2026-10-30T08:40:25.0534484Z env:
+2026-10-30T08:40:25.0534681Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:40:25.0534933Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:40:25.0535607Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41027692913,github.run_id=41027692913,gh-aw.engine.id=codex
+2026-10-30T08:40:25.0536274Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:40:25.0536539Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:40:25.0536812Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:40:25.0537045Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-30T08:40:25.0537301Z   GITHUB_AW_OTEL_TRACE_ID: 33301e3e9fc086651d49d0a7a00645d0
+2026-10-30T08:40:25.0537781Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 76b6af3d819a8537
+2026-10-30T08:40:25.0538171Z   GITHUB_AW_OTEL_JOB_START_MS: 1793349597060
+2026-10-30T08:40:25.0538581Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+2026-10-30T08:40:25.0552277Z ##[endgroup]
+2026-10-30T08:40:25.0626808Z Installing threat-detect with compiler-pinned checksum verification (version: v0.5.3, os: Linux, arch: x86_64)
+2026-10-30T08:40:25.0730993Z Downloading binary from "https://github.com/github/gh-aw-threat-detection/releases/download/v0.5.3/threat-detect-linux-amd64"...
+2026-10-30T08:40:25.2959609Z Verifying SHA256 checksum for threat-detect-linux-amd64...
+2026-10-30T08:40:25.3004886Z ✓ Checksum verification passed for threat-detect-linux-amd64
+2026-10-30T08:40:25.3225196Z threat-detect v0.5.3
+2026-10-30T08:40:25.3230882Z ✓ threat-detect installation complete

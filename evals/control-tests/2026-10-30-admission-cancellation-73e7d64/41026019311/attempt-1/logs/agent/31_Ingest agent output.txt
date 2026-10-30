@@ -1,0 +1,62 @@
+﻿2026-10-30T08:24:44.3774073Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-10-30T08:24:44.3774530Z with:
+2026-10-30T08:24:44.3775802Z   script: const path = require('path');
+const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require(path.join(actionsDir, 'collect_ndjson_output.cjs'));
+await main();
+
+2026-10-30T08:24:44.3780201Z   github-token: ***
+2026-10-30T08:24:44.3780450Z   debug: false
+2026-10-30T08:24:44.3780691Z   user-agent: actions/github-script
+2026-10-30T08:24:44.3780972Z   result-encoding: json
+2026-10-30T08:24:44.3781210Z   retries: 0
+2026-10-30T08:24:44.3781452Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-10-30T08:24:44.3781760Z env:
+2026-10-30T08:24:44.3781970Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:24:44.3782255Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:24:44.3783082Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41026019311,github.run_id=41026019311,gh-aw.engine.id=codex
+2026-10-30T08:24:44.3783924Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:24:44.3784220Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:24:44.3784536Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:24:44.3784798Z   DEFAULT_BRANCH: main
+2026-10-30T08:24:44.3785033Z   GH_AW_ASSETS_ALLOWED_EXTS: 
+2026-10-30T08:24:44.3785300Z   GH_AW_ASSETS_BRANCH: 
+2026-10-30T08:24:44.3785533Z   GH_AW_ASSETS_MAX_SIZE_KB: 0
+2026-10-30T08:24:44.3785831Z   GH_AW_MCP_LOG_DIR: /tmp/gh-aw/mcp-logs/safeoutputs
+2026-10-30T08:24:44.3786173Z   GH_AW_PR_HEAD_BASE_BRANCH: 
+2026-10-30T08:24:44.3786434Z   GH_AW_PR_HEAD_BASE_PR_NUMBER: 
+2026-10-30T08:24:44.3786693Z   GH_AW_PR_HEAD_BASE_REF: 
+2026-10-30T08:24:44.3786940Z   GH_AW_PR_HEAD_BASE_REPO: 
+2026-10-30T08:24:44.3787180Z   GH_AW_PR_HEAD_BASE_SHA: 
+2026-10-30T08:24:44.3787423Z   GH_AW_PR_HEAD_REPO: 
+2026-10-30T08:24:44.3787659Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-30T08:24:44.3787903Z   GH_AW_TARGET_REPO_SLUG: 
+2026-10-30T08:24:44.3788157Z   GH_AW_WORKFLOW_ID_SANITIZED: issuetriage
+2026-10-30T08:24:44.3788514Z   GITHUB_AW_OTEL_TRACE_ID: c034bdfb55c31894de5da4f60fa20909
+2026-10-30T08:24:44.3788884Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 5cf1396a5412b24e
+2026-10-30T08:24:44.3789486Z   GITHUB_AW_OTEL_JOB_START_MS: 1793348615690
+2026-10-30T08:24:44.3789945Z   AWF_TOKEN_USAGE_LOG: /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+2026-10-30T08:24:44.3790523Z   GH_AW_SAFE_OUTPUTS: /home/runner/work/_temp/gh-aw/safeoutputs/outputs.jsonl
+2026-10-30T08:24:44.3790956Z   GITHUB_SERVER_URL: https://github.com
+2026-10-30T08:24:44.3791279Z   GITHUB_API_URL: https://api.github.com
+2026-10-30T08:24:44.3791574Z ##[endgroup]
+2026-10-30T08:24:44.5169949Z Loaded validation config from /home/runner/work/_temp/gh-aw/safeoutputs/validation.json
+2026-10-30T08:24:44.5171548Z [INGESTION] Reading config from: /home/runner/work/_temp/gh-aw/safeoutputs/config.json
+2026-10-30T08:24:44.5177203Z [INGESTION] Raw config content: {"report_incomplete":{},"submit-triage":{"description":"Submit exactly one triage decision as separate fields for trusted validation.","inputs":{"comment":{"default":null,"description":"Public clarification text, or no_action (requires label no_action)","required":true,"type":"string"},"label":{"default":null,"description":"needs reproducible example, needs more info, or no_action (requires comment no_action)","required":true,"type":"string"},"rationale":{"default":null,"description":"Nonempty private justification for the decision","required":true,"type":"string"}}}}
+2026-10-30T08:24:44.5181302Z [INGESTION] Parsed config keys: ["report_incomplete","submit-triage"]
+2026-10-30T08:24:44.5182066Z [INGESTION] Output file path: /home/runner/work/_temp/gh-aw/safeoutputs/outputs.jsonl
+2026-10-30T08:24:44.5182653Z Raw output content length: 749
+2026-10-30T08:24:44.5185829Z [INGESTION] First 500 chars of output: {"comment":"Could you share a small, shareable CSV file that still triggers the error when run with `SELECT * FROM read_csv('input.csv');` and include the complete, exact error message (copy-paste) produced by the DuckDB CLI? You’ve provided the DuckDB version and command; the CSV contents that cause the reported “Conversion Error: CSV Error on Line: 4” are required to reproduce the failure.","label":"needs reproducible example","rationale":"The report describes a conversion error but omits the 
+2026-10-30T08:24:44.5190912Z [INGESTION] Normalizing config keys (dash -> underscore)
+2026-10-30T08:24:44.5191600Z [INGESTION] Expected output types after normalization: ["report_incomplete","submit_triage"]
+2026-10-30T08:24:44.5194620Z [INGESTION] Expected output types full config: {"report_incomplete":{},"submit_triage":{"description":"Submit exactly one triage decision as separate fields for trusted validation.","inputs":{"comment":{"default":null,"description":"Public clarification text, or no_action (requires label no_action)","required":true,"type":"string"},"label":{"default":null,"description":"needs reproducible example, needs more info, or no_action (requires comment no_action)","required":true,"type":"string"},"rationale":{"default":null,"description":"Nonempty private justification for the decision","required":true,"type":"string"}}}}
+2026-10-30T08:24:44.5197706Z [INGESTION] Processing line 1: {"comment":"Could you share a small, shareable CSV file that still triggers the error when run with `SELECT * FROM read_csv('input.csv');` and include the complete, exact error message (copy-paste) pr...
+2026-10-30T08:24:44.5198863Z [INGESTION] Line 1: Original type='submit_triage', Normalized type='submit_triage'
+2026-10-30T08:24:44.5199739Z Line 1: type 'submit_triage'
+2026-10-30T08:24:44.5248697Z Line 1: Valid submit_triage item
+2026-10-30T08:24:44.5249708Z Successfully parsed 1 valid output items
+2026-10-30T08:24:44.6137791Z Stored validated output to: /tmp/gh-aw/agent_output.json
+2026-10-30T08:24:44.6146019Z output_types: submit_triage
+2026-10-30T08:24:44.6148168Z No patch or bundle files found in: /tmp/gh-aw

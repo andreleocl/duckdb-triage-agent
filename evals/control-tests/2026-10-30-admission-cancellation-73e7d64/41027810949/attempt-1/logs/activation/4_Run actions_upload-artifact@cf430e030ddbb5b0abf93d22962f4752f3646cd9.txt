@@ -1,0 +1,38 @@
+﻿2026-10-30T08:42:21.6577449Z ##[group]Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+2026-10-30T08:42:21.6579519Z with:
+2026-10-30T08:42:21.6580360Z   if-no-files-found: error
+2026-10-30T08:42:21.6581425Z   include-hidden-files: true
+2026-10-30T08:42:21.6582493Z   name: codex-model-catalog
+2026-10-30T08:42:21.6584102Z   path: .github/codex/model-catalog.json
+.github/codex/detection-config.toml
+
+2026-10-30T08:42:21.6585843Z   retention-days: 30
+2026-10-30T08:42:21.6586786Z   compression-level: 6
+2026-10-30T08:42:21.6587754Z   overwrite: false
+2026-10-30T08:42:21.6588639Z   archive: true
+2026-10-30T08:42:21.6589664Z env:
+2026-10-30T08:42:21.6590496Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:42:21.6591642Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:42:21.6595050Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41027810949,github.run_id=41027810949,gh-aw.engine.id=codex
+2026-10-30T08:42:21.6598504Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:42:21.6599930Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:42:21.6601286Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:42:21.6602372Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-30T08:42:21.6603619Z   GITHUB_AW_OTEL_TRACE_ID: 9d9e374efe250ce24a37fb96e053d68e
+2026-10-30T08:42:21.6605180Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 9d57347ff7b965f8
+2026-10-30T08:42:21.6607074Z   GITHUB_AW_OTEL_JOB_START_MS: 1793349738052
+2026-10-30T08:42:21.6608274Z ##[endgroup]
+2026-10-30T08:42:21.9640008Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-10-30T08:42:21.9668559Z The least common ancestor is /home/runner/work/duckdb-triage-agent/duckdb-triage-agent/.github/codex. This will be the root directory of the artifact
+2026-10-30T08:42:21.9678033Z With the provided path, there will be 2 files uploaded
+2026-10-30T08:42:21.9704465Z Artifact name is valid!
+2026-10-30T08:42:21.9712972Z Root directory input is valid!
+2026-10-30T08:42:22.3874010Z Uploading artifact: codex-model-catalog.zip
+2026-10-30T08:42:22.3922395Z Beginning upload of artifact content to blob storage
+2026-10-30T08:42:22.8435338Z Uploaded bytes 24381
+2026-10-30T08:42:22.8992827Z Finished uploading artifact content to blob storage!
+2026-10-30T08:42:22.9001082Z SHA256 digest of uploaded artifact is 6811173f81517496e01928000df13ee3cedee0c39daa5c4d1e3d644e67e64aa6
+2026-10-30T08:42:22.9006867Z Finalizing artifact upload
+2026-10-30T08:42:23.3993122Z Artifact codex-model-catalog successfully finalized. Artifact ID 12964462914
+2026-10-30T08:42:23.3999548Z Artifact codex-model-catalog has been successfully uploaded! Final size is 24381 bytes. Artifact ID is 12964462914
+2026-10-30T08:42:23.4008608Z Artifact download URL: https://github.com/andreleocl/duckdb-triage-agent/actions/runs/41027810949/artifacts/12964462914

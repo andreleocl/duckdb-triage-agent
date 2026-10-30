@@ -1,0 +1,33 @@
+{
+  "permission": "admin",
+  "user": {
+    "login": "andreleocl",
+    "id": 144984893,
+    "node_id": "U_kgDOCKRLPQ",
+    "avatar_url": "https://avatars.githubusercontent.com/u/144984893?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/andreleocl",
+    "html_url": "https://github.com/andreleocl",
+    "followers_url": "https://api.github.com/users/andreleocl/followers",
+    "following_url": "https://api.github.com/users/andreleocl/following{/other_user}",
+    "gists_url": "https://api.github.com/users/andreleocl/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/andreleocl/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/andreleocl/subscriptions",
+    "organizations_url": "https://api.github.com/users/andreleocl/orgs",
+    "repos_url": "https://api.github.com/users/andreleocl/repos",
+    "events_url": "https://api.github.com/users/andreleocl/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/andreleocl/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false,
+    "permissions": {
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
+    },
+    "role_name": "admin"
+  },
+  "role_name": "admin"
+}

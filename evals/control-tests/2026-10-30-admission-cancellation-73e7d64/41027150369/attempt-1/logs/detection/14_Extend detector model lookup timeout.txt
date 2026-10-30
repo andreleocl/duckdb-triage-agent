@@ -1,0 +1,24 @@
+﻿2026-10-30T08:35:17.3409361Z ##[group]Run python - <<'PY'
+2026-10-30T08:35:17.3409712Z [36;1mpython - <<'PY'[0m
+2026-10-30T08:35:17.3409976Z [36;1mimport os[0m
+2026-10-30T08:35:17.3410223Z [36;1mfrom pathlib import Path[0m
+2026-10-30T08:35:17.3410953Z [36;1mpath = Path(os.environ["RUNNER_TEMP"]) / "gh-aw/actions/awf_reflect.cjs"[0m
+2026-10-30T08:35:17.3411474Z [36;1msource = path.read_text(encoding="utf-8")[0m
+2026-10-30T08:35:17.3411852Z [36;1mold = "const AWF_MODELS_URL_TIMEOUT_MS = 3000;"[0m
+2026-10-30T08:35:17.3412197Z [36;1mif source.count(old) != 1:[0m
+2026-10-30T08:35:17.3412700Z [36;1m    raise SystemExit("Unexpected gh-aw model lookup implementation; review timeout workaround")[0m
+2026-10-30T08:35:17.3413424Z [36;1mpath.write_text(source.replace(old, "const AWF_MODELS_URL_TIMEOUT_MS = 15000;"), encoding="utf-8")[0m
+2026-10-30T08:35:17.3413925Z [36;1mPY[0m
+2026-10-30T08:35:17.3445358Z shell: /usr/bin/bash -e {0}
+2026-10-30T08:35:17.3445822Z env:
+2026-10-30T08:35:17.3446174Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:35:17.3446673Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:35:17.3447602Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41027150369,github.run_id=41027150369,gh-aw.engine.id=codex
+2026-10-30T08:35:17.3448739Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:35:17.3449062Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:35:17.3449409Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:35:17.3449692Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-30T08:35:17.3450012Z   GITHUB_AW_OTEL_TRACE_ID: 444e1ed1e928095a5c4cb9820a2c963d
+2026-10-30T08:35:17.3450406Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 8081892fc1eefc12
+2026-10-30T08:35:17.3451075Z   GITHUB_AW_OTEL_JOB_START_MS: 1793349305294
+2026-10-30T08:35:17.3451386Z ##[endgroup]

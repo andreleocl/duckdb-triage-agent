@@ -1,0 +1,47 @@
+{
+  "status": "published",
+  "proposal": {
+    "label": "needs reproducible example",
+    "comment": "Could you share a small, shareable CSV file (or paste its contents) that still triggers the error when run with `SELECT * FROM read_csv('input.csv');`, together with the complete, exact error message text you see? The CSV sample will let us reproduce the `Conversion Error` and verify whether it\u2019s parser or data-related.",
+    "rationale": "The report describes a CSV import failure but provides no CSV contents or equivalent generated input; without a sample file or its contents I cannot reproduce the `Conversion Error: CSV Error on Line: 4` or follow the failing setup."
+  },
+  "actions": [
+    "add_comment",
+    "add_label"
+  ],
+  "run_id": "41027692913",
+  "configuration_sha": "73e7d64c4a95c0cc23fd63d725499e4ad2f0fbec",
+  "input_sha256": "5f09798d6affa47be7f0299e12bcd16d4754729a71fe66c166bbfedd64eb944e",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "/comments?per_page=100&page=1",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/comments",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/labels",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

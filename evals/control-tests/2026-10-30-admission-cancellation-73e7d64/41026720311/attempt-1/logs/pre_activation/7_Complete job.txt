@@ -1,0 +1,6 @@
+﻿2026-10-30T08:29:05.7625408Z Evaluate and set job outputs
+2026-10-30T08:29:05.7634350Z Set output 'activated'
+2026-10-30T08:29:05.7636598Z Set output 'setup-parent-span-id'
+2026-10-30T08:29:05.7637644Z Set output 'setup-span-id'
+2026-10-30T08:29:05.7638847Z Set output 'setup-trace-id'
+2026-10-30T08:29:05.7640482Z Cleaning up orphan processes

@@ -1,0 +1,46 @@
+﻿2026-10-30T08:26:18.9953807Z ##[group]Run github/gh-aw-actions/setup@de9d416cac8ccea1a2d582cb07c4b7db96946792
+2026-10-30T08:26:18.9955649Z with:
+2026-10-30T08:26:18.9956205Z   destination: /home/runner/work/_temp/gh-aw/actions
+2026-10-30T08:26:18.9956843Z   job-name: conclusion
+2026-10-30T08:26:18.9957349Z   trace-id: c034bdfb55c31894de5da4f60fa20909
+2026-10-30T08:26:18.9957944Z   parent-span-id: 796fbdfde9f8f023
+2026-10-30T08:26:18.9958505Z   safe-output-artifact-client: false
+2026-10-30T08:26:18.9959221Z env:
+2026-10-30T08:26:18.9959667Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-30T08:26:18.9960216Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+2026-10-30T08:26:18.9961651Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=41026019311,github.run_id=41026019311,gh-aw.engine.id=codex
+2026-10-30T08:26:18.9963242Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-30T08:26:18.9963798Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-30T08:26:18.9964401Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-30T08:26:18.9965989Z   GH_AW_JOB_DISPLAY_NAMES: {"activation":"activation","agent":"agent","conclusion":"conclusion","detection":"detection","pre_activation":"pre_activation","submit_triage":"submit_triage"}
+2026-10-30T08:26:18.9967849Z   GH_AW_JOB_RESULTS: {"activation":{"result":"success"},"agent":{"result":"success"},"detection":{"result":"success"},"submit_triage":{"result":"success"}}
+2026-10-30T08:26:18.9969457Z   GH_AW_JOB_TIMING_ELIGIBLE: {"activation":true,"agent":true,"conclusion":true,"detection":true,"pre_activation":true,"submit_triage":true}
+2026-10-30T08:26:18.9970521Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-30T08:26:18.9971058Z   GH_AW_SETUP_WORKFLOW_NAME: DuckDB issue triage
+2026-10-30T08:26:18.9972100Z   GH_AW_CURRENT_WORKFLOW_REF: andreleocl/duckdb-triage-agent/.github/workflows/issue-triage.lock.yml@refs/heads/main
+2026-10-30T08:26:18.9973092Z   GH_AW_INFO_VERSION: 0.164.0
+2026-10-30T08:26:18.9973602Z   GH_AW_INFO_AWF_VERSION: v0.28.70
+2026-10-30T08:26:18.9974376Z   GH_AW_INFO_ENGINE_ID: codex
+2026-10-30T08:26:18.9975129Z   GH_AW_SETUP_AW_CONTEXT: 
+2026-10-30T08:26:18.9975621Z ##[endgroup]
+2026-10-30T08:26:21.5938140Z Successfully copied 759 files to /home/runner/work/_temp/gh-aw/actions
+2026-10-30T08:26:21.5965120Z ##[group]Runtime TLS inventory (not a trust-store attestation)
+2026-10-30T08:26:21.7190402Z curl 8.5.0 (x86_64-pc-linux-gnu) libcurl/8.5.0 OpenSSL/3.0.13 zlib/1.3 brotli/1.1.0 zstd/1.5.5 libidn2/2.3.7 libpsl/0.21.2 (+libidn2/2.3.7) libssh/0.10.6/openssl/zlib nghttp2/1.59.0 librtmp/2.3 OpenLDAP/2.6.10
+2026-10-30T08:26:21.7450804Z Node v24.22.1; OpenSSL 3.5.9
+2026-10-30T08:26:21.7491794Z Go: unavailable; binary build-toolchain inspection unavailable
+2026-10-30T08:26:21.7493629Z Python/certifi: not inspected by shell setup; record each client's interpreter, TLS backend and selected CA bundle separately.
+2026-10-30T08:26:21.7495727Z Container, proxy and MCP trust stores require separate image/vendor evidence.
+2026-10-30T08:26:21.7496915Z Browser updates and successful HTTPS connections do not attest CA distrust.
+2026-10-30T08:26:21.7498768Z ##[endgroup]
+2026-10-30T08:26:22.0715262Z Successfully copied 112 mcp-scripts files to /home/runner/work/_temp/gh-aw/mcp-scripts
+2026-10-30T08:26:22.2696866Z Successfully copied 170 safe-outputs files to /home/runner/work/_temp/gh-aw/safeoutputs
+2026-10-30T08:26:22.3548764Z [info] [otlp] INPUT_TRACE_ID=c034bdfb55c31894de5da4f60fa20909 (will reuse activation trace)
+2026-10-30T08:26:22.3562923Z [info] [otlp] INPUT_PARENT_SPAN_ID=796fbdfde9f8f023 (will parent setup span)
+2026-10-30T08:26:22.3570276Z [info] [otlp] no OTLP endpoints have usable credentials, skipping setup span
+2026-10-30T08:26:22.3636477Z [info] [otlp] resolved trace-id=c034bdfb55c31894de5da4f60fa20909
+2026-10-30T08:26:22.3639989Z [info] [otlp] trace-id=c034bdfb55c31894de5da4f60fa20909 written to GITHUB_OUTPUT
+2026-10-30T08:26:22.3642321Z [info] [otlp] span-id=1aca9ea1c8295a17 written to GITHUB_OUTPUT
+2026-10-30T08:26:22.3644452Z [info] [otlp] parent-span-id=796fbdfde9f8f023 written to GITHUB_OUTPUT
+2026-10-30T08:26:22.3668942Z [info] [otlp] GITHUB_AW_OTEL_TRACE_ID written to GITHUB_ENV
+2026-10-30T08:26:22.3676592Z [info] [otlp] GITHUB_AW_OTEL_PARENT_SPAN_ID written to GITHUB_ENV
+2026-10-30T08:26:22.3681066Z [info] [otlp] GITHUB_AW_OTEL_JOB_START_MS written to GITHUB_ENV

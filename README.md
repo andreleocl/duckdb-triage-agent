@@ -53,8 +53,11 @@ They do not run the agent, measure its decision quality or prove that GitHub
 permissions are enforced.
 
 Runs using this configuration have a global dispatch-history admission check,
-fresh-dispatch retries and a cancellation-aware detection condition. These controls are offline-tested;
-**hosted enforcement remains unverified**. See the
+fresh-dispatch retries and a cancellation-aware detection condition. Hosted tests
+verified owner admission, three rerun routes and downstream cancellation blocking;
+remaining edge cases are documented in the
+[control report](evals/control-tests/2026-10-30-admission-cancellation-73e7d64/README.md).
+Active AI execution continued after cancellation. See the
 [operating limits](docs/WORKFLOW.md#limits-and-stopping) for counting rules and
 older-revision limitations. This is not a model-start or dollar spending cap.
 

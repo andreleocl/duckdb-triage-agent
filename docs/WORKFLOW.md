@@ -24,7 +24,8 @@ does not trigger it. Adding an API key alone does not enable it.
    The trusted publisher reloads code from the workflow revision, validates the
    output and target, and re-reads the issue to reject changed reports. Activation,
    both model jobs and publication require the first run attempt; the publisher
-   also checks this in Python. Hosted enforcement of these new guards is unverified.
+   also checks this in Python. The [hosted control tests](#hosted-control-verification)
+   exercised the owner limit, three rerun routes and cancellation at both model stages.
 5. A request adds one comment and one allowed label using the Actions bot token.
    No action makes no public change. Internal rationale stays in the run artifacts,
    not the comment. Run logs/artifacts in this public repository are not private.
@@ -66,9 +67,12 @@ configuration. Its OpenAI proxy and authentication settings are preserved.
 
 ## Limits and stopping
 
-The admission and cancellation guards are implemented and offline-tested.
-**Hosted enforcement remains unverified.** They apply to runs using this
-configuration, not older workflow revisions or reruns of those revisions.
+The admission and cancellation guards have offline checks and
+[hosted control evidence](#hosted-control-verification) for the owner limit,
+three rerun routes, short queueing and downstream blocking after cancellation.
+Active model execution continued after cancellation; immediate interruption is not
+guaranteed. These guards apply to the tested configuration, not older workflow
+revisions or reruns of those revisions.
 
 - Before issue preparation or inference, [trusted admission](../scripts/triage_runtime.py)
   requires at most **five unique manual-dispatch run IDs** for this repository's
@@ -109,12 +113,17 @@ use its menu to **Disable workflow**. Open each in-progress run and choose
 already accepted by GitHub. The publisher checks the enable flag at job startup;
 it does not continuously poll repository settings.
 
-The new detection job condition requires `!cancelled()` and successful activation
-and agent jobs. It is intended to prevent detector startup after cancellation or
-agent failure and make the job cancellable. Publication still requires successful
-detection. Existing artifact/log collection steps are retained, but cancellation
-can interrupt collection. Offline checks do not establish interruption of an
-already-running provider request or immediate cessation of charges.
+The detection job condition requires `!cancelled()` and successful activation
+and agent jobs. In the hosted test, cancelling the triage execution step prevented
+detection from starting; cancelling either model stage prevented publication.
+However, both active execution steps continued and exited successfully internally,
+even though GitHub marked their jobs cancelled. The recorded Codex processes started
+after the cancellation request timestamps; this was not evidence of prompt process
+termination or a guarantee that further API calls stop. The exact cause was not
+established, so it is not attributed to the model or provider. Publication still
+requires successful detection. Artifact/log collection remains enabled but can be
+interrupted by cancellation. Retain available usage records and inspect charges;
+do not treat cancellation as an immediate spending stop.
 
 For retries, use **Run workflow** to create a fresh main-branch dispatch, subject
 to admission. Do not use **Re-run jobs**: the first-attempt guards cover activation,
@@ -176,10 +185,39 @@ recorded all jobs skipped. The
 recorded no publication, but detector inference continued after cancellation.
 Those runs used earlier configurations: the framework limiter exempted the owner
 and would fail open on history errors, and detection could continue after cancellation.
-They are historical evidence, not verification of the new admission, rerun or
-cancellation guards. Hosted enforcement remains unverified, including actual
-history responses/current-run visibility, closely spaced dispatches, rerun routes,
-and cancellation during the agent and during detection. The guards do not retrofit
-older revisions. These observations do not prove immediate interruption of provider
-spending; see [DESIGN.md](../DESIGN.md#governance).
+They remain historical evidence; the later control tests below assess the new guards.
+
+## Hosted control verification
+
+The [30 October control report](../evals/control-tests/2026-10-30-admission-cancellation-73e7d64/README.md)
+tested the actual workflow at `73e7d64` using GPT-5 mini and invented practice reports.
+The agent, frozen key and original evaluation evidence were unchanged.
+
+| Check | Observed result |
+|---|---|
+| Owner/admin admission and current-run visibility | Dispatches 1-5 passed with counts 1-5; the sixth failed admission before either model or publisher ran. |
+| Counting and short queueing | Cancelled dispatches counted once; reruns added no new dispatch IDs. The fifth waited behind the fourth and then passed admission. |
+| Rerun routes | Full-workflow, failed-jobs and publisher-only retries skipped the guarded jobs. No new inference or public actions occurred. |
+| Cancellation during triage execution | Detection and publication ran zero steps; the active triage execution continued. |
+| Cancellation during detection execution | Publication ran zero steps; the active detector continued. |
+| Immediate interruption | Not demonstrated: six triage responses and three detector responses completed after their respective cancellation requests; both commands exited with code 0. |
+
+Cancellation was requested while the execution steps were active, including their
+setup time; it was not synchronized to a provider request already in flight.
+Partial-rerun metadata includes inherited successful jobs with original execution
+timestamps; those entries must not be counted as new inference. The report retains
+per-attempt logs, pre-cancel snapshots, proposals, receipts and final issue state.
+
+Recorded API cost was **$0.05258080**, including the cancelled runs. This is a token-based
+estimate, not an invoice; missing in-flight usage could add charges, and Actions costs
+are excluded. The $0.25 monitoring budget was not an enforced dollar cap.
+`TRIAGE_ENABLED=false` was restored and all test runs completed. These tests do not
+change golden scores or establish comment quality or tool compliance.
+
+Malformed/incomplete history, API failures, simultaneous actors, queue expiry beyond
+one hour and exact rolling-hour expiry were not injected in hosted tests. Offline
+checks remain the evidence for history-validation and expiry handling. A subsequent
+blocked-attempt lockout-expiry test was not run. The controls do not retrofit older
+revisions or establish an atomic dispatch limit or aggregate dollar cap. See
+[DESIGN.md](../DESIGN.md#governance) for the governance summary.
 Any further live runs require separate authorization.

@@ -1,0 +1,6 @@
+﻿2026-10-30T08:36:03.7314727Z Evaluate and set job outputs
+2026-10-30T08:36:03.7320012Z Set output 'aic'
+2026-10-30T08:36:03.7322208Z Set output 'detection_conclusion'
+2026-10-30T08:36:03.7323162Z Set output 'detection_success'
+2026-10-30T08:36:03.7323557Z Set output 'run_detection'
+2026-10-30T08:36:03.7324316Z Cleaning up orphan processes
