@@ -127,6 +127,15 @@ Score the actual posted text/actions, including attribution, not just the propos
 Record skipped duplicate/existing-label outputs separately from successful no-action
 decisions. API operation receipts preserve attempted writes even on failure.
 
-No live run or golden-case agent evaluation is claimed by these offline checks.
-Authentication, hosted isolation, rate limiting, cancellation and real bot posting
-still require a small authorized practice run before the full evaluation.
+Offline checks do not establish live behavior. Recorded sandbox runs exercised
+API authentication and bot publication; the
+[final scoring report](../evals/reports/2026-10-30-final-scoring/README.md)
+combines the 25 historical and three adversarial results, including failures.
+The [disabled-start test](../evals/control-tests/2026-10-29-disabled-gate/README.md)
+recorded all jobs skipped. The
+[phone cancellation test](../evals/control-tests/2026-10-29-actual-triage-cancellation/README.md)
+recorded no publication, but detector inference continued after cancellation.
+These observations do not prove universal hosted isolation or immediate interruption
+of provider spending. Privileged users bypass the configured rate limit, and
+history-check errors fail open; see [DESIGN.md](../DESIGN.md#governance).
+Any further live runs require separate authorization.

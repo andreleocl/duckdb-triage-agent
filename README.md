@@ -17,15 +17,19 @@ participant notifications are outside its scope.
 
 ## Start here
 
-1. Read the [triage skill](.claude/skills/duckdb-triage/SKILL.md) for the decision
+1. Read [DESIGN.md](DESIGN.md) for the workflow rationale, controls, findings,
+   governance, five operational scenarios and AI-use statement.
+2. Read the [final scoring report](evals/reports/2026-10-30-final-scoring/README.md)
+   for per-case results, agreed manual judgments, the strict comparison and costs.
+3. Read the [triage skill](.claude/skills/duckdb-triage/SKILL.md) for the decision
    procedure, output format and examples.
-2. Read the [evaluation guide](evals/README.md) to inspect the 25 historical cases
+4. Read the [evaluation guide](evals/README.md) to inspect the 25 historical cases
    and 3 adversarial cases, understand the rubric and reproduce evaluation checks.
-3. Read [AGENTS.md](AGENTS.md) for repository conventions, test commands and
+5. Read [AGENTS.md](AGENTS.md) for repository conventions, test commands and
    rules for preserving evaluation evidence.
-4. Read [CONTRIBUTING.md](CONTRIBUTING.md) for AI-assisted contributions, review
+6. Read [CONTRIBUTING.md](CONTRIBUTING.md) for AI-assisted contributions, review
    expectations and replay protection.
-5. Read the [workflow guide](docs/WORKFLOW.md) for execution, API-key setup,
+7. Read the [workflow guide](docs/WORKFLOW.md) for execution, API-key setup,
    manual runs, stopping and audit evidence.
 
 ## Getting started
