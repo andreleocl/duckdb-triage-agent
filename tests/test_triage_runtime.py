@@ -101,7 +101,7 @@ class WorkflowBehavior(unittest.TestCase):
 
     def test_target_disabled_wrong_repo_event_branch_host_or_number(self):
         env = dict(GITHUB_REPOSITORY=runtime.REPOSITORY, GITHUB_REF='refs/heads/main',
-                   GITHUB_EVENT_NAME='workflow_dispatch', TRIAGE_ENABLED='true', GITHUB_SERVER_URL='https://github.com')
+                   GITHUB_EVENT_NAME='workflow_dispatch', GITHUB_RUN_ATTEMPT='1', TRIAGE_ENABLED='true', GITHUB_SERVER_URL='https://github.com')
         event = dict(inputs=dict(issue_number='7'))
         self.assertEqual(runtime.target(event, env), 7)
         for field in env:
@@ -319,7 +319,7 @@ class WorkflowBehavior(unittest.TestCase):
 
     def test_publish_entry_point_requires_detection_and_refuses_staged_mode(self):
         env = dict(GITHUB_REPOSITORY=runtime.REPOSITORY, GITHUB_REF='refs/heads/main',
-                   GITHUB_EVENT_NAME='workflow_dispatch', TRIAGE_ENABLED='true',
+                   GITHUB_EVENT_NAME='workflow_dispatch', GITHUB_RUN_ATTEMPT='1', TRIAGE_ENABLED='true',
                    GITHUB_SERVER_URL='https://github.com', GH_TOKEN='fake-token',
                    TRIAGE_AGENT_RESULT='success')
         for flags in [{}, {'GH_AW_DETECTION_CONCLUSION': 'failure'},
@@ -342,7 +342,7 @@ class WorkflowBehavior(unittest.TestCase):
 
     def test_publish_entry_point_blocks_malformed_and_duplicate_json_fields(self):
         env = dict(GITHUB_REPOSITORY=runtime.REPOSITORY, GITHUB_REF='refs/heads/main',
-                   GITHUB_EVENT_NAME='workflow_dispatch', TRIAGE_ENABLED='true',
+                   GITHUB_EVENT_NAME='workflow_dispatch', GITHUB_RUN_ATTEMPT='1', TRIAGE_ENABLED='true',
                    GITHUB_SERVER_URL='https://github.com', GH_TOKEN='fake-token',
                    TRIAGE_AGENT_RESULT='success', GH_AW_DETECTION_CONCLUSION='success',
                    GITHUB_EVENT_PATH='event.json', GH_AW_AGENT_OUTPUT='output.json',
@@ -376,7 +376,7 @@ class WorkflowBehavior(unittest.TestCase):
             output = root / 'output.json'
             output.write_text(json.dumps(self.output()), encoding='utf-8')
             env = dict(GITHUB_REPOSITORY=runtime.REPOSITORY, GITHUB_REF='refs/heads/main',
-                       GITHUB_EVENT_NAME='workflow_dispatch', TRIAGE_ENABLED='true',
+                       GITHUB_EVENT_NAME='workflow_dispatch', GITHUB_RUN_ATTEMPT='1', TRIAGE_ENABLED='true',
                        GITHUB_SERVER_URL='https://github.com', GH_TOKEN='fake-token',
                        TRIAGE_AGENT_RESULT='success', GH_AW_DETECTION_CONCLUSION='success',
                        GITHUB_EVENT_PATH=str(event), GH_AW_AGENT_OUTPUT=str(output),
@@ -402,6 +402,157 @@ class WorkflowBehavior(unittest.TestCase):
             client.comments()
 
 
+class RunAdmission(unittest.TestCase):
+    def setUp(self):
+        self.now = runtime.datetime(2026, 10, 30, 12, tzinfo=runtime.timezone.utc)
+        self.current = dict(id=100, workflow_id=7, path=runtime.WORKFLOW_PATH,
+                            event='workflow_dispatch', repository=dict(full_name=runtime.REPOSITORY),
+                            created_at='2026-10-30T11:59:00Z', run_attempt=1,
+                            head_branch='main', head_sha='trusted-sha')
+
+    def admit(self, runs, total=None, links=None, payload=None):
+        body = payload if payload is not None else json.dumps(dict(
+            total_count=len(runs) if total is None else total, workflow_runs=runs)).encode()
+        response = io.BytesIO(body)
+        response.headers = {'Link': links} if links else {}
+        with patch.object(runtime.urllib.request.OpenerDirector, 'open', return_value=response) as opened:
+            result = runtime.admit_run('fake-token', '100', 'trusted-sha', self.now)
+        self.request = opened.call_args[0][0]
+        self.assertEqual(opened.call_count, 1)
+        return result
+
+    def test_fifth_allowed_sixth_blocked_across_actors_and_conclusions(self):
+        runs = [{**self.current, 'id': 100 + i, 'actor': {'login': actor},
+                 'conclusion': conclusion, 'updated_at': self.current['created_at']}
+                for i, (actor, conclusion) in enumerate([
+                    ('andreleocl', None), ('andreleocl', 'cancelled'), ('other', 'failure'),
+                    ('andreleocl', 'skipped'), ('other', 'success')])]
+        result = self.admit(runs)
+        self.assertEqual(result['count'], 5)
+        self.assertEqual(result['run_ids'], [100, 101, 102, 103, 104])
+        with self.assertRaisesRegex(runtime.AdmissionDenied, 'limit reached'):
+            self.admit(runs + [{**self.current, 'id': 105}])
+
+    def test_current_run_must_be_present_and_is_counted_once(self):
+        self.assertEqual(self.admit([self.current])['count'], 1)
+        for runs in ([], [{**self.current, 'id': 101}], [self.current, self.current]):
+            with self.subTest(runs=runs), self.assertRaises(runtime.AdmissionDenied):
+                self.admit(runs)
+
+    def test_incomplete_or_truncated_history_never_allows(self):
+        for total, links in ((2, None), (1001, None), (True, None), ('1', None), (1, '<next>; rel="next"')):
+            with self.subTest(total=total, links=links), self.assertRaises(runtime.AdmissionDenied):
+                self.admit([self.current], total=total, links=links)
+        for body in (b'{}', b'[]', b'{"total_count":1,"workflow_runs":null}',
+                     b'{"total_count":0,"total_count":1,"workflow_runs":[]}'):
+            with self.subTest(body=body), self.assertRaises(runtime.AdmissionDenied):
+                self.admit([], payload=body)
+
+    def test_malformed_or_wrong_scope_records_never_allow(self):
+        for changes in ({'created_at': 'bad'}, {'created_at': None}, {'id': True},
+                        {'workflow_id': None}, {'run_attempt': 0}, {'event': 'push'},
+                        {'path': 'other.yml'}, {'repository': None},
+                        {'repository': {'full_name': 'duckdb/duckdb'}}):
+            with self.subTest(changes=changes), self.assertRaises(runtime.AdmissionDenied):
+                self.admit([{**self.current, **changes}])
+        for field in self.current:
+            with self.subTest(missing=field), self.assertRaises(runtime.AdmissionDenied):
+                self.admit([{k: v for k, v in self.current.items() if k != field}])
+        with self.assertRaises(runtime.AdmissionDenied):
+            self.admit([self.current, {**self.current, 'id': 101, 'workflow_id': 8}])
+
+    def test_queued_run_and_inclusive_hour_boundary(self):
+        at_boundary = {**self.current, 'created_at': '2026-10-30T11:00:00Z'}
+        self.assertEqual(self.admit([at_boundary])['count'], 1)
+        for timestamp in ('2026-10-30T10:59:59Z', '2026-10-30T12:00:01Z'):
+            with self.subTest(timestamp=timestamp), self.assertRaises(runtime.AdmissionDenied):
+                self.admit([{**self.current, 'created_at': timestamp}])
+        self.assertEqual(self.admit([{**self.current, 'created_at': '2026-10-30T11:30:00Z'}])['count'], 1)
+
+    def test_current_run_must_match_first_attempt_branch_and_commit(self):
+        for changes in ({'run_attempt': 2}, {'head_branch': 'other'}, {'head_sha': 'other-sha'}):
+            with self.subTest(changes=changes), self.assertRaises(runtime.AdmissionDenied):
+                self.admit([{**self.current, **changes}])
+
+    def test_request_is_read_only_and_fixed_to_sandbox_workflow(self):
+        self.admit([self.current])
+        from urllib.parse import urlsplit, parse_qs
+        url = urlsplit(self.request.full_url)
+        self.assertEqual(self.request.get_method(), 'GET')
+        self.assertEqual(url.scheme, 'https')
+        self.assertEqual(url.netloc, 'api.github.com')
+        self.assertEqual(url.path, '/repos/andreleocl/duckdb-triage-agent/actions/workflows/issue-triage.lock.yml/runs')
+        self.assertEqual(parse_qs(url.query), dict(event=['workflow_dispatch'],
+                         created=['2026-10-30T11:00:00Z..2026-10-30T12:00:00Z'],
+                         per_page=['100'], page=['1'], exclude_pull_requests=['true']))
+        self.assertIsNone(self.request.data)
+
+    def test_http_timeout_redirect_and_json_errors_fail_closed(self):
+        for error in (TimeoutError(), runtime.urllib.error.HTTPError('url', 503, '', {}, None),
+                      ValueError('Unexpected GitHub redirect')):
+            with self.subTest(error=type(error).__name__), \
+                    patch.object(runtime.urllib.request.OpenerDirector, 'open', side_effect=error) as opened, \
+                    self.assertRaisesRegex(runtime.AdmissionDenied, 'unavailable or invalid'):
+                runtime.admit_run('fake-token', '100', 'trusted-sha', self.now)
+            self.assertEqual(opened.call_count, 1)
+        with self.assertRaises(runtime.AdmissionDenied):
+            self.admit([], payload=b'not json')
+
+    def test_successful_preparation_checks_admission_before_reading_issue(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            event = root / 'event.json'
+            event.write_text(json.dumps(dict(inputs=dict(issue_number='7'))), encoding='utf-8')
+            env = dict(GITHUB_REPOSITORY=runtime.REPOSITORY, GITHUB_REF='refs/heads/main',
+                       GITHUB_EVENT_NAME='workflow_dispatch', GITHUB_RUN_ATTEMPT='1', TRIAGE_ENABLED='true',
+                       GITHUB_SERVER_URL='https://github.com', GH_TOKEN='fake-token', GITHUB_RUN_ID='100',
+                       GITHUB_SHA='trusted-sha', GITHUB_EVENT_PATH=str(event), GITHUB_OUTPUT=str(root / 'outputs'))
+            skill = root / '.claude/skills/duckdb-triage/SKILL.md'
+            skill.parent.mkdir(parents=True)
+            skill.write_text(runtime.SKILL.read_text(encoding='utf-8'), encoding='utf-8')
+            order = []
+            issue = FakeGitHub().issue
+            def admit(*args):
+                order.append('admission')
+                return dict(status='allowed', count=1)
+            def read_issue(*args):
+                order.append('issue')
+                return issue
+            with patch.dict(os.environ, env, clear=True), patch.object(runtime, 'ROOT', root), \
+                    patch.object(runtime, 'SKILL', skill), \
+                    patch.object(runtime.sys, 'argv', ['triage_runtime.py', 'prepare']), \
+                    patch.object(runtime.sys, 'stdout', io.StringIO()), \
+                    patch.object(runtime, 'admit_run', side_effect=admit), \
+                    patch.object(runtime.GitHub, 'call', side_effect=read_issue):
+                self.assertEqual(runtime.main(), 0)
+            self.assertEqual(order, ['admission', 'issue'])
+            snapshot = json.loads((root / '.triage/input.json').read_text(encoding='utf-8'))
+            self.assertEqual(snapshot['configuration_sha'], 'trusted-sha')
+            self.assertEqual(snapshot['issue'], dict(title=issue['title'], body=issue['body']))
+            self.assertNotIn('admission', (root / 'outputs').read_text(encoding='utf-8'))
+
+    def test_denied_admission_and_reruns_never_read_issue_or_publish(self):
+        env = dict(GITHUB_REPOSITORY=runtime.REPOSITORY, GITHUB_REF='refs/heads/main',
+                   GITHUB_EVENT_NAME='workflow_dispatch', GITHUB_RUN_ATTEMPT='1', TRIAGE_ENABLED='true',
+                   GITHUB_SERVER_URL='https://github.com', GH_TOKEN='fake-token', GITHUB_RUN_ID='100',
+                   GITHUB_SHA='trusted-sha', GITHUB_EVENT_PATH='event.json')
+        event = json.dumps(dict(inputs=dict(issue_number='7')))
+        for mode, attempt in (('prepare', '1'), ('prepare', '2'), ('publish', '2')):
+            with self.subTest(mode=mode, attempt=attempt), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                with patch.dict(os.environ, {**env, 'GITHUB_RUN_ATTEMPT': attempt}, clear=True), \
+                        patch.object(runtime, 'ROOT', root), \
+                        patch.object(runtime.sys, 'argv', ['triage_runtime.py', mode]), \
+                        patch.object(runtime.sys, 'stderr', io.StringIO()), \
+                        patch.object(Path, 'read_text', return_value=event), \
+                        patch.object(runtime, 'admit_run', side_effect=runtime.AdmissionDenied('Limit reached')) as admit, \
+                        patch.object(runtime.GitHub, 'call', side_effect=AssertionError('Network forbidden')) as call:
+                    self.assertEqual(runtime.main(), 1)
+                    call.assert_not_called()
+                    self.assertEqual(admit.call_count, 1 if attempt == '1' else 0)
+                self.assertFalse((root / '.triage/input.json').exists())
+
+
 class CompiledWorkflow(unittest.TestCase):
     def assert_job_condition(self, name, cases):
         lock = (ROOT / '.github/workflows/issue-triage.lock.yml').read_text(encoding='utf-8')
@@ -416,10 +567,12 @@ class CompiledWorkflow(unittest.TestCase):
         # This checks their truth table, not GitHub scheduling or process cancellation.
         script = """
 const {condition, cases} = JSON.parse(require('node:fs').readFileSync(0, 'utf8'));
-const check = new Function('needs', 'cancelled', 'always', 'contains',
+const check = new Function('needs', 'cancelled', 'always', 'contains', 'github', 'vars',
                           'return (' + condition + ');');
 process.stdout.write(JSON.stringify(cases.map(c => check(
-    c.needs, () => c.cancelled, () => true, (value, part) => value.includes(part)))));
+    c.needs, () => c.cancelled, () => true, (value, part) => value.includes(part),
+    {run_attempt: c.attempt ?? 1, repository: 'andreleocl/duckdb-triage-agent', ref: 'refs/heads/main'},
+    {TRIAGE_ENABLED: 'true'}))));
 """
         result = subprocess.run([node, '-e', script], input=json.dumps(dict(condition=condition, cases=cases)),
                                 capture_output=True, text=True, timeout=10)
@@ -448,6 +601,26 @@ process.stdout.write(JSON.stringify(cases.map(c => check(
                                                  detection=dict(result=detection)),
                                       expected=not cancelled and detection == 'success' and bool(output_types)))
         self.assert_job_condition('submit_triage', cases)
+
+    def test_every_paid_or_publishing_job_rejects_reruns(self):
+        needs = dict(pre_activation=dict(outputs=dict(activated='true')),
+                     activation=dict(result='success'),
+                     agent=dict(result='success', outputs=dict(output_types='submit_triage')),
+                     detection=dict(result='success'))
+        for job in ('activation', 'agent', 'detection', 'submit_triage'):
+            self.assert_job_condition(job, [dict(cancelled=False, needs=needs, attempt=attempt,
+                                                  expected=attempt == 1) for attempt in (1, 2, 3)])
+
+    def test_admission_precedes_inference_and_concurrency_is_preserved(self):
+        lock = (ROOT / '.github/workflows/issue-triage.lock.yml').read_text(encoding='utf-8')
+        jobs = dict(re.findall(r'^  ([a-z_]+):\n(.*?)(?=^  [a-z_]+:\n|\Z)',
+                               lock.split('\njobs:\n', 1)[1], re.M | re.S))
+        self.assertIn('run: python scripts/triage_runtime.py prepare', jobs['activation'])
+        self.assertIn('actions: read', jobs['activation'])
+        self.assertIn('needs: activation', jobs['agent'])
+        self.assertNotIn('continue-on-error: true', jobs['activation'].split('id: prepare', 1)[1].split('      - ', 1)[0])
+        self.assertIn('concurrency:\n  cancel-in-progress: false\n  group: duckdb-triage', lock)
+        self.assertNotIn('check_rate_limit.cjs', lock)
 
     def test_compiled_submission_schema_uses_three_required_strings(self):
         lock = (ROOT / '.github/workflows/issue-triage.lock.yml').read_text(encoding='utf-8')

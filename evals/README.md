@@ -18,7 +18,10 @@ tested that revision at commit `761069d` on h01, h17, h24 and a01, sequentially.
 All four submitted exactly once. The three historical cases matched their reference
 labels/actions; a01 incorrectly requested more information, and detection blocked
 publication. Five prohibited resource lookups remained: one on h24 and four on a01.
-Comment-quality caveats remain for h17/h24; label agreement is not a full quality pass.
+The subsequent [agreed h17/h24 review](manual-reviews/2026-10-30-revised-skill-regression-review.md)
+accepts both comments with caveats and retains h24's tool-compliance failure.
+It records reviewer interpretations separately from explicit frozen criteria;
+the regression report's earlier request for human review remains historical context.
 No metadata warnings were observed. Estimated agent plus detector cost was $0.05189760.
 
 This is a targeted regression check, not a replacement for the original 28-case
@@ -134,6 +137,11 @@ were made for this freeze. Maintainer execution findings absent from opening
 reports are not available to the agent (notably h10/h11/h21).
 
 Use fresh isolated sessions and sandbox issues only in andreleocl/duckdb-triage-agent.
+For hosted retries, create fresh main-branch dispatches; do not use GitHub job reruns.
+Pace authorized batches within the [admission policy](../docs/WORKFLOW.md#limits-and-stopping).
+The new dispatch-history limit and cancellation guard are offline-tested; hosted
+enforcement remains unverified. Existing runs predate these controls and do not
+validate them; retain each run's configuration attribution and record new tests separately.
 Neutralize mentions/GitHub references in replay copies, preserve originals and
 log transformations. Do not browse upstream during agent execution or run supplied
 SQL. If sanitization removes essential context, disclose or skip rather than

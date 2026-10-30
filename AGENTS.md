@@ -23,7 +23,8 @@ its use. Do not assume automatic discovery at this location.
 ## Build and test
 
 No application build is needed. The full offline test suite requires Python 3.10+
-and Node.js available on PATH for the pinned framework JavaScript validation check.
+and Node.js available on PATH for the pinned framework validator and compiled
+job-condition checks.
 The Python scripts use only the standard library; no pip or npm packages are needed.
 After workflow changes, compile with `gh aw compile issue-triage --strict --no-check-update`
 using gh-aw v0.93.5. Never hand-edit the generated lock file.
@@ -51,4 +52,7 @@ python -m unittest discover -s evals -p "test_*.py" -v
   copies, including Markdown/HTML. Keep source mappings local, preserve originals,
   and log transformations. Test notification protection before posting; use an
   offline run if sanitization changes information needed for triage.
+- Authorized hosted retries require fresh main-branch dispatches, not job reruns.
+  Follow [admission and stopping rules](docs/WORKFLOW.md#limits-and-stopping);
+  blocked attempts count, and hosted enforcement of the new guards is unverified.
 - Follow [CONTRIBUTING.md](CONTRIBUTING.md) for AI disclosure and contribution review.

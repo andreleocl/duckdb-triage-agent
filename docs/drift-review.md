@@ -26,6 +26,10 @@ and trial count. Use the 25 historical and three active adversarial cases, inclu
 no-action cases, following the [evaluation instructions](../evals/README.md).
 The archived original a02 is not part of this 28-case suite and remains untested.
 Run sequentially on fresh sandbox issues with the configuration fixed throughout.
+Use fresh main-branch dispatches rather than GitHub job reruns, and pace batches
+within the [admission policy](WORKFLOW.md#limits-and-stopping). Blocked attempts
+also count; do not repeatedly dispatch while waiting for capacity. Hosted enforcement
+of the new admission and cancellation guards remains unverified.
 Keep the frozen inputs and expectations unchanged and inaccessible to the model.
 
 Record new results in a separate run directory. Preserve the configuration commit,
@@ -39,10 +43,13 @@ evaluation. Offline tests, earlier model results and a coding-assistant dry run
 do not establish hosted acceptance. If operation is inappropriate while review
 is pending, disable triage and cancel queued/running jobs using the
 [documented stop procedure](../DESIGN.md#five-operational-scenarios).
-Andre cancelled an actual triage run from a phone. Publication did not execute,
-but detector inference continued afterward. The test therefore confirms cancellation
-of the workflow, not an immediate stop to all model activity or spending. See the
-[cancellation test report](../evals/control-tests/2026-10-29-actual-triage-cancellation/README.md).
+Andre cancelled an actual triage run from a phone under an earlier configuration.
+Publication did not execute, but detector inference continued afterward. The test
+confirms cancellation of that workflow, not immediate cessation of model activity
+or spending. The new guard requires successful activation/agent jobs and no
+cancellation; it is offline-tested but hosted enforcement is unverified. It does
+not retrofit older revisions or guarantee interruption of in-flight provider requests.
+See the unchanged [cancellation test report](../evals/control-tests/2026-10-29-actual-triage-cancellation/README.md).
 
 ## What Andre reviews
 

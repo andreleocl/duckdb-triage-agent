@@ -6,7 +6,8 @@ does not trigger it. Adding an API key alone does not enable it.
 
 ## Execution flow
 
-1. Trusted activation code reads the selected open issue from this repository.
+1. Trusted activation first checks the dispatch-history limit described below.
+   Only after admission does it read the selected open issue from this repository.
    It rejects pull requests, empty reports and reports over 40,000 characters.
    It records the title/body, their hash, configuration revision and skill hash in
    the `triage-input` artifact. It loads the exact skill into the rendered prompt.
@@ -18,9 +19,12 @@ does not trigger it. Adding an API key alone does not enable it.
    `report_incomplete` is available for errors and does not create an issue.
    The workflow adapter delegates CLI validation to trusted code rather than
    granting the agent shell access. The skill's decision rules remain unchanged.
-4. Both the agent job and threat detection must finish successfully before publication. The trusted
-   publisher reloads code from the workflow revision, validates the output and
-   target, and re-reads the issue to reject changed reports.
+4. Detection requires successful activation and agent jobs and no workflow
+   cancellation. Both model jobs must finish successfully before publication.
+   The trusted publisher reloads code from the workflow revision, validates the
+   output and target, and re-reads the issue to reject changed reports. Activation,
+   both model jobs and publication require the first run attempt; the publisher
+   also checks this in Python. Hosted enforcement of these new guards is unverified.
 5. A request adds one comment and one allowed label using the Actions bot token.
    No action makes no public change. Internal rationale stays in the run artifacts,
    not the comment. Run logs/artifacts in this public repository are not private.
@@ -62,9 +66,29 @@ configuration. Its OpenAI proxy and authentication settings are preserved.
 
 ## Limits and stopping
 
-- Manual runs only. Five dispatches per user per hour is configured, but the
-  pinned framework exempts privileged users, including the owner's administrator
-  account. History-check errors also fail open. This is not an enforced spending cap.
+The admission and cancellation guards are implemented and offline-tested.
+**Hosted enforcement remains unverified.** They apply to runs using this
+configuration, not older workflow revisions or reruns of those revisions.
+
+- Before issue preparation or inference, [trusted admission](../scripts/triage_runtime.py)
+  requires at most **five unique manual-dispatch run IDs** for this repository's
+  `issue-triage.lock.yml` workflow within the checked hour. All users, including
+  the owner, and all outcomes count: queued, failed, cancelled and blocked attempts.
+  This is a global workflow limit, not five per user.
+- The window is measured at admission using the runner's UTC time, rounded to
+  seconds, and GitHub's run-creation timestamps. Both endpoints are inclusive:
+  `admission time - 60 minutes <= created_at <= admission time`.
+  The current run must appear exactly once and match its branch, commit and first
+  attempt. A run queued for more than an hour is refused and needs a fresh dispatch.
+- Five matching IDs including the current run can pass; six cannot. Missing,
+  malformed, duplicate or truncated history and API failures block admission.
+  An allowable response fits on one page; the check refuses pagination rather
+  than allowing from partial results. It relies on GitHub's history visibility.
+- Counting blocked attempts is intentional: repeatedly dispatching while blocked
+  can prolong the wait. Other queued dispatches may also cause a conservative
+  rejection. Plan authorized batches around this limit instead of repeatedly retrying.
+- This checks dispatch history at admission. It does not prevent GitHub from
+  creating additional runs or cap model starts or dollars per rolling hour.
 - A single workflow concurrency group serializes runs. GitHub's default queue
   retains one pending run; newer pending runs can replace older pending runs.
   Run evaluation cases sequentially and account for cancelled or missing cases.
@@ -74,8 +98,7 @@ configuration. Its OpenAI proxy and authentication settings are preserved.
 - Per-run budgets are 50 framework AI Credits for the agent and 20 for detection.
   These are framework accounting units, not a promised invoice amount. The daily
   workflow credit guardrail is disabled. Owner-approved batches and per-run budgets
-  help manage spending; the user rate limit does not constrain administrator runs.
-  No enforced aggregate spending cap is established by this configuration.
+  still matter; no enforced aggregate spending cap is established by this configuration.
 - Extra status comments, reactions and failure-tracking issues are disabled so
   they cannot exceed the public-output contract.
 
@@ -86,9 +109,21 @@ use its menu to **Disable workflow**. Open each in-progress run and choose
 already accepted by GitHub. The publisher checks the enable flag at job startup;
 it does not continuously poll repository settings.
 
-Bot-authored markers prevent duplicate comments. A retry can add a missing label
-after a successful comment, but does not edit the existing comment. An existing
-triage label or older bot response otherwise stops further publication. If a
+The new detection job condition requires `!cancelled()` and successful activation
+and agent jobs. It is intended to prevent detector startup after cancellation or
+agent failure and make the job cancellable. Publication still requires successful
+detection. Existing artifact/log collection steps are retained, but cancellation
+can interrupt collection. Offline checks do not establish interruption of an
+already-running provider request or immediate cessation of charges.
+
+For retries, use **Run workflow** to create a fresh main-branch dispatch, subject
+to admission. Do not use **Re-run jobs**: the first-attempt guards cover activation,
+both models and publication, including publisher-only reruns. Do not use an older
+revision's rerun as a workaround; the new controls cannot retrofit old workflows.
+
+Bot-authored markers prevent duplicate comments. A fresh admitted dispatch can
+add a missing label after a successful comment, but does not edit that comment.
+An existing triage label or older bot response otherwise stops further publication. If a
 maintainer intentionally removed a label, avoid rerunning that case: retry repair
 cannot distinguish intentional removal from an interrupted label request.
 GitHub comment and label writes are not atomic; inspect partial failures and the
@@ -111,8 +146,10 @@ python -m unittest discover -s evals -p "test_*.py" -v
 
 The `.lock.yml` is compiler-generated; never edit it manually. Tests mock GitHub
 and do not call a model or post anything. They check target restrictions, output
-validation, stale reports, retries, and the compiled permission/tool boundary.
-Compilation emits an experimental-rate-limiting warning.
+validation, stale reports, retries, admission-history edge cases and compiled
+job-condition truth tables. They check the permission/tool boundary without
+proving GitHub scheduling, history visibility or cancellation behavior.
+The old framework user-rate limiter was replaced by trusted admission code.
 
 Compilation references API secrets but does not create or read their values.
 The compiler's new-secret review covered the Codex authentication references:
@@ -137,7 +174,12 @@ The [disabled-start test](../evals/control-tests/2026-10-29-disabled-gate/README
 recorded all jobs skipped. The
 [phone cancellation test](../evals/control-tests/2026-10-29-actual-triage-cancellation/README.md)
 recorded no publication, but detector inference continued after cancellation.
-These observations do not prove universal hosted isolation or immediate interruption
-of provider spending. Privileged users bypass the configured rate limit, and
-history-check errors fail open; see [DESIGN.md](../DESIGN.md#governance).
+Those runs used earlier configurations: the framework limiter exempted the owner
+and would fail open on history errors, and detection could continue after cancellation.
+They are historical evidence, not verification of the new admission, rerun or
+cancellation guards. Hosted enforcement remains unverified, including actual
+history responses/current-run visibility, closely spaced dispatches, rerun routes,
+and cancellation during the agent and during detection. The guards do not retrofit
+older revisions. These observations do not prove immediate interruption of provider
+spending; see [DESIGN.md](../DESIGN.md#governance).
 Any further live runs require separate authorization.

@@ -1,5 +1,6 @@
 """Trusted workflow preparation and publication; never executes issue text."""
 
+from datetime import datetime, timedelta, timezone
 import errno
 import hashlib
 import html
@@ -14,7 +15,7 @@ import sys
 import time
 import urllib.error
 import urllib.request
-from urllib.parse import unquote
+from urllib.parse import unquote, urlencode
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILL = ROOT / '.claude/skills/duckdb-triage/SKILL.md'
@@ -24,15 +25,18 @@ validator = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(validator)
 REPOSITORY = validator.REPOSITORY
 BOT = 'github-actions[bot]'
+WORKFLOW_PATH = '.github/workflows/issue-triage.lock.yml'
+MAX_RUNS = 5
 
 
 def target(event, environment):
     if (environment.get('GITHUB_REPOSITORY') != REPOSITORY
             or environment.get('GITHUB_REF') != 'refs/heads/main'
             or environment.get('GITHUB_EVENT_NAME') != 'workflow_dispatch'
+            or environment.get('GITHUB_RUN_ATTEMPT') != '1'
             or environment.get('TRIAGE_ENABLED') != 'true'
             or environment.get('GITHUB_SERVER_URL') != 'https://github.com'):
-        raise ValueError('Triage requires enabled manual dispatch on the assignment main branch')
+        raise ValueError('Triage requires a fresh enabled manual dispatch on the assignment main branch')
     number = event.get('inputs', {}).get('issue_number')
     if not isinstance(number, str) or not re.fullmatch(r'[1-9][0-9]{0,9}', number):
         raise ValueError('Invalid selected issue number')
@@ -57,6 +61,68 @@ def report(issue, number):
 class NoRedirect(urllib.request.HTTPRedirectHandler):
     def redirect_request(self, req, fp, code, msg, headers, newurl):
         raise ValueError('Unexpected GitHub redirect')
+
+
+class AdmissionDenied(ValueError):
+    """A fixed, safe-to-log explanation for refusing a paid run."""
+
+
+def admit_run(token, run_id, sha, now=None):
+    # Count dispatch attempts, including blocked/cancelled runs, across all actors.
+    # The UTC window is measured at admission; a dispatch older than it must restart.
+    if not isinstance(run_id, str) or not re.fullmatch(r'[1-9][0-9]*', run_id):
+        raise AdmissionDenied('Missing or invalid current run ID')
+    now = (now or datetime.now(timezone.utc)).replace(microsecond=0)
+    start = now - timedelta(hours=1)
+    stamp = lambda value: value.strftime('%Y-%m-%dT%H:%M:%SZ')
+    query = urlencode(dict(event='workflow_dispatch', created=f'{stamp(start)}..{stamp(now)}',
+                           per_page=100, page=1, exclude_pull_requests='true'))
+    url = f'https://api.github.com/repos/{REPOSITORY}/actions/workflows/issue-triage.lock.yml/runs?{query}'
+    request = urllib.request.Request(url, headers={
+        'Authorization': f'Bearer {token}', 'Accept': 'application/vnd.github+json',
+        'X-GitHub-Api-Version': '2022-11-28', 'User-Agent': 'duckdb-triage-agent'})
+    try:
+        with urllib.request.build_opener(NoRedirect).open(request, timeout=30) as response:
+            history = json.load(response, object_pairs_hook=validator.unique_fields)
+            links = response.headers.get('Link')
+    except (ValueError, OSError) as error:
+        if isinstance(error, urllib.error.HTTPError):
+            error.close()
+        raise AdmissionDenied('GitHub run history unavailable or invalid; refusing inference') from None
+    total = history.get('total_count') if isinstance(history, dict) else None
+    runs = history.get('workflow_runs') if isinstance(history, dict) else None
+    if type(total) is not int or total < 1 or not isinstance(runs, list):
+        raise AdmissionDenied('Run history is missing or malformed')
+    if total > MAX_RUNS:
+        raise AdmissionDenied('Five-dispatch hourly limit reached; blocked attempts also count')
+    # Any allowable result fits on one page. Never allow from truncated history.
+    if links or len(runs) != total:
+        raise AdmissionDenied('Run history is incomplete; refusing inference')
+    seen, workflow_ids, current = set(), set(), None
+    for run in runs:
+        if (not isinstance(run, dict) or type(run.get('id')) is not int or run['id'] < 1
+                or type(run.get('workflow_id')) is not int or run['workflow_id'] < 1
+                or type(run.get('run_attempt')) is not int or run['run_attempt'] < 1
+                or run.get('path') != WORKFLOW_PATH or run.get('event') != 'workflow_dispatch'
+                or not isinstance(run.get('repository'), dict)
+                or run['repository'].get('full_name') != REPOSITORY):
+            raise AdmissionDenied('Unexpected run identity in history')
+        try:
+            created = datetime.strptime(run['created_at'], '%Y-%m-%dT%H:%M:%SZ').replace(tzinfo=timezone.utc)
+        except (KeyError, TypeError, ValueError):
+            raise AdmissionDenied('Missing or invalid run timestamp') from None
+        if not start <= created <= now or run['id'] in seen:
+            raise AdmissionDenied('Out-of-window or duplicate run in history')
+        seen.add(run['id'])
+        workflow_ids.add(run['workflow_id'])
+        if run['id'] == int(run_id):
+            current = run
+    if len(workflow_ids) != 1 or current is None:
+        raise AdmissionDenied('Current run absent or inconsistent history; dispatch must be within the last hour')
+    if current['run_attempt'] != 1 or current.get('head_branch') != 'main' or current.get('head_sha') != sha:
+        raise AdmissionDenied('Current run does not match this fresh main-branch dispatch')
+    return dict(status='allowed', checked_at=stamp(now), window_start=stamp(start),
+                max_dispatches=MAX_RUNS, count=len(seen), run_ids=sorted(seen))
 
 
 class GitHub:
@@ -201,6 +267,8 @@ def main():
         client = GitHub(os.environ['GH_TOKEN'], number)
         mode = sys.argv[1]
         if mode == 'prepare':
+            admission = admit_run(os.environ['GH_TOKEN'], os.environ['GITHUB_RUN_ID'], os.environ['GITHUB_SHA'])
+            print('Admission: ' + json.dumps(admission, sort_keys=True))
             snapshot, skill = prepare(client, number, os.environ['GITHUB_SHA'])
             directory.mkdir(exist_ok=True)
             (directory / 'input.json').write_text(json.dumps(snapshot, ensure_ascii=True), encoding='utf-8')
@@ -226,7 +294,8 @@ def main():
     except (ValueError, KeyError, OSError, IndexError) as error:
         # Do not echo arbitrary API response bodies or report content into Actions logs.
         receipt['error_type'] = type(error).__name__
-        print(f'Triage stopped: {type(error).__name__}', file=sys.stderr)
+        detail = str(error) if isinstance(error, AdmissionDenied) else type(error).__name__
+        print(f'Triage stopped: {detail}', file=sys.stderr)
         return 1
     finally:
         if len(sys.argv) > 1 and sys.argv[1] == 'publish':

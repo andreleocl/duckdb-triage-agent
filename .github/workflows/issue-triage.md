@@ -35,10 +35,6 @@ concurrency:
   group: duckdb-triage
   cancel-in-progress: false
   job-discriminator: "${{ github.run_id }}"
-user-rate-limit:
-  max-runs-per-window: 5
-  window: 60
-  ignored-roles: []
 network:
   allowed: []
 tools:
@@ -88,6 +84,7 @@ safe-outputs:
           cp /tmp/gh-aw/model-catalog/detection-config.toml /tmp/gh-aw/detection-codex-home/config.toml
   jobs:
     submit-triage:
+      if: github.run_attempt == 1
       description: Submit exactly one triage decision as separate fields for trusted validation.
       runs-on: ubuntu-latest
       permissions:
@@ -135,6 +132,7 @@ safe-outputs:
             include-hidden-files: true
 jobs:
   activation:
+    if: github.run_attempt == 1
     permissions:
       contents: read
       issues: read
@@ -172,9 +170,10 @@ jobs:
           retention-days: 30
           include-hidden-files: true
   agent:
+    if: github.run_attempt == 1
     timeout-minutes: 15
   detection:
-    if: "!cancelled() && needs.agent.result == 'success'"
+    if: "!cancelled() && needs.agent.result == 'success' && github.run_attempt == 1"
     timeout-minutes: 5
 steps:
   - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2

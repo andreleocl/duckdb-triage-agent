@@ -35,9 +35,9 @@ participant notifications are outside its scope.
 ## Getting started
 
 The full offline test suite requires Python 3.10+ and Node.js available on PATH.
-Node.js runs the pinned framework JavaScript validation check. The Python scripts
-use only the standard library; no pip or npm packages or application build are
-needed. Run these commands from the repository root:
+Node.js runs the pinned framework validator and compiled job-condition checks.
+The Python scripts use only the standard library; no pip or npm packages or
+application build are needed. Run these commands from the repository root:
 
 ```sh
 python -m unittest discover -s tests -v
@@ -46,11 +46,17 @@ python -m unittest discover -s evals -p "test_*.py" -v
 ```
 
 These checks run offline without GitHub credentials or model access. They test
-proposal validation, mocked publication and scoring logic, and verify the frozen
-data's integrity. The same checks run on pushes and pull requests through
-`checks.yml`, without model access or issue changes.
+proposal validation, mocked admission/publication, cancellation/rerun conditions
+and scoring logic, and verify the frozen data's integrity. The same checks run
+on pushes and pull requests through `checks.yml`, without model access or issue changes.
 They do not run the agent, measure its decision quality or prove that GitHub
 permissions are enforced.
+
+Runs using this configuration have a global dispatch-history admission check,
+fresh-dispatch retries and a cancellation-aware detection condition. These controls are offline-tested;
+**hosted enforcement remains unverified**. See the
+[operating limits](docs/WORKFLOW.md#limits-and-stopping) for counting rules and
+older-revision limitations. This is not a model-start or dollar spending cap.
 
 ## Repository structure
 
@@ -67,7 +73,7 @@ permissions are enforced.
         issue-triage.md         Manual Codex workflow source
         issue-triage.lock.yml   Compiled GitHub Actions workflow
 docs/WORKFLOW.md                Setup, execution and stopping guide
-scripts/triage_runtime.py       Trusted preparation and publication
+scripts/triage_runtime.py       Trusted admission, preparation and publication
 evals/
     README.md                   Evaluation and replay instructions
     VALIDATION.md               Recorded freeze validation
