@@ -1,0 +1,78 @@
+### What happens?
+
+Between `1.4.4` and `1.5.2` a script I use started failing with:
+
+```
+Memory: 367.6 MBFloating point exception (core dumped)
+```
+
+### To Reproduce
+
+Can't post source DB, but it uses a `postgres_attach` and looks like this:
+
+```sql
+
+PRAGMA temp_directory='/tmp/dump-legacy.duck.db';
+.print creating tables
+
+CREATE TABLE table1 ();
+CREATE TABLE table2 ();
+
+.print connect to Postgres DB
+
+INSTALL postgres;
+LOAD postgres;
+
+CALL postgres_attach(
+    concat('host=', getenv('PGHOST'),
+    ' dbname=', getenv('PGDATABASE'),
+    ' user=',  getenv('PGUSER'),
+    ' password=', getenv('PGPASSWORD'))
+    );
+
+.timer on
+
+INSERT INTO table1 (...)
+    SELECT  ... FROM "PostgresTable1";
+
+INSERT INTO table2 (...)
+    SELECT  ... FROM "PostgresTable2";
+```
+
+It successfully completes a few tables, then consistently fails on the same one.
+
+### OS:
+
+Ubuntu 20.04.4
+
+### DuckDB Version:
+
+1.5.2
+
+### DuckDB Client:
+
+CLI
+
+### Hardware:
+
+_No response_
+
+### Full Name:
+
+Dave Tapley
+
+### Affiliation:
+
+JE Fuller
+
+### Did you include all relevant configuration (e.g., CPU architecture, Linux distribution) to reproduce the issue?
+
+- [x] Yes, I have
+
+### Did you include all code required to reproduce the issue?
+
+- [ ] Yes, I have
+
+### Did you include all relevant data sets for reproducing the issue?
+
+No - I cannot share the data sets because they are confidential

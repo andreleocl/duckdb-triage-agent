@@ -1,0 +1,33 @@
+{
+  "assignees": [],
+  "body": "### What happens?\n\nBetween `1.4.4` and `1.5.2` a script I use started failing with:\n\n```\nMemory: 367.6 MBFloating point exception (core dumped)\n```\n\n### To Reproduce\n\nCan't post source DB, but it uses a `postgres_attach` and looks like this:\n\n```sql\n\nPRAGMA temp_directory='/tmp/dump-legacy.duck.db';\n.print creating tables\n\nCREATE TABLE table1 ();\nCREATE TABLE table2 ();\n\n.print connect to Postgres DB\n\nINSTALL postgres;\nLOAD postgres;\n\nCALL postgres_attach(\n    concat('host=', getenv('PGHOST'),\n    ' dbname=', getenv('PGDATABASE'),\n    ' user=',  getenv('PGUSER'),\n    ' password=', getenv('PGPASSWORD'))\n    );\n\n.timer on\n\nINSERT INTO table1 (...)\n    SELECT  ... FROM \"PostgresTable1\";\n\nINSERT INTO table2 (...)\n    SELECT  ... FROM \"PostgresTable2\";\n```\n\nIt successfully completes a few tables, then consistently fails on the same one.\n\n### OS:\n\nUbuntu 20.04.4\n\n### DuckDB Version:\n\n1.5.2\n\n### DuckDB Client:\n\nCLI\n\n### Hardware:\n\n_No response_\n\n### Full Name:\n\nDave Tapley\n\n### Affiliation:\n\nJE Fuller\n\n### Did you include all relevant configuration (e.g., CPU architecture, Linux distribution) to reproduce the issue?\n\n- [x] Yes, I have\n\n### Did you include all code required to reproduce the issue?\n\n- [ ] Yes, I have\n\n### Did you include all relevant data sets for reproducing the issue?\n\nNo - I cannot share the data sets because they are confidential",
+  "comments": [
+    {
+      "id": "IC_kwDOVYrnJM8AAAABhGjRpg",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "NONE",
+      "body": "Could you provide a small, shareable reproducer that still triggers the “Floating point exception (core dumped)” crash? Prefer either (A) a minimal SQL script (CREATE TABLE / INSERT / the exact failing `INSERT ... SELECT` from Postgres) and any small sample data (CSV or SQL) that reproduces it, or (B) the schemas of `PostgresTable1`/`PostgresTable2` plus the exact SELECT used and the full CLI output/error text. That will let us reproduce the crash locally without confidential data.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 4fbbd66dc944f1486f8e043c97521bde057c599ead8f75354e6d7493d917c513 needs reproducible example -->",
+      "createdAt": "2026-10-30T06:22:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/66#issuecomment-6516429222",
+      "viewerDidAuthor": false
+    }
+  ],
+  "labels": [
+    {
+      "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+      "name": "needs reproducible example",
+      "description": "Essential code, data, schema or reproduction steps are missing.",
+      "color": "D876E3"
+    }
+  ],
+  "number": 66,
+  "state": "OPEN",
+  "title": "Memory: 367.6 MB Floating point exception (core dumped)",
+  "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/66"
+}

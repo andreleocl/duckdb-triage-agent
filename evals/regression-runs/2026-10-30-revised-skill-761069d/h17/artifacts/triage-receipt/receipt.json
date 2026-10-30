@@ -1,0 +1,47 @@
+{
+  "status": "published",
+  "proposal": {
+    "label": "needs reproducible example",
+    "comment": "Could you provide a small, shareable reproducer that still triggers the \u201cFloating point exception (core dumped)\u201d crash? Prefer either (A) a minimal SQL script (CREATE TABLE / INSERT / the exact failing `INSERT ... SELECT` from Postgres) and any small sample data (CSV or SQL) that reproduces it, or (B) the schemas of `PostgresTable1`/`PostgresTable2` plus the exact SELECT used and the full CLI output/error text. That will let us reproduce the crash locally without confidential data.",
+    "rationale": "The report shows a crash during `INSERT ... SELECT` from a Postgres attachment but provides neither the failing SQL (exact INSERT/SELECT) nor any table schemas or sample data. Without the query and minimal data/schema, the failure cannot be reproduced or debugged."
+  },
+  "actions": [
+    "add_comment",
+    "add_label"
+  ],
+  "run_id": "41013401136",
+  "configuration_sha": "761069d82f280c6d74f0fd9634fad7d138ebd17b",
+  "input_sha256": "4fbbd66dc944f1486f8e043c97521bde057c599ead8f75354e6d7493d917c513",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "/comments?per_page=100&page=1",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/comments",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/labels",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

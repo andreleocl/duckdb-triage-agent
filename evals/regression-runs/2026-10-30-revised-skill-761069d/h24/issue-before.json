@@ -1,0 +1,10 @@
+{
+  "assignees": [],
+  "body": "### What happens?\n\nHello, I encountered an error with using the c++ api example code below :\r\n\r\nDuckDB db(nullptr);\r\nduckdb::Connection con(db);\r\ncon.Query(\"CREATE TABLE integers (i INTEGER, j INTEGER)\");\r\n\r\nException thrown at 0x00007FFED4ED7937 (duckdb.dll) in ____.exe: 0xC0000005: Access violation reading location 0x000002DEE5029000.\r\n\r\nthe third line with con query will yield the exception mentioned above .\n\n### To Reproduce\n\nDuckDB db(nullptr);\r\nduckdb::Connection con(db);\r\ncon.Query(\"CREATE TABLE integers (i INTEGER, j INTEGER)\");\n\n### OS:\n\nwindows\n\n### DuckDB Version:\n\n1.0.0 stable\n\n### DuckDB Client:\n\nc++\n\n### Full Name:\n\nAnderson\n\n### Affiliation:\n\nn/a\n\n### What is the latest build you tested with? If possible, we recommend testing with the latest nightly build.\n\nI have tested with a stable release\n\n### Did you include all relevant data sets for reproducing the issue?\n\nNo - Other reason (please specify in the issue body)\n\n### Did you include all code required to reproduce the issue?\n\n- [X] Yes, I have\n\n### Did you include all relevant configuration (e.g., CPU architecture, Python version, Linux distribution) to reproduce the issue?\n\n- [X] Yes, I have",
+  "comments": [],
+  "labels": [],
+  "number": 67,
+  "state": "OPEN",
+  "title": "DUCKDB access violation with c++ api ",
+  "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/67"
+}

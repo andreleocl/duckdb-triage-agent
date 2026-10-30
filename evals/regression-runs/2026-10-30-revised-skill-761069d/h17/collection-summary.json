@@ -1,0 +1,60 @@
+{
+  "expected": {
+    "case_id": "h17",
+    "label": "needs reproducible example",
+    "rationale": "Reviewed upstream-reference expectation. Reference label observed; review opening context and human requests before freezing.",
+    "evidence": [
+      "CREATE TABLE table1 ();"
+    ],
+    "required_focus": [
+      "Request sanitized schema, failing INSERT/SELECT details and minimal source rows or generator."
+    ],
+    "unacceptable": [
+      "Request credentials or the private source database.",
+      "Repeat supplied OS/version questions."
+    ],
+    "reference_basis": "first_target_label_event",
+    "upstream_url": "https://github.com/duckdb/duckdb/issues/22468",
+    "reference_event": {
+      "id": 25165626266,
+      "url": "https://api.github.com/repos/duckdb/duckdb/issues/events/25165626266",
+      "created_at": "2026-05-05T07:33:09Z",
+      "actor": "DinosL"
+    },
+    "reviewer": "Andre",
+    "reviewed_on": "2026-10-28"
+  },
+  "issue": 66,
+  "issue_url": "https://github.com/andreleocl/duckdb-triage-agent/issues/66",
+  "dispatch_attempted": true,
+  "dispatch_output": "https://github.com/andreleocl/duckdb-triage-agent/actions/runs/41013401136",
+  "run_id": 41013401136,
+  "collected": true,
+  "workflow_conclusion": "success",
+  "tool_calls": [
+    "submit_triage"
+  ],
+  "cost": {
+    "agent": {
+      "requests": 3,
+      "models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "input_tokens": 29732,
+      "cached_tokens": 19584,
+      "output_tokens": 648,
+      "estimated_usd": 0.0043226
+    },
+    "detection": {
+      "requests": 3,
+      "models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "input_tokens": 62992,
+      "cached_tokens": 40960,
+      "output_tokens": 502,
+      "estimated_usd": 0.007536
+    }
+  },
+  "estimated_usd": 0.0118586
+}

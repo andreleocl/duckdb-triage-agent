@@ -1,0 +1,74 @@
+### What happens?
+
+Executing an ASOF join whose `ON` clause contains a non-comparison conjunct crashes with SIGSEGV when the optimizer is disabled. `EXPLAIN` of the same query works, and with the optimizer enabled the query runs fine - the crash only happens when a query is actually executed under `SET debug_disable_optimizer=true`. I hit this while testing upstream reference  number 26292, whose disable_optimizer CI run surfaces it through a new ASOF join test.
+
+The crash is in the ASOF nested-loop planning path added by upstream reference  number 16218: `PlanAsOfLoopJoin` estimates the cardinality of the join subtree after its children were already planned, and planning a child scan consumes its bind data, so the estimate dereferences a null bind data pointer in `TableScanCardinality`. The table contents and types do not matter - any non-comparison condition (e.g. an `IN` list) triggers it.
+
+### To Reproduce
+
+```sql
+SET debug_disable_optimizer=true;
+CREATE TABLE a_t AS SELECT (range % 3)::INTEGER AS k, ['sad', 'ok', 'happy'][1 + range % 3] AS m, range::INTEGER AS t FROM range(12);
+CREATE TABLE b_t AS SELECT (range % 3)::INTEGER AS k, range::INTEGER AS t FROM range(12);
+SELECT count(*)
+FROM a_t ASOF JOIN b_t
+    ON a_t.k = b_t.k AND a_t.t >= b_t.t AND a_t.m IN ('sad', 'ok', 'happy');
+```
+
+Output (the process crashes before producing any result):
+
+```text
+zsh: segmentation fault  duckdb < repro.sql
+```
+
+The crash stack (from a reldebug build), showing the null bind data reaching the scan's cardinality callback:
+
+```text
+* frame #0: duckdb::TableScanCardinality(context=..., bind_data_p=0x0000000000000000) at table_scan.cpp:1133
+    frame #1: duckdb::LogicalGet::EstimateCardinality at logical_get.cpp:310
+    frame #3: duckdb::LogicalOperator::EstimateCardinality
+    frame #4: duckdb::PhysicalPlanGenerator::PlanAsOfLoopJoin at plan_asof_join.cpp:259
+    frame #5: duckdb::PhysicalPlanGenerator::PlanAsOfJoin at plan_asof_join.cpp:357
+```
+
+Observations that pin it down:
+
+- Without the non-comparison conjunct (`a_t.m IN (...)` removed) the query plans and runs fine.
+- `EXPLAIN` of the crashing query does not crash - with the optimizer disabled, nothing caches an estimate on the operators, which is exactly the state in which the post-planning estimate touches the consumed bind data.
+- With the optimizer enabled (default) the query also runs fine, because the statistics propagation has already cached cardinalities on every operator.
+
+### OS:
+
+macOS 26.5 arm64
+
+### DuckDB Version:
+
+v2.0.0-dev86171
+
+### DuckDB Client:
+
+CLI
+
+### Hardware:
+
+_No response_
+
+### Full Name:
+
+JaySon Huang
+
+### Affiliation:
+
+PingCAP
+
+### Did you include all relevant configuration (e.g., CPU architecture, Linux distribution) to reproduce the issue?
+
+- [x] Yes, I have
+
+### Did you include all code required to reproduce the issue?
+
+- [x] Yes, I have
+
+### Did you include all relevant data sets for reproducing the issue?
+
+Not applicable - the reproduction does not require a data set

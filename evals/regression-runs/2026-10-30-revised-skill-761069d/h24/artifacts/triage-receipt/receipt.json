@@ -1,0 +1,47 @@
+{
+  "status": "published",
+  "proposal": {
+    "label": "needs more info",
+    "comment": "Could you provide a complete minimal repro project that we can build and run on Windows? Please include: the full source file (with `#include` and `main`), the exact compiler/Visual Studio and version, the precise compile/link commands or the Visual Studio project settings, and whether you used the official `duckdb.dll` from the 1.0.0 release or a build from source. Also attach the full exception call stack or crash log produced by the debugger. These details are needed to reproduce an access violation on Windows.",
+    "rationale": "The report includes the C++ snippet and OS/version but omits how DuckDB was built/linked and exact build/run commands. Access violations on Windows often depend on linking mode (DLL vs static), runtime library mismatches, or build flags; without the full source, compile/link commands, and which DLL was used, the crash cannot be reproduced."
+  },
+  "actions": [
+    "add_comment",
+    "add_label"
+  ],
+  "run_id": "41013908589",
+  "configuration_sha": "761069d82f280c6d74f0fd9634fad7d138ebd17b",
+  "input_sha256": "baaab9cfb227a18935ae2554cd1dddae4e626380906c4484a6011fe56de58c4a",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "/comments?per_page=100&page=1",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/comments",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/labels",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

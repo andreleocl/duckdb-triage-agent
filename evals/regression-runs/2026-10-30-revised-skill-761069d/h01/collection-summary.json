@@ -1,0 +1,53 @@
+{
+  "expected": {
+    "case_id": "h01",
+    "label": null,
+    "rationale": "Reviewed upstream-reference expectation. Approved no-action reference based on observed upstream activity; no target label is not confirmation of completeness. No personal maintainer clarification request found in the collected snapshot.",
+    "evidence": [
+      "CREATE TABLE a_t"
+    ],
+    "required_focus": [],
+    "unacceptable": [
+      "Treat label absence as proof of completeness.",
+      "Redirect, diagnose or mark duplicates outside the configured scope."
+    ],
+    "reference_basis": "no_target_label_event_observed",
+    "upstream_url": "https://github.com/duckdb/duckdb/issues/26300",
+    "reference_event": null,
+    "reviewer": "Andre",
+    "reviewed_on": "2026-10-28"
+  },
+  "issue": 65,
+  "issue_url": "https://github.com/andreleocl/duckdb-triage-agent/issues/65",
+  "dispatch_attempted": true,
+  "dispatch_output": "https://github.com/andreleocl/duckdb-triage-agent/actions/runs/41012938164",
+  "run_id": 41012938164,
+  "collected": true,
+  "workflow_conclusion": "success",
+  "tool_calls": [
+    "submit_triage"
+  ],
+  "cost": {
+    "agent": {
+      "requests": 3,
+      "models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "input_tokens": 30454,
+      "cached_tokens": 20096,
+      "output_tokens": 413,
+      "estimated_usd": 0.0039179
+    },
+    "detection": {
+      "requests": 2,
+      "models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "input_tokens": 39652,
+      "cached_tokens": 19712,
+      "output_tokens": 412,
+      "estimated_usd": 0.0063018
+    }
+  },
+  "estimated_usd": 0.0102197
+}

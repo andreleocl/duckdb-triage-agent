@@ -13,9 +13,20 @@ have now run sequentially under the fixed configuration recorded in
 The cases already informed development; this is not an unseen held-out benchmark.
 
 The skill now separates hosted submission from offline JSON/file validation.
-This instruction revision is **not evaluated end to end**. Existing results remain
-attributed to their original commits and saved skill hashes; they do not evaluate
-the revised instructions. Any future run must be recorded separately.
+The [four-case regression check](regression-runs/2026-10-30-revised-skill-761069d/README.md)
+tested that revision at commit `761069d` on h01, h17, h24 and a01, sequentially.
+All four submitted exactly once. The three historical cases matched their reference
+labels/actions; a01 incorrectly requested more information, and detection blocked
+publication. Five prohibited resource lookups remained: one on h24 and four on a01.
+Comment-quality caveats remain for h17/h24; label agreement is not a full quality pass.
+No metadata warnings were observed. Estimated agent plus detector cost was $0.05189760.
+
+This is a targeted regression check, not a replacement for the original 28-case
+evaluation. The remaining 24 cases have not been rerun with the revised skill.
+Existing results retain their original commits and skill hashes. These selected,
+single-trial observations do not establish that the instruction change improved
+behavior or that model capability caused the remaining errors. The frozen key,
+original scores and evidence are unchanged. Any future run must be recorded separately.
 
 ## Recorded results and review status
 

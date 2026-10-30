@@ -1,0 +1,61 @@
+{
+  "expected": {
+    "case_id": "h24",
+    "label": "needs more info",
+    "rationale": "Reviewed upstream-reference expectation. Needs-more-info label accompanies a request for exact code, compiler command and linker flags. Do not infer category from the word reproducer alone.",
+    "evidence": [
+      "Access violation reading location"
+    ],
+    "required_focus": [
+      "Ask for compiler/version and compile/link settings, plus header/DLL provenance and application/library Debug or Release modes."
+    ],
+    "unacceptable": [
+      "Assert that a Debug/Release mismatch is the proven cause.",
+      "Ask for an external dataset."
+    ],
+    "reference_basis": "first_target_label_event",
+    "upstream_url": "https://github.com/duckdb/duckdb/issues/13208",
+    "reference_event": {
+      "id": 13708010654,
+      "url": "https://api.github.com/repos/duckdb/duckdb/issues/events/13708010654",
+      "created_at": "2024-07-31T10:45:06Z",
+      "actor": "hannes"
+    },
+    "reviewer": "Andre",
+    "reviewed_on": "2026-10-28"
+  },
+  "issue": 67,
+  "issue_url": "https://github.com/andreleocl/duckdb-triage-agent/issues/67",
+  "dispatch_attempted": true,
+  "dispatch_output": "https://github.com/andreleocl/duckdb-triage-agent/actions/runs/41013908589",
+  "run_id": 41013908589,
+  "collected": true,
+  "workflow_conclusion": "success",
+  "tool_calls": [
+    "list_mcp_resources",
+    "submit_triage"
+  ],
+  "cost": {
+    "agent": {
+      "requests": 4,
+      "models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "input_tokens": 39656,
+      "cached_tokens": 29568,
+      "output_tokens": 918,
+      "estimated_usd": 0.0050972
+    },
+    "detection": {
+      "requests": 2,
+      "models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "input_tokens": 38884,
+      "cached_tokens": 19200,
+      "output_tokens": 501,
+      "estimated_usd": 0.006403
+    }
+  },
+  "estimated_usd": 0.0115002
+}

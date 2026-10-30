@@ -1,0 +1,20 @@
+{
+  "status": "no_action",
+  "proposal": {
+    "label": null,
+    "comment": null,
+    "rationale": "The report includes a self-contained reproducer SQL, explicit steps, environment (DuckDB dev version v2.0.0-dev86171, macOS 26.5 arm64, CLI), and clear diagnostics (stack trace and observations). No missing reproduction steps or essential environment details prevent following the failure, so no further clarification is required."
+  },
+  "actions": [],
+  "run_id": "41012938164",
+  "configuration_sha": "761069d82f280c6d74f0fd9634fad7d138ebd17b",
+  "input_sha256": "b422342b00f86683d10c920ddefd0ee41b2c305e654fd42be686300704890ddf",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}
