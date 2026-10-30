@@ -403,6 +403,52 @@ class WorkflowBehavior(unittest.TestCase):
 
 
 class CompiledWorkflow(unittest.TestCase):
+    def assert_job_condition(self, name, cases):
+        lock = (ROOT / '.github/workflows/issue-triage.lock.yml').read_text(encoding='utf-8')
+        jobs = dict(re.findall(r'^  ([a-z_]+):\n(.*?)(?=^  [a-z_]+:\n|\Z)',
+                               lock.split('\njobs:\n', 1)[1], re.M | re.S))
+        match = re.search(r'^    if: (?:>\n((?:^      [^\n]+\n)+)|([^\n]+))', jobs[name], re.M)
+        self.assertIsNotNone(match, f'{name} must have an explicit job condition')
+        condition = ' '.join((match[1] or match[2]).split())
+        node = shutil.which('node')
+        self.assertIsNotNone(node, 'Node.js is required for compiled condition checks')
+        # These generated conditions use the shared JS/Actions boolean syntax.
+        # This checks their truth table, not GitHub scheduling or process cancellation.
+        script = """
+const {condition, cases} = JSON.parse(require('node:fs').readFileSync(0, 'utf8'));
+const check = new Function('needs', 'cancelled', 'always', 'contains',
+                          'return (' + condition + ');');
+process.stdout.write(JSON.stringify(cases.map(c => check(
+    c.needs, () => c.cancelled, () => true, (value, part) => value.includes(part)))));
+"""
+        result = subprocess.run([node, '-e', script], input=json.dumps(dict(condition=condition, cases=cases)),
+                                capture_output=True, text=True, timeout=10)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        for case, actual in zip(cases, json.loads(result.stdout), strict=True):
+            with self.subTest(job=name, case=case):
+                self.assertIs(actual, case['expected'])
+
+    def test_detection_requires_successful_dependencies_and_no_cancellation(self):
+        cases = []
+        for cancelled in (False, True):
+            for activation in ('success', 'failure', 'cancelled', 'skipped'):
+                for agent in ('success', 'failure', 'cancelled', 'skipped'):
+                    cases.append(dict(cancelled=cancelled,
+                                      needs=dict(activation=dict(result=activation), agent=dict(result=agent)),
+                                      expected=not cancelled and activation == agent == 'success'))
+        self.assert_job_condition('detection', cases)
+
+    def test_publication_remains_blocked_without_detection_or_after_cancellation(self):
+        cases = []
+        for cancelled in (False, True):
+            for detection in ('success', 'failure', 'cancelled', 'skipped'):
+                for output_types in ('submit_triage', ''):
+                    cases.append(dict(cancelled=cancelled,
+                                      needs=dict(agent=dict(result='success', outputs=dict(output_types=output_types)),
+                                                 detection=dict(result=detection)),
+                                      expected=not cancelled and detection == 'success' and bool(output_types)))
+        self.assert_job_condition('submit_triage', cases)
+
     def test_compiled_submission_schema_uses_three_required_strings(self):
         lock = (ROOT / '.github/workflows/issue-triage.lock.yml').read_text(encoding='utf-8')
         block = lock.split('GH_AW_TOOLS_META_JSON: |\n', 1)[1].split('          GH_AW_VALIDATION_JSON:', 1)[0]

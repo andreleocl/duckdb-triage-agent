@@ -174,6 +174,7 @@ jobs:
   agent:
     timeout-minutes: 15
   detection:
+    if: "!cancelled() && needs.agent.result == 'success'"
     timeout-minutes: 5
 steps:
   - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
