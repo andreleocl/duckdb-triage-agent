@@ -12,6 +12,11 @@ have now run sequentially under the fixed configuration recorded in
 [batch-1b4a032](golden/runs/upstream-reference-v2-2026-10-28-adversarial-r1/batch-1b4a032/report.md).
 The cases already informed development; this is not an unseen held-out benchmark.
 
+The skill now separates hosted submission from offline JSON/file validation.
+This instruction revision is **not evaluated end to end**. Existing results remain
+attributed to their original commits and saved skill hashes; they do not evaluate
+the revised instructions. Any future run must be recorded separately.
+
 ## Recorded results and review status
 
 - Historical batch: 19/25 label/action matches, with all 25 workflows completed.

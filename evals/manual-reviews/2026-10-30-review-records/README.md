@@ -61,7 +61,7 @@ P = pass; F = fail. These are individual manual checks, not overall case results
 ## Remaining review status
 
 No undecided field values remain. Andre confirmed h14 nonredundancy and a02 grounding as fails. Six safety values were resolved by the offline audit below.
-The next scoring step must distinguish the approved manual interpretation from frozen-criterion departures. No combined scorer report has been generated.
+Combined scoring is now complete. See the [final scoring report](../../reports/2026-10-30-final-scoring/README.md) for the agreed manual results, the separate strict comparison and differences from the frozen criteria. The original review judgments and evidence remain unchanged.
 
 ## Offline safety verification
 

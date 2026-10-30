@@ -1,16 +1,14 @@
 # Design: first-pass triage of DuckDB issues
 
-This sandbox configures Codex through a GitHub Agentic Workflow to identify
-essential missing reproduction or environment information in DuckDB reports.
-It can add `needs reproducible example` or `needs more info` and one tailored
-clarification comment, or take no action. It is not deployed to DuckDB.
+This sandbox configures Codex through a GitHub Agentic Workflow to identify essential missing reproduction
+or environment information in DuckDB reports. It can add `needs reproducible example` or
+`needs more info` and one tailored clarification, or take no action. It is not deployed to DuckDB.
 
 ## Why this workflow needs an agent
 
-DuckDB's reproduction-request workflow requires a maintainer to read an issue
-and apply a label before a bot posts standard reproduction guidance.
-The agent automates that assessment and asks a context-specific question,
-rather than sending the same template regardless of the report's contents.
+DuckDB's reproduction-request workflow requires a maintainer to read an issue and apply a label
+before a bot posts standard reproduction guidance. The agent automates that assessment and asks
+a context-specific question, rather than sending the same template regardless of the report's contents.
 
 A report can include SQL but omit data, list conflicting versions, or describe
 a failed reduction attempt. Filled fields and keywords do not establish completeness.
@@ -56,6 +54,8 @@ See the [workflow](.github/workflows/issue-triage.md), its compiled lock, the
 The evaluation uses 25 historical reports, including nine no-action references, and three
 issue-body attacks. Selection was purposive; opening inputs exclude later maintainer evidence.
 The revised key was frozen before its batch, but cases informed development: this is not an unseen test.
+The hosted/offline skill clarification is **not evaluated end to end**. These results
+remain attributed to their recorded configurations, before that instruction change.
 
 | Measure | Recorded result |
 |---|---|
@@ -90,9 +90,9 @@ Tool restrictions must still be enforced outside prompts, regardless of model ch
 |---|---|
 | Identity | Publication uses GITHUB_TOKEN and bot attribution; replay issues are created under andreleocl. |
 | Least privilege | Agent-side contents/issues/actions read; trusted publisher issues write. See workflow permissions. |
-| Safe outputs | Fixed target, two labels, one proposal, comment limits and replay checks; receipts and offline tests retained. |
-| Human approval | No per-comment approval gate. Andre reviews suggestions; CODEOWNERS routes configuration review. Enforced branch approval is not claimed. |
-| Budgets | Timeouts: agent 10 minutes, publisher 3. Configured AI credits: 50 triage, 20 detection; daily limiting disabled. Admin runs bypass the configured user rate limit; history-check errors fail open. No verified global spending cap. |
+| Safe outputs | At most one allowed label and one comment per run on a sandbox issue, with fixed-target, length and replay checks. These limits constrain actions, not accuracy; outputs can still be wrong. |
+| Human approval | Automatic publication tests actual bot effects on owner-selected sandbox issues; Andre reviews afterward. No per-comment approval gate. CODEOWNERS routes configuration review; enforced branch approval is not claimed. |
+| Budgets | Manual dispatch and owner-approved batches manage spending operationally, not as an enforced total cap. Timeouts: agent 10 minutes, publisher 3. Configured AI credits: 50 triage, 20 detection; daily limiting disabled. Admin runs bypass the user rate limit; history-check errors fail open. |
 | Audit trail | Per-run inputs, commits, resolved models, tools, proposals, effects and cost estimates are saved under evals/golden/runs/. |
 | Kill switch | [Disabled-start test](evals/control-tests/2026-10-29-disabled-gate/README.md) blocked all jobs. [Actual cancellation test](evals/control-tests/2026-10-29-actual-triage-cancellation/README.md) prevented publication, but detector inference continued; cancellation is not an immediate spending stop. |
 | Drift detection | [Manual review policy](docs/drift-review.md): Andre reviews authorized golden reruns before accepting model/runtime changes. No scheduled monitoring or automatic policy enforcement. |
