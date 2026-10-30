@@ -1,0 +1,3 @@
+{"timestamp":"2026-10-27T08:09:42.373Z","source":"response_headers","operation":"repos.getContent","credentialSource":"unknown","resource":"core","limit":5000,"remaining":4977,"used":23,"reset":"2026-10-27T08:16:50.000Z"}
+{"timestamp":"2026-10-27T08:09:42.693Z","source":"response_headers","operation":"repos.getContent","credentialSource":"unknown","resource":"core","limit":5000,"remaining":4976,"used":24,"reset":"2026-10-27T08:16:50.000Z"}
+{"timestamp":"2026-10-27T08:13:16.511Z","source":"response_headers","operation":"actions.listJobsForWorkflowRun","credentialSource":"unknown","resource":"core","limit":5000,"remaining":4974,"used":26,"reset":"2026-10-27T08:16:50.000Z"}

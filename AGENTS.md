@@ -22,7 +22,9 @@ its use. Do not assume automatic discovery at this location.
 
 ## Build and test
 
-No application build is needed. Use Python 3.10+ and its standard library.
+No application build is needed. The full offline test suite requires Python 3.10+
+and Node.js available on PATH for the pinned framework JavaScript validation check.
+The Python scripts use only the standard library; no pip or npm packages are needed.
 After workflow changes, compile with `gh aw compile issue-triage --strict --no-check-update`
 using gh-aw v0.93.5. Never hand-edit the generated lock file.
 Run relevant checks before committing:

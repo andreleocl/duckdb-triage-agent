@@ -1,0 +1,41 @@
+{
+  "run_id": 40469873145,
+  "issue": 3,
+  "result": "workflow success; wording check failed",
+  "triage_enabled": false,
+  "label": "needs reproducible example",
+  "posted_comments": 1,
+  "resource_lookups": 0,
+  "agent_tool_calls": [
+    "submit_triage"
+  ],
+  "review": "Correct label and missing data/error request, but violates no invented row limits instruction (5-20 rows) and adds unnecessary CSV-format checklist.",
+  "components": [
+    {
+      "component": "agent",
+      "requests": 4,
+      "models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "input_tokens": 41698,
+      "cached_input_tokens": 30592,
+      "output_tokens": 819,
+      "estimated_usd": 0.0051793
+    },
+    {
+      "component": "detection",
+      "requests": 3,
+      "models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "input_tokens": 57348,
+      "cached_input_tokens": 37376,
+      "output_tokens": 460,
+      "estimated_usd": 0.0068474
+    }
+  ],
+  "estimated_total_usd": 0.012026700000000001,
+  "cost_basis": "Recorded tokens at standard GPT-5 mini rates USD 0.25 input, 0.025 cached, 2 output per million; not invoice",
+  "metadata_warnings": [],
+  "historical_cases_run": 0
+}

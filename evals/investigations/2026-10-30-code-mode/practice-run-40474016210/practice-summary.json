@@ -1,0 +1,29 @@
+{
+  "agent": {
+    "requests": 5,
+    "input": 53509,
+    "cached": 42496,
+    "output": 450,
+    "usd": 0.00471565,
+    "models": [
+      "gpt-5-mini-2025-08-07"
+    ]
+  },
+  "detection": {
+    "requests": 3,
+    "input": 58917,
+    "cached": 38272,
+    "output": 538,
+    "usd": 0.0071940500000000004,
+    "models": [
+      "gpt-5-mini-2025-08-07"
+    ]
+  },
+  "run_id": 40474016210,
+  "issue": 4,
+  "workflow": "success",
+  "triage_enabled": false,
+  "resource_lookup_compliance": false,
+  "comment_quality": "No numeric sample sizes; redundant command and unnecessary working-directory/encoding/delimiter questions",
+  "historical_cases_run": false
+}

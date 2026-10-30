@@ -46,7 +46,7 @@ connectivity must be distinguished from arbitrary model browsing.
 Free-text comments allow tailored questions but also redundancy and unsupported claims.
 Validation cannot establish technical accuracy. Resource helpers remained exposed
 despite prompt restrictions, and recorded calls are deviations, not successful enforcement.
-See the [workflow](.github/workflows/issue-triage.md), its compiled lock, the
+See the [Code Mode investigation](evals/investigations/2026-10-30-code-mode/README.md), [workflow](.github/workflows/issue-triage.md), compiled lock,
 [skill](.claude/skills/duckdb-triage/SKILL.md) and [publisher](scripts/triage_runtime.py).
 
 ## Evaluation and findings

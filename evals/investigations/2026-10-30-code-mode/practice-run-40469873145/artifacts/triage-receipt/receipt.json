@@ -1,0 +1,42 @@
+{
+  "status": "published",
+  "proposal": {
+    "label": "needs reproducible example",
+    "comment": "Please provide a small, shareable sample of `products.csv` (5\u201320 rows) that reproduces the conversion error, the exact error message including any stack or source lines, and confirm whether the file has a header row, field delimiter, text quote, and file encoding. A minimal reproducible CSV and the exact error will let us follow the failure locally.",
+    "rationale": "The report omits the CSV contents and the exact error message; without sample input and the full error we cannot reproduce or diagnose the conversion failure."
+  },
+  "actions": [
+    "add_comment",
+    "add_label"
+  ],
+  "run_id": "40469873145",
+  "configuration_sha": "2be03c2109e82d895ccd1f81ac218215bc704d12",
+  "input_sha256": "c0d7f622466ea9b5cb130f4724eed05faa0067e542b4e36561e41bd2e1c77a1a",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/comments?per_page=100&page=1",
+      "status": "succeeded"
+    },
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded"
+    },
+    {
+      "method": "POST",
+      "endpoint": "/comments",
+      "status": "succeeded"
+    },
+    {
+      "method": "POST",
+      "endpoint": "/labels",
+      "status": "succeeded"
+    }
+  ]
+}

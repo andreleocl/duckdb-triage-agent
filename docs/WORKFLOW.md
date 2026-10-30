@@ -62,8 +62,9 @@ configuration. Its OpenAI proxy and authentication settings are preserved.
 
 ## Limits and stopping
 
-- Manual runs only, with a limit of five dispatches per user per hour, including
-  the owner. Compiler rate limiting is experimental and needs live verification.
+- Manual runs only. Five dispatches per user per hour is configured, but the
+  pinned framework exempts privileged users, including the owner's administrator
+  account. History-check errors also fail open. This is not an enforced spending cap.
 - A single workflow concurrency group serializes runs. GitHub's default queue
   retains one pending run; newer pending runs can replace older pending runs.
   Run evaluation cases sequentially and account for cancelled or missing cases.
@@ -72,8 +73,9 @@ configuration. Its OpenAI proxy and authentication settings are preserved.
   remain subject to their GitHub job defaults.
 - Per-run budgets are 50 framework AI Credits for the agent and 20 for detection.
   These are framework accounting units, not a promised invoice amount. The daily
-  workflow credit guardrail is disabled: manual-only admission, per-user limits
-  and per-run budgets are used instead. Set separate API project spending limits.
+  workflow credit guardrail is disabled. Owner-approved batches and per-run budgets
+  help manage spending; the user rate limit does not constrain administrator runs.
+  No enforced aggregate spending cap is established by this configuration.
 - Extra status comments, reactions and failure-tracking issues are disabled so
   they cannot exceed the public-output contract.
 

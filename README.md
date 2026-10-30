@@ -34,9 +34,10 @@ participant notifications are outside its scope.
 
 ## Getting started
 
-Use Python 3.10 or newer. The scripts use only the standard library; there is no
-package installation or application build step. Run these commands from the
-repository root:
+The full offline test suite requires Python 3.10+ and Node.js available on PATH.
+Node.js runs the pinned framework JavaScript validation check. The Python scripts
+use only the standard library; no pip or npm packages or application build are
+needed. Run these commands from the repository root:
 
 ```sh
 python -m unittest discover -s tests -v

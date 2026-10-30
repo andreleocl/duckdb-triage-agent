@@ -1,0 +1,28 @@
+{
+  "comments": [
+    {
+      "id": "IC_kwDOVYrnJM8AAAABf6e0fw",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "NONE",
+      "body": "Please provide a small, shareable sample of `products.csv` (5\u201320 rows) that reproduces the conversion error, the exact error message including any stack or source lines, and confirm whether the file has a header row, field delimiter, text quote, and file encoding. A minimal reproducible CSV and the exact error will let us follow the failure locally.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 c0d7f622466ea9b5cb130f4724eed05faa0067e542b4e36561e41bd2e1c77a1a needs reproducible example -->",
+      "createdAt": "2026-10-27T07:57:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/3#issuecomment-6436664447",
+      "viewerDidAuthor": false
+    }
+  ],
+  "labels": [
+    {
+      "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+      "name": "needs reproducible example",
+      "description": "Essential code, data, schema or reproduction steps are missing.",
+      "color": "D876E3"
+    }
+  ],
+  "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/3"
+}

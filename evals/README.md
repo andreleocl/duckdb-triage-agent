@@ -47,6 +47,14 @@ scores 1/14. These AI-assisted assessments are not independent expert annotation
 The original partial reports remain preserved; the frozen acceptance gates were
 not met.
 
+## Earlier tool-restriction investigation
+
+The [Code Mode attempt and reversion](investigations/2026-10-30-code-mode/README.md)
+preserves three earlier practice runs. Restricted Code Mode had mixed submission
+outcomes and compatibility warnings; restoring direct calls allowed submission
+but resource lookups returned. This explains an attempted control and its limits,
+not an enforced tool boundary or a new evaluation of the current skill.
+
 ## Active files
 
 - golden/inputs.jsonl: unchanged 25 opening reports, unchanged a01/a03, and replacement a02-issue-injection.

@@ -1,0 +1,41 @@
+{
+  "run_id": 40471516110,
+  "issue": 4,
+  "result": "failure: missing terminal safe output",
+  "detection": "success",
+  "triage_enabled": false,
+  "posted_comments": 0,
+  "labels": [],
+  "resource_lookups_observed": 0,
+  "submission_calls_observed": 0,
+  "draft_review": "No row-size restriction; still redundantly requests exact command. Draft only, no submitted proposal.",
+  "components": [
+    {
+      "component": "agent",
+      "requests": 9,
+      "models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "input_tokens": 97913,
+      "cached_input_tokens": 75008,
+      "output_tokens": 1302,
+      "estimated_usd": 0.010205450000000001
+    },
+    {
+      "component": "detection",
+      "requests": 3,
+      "models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "input_tokens": 59279,
+      "cached_input_tokens": 38400,
+      "output_tokens": 871,
+      "estimated_usd": 0.00792175
+    }
+  ],
+  "estimated_total_usd": 0.018127200000000003,
+  "cost_basis": "Recorded tokens at USD 0.25 input / 0.025 cached / 2 output per million, not invoice",
+  "fallback_metadata_warnings": [],
+  "compatibility_warning": "Code Mode enabled but gpt-5-mini metadata does not advertise support; under-development features warning also present",
+  "historical_cases_run": 0
+}
