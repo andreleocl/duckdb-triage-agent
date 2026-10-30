@@ -1,0 +1,36 @@
+wait-for-cancellation	Set up job	﻿2026-10-29T02:57:34.1513395Z Current runner version: '2.338.0'
+wait-for-cancellation	Set up job	2026-10-29T02:57:34.1540074Z ##[group]Runner Image Provisioner
+wait-for-cancellation	Set up job	2026-10-29T02:57:34.1540998Z Hosted Compute Agent
+wait-for-cancellation	Set up job	2026-10-29T02:57:34.1541597Z Version: 20261021.618
+wait-for-cancellation	Set up job	2026-10-29T02:57:34.1542330Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+wait-for-cancellation	Set up job	2026-10-29T02:57:34.1543052Z Build Date: 2026-10-21T00:45:21Z
+wait-for-cancellation	Set up job	2026-10-29T02:57:34.1543722Z Worker ID: {46df7613-061c-49f0-8319-e5dacdf05838}
+wait-for-cancellation	Set up job	2026-10-29T02:57:34.1544503Z Region: westus
+wait-for-cancellation	Set up job	2026-10-29T02:57:34.1545064Z Cloud: Azure
+wait-for-cancellation	Set up job	2026-10-29T02:57:34.1545726Z ##[endgroup]
+wait-for-cancellation	Set up job	2026-10-29T02:57:34.1547476Z ##[group]Operating System
+wait-for-cancellation	Set up job	2026-10-29T02:57:34.1548157Z Ubuntu
+wait-for-cancellation	Set up job	2026-10-29T02:57:34.1549029Z 24.04.5
+wait-for-cancellation	Set up job	2026-10-29T02:57:34.1549560Z LTS
+wait-for-cancellation	Set up job	2026-10-29T02:57:34.1550189Z ##[endgroup]
+wait-for-cancellation	Set up job	2026-10-29T02:57:34.1550764Z ##[group]Runner Image
+wait-for-cancellation	Set up job	2026-10-29T02:57:34.1551357Z Image: ubuntu-24.04
+wait-for-cancellation	Set up job	2026-10-29T02:57:34.1551976Z Version: 20261025.353.1
+wait-for-cancellation	Set up job	2026-10-29T02:57:34.1553055Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+wait-for-cancellation	Set up job	2026-10-29T02:57:34.1554976Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
+wait-for-cancellation	Set up job	2026-10-29T02:57:34.1555957Z ##[endgroup]
+wait-for-cancellation	Set up job	2026-10-29T02:57:34.1557044Z ##[group]GITHUB_TOKEN Permissions
+wait-for-cancellation	Set up job	2026-10-29T02:57:34.1559389Z Metadata: read
+wait-for-cancellation	Set up job	2026-10-29T02:57:34.1560169Z ##[endgroup]
+wait-for-cancellation	Set up job	2026-10-29T02:57:34.1562426Z Secret source: Actions
+wait-for-cancellation	Set up job	2026-10-29T02:57:34.1563455Z Cache mode: write
+wait-for-cancellation	Set up job	2026-10-29T02:57:34.1564562Z Prepare workflow directory
+wait-for-cancellation	Set up job	2026-10-29T02:57:34.1910626Z Prepare all required actions
+wait-for-cancellation	Set up job	2026-10-29T02:57:34.2016318Z Complete job name: wait-for-cancellation
+wait-for-cancellation	Wait for the owner to cancel from a phone	﻿2026-10-29T02:57:34.3091085Z ##[group]Run sleep 600
+wait-for-cancellation	Wait for the owner to cancel from a phone	2026-10-29T02:57:34.3091823Z ^[[36;1msleep 600^[[0m
+wait-for-cancellation	Wait for the owner to cancel from a phone	2026-10-29T02:57:34.3691357Z shell: /usr/bin/bash -e {0}
+wait-for-cancellation	Wait for the owner to cancel from a phone	2026-10-29T02:57:34.3692594Z ##[endgroup]
+wait-for-cancellation	Wait for the owner to cancel from a phone	2026-10-29T02:59:01.1939677Z ##[error]The operation was canceled.
+wait-for-cancellation	Complete job	﻿2026-10-29T02:59:01.2051869Z Cleaning up orphan processes
+wait-for-cancellation	Complete job	2026-10-29T02:59:01.2315022Z Terminate orphan process: pid (2203) (sleep)

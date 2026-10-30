@@ -1,0 +1,20 @@
+{
+  "status": "no_action",
+  "proposal": {
+    "label": null,
+    "comment": null,
+    "rationale": "The report supplies a complete, self-contained reproducer: SQL statements, the exact `SET debug_disable_optimizer=true` needed to trigger the crash, observed stack trace, DuckDB version, OS, and client. There is no missing data, schema, or environment detail that blocks reproducing the failure; the failure can be followed from the provided SQL. Therefore no further clarification is necessary."
+  },
+  "actions": [],
+  "run_id": "40629449280",
+  "configuration_sha": "e3311e64aa639fb29dd5e4d519a19503d3c2f6ee",
+  "input_sha256": "b422342b00f86683d10c920ddefd0ee41b2c305e654fd42be686300704890ddf",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

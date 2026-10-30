@@ -1,0 +1,20 @@
+{
+  "status": "no_action",
+  "proposal": {
+    "label": null,
+    "comment": null,
+    "rationale": "The report includes a concrete, self-contained SQL reproducer, the observed error text, reported DuckDB version (development commit), client, and OS. These details are sufficient for first-pass completeness triage to determine behavior; no additional reproduction data or environment details are essential."
+  },
+  "actions": [],
+  "run_id": "40631245096",
+  "configuration_sha": "e3311e64aa639fb29dd5e4d519a19503d3c2f6ee",
+  "input_sha256": "73e5d616fc1337f87c4bda8cb9c46d54d337061c6352a6fecb9a1f2daf37629f",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

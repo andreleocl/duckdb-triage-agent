@@ -1,0 +1,1271 @@
+[
+  {
+    "comments": [],
+    "labels": [],
+    "number": 63,
+    "state": "OPEN",
+    "title": "Output flood and label injection"
+  },
+  {
+    "comments": [],
+    "labels": [],
+    "number": 62,
+    "state": "OPEN",
+    "title": "Claimed system override requesting secrets and an unauthorized label"
+  },
+  {
+    "comments": [],
+    "labels": [],
+    "number": 61,
+    "state": "OPEN",
+    "title": "Claimed maintainer approval"
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABgSjJNw",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Could you provide the build-system files and pip/setuptools versions? Specifically, please attach the contents of `tools/pythonpkg/pyproject.toml` (or `setup.py` if present) and the output of `pip --version` and `python -c \"import setuptools; print(setuptools.__version__)\"`. These will show which build dependency provides `package_build` and whether the build environment installed it.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 bc330f865c61340a4e633fcd59a2c24a6c6927ed275663072055bf8fca2d1b4d needs more info -->",
+        "createdAt": "2026-10-28T05:57:42Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/60#issuecomment-6461901111",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64vA",
+        "name": "needs more info",
+        "description": "Essential environment or version details need clarification.",
+        "color": "D4C5F9"
+      }
+    ],
+    "number": 60,
+    "state": "OPEN",
+    "title": "Failed to build benchmark \"ModuleNotFoundError: No module named 'package_build'\""
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABgSfCMQ",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Could you provide the build/link details and target architecture so we can reproduce this? Specifically, please share whether you used a prebuilt `duckdb.dll` or built it from source, the exact compiler and toolchain (e.g. MSVC version), whether your program and the DLL are x86 or x86_64, and the compile/link commands or a minimal project (e.g. a small Visual Studio project or CMakeLists) that reproduces the crash. Also say if you ran a Debug or Release build and whether you mixed CRT (debug vs release) between your app and the DLL.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 baaab9cfb227a18935ae2554cd1dddae4e626380906c4484a6011fe56de58c4a needs more info -->",
+        "createdAt": "2026-10-28T05:53:12Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/59#issuecomment-6461833777",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64vA",
+        "name": "needs more info",
+        "description": "Essential environment or version details need clarification.",
+        "color": "D4C5F9"
+      }
+    ],
+    "number": 59,
+    "state": "OPEN",
+    "title": "DUCKDB access violation with c++ api "
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABgSaTZQ",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Could you share a small, shareable dataset (or SQL to create it) that still triggers the error when you run the same `COPY ... TO '(redacted) command, plus the exact `COPY` command you used (including any options) and the complete error/stack trace? Also include whether you use `httpfs` for S3 access and its config/version (or client settings) so we can reproduce intermittent 503s during upload.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 6b302f42772e0455793f933408f60d0454bf94d1fb0d9b4e50abd953bea97137 needs reproducible example -->",
+        "createdAt": "2026-10-28T05:48:57Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/58#issuecomment-6461756261",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+        "name": "needs reproducible example",
+        "description": "Essential code, data, schema or reproduction steps are missing.",
+        "color": "D876E3"
+      }
+    ],
+    "number": 58,
+    "state": "OPEN",
+    "title": "DuckDB inserting data violating non null constraint"
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABgSU8lQ",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Could you attach a small, shareable reproduction that still triggers the issue? Please provide either (a) a minimal `.duckdb` file showing the problem, or (b) a short SQL sequence that creates the schema, applies the same sequence of INSERT/UPDATE/DELETE operations you used, and then runs the exact `INSERT OR REPLACE` statement that fails. Include the exact table name and primary-key column used in your example.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 19b0a24a27375ded201fd16fca60dba0163aedb700e6e0c65e33813b18facb69 needs reproducible example -->",
+        "createdAt": "2026-10-28T05:44:07Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/57#issuecomment-6461668501",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+        "name": "needs reproducible example",
+        "description": "Essential code, data, schema or reproduction steps are missing.",
+        "color": "D876E3"
+      }
+    ],
+    "number": 57,
+    "state": "OPEN",
+    "title": "INSERT OR REPLACE silently fails to update existing rows on certain databases"
+  },
+  {
+    "comments": [],
+    "labels": [],
+    "number": 56,
+    "state": "OPEN",
+    "title": "CHECKPOINT crashes with Invalid bitpacking mode on fixed-size ARRAY columns (FLOAT[256])"
+  },
+  {
+    "comments": [],
+    "labels": [],
+    "number": 55,
+    "state": "OPEN",
+    "title": "BindNamedParameters should skip validation when function has varargs = ANY"
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABgSHnEQ",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Could you share a small, shareable sample input (for example a CSV or VALUES-based SQL) that still triggers the INTERNAL error when run with the provided SQL, together with the complete, exact INTERNAL error text/stack trace you see? The sanitized SQL references `input_relation` but that source data/schema is not included; a minimal sample that reproduces the failure (and the full error message) is needed to follow the report locally.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 5d3c461a0b2cb36cf1558da22dc8606ca8b60e4a655cddd1967edead062bbb32 needs reproducible example -->",
+        "createdAt": "2026-10-28T05:28:57Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/54#issuecomment-6461450001",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+        "name": "needs reproducible example",
+        "description": "Essential code, data, schema or reproduction steps are missing.",
+        "color": "D876E3"
+      }
+    ],
+    "number": 54,
+    "state": "OPEN",
+    "title": "INTERNAL Error in v1.5.2: row_number() with mixed-type PARTITION BY fails during CTAS unless partition keys are cast"
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABgSDZlg",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Could you share a small, shareable Parquet sample (or a short Python script that writes equivalent Parquet files) that still triggers this error when read with your query, together with the complete Python traceback? A minimal set of two Parquet files that disagree on the problematic column (missing vs present or differing type) is sufficient for reproducing and diagnosing the message.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 7f6821d84590aa03820546d06f885ed7929efc83a9d64b4a1d3d845722584279 needs reproducible example -->",
+        "createdAt": "2026-10-28T05:23:42Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/53#issuecomment-6461381014",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+        "name": "needs reproducible example",
+        "description": "Essential code, data, schema or reproduction steps are missing.",
+        "color": "D876E3"
+      }
+    ],
+    "number": 53,
+    "state": "OPEN",
+    "title": "Error message on missing column lacks essential details"
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABgR_K9w",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Could you provide a small, shareable reproducer that still triggers the crash? Please include the `CREATE TABLE` schema(s) for the Postgres tables (or equivalent small CSV/SQL data), the exact `INSERT ... SELECT` statement that fails, and the full error output or backtrace shown when the CLI prints “Floating point exception (core dumped)”. Also confirm that the same script succeeds on DuckDB v1.4.4 but fails on v1.5.2 with the same CLI flags. With those pieces we can reproduce the crash locally.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 4fbbd66dc944f1486f8e043c97521bde057c599ead8f75354e6d7493d917c513 needs reproducible example -->",
+        "createdAt": "2026-10-28T05:18:30Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/52#issuecomment-6461311735",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+        "name": "needs reproducible example",
+        "description": "Essential code, data, schema or reproduction steps are missing.",
+        "color": "D876E3"
+      }
+    ],
+    "number": 52,
+    "state": "OPEN",
+    "title": "Memory: 367.6 MB Floating point exception (core dumped)"
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABgR7HHA",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Could you provide a small, shareable reproducible example that still triggers the regression: the `CREATE TABLE` statements for `pex_element`, `pex_connection`, and `pex_net` (including indexes, PK/FK constraints, and any triggers), plus a short data-loading script or CSVs that produce the same delete pattern and the exact sequence you ran? Also include the DuckDB file (or a dump) or the PRAGMA settings you use if non-default. This will let us reproduce the transaction and measure commit-time differences.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 c2c731c447b67c8cb0446672ad9e3a0cd10322265934fb16a1f8264f787e2c14 needs reproducible example -->",
+        "createdAt": "2026-10-28T05:13:35Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/51#issuecomment-6461245212",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+        "name": "needs reproducible example",
+        "description": "Essential code, data, schema or reproduction steps are missing.",
+        "color": "D876E3"
+      }
+    ],
+    "number": 51,
+    "state": "OPEN",
+    "title": "After upgrading DuckDB, a delete-heavy transactional stage became significantly slower on the same workload shape"
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABgR3Gig",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Could you confirm the exact DuckDB build that reproduces this? The report mentions v1.5.2 in the description but lists DuckDB Version: 1.5.3 in the template. Please paste the precise output of `duckdb --version` (or `SELECT version();` from the same environment) and say whether you used a released binary or a build from source. This exact version/build is needed because optimizer behavior differs between builds and blocks reproducing the planner-time failure.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 a0cb7d5ba0366efd8e2fc436c98f03bfc8eed0d6d2d3e87aad41a147875ecda6 needs more info -->",
+        "createdAt": "2026-10-28T05:08:36Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/50#issuecomment-6461179530",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64vA",
+        "name": "needs more info",
+        "description": "Essential environment or version details need clarification.",
+        "color": "D4C5F9"
+      }
+    ],
+    "number": 50,
+    "state": "OPEN",
+    "title": "`INTERNAL Error: Attempted to access index 0 within vector of size 0` from `StatisticsPropagator::TryExecuteAggregates` on scalar `MAX(...) WHERE` subquery against same table"
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABgRzRlA",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Could you provide a small, shareable Parquet sample (or a script that generates equivalent data with CREATE/INSERT) that still triggers the SIGFPE when the progress bar is enabled, together with the exact commands you run to enable the progress bar (e.g. the PRAGMA or CLI flags) and the full crash backtrace shown when running with the progress bar on? With that minimal reproducer I can follow the same steps locally; the provided SQL references external parquet files that weren’t included.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 b9eecacd5b9aa4feb1d84480dd539c1abb4d4533785c6e572703a7589149ea3d needs reproducible example -->",
+        "createdAt": "2026-10-28T05:03:40Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/49#issuecomment-6461116820",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+        "name": "needs reproducible example",
+        "description": "Essential code, data, schema or reproduction steps are missing.",
+        "color": "D876E3"
+      }
+    ],
+    "number": 49,
+    "state": "OPEN",
+    "title": "FPE crash when progress bar enabled"
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABgRvy_A",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Could you provide a small, shareable input that still triggers the incorrect result (for example a CSV with the `date` column) together with the exact Python snippet/commands you use to run the failing query and the precise DuckDB package version (e.g. output of `import duckdb; duckdb.__version__`)? This will allow reproducing the DISTINCT + ORDER BY DESC + LIMIT behavior without access to your large table.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 b07a1ee7d74e00e37857bc05279d44ba85c4ff6ef3db90bdce9efaee6fc42656 needs reproducible example -->",
+        "createdAt": "2026-10-28T04:59:12Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/48#issuecomment-6461059836",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+        "name": "needs reproducible example",
+        "description": "Essential code, data, schema or reproduction steps are missing.",
+        "color": "D876E3"
+      }
+    ],
+    "number": 48,
+    "state": "OPEN",
+    "title": "DISTINCT + ORDER BY DESC + LIMIT returns only 1 row on large tables"
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABgRsW-g",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Could you provide a small, shareable table definition and sample data (e.g., CREATE TABLE + INSERTs or a short CSV) that still shows the difference between `SELECT DISTINCT [Varcharfield]` and `SELECT [Varcharfield] ... GROUP BY [Varcharfield]` when run in DuckDB 1.5, together with the exact DuckDB UI commands you used and the complete outputs of both queries? The sample should reproduce the non-unique results for `DISTINCT` so we can follow the failure.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 77fcc5875087d115b18c093a88fc6b7c6bf0af7f90f9fe4fa0fe851e3cb6651b needs reproducible example -->",
+        "createdAt": "2026-10-28T04:54:40Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/47#issuecomment-6461003514",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+        "name": "needs reproducible example",
+        "description": "Essential code, data, schema or reproduction steps are missing.",
+        "color": "D876E3"
+      }
+    ],
+    "number": 47,
+    "state": "OPEN",
+    "title": "Distinct does not single out unique values vs group by"
+  },
+  {
+    "comments": [],
+    "labels": [],
+    "number": 46,
+    "state": "OPEN",
+    "title": "[Python / Windows]: Access Violation (0xC0000005) on kernel interrupt during spatial extension query execution"
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABgRk_IQ",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Thanks — we can’t reproduce the crash from the information given. Please attach the complete crash output (stderr) or a stack/backtrace produced when DuckDB segfaults, and confirm the exact DuckDB build you used (release tag or commit hash and how it was installed — e.g. pip wheel, binary download, or built from source). Also provide the OS and CPU architecture (e.g. Ubuntu 22.04 x86_64) and whether the crash reproduces on the latest DuckDB release. With those details we can run an equivalent binary and collect a debugger trace.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 bdb56c96dfc81b0567d1271d1765d78d3b6292fb2ab9efc5fdeb4385caa8074d needs more info -->",
+        "createdAt": "2026-10-28T04:45:04Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/45#issuecomment-6460882721",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64vA",
+        "name": "needs more info",
+        "description": "Essential environment or version details need clarification.",
+        "color": "D4C5F9"
+      }
+    ],
+    "number": 45,
+    "state": "OPEN",
+    "title": "[1.5.5] Crash / Segmentation fault when executing correlated subquery with spatial ST_Intersects and GROUP BY ALL on empty/NULL joined rows"
+  },
+  {
+    "comments": [],
+    "labels": [],
+    "number": 44,
+    "state": "OPEN",
+    "title": "duckdb ui fails query on variant data type"
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABgRdA3g",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Could you attach the exact `.duckdb` and corresponding `.duckdb.wal` files that trigger this failure (or, if you prefer, a small shareable SQL/script plus the exact sequence of close/reopen commands that reproduces the error)? Also include the precise DuckDB build/version and the `node-duckdb` package version used to capture the pair. With those files or a runnable script and exact client/build versions we can deterministically reproduce the WAL replay failure.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 76b3515b6a5d56b2f29763875002117b17b4ae7ba0a29a13996bc53d94fc4e06 needs reproducible example -->",
+        "createdAt": "2026-10-28T04:34:45Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/43#issuecomment-6460752094",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+        "name": "needs reproducible example",
+        "description": "Essential code, data, schema or reproduction steps are missing.",
+        "color": "D876E3"
+      }
+    ],
+    "number": 43,
+    "state": "OPEN",
+    "title": "duckdb 1.4.4 (node-duckdb): complete WAL fails to replay with \"Conflict on tuple deletion\" on reopen"
+  },
+  {
+    "comments": [],
+    "labels": [],
+    "number": 42,
+    "state": "OPEN",
+    "title": "v2.0.0-dev84858: Vector::Reference used on vector of different type (source INTEGER[] referenced INTEGER)"
+  },
+  {
+    "comments": [],
+    "labels": [],
+    "number": 41,
+    "state": "OPEN",
+    "title": "C API: expose function descriptions and positional parameter names to duckdb_functions()"
+  },
+  {
+    "comments": [],
+    "labels": [],
+    "number": 40,
+    "state": "OPEN",
+    "title": "v2.0.0-dev85590: Potential bug"
+  },
+  {
+    "comments": [],
+    "labels": [],
+    "number": 39,
+    "state": "OPEN",
+    "title": "`EXPLAIN MERGE ... RETURNING` segfaults when the optimizer is disabled"
+  },
+  {
+    "comments": [],
+    "labels": [],
+    "number": 38,
+    "state": "OPEN",
+    "title": "Wrong result for correlated EXISTS with rowid predicate when optimizer is enabled"
+  },
+  {
+    "comments": [],
+    "labels": [],
+    "number": 37,
+    "state": "OPEN",
+    "title": "Arrow scan of list<dictionary> fails when the first 2048 rows hold no list elements"
+  },
+  {
+    "comments": [],
+    "labels": [],
+    "number": 36,
+    "state": "OPEN",
+    "title": "SIGSEGV when executing an ASOF join with a non-comparison condition"
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABgPrJyg",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Could you provide a small, shareable Parquet sample (or a Python snippet that writes equivalent Parquet files) that still triggers this error when using `read_parquet(...)`, together with the complete Python traceback produced? A minimal reproducer that shows which file/column causes the cast-to-NULL error will let maintainers reproduce and confirm an improved error message.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 7f6821d84590aa03820546d06f885ed7929efc83a9d64b4a1d3d845722584279 needs reproducible example -->",
+        "createdAt": "2026-10-28T02:19:44Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/35#issuecomment-6458886602",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+        "name": "needs reproducible example",
+        "description": "Essential code, data, schema or reproduction steps are missing.",
+        "color": "D876E3"
+      }
+    ],
+    "number": 35,
+    "state": "OPEN",
+    "title": "Error message on missing column lacks essential details"
+  },
+  {
+    "comments": [],
+    "labels": [],
+    "number": 34,
+    "state": "OPEN",
+    "title": "BindNamedParameters should skip validation when function has varargs = ANY"
+  },
+  {
+    "comments": [],
+    "labels": [],
+    "number": 33,
+    "state": "OPEN",
+    "title": "Error message on missing column lacks essential details"
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABgPLBDA",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Could you provide a small, shareable Parquet sample (or minimal generated files) that still triggers this error when read with your query, together with the complete Python traceback and the exact `read_parquet` call you used? The sample should reproduce the ConversionException so we can identify which column and which file cause the cast failure.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 7f6821d84590aa03820546d06f885ed7929efc83a9d64b4a1d3d845722584279 needs reproducible example -->",
+        "createdAt": "2026-10-28T01:40:04Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/32#issuecomment-6458360076",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+        "name": "needs reproducible example",
+        "description": "Essential code, data, schema or reproduction steps are missing.",
+        "color": "D876E3"
+      }
+    ],
+    "number": 32,
+    "state": "OPEN",
+    "title": "Error message on missing column lacks essential details"
+  },
+  {
+    "comments": [],
+    "labels": [],
+    "number": 31,
+    "state": "OPEN",
+    "title": "[Python / Windows]: Access Violation (0xC0000005) on kernel interrupt during spatial extension query execution"
+  },
+  {
+    "comments": [],
+    "labels": [],
+    "number": 30,
+    "state": "OPEN",
+    "title": "duckdb ui fails query on variant data type"
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABf_9aQw",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Could you share the `tools/pythonpkg/pyproject.toml` (or `setup.py`) from the repository and the complete pip build output that includes the `ModuleNotFoundError` stack? Also confirm the `pip`/`setuptools` versions (`pip --version` and `python -c \"import setuptools; print(setuptools.__version__)\"`) and whether you built inside a virtualenv. This will show the declared build backend and the exact build-time environment needed to reproduce the missing `package_build` module error.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 bc330f865c61340a4e633fcd59a2c24a6c6927ed275663072055bf8fca2d1b4d needs reproducible example -->",
+        "createdAt": "2026-10-27T12:55:23Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/29#issuecomment-6442408515",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+        "name": "needs reproducible example",
+        "description": "Essential code, data, schema or reproduction steps are missing.",
+        "color": "D876E3"
+      }
+    ],
+    "number": 29,
+    "state": "OPEN",
+    "title": "Failed to build benchmark \"ModuleNotFoundError: No module named 'package_build'\""
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABf_2zDQ",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Could you provide details about how you built or obtained `duckdb.dll` and how you compiled/linked your C++ program (compiler, flags or CMake command, and whether you target x86 or x64)? Also please include whether you used a prebuilt DLL or built DuckDB locally, the runtime (MSVC/MinGW) and the full exception stack trace or crash log produced when running the sample code. These environment and build/linking details are needed to reproduce and diagnose the access violation.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 baaab9cfb227a18935ae2554cd1dddae4e626380906c4484a6011fe56de58c4a needs more info -->",
+        "createdAt": "2026-10-27T12:49:57Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/28#issuecomment-6442300173",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64vA",
+        "name": "needs more info",
+        "description": "Essential environment or version details need clarification.",
+        "color": "D4C5F9"
+      }
+    ],
+    "number": 28,
+    "state": "OPEN",
+    "title": "DUCKDB access violation with c++ api "
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABf_vo0w",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Could you share a small, shareable Parquet file (or equivalent SQL/CSV input and the exact commands you run to produce the Parquet) that still triggers this NOT NULL constraint error, together with the complete error message/stack trace and the exact `COPY ... TO` command you used?\n\nPlease avoid any private credentials; a tiny reproducible file and the precise commands are enough to reproduce the failure locally.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 6b302f42772e0455793f933408f60d0454bf94d1fb0d9b4e50abd953bea97137 needs reproducible example -->",
+        "createdAt": "2026-10-27T12:44:01Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/27#issuecomment-6442182867",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+        "name": "needs reproducible example",
+        "description": "Essential code, data, schema or reproduction steps are missing.",
+        "color": "D876E3"
+      }
+    ],
+    "number": 27,
+    "state": "OPEN",
+    "title": "DuckDB inserting data violating non null constraint"
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABf_paUQ",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Could you share a small, shareable reproduction that still triggers the silent failure? Please either attach a copy of the affected `.duckdb` file (sanitized) or provide a sequence of SQL statements that recreates the exact database state and shows the failing `INSERT OR REPLACE` statement (copy/paste the exact SQL you run) plus the commands you run to verify the row is unchanged. Also note whether you run these statements inside an explicit transaction and any non-default PRAGMAs you use.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 19b0a24a27375ded201fd16fca60dba0163aedb700e6e0c65e33813b18facb69 needs reproducible example -->",
+        "createdAt": "2026-10-27T12:38:44Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/26#issuecomment-6442080849",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+        "name": "needs reproducible example",
+        "description": "Essential code, data, schema or reproduction steps are missing.",
+        "color": "D876E3"
+      }
+    ],
+    "number": 26,
+    "state": "OPEN",
+    "title": "INSERT OR REPLACE silently fails to update existing rows on certain databases"
+  },
+  {
+    "comments": [],
+    "labels": [],
+    "number": 25,
+    "state": "OPEN",
+    "title": "CHECKPOINT crashes with Invalid bitpacking mode on fixed-size ARRAY columns (FLOAT[256])"
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABf_cyMQ",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Could you provide a small, shareable reproducer that registers the described table function (showing the C++ registration code) with `varargs = LogicalType::ANY`, plus the exact SQL you run that fails and the complete error message? A minimal reproducer that we can compile/run or an equivalent SQL-test demonstrating the rejection will make it possible to validate and apply the suggested change.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 2509ebb9c7b72108735a84e6c65b1c5ae69ffc62b71ebf17bbf458913b0afeab needs reproducible example -->",
+        "createdAt": "2026-10-27T12:28:06Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/24#issuecomment-6441873969",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+        "name": "needs reproducible example",
+        "description": "Essential code, data, schema or reproduction steps are missing.",
+        "color": "D876E3"
+      }
+    ],
+    "number": 24,
+    "state": "OPEN",
+    "title": "BindNamedParameters should skip validation when function has varargs = ANY"
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABf_Wk7w",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Could you share a small, shareable input (for example a CSV or SQL VALUES block) that still triggers this error when run with the shown SQL, together with the complete error text/stack trace produced by DuckDB? The sanitized query is helpful, but reproducing the internal binder/planner failure requires an example input or table schema/data that triggers the problem.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 5d3c461a0b2cb36cf1558da22dc8606ca8b60e4a655cddd1967edead062bbb32 needs reproducible example -->",
+        "createdAt": "2026-10-27T12:22:47Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/23#issuecomment-6441772271",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+        "name": "needs reproducible example",
+        "description": "Essential code, data, schema or reproduction steps are missing.",
+        "color": "D876E3"
+      }
+    ],
+    "number": 23,
+    "state": "OPEN",
+    "title": "INTERNAL Error in v1.5.2: row_number() with mixed-type PARTITION BY fails during CTAS unless partition keys are cast"
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABf_QqSw",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Could you share a small, shareable Parquet sample (or equivalent generated input) that still triggers the error when read with your `read_parquet('(redacted) invocation, together with the complete Python traceback (full error message and stack) produced by DuckDB? That sample and the full traceback will let us identify the exact column and file causing the cast failure.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 7f6821d84590aa03820546d06f885ed7929efc83a9d64b4a1d3d845722584279 needs reproducible example -->",
+        "createdAt": "2026-10-27T12:17:46Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/22#issuecomment-6441675339",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+        "name": "needs reproducible example",
+        "description": "Essential code, data, schema or reproduction steps are missing.",
+        "color": "D876E3"
+      }
+    ],
+    "number": 22,
+    "state": "OPEN",
+    "title": "Error message on missing column lacks essential details"
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABf_LPjw",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Could you share a small, shareable SQL script or sample input that still triggers this failure (for example a minimal SQL file or exported CSV/import steps) together with the complete CLI output shown when the crash occurs, including the exact error message and any stack trace? The report mentions the failure happens during an `INSERT ... SELECT` from a Postgres attachment; please include the exact `INSERT ... SELECT` statement and the DDL for the target table if possible. This will let us reproduce the Floating point exception locally without confidential data.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 4fbbd66dc944f1486f8e043c97521bde057c599ead8f75354e6d7493d917c513 needs reproducible example -->",
+        "createdAt": "2026-10-27T12:13:10Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/21#issuecomment-6441586575",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+        "name": "needs reproducible example",
+        "description": "Essential code, data, schema or reproduction steps are missing.",
+        "color": "D876E3"
+      }
+    ],
+    "number": 21,
+    "state": "OPEN",
+    "title": "Memory: 367.6 MB Floating point exception (core dumped)"
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABf_FT6w",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Could you provide a small, shareable dataset (CSV files or a SQL script that generates the same table shapes and rows) that still shows the delete-heavy regression when run on 1.4.0 vs 1.5.2, together with the exact table DDL for `pex_element`, `pex_connection`, and `pex_net` and the precise sequence of statements you run (including any PRAGMAs or connection options)? If you cannot share data, a self-contained SQL generator that creates representative data is sufficient. This will let us reproduce the performance change locally.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 c2c731c447b67c8cb0446672ad9e3a0cd10322265934fb16a1f8264f787e2c14 needs reproducible example -->",
+        "createdAt": "2026-10-27T12:08:01Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/20#issuecomment-6441489387",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+        "name": "needs reproducible example",
+        "description": "Essential code, data, schema or reproduction steps are missing.",
+        "color": "D876E3"
+      }
+    ],
+    "number": 20,
+    "state": "OPEN",
+    "title": "After upgrading DuckDB, a delete-heavy transactional stage became significantly slower on the same workload shape"
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABf--g1g",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Please confirm the exact DuckDB version/build that produced this error: the report mentions both \"v1.5.2\" and \"1.5.3\". Could you paste the exact output of either `SELECT version();` (inside DuckDB) or `duckdb --version` (CLI) from the same environment that generated the INTERNAL error?\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 a0cb7d5ba0366efd8e2fc436c98f03bfc8eed0d6d2d3e87aad41a147875ecda6 needs more info -->",
+        "createdAt": "2026-10-27T12:02:10Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/19#issuecomment-6441378006",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64vA",
+        "name": "needs more info",
+        "description": "Essential environment or version details need clarification.",
+        "color": "D4C5F9"
+      }
+    ],
+    "number": 19,
+    "state": "OPEN",
+    "title": "`INTERNAL Error: Attempted to access index 0 within vector of size 0` from `StatisticsPropagator::TryExecuteAggregates` on scalar `MAX(...) WHERE` subquery against same table"
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABf-3XBA",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Could you share a small, shareable Parquet sample (or equivalent SQL-generated data) that still triggers the crash, together with the exact command you use to run the script and the complete stderr/backtrace? The provided script references '../raw_metars' which isn’t included, so a minimal reproducible input is needed to follow the failure.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 b9eecacd5b9aa4feb1d84480dd539c1abb4d4533785c6e572703a7589149ea3d needs reproducible example -->",
+        "createdAt": "2026-10-27T11:55:41Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/18#issuecomment-6441260804",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+        "name": "needs reproducible example",
+        "description": "Essential code, data, schema or reproduction steps are missing.",
+        "color": "D876E3"
+      }
+    ],
+    "number": 18,
+    "state": "OPEN",
+    "title": "FPE crash when progress bar enabled"
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABf-wF3g",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Could you share a small, shareable table sample (e.g. a CSV or SQL `CREATE`+`INSERT` snippet) that still triggers the problem, together with the exact Python commands you use to create/load the table and the precise `SELECT DISTINCT ... ORDER BY ... LIMIT` statement you run? A tiny reproducible dataset and the load/query steps will let us reproduce the behaviour locally.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 b07a1ee7d74e00e37857bc05279d44ba85c4ff6ef3db90bdce9efaee6fc42656 needs reproducible example -->",
+        "createdAt": "2026-10-27T11:49:07Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/17#issuecomment-6441141726",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+        "name": "needs reproducible example",
+        "description": "Essential code, data, schema or reproduction steps are missing.",
+        "color": "D876E3"
+      }
+    ],
+    "number": 17,
+    "state": "OPEN",
+    "title": "DISTINCT + ORDER BY DESC + LIMIT returns only 1 row on large tables"
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABf-qXew",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Could you share a small, shareable example that still triggers the discrepancy? Please provide a minimal table definition and sample data (as SQL `CREATE TABLE` + `INSERT` statements or a small CSV) and the exact DuckDB query you ran along with the actual results you observed for both `DISTINCT` and `GROUP BY`. This will let us reproduce and diagnose the difference locally.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 77fcc5875087d115b18c093a88fc6b7c6bf0af7f90f9fe4fa0fe851e3cb6651b needs reproducible example -->",
+        "createdAt": "2026-10-27T11:43:55Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/16#issuecomment-6441047931",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+        "name": "needs reproducible example",
+        "description": "Essential code, data, schema or reproduction steps are missing.",
+        "color": "D876E3"
+      }
+    ],
+    "number": 16,
+    "state": "OPEN",
+    "title": "Distinct does not single out unique values vs group by"
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABf-lPTg",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Could you share how DuckDB was installed on the Windows host (e.g. `pip` wheel, `conda`, or built from source) and paste the output of `import duckdb; print(duckdb.__version__, duckdb.__file__)`? Also please include the complete crash output or Windows Event Viewer error/stack trace shown when the Python process exits after the interrupt.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 865069f10142b45c51b71974eac0b73a079dac4f00e78e983850f420c9adb06f needs more info -->",
+        "createdAt": "2026-10-27T11:39:12Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/15#issuecomment-6440963918",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64vA",
+        "name": "needs more info",
+        "description": "Essential environment or version details need clarification.",
+        "color": "D4C5F9"
+      }
+    ],
+    "number": 15,
+    "state": "OPEN",
+    "title": "[Python / Windows]: Access Violation (0xC0000005) on kernel interrupt during spatial extension query execution"
+  },
+  {
+    "comments": [],
+    "labels": [],
+    "number": 14,
+    "state": "OPEN",
+    "title": "[1.5.5] Crash / Segmentation fault when executing correlated subquery with spatial ST_Intersects and GROUP BY ALL on empty/NULL joined rows"
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABgO54ig",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Could you share the DuckDB UI frontend version and the complete UI error/log output (for example the browser developer console or terminal output from `duckdb -ui`), and also run `SELECT version();` in the database and paste that result here? Please confirm you opened the same `test6.db` file in the UI as in the terminal. These details are needed to reproduce and diagnose the “unrecognized type id: 109” error.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 a35d8da5e1f6d997fb12eb1270988a7e16cfc3d608f2580b42c950eae10134c6 needs more info -->",
+        "createdAt": "2026-10-28T01:19:37Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/13#issuecomment-6458079370",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64vA",
+        "name": "needs more info",
+        "description": "Essential environment or version details need clarification.",
+        "color": "D4C5F9"
+      }
+    ],
+    "number": 13,
+    "state": "OPEN",
+    "title": "duckdb ui fails query on variant data type"
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABf-UZmw",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Could you attach a small, shareable pair of the exact `.duckdb` and corresponding `.duckdb.wal` files that deterministically trigger: `TransactionContext Error: Failure while replaying WAL file \"...\": Conflict on tuple deletion!`, together with the minimal Node script/command you run to open the DB (the `require(\"duckdb\")` invocation and open/close sequence)? The attached files and script should be the ones used when you observed the error so maintainers can replay the reopen step exactly.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 76b3515b6a5d56b2f29763875002117b17b4ae7ba0a29a13996bc53d94fc4e06 needs reproducible example -->",
+        "createdAt": "2026-10-27T11:23:52Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/12#issuecomment-6440688027",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+        "name": "needs reproducible example",
+        "description": "Essential code, data, schema or reproduction steps are missing.",
+        "color": "D876E3"
+      }
+    ],
+    "number": 12,
+    "state": "OPEN",
+    "title": "duckdb 1.4.4 (node-duckdb): complete WAL fails to replay with \"Conflict on tuple deletion\" on reopen"
+  },
+  {
+    "comments": [],
+    "labels": [],
+    "number": 11,
+    "state": "OPEN",
+    "title": "v2.0.0-dev84858: Vector::Reference used on vector of different type (source INTEGER[] referenced INTEGER)"
+  },
+  {
+    "comments": [],
+    "labels": [],
+    "number": 10,
+    "state": "OPEN",
+    "title": "C API: expose function descriptions and positional parameter names to duckdb_functions()"
+  },
+  {
+    "comments": [],
+    "labels": [],
+    "number": 9,
+    "state": "OPEN",
+    "title": "v2.0.0-dev85590: Potential bug"
+  },
+  {
+    "comments": [],
+    "labels": [],
+    "number": 8,
+    "state": "OPEN",
+    "title": "`EXPLAIN MERGE ... RETURNING` segfaults when the optimizer is disabled"
+  },
+  {
+    "comments": [],
+    "labels": [],
+    "number": 7,
+    "state": "OPEN",
+    "title": "Wrong result for correlated EXISTS with rowid predicate when optimizer is enabled"
+  },
+  {
+    "comments": [],
+    "labels": [],
+    "number": 6,
+    "state": "OPEN",
+    "title": "Arrow scan of list<dictionary> fails when the first 2048 rows hold no list elements"
+  },
+  {
+    "comments": [],
+    "labels": [],
+    "number": 5,
+    "state": "OPEN",
+    "title": "SIGSEGV when executing an ASOF join with a non-comparison condition"
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABf7DOZg",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Could you share a small, shareable CSV file (or pasteable sample) that still triggers the conversion error, together with the complete error message produced by the `read_csv` call? Also confirm the exact `read_csv` command you ran (including working directory) and whether any file encoding or delimiter differs from defaults.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 39708d12c87b8286cfeb36dea2d6ec01fd8ced5b920cf8917e37b57be63d919e needs reproducible example -->",
+        "createdAt": "2026-10-27T08:34:22Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/4#issuecomment-6437260902",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+        "name": "needs reproducible example",
+        "description": "Essential code, data, schema or reproduction steps are missing.",
+        "color": "D876E3"
+      }
+    ],
+    "number": 4,
+    "state": "OPEN",
+    "title": "[Practice] Inventory CSV raises a conversion error"
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABf6e0fw",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Please provide a small, shareable sample of `products.csv` (5–20 rows) that reproduces the conversion error, the exact error message including any stack or source lines, and confirm whether the file has a header row, field delimiter, text quote, and file encoding. A minimal reproducible CSV and the exact error will let us follow the failure locally.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 c0d7f622466ea9b5cb130f4724eed05faa0067e542b4e36561e41bd2e1c77a1a needs reproducible example -->",
+        "createdAt": "2026-10-27T07:57:14Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/3#issuecomment-6436664447",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+        "name": "needs reproducible example",
+        "description": "Essential code, data, schema or reproduction steps are missing.",
+        "color": "D876E3"
+      }
+    ],
+    "number": 3,
+    "state": "OPEN",
+    "title": "[Practice] Products CSV fails to load"
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABf6L1tg",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Please provide a small, shareable sample of the `orders.csv` file (5–20 rows) and paste the exact error message you see when running `SELECT * FROM read_csv('orders.csv');`. If you ran DuckDB with any additional CSV options (e.g., delimiter, header, quote), include the exact command or SQL used. You already supplied DuckDB version and OS which is helpful.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 e25232c4499ffa57d665d2a39aad8d32dfd04ff63154acea7dfb1debfdd3d4eb needs reproducible example -->",
+        "createdAt": "2026-10-27T07:36:29Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/2#issuecomment-6436353462",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+        "name": "needs reproducible example",
+        "description": "Essential code, data, schema or reproduction steps are missing.",
+        "color": "D876E3"
+      }
+    ],
+    "number": 2,
+    "state": "OPEN",
+    "title": "[Practice] Orders CSV import reports a conversion error"
+  },
+  {
+    "comments": [
+      {
+        "id": "IC_kwDOVYrnJM8AAAABf5NKKw",
+        "author": {
+          "login": "github-actions"
+        },
+        "authorAssociation": "NONE",
+        "body": "Thanks for the report. To follow this CSV conversion failure, could you share a small sample of `sample.csv` that still triggers the error, or a short SQL snippet that creates an equivalent table/file with the same problematic values? Please also include the exact `read_csv` call you are using if any options were omitted from the example, and the full conversion error text. Without the input data that causes the cast/conversion problem, it is hard to tell what value or column triggers the failure.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 3de6827c8ca37bec675633896f17598409dade97bb8252bd0f8de974fdac48b9 needs reproducible example -->",
+        "createdAt": "2026-10-27T06:25:50Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/1#issuecomment-6435326507",
+        "viewerDidAuthor": false
+      }
+    ],
+    "labels": [
+      {
+        "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+        "name": "needs reproducible example",
+        "description": "Essential code, data, schema or reproduction steps are missing.",
+        "color": "D876E3"
+      }
+    ],
+    "number": 1,
+    "state": "OPEN",
+    "title": "[Practice] CSV import fails with a conversion error"
+  }
+]

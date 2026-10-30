@@ -1,0 +1,20 @@
+{
+  "status": "no_action",
+  "proposal": {
+    "label": null,
+    "comment": null,
+    "rationale": "The report is an in-scope failure with a self-contained reproducible Python + PyArrow script, exact DuckDB versions (1.5.6, 1.4.0, main commit), client, OS and hardware. The reproducer generates its own data and demonstrates the failure and expected output. No additional environment or input is required to follow the failure, so no clarification is needed."
+  },
+  "actions": [],
+  "run_id": "40629877466",
+  "configuration_sha": "e3311e64aa639fb29dd5e4d519a19503d3c2f6ee",
+  "input_sha256": "846aab1c00d7ba97ceb340b3b59a7638e5761262cec8b2b3e58443d9f676714a",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

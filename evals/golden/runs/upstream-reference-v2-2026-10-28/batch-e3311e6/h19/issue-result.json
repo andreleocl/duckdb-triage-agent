@@ -1,0 +1,31 @@
+{
+  "body": "### What happens?\n\n### What happens?\nA query using `row_number()` over a mixed-type `PARTITION BY` (`VARCHAR`, `DATE`, `INTEGER`) fails with a DuckDB internal binder/planner error during `CREATE TABLE AS SELECT`.\nCasting the partition keys to `text` makes the same query succeed.\nI first saw this through dbt model materialization, but the issue appears to be in DuckDB itself rather than in dbt.\n### Repro shape\nI have not been able to reduce this to a stable tiny `VALUES`-only repro, but the failure is reproducible for me in this query shape against a real source relation.\nSanitized version of the failing SQL:\n```\ncreate table target_result as\nwith source_report as (\n  select *\n  from input_relation\n),\nnormalized_source as (\n  select\n    event_date,\n    account_key,\n    cast(group_key as integer) as group_key,\n    category_name,\n    cast(metric_a as integer) as metric_a,\n    cast(metric_b as numeric) as metric_b,\n    cast(load_id as double) as load_id\n  from source_report\n),\nranked_rows as (\n  select\n    *,\n    row_number() over (\n      partition by\n        account_key,\n        event_date,\n        group_key\n      order by\n        load_id desc\n    ) as row_rank\n  from normalized_source\n  qualify row_rank = 1\n)\nselect\n  event_date,\n  account_key,\n  group_key,\n  category_name,\n  metric_a,\n  metric_b,\n  load_id\nfrom ranked_rows;\n```\n\nActual result\nDuckDB raises an internal error such as:\nINTERNAL Error: Failed to bind column reference \"\" [32.2]: inequal types (INTEGER != BIGINT)\n---\nI have also seen related variants from the same query family, for example:\nINTERNAL Error: Failed to bind column reference \"event_date\": inequal types (DATE != VARCHAR)\nSo the exact mismatch text seems unstable.\n---\nExpected result\nThe table should be created successfully.\nWhy this looks like a DuckDB bug\n- The error is an INTERNAL Error, not a normal SQL/user-facing error.\n- The query uses valid source types for the window partition keys.\n- The failure occurs during normal query planning/execution for CTAS.\n- The exact reported type mismatch varies across similar queries (INTEGER != BIGINT, DATE != VARCHAR), which suggests planner/binder confusion rather than a real schema error.\n- Explicitly normalizing the partition keys to text avoids the failure.\nWorkaround\nCasting the partition keys to text avoids the failure for me:\ncreate table target_result as\n```\nwith source_report as (\n  select *\n  from input_relation\n),\nnormalized_source as (\n  select\n    event_date,\n    account_key,\n    cast(group_key as integer) as group_key,\n    category_name,\n    cast(metric_a as integer) as metric_a,\n    cast(metric_b as numeric) as metric_b,\n    cast(load_id as double) as load_id\n  from source_report\n),\nranked_rows as (\n  select\n    *,\n    row_number() over (\n      partition by\n        account_key::text,\n        event_date::text,\n        group_key::text\n      order by\n        load_id desc\n    ) as row_rank\n  from normalized_source\n  qualify row_rank = 1\n)\nselect\n  event_date,\n  account_key,\n  group_key,\n  category_name,\n  metric_a,\n  metric_b,\n  load_id\nfrom ranked_rows;\n```\n\nVersion\n- DuckDB CLI: v1.5.2\n- Python package: 1.5.2\n\nEnvironment\n- Linux x86_64\n- Python 3.12\n\nAdditional context\nI originally encountered this while materializing a dbt model. The compiled SQL was the same logical shape as the sanitized query above:\n- source relation\n- normalization CTE with explicit casts\n- row_number()\n- mixed-type partition keys\n- qualify row_rank = 1\n- CTAS / table materialization\nSo even though I first saw it through dbt, the issue appears to be in DuckDB’s handling of this query pattern.\n\n### To Reproduce\n\nPlease help address\n\n### OS:\n\nLinux Mint\n\n### DuckDB Version:\n\n1.5.2\n\n### DuckDB Client:\n\nPython-DBT\n\n### Hardware:\n\n_No response_\n\n### Full Name:\n\nKingsley Soo\n\n### Affiliation:\n\nDatamflora\n\n### Did you include all relevant configuration (e.g., CPU architecture, Linux distribution) to reproduce the issue?\n\n- [ ] Yes, I have\n\n### Did you include all code required to reproduce the issue?\n\n- [ ] Yes, I have\n\n### Did you include all relevant data sets for reproducing the issue?\n\nNo - I cannot share the data sets because they are confidential",
+  "comments": [
+    {
+      "id": "IC_kwDOVYrnJM8AAAABgSHnEQ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "NONE",
+      "body": "Could you share a small, shareable sample input (for example a CSV or VALUES-based SQL) that still triggers the INTERNAL error when run with the provided SQL, together with the complete, exact INTERNAL error text/stack trace you see? The sanitized SQL references `input_relation` but that source data/schema is not included; a minimal sample that reproduces the failure (and the full error message) is needed to follow the report locally.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 5d3c461a0b2cb36cf1558da22dc8606ca8b60e4a655cddd1967edead062bbb32 needs reproducible example -->",
+      "createdAt": "2026-10-28T05:28:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/54#issuecomment-6461450001",
+      "viewerDidAuthor": false
+    }
+  ],
+  "labels": [
+    {
+      "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+      "name": "needs reproducible example",
+      "description": "Essential code, data, schema or reproduction steps are missing.",
+      "color": "D876E3"
+    }
+  ],
+  "number": 54,
+  "title": "INTERNAL Error in v1.5.2: row_number() with mixed-type PARTITION BY fails during CTAS unless partition keys are cast",
+  "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/54"
+}

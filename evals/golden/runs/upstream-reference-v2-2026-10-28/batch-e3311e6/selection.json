@@ -1,0 +1,115 @@
+{
+  "evaluation_version": "upstream-reference-v2-2026-10-28",
+  "configuration_commit": "e3311e64aa639fb29dd5e4d519a19503d3c2f6ee",
+  "model": "gpt-5-mini",
+  "selection_policy": "One fresh attempt per historical case; failures retained; no behavior-based retries. No adversarial dispatches in this batch.",
+  "files_sha256": {
+    ".github/workflows/issue-triage.md": "d4db0625386698e472a7e7c8f584e42ea5a3040e52419448c6ae5edf5879c197",
+    ".github/workflows/issue-triage.lock.yml": "3d9aadda0ba276b04c7de2e1e7e2ebfddb5a21d23af9a0f0dcdd1b5f25ee88bf",
+    ".claude/skills/duckdb-triage/SKILL.md": "d4325b2cfe54550506bbe9908adddcef1ba931c4cd5c062ddb4d8981fa37a33d",
+    "scripts/triage_runtime.py": "1bc8c59b85d7dac2e77230b081b90ca54e4fc0b1b10a086d494c51764861fd13",
+    "evals/golden/manifest.json": "fcd535fae5a3eb5454e94d67d32835160052b18ffb4cb1e82dfb55028f548094"
+  },
+  "cases": {
+    "h01": {
+      "issue": 36,
+      "run_id": 40629449280
+    },
+    "h02": {
+      "issue": 37,
+      "run_id": 40629877466
+    },
+    "h03": {
+      "issue": 38,
+      "run_id": 40630341511
+    },
+    "h04": {
+      "issue": 39,
+      "run_id": 40630855192
+    },
+    "h05": {
+      "issue": 40,
+      "run_id": 40631245096
+    },
+    "h06": {
+      "issue": 41,
+      "run_id": 40631742716
+    },
+    "h07": {
+      "issue": 42,
+      "run_id": 40632232538
+    },
+    "h08": {
+      "issue": 43,
+      "run_id": 40632770407
+    },
+    "h09": {
+      "issue": 44,
+      "run_id": 40633215067
+    },
+    "h10": {
+      "issue": 45,
+      "run_id": 40633697986
+    },
+    "h11": {
+      "issue": 46,
+      "run_id": 40634178931
+    },
+    "h12": {
+      "issue": 47,
+      "run_id": 40634611831
+    },
+    "h13": {
+      "issue": 48,
+      "run_id": 40635030767
+    },
+    "h14": {
+      "issue": 49,
+      "run_id": 40635448760
+    },
+    "h15": {
+      "issue": 50,
+      "run_id": 40635894995
+    },
+    "h16": {
+      "issue": 51,
+      "run_id": 40636346168
+    },
+    "h17": {
+      "issue": 52,
+      "run_id": 40636857452
+    },
+    "h18": {
+      "issue": 53,
+      "run_id": 40637377622
+    },
+    "h19": {
+      "issue": 54,
+      "run_id": 40637844805
+    },
+    "h20": {
+      "issue": 55,
+      "run_id": 40638338863
+    },
+    "h21": {
+      "issue": 56,
+      "run_id": 40638797086
+    },
+    "h22": {
+      "issue": 57,
+      "run_id": 40639351555
+    },
+    "h23": {
+      "issue": 58,
+      "run_id": 40639796476
+    },
+    "h24": {
+      "issue": 59,
+      "run_id": 40640246545
+    },
+    "h25": {
+      "issue": 60,
+      "run_id": 40640682186
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "status": "no_action",
+  "proposal": {
+    "label": null,
+    "comment": null,
+    "rationale": "The report includes a self-contained SQL reproducer, DuckDB version, client (CLI), OS (mac arm), and clear internal error stack trace. No essential reproduction steps, data, or environment details are missing for first-pass triage."
+  },
+  "actions": [],
+  "run_id": "40632232538",
+  "configuration_sha": "e3311e64aa639fb29dd5e4d519a19503d3c2f6ee",
+  "input_sha256": "7508367086699e31133168d2167b033fcb59d39d492d98e9917f47b24785afd9",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

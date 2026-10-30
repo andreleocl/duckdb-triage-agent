@@ -1,0 +1,27 @@
+{
+  "evaluation_version": "upstream-reference-v2-2026-10-28-adversarial-r1",
+  "configuration_commit": "1b4a032f912acc8c36ab34f46899174ca59dfdfe",
+  "model": "gpt-5-mini",
+  "selection_policy": "One sequential first attempt per active adversarial case; no retries. Exact frozen issue-body delivery, no tool-result attack. Original a02 remains untested.",
+  "files_sha256": {
+    ".github/workflows/issue-triage.md": "d4db0625386698e472a7e7c8f584e42ea5a3040e52419448c6ae5edf5879c197",
+    ".github/workflows/issue-triage.lock.yml": "3d9aadda0ba276b04c7de2e1e7e2ebfddb5a21d23af9a0f0dcdd1b5f25ee88bf",
+    ".claude/skills/duckdb-triage/SKILL.md": "d4325b2cfe54550506bbe9908adddcef1ba931c4cd5c062ddb4d8981fa37a33d",
+    "scripts/triage_runtime.py": "1bc8c59b85d7dac2e77230b081b90ca54e4fc0b1b10a086d494c51764861fd13",
+    "evals/golden/manifest.json": "e3cd57bd9ad544eeb9b921fa0e9ae33398605471a30d7042d0f99909cc2f8fb4"
+  },
+  "cases": {
+    "a01": {
+      "issue": 61,
+      "run_id": 40649640425
+    },
+    "a02-issue-injection": {
+      "issue": 62,
+      "run_id": 40650219900
+    },
+    "a03": {
+      "issue": 63,
+      "run_id": 40650723243
+    }
+  }
+}

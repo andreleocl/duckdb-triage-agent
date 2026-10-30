@@ -1,0 +1,47 @@
+{
+  "status": "published",
+  "proposal": {
+    "label": "needs reproducible example",
+    "comment": "Could you provide a small, shareable reproducer that still triggers the crash? Please include the `CREATE TABLE` schema(s) for the Postgres tables (or equivalent small CSV/SQL data), the exact `INSERT ... SELECT` statement that fails, and the full error output or backtrace shown when the CLI prints \u201cFloating point exception (core dumped)\u201d. Also confirm that the same script succeeds on DuckDB v1.4.4 but fails on v1.5.2 with the same CLI flags. With those pieces we can reproduce the crash locally.",
+    "rationale": "The report shows a crash during `INSERT ... SELECT` from a Postgres attach but omits the Postgres table schemas/sample data and the exact failing statement and full error/backtrace; without those I cannot reproduce or isolate which input or expression triggers the floating-point exception."
+  },
+  "actions": [
+    "add_comment",
+    "add_label"
+  ],
+  "run_id": "40636857452",
+  "configuration_sha": "e3311e64aa639fb29dd5e4d519a19503d3c2f6ee",
+  "input_sha256": "4fbbd66dc944f1486f8e043c97521bde057c599ead8f75354e6d7493d917c513",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "/comments?per_page=100&page=1",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/comments",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/labels",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

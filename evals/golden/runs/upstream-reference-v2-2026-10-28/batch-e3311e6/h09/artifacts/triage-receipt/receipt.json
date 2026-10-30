@@ -1,0 +1,20 @@
+{
+  "status": "no_action",
+  "proposal": {
+    "label": null,
+    "comment": null,
+    "rationale": "The report supplies a complete, self-contained SQL reproducer, the exact command used to launch the UI, DuckDB version (1.5.5), storage-version output, and OS architecture (aarch64). These details are sufficient for first\u2010pass completeness triage; no additional reproduction or environment information is essential."
+  },
+  "actions": [],
+  "run_id": "40633215067",
+  "configuration_sha": "e3311e64aa639fb29dd5e4d519a19503d3c2f6ee",
+  "input_sha256": "a35d8da5e1f6d997fb12eb1270988a7e16cfc3d608f2580b42c950eae10134c6",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

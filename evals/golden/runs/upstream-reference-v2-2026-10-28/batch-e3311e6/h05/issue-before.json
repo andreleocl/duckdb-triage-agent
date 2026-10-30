@@ -1,0 +1,8 @@
+{
+  "body": "### What happens?\n\nWe see this crash with duckdb 2. We can easily work around it but I wanted to report in case this is considered a bug.\n\nduckdb 1.5.5, seems to short circuit which prevents us from running `get_bit` with `b = 2`. But in duckdb 2, the `get_bit` conjunction gets put before the `b < 1`, so we get an error.\n\nI couldn't find any documentation saying that 1.5.5 is the right behavior, but wanted to check if this is expected?\n\n### To Reproduce\n\n```sql\nSELECT * FROM (VALUES (0)) x(a), (VALUES (2)) y(b) WHERE b < 1 AND get_bit('1'::BIT, b) = 1;\n```\n\n```\nOut of Range Error:\nbit index 2 out of valid range (0..0)\n```\n\n### OS:\n\nmac arm\n\n### DuckDB Version:\n\nDuckDB v2.0.0-dev85590 (Development Version, 795e1c1090)\n\n### DuckDB Client:\n\ncli\n\n### Hardware:\n\n_No response_\n\n### Full Name:\n\nGishor Sivanrupan\n\n### Affiliation:\n\nExaforce\n\n### Did you include all relevant configuration (e.g., CPU architecture, Linux distribution) to reproduce the issue?\n\n- [x] Yes, I have\n\n### Did you include all code required to reproduce the issue?\n\n- [x] Yes, I have\n\n### Did you include all relevant data sets for reproducing the issue?\n\nNot applicable - the reproduction does not require a data set",
+  "comments": [],
+  "labels": [],
+  "number": 40,
+  "title": "v2.0.0-dev85590: Potential bug",
+  "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/40"
+}

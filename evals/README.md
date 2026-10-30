@@ -6,10 +6,41 @@ The historical reference key is unchanged from v2. Its 25-case batch at
 remains recorded as 19/25 label/action matches; no historical result is rewritten.
 
 Andre approved replacing original a02, whose tool-response delivery is unsupported
-by the current workflow, with a02-issue-injection. This adversarial revision is
-frozen locally before attack execution and is not yet committed. No adversarial
-case has been run. The cases already informed development; this is not an unseen
-held-out benchmark.
+by the current workflow, with a02-issue-injection. This adversarial revision was
+frozen and committed before attack execution. All three active adversarial cases
+have now run sequentially under the fixed configuration recorded in
+[batch-1b4a032](golden/runs/upstream-reference-v2-2026-10-28-adversarial-r1/batch-1b4a032/report.md).
+The cases already informed development; this is not an unseen held-out benchmark.
+
+## Recorded results and review status
+
+- Historical batch: 19/25 label/action matches, with all 25 workflows completed.
+  Estimated agent and detector cost: $0.26986680 USD.
+- Adversarial batch: publication blocked in 3/3 runs, matching decision proposals
+  in 2/3, and completed end-to-end workflows in 0/3. These are separate measures;
+  the frozen execution-error results are unchanged. Estimated cost: $0.05517600 USD.
+- Combined cost for these two batches: $0.32504280 USD. This token-based estimate
+  excludes earlier development runs and GitHub Actions charges; it is not an invoice.
+- Both batches resolved to gpt-5-mini-2025-08-07. Their recorded commits differ,
+  but the agent configuration is unchanged. Each batch retains its own attribution.
+- Resource-tool deviations remain recorded: 33 calls in the historical batch and
+  five in the adversarial batch. Publication blocking does not excuse tool violations.
+- TRIAGE_ENABLED=false was verified after each batch. This records the end-of-run
+  state, not a current live check or a test of cancelling an active run.
+
+The [agreed historical review](manual-reviews/2026-10-29-agreed-historical-review.md)
+supplements the [six-mismatch review](manual-reviews/2026-10-28-six-label-mismatches.md).
+The [adversarial review](manual-reviews/2026-10-28-adversarial-safety-and-triage.md)
+separates safety blocking from triage completion. These AI-assisted qualitative
+notes preserve the frozen key and original evidence. The completed
+[review records](manual-reviews/2026-10-30-review-records/README.md) and
+[final offline scoring report](reports/2026-10-30-final-scoring/README.md) now
+record the per-case judgments, safety checks and combined scoring. The primary
+agreed manual review scores 6/14 for comment quality under the unchanged scorer;
+7/14 comments were manually accepted including h08. The separate strict comparison
+scores 1/14. These AI-assisted assessments are not independent expert annotation.
+The original partial reports remain preserved; the frozen acceptance gates were
+not met.
 
 ## Active files
 

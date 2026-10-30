@@ -1,0 +1,31 @@
+{
+  "body": "### What happens?\n\nAfter upgrading DuckDB from 1.4 to 1.5.2, a delete-heavy transactional stage became significantly slower on the same workload shape (I didn't change a single line!)\n\nThe pattern is:\n\nMark a large subset of rows for deletion.\nDelete related rows from a connection table using IN (SELECT ...).\nDelete primary rows.\nDelete dangling rows from a net table.\nCommit one large transaction.\nWe run specific recipes/pipelines in our system.\nObserved runtime regression in our workload (same hardware/config class, same 65GB DB), version baseline(1.4.0) vs new (1.5.2):\n\nminimal delete set: 277.26svs 550.44s\nmaximum delete set: 549.31s vs 1570.54s # worst impact\n\n### To Reproduce\n\nconn.execute(\"BEGIN\")\n\n    conn.execute(\n        f\"\"\"\n        DELETE FROM pex_connection\n        WHERE pex_element_id IN (SELECT id FROM pex_element WHERE delete)\n        \"\"\",\n    )\n\n    conn.execute(\n        f\"\"\"\n        DELETE FROM pex_element\n        WHERE delete\n        \"\"\",\n    )\n\n    conn.execute(\n        f\"\"\"\n        DELETE FROM pex_net\n        WHERE id NOT IN (SELECT DISTINCT pex_net_id FROM pex_connection)\n        \"\"\",\n    )\n\n    conn.execute(\"COMMIT\") # 95% of the time is consumed here\n\n\n### OS:\n\nLinux 5.15.0-177-generic x86_64 (Ubuntu)\n\n### DuckDB Version:\n\n1.4.0 (baseline) vs 1.5.2 (regression observed)\n\n### DuckDB Client:\n\nPython\n\n### Hardware:\n\nIntel Xeon 6724P, 32 CPUs (16 cores / 2 threads), 503 GiB RAM\n\n### Full Name:\n\nAmmar Shahin\n\n### Affiliation:\n\nLENS\n\n### Did you include all relevant configuration (e.g., CPU architecture, Linux distribution) to reproduce the issue?\n\n- [x] Yes, I have\n\n### Did you include all code required to reproduce the issue?\n\n- [x] Yes, I have\n\n### Did you include all relevant data sets for reproducing the issue?\n\nNo - I cannot share the data sets because they are confidential",
+  "comments": [
+    {
+      "id": "IC_kwDOVYrnJM8AAAABgR7HHA",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "NONE",
+      "body": "Could you provide a small, shareable reproducible example that still triggers the regression: the `CREATE TABLE` statements for `pex_element`, `pex_connection`, and `pex_net` (including indexes, PK/FK constraints, and any triggers), plus a short data-loading script or CSVs that produce the same delete pattern and the exact sequence you ran? Also include the DuckDB file (or a dump) or the PRAGMA settings you use if non-default. This will let us reproduce the transaction and measure commit-time differences.\n\nAutomated triage suggestion.\n<!-- duckdb-triage:v1 c2c731c447b67c8cb0446672ad9e3a0cd10322265934fb16a1f8264f787e2c14 needs reproducible example -->",
+      "createdAt": "2026-10-28T05:13:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/51#issuecomment-6461245212",
+      "viewerDidAuthor": false
+    }
+  ],
+  "labels": [
+    {
+      "id": "LA_kwDOVYrnJM8AAAAC_f64SQ",
+      "name": "needs reproducible example",
+      "description": "Essential code, data, schema or reproduction steps are missing.",
+      "color": "D876E3"
+    }
+  ],
+  "number": 51,
+  "title": "After upgrading DuckDB, a delete-heavy transactional stage became significantly slower on the same workload shape",
+  "url": "https://github.com/andreleocl/duckdb-triage-agent/issues/51"
+}

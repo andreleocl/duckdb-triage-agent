@@ -1,0 +1,165 @@
+{
+  "total_count": 8,
+  "artifacts": [
+    {
+      "id": 12870485611,
+      "node_id": "MDg6QXJ0aWZhY3QxMjg3MDQ4NTYxMQ==",
+      "name": "agent-output-fallback",
+      "size_in_bytes": 2279,
+      "url": "https://api.github.com/repos/andreleocl/duckdb-triage-agent/actions/artifacts/12870485611",
+      "archive_download_url": "https://api.github.com/repos/andreleocl/duckdb-triage-agent/actions/artifacts/12870485611/zip",
+      "expired": false,
+      "digest": "sha256:9d845f0c233211d2b9560a8b1d099c8c3766689731183a8c0aa7cfc1b1b3c989",
+      "created_at": "2026-10-29T03:09:20Z",
+      "updated_at": "2026-10-29T03:09:20Z",
+      "expires_at": "2027-01-27T03:06:46Z",
+      "workflow_run": {
+        "id": 40810270665,
+        "repository_id": 1435166500,
+        "head_repository_id": 1435166500,
+        "head_branch": "main",
+        "head_sha": "1b4a032f912acc8c36ab34f46899174ca59dfdfe"
+      }
+    },
+    {
+      "id": 12870475886,
+      "node_id": "MDg6QXJ0aWZhY3QxMjg3MDQ3NTg4Ng==",
+      "name": "usage",
+      "size_in_bytes": 19762,
+      "url": "https://api.github.com/repos/andreleocl/duckdb-triage-agent/actions/artifacts/12870475886",
+      "archive_download_url": "https://api.github.com/repos/andreleocl/duckdb-triage-agent/actions/artifacts/12870475886/zip",
+      "expired": false,
+      "digest": "sha256:b116712dbdd3fe20a6ef0d3a1437538a56dc1232226d7d097fbff70a15852706",
+      "created_at": "2026-10-29T03:11:07Z",
+      "updated_at": "2026-10-29T03:11:07Z",
+      "expires_at": "2027-01-27T03:06:46Z",
+      "workflow_run": {
+        "id": 40810270665,
+        "repository_id": 1435166500,
+        "head_repository_id": 1435166500,
+        "head_branch": "main",
+        "head_sha": "1b4a032f912acc8c36ab34f46899174ca59dfdfe"
+      }
+    },
+    {
+      "id": 12870351064,
+      "node_id": "MDg6QXJ0aWZhY3QxMjg3MDM1MTA2NA==",
+      "name": "activation",
+      "size_in_bytes": 85478,
+      "url": "https://api.github.com/repos/andreleocl/duckdb-triage-agent/actions/artifacts/12870351064",
+      "archive_download_url": "https://api.github.com/repos/andreleocl/duckdb-triage-agent/actions/artifacts/12870351064/zip",
+      "expired": false,
+      "digest": "sha256:89011068c5c530dc8cf2a2521f3a20082c4be08c7549f3c2a6f8447ca0ba7ac8",
+      "created_at": "2026-10-29T03:07:45Z",
+      "updated_at": "2026-10-29T03:07:45Z",
+      "expires_at": "2026-10-30T03:07:44Z",
+      "workflow_run": {
+        "id": 40810270665,
+        "repository_id": 1435166500,
+        "head_repository_id": 1435166500,
+        "head_branch": "main",
+        "head_sha": "1b4a032f912acc8c36ab34f46899174ca59dfdfe"
+      }
+    },
+    {
+      "id": 12870127087,
+      "node_id": "MDg6QXJ0aWZhY3QxMjg3MDEyNzA4Nw==",
+      "name": "info",
+      "size_in_bytes": 714,
+      "url": "https://api.github.com/repos/andreleocl/duckdb-triage-agent/actions/artifacts/12870127087",
+      "archive_download_url": "https://api.github.com/repos/andreleocl/duckdb-triage-agent/actions/artifacts/12870127087/zip",
+      "expired": false,
+      "digest": "sha256:1a15b79b6bfc676cf7a173c0dc1ea879f76d72304c45055afd2803740627f409",
+      "created_at": "2026-10-29T03:07:43Z",
+      "updated_at": "2026-10-29T03:07:43Z",
+      "expires_at": "2027-01-27T03:06:46Z",
+      "workflow_run": {
+        "id": 40810270665,
+        "repository_id": 1435166500,
+        "head_repository_id": 1435166500,
+        "head_branch": "main",
+        "head_sha": "1b4a032f912acc8c36ab34f46899174ca59dfdfe"
+      }
+    },
+    {
+      "id": 12869947079,
+      "node_id": "MDg6QXJ0aWZhY3QxMjg2OTk0NzA3OQ==",
+      "name": "codex-model-catalog",
+      "size_in_bytes": 24381,
+      "url": "https://api.github.com/repos/andreleocl/duckdb-triage-agent/actions/artifacts/12869947079",
+      "archive_download_url": "https://api.github.com/repos/andreleocl/duckdb-triage-agent/actions/artifacts/12869947079/zip",
+      "expired": false,
+      "digest": "sha256:6c20106ec834a04fa104f7ebb102488e6f936a60b1bdb2918fda1f38546298c4",
+      "created_at": "2026-10-29T03:07:26Z",
+      "updated_at": "2026-10-29T03:07:26Z",
+      "expires_at": "2026-11-28T03:07:25Z",
+      "workflow_run": {
+        "id": 40810270665,
+        "repository_id": 1435166500,
+        "head_repository_id": 1435166500,
+        "head_branch": "main",
+        "head_sha": "1b4a032f912acc8c36ab34f46899174ca59dfdfe"
+      }
+    },
+    {
+      "id": 12869798681,
+      "node_id": "MDg6QXJ0aWZhY3QxMjg2OTc5ODY4MQ==",
+      "name": "agent",
+      "size_in_bytes": 72947,
+      "url": "https://api.github.com/repos/andreleocl/duckdb-triage-agent/actions/artifacts/12869798681",
+      "archive_download_url": "https://api.github.com/repos/andreleocl/duckdb-triage-agent/actions/artifacts/12869798681/zip",
+      "expired": false,
+      "digest": "sha256:555f939f70cf2708f5d5d05e0c6513c86560989ff643959c2de701c66627bc11",
+      "created_at": "2026-10-29T03:09:22Z",
+      "updated_at": "2026-10-29T03:09:22Z",
+      "expires_at": "2027-01-27T03:06:46Z",
+      "workflow_run": {
+        "id": 40810270665,
+        "repository_id": 1435166500,
+        "head_repository_id": 1435166500,
+        "head_branch": "main",
+        "head_sha": "1b4a032f912acc8c36ab34f46899174ca59dfdfe"
+      }
+    },
+    {
+      "id": 12869738912,
+      "node_id": "MDg6QXJ0aWZhY3QxMjg2OTczODkxMg==",
+      "name": "detection",
+      "size_in_bytes": 21406,
+      "url": "https://api.github.com/repos/andreleocl/duckdb-triage-agent/actions/artifacts/12869738912",
+      "archive_download_url": "https://api.github.com/repos/andreleocl/duckdb-triage-agent/actions/artifacts/12869738912/zip",
+      "expired": false,
+      "digest": "sha256:7433e4e283859e3a8220605b32ae95cd74a932371ed238234ce24a5c26d5d929",
+      "created_at": "2026-10-29T03:10:39Z",
+      "updated_at": "2026-10-29T03:10:39Z",
+      "expires_at": "2027-01-27T03:06:46Z",
+      "workflow_run": {
+        "id": 40810270665,
+        "repository_id": 1435166500,
+        "head_repository_id": 1435166500,
+        "head_branch": "main",
+        "head_sha": "1b4a032f912acc8c36ab34f46899174ca59dfdfe"
+      }
+    },
+    {
+      "id": 12869479570,
+      "node_id": "MDg6QXJ0aWZhY3QxMjg2OTQ3OTU3MA==",
+      "name": "triage-input",
+      "size_in_bytes": 713,
+      "url": "https://api.github.com/repos/andreleocl/duckdb-triage-agent/actions/artifacts/12869479570",
+      "archive_download_url": "https://api.github.com/repos/andreleocl/duckdb-triage-agent/actions/artifacts/12869479570/zip",
+      "expired": false,
+      "digest": "sha256:84bd235a0b91cd6438e811d67732ce616d625b7e13de1e423d831f65c6bc4a14",
+      "created_at": "2026-10-29T03:07:30Z",
+      "updated_at": "2026-10-29T03:07:30Z",
+      "expires_at": "2026-11-28T03:07:28Z",
+      "workflow_run": {
+        "id": 40810270665,
+        "repository_id": 1435166500,
+        "head_repository_id": 1435166500,
+        "head_branch": "main",
+        "head_sha": "1b4a032f912acc8c36ab34f46899174ca59dfdfe"
+      }
+    }
+  ]
+}

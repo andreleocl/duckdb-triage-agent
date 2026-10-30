@@ -1,0 +1,58 @@
+{
+  "case_count": 25,
+  "execution_successes": 25,
+  "label_matches": 19,
+  "label_mismatches": [
+    "h08",
+    "h10",
+    "h11",
+    "h15",
+    "h20",
+    "h21"
+  ],
+  "models": [
+    "gpt-5-mini-2025-08-07"
+  ],
+  "estimated_usd_by_role": {
+    "agent": 0.10525854999999999,
+    "detection": 0.16460825
+  },
+  "estimated_usd_total": 0.2698668,
+  "metadata_warnings": [],
+  "tool_calls": {
+    "submit_triage": 25,
+    "list_mcp_resources": 20,
+    "list_mcp_resource_templates": 11,
+    "read_mcp_resource": 2
+  },
+  "cases_with_resource_calls": [
+    "h02",
+    "h03",
+    "h04",
+    "h05",
+    "h06",
+    "h07",
+    "h10",
+    "h11",
+    "h13",
+    "h14",
+    "h15",
+    "h16",
+    "h18",
+    "h19",
+    "h20",
+    "h21",
+    "h22",
+    "h23",
+    "h24",
+    "h25"
+  ],
+  "configuration_and_input_checks": "All 25 receipts and supplied inputs match frozen configuration and replay copies; skill hashes match; no evaluator fields in input packets.",
+  "triage_enabled": "false",
+  "review_status": "AI comment review only; human transcript review pending; adversarial cases not run.",
+  "cost_basis": "Estimated USD: uncached input $0.25/M, cached input $0.025/M, output $2/M; all recorded agent and detector calls. Not invoice reconciliation.",
+  "resource_tool_policy_violations": 33,
+  "human_reviews_completed": 0,
+  "adversarial_runs": 0,
+  "finished_at_utc": "2026-10-28T06:02:27.084434+00:00"
+}

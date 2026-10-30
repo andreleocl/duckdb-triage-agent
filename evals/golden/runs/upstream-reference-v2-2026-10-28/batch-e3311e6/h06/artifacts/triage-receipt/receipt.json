@@ -1,0 +1,20 @@
+{
+  "status": "no_action",
+  "proposal": {
+    "label": null,
+    "comment": null,
+    "rationale": "The report requests new C-API setters and exposing metadata in duckdb_functions(), i.e., a request for additional API capabilities (an enhancement). This is not an in-scope bug report about existing behavior failing or a regression, so no reproducible-example or environment details are required. Classifying as no_action follows the skill's rule to treat feature requests as enhancements and not request further info."
+  },
+  "actions": [],
+  "run_id": "40631742716",
+  "configuration_sha": "e3311e64aa639fb29dd5e4d519a19503d3c2f6ee",
+  "input_sha256": "52defd5173d95964ccb2b20bb96adb1bd2536196353de10b15282684d0d15695",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

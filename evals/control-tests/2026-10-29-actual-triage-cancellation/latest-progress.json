@@ -1,0 +1,648 @@
+{
+  "conclusion": "",
+  "jobs": [
+    {
+      "completedAt": "2026-10-29T03:06:59Z",
+      "conclusion": "success",
+      "databaseId": 123238666156,
+      "name": "pre_activation",
+      "startedAt": "2026-10-29T03:06:48Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-29T03:06:51Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-29T03:06:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:06:55Z",
+          "conclusion": "success",
+          "name": "Setup Scripts",
+          "number": 2,
+          "startedAt": "2026-10-29T03:06:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:06:55Z",
+          "conclusion": "success",
+          "name": "Check team membership for workflow",
+          "number": 3,
+          "startedAt": "2026-10-29T03:06:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:06:56Z",
+          "conclusion": "success",
+          "name": "Check user rate limit",
+          "number": 4,
+          "startedAt": "2026-10-29T03:06:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:06:56Z",
+          "conclusion": "success",
+          "name": "Post Setup Scripts",
+          "number": 8,
+          "startedAt": "2026-10-29T03:06:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:06:56Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 9,
+          "startedAt": "2026-10-29T03:06:56Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/andreleocl/duckdb-triage-agent/actions/runs/40810270665/job/123238666156"
+    },
+    {
+      "completedAt": "2026-10-29T03:07:50Z",
+      "conclusion": "success",
+      "databaseId": 123238732458,
+      "name": "activation",
+      "startedAt": "2026-10-29T03:07:04Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-29T03:07:11Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-29T03:07:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:07:21Z",
+          "conclusion": "success",
+          "name": "Setup Scripts",
+          "number": 2,
+          "startedAt": "2026-10-29T03:07:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:07:24Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 3,
+          "startedAt": "2026-10-29T03:07:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:07:26Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+          "number": 4,
+          "startedAt": "2026-10-29T03:07:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:07:27Z",
+          "conclusion": "success",
+          "name": "Prepare isolated report and skill",
+          "number": 5,
+          "startedAt": "2026-10-29T03:07:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:07:30Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+          "number": 6,
+          "startedAt": "2026-10-29T03:07:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:07:30Z",
+          "conclusion": "success",
+          "name": "Mask OTLP telemetry headers",
+          "number": 7,
+          "startedAt": "2026-10-29T03:07:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:07:30Z",
+          "conclusion": "success",
+          "name": "Generate agentic run info",
+          "number": 8,
+          "startedAt": "2026-10-29T03:07:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:07:30Z",
+          "conclusion": "success",
+          "name": "Validate CODEX_API_KEY or OPENAI_API_KEY secret",
+          "number": 9,
+          "startedAt": "2026-10-29T03:07:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:07:31Z",
+          "conclusion": "success",
+          "name": "Check for OAuth tokens",
+          "number": 10,
+          "startedAt": "2026-10-29T03:07:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:07:35Z",
+          "conclusion": "success",
+          "name": "Checkout .github and .agents folders",
+          "number": 11,
+          "startedAt": "2026-10-29T03:07:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:07:35Z",
+          "conclusion": "success",
+          "name": "Save agent config folders for base branch restoration",
+          "number": 12,
+          "startedAt": "2026-10-29T03:07:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:07:36Z",
+          "conclusion": "success",
+          "name": "Check workflow lock file",
+          "number": 13,
+          "startedAt": "2026-10-29T03:07:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:07:37Z",
+          "conclusion": "success",
+          "name": "Check compile-agentic version",
+          "number": 14,
+          "startedAt": "2026-10-29T03:07:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:07:37Z",
+          "conclusion": "skipped",
+          "name": "Log runtime features",
+          "number": 15,
+          "startedAt": "2026-10-29T03:07:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:07:37Z",
+          "conclusion": "success",
+          "name": "Create prompt with built-in context",
+          "number": 16,
+          "startedAt": "2026-10-29T03:07:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:07:38Z",
+          "conclusion": "success",
+          "name": "Interpolate variables and render templates",
+          "number": 17,
+          "startedAt": "2026-10-29T03:07:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:07:38Z",
+          "conclusion": "success",
+          "name": "Substitute placeholders",
+          "number": 18,
+          "startedAt": "2026-10-29T03:07:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:07:38Z",
+          "conclusion": "success",
+          "name": "Validate prompt placeholders",
+          "number": 19,
+          "startedAt": "2026-10-29T03:07:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:07:39Z",
+          "conclusion": "success",
+          "name": "Print prompt",
+          "number": 20,
+          "startedAt": "2026-10-29T03:07:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:07:39Z",
+          "conclusion": "success",
+          "name": "Inventory installed skills",
+          "number": 21,
+          "startedAt": "2026-10-29T03:07:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:07:43Z",
+          "conclusion": "success",
+          "name": "Upload info artifact",
+          "number": 22,
+          "startedAt": "2026-10-29T03:07:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:07:43Z",
+          "conclusion": "success",
+          "name": "Stage prompt files for artifact upload",
+          "number": 23,
+          "startedAt": "2026-10-29T03:07:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:07:45Z",
+          "conclusion": "success",
+          "name": "Upload activation artifact",
+          "number": 24,
+          "startedAt": "2026-10-29T03:07:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:07:46Z",
+          "conclusion": "success",
+          "name": "Post Checkout .github and .agents folders",
+          "number": 46,
+          "startedAt": "2026-10-29T03:07:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:07:46Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 47,
+          "startedAt": "2026-10-29T03:07:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:07:47Z",
+          "conclusion": "success",
+          "name": "Post Setup Scripts",
+          "number": 48,
+          "startedAt": "2026-10-29T03:07:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:07:47Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 49,
+          "startedAt": "2026-10-29T03:07:47Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/andreleocl/duckdb-triage-agent/actions/runs/40810270665/job/123238732458"
+    },
+    {
+      "completedAt": "0001-01-01T00:00:00Z",
+      "conclusion": "",
+      "databaseId": 123238999179,
+      "name": "agent",
+      "startedAt": "2026-10-29T03:07:52Z",
+      "status": "in_progress",
+      "steps": [
+        {
+          "completedAt": "2026-10-29T03:07:56Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-29T03:07:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:08:00Z",
+          "conclusion": "success",
+          "name": "Setup Scripts",
+          "number": 2,
+          "startedAt": "2026-10-29T03:07:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:08:00Z",
+          "conclusion": "success",
+          "name": "Set runtime paths",
+          "number": 3,
+          "startedAt": "2026-10-29T03:08:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:08:00Z",
+          "conclusion": "success",
+          "name": "Mask OTLP telemetry headers",
+          "number": 4,
+          "startedAt": "2026-10-29T03:08:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:08:00Z",
+          "conclusion": "success",
+          "name": "Check OTLP telemetry configuration",
+          "number": 5,
+          "startedAt": "2026-10-29T03:08:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:08:00Z",
+          "conclusion": "success",
+          "name": "Initialize agent execution evidence",
+          "number": 6,
+          "startedAt": "2026-10-29T03:08:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:08:00Z",
+          "conclusion": "success",
+          "name": "Create gh-aw temp directory",
+          "number": 7,
+          "startedAt": "2026-10-29T03:08:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:08:00Z",
+          "conclusion": "success",
+          "name": "Configure gh CLI for GitHub Enterprise",
+          "number": 8,
+          "startedAt": "2026-10-29T03:08:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:08:01Z",
+          "conclusion": "success",
+          "name": "Download activation artifact",
+          "number": 9,
+          "startedAt": "2026-10-29T03:08:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:08:02Z",
+          "conclusion": "success",
+          "name": "Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333",
+          "number": 10,
+          "startedAt": "2026-10-29T03:08:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:08:03Z",
+          "conclusion": "success",
+          "name": "Setup Node.js",
+          "number": 11,
+          "startedAt": "2026-10-29T03:08:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:08:07Z",
+          "conclusion": "success",
+          "name": "Install Codex CLI",
+          "number": 12,
+          "startedAt": "2026-10-29T03:08:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:08:09Z",
+          "conclusion": "success",
+          "name": "Install AWF binary",
+          "number": 13,
+          "startedAt": "2026-10-29T03:08:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:08:09Z",
+          "conclusion": "success",
+          "name": "Restore inline sub-agents from activation artifact",
+          "number": 14,
+          "startedAt": "2026-10-29T03:08:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:08:09Z",
+          "conclusion": "success",
+          "name": "Restore inline skills from activation artifact",
+          "number": 15,
+          "startedAt": "2026-10-29T03:08:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:08:27Z",
+          "conclusion": "success",
+          "name": "Download container images",
+          "number": 16,
+          "startedAt": "2026-10-29T03:08:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:08:27Z",
+          "conclusion": "success",
+          "name": "Configure Codex",
+          "number": 17,
+          "startedAt": "2026-10-29T03:08:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:08:27Z",
+          "conclusion": "success",
+          "name": "Prepare Safe Outputs Directories",
+          "number": 18,
+          "startedAt": "2026-10-29T03:08:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:08:28Z",
+          "conclusion": "success",
+          "name": "Generate Safe Outputs Config",
+          "number": 19,
+          "startedAt": "2026-10-29T03:08:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:08:28Z",
+          "conclusion": "success",
+          "name": "Generate Safe Outputs Tools",
+          "number": 20,
+          "startedAt": "2026-10-29T03:08:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:08:36Z",
+          "conclusion": "success",
+          "name": "Start MCP Gateway",
+          "number": 21,
+          "startedAt": "2026-10-29T03:08:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:08:37Z",
+          "conclusion": "success",
+          "name": "Mount MCP servers as CLIs",
+          "number": 22,
+          "startedAt": "2026-10-29T03:08:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:08:37Z",
+          "conclusion": "success",
+          "name": "Clean credentials",
+          "number": 23,
+          "startedAt": "2026-10-29T03:08:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-29T03:08:37Z",
+          "conclusion": "success",
+          "name": "Audit pre-agent workspace",
+          "number": 24,
+          "startedAt": "2026-10-29T03:08:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "0001-01-01T00:00:00Z",
+          "conclusion": "",
+          "name": "Execute Codex CLI",
+          "number": 25,
+          "startedAt": "2026-10-29T03:08:37Z",
+          "status": "in_progress"
+        },
+        {
+          "completedAt": "0001-01-01T00:00:00Z",
+          "conclusion": "",
+          "name": "Detect agent errors",
+          "number": 26,
+          "startedAt": "0001-01-01T00:00:00Z",
+          "status": "pending"
+        },
+        {
+          "completedAt": "0001-01-01T00:00:00Z",
+          "conclusion": "",
+          "name": "Stop MCP Gateway",
+          "number": 27,
+          "startedAt": "0001-01-01T00:00:00Z",
+          "status": "pending"
+        },
+        {
+          "completedAt": "0001-01-01T00:00:00Z",
+          "conclusion": "",
+          "name": "Redact secrets in logs",
+          "number": 28,
+          "startedAt": "0001-01-01T00:00:00Z",
+          "status": "pending"
+        },
+        {
+          "completedAt": "0001-01-01T00:00:00Z",
+          "conclusion": "",
+          "name": "Append agent step summary",
+          "number": 29,
+          "startedAt": "0001-01-01T00:00:00Z",
+          "status": "pending"
+        },
+        {
+          "completedAt": "0001-01-01T00:00:00Z",
+          "conclusion": "",
+          "name": "Copy Safe Outputs",
+          "number": 30,
+          "startedAt": "0001-01-01T00:00:00Z",
+          "status": "pending"
+        },
+        {
+          "completedAt": "0001-01-01T00:00:00Z",
+          "conclusion": "",
+          "name": "Ingest agent output",
+          "number": 31,
+          "startedAt": "0001-01-01T00:00:00Z",
+          "status": "pending"
+        },
+        {
+          "completedAt": "0001-01-01T00:00:00Z",
+          "conclusion": "",
+          "name": "Parse agent logs for step summary",
+          "number": 32,
+          "startedAt": "0001-01-01T00:00:00Z",
+          "status": "pending"
+        },
+        {
+          "completedAt": "0001-01-01T00:00:00Z",
+          "conclusion": "",
+          "name": "Parse MCP Gateway logs for step summary",
+          "number": 33,
+          "startedAt": "0001-01-01T00:00:00Z",
+          "status": "pending"
+        },
+        {
+          "completedAt": "0001-01-01T00:00:00Z",
+          "conclusion": "",
+          "name": "Print firewall logs",
+          "number": 34,
+          "startedAt": "0001-01-01T00:00:00Z",
+          "status": "pending"
+        },
+        {
+          "completedAt": "0001-01-01T00:00:00Z",
+          "conclusion": "",
+          "name": "Parse token usage for step summary",
+          "number": 35,
+          "startedAt": "0001-01-01T00:00:00Z",
+          "status": "pending"
+        },
+        {
+          "completedAt": "0001-01-01T00:00:00Z",
+          "conclusion": "",
+          "name": "Print AWF reflect summary",
+          "number": 36,
+          "startedAt": "0001-01-01T00:00:00Z",
+          "status": "pending"
+        },
+        {
+          "completedAt": "0001-01-01T00:00:00Z",
+          "conclusion": "",
+          "name": "Generate observability summary",
+          "number": 37,
+          "startedAt": "0001-01-01T00:00:00Z",
+          "status": "pending"
+        },
+        {
+          "completedAt": "0001-01-01T00:00:00Z",
+          "conclusion": "",
+          "name": "Write agent output placeholder if missing",
+          "number": 38,
+          "startedAt": "0001-01-01T00:00:00Z",
+          "status": "pending"
+        },
+        {
+          "completedAt": "0001-01-01T00:00:00Z",
+          "conclusion": "",
+          "name": "Upload agent output fallback artifact",
+          "number": 39,
+          "startedAt": "0001-01-01T00:00:00Z",
+          "status": "pending"
+        },
+        {
+          "completedAt": "0001-01-01T00:00:00Z",
+          "conclusion": "",
+          "name": "Upload agent artifacts",
+          "number": 40,
+          "startedAt": "0001-01-01T00:00:00Z",
+          "status": "pending"
+        },
+        {
+          "completedAt": "0001-01-01T00:00:00Z",
+          "conclusion": "",
+          "name": "Post Setup Node.js",
+          "number": 79,
+          "startedAt": "0001-01-01T00:00:00Z",
+          "status": "pending"
+        },
+        {
+          "completedAt": "0001-01-01T00:00:00Z",
+          "conclusion": "",
+          "name": "Post Setup Scripts",
+          "number": 80,
+          "startedAt": "0001-01-01T00:00:00Z",
+          "status": "pending"
+        }
+      ],
+      "url": "https://github.com/andreleocl/duckdb-triage-agent/actions/runs/40810270665/job/123238999179"
+    }
+  ],
+  "status": "in_progress",
+  "url": "https://github.com/andreleocl/duckdb-triage-agent/actions/runs/40810270665"
+}

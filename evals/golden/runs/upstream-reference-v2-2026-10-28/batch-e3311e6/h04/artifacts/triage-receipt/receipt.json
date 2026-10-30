@@ -1,0 +1,20 @@
+{
+  "status": "no_action",
+  "proposal": {
+    "label": null,
+    "comment": null,
+    "rationale": "The report provides a minimal, self-contained SQL reproducer (with PRAGMA, CREATE TABLE, and the EXPLAIN MERGE ... RETURNING statement) and explicitly states it runs in a fresh process. It includes DuckDB versions (1.4.5\u20131.5.6 and a 2.0 preview), clients (Python API and CLI), and OS (Debian 12). No missing input, schema, or environment detail prevents following the steps; therefore no clarification is needed."
+  },
+  "actions": [],
+  "run_id": "40630855192",
+  "configuration_sha": "e3311e64aa639fb29dd5e4d519a19503d3c2f6ee",
+  "input_sha256": "25910e8902697e5a519518a3c78ef0ce6043ad4e440d08701e2c24da8f3a027c",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

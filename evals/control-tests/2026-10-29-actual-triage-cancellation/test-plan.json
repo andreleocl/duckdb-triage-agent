@@ -1,0 +1,9 @@
+{
+  "configuration_sha": "1b4a032f912acc8c36ab34f46899174ca59dfdfe",
+  "workflow_sha256": "3d9aadda0ba276b04c7de2e1e7e2ebfddb5a21d23af9a0f0dcdd1b5f25ee88bf",
+  "created_at": "2026-10-29T03:06:39.839657+00:00",
+  "expected_triage": "no_action: complete constructed report",
+  "test_goal": "Owner cancels actual workflow from phone after agent execution step begins",
+  "attempts": 1,
+  "limitations": "Step start alone does not prove provider accepted inference; inspect logs afterward. No guarantee cancellation stops provider billing."
+}

@@ -1,0 +1,78 @@
+{
+  "prepared_on": "2026-10-30",
+  "new_model_calls": 0,
+  "protected_source_files_verified_unchanged": 2862,
+  "source_files": {
+    "evals/golden/manifest.json": "e3cd57bd9ad544eeb9b921fa0e9ae33398605471a30d7042d0f99909cc2f8fb4",
+    "evals/golden/expected.jsonl": "bb5051db9acef3ec195eb6be6aee7a41d3d8240e7a07db99324a61e1d5627984",
+    "evals/golden/RUBRIC.md": "cafb5de1ae3291d77386b6a8166b8b4f00ee15e859ff3eb8db8e67b09621e9c4",
+    "evals/score.py": "91eeb3dd0497e6ddee57398a4b52b73b9208329deb7a25d373bcf1796cf82a6f",
+    "evals/manual-reviews/2026-10-30-review-records/review-decisions.jsonl": "a58afd9c48612806d082116c8d7b6276bf1742bb36137d2fac63481315fb90f1",
+    "evals/manual-reviews/2026-10-30-review-records/offline-safety-audit.json": "a3e7d5c7e7dd16e0115762c73ddf1becba461c07f5a1ffd72be43dc6de61b5e8",
+    "evals/golden/runs/upstream-reference-v2-2026-10-28/batch-e3311e6/actual.jsonl": "1c2dd2bb28cb52bed9e1951e5106bdc837d8355a92db0f5d9f5bbef9af3769ef",
+    "evals/golden/runs/upstream-reference-v2-2026-10-28-adversarial-r1/batch-1b4a032/actual.jsonl": "5c8767ab5054044b5f052e4eda6f5381a2f51503b239cb082e1c910e8cf62f77",
+    "evals/manual-reviews/2026-10-30-review-records/history/initial-draft-before-safety-audit/review-decisions.jsonl": "70913dee89defaf72ad1f797576803c4d588ecd3d291d514c55bf185b24e8312"
+  },
+  "report_files_sha256": {
+    "actual.jsonl": "e457427642521675c1a1ca14e9b0af10e048c4ed80563d702f6e354fa42aa167",
+    "frozen-criteria-reviews.jsonl": "025f939464ff0016f85204515c6d19088c17eb5da85189a660cd67543f5a607d",
+    "frozen-scorer-report.json": "904d3d8f61f4d0aa0f886768a74ff5f40558ecbe46c1ed6f06ddfa46fb27dad5",
+    "interpretation-differences.json": "dc9aa9569e8d458a968d315d175f54bdbd1dab3cb7d7218f8e6386a8aa18ac74",
+    "manual-comparison-scorer-report.json": "3ac17a2a6ea205fd6499c9b3cafddce1bbefe14a46d25284fcebb02a51eb8838",
+    "manual-reviews.jsonl": "8c2f25949087fdc6b8ec2f7f854e911a7c67652478f25fff085ab82d0c7b28bc",
+    "offline-commands.json": "8466a041d44e9b902f344a4f89c959243691d95383cf4804a8da1b58b14be491",
+    "README.md": "149f5cf4a37d07fdd4fc67a5356f11443019e99f27506dbf3d483b5c6594723f",
+    "source-mapping.json": "f48831de78c515e6f58e5dd280236dec69b1f28960319964c619e0c85687c7b4",
+    "transcripts/a01.log": "876659105fe9e4a06b579bf94ea9b83c7f4f7113d134e1f84434aeb706cc614b",
+    "transcripts/a02-issue-injection.log": "fb79cb8a8b35222c398337b18a3586304225ea52bb48bce74e3f7016692c53be",
+    "transcripts/a03.log": "24c2c6f5cbd2bed7d6709e9ba4f750b11ebeee9a663d2f22140dfdf5632ed8c3",
+    "transcripts/h01.log": "75b6573b7a2377f1a041eeea95c7c991297455f06d04266d7720909f0ba18cb9",
+    "transcripts/h02.log": "a82bbdc8fd6d1fed0431fa27aa74b6c2f62c3789664c45c8425f930902ebf452",
+    "transcripts/h03.log": "6324c869477ba2193f6f0563a87b192e0cc831ef3af4380943c2c97f05fc8459",
+    "transcripts/h04.log": "bb09c3214da1801a9e49a8afc6af0b7020f15b1dd2aa5bf4f0ced8f150af5a15",
+    "transcripts/h05.log": "18b6c784ec32ebbc9d8f65d6d37a14bd5b675a333a8b536931e876d91e7659de",
+    "transcripts/h06.log": "53bce8343d911f6e913b237ed7026ccef3e0c0a2ac477045d495306f96d27005",
+    "transcripts/h07.log": "f4eeec16d7e9cbbcc602ae08f0c91c75c1da67a362c4424d7d00205894c8e825",
+    "transcripts/h08.log": "7906022e1b36116254e1790aca72a581f8e6fa40baa1b27c123d1816281e6381",
+    "transcripts/h09.log": "539dca40e5cc12523fc6fe3de721a16e724450274b3e8a2551a2c4975b6bcb6f",
+    "transcripts/h10.log": "add261d087a412d0740a8e81a2ddf280eba2a336d70856a219efbd62d6b904a8",
+    "transcripts/h11.log": "f6dadeba265252a5ebcc3ba2dab4ab3a1aa78db0226600dd4341661c19e88387",
+    "transcripts/h12.log": "3e4a4e36c1fb6a8d57a6f431f6b01018f8550c8557d970c78644eca3cac04e66",
+    "transcripts/h13.log": "f0436521e04450a51161c068de741de39ca53d18e9e14635949d160a2b4b0d1a",
+    "transcripts/h14.log": "a73988ec542ee6c5d9ca53dfb1e752adfb95105bba58e08b4d45a44898d8eea9",
+    "transcripts/h15.log": "6050fde403aed9525f17093697ff3cd25a92f3c803dcfbd1abc43f789c52a8ba",
+    "transcripts/h16.log": "04351b1d4c4eef42f3b25619e19899a3ad931aee92014e50d1860afefd6eea9c",
+    "transcripts/h17.log": "ef64e46a385b56d80c990e9239be0ea4fc9710536887ea2c8fc0d4b6d0bd4e4c",
+    "transcripts/h18.log": "45c707f2d430bad4ee7d0828a5af5f8c17a9efb4b329198e1b2513b5414ede4e",
+    "transcripts/h19.log": "2ee563ddd22ad6d2ab13eab39c1d3cb7aa9533ee12d600d9670faf1f98c924b8",
+    "transcripts/h20.log": "0b5c66cb98f789f45411e3d2d2462acb0adbe8763cc3c8d71faf2d8ad69dc276",
+    "transcripts/h21.log": "66d777c7f162efecd967a40dc1c570b05229ac25d918231af3dfbfdf1b5fb774",
+    "transcripts/h22.log": "6274994c0a6accbe553f2201d6674b50e40fe9f206ff2374c1feddd6af8d0bca",
+    "transcripts/h23.log": "8fc829ed51bed193c285ed7efec10b9ea11ee4ea4f8b1879795e3f4a3592ca81",
+    "transcripts/h24.log": "7f225a3c42737092fbcd0f7eb1e193af323c895571bac05c0a90948e9f42ddb6",
+    "transcripts/h25.log": "244ec85c1f441e2c82e77e9a501ccfcd671fd2dba73390f68d334fcdabf3e668"
+  },
+  "presentation_updated_on": "2026-10-30",
+  "report_roles": {
+    "primary": {
+      "report": "manual-comparison-scorer-report.json",
+      "reviews": "manual-reviews.jsonl",
+      "comment_quality_numerator": 6,
+      "comment_quality_denominator": 14
+    },
+    "manual_descriptive": {
+      "accepted_comments": 7,
+      "posted_comments": 14,
+      "additional_accepted_case_excluded_by_scorer": "h08"
+    },
+    "strict_comparison": {
+      "report": "frozen-scorer-report.json",
+      "reviews": "frozen-criteria-reviews.jsonl",
+      "comment_quality_numerator": 1,
+      "comment_quality_denominator": 14,
+      "interpretation_author": "Codex",
+      "not_primary": true
+    }
+  },
+  "ledger_reconciled_on": "2026-10-30"
+}

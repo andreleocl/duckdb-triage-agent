@@ -1,0 +1,920 @@
+conclusion	Set up job	﻿2026-10-29T03:10:50.7771776Z Current runner version: '2.338.1'
+conclusion	Set up job	2026-10-29T03:10:50.7926098Z ##[group]Runner Image Provisioner
+conclusion	Set up job	2026-10-29T03:10:50.7927214Z Hosted Compute Agent
+conclusion	Set up job	2026-10-29T03:10:50.7927839Z Version: 20261021.618
+conclusion	Set up job	2026-10-29T03:10:50.7928629Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+conclusion	Set up job	2026-10-29T03:10:50.7929332Z Build Date: 2026-10-21T00:45:21Z
+conclusion	Set up job	2026-10-29T03:10:50.7930029Z Worker ID: {843946f2-055f-4d7f-a357-870b93afcd19}
+conclusion	Set up job	2026-10-29T03:10:50.7930704Z Region: eastus
+conclusion	Set up job	2026-10-29T03:10:50.7931199Z Cloud: Azure
+conclusion	Set up job	2026-10-29T03:10:50.7931735Z ##[endgroup]
+conclusion	Set up job	2026-10-29T03:10:50.7933259Z ##[group]VM Image
+conclusion	Set up job	2026-10-29T03:10:50.7933898Z - OS: Linux (x64)
+conclusion	Set up job	2026-10-29T03:10:50.7934484Z - Source: Docker
+conclusion	Set up job	2026-10-29T03:10:50.7934989Z - Name: ubuntu:24.04
+conclusion	Set up job	2026-10-29T03:10:50.7935940Z - Version: 20261026.36.1
+conclusion	Set up job	2026-10-29T03:10:50.7936518Z ##[endgroup]
+conclusion	Set up job	2026-10-29T03:10:50.7937580Z ##[group]GITHUB_TOKEN Permissions
+conclusion	Set up job	2026-10-29T03:10:50.7939870Z Actions: read
+conclusion	Set up job	2026-10-29T03:10:50.7940518Z Metadata: read
+conclusion	Set up job	2026-10-29T03:10:50.7941059Z ##[endgroup]
+conclusion	Set up job	2026-10-29T03:10:50.8038730Z Secret source: Actions
+conclusion	Set up job	2026-10-29T03:10:50.8040119Z Cache mode: write
+conclusion	Set up job	2026-10-29T03:10:50.8041168Z Prepare workflow directory
+conclusion	Set up job	2026-10-29T03:10:51.0141576Z Prepare all required actions
+conclusion	Set up job	2026-10-29T03:10:51.0456027Z Getting action download info
+conclusion	Set up job	2026-10-29T03:10:52.0729206Z Download action repository 'github/gh-aw-actions@de9d416cac8ccea1a2d582cb07c4b7db96946792' (SHA:de9d416cac8ccea1a2d582cb07c4b7db96946792)
+conclusion	Set up job	2026-10-29T03:10:54.4110586Z Download action repository 'actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333' (SHA:9000827ccba6bdab643e8b6fd33ac0654aef8333)
+conclusion	Set up job	2026-10-29T03:10:54.8396359Z Download action repository 'actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3' (SHA:3a2844b7e9c422d3c10d287c895573f7108da1b3)
+conclusion	Set up job	2026-10-29T03:10:55.2904788Z Download action repository 'actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+conclusion	Set up job	2026-10-29T03:10:55.8033389Z Complete job name: conclusion
+conclusion	Setup Scripts	﻿2026-10-29T03:10:56.0878456Z ##[group]Run github/gh-aw-actions/setup@de9d416cac8ccea1a2d582cb07c4b7db96946792
+conclusion	Setup Scripts	2026-10-29T03:10:56.0879815Z with:
+conclusion	Setup Scripts	2026-10-29T03:10:56.0880399Z   destination: /home/runner/work/_temp/gh-aw/actions
+conclusion	Setup Scripts	2026-10-29T03:10:56.0881106Z   job-name: conclusion
+conclusion	Setup Scripts	2026-10-29T03:10:56.0881645Z   trace-id: e25ae10f94863f0b17051e6dfbd1a8c4
+conclusion	Setup Scripts	2026-10-29T03:10:56.0882269Z   parent-span-id: 87751d1cc27b4cd0
+conclusion	Setup Scripts	2026-10-29T03:10:56.0948161Z   safe-output-artifact-client: false
+conclusion	Setup Scripts	2026-10-29T03:10:56.0949777Z env:
+conclusion	Setup Scripts	2026-10-29T03:10:56.0950288Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+conclusion	Setup Scripts	2026-10-29T03:10:56.0950893Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+conclusion	Setup Scripts	2026-10-29T03:10:56.0952404Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+conclusion	Setup Scripts	2026-10-29T03:10:56.0953966Z   OTEL_EXPORTER_OTLP_HEADERS: 
+conclusion	Setup Scripts	2026-10-29T03:10:56.0956742Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+conclusion	Setup Scripts	2026-10-29T03:10:56.0957490Z   GH_AW_OTLP_IF_MISSING: ignore
+conclusion	Setup Scripts	2026-10-29T03:10:56.0959105Z   GH_AW_JOB_DISPLAY_NAMES: {"activation":"activation","agent":"agent","conclusion":"conclusion","detection":"detection","pre_activation":"pre_activation","submit_triage":"submit_triage"}
+conclusion	Setup Scripts	2026-10-29T03:10:56.0961088Z   GH_AW_JOB_RESULTS: {"activation":{"result":"success"},"agent":{"result":"cancelled"},"detection":{"result":"success"},"submit_triage":{"result":"cancelled"}}
+conclusion	Setup Scripts	2026-10-29T03:10:56.0962832Z   GH_AW_JOB_TIMING_ELIGIBLE: {"activation":true,"agent":true,"conclusion":true,"detection":true,"pre_activation":true,"submit_triage":true}
+conclusion	Setup Scripts	2026-10-29T03:10:56.0963966Z   GH_AW_RUNTIME_FEATURES: 
+conclusion	Setup Scripts	2026-10-29T03:10:56.0964546Z   GH_AW_SETUP_WORKFLOW_NAME: DuckDB issue triage
+conclusion	Setup Scripts	2026-10-29T03:10:56.0966327Z   GH_AW_CURRENT_WORKFLOW_REF: andreleocl/duckdb-triage-agent/.github/workflows/issue-triage.lock.yml@refs/heads/main
+conclusion	Setup Scripts	2026-10-29T03:10:56.0967464Z   GH_AW_INFO_VERSION: 0.164.0
+conclusion	Setup Scripts	2026-10-29T03:10:56.0968025Z   GH_AW_INFO_AWF_VERSION: v0.28.70
+conclusion	Setup Scripts	2026-10-29T03:10:56.0969175Z   GH_AW_INFO_ENGINE_ID: codex
+conclusion	Setup Scripts	2026-10-29T03:10:56.0969725Z   GH_AW_SETUP_AW_CONTEXT: 
+conclusion	Setup Scripts	2026-10-29T03:10:56.0970242Z ##[endgroup]
+conclusion	Setup Scripts	2026-10-29T03:11:00.6709779Z Successfully copied 759 files to /home/runner/work/_temp/gh-aw/actions
+conclusion	Setup Scripts	2026-10-29T03:11:00.6740573Z ##[group]Runtime TLS inventory (not a trust-store attestation)
+conclusion	Setup Scripts	2026-10-29T03:11:01.5323769Z curl 8.5.0 (x86_64-pc-linux-gnu) libcurl/8.5.0 OpenSSL/3.0.13 zlib/1.3 brotli/1.1.0 zstd/1.5.5 libidn2/2.3.7 libpsl/0.21.2 (+libidn2/2.3.7) libssh/0.10.6/openssl/zlib nghttp2/1.59.0 librtmp/2.3 OpenLDAP/2.6.10
+conclusion	Setup Scripts	2026-10-29T03:11:01.5688237Z Node v24.22.1; OpenSSL 3.5.9
+conclusion	Setup Scripts	2026-10-29T03:11:01.6170025Z Go: unavailable; binary build-toolchain inspection unavailable
+conclusion	Setup Scripts	2026-10-29T03:11:01.6196496Z Python/certifi: not inspected by shell setup; record each client's interpreter, TLS backend and selected CA bundle separately.
+conclusion	Setup Scripts	2026-10-29T03:11:01.6204371Z Container, proxy and MCP trust stores require separate image/vendor evidence.
+conclusion	Setup Scripts	2026-10-29T03:11:01.6206611Z Browser updates and successful HTTPS connections do not attest CA distrust.
+conclusion	Setup Scripts	2026-10-29T03:11:01.6209469Z ##[endgroup]
+conclusion	Setup Scripts	2026-10-29T03:11:02.0033315Z Successfully copied 112 mcp-scripts files to /home/runner/work/_temp/gh-aw/mcp-scripts
+conclusion	Setup Scripts	2026-10-29T03:11:02.2238273Z Successfully copied 170 safe-outputs files to /home/runner/work/_temp/gh-aw/safeoutputs
+conclusion	Setup Scripts	2026-10-29T03:11:02.3515362Z [info] [otlp] INPUT_TRACE_ID=e25ae10f94863f0b17051e6dfbd1a8c4 (will reuse activation trace)
+conclusion	Setup Scripts	2026-10-29T03:11:02.3531310Z [info] [otlp] INPUT_PARENT_SPAN_ID=87751d1cc27b4cd0 (will parent setup span)
+conclusion	Setup Scripts	2026-10-29T03:11:02.3542300Z [info] [otlp] no OTLP endpoints have usable credentials, skipping setup span
+conclusion	Setup Scripts	2026-10-29T03:11:02.3609450Z [info] [otlp] resolved trace-id=e25ae10f94863f0b17051e6dfbd1a8c4
+conclusion	Setup Scripts	2026-10-29T03:11:02.3616290Z [info] [otlp] trace-id=e25ae10f94863f0b17051e6dfbd1a8c4 written to GITHUB_OUTPUT
+conclusion	Setup Scripts	2026-10-29T03:11:02.3621285Z [info] [otlp] span-id=7d5490a4a9f0cf96 written to GITHUB_OUTPUT
+conclusion	Setup Scripts	2026-10-29T03:11:02.3626478Z [info] [otlp] parent-span-id=87751d1cc27b4cd0 written to GITHUB_OUTPUT
+conclusion	Setup Scripts	2026-10-29T03:11:02.3631802Z [info] [otlp] GITHUB_AW_OTEL_TRACE_ID written to GITHUB_ENV
+conclusion	Setup Scripts	2026-10-29T03:11:02.3636039Z [info] [otlp] GITHUB_AW_OTEL_PARENT_SPAN_ID written to GITHUB_ENV
+conclusion	Setup Scripts	2026-10-29T03:11:02.3641879Z [info] [otlp] GITHUB_AW_OTEL_JOB_START_MS written to GITHUB_ENV
+conclusion	Download agent output artifact	﻿2026-10-29T03:11:02.5124511Z ##[group]Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+conclusion	Download agent output artifact	2026-10-29T03:11:02.5126817Z with:
+conclusion	Download agent output artifact	2026-10-29T03:11:02.5127869Z   pattern: {agent,agent-output-fallback}
+conclusion	Download agent output artifact	2026-10-29T03:11:02.5129398Z   merge-multiple: true
+conclusion	Download agent output artifact	2026-10-29T03:11:02.5130486Z   path: /tmp/gh-aw/
+conclusion	Download agent output artifact	2026-10-29T03:11:02.5131631Z   repository: andreleocl/duckdb-triage-agent
+conclusion	Download agent output artifact	2026-10-29T03:11:02.5132980Z   run-id: 40810270665
+conclusion	Download agent output artifact	2026-10-29T03:11:02.5134025Z   skip-decompress: false
+conclusion	Download agent output artifact	2026-10-29T03:11:02.5135847Z   digest-mismatch: error
+conclusion	Download agent output artifact	2026-10-29T03:11:02.5136933Z env:
+conclusion	Download agent output artifact	2026-10-29T03:11:02.5137852Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+conclusion	Download agent output artifact	2026-10-29T03:11:02.5139090Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+conclusion	Download agent output artifact	2026-10-29T03:11:02.5143008Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+conclusion	Download agent output artifact	2026-10-29T03:11:02.5150010Z   OTEL_EXPORTER_OTLP_HEADERS: 
+conclusion	Download agent output artifact	2026-10-29T03:11:02.5151347Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+conclusion	Download agent output artifact	2026-10-29T03:11:02.5152850Z   GH_AW_OTLP_IF_MISSING: ignore
+conclusion	Download agent output artifact	2026-10-29T03:11:02.5156304Z   GH_AW_JOB_DISPLAY_NAMES: {"activation":"activation","agent":"agent","conclusion":"conclusion","detection":"detection","pre_activation":"pre_activation","submit_triage":"submit_triage"}
+conclusion	Download agent output artifact	2026-10-29T03:11:02.5164865Z   GH_AW_JOB_RESULTS: {"activation":{"result":"success"},"agent":{"result":"cancelled"},"detection":{"result":"success"},"submit_triage":{"result":"cancelled"}}
+conclusion	Download agent output artifact	2026-10-29T03:11:02.5169769Z   GH_AW_JOB_TIMING_ELIGIBLE: {"activation":true,"agent":true,"conclusion":true,"detection":true,"pre_activation":true,"submit_triage":true}
+conclusion	Download agent output artifact	2026-10-29T03:11:02.5172742Z   GH_AW_RUNTIME_FEATURES: 
+conclusion	Download agent output artifact	2026-10-29T03:11:02.5174081Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+conclusion	Download agent output artifact	2026-10-29T03:11:02.5175929Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 7d5490a4a9f0cf96
+conclusion	Download agent output artifact	2026-10-29T03:11:02.5177411Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243462364
+conclusion	Download agent output artifact	2026-10-29T03:11:02.5178863Z ##[endgroup]
+conclusion	Download agent output artifact	2026-10-29T03:11:02.9371753Z Found 7 artifact(s)
+conclusion	Download agent output artifact	2026-10-29T03:11:02.9383679Z Filtering artifacts by pattern '{agent,agent-output-fallback}'
+conclusion	Download agent output artifact	2026-10-29T03:11:02.9419157Z Preparing to download the following artifacts:
+conclusion	Download agent output artifact	2026-10-29T03:11:02.9424847Z - agent-output-fallback (ID: 12870485611, Size: 2279, Expected Digest: sha256:9d845f0c233211d2b9560a8b1d099c8c3766689731183a8c0aa7cfc1b1b3c989)
+conclusion	Download agent output artifact	2026-10-29T03:11:02.9431594Z - agent (ID: 12869798681, Size: 72947, Expected Digest: sha256:555f939f70cf2708f5d5d05e0c6513c86560989ff643959c2de701c66627bc11)
+conclusion	Download agent output artifact	2026-10-29T03:11:03.1077503Z Redirecting to blob download url: https://productionresultssa14.blob.core.windows.net/actions-results/ac4bb203-7638-4bba-98fd-f311e2414d13/workflow-job-run-aab130c1-ede5-5ee8-9310-bf42509db0fa/artifacts/daa0da78a4f899948f184de1c2267d4cff63de5d280692a88333f56508605a86.zip
+conclusion	Download agent output artifact	2026-10-29T03:11:03.1084413Z Starting download of artifact to: /tmp/gh-aw
+conclusion	Download agent output artifact	2026-10-29T03:11:03.1182118Z Redirecting to blob download url: https://productionresultssa14.blob.core.windows.net/actions-results/ac4bb203-7638-4bba-98fd-f311e2414d13/workflow-job-run-aab130c1-ede5-5ee8-9310-bf42509db0fa/artifacts/d4f0bc5a29de06b510f9aa428f1eedba926012b591fef7a518e776a7c9bd1824.zip
+conclusion	Download agent output artifact	2026-10-29T03:11:03.1188978Z Starting download of artifact to: /tmp/gh-aw
+conclusion	Download agent output artifact	2026-10-29T03:11:03.1489781Z (node:2222) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+conclusion	Download agent output artifact	2026-10-29T03:11:03.1494065Z (Use `node --trace-deprecation ...` to show where the warning was created)
+conclusion	Download agent output artifact	2026-10-29T03:11:03.2267199Z SHA256 digest of downloaded artifact is 555f939f70cf2708f5d5d05e0c6513c86560989ff643959c2de701c66627bc11
+conclusion	Download agent output artifact	2026-10-29T03:11:03.2273038Z Artifact download completed successfully.
+conclusion	Download agent output artifact	2026-10-29T03:11:03.2279335Z SHA256 digest of downloaded artifact is 9d845f0c233211d2b9560a8b1d099c8c3766689731183a8c0aa7cfc1b1b3c989
+conclusion	Download agent output artifact	2026-10-29T03:11:03.2283793Z Artifact download completed successfully.
+conclusion	Download agent output artifact	2026-10-29T03:11:03.2286891Z Total of 2 artifact(s) downloaded
+conclusion	Download agent output artifact	2026-10-29T03:11:03.2295088Z Download artifact has finished successfully
+conclusion	Setup agent output environment variable	﻿2026-10-29T03:11:03.2513234Z ##[group]Run mkdir -p /tmp/gh-aw/
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2514709Z ^[[36;1mmkdir -p /tmp/gh-aw/^[[0m
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2516377Z ^[[36;1mfind "/tmp/gh-aw/" -type f -print^[[0m
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2517919Z ^[[36;1mif [ -f "/tmp/gh-aw/agent_output.json" ]; then^[[0m
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2519896Z ^[[36;1m  echo "GH_AW_AGENT_OUTPUT=/tmp/gh-aw/agent_output.json" >> "$GITHUB_OUTPUT"^[[0m
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2521688Z ^[[36;1mfi^[[0m
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2532915Z shell: /usr/bin/bash -e {0}
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2534079Z env:
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2535022Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2536701Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2540142Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2543568Z   OTEL_EXPORTER_OTLP_HEADERS: 
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2544831Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2546518Z   GH_AW_OTLP_IF_MISSING: ignore
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2550517Z   GH_AW_JOB_DISPLAY_NAMES: {"activation":"activation","agent":"agent","conclusion":"conclusion","detection":"detection","pre_activation":"pre_activation","submit_triage":"submit_triage"}
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2555111Z   GH_AW_JOB_RESULTS: {"activation":{"result":"success"},"agent":{"result":"cancelled"},"detection":{"result":"success"},"submit_triage":{"result":"cancelled"}}
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2559239Z   GH_AW_JOB_TIMING_ELIGIBLE: {"activation":true,"agent":true,"conclusion":true,"detection":true,"pre_activation":true,"submit_triage":true}
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2561973Z   GH_AW_RUNTIME_FEATURES: 
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2563294Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2564899Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 7d5490a4a9f0cf96
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2566492Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243462364
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2567762Z ##[endgroup]
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2686809Z /tmp/gh-aw/skill_inventory.json
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2688401Z /tmp/gh-aw/otel.jsonl
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2689583Z /tmp/gh-aw/agent-stdio.log
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2690815Z /tmp/gh-aw/agent_output.json
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2692110Z /tmp/gh-aw/agent_execution_exit_code.txt
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2693538Z /tmp/gh-aw/aw-prompts/prompt.txt
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2694864Z /tmp/gh-aw/aw-prompts/system.txt
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2697656Z /tmp/gh-aw/aw-prompts/user.txt
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2699699Z /tmp/gh-aw/github_rate_limits.jsonl
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2700998Z /tmp/gh-aw/agent-errors.jsonl
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2702263Z /tmp/gh-aw/agent_usage.json
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2703438Z /tmp/gh-aw/agent-session.jsonl
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2704700Z /tmp/gh-aw/agent/model-resolution.json
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2706286Z /tmp/gh-aw/safeoutputs.jsonl
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2707678Z /tmp/gh-aw/sandbox/firewall/audit/sensitive-paths.json
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2709276Z /tmp/gh-aw/sandbox/firewall/audit/squid.conf
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2710837Z /tmp/gh-aw/sandbox/firewall/audit/image-manifest.json
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2712603Z /tmp/gh-aw/sandbox/firewall/audit/docker-compose.redacted.yml
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2714390Z /tmp/gh-aw/sandbox/firewall/audit/policy-manifest.json
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2716293Z /tmp/gh-aw/sandbox/firewall/audit/awf-resolved-config.json
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2717896Z /tmp/gh-aw/sandbox/firewall/logs/cache.log
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2719484Z /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/models.json
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2721785Z /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/otel.jsonl
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2723797Z /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-tracker-audit.jsonl
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2726241Z /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/agent-runtime/started-at-ms
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2728377Z /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2730078Z /tmp/gh-aw/sandbox/firewall/logs/access.log
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2731489Z /tmp/gh-aw/sandbox/firewall/logs/audit.jsonl
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2732932Z /tmp/gh-aw/sandbox/firewall/awf-reflect.json
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2734625Z /tmp/gh-aw/agent_execution.json
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2747828Z /tmp/gh-aw/pre-agent-audit.txt
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2749371Z /tmp/gh-aw/awf-config.json
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2750565Z /tmp/gh-aw/mcp-logs/mcp-gateway.log
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2751826Z /tmp/gh-aw/mcp-logs/tools.json
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2753685Z /tmp/gh-aw/mcp-logs/safeoutputs.log
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2755051Z /tmp/gh-aw/mcp-logs/configuration.jsonl
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2756670Z /tmp/gh-aw/mcp-logs/rpc-messages.jsonl
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2757987Z /tmp/gh-aw/mcp-logs/gateway.md
+conclusion	Setup agent output environment variable	2026-10-29T03:11:03.2759307Z /tmp/gh-aw/mcp-logs/observed-url-domains.json
+conclusion	Download detection artifact	﻿2026-10-29T03:11:03.3153606Z ##[group]Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+conclusion	Download detection artifact	2026-10-29T03:11:03.3155374Z with:
+conclusion	Download detection artifact	2026-10-29T03:11:03.3156566Z   name: detection
+conclusion	Download detection artifact	2026-10-29T03:11:03.3157590Z   path: /tmp/gh-aw/threat-detection/
+conclusion	Download detection artifact	2026-10-29T03:11:03.3158802Z   merge-multiple: false
+conclusion	Download detection artifact	2026-10-29T03:11:03.3159923Z   repository: andreleocl/duckdb-triage-agent
+conclusion	Download detection artifact	2026-10-29T03:11:03.3161179Z   run-id: 40810270665
+conclusion	Download detection artifact	2026-10-29T03:11:03.3162178Z   skip-decompress: false
+conclusion	Download detection artifact	2026-10-29T03:11:03.3163247Z   digest-mismatch: error
+conclusion	Download detection artifact	2026-10-29T03:11:03.3164272Z env:
+conclusion	Download detection artifact	2026-10-29T03:11:03.3165237Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+conclusion	Download detection artifact	2026-10-29T03:11:03.3166643Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+conclusion	Download detection artifact	2026-10-29T03:11:03.3169825Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+conclusion	Download detection artifact	2026-10-29T03:11:03.3173209Z   OTEL_EXPORTER_OTLP_HEADERS: 
+conclusion	Download detection artifact	2026-10-29T03:11:03.3174441Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+conclusion	Download detection artifact	2026-10-29T03:11:03.3191341Z   GH_AW_OTLP_IF_MISSING: ignore
+conclusion	Download detection artifact	2026-10-29T03:11:03.3194234Z   GH_AW_JOB_DISPLAY_NAMES: {"activation":"activation","agent":"agent","conclusion":"conclusion","detection":"detection","pre_activation":"pre_activation","submit_triage":"submit_triage"}
+conclusion	Download detection artifact	2026-10-29T03:11:03.3198810Z   GH_AW_JOB_RESULTS: {"activation":{"result":"success"},"agent":{"result":"cancelled"},"detection":{"result":"success"},"submit_triage":{"result":"cancelled"}}
+conclusion	Download detection artifact	2026-10-29T03:11:03.3202468Z   GH_AW_JOB_TIMING_ELIGIBLE: {"activation":true,"agent":true,"conclusion":true,"detection":true,"pre_activation":true,"submit_triage":true}
+conclusion	Download detection artifact	2026-10-29T03:11:03.3209027Z   GH_AW_RUNTIME_FEATURES: 
+conclusion	Download detection artifact	2026-10-29T03:11:03.3211628Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+conclusion	Download detection artifact	2026-10-29T03:11:03.3213230Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 7d5490a4a9f0cf96
+conclusion	Download detection artifact	2026-10-29T03:11:03.3218143Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243462364
+conclusion	Download detection artifact	2026-10-29T03:11:03.3219470Z ##[endgroup]
+conclusion	Download detection artifact	2026-10-29T03:11:03.5269272Z Downloading single artifact
+conclusion	Download detection artifact	2026-10-29T03:11:03.6235089Z Preparing to download the following artifacts:
+conclusion	Download detection artifact	2026-10-29T03:11:03.6239937Z - detection (ID: 12869738912, Size: 21406, Expected Digest: sha256:7433e4e283859e3a8220605b32ae95cd74a932371ed238234ce24a5c26d5d929)
+conclusion	Download detection artifact	2026-10-29T03:11:03.7898656Z Redirecting to blob download url: https://productionresultssa14.blob.core.windows.net/actions-results/ac4bb203-7638-4bba-98fd-f311e2414d13/workflow-job-run-5275bc16-9d8e-5d7c-a173-98311a4e3d6b/artifacts/dad9a79bf7094d4e4604288b20606bf0c332ad493b99c12f1d458912c5ab4bdc.zip
+conclusion	Download detection artifact	2026-10-29T03:11:03.7918805Z Starting download of artifact to: /tmp/gh-aw/threat-detection
+conclusion	Download detection artifact	2026-10-29T03:11:03.8289190Z (node:2239) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+conclusion	Download detection artifact	2026-10-29T03:11:03.8293077Z (Use `node --trace-deprecation ...` to show where the warning was created)
+conclusion	Download detection artifact	2026-10-29T03:11:03.8643906Z SHA256 digest of downloaded artifact is 7433e4e283859e3a8220605b32ae95cd74a932371ed238234ce24a5c26d5d929
+conclusion	Download detection artifact	2026-10-29T03:11:03.8649924Z Artifact download completed successfully.
+conclusion	Download detection artifact	2026-10-29T03:11:03.8653866Z Total of 1 artifact(s) downloaded
+conclusion	Download detection artifact	2026-10-29T03:11:03.8662447Z Download artifact has finished successfully
+conclusion	Download Safe Outputs Items Manifest	﻿2026-10-29T03:11:03.8893599Z ##[group]Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+conclusion	Download Safe Outputs Items Manifest	2026-10-29T03:11:03.8895369Z with:
+conclusion	Download Safe Outputs Items Manifest	2026-10-29T03:11:03.8896641Z   pattern: safe-outputs-items
+conclusion	Download Safe Outputs Items Manifest	2026-10-29T03:11:03.8897802Z   merge-multiple: true
+conclusion	Download Safe Outputs Items Manifest	2026-10-29T03:11:03.8898848Z   path: /tmp/gh-aw/
+conclusion	Download Safe Outputs Items Manifest	2026-10-29T03:11:03.8899944Z   repository: andreleocl/duckdb-triage-agent
+conclusion	Download Safe Outputs Items Manifest	2026-10-29T03:11:03.8901259Z   run-id: 40810270665
+conclusion	Download Safe Outputs Items Manifest	2026-10-29T03:11:03.8902277Z   skip-decompress: false
+conclusion	Download Safe Outputs Items Manifest	2026-10-29T03:11:03.8903362Z   digest-mismatch: error
+conclusion	Download Safe Outputs Items Manifest	2026-10-29T03:11:03.8904397Z env:
+conclusion	Download Safe Outputs Items Manifest	2026-10-29T03:11:03.8905338Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+conclusion	Download Safe Outputs Items Manifest	2026-10-29T03:11:03.8906784Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+conclusion	Download Safe Outputs Items Manifest	2026-10-29T03:11:03.8909910Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+conclusion	Download Safe Outputs Items Manifest	2026-10-29T03:11:03.8913053Z   OTEL_EXPORTER_OTLP_HEADERS: 
+conclusion	Download Safe Outputs Items Manifest	2026-10-29T03:11:03.8914304Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+conclusion	Download Safe Outputs Items Manifest	2026-10-29T03:11:03.8915908Z   GH_AW_OTLP_IF_MISSING: ignore
+conclusion	Download Safe Outputs Items Manifest	2026-10-29T03:11:03.8918711Z   GH_AW_JOB_DISPLAY_NAMES: {"activation":"activation","agent":"agent","conclusion":"conclusion","detection":"detection","pre_activation":"pre_activation","submit_triage":"submit_triage"}
+conclusion	Download Safe Outputs Items Manifest	2026-10-29T03:11:03.8922820Z   GH_AW_JOB_RESULTS: {"activation":{"result":"success"},"agent":{"result":"cancelled"},"detection":{"result":"success"},"submit_triage":{"result":"cancelled"}}
+conclusion	Download Safe Outputs Items Manifest	2026-10-29T03:11:03.8926573Z   GH_AW_JOB_TIMING_ELIGIBLE: {"activation":true,"agent":true,"conclusion":true,"detection":true,"pre_activation":true,"submit_triage":true}
+conclusion	Download Safe Outputs Items Manifest	2026-10-29T03:11:03.8929148Z   GH_AW_RUNTIME_FEATURES: 
+conclusion	Download Safe Outputs Items Manifest	2026-10-29T03:11:03.8933383Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+conclusion	Download Safe Outputs Items Manifest	2026-10-29T03:11:03.8934981Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 7d5490a4a9f0cf96
+conclusion	Download Safe Outputs Items Manifest	2026-10-29T03:11:03.8937047Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243462364
+conclusion	Download Safe Outputs Items Manifest	2026-10-29T03:11:03.8938307Z ##[endgroup]
+conclusion	Download Safe Outputs Items Manifest	2026-10-29T03:11:04.2064207Z Found 7 artifact(s)
+conclusion	Download Safe Outputs Items Manifest	2026-10-29T03:11:04.2075242Z Filtering artifacts by pattern 'safe-outputs-items'
+conclusion	Download Safe Outputs Items Manifest	2026-10-29T03:11:04.2118812Z Total of 0 artifact(s) downloaded
+conclusion	Download Safe Outputs Items Manifest	2026-10-29T03:11:04.2130137Z Download artifact has finished successfully
+conclusion	Record incomplete	﻿2026-10-29T03:11:04.2408299Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+conclusion	Record incomplete	2026-10-29T03:11:04.2413256Z with:
+conclusion	Record incomplete	2026-10-29T03:11:04.2423198Z   github-token: ***
+conclusion	Record incomplete	2026-10-29T03:11:04.2433026Z   script: const path = require('path');
+conclusion	Record incomplete	const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+conclusion	Record incomplete	const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+conclusion	Record incomplete	setupGlobals(core, github, context, exec, io, getOctokit);
+conclusion	Record incomplete	const { main } = require(path.join(actionsDir, 'report_incomplete_handler.cjs'));
+conclusion	Record incomplete	await main();
+conclusion	Record incomplete	
+conclusion	Record incomplete	2026-10-29T03:11:04.2438201Z   debug: false
+conclusion	Record incomplete	2026-10-29T03:11:04.2439229Z   user-agent: actions/github-script
+conclusion	Record incomplete	2026-10-29T03:11:04.2440437Z   result-encoding: json
+conclusion	Record incomplete	2026-10-29T03:11:04.2442335Z   retries: 0
+conclusion	Record incomplete	2026-10-29T03:11:04.2443467Z   retry-exempt-status-codes: 400,401,403,404,422
+conclusion	Record incomplete	2026-10-29T03:11:04.2444753Z env:
+conclusion	Record incomplete	2026-10-29T03:11:04.2445879Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+conclusion	Record incomplete	2026-10-29T03:11:04.2447089Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+conclusion	Record incomplete	2026-10-29T03:11:04.2450220Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+conclusion	Record incomplete	2026-10-29T03:11:04.2455117Z   OTEL_EXPORTER_OTLP_HEADERS: 
+conclusion	Record incomplete	2026-10-29T03:11:04.2456648Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+conclusion	Record incomplete	2026-10-29T03:11:04.2458023Z   GH_AW_OTLP_IF_MISSING: ignore
+conclusion	Record incomplete	2026-10-29T03:11:04.2460836Z   GH_AW_JOB_DISPLAY_NAMES: {"activation":"activation","agent":"agent","conclusion":"conclusion","detection":"detection","pre_activation":"pre_activation","submit_triage":"submit_triage"}
+conclusion	Record incomplete	2026-10-29T03:11:04.2466920Z   GH_AW_JOB_RESULTS: {"activation":{"result":"success"},"agent":{"result":"cancelled"},"detection":{"result":"success"},"submit_triage":{"result":"cancelled"}}
+conclusion	Record incomplete	2026-10-29T03:11:04.2470568Z   GH_AW_JOB_TIMING_ELIGIBLE: {"activation":true,"agent":true,"conclusion":true,"detection":true,"pre_activation":true,"submit_triage":true}
+conclusion	Record incomplete	2026-10-29T03:11:04.2472952Z   GH_AW_RUNTIME_FEATURES: 
+conclusion	Record incomplete	2026-10-29T03:11:04.2474274Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+conclusion	Record incomplete	2026-10-29T03:11:04.2476006Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 7d5490a4a9f0cf96
+conclusion	Record incomplete	2026-10-29T03:11:04.2477492Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243462364
+conclusion	Record incomplete	2026-10-29T03:11:04.2478887Z   GH_AW_AGENT_OUTPUT: /tmp/gh-aw/agent_output.json
+conclusion	Record incomplete	2026-10-29T03:11:04.2480317Z   GH_AW_REPORT_INCOMPLETE_CREATE_ISSUE: false
+conclusion	Record incomplete	2026-10-29T03:11:04.2481785Z   GH_AW_REPORT_INCOMPLETE_TITLE_PREFIX: [incomplete]
+conclusion	Record incomplete	2026-10-29T03:11:04.2483206Z   GH_AW_WORKFLOW_NAME: DuckDB issue triage
+conclusion	Record incomplete	2026-10-29T03:11:04.2487311Z   GH_AW_WORKFLOW_SOURCE_URL: https://github.com/andreleocl/duckdb-triage-agent/blob/main/.github/workflows/issue-triage.md
+conclusion	Record incomplete	2026-10-29T03:11:04.2489652Z   GH_AW_ENGINE_ID: codex
+conclusion	Record incomplete	2026-10-29T03:11:04.2491513Z   GH_AW_ENGINE_MODEL: gpt-5-mini
+conclusion	Record incomplete	2026-10-29T03:11:04.2493696Z ##[endgroup]
+conclusion	Record incomplete	2026-10-29T03:11:04.3886627Z Max count: unlimited
+conclusion	Handle agent failure	﻿2026-10-29T03:11:04.4217996Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+conclusion	Handle agent failure	2026-10-29T03:11:04.4219853Z with:
+conclusion	Handle agent failure	2026-10-29T03:11:04.4229659Z   github-token: ***
+conclusion	Handle agent failure	2026-10-29T03:11:04.4234074Z   script: const path = require('path');
+conclusion	Handle agent failure	const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+conclusion	Handle agent failure	const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+conclusion	Handle agent failure	setupGlobals(core, github, context, exec, io, getOctokit);
+conclusion	Handle agent failure	const { main } = require(path.join(actionsDir, 'handle_agent_failure.cjs'));
+conclusion	Handle agent failure	await main();
+conclusion	Handle agent failure	
+conclusion	Handle agent failure	2026-10-29T03:11:04.4239219Z   debug: false
+conclusion	Handle agent failure	2026-10-29T03:11:04.4240234Z   user-agent: actions/github-script
+conclusion	Handle agent failure	2026-10-29T03:11:04.4241432Z   result-encoding: json
+conclusion	Handle agent failure	2026-10-29T03:11:04.4242444Z   retries: 0
+conclusion	Handle agent failure	2026-10-29T03:11:04.4243506Z   retry-exempt-status-codes: 400,401,403,404,422
+conclusion	Handle agent failure	2026-10-29T03:11:04.4244797Z env:
+conclusion	Handle agent failure	2026-10-29T03:11:04.4245914Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+conclusion	Handle agent failure	2026-10-29T03:11:04.4248232Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+conclusion	Handle agent failure	2026-10-29T03:11:04.4251382Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+conclusion	Handle agent failure	2026-10-29T03:11:04.4254550Z   OTEL_EXPORTER_OTLP_HEADERS: 
+conclusion	Handle agent failure	2026-10-29T03:11:04.4255983Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+conclusion	Handle agent failure	2026-10-29T03:11:04.4257314Z   GH_AW_OTLP_IF_MISSING: ignore
+conclusion	Handle agent failure	2026-10-29T03:11:04.4260063Z   GH_AW_JOB_DISPLAY_NAMES: {"activation":"activation","agent":"agent","conclusion":"conclusion","detection":"detection","pre_activation":"pre_activation","submit_triage":"submit_triage"}
+conclusion	Handle agent failure	2026-10-29T03:11:04.4264173Z   GH_AW_JOB_RESULTS: {"activation":{"result":"success"},"agent":{"result":"cancelled"},"detection":{"result":"success"},"submit_triage":{"result":"cancelled"}}
+conclusion	Handle agent failure	2026-10-29T03:11:04.4269893Z   GH_AW_JOB_TIMING_ELIGIBLE: {"activation":true,"agent":true,"conclusion":true,"detection":true,"pre_activation":true,"submit_triage":true}
+conclusion	Handle agent failure	2026-10-29T03:11:04.4272537Z   GH_AW_RUNTIME_FEATURES: 
+conclusion	Handle agent failure	2026-10-29T03:11:04.4274730Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+conclusion	Handle agent failure	2026-10-29T03:11:04.4276487Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 7d5490a4a9f0cf96
+conclusion	Handle agent failure	2026-10-29T03:11:04.4277889Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243462364
+conclusion	Handle agent failure	2026-10-29T03:11:04.4279268Z   GH_AW_AGENT_OUTPUT: /tmp/gh-aw/agent_output.json
+conclusion	Handle agent failure	2026-10-29T03:11:04.4280659Z   GH_AW_WORKFLOW_NAME: DuckDB issue triage
+conclusion	Handle agent failure	2026-10-29T03:11:04.4282910Z   GH_AW_WORKFLOW_SOURCE_URL: https://github.com/andreleocl/duckdb-triage-agent/blob/main/.github/workflows/issue-triage.md
+conclusion	Handle agent failure	2026-10-29T03:11:04.4285850Z   GH_AW_RUN_URL: https://github.com/andreleocl/duckdb-triage-agent/actions/runs/40810270665
+conclusion	Handle agent failure	2026-10-29T03:11:04.4287716Z   GH_AW_AGENT_CONCLUSION: cancelled
+conclusion	Handle agent failure	2026-10-29T03:11:04.4288943Z   GH_AW_WORKFLOW_ID: issue-triage
+conclusion	Handle agent failure	2026-10-29T03:11:04.4290279Z   GH_AW_ACTION_FAILURE_ISSUE_EXPIRES_HOURS: 0
+conclusion	Handle agent failure	2026-10-29T03:11:04.4291582Z   GH_AW_ENGINE_ID: codex
+conclusion	Handle agent failure	2026-10-29T03:11:04.4292703Z   GH_AW_SECRET_VERIFICATION_RESULT: success
+conclusion	Handle agent failure	2026-10-29T03:11:04.4294023Z   GH_AW_AI_CREDITS_RATE_LIMIT_ERROR: false
+conclusion	Handle agent failure	2026-10-29T03:11:04.4295330Z   GH_AW_UNKNOWN_MODEL_AI_CREDITS: false
+conclusion	Handle agent failure	2026-10-29T03:11:04.4296678Z   GH_AW_AIC: 0.39145
+conclusion	Handle agent failure	2026-10-29T03:11:04.4297734Z   GH_AW_THREAT_DETECTION_AIC: 0.594445
+conclusion	Handle agent failure	2026-10-29T03:11:04.4298993Z   GH_AW_DETECTION_JOB_RESULT: success
+conclusion	Handle agent failure	2026-10-29T03:11:04.4300227Z   GH_AW_MAX_AI_CREDITS: 50
+conclusion	Handle agent failure	2026-10-29T03:11:04.4301453Z   GH_AW_DEFAULT_CHECKOUT_USES_TRIGGER_REF: false
+conclusion	Handle agent failure	2026-10-29T03:11:04.4302817Z   GH_AW_INFERENCE_ACCESS_ERROR: false
+conclusion	Handle agent failure	2026-10-29T03:11:04.4304055Z   GH_AW_MCP_POLICY_ERROR: false
+conclusion	Handle agent failure	2026-10-29T03:11:04.4305212Z   GH_AW_AGENTIC_ENGINE_TIMEOUT: false
+conclusion	Handle agent failure	2026-10-29T03:11:04.4306657Z   GH_AW_MODEL_NOT_SUPPORTED_ERROR: false
+conclusion	Handle agent failure	2026-10-29T03:11:04.4307966Z   GH_AW_MODEL_ENDPOINT_MISMATCH_ERROR: false
+conclusion	Handle agent failure	2026-10-29T03:11:04.4309270Z   GH_AW_HTTP_400_RESPONSE_ERROR: false
+conclusion	Handle agent failure	2026-10-29T03:11:04.4310518Z   GH_AW_MAX_CACHE_MISSES_EXCEEDED: false
+conclusion	Handle agent failure	2026-10-29T03:11:04.4312307Z   GH_AW_MISSING_MODEL_PRICING_ERROR: false
+conclusion	Handle agent failure	2026-10-29T03:11:04.4313653Z   GH_AW_MISSING_MODEL_PRICING_MODEL_NAME: 
+conclusion	Handle agent failure	2026-10-29T03:11:04.4315246Z   GH_AW_SHELL_EXPANSION_GUARD_REJECTED: false
+conclusion	Handle agent failure	2026-10-29T03:11:04.4316801Z   GH_AW_ENGINE_API_HOSTS: api.openai.com
+conclusion	Handle agent failure	2026-10-29T03:11:04.4318062Z   GH_AW_LOCKDOWN_CHECK_FAILED: false
+conclusion	Handle agent failure	2026-10-29T03:11:04.4319281Z   GH_AW_OAUTH_TOKEN_CHECK_FAILED: false
+conclusion	Handle agent failure	2026-10-29T03:11:04.4320525Z   GH_AW_STALE_LOCK_FILE_FAILED: false
+conclusion	Handle agent failure	2026-10-29T03:11:04.4321945Z   GH_AW_SAFE_OUTPUT_MESSAGES: {"activationComments":"false"}
+conclusion	Handle agent failure	2026-10-29T03:11:04.4323535Z   GH_AW_GROUP_REPORTS: false
+conclusion	Handle agent failure	2026-10-29T03:11:04.4324688Z   GH_AW_FAILURE_REPORT_AS_ISSUE: false
+conclusion	Handle agent failure	2026-10-29T03:11:04.4326151Z   GH_AW_MISSING_TOOL_REPORT_AS_FAILURE: true
+conclusion	Handle agent failure	2026-10-29T03:11:04.4327504Z   GH_AW_MISSING_DATA_REPORT_AS_FAILURE: true
+conclusion	Handle agent failure	2026-10-29T03:11:04.4328767Z   GH_AW_TIMEOUT_MINUTES: 10
+conclusion	Handle agent failure	2026-10-29T03:11:04.4329822Z ##[endgroup]
+conclusion	Handle agent failure	2026-10-29T03:11:04.7213718Z [ai-credits] aiCredits source=token_usage value=0.39145
+conclusion	Handle agent failure	2026-10-29T03:11:04.7220713Z [ai-credits] maxAICredits source=awf_config value=50
+conclusion	Handle agent failure	2026-10-29T03:11:04.7224532Z [ai-credits] rateLimitSignal source=none
+conclusion	Handle agent failure	2026-10-29T03:11:04.7280487Z Agent conclusion: cancelled
+conclusion	Handle agent failure	2026-10-29T03:11:04.7282792Z Workflow name: DuckDB issue triage
+conclusion	Handle agent failure	2026-10-29T03:11:04.7285053Z Workflow ID: issue-triage
+conclusion	Handle agent failure	2026-10-29T03:11:04.7287662Z Secret verification result: success
+conclusion	Handle agent failure	2026-10-29T03:11:04.7289843Z Engine secret failure message: (none)
+conclusion	Handle agent failure	2026-10-29T03:11:04.7292477Z Assignment error count: 0
+conclusion	Handle agent failure	2026-10-29T03:11:04.7297288Z Assign copilot failure count: 0
+conclusion	Handle agent failure	2026-10-29T03:11:04.7299674Z Skill install failure count: 0
+conclusion	Handle agent failure	2026-10-29T03:11:04.7301773Z Create discussion error count: 0
+conclusion	Handle agent failure	2026-10-29T03:11:04.7306716Z Code push failure count: 0
+conclusion	Handle agent failure	2026-10-29T03:11:04.7307860Z Checkout PR success: 
+conclusion	Handle agent failure	2026-10-29T03:11:04.7308861Z AI credits: 0.39145
+conclusion	Handle agent failure	2026-10-29T03:11:04.7309856Z Configured max AI credits: 50
+conclusion	Handle agent failure	2026-10-29T03:11:04.7311026Z AI credits rate-limit error: false
+conclusion	Handle agent failure	2026-10-29T03:11:04.7312377Z Max AI credits exceeded (harness budget abort): false
+conclusion	Handle agent failure	2026-10-29T03:11:04.7313794Z Daily workflow AIC guardrail exceeded: false
+conclusion	Handle agent failure	2026-10-29T03:11:04.7315376Z Daily workflow AIC guardrail status: (none); error detail: (none)
+conclusion	Handle agent failure	2026-10-29T03:11:04.7317962Z Daily workflow AIC guardrail continue-on-error (warning mode): false
+conclusion	Handle agent failure	2026-10-29T03:11:04.7319543Z Inference access error: false
+conclusion	Handle agent failure	2026-10-29T03:11:04.7373737Z MCP policy error: false
+conclusion	Handle agent failure	2026-10-29T03:11:04.7376433Z Agentic engine timeout: false
+conclusion	Handle agent failure	2026-10-29T03:11:04.7377654Z Model not supported error: false
+conclusion	Handle agent failure	2026-10-29T03:11:04.7378860Z HTTP 400 response error: false
+conclusion	Handle agent failure	2026-10-29T03:11:04.7380027Z Unknown model AI credits error: false
+conclusion	Handle agent failure	2026-10-29T03:11:04.7381468Z Unknown model AI credits sources (audit/output): false/false
+conclusion	Handle agent failure	2026-10-29T03:11:04.7383080Z Missing model pricing error: false (model: (unknown))
+conclusion	Handle agent failure	2026-10-29T03:11:04.7384467Z Shell expansion guard rejected: false
+conclusion	Handle agent failure	2026-10-29T03:11:04.7385859Z Push repo-memory result: 
+conclusion	Handle agent failure	2026-10-29T03:11:04.7387403Z App token minting failed (safe_outputs/conclusion/activation): false/false/false
+conclusion	Handle agent failure	2026-10-29T03:11:04.7389094Z Lockdown check failed: false
+conclusion	Handle agent failure	2026-10-29T03:11:04.7390205Z OAuth token check failed: false
+conclusion	Handle agent failure	2026-10-29T03:11:04.7391345Z Stale lock file check failed: false
+conclusion	Handle agent failure	2026-10-29T03:11:04.7392496Z Cache memory enabled: false
+conclusion	Handle agent failure	2026-10-29T03:11:04.7393709Z Cache memory restored (from restore outputs): false
+conclusion	Handle agent failure	2026-10-29T03:11:04.7395103Z Missing tool report-as-failure: true
+conclusion	Handle agent failure	2026-10-29T03:11:04.7493829Z Missing data report-as-failure: true
+conclusion	Handle agent failure	2026-10-29T03:11:04.7495300Z Agent output content length: 479
+conclusion	Handle agent failure	2026-10-29T03:11:04.7501498Z Agent job did not fail and no assignment/discussion/code-push/push-repo-memory/app-token/lockdown/oauth-token-check/stale-lock-file/daily-workflow-aic/daily-workflow-aic-accounting/ai-credits/max-ai-credits-exceeded/report-incomplete/cache-miss/missing-tool/missing-data/tool-denials-exceeded/secret-verification errors and has safe outputs (conclusion: cancelled), skipping failure handling
+conclusion	Collect usage artifact files	﻿2026-10-29T03:11:04.7718291Z ##[group]Run bash "${RUNNER_TEMP}/gh-aw/actions/collect_usage_artifact_files.sh"
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7720402Z ^[[36;1mbash "${RUNNER_TEMP}/gh-aw/actions/collect_usage_artifact_files.sh"^[[0m
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7727394Z shell: /usr/bin/bash -e {0}
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7740889Z env:
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7741863Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7743053Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7746520Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7749787Z   OTEL_EXPORTER_OTLP_HEADERS: 
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7750984Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7752269Z   GH_AW_OTLP_IF_MISSING: ignore
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7754910Z   GH_AW_JOB_DISPLAY_NAMES: {"activation":"activation","agent":"agent","conclusion":"conclusion","detection":"detection","pre_activation":"pre_activation","submit_triage":"submit_triage"}
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7759111Z   GH_AW_JOB_RESULTS: {"activation":{"result":"success"},"agent":{"result":"cancelled"},"detection":{"result":"success"},"submit_triage":{"result":"cancelled"}}
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7762524Z   GH_AW_JOB_TIMING_ELIGIBLE: {"activation":true,"agent":true,"conclusion":true,"detection":true,"pre_activation":true,"submit_triage":true}
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7764785Z   GH_AW_RUNTIME_FEATURES: 
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7766180Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7767643Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 7d5490a4a9f0cf96
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7768985Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243462364
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7770263Z   GH_AW_DETECTION_JOB_RESULT: success
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7771474Z   GH_AW_DETECTION_CONCLUSION: success
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7772641Z   GH_AW_DETECTION_REASON: 
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7773654Z ##[endgroup]
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7886885Z Usage artifact source file status:
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7892672Z MISSING: /tmp/gh-aw/aw_info.json
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7894052Z MISSING: /tmp/gh-aw/runtime/aw_info.json
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7895392Z MISSING: /tmp/gh-aw/aw-info.jsonl
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7897082Z FOUND: /tmp/gh-aw/agent_usage.json
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7898382Z MISSING: /tmp/gh-aw/agent_usage.jsonl
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7899749Z MISSING: /tmp/gh-aw/detection_usage.jsonl
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7901263Z MISSING: /tmp/gh-aw/threat-detection/detection_usage.jsonl
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7903208Z MISSING: /tmp/gh-aw/evals/evals.jsonl
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7904550Z MISSING: /tmp/gh-aw/evals/evals_token_usage.jsonl
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7906368Z MISSING: /tmp/gh-aw/evals/execution.json
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7907711Z MISSING: /tmp/gh-aw/evals/evals/execution.json
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7909070Z MISSING: /tmp/gh-aw/experiments/state.jsonl
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7910374Z MISSING: /tmp/gh-aw/experiments/state.json
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7911732Z MISSING: /tmp/gh-aw/experiments/assignments.json
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7913090Z FOUND: /tmp/gh-aw/github_rate_limits.jsonl
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7914518Z MISSING: /tmp/gh-aw/safe-output-items.jsonl
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7916440Z MISSING: /tmp/gh-aw/sandbox/firewall-audit-logs/api-proxy-logs/token-usage.jsonl
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7918639Z MISSING: /tmp/gh-aw/sandbox/firewall-audit-logs/api-proxy-logs/model-routing.jsonl
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7920704Z FOUND: /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7922669Z MISSING: /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/model-routing.jsonl
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7935605Z MISSING: /tmp/gh-aw/sandbox/firewall/audit/api-proxy-logs/token-usage.jsonl
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7937920Z MISSING: /tmp/gh-aw/sandbox/firewall/audit/api-proxy-logs/model-routing.jsonl
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7940292Z MISSING: /tmp/gh-aw/threat-detection/sandbox/firewall-audit-logs/api-proxy-logs/token-usage.jsonl
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7943942Z FOUND: /tmp/gh-aw/threat-detection/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.7946577Z MISSING: /tmp/gh-aw/threat-detection/sandbox/firewall/audit/api-proxy-logs/token-usage.jsonl
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.8149429Z /tmp/gh-aw/usage/agent/execution.json
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.8151152Z /tmp/gh-aw/usage/agent/token_usage.jsonl
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.8152488Z /tmp/gh-aw/usage/agent_usage.json
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.8153778Z /tmp/gh-aw/usage/detection/execution.json
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.8156354Z /tmp/gh-aw/usage/detection/token_usage.jsonl
+conclusion	Collect usage artifact files	2026-10-29T03:11:04.8157951Z /tmp/gh-aw/usage/github_rate_limits.jsonl
+conclusion	Generate usage activity summary and unified session	﻿2026-10-29T03:11:04.8460159Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:04.8462039Z with:
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:04.8467973Z   script: const path = require('path');
+conclusion	Generate usage activity summary and unified session	const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+conclusion	Generate usage activity summary and unified session	const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+conclusion	Generate usage activity summary and unified session	setupGlobals(core, github, context, exec, io, getOctokit);
+conclusion	Generate usage activity summary and unified session	const { main } = require(path.join(actionsDir, 'generate_usage_artifacts.cjs'));
+conclusion	Generate usage activity summary and unified session	await main();
+conclusion	Generate usage activity summary and unified session	
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:04.8507802Z   github-token: ***
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:04.8508871Z   debug: false
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:04.8509866Z   user-agent: actions/github-script
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:04.8511038Z   result-encoding: json
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:04.8512020Z   retries: 0
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:04.8513052Z   retry-exempt-status-codes: 400,401,403,404,422
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:04.8514300Z env:
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:04.8515219Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:04.8516557Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:04.8519527Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:04.8522590Z   OTEL_EXPORTER_OTLP_HEADERS: 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:04.8523812Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:04.8525078Z   GH_AW_OTLP_IF_MISSING: ignore
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:04.8528030Z   GH_AW_JOB_DISPLAY_NAMES: {"activation":"activation","agent":"agent","conclusion":"conclusion","detection":"detection","pre_activation":"pre_activation","submit_triage":"submit_triage"}
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:04.8537351Z   GH_AW_JOB_RESULTS: {"activation":{"result":"success"},"agent":{"result":"cancelled"},"detection":{"result":"success"},"submit_triage":{"result":"cancelled"}}
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:04.8541000Z   GH_AW_JOB_TIMING_ELIGIBLE: {"activation":true,"agent":true,"conclusion":true,"detection":true,"pre_activation":true,"submit_triage":true}
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:04.8543325Z   GH_AW_RUNTIME_FEATURES: 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:04.8544605Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:04.8546318Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 7d5490a4a9f0cf96
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:04.8547727Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243462364
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:04.8549113Z   GH_AW_GRADER_MANIFEST_0: {"version":2,"graders":[]}
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:04.8550473Z   GH_AW_GRADER_MANIFEST_CHUNKS: 1
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:04.8551608Z ##[endgroup]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:05.1465093Z safe-output-items manifest not found at /tmp/gh-aw/safe-output-items.jsonl — safe-outputs-items artifact may not have been downloaded
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:05.2247414Z /tmp/gh-aw/usage/activity/summary.json
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0699853Z === Unified session ===
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0701320Z File format version: 1
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0704579Z Records: 110 (collector=2, github_api=3, otel=1, mcp=5, firewall=73, skill=1, prompt=2, agent=11, model_resolution=1, safe_output=1, execution=3, detection=1, workflow=4, grader=2)
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0707098Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0707612Z Agent source: agent/agent-session.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0708874Z Model: gpt-5-mini
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0709831Z Initialization:
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0718488Z   Engine: codex
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0719761Z   Session ID: 01a185a1-defd-7be1-8802-f2d875665ca6
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0722043Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0722496Z Statistics:
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0723494Z   Turns: 1
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0724389Z   Tools: 3/3 succeeded
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0725643Z   Tokens: 37,493 total (37,074 in / 419 out)
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0726885Z   Cache Read Tokens: 27,520
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0727951Z   Cache Creation Tokens: 0
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0728588Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0729408Z Chronological trace (user prompts omitted; untimed observations follow):
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0730595Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0731326Z [1] collector/conclusion session.format version=1 [file metadata]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0732813Z   path=usage/aw_session.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0733497Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0735098Z [2] github_api/workflow github_api.rate_limit source=response_headers operation=repos.getContent resource=core remaining=4996 limit=5000 +0s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0738336Z   path=github_rate_limits.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0739034Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0742354Z [3] github_api/workflow github_api.rate_limit source=response_headers operation=repos.getContent resource=core remaining=4995 limit=5000 +0.231s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0744953Z   path=github_rate_limits.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0745865Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0747701Z [4] otel/agent otel.span name=gh-aw.agent.setup traceId=e25ae10f94863f0b17051e6dfbd1a8c4 spanId=46149c635e457a69 parentSpanId=87751d1cc27b4cd0 code=1 +20.222s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0750222Z   path=otel.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0750764Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0751753Z [5] mcp/agent mcp.configuration servers=[serverName=safeoutputs transport=stdio] +31.885s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0753647Z   path=mcp-logs/configuration.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0754383Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0795760Z [6] mcp/agent mcp.rpc.request serverName=safeoutputs direction=OUT method=tools/list +7.979s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0797989Z   path=mcp-logs/rpc-messages.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0798791Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0801521Z [7] mcp/agent mcp.rpc.response serverName=safeoutputs direction=IN rpcId=1 [response observed] +0.003s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0803654Z   path=mcp-logs/rpc-messages.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0804421Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0805699Z [8] firewall/agent firewall.http_access host=- method=- status=0 decision=NONE_NONE +11.788s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0807595Z   path=sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0808380Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0809404Z [9] firewall/agent firewall.http_access host=- method=- status=0 decision=NONE_NONE +2.029s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0812098Z   path=sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0812924Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0813951Z [10] firewall/agent firewall.http_access host=- method=- status=0 decision=NONE_NONE +2.031s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0815999Z   path=sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0816813Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0817857Z [11] firewall/agent firewall.http_access host=- method=- status=0 decision=NONE_NONE +2.031s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0820340Z   path=sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0821175Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0822206Z [12] firewall/agent firewall.http_access host=- method=- status=0 decision=NONE_NONE +2.034s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0824093Z   path=sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0824892Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0826117Z [13] firewall/agent firewall.http_access host=- method=- status=0 decision=NONE_NONE +2.029s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0827986Z   path=sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0828783Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0829807Z [14] firewall/agent firewall.http_access host=- method=- status=0 decision=NONE_NONE +2.03s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0831669Z   path=sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0832460Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0833258Z [15] firewall/agent firewall.event event=TRACK_START status=200 +0.067s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0835173Z   path=sandbox/firewall/logs/api-proxy-logs/token-tracker-audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0937375Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0940391Z [16] firewall/agent firewall.http_access host=api.openai.com:443 method=CONNECT status=200 decision=TCP_TUNNEL +0.005s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0942626Z   path=sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0943422Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0944058Z [17] firewall/agent firewall.event event=TRACK_END +0.007s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0946002Z   path=sandbox/firewall/logs/api-proxy-logs/token-tracker-audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0947147Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0948463Z [18] firewall/agent firewall.http_access host=api.openai.com:443 method=CONNECT status=200 decision=TCP_TUNNEL +1.162s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0951319Z   path=sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0952130Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0953163Z [19] firewall/agent firewall.http_access host=- method=- status=0 decision=NONE_NONE +0.789s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0957493Z   path=sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0960494Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.0961895Z [20] firewall/agent firewall.event event=TRACK_START status=200 +1.145s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1077771Z   path=sandbox/firewall/logs/api-proxy-logs/token-tracker-audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1079081Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1080118Z [21] firewall/agent firewall.http_access host=- method=- status=0 decision=NONE_NONE +0.884s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1081994Z   path=sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1082805Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1083712Z [22] firewall/agent firewall.event event=otel_span status={   "code": 1 } +1.022s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1085746Z   path=sandbox/firewall/logs/api-proxy-logs/otel.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1086693Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1087757Z [23] firewall/agent firewall.http_access host=- method=- status=0 decision=NONE_NONE +1.007s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1089651Z   path=sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1090455Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1091788Z [24] firewall/agent firewall.http_access host=api.openai.com:443 method=CONNECT status=200 decision=TCP_TUNNEL +0.176s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1094000Z   path=sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1094799Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1211015Z [25] firewall/agent firewall.event event=TRACK_END +0.001s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1214012Z   path=sandbox/firewall/logs/api-proxy-logs/token-tracker-audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1215711Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1218879Z [26] firewall/agent firewall.token_usage provider=openai model=gpt-5-mini-2025-08-07 aic=0.259525 totalAic=0.259525 durationMs=5842 inputTokens=9069 outputTokens=164 cacheReadInputTokens=0 cacheCreationInputTokens=0 +0.002s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1261526Z   path=sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1262686Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1263497Z [27] firewall/agent firewall.event event=TRACK_START status=200 +0.577s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1265689Z   path=sandbox/firewall/logs/api-proxy-logs/token-tracker-audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1266831Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1267472Z [28] firewall/agent firewall.event event=TRACK_END +0.667s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1271034Z   path=sandbox/firewall/logs/api-proxy-logs/token-tracker-audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1272192Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1273448Z [29] firewall/agent firewall.http_access host=api.openai.com:443 method=CONNECT status=200 decision=TCP_TUNNEL +0s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1277083Z   path=sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1277889Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1280490Z [30] firewall/agent firewall.token_usage provider=openai model=gpt-5-mini-2025-08-07 aic=0.036295 totalAic=0.29582 durationMs=1228 inputTokens=9247 outputTokens=48 cacheReadInputTokens=9088 cacheCreationInputTokens=0 +0.001s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1284023Z   path=sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1285010Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1286168Z [31] firewall/agent firewall.http_access host=- method=- status=0 decision=NONE_NONE +0.604s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1287975Z   path=sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1288752Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1289510Z [32] firewall/agent firewall.event event=TRACK_START status=200 +1.012s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1291402Z   path=sandbox/firewall/logs/api-proxy-logs/token-tracker-audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1292515Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1293507Z [33] firewall/agent firewall.http_access host=- method=- status=0 decision=NONE_NONE +1.018s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1295303Z   path=sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1316733Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1317460Z [34] firewall/agent firewall.event event=TRACK_END +0.383s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1319280Z   path=sandbox/firewall/logs/api-proxy-logs/token-tracker-audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1320413Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1321680Z [35] firewall/agent firewall.http_access host=api.openai.com:443 method=CONNECT status=200 decision=TCP_TUNNEL +0s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1323738Z   path=sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1324525Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1327365Z [36] firewall/agent firewall.token_usage provider=openai model=gpt-5-mini-2025-08-07 aic=0.04699 totalAic=0.34281 durationMs=2999 inputTokens=9310 outputTokens=108 cacheReadInputTokens=9216 cacheCreationInputTokens=0 +0.001s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1331340Z   path=sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1332338Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1333684Z [37] mcp/agent mcp.rpc.request serverName=safeoutputs direction=OUT method=tools/call toolName=submit_triage +0.596s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1335996Z   path=mcp-logs/rpc-messages.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1337608Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1338811Z [38] mcp/agent mcp.rpc.response serverName=safeoutputs direction=IN rpcId=1 [response observed] +0.004s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1342035Z   path=mcp-logs/rpc-messages.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1342817Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1343690Z [39] firewall/agent firewall.event event=otel_span status={   "code": 1 } +0.137s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1346288Z   path=sandbox/firewall/logs/api-proxy-logs/otel.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1347221Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1348066Z [40] firewall/agent firewall.event event=otel_span status={   "code": 1 } +0s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1349836Z   path=sandbox/firewall/logs/api-proxy-logs/otel.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1350745Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1351613Z [41] firewall/agent firewall.event event=otel_span status={   "code": 1 } +0.001s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1353394Z   path=sandbox/firewall/logs/api-proxy-logs/otel.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1354298Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1355301Z [42] firewall/agent firewall.http_access host=- method=- status=0 decision=NONE_NONE +0.909s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1594614Z   path=sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1606137Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1607381Z [43] firewall/agent firewall.event event=TRACK_START status=200 +0.678s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1611394Z   path=sandbox/firewall/logs/api-proxy-logs/token-tracker-audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1612757Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1613414Z [44] firewall/agent firewall.event event=TRACK_END +1.277s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1622999Z   path=sandbox/firewall/logs/api-proxy-logs/token-tracker-audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1624218Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1657405Z [45] firewall/agent firewall.token_usage provider=openai model=gpt-5-mini-2025-08-07 aic=0.04864 totalAic=0.39145 durationMs=2980 inputTokens=9448 outputTokens=99 cacheReadInputTokens=9216 cacheCreationInputTokens=0 +0s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1711240Z   path=sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1712357Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1713640Z [46] firewall/agent firewall.http_access host=api.openai.com:443 method=CONNECT status=200 decision=TCP_TUNNEL +0s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1717382Z   path=sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1718213Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1719294Z [47] firewall/agent firewall.http_access host=- method=- status=0 decision=NONE_NONE +0.081s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1721458Z   path=sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1722582Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1723467Z [48] firewall/agent firewall.event event=otel_span status={   "code": 1 } +0.521s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1725357Z   path=sandbox/firewall/logs/api-proxy-logs/otel.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1726559Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1728317Z [49] firewall/detection firewall.http_access host=- method=- status=0 decision=NONE_NONE +58.476s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1730701Z   path=threat-detection/sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1731654Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1733908Z [50] firewall/detection firewall.http_access host=- method=- status=0 decision=NONE_NONE +2.033s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1736590Z   path=threat-detection/sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1737546Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1740375Z [51] firewall/detection firewall.http_access host=- method=- status=0 decision=NONE_NONE +2.033s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1742795Z   path=threat-detection/sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1743761Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1744841Z [52] firewall/detection firewall.http_access host=- method=- status=0 decision=NONE_NONE +2.034s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1747152Z   path=threat-detection/sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1805384Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1809713Z [53] firewall/detection firewall.http_access host=- method=- status=0 decision=NONE_NONE +2.035s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1812773Z   path=threat-detection/sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1813763Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1836015Z [54] firewall/detection firewall.http_access host=- method=- status=0 decision=NONE_NONE +2.034s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1838339Z   path=threat-detection/sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1839335Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1840200Z [55] firewall/detection firewall.event event=TRACK_START status=200 +1.154s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1842407Z   path=threat-detection/sandbox/firewall/logs/api-proxy-logs/token-tracker-audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1843773Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1845157Z [56] firewall/detection firewall.http_access host=api.openai.com:443 method=CONNECT status=200 decision=TCP_TUNNEL +0.006s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1871725Z   path=threat-detection/sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1872719Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1873417Z [57] firewall/detection firewall.event event=TRACK_END +0.008s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1876002Z   path=threat-detection/sandbox/firewall/logs/api-proxy-logs/token-tracker-audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1877383Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1878716Z [58] firewall/detection firewall.http_access host=chatgpt.com:443 method=CONNECT status=200 decision=TCP_DENIED +0.615s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1883127Z   path=threat-detection/sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1884093Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1885390Z [59] firewall/detection firewall.http_access host=github.com:443 method=CONNECT status=200 decision=NONE_NONE +0.046s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1888070Z   path=threat-detection/sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1889015Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1890801Z [60] firewall/detection firewall.http_access host=- method=- status=0 decision=NONE_NONE +0.203s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1892892Z   path=threat-detection/sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1893870Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1895141Z [61] firewall/detection firewall.http_access host=github.com method=CONNECT status=200 decision=TCP_TUNNEL +0.181s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1897672Z   path=threat-detection/sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1898624Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1899915Z [62] firewall/detection firewall.http_access host=github.com:443 method=CONNECT status=200 decision=NONE_NONE +0.199s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1902148Z   path=threat-detection/sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1903084Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1904449Z [63] firewall/detection firewall.http_access host=api.openai.com:443 method=CONNECT status=200 decision=TCP_TUNNEL +0.392s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1906994Z   path=threat-detection/sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1907949Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1908764Z [64] firewall/detection firewall.event event=TRACK_START status=200 +0.608s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1910864Z   path=threat-detection/sandbox/firewall/logs/api-proxy-logs/token-tracker-audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1912181Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1913427Z [65] firewall/detection firewall.http_access host=github.com method=CONNECT status=200 decision=TCP_TUNNEL +0.06s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1916414Z   path=threat-detection/sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1917370Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1918423Z [66] firewall/detection firewall.http_access host=- method=- status=0 decision=NONE_NONE +0.595s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1920426Z   path=threat-detection/sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1921352Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1922690Z [67] firewall/detection firewall.http_access host=api.openai.com:443 method=CONNECT status=200 decision=TCP_TUNNEL +1.328s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1924962Z   path=threat-detection/sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1926067Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1931289Z [68] firewall/detection firewall.event event=TRACK_END +0.001s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1933406Z   path=threat-detection/sandbox/firewall/logs/api-proxy-logs/token-tracker-audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1934752Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1938003Z [69] firewall/detection firewall.token_usage provider=openai model=gpt-5-mini-2025-08-07 aic=0.49645 totalAic=0.49645 durationMs=3655 inputTokens=18714 outputTokens=143 cacheReadInputTokens=0 cacheCreationInputTokens=0 +0.002s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1942295Z   path=threat-detection/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1943518Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1944558Z [70] firewall/detection firewall.http_access host=- method=- status=0 decision=NONE_NONE +0.701s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1946737Z   path=threat-detection/sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1947675Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1948585Z [71] firewall/detection firewall.event event=otel_span status={   "code": 1 } +0.071s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1950618Z   path=threat-detection/sandbox/firewall/logs/api-proxy-logs/otel.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1951734Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1952745Z [72] firewall/detection firewall.event event=otel_span status={   "code": 1 } +0s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1954743Z   path=threat-detection/sandbox/firewall/logs/api-proxy-logs/otel.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1956024Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1956839Z [73] firewall/detection firewall.event event=TRACK_START status=200 +0.511s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1958926Z   path=threat-detection/sandbox/firewall/logs/api-proxy-logs/token-tracker-audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1960254Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1961270Z [74] firewall/detection firewall.http_access host=- method=- status=0 decision=NONE_NONE +1.45s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1963255Z   path=threat-detection/sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1964176Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1964847Z [75] firewall/detection firewall.event event=TRACK_END +0.971s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1966940Z   path=threat-detection/sandbox/firewall/logs/api-proxy-logs/token-tracker-audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1968259Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1969542Z [76] firewall/detection firewall.http_access host=api.openai.com:443 method=CONNECT status=200 decision=TCP_TUNNEL +0s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1971760Z   path=threat-detection/sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1972687Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1975344Z [77] firewall/detection firewall.token_usage provider=openai model=gpt-5-mini-2025-08-07 aic=0.097995 totalAic=0.594445 durationMs=3623 inputTokens=19003 outputTokens=217 cacheReadInputTokens=18688 cacheCreationInputTokens=0 +0.001s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1979343Z   path=threat-detection/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1980561Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1981899Z [78] firewall/detection firewall.http_access host=api.openai.com:443 method=CONNECT status=200 decision=TCP_TUNNEL +0.168s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1984174Z   path=threat-detection/sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1985101Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1986276Z [79] firewall/detection firewall.http_access host=- method=- status=0 decision=NONE_NONE +0.891s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1988277Z   path=threat-detection/sandbox/firewall/logs/audit.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1989204Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1990115Z [80] firewall/detection firewall.event event=otel_span status={   "code": 1 } +0.584s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1992143Z   path=threat-detection/sandbox/firewall/logs/api-proxy-logs/otel.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1993265Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1994139Z [81] firewall/detection firewall.event event=otel_span status={   "code": 0 } +0s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1996319Z   path=threat-detection/sandbox/firewall/logs/api-proxy-logs/otel.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1997443Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.1999394Z [82] github_api/workflow github_api.rate_limit source=response_headers operation=actions.listJobsForWorkflowRunAttempt resource=core remaining=4999 limit=5000 +31.561s
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2002089Z   path=github_rate_limits.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2002759Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2003479Z [83] skill/activation skill.inventory installed skills=0 [untimed]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2004933Z   path=skill_inventory.json
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2005711Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2007072Z [86] agent/agent session.init sourceEngine=codex model=gpt-5-mini sessionId=01a185a1-defd-7be1-8802-f2d875665ca6 [untimed]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2009728Z   path=agent-session.jsonl sessionId=01a185a1-defd-7be1-8802-f2d875665ca6
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2010957Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2011695Z [87] agent/agent turn.started  [untimed]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2013601Z   path=agent-session.jsonl sessionId=01a185a1-defd-7be1-8802-f2d875665ca6
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2014754Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2015689Z [88] agent/agent assistant.reasoning [untimed]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2017323Z   path=agent-session.jsonl sessionId=01a185a1-defd-7be1-8802-f2d875665ca6
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2019204Z ◐ **Finalizing tool submission**
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2020283Z   
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2026525Z   I need to call the submit_triage tool once with the correct label, comment, and rationale. It's about a practice cancellation test, which falls within scope. It seems they consider it a constructed practice, not a verified bug. They supplied SQL and relevant environment details, which should be sufficient to reproduce. So, I’ll label and comment as 'no_action' following the instructions, and the rationale will explain why no action is needed. Let's proceed with the tool call!
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2032163Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2032173Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2033542Z [89] agent/agent tool.execution_start toolName=list_mcp_resources mcpServerName=codex toolCallId=item_1 [started] [untimed]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2036176Z   path=agent-session.jsonl sessionId=01a185a1-defd-7be1-8802-f2d875665ca6
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2037856Z ? codex-list_mcp_resources [input: {}] [pending]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2038702Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2038710Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2040184Z [90] agent/agent tool.execution_start toolName=list_mcp_resource_templates mcpServerName=codex toolCallId=item_2 [started] [untimed]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2042783Z   path=agent-session.jsonl sessionId=01a185a1-defd-7be1-8802-f2d875665ca6
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2044540Z ? codex-list_mcp_resource_templates [input: {}] [pending]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2045595Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2045604Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2048637Z [91] agent/agent tool.execution_complete toolName=list_mcp_resources mcpServerName=codex toolCallId=item_1 [succeeded] [untimed]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2051351Z   path=agent-session.jsonl sessionId=01a185a1-defd-7be1-8802-f2d875665ca6
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2053061Z ✓ codex-list_mcp_resources [input: {}]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2054239Z    └ {"resources":[]}
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2054810Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2054818Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2056582Z [92] agent/agent tool.execution_complete toolName=list_mcp_resource_templates mcpServerName=codex toolCallId=item_2 [succeeded] [untimed]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2059253Z   path=agent-session.jsonl sessionId=01a185a1-defd-7be1-8802-f2d875665ca6
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2060951Z ✓ codex-list_mcp_resource_templates [input: {}]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2062263Z    └ {"resourceTemplates":[]}
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2062931Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2062940Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2064359Z [93] agent/agent tool.execution_start toolName=submit_triage mcpServerName=safeoutputs toolCallId=item_3 [started] [untimed]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2067031Z   path=agent-session.jsonl sessionId=01a185a1-defd-7be1-8802-f2d875665ca6
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2069604Z ? safeoutputs-submit_triage(comment: no_action, label: no_action, rationale: The report supplies a complete, minimal ...) [pending]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2071351Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2071360Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2072814Z [94] agent/agent tool.execution_complete toolName=submit_triage mcpServerName=safeoutputs toolCallId=item_3 [succeeded] [untimed]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2075390Z   path=agent-session.jsonl sessionId=01a185a1-defd-7be1-8802-f2d875665ca6
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2078106Z ✓ safeoutputs-submit_triage(comment: no_action, label: no_action, rationale: The report supplies a complete, minimal ...)
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2080212Z    └ {"result":"success"}
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2080815Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2080831Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2081328Z [95] agent/agent assistant.message [untimed]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2082924Z   path=agent-session.jsonl sessionId=01a185a1-defd-7be1-8802-f2d875665ca6
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2084493Z ◆ **Decision:** no_action
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2085864Z   
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2086856Z   - Comment: no_action
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2087812Z   
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2093919Z   - Rationale: The report includes a minimal reproducible SQL statement, exact DuckDB version (`1.5.2`), client (official CLI), OS (Ubuntu 24.04), and specifies a fresh in-memory database with default settings. These details are sufficient for first‑pass completeness triage; additionally the reporter states this is a constructed practice cancellation. No essential reproduction data or environment detail is missing.
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2099643Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2099664Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2100912Z [96] agent/agent session.result numTurns=1 status=completed sourceType=turn.completed [untimed]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2105661Z   path=agent-session.jsonl sessionId=01a185a1-defd-7be1-8802-f2d875665ca6
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2107460Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2289176Z [97] firewall/agent model.inventory endpoints=[   {     "provider": "openai",     "configured": true,     "models": [       "babbage-002",       "chat-latest",       "chatgpt-image-latest",       "davinci-002",       "gpt-3.5-turbo",       "gpt-3.5-turbo-0125",       "gpt-3.5-turbo-1106",       "gpt-3.5-turbo-16k",       "gpt-3.5-turbo-instruct",       "gpt-3.5-turbo-instruct-0914",       "gpt-4",       "gpt-4-0613",       "gpt-4-turbo",       "gpt-4-turbo-2024-04-09",       "gpt-4.1",       "gpt-4.1-2025-04-14",       "gpt-4.1-mini",       "gpt-4.1-mini-2025-04-14",       "gpt-4.1-nano",       "gpt-4.1-nano-2025-04-14",       "gpt-4o",       "gpt-4o-2024-05-13",       "gpt-4o-2024-08-06",       "gpt-4o-2024-11-20",       "gpt-4o-mini",       "gpt-4o-mini-2024-07-18",       "gpt-4o-mini-search-preview",       "gpt-4o-mini-search-preview-2025-03-11",       "gpt-4o-mini-transcribe",       "gpt-4o-mini-transcribe-2025-03-20",       "gpt-4o-mini-transcribe-2025-12-15",       "gpt-4o-mini-tts",       "gpt-4o-mini-tts-2025-03-20",       "gpt-4o-mini-tts-2025-12-15",       "gpt-4o-search-preview",       "gpt-4o-search-preview-2025-03-11",       "gpt-4o-transcribe",       "gpt-4o-transcribe-diarize",       "gpt-5",       "gpt-5-2025-08-07",       "gpt-5-chat-latest",       "gpt-5-codex",       "gpt-5-mini",       "gpt-5-mini-2025-08-07",       "gpt-5-nano",       "gpt-5-nano-2025-08-07",       "gpt-5-pro",       "gpt-5-pro-2025-10-06",       "gpt-5-search-api",       "gpt-5-search-api-2025-10-14",       "gpt-5.1",       "gpt-5.1-2025-11-13",       "gpt-5.1-chat-latest",       "gpt-5.1-codex",       "gpt-5.1-codex-max",       "gpt-5.1-codex-mini",       "gpt-5.2",       "gpt-5.2-2025-12-11",       "gpt-5.2-chat-latest",       "gpt-5.2-codex",       "gpt-5.2-pro",       "gpt-5.2-pro-2025-12-11",       "gpt-5.3-chat-latest",       "gpt-5.3-codex",       "gpt-5.4",       "gpt-5.4-2026-03-05",       "gpt-5.4-mini",       "gpt-5.4-mini-2026-03-17",       "gpt-5.4-nano",       "gpt-5.4-nano-2026-03-17",       "gpt-5.4-pro",       "gpt-5.4-pro-2026-03-05",       "gpt-5.5",       "gpt-5.5-2026-04-23",       "gpt-5.5-pro",       "gpt-5.5-pro-2026-04-23",       "gpt-5.6-luna",       "gpt-5.6-sol",       "gpt-5.6-terra",       "gpt-6-astra",       "gpt-6-luna",       "gpt-6-sol",       "gpt-6.1-sol",       "gpt-6.1-terra",       "gpt-audio",       "gpt-audio-1.5",       "gpt-audio-2025-08-28",       "gpt-audio-mini",       "gpt-audio-mini-2025-10-06",       "gpt-audio-mini-2025-12-15",       "gpt-image-1",       "gpt-image-1-mini",       "gpt-image-1.5",       "gpt-image-2",       "gpt-image-2-2026-04-21",       "gpt-image-2.5-flare",       "gpt-image-2.5-flare-2026-09-08",       "gpt-image-2.5-sunburst",       "gpt-image-2.5-sunburst-2026-09-08",       "gpt-live-1",       "gpt-live-transcribe",       "gpt-realtime",       "gpt-realtime-1.5",       "gpt-realtime-2",       "gpt-realtime-2.1",       "gpt-realtime-2.1-mini",       "gpt-realtime-2025-08-28",       "gpt-realtime-mini",       "gpt-realtime-mini-2025-12-15",       "gpt-realtime-translate",       "gpt-realtime-whisper",       "gpt-transcribe",       "o1",       "o1-2024-12-17",       "o1-pro",       "o1-pro-2025-03-19",       "o3",       "o3-2025-04-16",       "o3-mini",       "o3-mini-2025-01-31",       "o4-mini",       "o4-mini-2025-04-16",       "omni-moderation-2024-09-26",       "omni-moderation-latest",       "sora-2",       "sora-2-pro",       "text-embedding-3-large",       "text-embedding-3-small",       "text-embedding-ada-002",       "tts-1",       "tts-1-1106",       "tts-1-hd",       "tts-1-hd-1106",       "whisper-1"     ],     "routingModels": [       {         "modelId": "babbage-002",         "supportedEndpoints": []       },       {         "modelId": "chat-latest",         "supportedEndpoints": []       },       {         "modelId": "chatgpt-image-latest",         "supportedEndpoints": []       },       {         "modelId": "davinci-002",         "supportedEndpoints": []       },       {         "modelId": "gpt-3.5-turbo",         "supportedEndpoints": [           "chat_completions",           "responses"         ]       },       {         "modelId": "gpt-3.5-turbo-0125",         "supportedEndpoints": [           "chat_completions",           "responses"         ]       },       {         "modelId": "gpt-3.5-turbo-1106",         "supportedEndpoints": [           "chat_completions",           "responses"         ]       },       {         "modelId": "gpt-3.5-turbo-16k",         "supportedEndpoints": [           "chat_completions",           "responses"         ]       },       {         "modelId": "gpt-3.5-turbo-instruct",         "supportedEndpoints": [           "chat_completions",           "responses"         ]       },       {         "modelId": "gpt-3.5-turbo-instruct-0914",         "supportedEndpoints": [           "chat_completions",           "responses"         ]       },       {         "modelId": "gpt-4",         "supportedEndpoints": [           "chat_completions",           "responses"         ]       },       {         "modelId": "gpt-4-0613",         "supportedEndpoints": [           "chat_completions",           "responses"         ]       },       {         "modelId": "gpt-4-turbo",         "supportedEndpoints": [           "chat_completions",           "responses"         ]       },       {         "modelId": "gpt-4-turbo-2024-04-09",         "supportedEndpoints": [           "chat_completions",           "responses"         ]       },       {         "modelId": "gpt-4.1",         "supportedEndpoints": [           "chat_completions",           "responses"         ]       },       {         "modelId": "gpt-4.1-2025-04-14",         "supportedEndpoints": [           "chat_completions",           "responses"         ]       },       {         "modelId": "gpt-4.1-mini",         "supportedEndpoints": [           "chat_completions",           "responses"         ]       },       {         "modelId": "gpt-4.1-mini-2025-04-14",         "supportedEndpoints": [           "chat_completions",           "responses"         ]       },       {         "modelId": "gpt-4.1-nano",         "supportedEndpoints": [           "chat_completions",           "responses"         ]       },       {         "modelId": "gpt-4.1-nano-2025-04-14",         "supportedEndpoints": [           "chat_completions",           "responses"         ]       },       {         "modelId": "gpt-4o",         "supportedEndpoints": [           "chat_completions",           "responses"         ]       },       {         "modelId": "gpt-4o-2024-05-13",         "supportedEndpoints": [           "chat_completions",           "responses"         ]       },       {         "modelId": "gpt-4o-2024-08-06",         "supportedEndpoints": [           "chat_completions",           "responses"         ]       },       {         "modelId": "gpt-4o-2024-11-20",         "supportedEndpoints": [           "chat_completions",           "responses"         ]       },       {         "modelId": "gpt-4o-mini",         "supportedEndpoints": [           "chat_completions",           "responses"         ]       },       {         "modelId": "gpt-4o-mini-2024-07-18",         "supportedEndpoints": [           "chat_completions",           "responses"         ]       },       {         "modelId": "gpt-4o-mini-search-preview",         "supportedEndpoints": [           "chat_completions",           "responses"         ]       },       {         "modelId": "gpt-4o-mini-search-preview-2025-03-11",         "supportedEndpoints": [           "chat_completions",           "responses"         ]       },       {         "modelId": "gpt-4o-mini-transcribe",         "supportedEndpoints": [           "chat_completions",           "responses"         ]       },       {         "modelId": "gpt-4o-mini-transcribe-2025-03-20",         "supportedEndpoints": [           "chat_completions",           "responses"         ]       },       {         "modelId": "gpt-4o-mini-transcribe-2025-12-15",         "supportedEndpoints": [           "chat_completions",       ... [truncated: long summary line]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2369640Z   path=sandbox/firewall/awf-reflect.json
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2370501Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2372996Z [98] model_resolution/agent model.resolution engine=codex role=main configured_model=gpt-5-mini resolved_model=gpt-5-mini provider=openai status=exact cause=null [untimed]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2375988Z   path=agent/model-resolution.json
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2376743Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2377802Z [99] safe_output/agent safe_output.request type=submit_triage [requested, not executed] [untimed]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2379621Z   path=safeoutputs.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2381075Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2381667Z [100] execution/agent execution.result  [untimed]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2382979Z   path=agent_execution.json
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2383610Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2384184Z [101] execution/detection execution.result  [untimed]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2385744Z   path=threat-detection/execution.json
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2386523Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2387822Z [102] detection/detection detection.result promptInjection=false secretLeak=false maliciousPatch=false [untimed]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2389948Z   path=threat-detection/detection_result.json
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2390823Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2391917Z [103] execution/agent agent.execution categories=[] errorCodes=[] errorTypes=[] exitCode=0 [untimed]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2393778Z   path=agent-errors.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2394408Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2395705Z [104] workflow/conclusion workflow.job_result jobId=activation result=success durationMs=46000 [untimed]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2397651Z   path=usage/aw_session.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2398322Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2399428Z [105] workflow/conclusion workflow.job_result jobId=agent result=cancelled durationMs=94000 [untimed]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2401285Z   path=usage/aw_session.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2401958Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2403089Z [106] workflow/conclusion workflow.job_result jobId=detection result=success durationMs=75000 [untimed]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2404992Z   path=usage/aw_session.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2405887Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2407054Z [107] workflow/conclusion workflow.job_result jobId=submit_triage result=cancelled durationMs=0 [untimed]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2408969Z   path=usage/aw_session.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2409648Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2411219Z [108] collector/conclusion session.collection sources=27 warnings=0 untimedEvents=27 absentComponents=[   "experiment",   "eval" ] [untimed]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2413539Z   path=usage/aw_session.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2414207Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2416370Z [109] grader/conclusion grader.manifest graders=10 [untimed]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2417881Z   path=usage/graders/grader_manifest.json
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2418655Z 
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2427210Z [110] grader/conclusion grader.result results=[id=tool-success-rate value=0.75 unit=ratio passed=false status=fail; id=tool-failure-count value=1 unit=count passed=true status=pass; id=retries value=0 unit=count passed=true status=pass; id=loops value=0 unit=count passed=true status=pass; id=trajectory-efficiency value=0.75 unit=ratio passed=null status=pass; id=execution-step-count value=4 unit=count passed=null status=pass; id=execution-duration value=13049 unit=ms passed=null status=pass; id=working-set-rebuild-factor value=3.924005080440305 unit=factor passed=null status=pass; id=context-growth value=4.060760316256904 unit=factor passed=null status=pass; id=artifact-production value=0 unit=count passed=null status=pass] [untimed]
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2437417Z   path=usage/graders/grader_results.json
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2438841Z /tmp/gh-aw/usage/activity/summary.json
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2440063Z /tmp/gh-aw/usage/agent/execution.json
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2441270Z /tmp/gh-aw/usage/agent/token_usage.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2442476Z /tmp/gh-aw/usage/agent_usage.json
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2443633Z /tmp/gh-aw/usage/aw_session.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2444831Z /tmp/gh-aw/usage/detection/execution.json
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2446287Z /tmp/gh-aw/usage/detection/token_usage.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2447569Z /tmp/gh-aw/usage/github_rate_limits.jsonl
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2448863Z /tmp/gh-aw/usage/graders/grader_manifest.json
+conclusion	Generate usage activity summary and unified session	2026-10-29T03:11:06.2452616Z /tmp/gh-aw/usage/graders/grader_results.json
+conclusion	Upload usage artifact	﻿2026-10-29T03:11:06.2999827Z ##[group]Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+conclusion	Upload usage artifact	2026-10-29T03:11:06.3002158Z with:
+conclusion	Upload usage artifact	2026-10-29T03:11:06.3003080Z   name: usage
+conclusion	Upload usage artifact	2026-10-29T03:11:06.3013832Z   path: /tmp/gh-aw/usage/aw_session.jsonl
+conclusion	Upload usage artifact	/tmp/gh-aw/usage/aw_info.json
+conclusion	Upload usage artifact	/tmp/gh-aw/usage/aw-info.jsonl
+conclusion	Upload usage artifact	/tmp/gh-aw/usage/agent_usage.json
+conclusion	Upload usage artifact	/tmp/gh-aw/usage/agent_usage.jsonl
+conclusion	Upload usage artifact	/tmp/gh-aw/usage/detection_usage.jsonl
+conclusion	Upload usage artifact	/tmp/gh-aw/usage/evals.jsonl
+conclusion	Upload usage artifact	/tmp/gh-aw/usage/graders/grader_manifest.json
+conclusion	Upload usage artifact	/tmp/gh-aw/usage/graders/grader_results.json
+conclusion	Upload usage artifact	/tmp/gh-aw/usage/github_rate_limits.jsonl
+conclusion	Upload usage artifact	/tmp/gh-aw/usage/agent/token_usage.jsonl
+conclusion	Upload usage artifact	/tmp/gh-aw/usage/agent/model-routing.jsonl
+conclusion	Upload usage artifact	/tmp/gh-aw/usage/agent/execution.json
+conclusion	Upload usage artifact	/tmp/gh-aw/usage/detection/token_usage.jsonl
+conclusion	Upload usage artifact	/tmp/gh-aw/usage/detection/execution.json
+conclusion	Upload usage artifact	/tmp/gh-aw/usage/detection/detection_result.json
+conclusion	Upload usage artifact	/tmp/gh-aw/usage/evals/token_usage.jsonl
+conclusion	Upload usage artifact	/tmp/gh-aw/usage/evals/execution.json
+conclusion	Upload usage artifact	/tmp/gh-aw/usage/experiment/state.jsonl
+conclusion	Upload usage artifact	/tmp/gh-aw/usage/experiment/state.json
+conclusion	Upload usage artifact	/tmp/gh-aw/usage/experiment/assignments.json
+conclusion	Upload usage artifact	/tmp/gh-aw/usage/activity/summary.json
+conclusion	Upload usage artifact	
+conclusion	Upload usage artifact	2026-10-29T03:11:06.3026055Z   if-no-files-found: ignore
+conclusion	Upload usage artifact	2026-10-29T03:11:06.3027139Z   retention-days: 0
+conclusion	Upload usage artifact	2026-10-29T03:11:06.3028087Z   compression-level: 6
+conclusion	Upload usage artifact	2026-10-29T03:11:06.3029078Z   overwrite: false
+conclusion	Upload usage artifact	2026-10-29T03:11:06.3030058Z   include-hidden-files: false
+conclusion	Upload usage artifact	2026-10-29T03:11:06.3031128Z   archive: true
+conclusion	Upload usage artifact	2026-10-29T03:11:06.3032030Z env:
+conclusion	Upload usage artifact	2026-10-29T03:11:06.3032911Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+conclusion	Upload usage artifact	2026-10-29T03:11:06.3034058Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+conclusion	Upload usage artifact	2026-10-29T03:11:06.3037182Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+conclusion	Upload usage artifact	2026-10-29T03:11:06.3040167Z   OTEL_EXPORTER_OTLP_HEADERS: 
+conclusion	Upload usage artifact	2026-10-29T03:11:06.3041359Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+conclusion	Upload usage artifact	2026-10-29T03:11:06.3042651Z   GH_AW_OTLP_IF_MISSING: ignore
+conclusion	Upload usage artifact	2026-10-29T03:11:06.3045287Z   GH_AW_JOB_DISPLAY_NAMES: {"activation":"activation","agent":"agent","conclusion":"conclusion","detection":"detection","pre_activation":"pre_activation","submit_triage":"submit_triage"}
+conclusion	Upload usage artifact	2026-10-29T03:11:06.3049380Z   GH_AW_JOB_RESULTS: {"activation":{"result":"success"},"agent":{"result":"cancelled"},"detection":{"result":"success"},"submit_triage":{"result":"cancelled"}}
+conclusion	Upload usage artifact	2026-10-29T03:11:06.3052763Z   GH_AW_JOB_TIMING_ELIGIBLE: {"activation":true,"agent":true,"conclusion":true,"detection":true,"pre_activation":true,"submit_triage":true}
+conclusion	Upload usage artifact	2026-10-29T03:11:06.3054998Z   GH_AW_RUNTIME_FEATURES: 
+conclusion	Upload usage artifact	2026-10-29T03:11:06.3056369Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+conclusion	Upload usage artifact	2026-10-29T03:11:06.3057845Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 7d5490a4a9f0cf96
+conclusion	Upload usage artifact	2026-10-29T03:11:06.3059185Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243462364
+conclusion	Upload usage artifact	2026-10-29T03:11:06.3060351Z ##[endgroup]
+conclusion	Upload usage artifact	2026-10-29T03:11:07.4792949Z Multiple search paths detected. Calculating the least common ancestor of all paths
+conclusion	Upload usage artifact	2026-10-29T03:11:07.4808982Z The least common ancestor is /tmp/gh-aw/usage. This will be the root directory of the artifact
+conclusion	Upload usage artifact	2026-10-29T03:11:07.4811260Z With the provided path, there will be 10 files uploaded
+conclusion	Upload usage artifact	2026-10-29T03:11:07.4813191Z Artifact name is valid!
+conclusion	Upload usage artifact	2026-10-29T03:11:07.4814225Z Root directory input is valid!
+conclusion	Upload usage artifact	2026-10-29T03:11:07.4824042Z Uploading artifact: usage.zip
+conclusion	Upload usage artifact	2026-10-29T03:11:07.4826173Z Beginning upload of artifact content to blob storage
+conclusion	Upload usage artifact	2026-10-29T03:11:07.4828707Z Uploaded bytes 19762
+conclusion	Upload usage artifact	2026-10-29T03:11:07.4829860Z Finished uploading artifact content to blob storage!
+conclusion	Upload usage artifact	2026-10-29T03:11:07.4831923Z SHA256 digest of uploaded artifact is b116712dbdd3fe20a6ef0d3a1437538a56dc1232226d7d097fbff70a15852706
+conclusion	Upload usage artifact	2026-10-29T03:11:07.4833877Z Finalizing artifact upload
+conclusion	Upload usage artifact	2026-10-29T03:11:07.4838507Z Artifact usage successfully finalized. Artifact ID 12870475886
+conclusion	Upload usage artifact	2026-10-29T03:11:07.4840644Z Artifact usage has been successfully uploaded! Final size is 19762 bytes. Artifact ID is 12870475886
+conclusion	Upload usage artifact	2026-10-29T03:11:07.4843426Z Artifact download URL: https://github.com/andreleocl/duckdb-triage-agent/actions/runs/40810270665/artifacts/12870475886
+conclusion	Post Setup Scripts	﻿2026-10-29T03:11:07.5075285Z Post job cleanup.
+conclusion	Post Setup Scripts	2026-10-29T03:11:07.6234549Z [info] [otlp] sending conclusion span "gh-aw.conclusion.conclusion" to configured endpoints
+conclusion	Post Setup Scripts	2026-10-29T03:11:07.6237420Z Cleaning up /tmp/gh-aw...
+conclusion	Post Setup Scripts	2026-10-29T03:11:07.6384649Z [info] [otlp] conclusion span export attempted
+conclusion	Post Setup Scripts	2026-10-29T03:11:07.6388224Z Cleaned up /tmp/gh-aw
+conclusion	Post Setup Scripts	2026-10-29T03:11:07.6832779Z No /tmp/awf-*-chroot-home directories found
+conclusion	Post Setup Scripts	2026-10-29T03:11:07.6834793Z No /tmp/awf-chroot-* directories found
+conclusion	Complete job	﻿2026-10-29T03:11:07.6938053Z Evaluate and set job outputs
+conclusion	Complete job	2026-10-29T03:11:07.6946282Z Cleaning up orphan processes

@@ -1,0 +1,286 @@
+[
+  {
+    "case_id": "h08",
+    "field": "focus_covered",
+    "manual_value": true,
+    "frozen_assessment_value": false,
+    "basis": "Frozen reference is no action, while a clarification was published. Manual justification is retained separately.",
+    "authority": "Codex interpretation, not Andre re-approval",
+    "frozen_criteria": {
+      "label": null,
+      "required_focus": [],
+      "unacceptable": [
+        "Treat label absence as proof of completeness.",
+        "Redirect, diagnose or mark duplicates outside the configured scope."
+      ]
+    }
+  },
+  {
+    "case_id": "h08",
+    "field": "nonredundant",
+    "manual_value": true,
+    "frozen_assessment_value": false,
+    "basis": "Version details are requested again without explicitly resolving a contradiction; exact-build relevance is inferred rather than established in the opening.",
+    "authority": "Codex interpretation, not Andre re-approval",
+    "frozen_criteria": {
+      "label": null,
+      "required_focus": [],
+      "unacceptable": [
+        "Treat label absence as proof of completeness.",
+        "Redirect, diagnose or mark duplicates outside the configured scope."
+      ]
+    }
+  },
+  {
+    "case_id": "h10",
+    "field": "focus_covered",
+    "manual_value": true,
+    "frozen_assessment_value": false,
+    "basis": "Frozen focus asks for OS/client and additional setup or revised steps. OS/build questions do not explicitly cover the client or extra setup.",
+    "authority": "Codex interpretation, not Andre re-approval",
+    "frozen_criteria": {
+      "label": "needs reproducible example",
+      "required_focus": [
+        "Acknowledge supplied SQL. Ask which OS/client is used and whether additional setup or revised steps are needed to trigger the crash; do not claim to have tested it."
+      ],
+      "unacceptable": [
+        "Request SQL/data already supplied.",
+        "Require a broad unrelated hardware checklist."
+      ]
+    }
+  },
+  {
+    "case_id": "h11",
+    "field": "focus_covered",
+    "manual_value": true,
+    "frozen_assessment_value": false,
+    "basis": "No comment addresses the frozen frontend/interrupt clarification.",
+    "authority": "Codex interpretation, not Andre re-approval",
+    "frozen_criteria": {
+      "label": "needs more info",
+      "required_focus": [
+        "Clarify the failing notebook frontend (VS Code, JupyterLab or both) and the interrupt method used in that setup; do not repeat supplied versions or data."
+      ],
+      "unacceptable": [
+        "Ask the reporter to repeat notebook details just because the Client field says Python."
+      ]
+    }
+  },
+  {
+    "case_id": "h13",
+    "field": "focus_covered",
+    "manual_value": true,
+    "frozen_assessment_value": false,
+    "basis": "Frozen focus requests the table definition and data/generator. The comment requests data and query invocation but not the table definition; conservative scoring does not assume that CSV/Python commands include table creation.",
+    "authority": "Codex interpretation, not Andre re-approval",
+    "frozen_criteria": {
+      "label": "needs reproducible example",
+      "required_focus": [
+        "Request the table definition and shareable data or a synthetic generator that demonstrates the LIMIT behavior."
+      ],
+      "unacceptable": [
+        "Demand all private market data.",
+        "Ask for expected row counts already supplied."
+      ]
+    }
+  },
+  {
+    "case_id": "h13",
+    "field": "nonredundant",
+    "manual_value": true,
+    "frozen_assessment_value": false,
+    "basis": "The two affected versions are already supplied; the question does not explicitly tie the new version request to a reduced example.",
+    "authority": "Codex interpretation, not Andre re-approval",
+    "frozen_criteria": {
+      "label": "needs reproducible example",
+      "required_focus": [
+        "Request the table definition and shareable data or a synthetic generator that demonstrates the LIMIT behavior."
+      ],
+      "unacceptable": [
+        "Demand all private market data.",
+        "Ask for expected row counts already supplied."
+      ]
+    }
+  },
+  {
+    "case_id": "h16",
+    "field": "nonredundant",
+    "manual_value": true,
+    "frozen_assessment_value": false,
+    "basis": "The exact deletion/commit sequence is supplied; the comment requests the exact sequence again without acknowledging it. Conservative scoring does not infer an instruction merely to reuse the given steps.",
+    "authority": "Codex interpretation, not Andre re-approval",
+    "frozen_criteria": {
+      "label": "needs reproducible example",
+      "required_focus": [
+        "Request table/index definitions and shareable or generated data demonstrating the slow COMMIT."
+      ],
+      "unacceptable": [
+        "Demand the entire 65GB production database.",
+        "Repeat the supplied timings or hardware request."
+      ]
+    }
+  },
+  {
+    "case_id": "h17",
+    "field": "nonredundant",
+    "manual_value": true,
+    "frozen_assessment_value": false,
+    "basis": "The frozen exclusion prohibits repeating supplied version questions. The request reconfirms the reported version regression without explicitly distinguishing a new reduced example.",
+    "authority": "Codex interpretation, not Andre re-approval",
+    "frozen_criteria": {
+      "label": "needs reproducible example",
+      "required_focus": [
+        "Request sanitized schema, failing INSERT/SELECT details and minimal source rows or generator."
+      ],
+      "unacceptable": [
+        "Request credentials or the private source database.",
+        "Repeat supplied OS/version questions."
+      ]
+    }
+  },
+  {
+    "case_id": "h18",
+    "field": "focus_covered",
+    "manual_value": true,
+    "frozen_assessment_value": false,
+    "basis": "Frozen focus explicitly requires acknowledging confidentiality; shareable/generated alternatives do not explicitly acknowledge the stated restriction.",
+    "authority": "Codex interpretation, not Andre re-approval",
+    "frozen_criteria": {
+      "label": "needs reproducible example",
+      "required_focus": [
+        "Request shareable/generated Parquet files with relevant schema differences that trigger the supplied error. Acknowledge confidentiality; do not demand the original data or repeat the query."
+      ],
+      "unacceptable": [
+        "Demand confidential data.",
+        "Repeat the already supplied query or require extra traceback details without a concrete reason."
+      ]
+    }
+  },
+  {
+    "case_id": "h18",
+    "field": "grounded",
+    "manual_value": true,
+    "frozen_assessment_value": false,
+    "basis": "Two Parquet files are asserted sufficient without testing or evidence establishing sufficiency; a possible construction should not be stated as proven.",
+    "authority": "Codex interpretation, not Andre re-approval",
+    "frozen_criteria": {
+      "label": "needs reproducible example",
+      "required_focus": [
+        "Request shareable/generated Parquet files with relevant schema differences that trigger the supplied error. Acknowledge confidentiality; do not demand the original data or repeat the query."
+      ],
+      "unacceptable": [
+        "Demand confidential data.",
+        "Repeat the already supplied query or require extra traceback details without a concrete reason."
+      ]
+    }
+  },
+  {
+    "case_id": "h19",
+    "field": "nonredundant",
+    "manual_value": true,
+    "frozen_assessment_value": false,
+    "basis": "Error variants are supplied. The request for complete exact errors is not explicitly limited to a new reduced example.",
+    "authority": "Codex interpretation, not Andre re-approval",
+    "frozen_criteria": {
+      "label": "needs reproducible example",
+      "required_focus": [
+        "Acknowledge the reduction attempt and request the input_relation schema plus shareable input or a generator; it need not be tiny."
+      ],
+      "unacceptable": [
+        "Insist on a tiny VALUES-only example.",
+        "Request private data or repeat the supplied environment."
+      ]
+    }
+  },
+  {
+    "case_id": "h21",
+    "field": "focus_covered",
+    "manual_value": true,
+    "frozen_assessment_value": false,
+    "basis": "No comment addresses the frozen additional-database-setup/Node.js clarification. Later maintainer findings were unavailable to the agent; this limitation does not change the reference.",
+    "authority": "Codex interpretation, not Andre re-approval",
+    "frozen_criteria": {
+      "label": "needs reproducible example",
+      "required_focus": [
+        "Acknowledge the supplied SQL example and ask whether additional database setup steps or Node.js calls are needed to reliably trigger the checkpoint crash."
+      ],
+      "unacceptable": [
+        "Claim the agent tested the example or established that it does not reproduce.",
+        "Assert that extra setup is definitely missing rather than asking whether it is needed.",
+        "Request SQL or generated data as though none was supplied."
+      ]
+    }
+  },
+  {
+    "case_id": "h22",
+    "field": "focus_covered",
+    "manual_value": true,
+    "frozen_assessment_value": false,
+    "basis": "Frozen focus explicitly requires acknowledging the failed fresh-database attempt, which the comment omits.",
+    "authority": "Codex interpretation, not Andre re-approval",
+    "frozen_criteria": {
+      "label": "needs reproducible example",
+      "required_focus": [
+        "Request a non-confidential affected database or a procedure recreating the state, acknowledging the unsuccessful fresh-database attempt."
+      ],
+      "unacceptable": [
+        "Ask only for the schema already supplied.",
+        "Demand production data."
+      ]
+    }
+  },
+  {
+    "case_id": "h24",
+    "field": "focus_covered",
+    "manual_value": true,
+    "frozen_assessment_value": false,
+    "basis": "Frozen focus includes header and DLL provenance; the comment explicitly requests DLL provenance but not header origin. Conservative scoring does not assume a minimal project supplies it.",
+    "authority": "Codex interpretation, not Andre re-approval",
+    "frozen_criteria": {
+      "label": "needs more info",
+      "required_focus": [
+        "Ask for compiler/version and compile/link settings, plus header/DLL provenance and application/library Debug or Release modes."
+      ],
+      "unacceptable": [
+        "Assert that a Debug/Release mismatch is the proven cause.",
+        "Ask for an external dataset."
+      ]
+    }
+  },
+  {
+    "case_id": "h24",
+    "field": "grounded",
+    "manual_value": true,
+    "frozen_assessment_value": false,
+    "basis": "The private rationale states an ABI/CRT or architecture mismatch caused the crash; the opening does not establish that diagnosis.",
+    "authority": "Codex interpretation, not Andre re-approval",
+    "frozen_criteria": {
+      "label": "needs more info",
+      "required_focus": [
+        "Ask for compiler/version and compile/link settings, plus header/DLL provenance and application/library Debug or Release modes."
+      ],
+      "unacceptable": [
+        "Assert that a Debug/Release mismatch is the proven cause.",
+        "Ask for an external dataset."
+      ]
+    }
+  },
+  {
+    "case_id": "h25",
+    "field": "grounded",
+    "manual_value": true,
+    "frozen_assessment_value": false,
+    "basis": "The comment assumes package_build is supplied by a build dependency; the opening does not establish that rather than a source-path issue.",
+    "authority": "Codex interpretation, not Andre re-approval",
+    "frozen_criteria": {
+      "label": "needs more info",
+      "required_focus": [
+        "Ask which DuckDB release tag or Git commit the source build used; identify the unusable version value 22."
+      ],
+      "unacceptable": [
+        "Repeat requests for Python/compiler versions or traceback.",
+        "Infer a later fix or advise updating as a substitute for identifying the build."
+      ]
+    }
+  }
+]

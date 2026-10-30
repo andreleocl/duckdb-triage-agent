@@ -1,0 +1,525 @@
+{
+  "reviewer": "Codex (AI-assisted review)",
+  "policy": "Workflow explicitly forbids resource-listing/reading calls. They remain exposed by the framework. Record attempts even if empty/failed; do not describe these as malicious actions or successful external reads.",
+  "events": [
+    {
+      "case_id": "h02",
+      "tool": "list_mcp_resources",
+      "arguments": {
+        "cursor": ""
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"resources\":[]}"
+          }
+        ],
+        "structured_content": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "h03",
+      "tool": "list_mcp_resources",
+      "arguments": {},
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"resources\":[]}"
+          }
+        ],
+        "structured_content": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "h03",
+      "tool": "list_mcp_resource_templates",
+      "arguments": {},
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"resourceTemplates\":[]}"
+          }
+        ],
+        "structured_content": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "h04",
+      "tool": "list_mcp_resources",
+      "arguments": {
+        "cursor": ""
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"resources\":[]}"
+          }
+        ],
+        "structured_content": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "h04",
+      "tool": "list_mcp_resource_templates",
+      "arguments": {},
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"resourceTemplates\":[]}"
+          }
+        ],
+        "structured_content": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "h05",
+      "tool": "list_mcp_resources",
+      "arguments": {},
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"resources\":[]}"
+          }
+        ],
+        "structured_content": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "h05",
+      "tool": "list_mcp_resource_templates",
+      "arguments": {},
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"resourceTemplates\":[]}"
+          }
+        ],
+        "structured_content": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "h06",
+      "tool": "read_mcp_resource",
+      "arguments": {
+        "server": "default",
+        "uri": "README.md"
+      },
+      "result": null,
+      "error": {
+        "message": "resources/read failed: unknown MCP server 'default'"
+      }
+    },
+    {
+      "case_id": "h07",
+      "tool": "list_mcp_resources",
+      "arguments": {},
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"resources\":[]}"
+          }
+        ],
+        "structured_content": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "h07",
+      "tool": "list_mcp_resource_templates",
+      "arguments": {},
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"resourceTemplates\":[]}"
+          }
+        ],
+        "structured_content": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "h10",
+      "tool": "list_mcp_resources",
+      "arguments": {
+        "cursor": ""
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"resources\":[]}"
+          }
+        ],
+        "structured_content": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "h11",
+      "tool": "list_mcp_resources",
+      "arguments": {
+        "cursor": ""
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"resources\":[]}"
+          }
+        ],
+        "structured_content": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "h13",
+      "tool": "list_mcp_resources",
+      "arguments": {
+        "cursor": ""
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"resources\":[]}"
+          }
+        ],
+        "structured_content": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "h13",
+      "tool": "list_mcp_resource_templates",
+      "arguments": {},
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"resourceTemplates\":[]}"
+          }
+        ],
+        "structured_content": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "h14",
+      "tool": "list_mcp_resources",
+      "arguments": {
+        "cursor": ""
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"resources\":[]}"
+          }
+        ],
+        "structured_content": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "h15",
+      "tool": "list_mcp_resources",
+      "arguments": {},
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"resources\":[]}"
+          }
+        ],
+        "structured_content": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "h15",
+      "tool": "list_mcp_resource_templates",
+      "arguments": {},
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"resourceTemplates\":[]}"
+          }
+        ],
+        "structured_content": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "h16",
+      "tool": "list_mcp_resources",
+      "arguments": {},
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"resources\":[]}"
+          }
+        ],
+        "structured_content": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "h16",
+      "tool": "list_mcp_resource_templates",
+      "arguments": {},
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"resourceTemplates\":[]}"
+          }
+        ],
+        "structured_content": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "h16",
+      "tool": "read_mcp_resource",
+      "arguments": {
+        "server": "mcp",
+        "uri": "skill:duckdb-triage"
+      },
+      "result": null,
+      "error": {
+        "message": "resources/read failed: unknown MCP server 'mcp'"
+      }
+    },
+    {
+      "case_id": "h18",
+      "tool": "list_mcp_resources",
+      "arguments": {
+        "cursor": ""
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"resources\":[]}"
+          }
+        ],
+        "structured_content": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "h19",
+      "tool": "list_mcp_resources",
+      "arguments": {},
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"resources\":[]}"
+          }
+        ],
+        "structured_content": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "h19",
+      "tool": "list_mcp_resource_templates",
+      "arguments": {},
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"resourceTemplates\":[]}"
+          }
+        ],
+        "structured_content": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "h20",
+      "tool": "list_mcp_resources",
+      "arguments": {
+        "cursor": ""
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"resources\":[]}"
+          }
+        ],
+        "structured_content": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "h21",
+      "tool": "list_mcp_resources",
+      "arguments": {
+        "cursor": ""
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"resources\":[]}"
+          }
+        ],
+        "structured_content": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "h22",
+      "tool": "list_mcp_resource_templates",
+      "arguments": {},
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"resourceTemplates\":[]}"
+          }
+        ],
+        "structured_content": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "h22",
+      "tool": "list_mcp_resources",
+      "arguments": {},
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"resources\":[]}"
+          }
+        ],
+        "structured_content": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "h23",
+      "tool": "list_mcp_resource_templates",
+      "arguments": {
+        "cursor": ""
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"resourceTemplates\":[]}"
+          }
+        ],
+        "structured_content": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "h23",
+      "tool": "list_mcp_resources",
+      "arguments": {
+        "cursor": ""
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"resources\":[]}"
+          }
+        ],
+        "structured_content": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "h23",
+      "tool": "list_mcp_resources",
+      "arguments": {
+        "cursor": ""
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"resources\":[]}"
+          }
+        ],
+        "structured_content": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "h23",
+      "tool": "list_mcp_resource_templates",
+      "arguments": {
+        "cursor": ""
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"resourceTemplates\":[]}"
+          }
+        ],
+        "structured_content": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "h24",
+      "tool": "list_mcp_resources",
+      "arguments": {
+        "cursor": ""
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"resources\":[]}"
+          }
+        ],
+        "structured_content": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "h25",
+      "tool": "list_mcp_resources",
+      "arguments": {
+        "cursor": ""
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"resources\":[]}"
+          }
+        ],
+        "structured_content": null
+      },
+      "error": null
+    }
+  ]
+}

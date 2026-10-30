@@ -1,0 +1,10 @@
+{
+  "run_id": 40809384060,
+  "result": "cancelled",
+  "workflow_commit": "90e534b05497e1821539aec774403f95448a1c77",
+  "test_scope": "Cancel harmless running sleep job via phone",
+  "phone_operation_basis": "Andre reported cancelling the run during the guided phone procedure; GitHub confirms cancellation, not device identity.",
+  "actual_triage_cancellation_tested": false,
+  "model_calls": 0,
+  "model_cost_usd": 0
+}

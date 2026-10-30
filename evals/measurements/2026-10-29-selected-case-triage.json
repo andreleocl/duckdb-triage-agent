@@ -1,0 +1,357 @@
+{
+  "measured_on": "2026-10-29",
+  "median_hours": 25.06527777777778,
+  "cases": [
+    {
+      "case_id": "h01",
+      "issue_url": "https://github.com/duckdb/duckdb/issues/26300",
+      "created_at": "2026-09-30T17:57:09Z",
+      "retrieved_at": "2026-10-28T02:35:09.340702+00:00",
+      "label": null,
+      "actor": null,
+      "label_at": null,
+      "hours": null,
+      "bot_comment_urls": [],
+      "source": "h01.json",
+      "source_sha256": "ede4092608ac555e59a534536ccd06a1f618081c427ceb190baa843589bef033"
+    },
+    {
+      "case_id": "h02",
+      "issue_url": "https://github.com/duckdb/duckdb/issues/26272",
+      "created_at": "2026-09-29T20:49:25Z",
+      "retrieved_at": "2026-10-28T02:35:11.615208+00:00",
+      "label": null,
+      "actor": null,
+      "label_at": null,
+      "hours": null,
+      "bot_comment_urls": [],
+      "source": "h02.json",
+      "source_sha256": "0af618bac76f97cac5929b2f0fbff25210f5ff3033455072400cf14a52f075fe"
+    },
+    {
+      "case_id": "h03",
+      "issue_url": "https://github.com/duckdb/duckdb/issues/26259",
+      "created_at": "2026-09-29T13:35:50Z",
+      "retrieved_at": "2026-10-28T02:35:13.634725+00:00",
+      "label": null,
+      "actor": null,
+      "label_at": null,
+      "hours": null,
+      "bot_comment_urls": [],
+      "source": "h03.json",
+      "source_sha256": "2c72c1a7b6f71bc7721b05464ccf084aace73a7b6769b47f842b3316dfc9085d"
+    },
+    {
+      "case_id": "h04",
+      "issue_url": "https://github.com/duckdb/duckdb/issues/26247",
+      "created_at": "2026-09-29T08:16:37Z",
+      "retrieved_at": "2026-10-28T02:35:15.994703+00:00",
+      "label": null,
+      "actor": null,
+      "label_at": null,
+      "hours": null,
+      "bot_comment_urls": [],
+      "source": "h04.json",
+      "source_sha256": "146bc44bdf9deca3c9b2e05f8caac44edc6622ba1f3762d2257402f44ead7d60"
+    },
+    {
+      "case_id": "h05",
+      "issue_url": "https://github.com/duckdb/duckdb/issues/26098",
+      "created_at": "2026-09-23T15:05:42Z",
+      "retrieved_at": "2026-10-28T02:35:18.200740+00:00",
+      "label": null,
+      "actor": null,
+      "label_at": null,
+      "hours": null,
+      "bot_comment_urls": [],
+      "source": "h05.json",
+      "source_sha256": "65766c5966df86e0bca058af527a1991887a04cb5847cf7f94c0bfbd2548bfcf"
+    },
+    {
+      "case_id": "h06",
+      "issue_url": "https://github.com/duckdb/duckdb/issues/25996",
+      "created_at": "2026-09-21T20:24:14Z",
+      "retrieved_at": "2026-10-28T02:35:21.187119+00:00",
+      "label": null,
+      "actor": null,
+      "label_at": null,
+      "hours": null,
+      "bot_comment_urls": [],
+      "source": "h06.json",
+      "source_sha256": "a65a9816d67d3e17ed898d3ac0724fdd42083b0f7222c9a49ab7b2b1bbfc2be6"
+    },
+    {
+      "case_id": "h07",
+      "issue_url": "https://github.com/duckdb/duckdb/issues/25804",
+      "created_at": "2026-09-16T13:47:47Z",
+      "retrieved_at": "2026-10-28T02:35:23.385123+00:00",
+      "label": null,
+      "actor": null,
+      "label_at": null,
+      "hours": null,
+      "bot_comment_urls": [],
+      "source": "h07.json",
+      "source_sha256": "ba53a473308dc0544578f6a70eab7fa65076a9b6e315afab199bd290d59b06b4"
+    },
+    {
+      "case_id": "h08",
+      "issue_url": "https://github.com/duckdb/duckdb/issues/25395",
+      "created_at": "2026-09-06T01:22:00Z",
+      "retrieved_at": "2026-10-28T02:35:25.326216+00:00",
+      "label": null,
+      "actor": null,
+      "label_at": null,
+      "hours": null,
+      "bot_comment_urls": [],
+      "source": "h08.json",
+      "source_sha256": "7eeb46452ab58a29eaec43a44141d0b6956ca7c24040122b7beffb4d79a3ff26"
+    },
+    {
+      "case_id": "h09",
+      "issue_url": "https://github.com/duckdb/duckdb/issues/25357",
+      "created_at": "2026-09-04T11:39:29Z",
+      "retrieved_at": "2026-10-28T02:35:27.400416+00:00",
+      "label": null,
+      "actor": null,
+      "label_at": null,
+      "hours": null,
+      "bot_comment_urls": [],
+      "source": "h09.json",
+      "source_sha256": "26c3d283b3fce418c7c0f3d8cce9a3624d402f45276c84d3e8b17409bbb66dbe"
+    },
+    {
+      "case_id": "h10",
+      "issue_url": "https://github.com/duckdb/duckdb/issues/25039",
+      "created_at": "2026-08-27T02:56:40Z",
+      "retrieved_at": "2026-10-28T02:35:29.548080+00:00",
+      "label": "needs reproducible example",
+      "actor": "Tishj",
+      "label_at": "2026-08-27T05:51:26Z",
+      "hours": 2.912777777777778,
+      "bot_comment_urls": [
+        "https://github.com/duckdb/duckdb/issues/25039#issuecomment-5434946210"
+      ],
+      "source": "h10.json",
+      "source_sha256": "75ad63e420340157cf6eedbcfa5665742885a661ff81f883722f56b1f8786b47"
+    },
+    {
+      "case_id": "h11",
+      "issue_url": "https://github.com/duckdb/duckdb/issues/25011",
+      "created_at": "2026-08-25T14:09:20Z",
+      "retrieved_at": "2026-10-28T02:35:31.677212+00:00",
+      "label": "needs more info",
+      "actor": "Tishj",
+      "label_at": "2026-08-27T06:14:05Z",
+      "hours": 40.079166666666666,
+      "bot_comment_urls": [],
+      "source": "h11.json",
+      "source_sha256": "cb60cbd8586fa7e98c1f9a564a1e14feeafac2edb756fab6f886b7f7b74cfa54"
+    },
+    {
+      "case_id": "h12",
+      "issue_url": "https://github.com/duckdb/duckdb/issues/24291",
+      "created_at": "2026-07-29T23:14:22Z",
+      "retrieved_at": "2026-10-28T02:35:33.721163+00:00",
+      "label": "needs reproducible example",
+      "actor": "DinosL",
+      "label_at": "2026-08-06T07:37:20Z",
+      "hours": 176.3827777777778,
+      "bot_comment_urls": [
+        "https://github.com/duckdb/duckdb/issues/24291#issuecomment-5201791345"
+      ],
+      "source": "h12.json",
+      "source_sha256": "87f80ba1633326d8117c2aa2992c0d94b87fdd1dd04f902f5286713adf2a9197"
+    },
+    {
+      "case_id": "h13",
+      "issue_url": "https://github.com/duckdb/duckdb/issues/22776",
+      "created_at": "2026-05-20T06:12:32Z",
+      "retrieved_at": "2026-10-28T02:35:36.087890+00:00",
+      "label": "needs reproducible example",
+      "actor": "DinosL",
+      "label_at": "2026-05-20T07:44:46Z",
+      "hours": 1.5372222222222223,
+      "bot_comment_urls": [
+        "https://github.com/duckdb/duckdb/issues/22776#issuecomment-4495854686"
+      ],
+      "source": "h13.json",
+      "source_sha256": "69f1394f740bd16ecb8d1524f06b23a776c4106825c8ef8e53406caa139a126f"
+    },
+    {
+      "case_id": "h14",
+      "issue_url": "https://github.com/duckdb/duckdb/issues/22716",
+      "created_at": "2026-05-17T03:56:30Z",
+      "retrieved_at": "2026-10-28T02:35:38.622845+00:00",
+      "label": "needs reproducible example",
+      "actor": "DinosL",
+      "label_at": "2026-05-18T08:24:18Z",
+      "hours": 28.463333333333335,
+      "bot_comment_urls": [
+        "https://github.com/duckdb/duckdb/issues/22716#issuecomment-4475778052"
+      ],
+      "source": "h14.json",
+      "source_sha256": "7a2eb827ab872f8736bda4a13d2de90638882f75d41875c0d5c73ab4b83b3e35"
+    },
+    {
+      "case_id": "h15",
+      "issue_url": "https://github.com/duckdb/duckdb/issues/22713",
+      "created_at": "2026-05-16T20:16:04Z",
+      "retrieved_at": "2026-10-28T02:35:40.576107+00:00",
+      "label": "needs reproducible example",
+      "actor": "DinosL",
+      "label_at": "2026-05-18T08:14:52Z",
+      "hours": 35.98,
+      "bot_comment_urls": [
+        "https://github.com/duckdb/duckdb/issues/22713#issuecomment-4475717625"
+      ],
+      "source": "h15.json",
+      "source_sha256": "b34c0306040003953f6dd106941d7435d7364ad813c2258811e0d220aca52d9c"
+    },
+    {
+      "case_id": "h16",
+      "issue_url": "https://github.com/duckdb/duckdb/issues/22535",
+      "created_at": "2026-05-09T20:38:45Z",
+      "retrieved_at": "2026-10-28T02:35:43.040171+00:00",
+      "label": "needs reproducible example",
+      "actor": "DinosL",
+      "label_at": "2026-05-11T09:25:33Z",
+      "hours": 36.78,
+      "bot_comment_urls": [
+        "https://github.com/duckdb/duckdb/issues/22535#issuecomment-4419250808"
+      ],
+      "source": "h16.json",
+      "source_sha256": "80fcc46b7b77e0a936a89388693673102c5e2136afda9a15409a87e46cd6aba3"
+    },
+    {
+      "case_id": "h17",
+      "issue_url": "https://github.com/duckdb/duckdb/issues/22468",
+      "created_at": "2026-05-04T22:35:55Z",
+      "retrieved_at": "2026-10-28T02:35:45.018390+00:00",
+      "label": "needs reproducible example",
+      "actor": "DinosL",
+      "label_at": "2026-05-05T07:33:09Z",
+      "hours": 8.953888888888889,
+      "bot_comment_urls": [
+        "https://github.com/duckdb/duckdb/issues/22468#issuecomment-4377337290"
+      ],
+      "source": "h17.json",
+      "source_sha256": "db1a38f127e48fe33fc4fe04047ea6c18e9d60199271324ddb22f85c45119aa5"
+    },
+    {
+      "case_id": "h18",
+      "issue_url": "https://github.com/duckdb/duckdb/issues/22399",
+      "created_at": "2026-04-30T13:11:55Z",
+      "retrieved_at": "2026-10-28T02:35:47.119934+00:00",
+      "label": "needs reproducible example",
+      "actor": "DinosL",
+      "label_at": "2026-05-01T10:51:57Z",
+      "hours": 21.66722222222222,
+      "bot_comment_urls": [
+        "https://github.com/duckdb/duckdb/issues/22399#issuecomment-4358965167"
+      ],
+      "source": "h18.json",
+      "source_sha256": "9eabf77b20031952c53a94e7cdd883f43d81a04103921dc6446ff5cda2509943"
+    },
+    {
+      "case_id": "h19",
+      "issue_url": "https://github.com/duckdb/duckdb/issues/22088",
+      "created_at": "2026-04-15T10:58:48Z",
+      "retrieved_at": "2026-10-28T02:35:49.509939+00:00",
+      "label": "needs reproducible example",
+      "actor": "DinosL",
+      "label_at": "2026-04-16T16:58:37Z",
+      "hours": 29.996944444444445,
+      "bot_comment_urls": [
+        "https://github.com/duckdb/duckdb/issues/22088#issuecomment-4261923828"
+      ],
+      "source": "h19.json",
+      "source_sha256": "2d12d4b1159b65e544f87dd4d06e27111fd25127a058d52c0178890436ee8086"
+    },
+    {
+      "case_id": "h20",
+      "issue_url": "https://github.com/duckdb/duckdb/issues/22051",
+      "created_at": "2026-04-14T04:16:41Z",
+      "retrieved_at": "2026-10-28T02:35:51.556256+00:00",
+      "label": "needs reproducible example",
+      "actor": "DinosL",
+      "label_at": "2026-04-14T08:45:46Z",
+      "hours": 4.4847222222222225,
+      "bot_comment_urls": [
+        "https://github.com/duckdb/duckdb/issues/22051#issuecomment-4242557883"
+      ],
+      "source": "h20.json",
+      "source_sha256": "0786dae701746b51f5520c9bdd87d29312d0e37118112c0e6e1653b88d9597e9"
+    },
+    {
+      "case_id": "h21",
+      "issue_url": "https://github.com/duckdb/duckdb/issues/21601",
+      "created_at": "2026-03-24T20:23:49Z",
+      "retrieved_at": "2026-10-28T02:35:54.048383+00:00",
+      "label": "needs reproducible example",
+      "actor": "Mytherin",
+      "label_at": "2026-03-25T15:44:59Z",
+      "hours": 19.352777777777778,
+      "bot_comment_urls": [
+        "https://github.com/duckdb/duckdb/issues/21601#issuecomment-4127666663"
+      ],
+      "source": "h21.json",
+      "source_sha256": "b2dc1f16d22648b942ba0fe9e223b1e18c31b94448767e58832c467a1c30c155"
+    },
+    {
+      "case_id": "h22",
+      "issue_url": "https://github.com/duckdb/duckdb/issues/20743",
+      "created_at": "2026-01-30T05:56:12Z",
+      "retrieved_at": "2026-10-28T02:35:56.045427+00:00",
+      "label": "needs reproducible example",
+      "actor": "Mytherin",
+      "label_at": "2026-02-02T15:25:27Z",
+      "hours": 81.4875,
+      "bot_comment_urls": [
+        "https://github.com/duckdb/duckdb/issues/20743#issuecomment-3835850159"
+      ],
+      "source": "h22.json",
+      "source_sha256": "832e3fa50781b92fa5ab8726ee9bfae5731f55ef19c0547adcc84629c0293986"
+    },
+    {
+      "case_id": "h23",
+      "issue_url": "https://github.com/duckdb/duckdb/issues/20255",
+      "created_at": "2025-12-18T17:05:22Z",
+      "retrieved_at": "2026-10-28T02:35:57.982421+00:00",
+      "label": "needs reproducible example",
+      "actor": "samansmink",
+      "label_at": "2025-12-24T09:06:06Z",
+      "hours": 136.01222222222222,
+      "bot_comment_urls": [
+        "https://github.com/duckdb/duckdb/issues/20255#issuecomment-3689177639"
+      ],
+      "source": "h23.json",
+      "source_sha256": "14147ec25ebe1e94cda443b4c05568141a18398ac455bf28409fdd2267c23a5b"
+    },
+    {
+      "case_id": "h24",
+      "issue_url": "https://github.com/duckdb/duckdb/issues/13208",
+      "created_at": "2024-07-30T14:59:07Z",
+      "retrieved_at": "2026-10-28T02:36:00.157270+00:00",
+      "label": "needs more info",
+      "actor": "hannes",
+      "label_at": "2024-07-31T10:45:06Z",
+      "hours": 19.76638888888889,
+      "bot_comment_urls": [],
+      "source": "h24.json",
+      "source_sha256": "2c5eb14c6a70a305d1e7997975a791a1cf4b623ba1afb23dc20f7c5a7dfdaafa"
+    },
+    {
+      "case_id": "h25",
+      "issue_url": "https://github.com/duckdb/duckdb/issues/12023",
+      "created_at": "2024-05-13T08:00:51Z",
+      "retrieved_at": "2026-10-28T02:36:02.127722+00:00",
+      "label": "needs more info",
+      "actor": "szarnyasg",
+      "label_at": "2024-05-13T08:40:23Z",
+      "hours": 0.6588888888888889,
+      "bot_comment_urls": [],
+      "source": "h25.json",
+      "source_sha256": "a12d398c471761bb755c3114da943c43ee90806ef79fa576b391ffda2ad1b804"
+    }
+  ]
+}

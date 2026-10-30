@@ -1,0 +1,20 @@
+{
+  "result": "passed_disabled_start_gate",
+  "run_id": 40808613147,
+  "run_url": "https://github.com/andreleocl/duckdb-triage-agent/actions/runs/40808613147",
+  "checked_at_utc": "2026-10-29T02:50:31.676877+00:00",
+  "jobs_skipped": 6,
+  "executed_steps": 0,
+  "artifact_count": 0,
+  "changed_issue_fields": [],
+  "comments_unchanged": true,
+  "triage_enabled": "false",
+  "model_calls_from_this_run": 0,
+  "model_cost_usd": 0,
+  "cost_basis": "All jobs skipped with zero steps; neither inference path executed. Not an invoice reconciliation.",
+  "limitations": [
+    "No active-execution cancellation tested",
+    "No phone procedure tested",
+    "No claim that changing variables stops an already-running inference request"
+  ]
+}

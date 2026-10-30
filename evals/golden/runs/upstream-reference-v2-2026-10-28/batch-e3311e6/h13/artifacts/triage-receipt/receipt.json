@@ -1,0 +1,47 @@
+{
+  "status": "published",
+  "proposal": {
+    "label": "needs reproducible example",
+    "comment": "Could you provide a small, shareable input that still triggers the incorrect result (for example a CSV with the `date` column) together with the exact Python snippet/commands you use to run the failing query and the precise DuckDB package version (e.g. output of `import duckdb; duckdb.__version__`)? This will allow reproducing the DISTINCT + ORDER BY DESC + LIMIT behavior without access to your large table.",
+    "rationale": "The report describes deterministic incorrect results but does not include any table schema or sample data nor the exact Python commands used; without a small, shareable dataset and the exact query invocation the failure cannot be reproduced locally."
+  },
+  "actions": [
+    "add_comment",
+    "add_label"
+  ],
+  "run_id": "40635030767",
+  "configuration_sha": "e3311e64aa639fb29dd5e4d519a19503d3c2f6ee",
+  "input_sha256": "b07a1ee7d74e00e37857bc05279d44ba85c4ff6ef3db90bdce9efaee6fc42656",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "/comments?per_page=100&page=1",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/comments",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/labels",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

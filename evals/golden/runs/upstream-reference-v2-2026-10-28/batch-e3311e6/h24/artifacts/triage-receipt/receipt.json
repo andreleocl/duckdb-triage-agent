@@ -1,0 +1,47 @@
+{
+  "status": "published",
+  "proposal": {
+    "label": "needs more info",
+    "comment": "Could you provide the build/link details and target architecture so we can reproduce this? Specifically, please share whether you used a prebuilt `duckdb.dll` or built it from source, the exact compiler and toolchain (e.g. MSVC version), whether your program and the DLL are x86 or x86_64, and the compile/link commands or a minimal project (e.g. a small Visual Studio project or CMakeLists) that reproduces the crash. Also say if you ran a Debug or Release build and whether you mixed CRT (debug vs release) between your app and the DLL.",
+    "rationale": "The report includes a short C++ snippet and OS/version, but lacks essential build and linking details (prebuilt vs built-from-source DLL, compiler/toolchain, target architecture, build type, and compile/link commands). These environment details are required to reproduce an access-violation caused by ABI/CRT or architecture mismatches."
+  },
+  "actions": [
+    "add_comment",
+    "add_label"
+  ],
+  "run_id": "40640246545",
+  "configuration_sha": "e3311e64aa639fb29dd5e4d519a19503d3c2f6ee",
+  "input_sha256": "baaab9cfb227a18935ae2554cd1dddae4e626380906c4484a6011fe56de58c4a",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "/comments?per_page=100&page=1",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/comments",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/labels",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

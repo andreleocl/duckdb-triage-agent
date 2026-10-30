@@ -1,0 +1,35 @@
+{
+  "run_id": 40810270665,
+  "run_conclusion": "cancelled",
+  "job_conclusions": {
+    "pre_activation": "success",
+    "activation": "success",
+    "agent": "cancelled",
+    "detection": "success",
+    "conclusion": "success",
+    "submit_triage": "cancelled"
+  },
+  "changed_issue_fields": [],
+  "comments_unchanged": true,
+  "triage_enabled": "false",
+  "estimated_cost_usd_by_role": {
+    "agent": 0.0039145,
+    "detection": 0.00594445
+  },
+  "estimated_cost_usd_total": 0.00985895,
+  "recorded_requests_by_role": {
+    "agent": 4,
+    "detection": 2
+  },
+  "models": [
+    "gpt-5-mini-2025-08-07"
+  ],
+  "cost_basis": "Recorded API-proxy tokens: $0.25/M uncached input, $0.025/M cached input, $2/M output. No duplicate fallback records counted. Not provider invoice reconciliation.",
+  "result": "Cancellation blocked publisher but did not prevent detector inference; agent session already completed a no_action proposal.",
+  "phone_basis": "User was instructed to cancel from phone; device identity not independently established by GitHub API.",
+  "limitations": [
+    "No proof an in-flight provider request was interrupted",
+    "No assertion that cancellation immediately stops all inference or billing",
+    "Whole-run gh log retrieval failed for cancelled publisher with no steps; per-job logs retained"
+  ]
+}

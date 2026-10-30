@@ -1,0 +1,47 @@
+{
+  "status": "published",
+  "proposal": {
+    "label": "needs reproducible example",
+    "comment": "Could you attach a small, shareable reproduction that still triggers the issue? Please provide either (a) a minimal `.duckdb` file showing the problem, or (b) a short SQL sequence that creates the schema, applies the same sequence of INSERT/UPDATE/DELETE operations you used, and then runs the exact `INSERT OR REPLACE` statement that fails. Include the exact table name and primary-key column used in your example.",
+    "rationale": "The report gives the failing statement and schema but the bug only appears on certain preexisting database files; without a sample database or the specific sequence of prior operations that produce the affected file, the failure cannot be reproduced or diagnosed."
+  },
+  "actions": [
+    "add_comment",
+    "add_label"
+  ],
+  "run_id": "40639351555",
+  "configuration_sha": "e3311e64aa639fb29dd5e4d519a19503d3c2f6ee",
+  "input_sha256": "19b0a24a27375ded201fd16fca60dba0163aedb700e6e0c65e33813b18facb69",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "/comments?per_page=100&page=1",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/comments",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/labels",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+pre_activation	Set up job	﻿2026-10-29T03:06:49.4407986Z Current runner version: '2.338.1'
+pre_activation	Set up job	2026-10-29T03:06:49.4435168Z ##[group]Runner Image Provisioner
+pre_activation	Set up job	2026-10-29T03:06:49.4436040Z Hosted Compute Agent
+pre_activation	Set up job	2026-10-29T03:06:49.4436748Z Version: 20261021.618
+pre_activation	Set up job	2026-10-29T03:06:49.4437399Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+pre_activation	Set up job	2026-10-29T03:06:49.4439064Z Build Date: 2026-10-21T00:45:21Z
+pre_activation	Set up job	2026-10-29T03:06:49.4439818Z Worker ID: {9f5520a8-6aba-408d-b8a8-7bb4749e5057}
+pre_activation	Set up job	2026-10-29T03:06:49.4440538Z Region: northcentralus
+pre_activation	Set up job	2026-10-29T03:06:49.4441110Z Cloud: Azure
+pre_activation	Set up job	2026-10-29T03:06:49.4441704Z ##[endgroup]
+pre_activation	Set up job	2026-10-29T03:06:49.4443524Z ##[group]VM Image
+pre_activation	Set up job	2026-10-29T03:06:49.4444230Z - OS: Linux (x64)
+pre_activation	Set up job	2026-10-29T03:06:49.4444844Z - Source: Docker
+pre_activation	Set up job	2026-10-29T03:06:49.4445447Z - Name: ubuntu:24.04
+pre_activation	Set up job	2026-10-29T03:06:49.4446076Z - Version: 20261026.36.1
+pre_activation	Set up job	2026-10-29T03:06:49.4446681Z ##[endgroup]
+pre_activation	Set up job	2026-10-29T03:06:49.4447794Z ##[group]GITHUB_TOKEN Permissions
+pre_activation	Set up job	2026-10-29T03:06:49.4449710Z Actions: read
+pre_activation	Set up job	2026-10-29T03:06:49.4450383Z Metadata: read
+pre_activation	Set up job	2026-10-29T03:06:49.4450954Z ##[endgroup]
+pre_activation	Set up job	2026-10-29T03:06:49.4494300Z Secret source: Actions
+pre_activation	Set up job	2026-10-29T03:06:49.4495307Z Cache mode: write
+pre_activation	Set up job	2026-10-29T03:06:49.4496113Z Prepare workflow directory
+pre_activation	Set up job	2026-10-29T03:06:49.5811010Z Prepare all required actions
+pre_activation	Set up job	2026-10-29T03:06:49.5933300Z Getting action download info
+pre_activation	Set up job	2026-10-29T03:06:49.9126537Z Download action repository 'github/gh-aw-actions@de9d416cac8ccea1a2d582cb07c4b7db96946792' (SHA:de9d416cac8ccea1a2d582cb07c4b7db96946792)
+pre_activation	Set up job	2026-10-29T03:06:51.2035904Z Download action repository 'actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3' (SHA:3a2844b7e9c422d3c10d287c895573f7108da1b3)
+pre_activation	Set up job	2026-10-29T03:06:51.5995217Z Complete job name: pre_activation
+pre_activation	Setup Scripts	﻿2026-10-29T03:06:51.6792702Z ##[group]Run github/gh-aw-actions/setup@de9d416cac8ccea1a2d582cb07c4b7db96946792
+pre_activation	Setup Scripts	2026-10-29T03:06:51.6795195Z with:
+pre_activation	Setup Scripts	2026-10-29T03:06:51.6795753Z   destination: /home/runner/work/_temp/gh-aw/actions
+pre_activation	Setup Scripts	2026-10-29T03:06:51.6796415Z   job-name: pre_activation
+pre_activation	Setup Scripts	2026-10-29T03:06:51.6796962Z   safe-output-artifact-client: false
+pre_activation	Setup Scripts	2026-10-29T03:06:51.6797825Z env:
+pre_activation	Setup Scripts	2026-10-29T03:06:51.6798280Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+pre_activation	Setup Scripts	2026-10-29T03:06:51.6799639Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+pre_activation	Setup Scripts	2026-10-29T03:06:51.6801081Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+pre_activation	Setup Scripts	2026-10-29T03:06:51.6803321Z   OTEL_EXPORTER_OTLP_HEADERS: 
+pre_activation	Setup Scripts	2026-10-29T03:06:51.6803902Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+pre_activation	Setup Scripts	2026-10-29T03:06:51.6804517Z   GH_AW_OTLP_IF_MISSING: ignore
+pre_activation	Setup Scripts	2026-10-29T03:06:51.6805047Z   GH_AW_RUNTIME_FEATURES: 
+pre_activation	Setup Scripts	2026-10-29T03:06:51.6805591Z   GH_AW_SETUP_WORKFLOW_NAME: DuckDB issue triage
+pre_activation	Setup Scripts	2026-10-29T03:06:51.6806668Z   GH_AW_CURRENT_WORKFLOW_REF: andreleocl/duckdb-triage-agent/.github/workflows/issue-triage.lock.yml@refs/heads/main
+pre_activation	Setup Scripts	2026-10-29T03:06:51.6807654Z   GH_AW_INFO_VERSION: 0.164.0
+pre_activation	Setup Scripts	2026-10-29T03:06:51.6808172Z   GH_AW_INFO_AWF_VERSION: v0.28.70
+pre_activation	Setup Scripts	2026-10-29T03:06:51.6808709Z   GH_AW_INFO_ENGINE_ID: codex
+pre_activation	Setup Scripts	2026-10-29T03:06:51.6809233Z   GH_AW_SETUP_AW_CONTEXT: 
+pre_activation	Setup Scripts	2026-10-29T03:06:51.6809718Z ##[endgroup]
+pre_activation	Setup Scripts	2026-10-29T03:06:54.0774477Z Successfully copied 759 files to /home/runner/work/_temp/gh-aw/actions
+pre_activation	Setup Scripts	2026-10-29T03:06:54.0807066Z ##[group]Runtime TLS inventory (not a trust-store attestation)
+pre_activation	Setup Scripts	2026-10-29T03:06:54.1707750Z curl 8.5.0 (x86_64-pc-linux-gnu) libcurl/8.5.0 OpenSSL/3.0.13 zlib/1.3 brotli/1.1.0 zstd/1.5.5 libidn2/2.3.7 libpsl/0.21.2 (+libidn2/2.3.7) libssh/0.10.6/openssl/zlib nghttp2/1.59.0 librtmp/2.3 OpenLDAP/2.6.10
+pre_activation	Setup Scripts	2026-10-29T03:06:54.2000504Z Node v24.22.1; OpenSSL 3.5.9
+pre_activation	Setup Scripts	2026-10-29T03:06:54.2050111Z Go: unavailable; binary build-toolchain inspection unavailable
+pre_activation	Setup Scripts	2026-10-29T03:06:54.2056659Z Python/certifi: not inspected by shell setup; record each client's interpreter, TLS backend and selected CA bundle separately.
+pre_activation	Setup Scripts	2026-10-29T03:06:54.2057976Z Container, proxy and MCP trust stores require separate image/vendor evidence.
+pre_activation	Setup Scripts	2026-10-29T03:06:54.2058950Z Browser updates and successful HTTPS connections do not attest CA distrust.
+pre_activation	Setup Scripts	2026-10-29T03:06:54.2063188Z ##[endgroup]
+pre_activation	Setup Scripts	2026-10-29T03:06:54.6504709Z Successfully copied 112 mcp-scripts files to /home/runner/work/_temp/gh-aw/mcp-scripts
+pre_activation	Setup Scripts	2026-10-29T03:06:55.0335335Z [info] [otlp] INPUT_TRACE_ID not set, a new trace ID will be generated
+pre_activation	Setup Scripts	2026-10-29T03:06:55.0337781Z Successfully copied 170 safe-outputs files to /home/runner/work/_temp/gh-aw/safeoutputs
+pre_activation	Setup Scripts	2026-10-29T03:06:55.0895666Z [info] [otlp] no OTLP endpoints have usable credentials, skipping setup span
+pre_activation	Setup Scripts	2026-10-29T03:06:55.0911678Z [info] [otlp] resolved trace-id=e25ae10f94863f0b17051e6dfbd1a8c4
+pre_activation	Setup Scripts	2026-10-29T03:06:55.0914195Z [info] [otlp] trace-id=e25ae10f94863f0b17051e6dfbd1a8c4 written to GITHUB_OUTPUT
+pre_activation	Setup Scripts	2026-10-29T03:06:55.0915123Z [info] [otlp] span-id=87751d1cc27b4cd0 written to GITHUB_OUTPUT
+pre_activation	Setup Scripts	2026-10-29T03:06:55.0915884Z [info] [otlp] GITHUB_AW_OTEL_TRACE_ID written to GITHUB_ENV
+pre_activation	Setup Scripts	2026-10-29T03:06:55.0916671Z [info] [otlp] GITHUB_AW_OTEL_PARENT_SPAN_ID written to GITHUB_ENV
+pre_activation	Setup Scripts	2026-10-29T03:06:55.0917470Z [info] [otlp] GITHUB_AW_OTEL_JOB_START_MS written to GITHUB_ENV
+pre_activation	Check team membership for workflow	﻿2026-10-29T03:06:55.1103876Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+pre_activation	Check team membership for workflow	2026-10-29T03:06:55.1105033Z with:
+pre_activation	Check team membership for workflow	2026-10-29T03:06:55.1108947Z   github-token: ***
+pre_activation	Check team membership for workflow	2026-10-29T03:06:55.1110942Z   script: const path = require('path');
+pre_activation	Check team membership for workflow	const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+pre_activation	Check team membership for workflow	const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+pre_activation	Check team membership for workflow	setupGlobals(core, github, context, exec, io, getOctokit);
+pre_activation	Check team membership for workflow	const { main } = require(path.join(actionsDir, 'check_membership.cjs'));
+pre_activation	Check team membership for workflow	await main();
+pre_activation	Check team membership for workflow	
+pre_activation	Check team membership for workflow	2026-10-29T03:06:55.1113381Z   debug: false
+pre_activation	Check team membership for workflow	2026-10-29T03:06:55.1113852Z   user-agent: actions/github-script
+pre_activation	Check team membership for workflow	2026-10-29T03:06:55.1114394Z   result-encoding: json
+pre_activation	Check team membership for workflow	2026-10-29T03:06:55.1114859Z   retries: 0
+pre_activation	Check team membership for workflow	2026-10-29T03:06:55.1115344Z   retry-exempt-status-codes: 400,401,403,404,422
+pre_activation	Check team membership for workflow	2026-10-29T03:06:55.1115932Z env:
+pre_activation	Check team membership for workflow	2026-10-29T03:06:55.1116353Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+pre_activation	Check team membership for workflow	2026-10-29T03:06:55.1116907Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+pre_activation	Check team membership for workflow	2026-10-29T03:06:55.1118320Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+pre_activation	Check team membership for workflow	2026-10-29T03:06:55.1119849Z   OTEL_EXPORTER_OTLP_HEADERS: 
+pre_activation	Check team membership for workflow	2026-10-29T03:06:55.1120421Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+pre_activation	Check team membership for workflow	2026-10-29T03:06:55.1121026Z   GH_AW_OTLP_IF_MISSING: ignore
+pre_activation	Check team membership for workflow	2026-10-29T03:06:55.1121542Z   GH_AW_RUNTIME_FEATURES: 
+pre_activation	Check team membership for workflow	2026-10-29T03:06:55.1122330Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+pre_activation	Check team membership for workflow	2026-10-29T03:06:55.1123029Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 87751d1cc27b4cd0
+pre_activation	Check team membership for workflow	2026-10-29T03:06:55.1123945Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243215040
+pre_activation	Check team membership for workflow	2026-10-29T03:06:55.1124657Z   GH_AW_REQUIRED_ROLES: admin,maintainer,write
+pre_activation	Check team membership for workflow	2026-10-29T03:06:55.1125345Z ##[endgroup]
+pre_activation	Check team membership for workflow	2026-10-29T03:06:55.5433673Z Event workflow_dispatch requires validation
+pre_activation	Check team membership for workflow	2026-10-29T03:06:55.5450716Z Checking if user 'andreleocl' has required permissions for andreleocl/duckdb-triage-agent
+pre_activation	Check team membership for workflow	2026-10-29T03:06:55.5452358Z Required permissions: admin, maintainer, write
+pre_activation	Check team membership for workflow	2026-10-29T03:06:55.5453107Z Repository permission level: admin
+pre_activation	Check team membership for workflow	2026-10-29T03:06:55.5456941Z ✅ User has admin access to repository
+pre_activation	Check user rate limit	﻿2026-10-29T03:06:55.5556249Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+pre_activation	Check user rate limit	2026-10-29T03:06:55.5557134Z with:
+pre_activation	Check user rate limit	2026-10-29T03:06:55.5561200Z   github-token: ***
+pre_activation	Check user rate limit	2026-10-29T03:06:55.5563659Z   script: const path = require('path');
+pre_activation	Check user rate limit	const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+pre_activation	Check user rate limit	const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+pre_activation	Check user rate limit	setupGlobals(core, github, context, exec, io, getOctokit);
+pre_activation	Check user rate limit	const { main } = require(path.join(actionsDir, 'check_rate_limit.cjs'));
+pre_activation	Check user rate limit	await main();
+pre_activation	Check user rate limit	
+pre_activation	Check user rate limit	2026-10-29T03:06:55.5565882Z   debug: false
+pre_activation	Check user rate limit	2026-10-29T03:06:55.5566461Z   user-agent: actions/github-script
+pre_activation	Check user rate limit	2026-10-29T03:06:55.5567110Z   result-encoding: json
+pre_activation	Check user rate limit	2026-10-29T03:06:55.5567719Z   retries: 0
+pre_activation	Check user rate limit	2026-10-29T03:06:55.5568478Z   retry-exempt-status-codes: 400,401,403,404,422
+pre_activation	Check user rate limit	2026-10-29T03:06:55.5569134Z env:
+pre_activation	Check user rate limit	2026-10-29T03:06:55.5569699Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+pre_activation	Check user rate limit	2026-10-29T03:06:55.5570353Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+pre_activation	Check user rate limit	2026-10-29T03:06:55.5572135Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+pre_activation	Check user rate limit	2026-10-29T03:06:55.5573734Z   OTEL_EXPORTER_OTLP_HEADERS: 
+pre_activation	Check user rate limit	2026-10-29T03:06:55.5574413Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+pre_activation	Check user rate limit	2026-10-29T03:06:55.5575109Z   GH_AW_OTLP_IF_MISSING: ignore
+pre_activation	Check user rate limit	2026-10-29T03:06:55.5575716Z   GH_AW_RUNTIME_FEATURES: 
+pre_activation	Check user rate limit	2026-10-29T03:06:55.5576453Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+pre_activation	Check user rate limit	2026-10-29T03:06:55.5577245Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 87751d1cc27b4cd0
+pre_activation	Check user rate limit	2026-10-29T03:06:55.5578310Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243215040
+pre_activation	Check user rate limit	2026-10-29T03:06:55.5579006Z   GH_AW_RATE_LIMIT_MAX: 5
+pre_activation	Check user rate limit	2026-10-29T03:06:55.5579579Z   GH_AW_RATE_LIMIT_WINDOW: 60
+pre_activation	Check user rate limit	2026-10-29T03:06:55.5580237Z   GH_AW_RATE_LIMIT_EVENTS: workflow_dispatch
+pre_activation	Check user rate limit	2026-10-29T03:06:55.5580893Z ##[endgroup]
+pre_activation	Check user rate limit	2026-10-29T03:06:55.9861716Z    Using workflow file: issue-triage.lock.yml (from GITHUB_WORKFLOW_REF)
+pre_activation	Check user rate limit	2026-10-29T03:06:55.9867796Z 🔍 Checking rate limit for user 'andreleocl' on workflow 'issue-triage.lock.yml'
+pre_activation	Check user rate limit	2026-10-29T03:06:55.9871286Z    Configuration: max=5 runs per 60 minutes
+pre_activation	Check user rate limit	2026-10-29T03:06:55.9874667Z    Current event: workflow_dispatch
+pre_activation	Check user rate limit	2026-10-29T03:06:55.9878108Z    Ignored roles: admin, maintain, write
+pre_activation	Check user rate limit	2026-10-29T03:06:56.1135525Z    User 'andreleocl' has permission level: admin
+pre_activation	Check user rate limit	2026-10-29T03:06:56.1136816Z ✅ User 'andreleocl' has ignored role 'admin'; skipping rate limit check
+pre_activation	Post Setup Scripts	﻿2026-10-29T03:06:56.1332298Z Post job cleanup.
+pre_activation	Post Setup Scripts	2026-10-29T03:06:56.2216299Z [info] [otlp] sending conclusion span "gh-aw.pre_activation.conclusion" to configured endpoints
+pre_activation	Post Setup Scripts	2026-10-29T03:06:56.2284386Z [info] [otlp] conclusion span export attempted
+pre_activation	Post Setup Scripts	2026-10-29T03:06:56.2289770Z Cleaning up /tmp/gh-aw...
+pre_activation	Post Setup Scripts	2026-10-29T03:06:56.2420667Z Cleaned up /tmp/gh-aw
+pre_activation	Post Setup Scripts	2026-10-29T03:06:56.2571324Z No /tmp/awf-*-chroot-home directories found
+pre_activation	Post Setup Scripts	2026-10-29T03:06:56.2663737Z No /tmp/awf-chroot-* directories found
+pre_activation	Complete job	﻿2026-10-29T03:06:56.2794216Z Evaluate and set job outputs
+pre_activation	Complete job	2026-10-29T03:06:56.2809274Z Set output 'activated'
+pre_activation	Complete job	2026-10-29T03:06:56.2811122Z Set output 'setup-parent-span-id'
+pre_activation	Complete job	2026-10-29T03:06:56.2812521Z Set output 'setup-span-id'
+pre_activation	Complete job	2026-10-29T03:06:56.2813267Z Set output 'setup-trace-id'
+pre_activation	Complete job	2026-10-29T03:06:56.2814344Z Cleaning up orphan processes

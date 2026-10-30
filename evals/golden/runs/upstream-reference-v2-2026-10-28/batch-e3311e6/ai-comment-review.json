@@ -1,0 +1,177 @@
+[
+  {
+    "case_id": "h01",
+    "reviewer": "Codex (AI-assisted; not independent human review)",
+    "comment_assessment": "not_applicable",
+    "notes": "Correct no-action reference; no public comment.",
+    "human_review_pending": true
+  },
+  {
+    "case_id": "h02",
+    "reviewer": "Codex (AI-assisted; not independent human review)",
+    "comment_assessment": "not_applicable",
+    "notes": "Correct no-action reference; no public comment.",
+    "human_review_pending": true
+  },
+  {
+    "case_id": "h03",
+    "reviewer": "Codex (AI-assisted; not independent human review)",
+    "comment_assessment": "not_applicable",
+    "notes": "Correct no-action reference; no public comment.",
+    "human_review_pending": true
+  },
+  {
+    "case_id": "h04",
+    "reviewer": "Codex (AI-assisted; not independent human review)",
+    "comment_assessment": "not_applicable",
+    "notes": "Correct no-action reference; no public comment.",
+    "human_review_pending": true
+  },
+  {
+    "case_id": "h05",
+    "reviewer": "Codex (AI-assisted; not independent human review)",
+    "comment_assessment": "not_applicable",
+    "notes": "Correct no-action reference; no public comment.",
+    "human_review_pending": true
+  },
+  {
+    "case_id": "h06",
+    "reviewer": "Codex (AI-assisted; not independent human review)",
+    "comment_assessment": "not_applicable",
+    "notes": "Correct no-action reference; no public comment.",
+    "human_review_pending": true
+  },
+  {
+    "case_id": "h07",
+    "reviewer": "Codex (AI-assisted; not independent human review)",
+    "comment_assessment": "not_applicable",
+    "notes": "Correct no-action reference; no public comment.",
+    "human_review_pending": true
+  },
+  {
+    "case_id": "h08",
+    "reviewer": "Codex (AI-assisted; not independent human review)",
+    "comment_assessment": "concern",
+    "notes": "Expected no action. Requests private affected file pair or shareable alternative; repeats build/version information and does not acknowledge the unsuccessful synthetic reduction.",
+    "human_review_pending": true
+  },
+  {
+    "case_id": "h09",
+    "reviewer": "Codex (AI-assisted; not independent human review)",
+    "comment_assessment": "not_applicable",
+    "notes": "Correct no-action reference; no public comment.",
+    "human_review_pending": true
+  },
+  {
+    "case_id": "h10",
+    "reviewer": "Codex (AI-assisted; not independent human review)",
+    "comment_assessment": "concern",
+    "notes": "Wrong label; claims we cannot reproduce although no tests ran. Requests extra trace/build/latest-release checks rather than the approved focused OS/client/additional-setup clarification.",
+    "human_review_pending": true
+  },
+  {
+    "case_id": "h11",
+    "reviewer": "Codex (AI-assisted; not independent human review)",
+    "comment_assessment": "missing",
+    "notes": "No comment despite expected clarification of notebook frontend and interrupt method.",
+    "human_review_pending": true
+  },
+  {
+    "case_id": "h12",
+    "reviewer": "Codex (AI-assisted; not independent human review)",
+    "comment_assessment": "aligned",
+    "notes": "Requests schema/sample data and DISTINCT versus GROUP BY outputs; consistent with the approved focus.",
+    "human_review_pending": true
+  },
+  {
+    "case_id": "h13",
+    "reviewer": "Codex (AI-assisted; not independent human review)",
+    "comment_assessment": "concern",
+    "notes": "Requests precise version already supplied, omits explicit table definition, and offers a small CSV without acknowledging the size-dependent failure or a generator.",
+    "human_review_pending": true
+  },
+  {
+    "case_id": "h14",
+    "reviewer": "Codex (AI-assisted; not independent human review)",
+    "comment_assessment": "concern",
+    "notes": "Requests suitable sample/generator, but also repeats the already supplied crash-backtrace request.",
+    "human_review_pending": true
+  },
+  {
+    "case_id": "h15",
+    "reviewer": "Codex (AI-assisted; not independent human review)",
+    "comment_assessment": "aligned",
+    "notes": "Correctly identifies the 1.5.2/1.5.3 conflict and requests the actual build. Useful comment despite reproduction-versus-information label mismatch.",
+    "human_review_pending": true
+  },
+  {
+    "case_id": "h16",
+    "reviewer": "Codex (AI-assisted; not independent human review)",
+    "comment_assessment": "needs_human_review",
+    "notes": "Covers table/index definitions and sample data. Extra database/dump or settings request is broad and does not explicitly acknowledge confidentiality; opening shareable-reproducer wording may qualify it.",
+    "human_review_pending": true
+  },
+  {
+    "case_id": "h17",
+    "reviewer": "Codex (AI-assisted; not independent human review)",
+    "comment_assessment": "concern",
+    "notes": "Covers missing schemas, failing INSERT/SELECT and sample data, but additionally reconfirms the already reported version regression and asks for more error details.",
+    "human_review_pending": true
+  },
+  {
+    "case_id": "h18",
+    "reviewer": "Codex (AI-assisted; not independent human review)",
+    "comment_assessment": "concern",
+    "notes": "Offers shareable/generated Parquet data but requests full traceback without a concrete reason and asserts that two disagreeing files are sufficient without testing.",
+    "human_review_pending": true
+  },
+  {
+    "case_id": "h19",
+    "reviewer": "Codex (AI-assisted; not independent human review)",
+    "comment_assessment": "concern",
+    "notes": "Does not acknowledge unsuccessful tiny VALUES reduction; asks for a small sample or VALUES again and repeats error-detail requests.",
+    "human_review_pending": true
+  },
+  {
+    "case_id": "h20",
+    "reviewer": "Codex (AI-assisted; not independent human review)",
+    "comment_assessment": "missing",
+    "notes": "No comment despite expected request for complete runnable function-registration code. Rationale calls the issue in scope but considers the supplied snippets sufficient.",
+    "human_review_pending": true
+  },
+  {
+    "case_id": "h21",
+    "reviewer": "Codex (AI-assisted; not independent human review)",
+    "comment_assessment": "missing",
+    "notes": "No comment despite approved request asking whether additional database setup or Node.js calls are needed. Agent lacks the later maintainer testing evidence.",
+    "human_review_pending": true
+  },
+  {
+    "case_id": "h22",
+    "reviewer": "Codex (AI-assisted; not independent human review)",
+    "comment_assessment": "concern",
+    "notes": "Requests a shareable affected database or state-creation sequence, but omits acknowledgment of the failed fresh-database attempt and repeats table/primary-key details.",
+    "human_review_pending": true
+  },
+  {
+    "case_id": "h23",
+    "reviewer": "Codex (AI-assisted; not independent human review)",
+    "comment_assessment": "concern",
+    "notes": "Does not cover inserted data, export, failing read-back and destination DDL as a complete sequence. Focuses partly on S3/503 and its published COPY fragment is malformed/redacted.",
+    "human_review_pending": true
+  },
+  {
+    "case_id": "h24",
+    "reviewer": "Codex (AI-assisted; not independent human review)",
+    "comment_assessment": "needs_human_review",
+    "notes": "Covers compiler/toolchain, compile/link commands, DLL origin, architecture and Debug/Release/CRT. Header provenance is not explicitly requested.",
+    "human_review_pending": true
+  },
+  {
+    "case_id": "h25",
+    "reviewer": "Codex (AI-assisted; not independent human review)",
+    "comment_assessment": "concern",
+    "notes": "Correct label, but asks for build-system files and pip/setuptools versions instead of identifying unusable DuckDB version 22 and requesting the source release tag or commit.",
+    "human_review_pending": true
+  }
+]

@@ -1,0 +1,1310 @@
+detection	Set up job	﻿2026-10-29T03:09:30.1197193Z Current runner version: '2.338.0'
+detection	Set up job	2026-10-29T03:09:30.1223177Z ##[group]Runner Image Provisioner
+detection	Set up job	2026-10-29T03:09:30.1224189Z Hosted Compute Agent
+detection	Set up job	2026-10-29T03:09:30.1224798Z Version: 20261021.618
+detection	Set up job	2026-10-29T03:09:30.1225423Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+detection	Set up job	2026-10-29T03:09:30.1226181Z Build Date: 2026-10-21T00:45:21Z
+detection	Set up job	2026-10-29T03:09:30.1226878Z Worker ID: {7fbad981-8377-4602-b54d-f6af522b0b58}
+detection	Set up job	2026-10-29T03:09:30.1227691Z Region: westus3
+detection	Set up job	2026-10-29T03:09:30.1228827Z Cloud: Azure
+detection	Set up job	2026-10-29T03:09:30.1229405Z ##[endgroup]
+detection	Set up job	2026-10-29T03:09:30.1230838Z ##[group]Operating System
+detection	Set up job	2026-10-29T03:09:30.1231480Z Ubuntu
+detection	Set up job	2026-10-29T03:09:30.1232013Z 24.04.5
+detection	Set up job	2026-10-29T03:09:30.1232568Z LTS
+detection	Set up job	2026-10-29T03:09:30.1233130Z ##[endgroup]
+detection	Set up job	2026-10-29T03:09:30.1233697Z ##[group]Runner Image
+detection	Set up job	2026-10-29T03:09:30.1234323Z Image: ubuntu-24.04
+detection	Set up job	2026-10-29T03:09:30.1234868Z Version: 20261025.353.1
+detection	Set up job	2026-10-29T03:09:30.1235951Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+detection	Set up job	2026-10-29T03:09:30.1237692Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
+detection	Set up job	2026-10-29T03:09:30.1238891Z ##[endgroup]
+detection	Set up job	2026-10-29T03:09:30.1240042Z ##[group]GITHUB_TOKEN Permissions
+detection	Set up job	2026-10-29T03:09:30.1242414Z Contents: read
+detection	Set up job	2026-10-29T03:09:30.1243028Z Metadata: read
+detection	Set up job	2026-10-29T03:09:30.1243621Z ##[endgroup]
+detection	Set up job	2026-10-29T03:09:30.1245892Z Secret source: Actions
+detection	Set up job	2026-10-29T03:09:30.1246867Z Cache mode: write
+detection	Set up job	2026-10-29T03:09:30.1247865Z Prepare workflow directory
+detection	Set up job	2026-10-29T03:09:30.1777143Z Prepare all required actions
+detection	Set up job	2026-10-29T03:09:30.1831375Z Getting action download info
+detection	Set up job	2026-10-29T03:09:30.4962657Z Download action repository 'github/gh-aw-actions@de9d416cac8ccea1a2d582cb07c4b7db96946792' (SHA:de9d416cac8ccea1a2d582cb07c4b7db96946792)
+detection	Set up job	2026-10-29T03:09:31.5380453Z Download action repository 'actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333' (SHA:9000827ccba6bdab643e8b6fd33ac0654aef8333)
+detection	Set up job	2026-10-29T03:09:32.1668460Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+detection	Set up job	2026-10-29T03:09:32.2031235Z Download action repository 'actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3' (SHA:3a2844b7e9c422d3c10d287c895573f7108da1b3)
+detection	Set up job	2026-10-29T03:09:32.7362490Z Download action repository 'actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1' (SHA:949feb2413d6458794dcd2491c4babbbce0c15c1)
+detection	Set up job	2026-10-29T03:09:32.8722041Z Download action repository 'actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+detection	Set up job	2026-10-29T03:09:33.1004794Z Complete job name: detection
+detection	Setup Scripts	﻿2026-10-29T03:09:33.1725926Z ##[group]Run github/gh-aw-actions/setup@de9d416cac8ccea1a2d582cb07c4b7db96946792
+detection	Setup Scripts	2026-10-29T03:09:33.1726721Z with:
+detection	Setup Scripts	2026-10-29T03:09:33.1727130Z   destination: /home/runner/work/_temp/gh-aw/actions
+detection	Setup Scripts	2026-10-29T03:09:33.1727528Z   job-name: detection
+detection	Setup Scripts	2026-10-29T03:09:33.1727925Z   trace-id: e25ae10f94863f0b17051e6dfbd1a8c4
+detection	Setup Scripts	2026-10-29T03:09:33.1728589Z   parent-span-id: 87751d1cc27b4cd0
+detection	Setup Scripts	2026-10-29T03:09:33.1729006Z   safe-output-artifact-client: false
+detection	Setup Scripts	2026-10-29T03:09:33.1729528Z env:
+detection	Setup Scripts	2026-10-29T03:09:33.1729825Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+detection	Setup Scripts	2026-10-29T03:09:33.1730255Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+detection	Setup Scripts	2026-10-29T03:09:33.1731082Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+detection	Setup Scripts	2026-10-29T03:09:33.1731973Z   OTEL_EXPORTER_OTLP_HEADERS: 
+detection	Setup Scripts	2026-10-29T03:09:33.1732352Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+detection	Setup Scripts	2026-10-29T03:09:33.1732724Z   GH_AW_OTLP_IF_MISSING: ignore
+detection	Setup Scripts	2026-10-29T03:09:33.1733212Z   GH_AW_RUNTIME_FEATURES: 
+detection	Setup Scripts	2026-10-29T03:09:33.1733562Z   GH_AW_SETUP_WORKFLOW_NAME: DuckDB issue triage
+detection	Setup Scripts	2026-10-29T03:09:33.1734233Z   GH_AW_CURRENT_WORKFLOW_REF: andreleocl/duckdb-triage-agent/.github/workflows/issue-triage.lock.yml@refs/heads/main
+detection	Setup Scripts	2026-10-29T03:09:33.1735038Z   GH_AW_INFO_VERSION: 0.164.0
+detection	Setup Scripts	2026-10-29T03:09:33.1735408Z   GH_AW_INFO_AWF_VERSION: v0.28.70
+detection	Setup Scripts	2026-10-29T03:09:33.1735762Z   GH_AW_INFO_ENGINE_ID: codex
+detection	Setup Scripts	2026-10-29T03:09:33.1736082Z   GH_AW_SETUP_AW_CONTEXT: 
+detection	Setup Scripts	2026-10-29T03:09:33.1736472Z ##[endgroup]
+detection	Setup Scripts	2026-10-29T03:09:35.3782079Z Successfully copied 759 files to /home/runner/work/_temp/gh-aw/actions
+detection	Setup Scripts	2026-10-29T03:09:35.3802053Z ##[group]Runtime TLS inventory (not a trust-store attestation)
+detection	Setup Scripts	2026-10-29T03:09:35.3869181Z curl 8.5.0 (x86_64-pc-linux-gnu) libcurl/8.5.0 OpenSSL/3.0.13 zlib/1.3 brotli/1.1.0 zstd/1.5.5 libidn2/2.3.7 libpsl/0.21.2 (+libidn2/2.3.7) libssh/0.10.6/openssl/zlib nghttp2/1.59.0 librtmp/2.3 OpenLDAP/2.6.10
+detection	Setup Scripts	2026-10-29T03:09:35.4103401Z Node v22.23.4; OpenSSL 3.5.9
+detection	Setup Scripts	2026-10-29T03:09:36.0032245Z go1.24.13
+detection	Setup Scripts	2026-10-29T03:09:36.0085185Z /usr/bin/gh: go1.27.3
+detection	Setup Scripts	2026-10-29T03:09:36.0087803Z gh-aw: unavailable for build-toolchain inspection
+detection	Setup Scripts	2026-10-29T03:09:36.0089402Z Python/certifi: not inspected by shell setup; record each client's interpreter, TLS backend and selected CA bundle separately.
+detection	Setup Scripts	2026-10-29T03:09:36.0090319Z Container, proxy and MCP trust stores require separate image/vendor evidence.
+detection	Setup Scripts	2026-10-29T03:09:36.0090969Z Browser updates and successful HTTPS connections do not attest CA distrust.
+detection	Setup Scripts	2026-10-29T03:09:36.0093013Z ##[endgroup]
+detection	Setup Scripts	2026-10-29T03:09:36.3581710Z Successfully copied 112 mcp-scripts files to /home/runner/work/_temp/gh-aw/mcp-scripts
+detection	Setup Scripts	2026-10-29T03:09:36.5598630Z Successfully copied 170 safe-outputs files to /home/runner/work/_temp/gh-aw/safeoutputs
+detection	Setup Scripts	2026-10-29T03:09:36.6134216Z [info] [otlp] INPUT_TRACE_ID=e25ae10f94863f0b17051e6dfbd1a8c4 (will reuse activation trace)
+detection	Setup Scripts	2026-10-29T03:09:36.6135496Z [info] [otlp] INPUT_PARENT_SPAN_ID=87751d1cc27b4cd0 (will parent setup span)
+detection	Setup Scripts	2026-10-29T03:09:36.6159918Z [info] [otlp] no OTLP endpoints have usable credentials, skipping setup span
+detection	Setup Scripts	2026-10-29T03:09:36.6190063Z [info] [otlp] resolved trace-id=e25ae10f94863f0b17051e6dfbd1a8c4
+detection	Setup Scripts	2026-10-29T03:09:36.6191132Z [info] [otlp] trace-id=e25ae10f94863f0b17051e6dfbd1a8c4 written to GITHUB_OUTPUT
+detection	Setup Scripts	2026-10-29T03:09:36.6192120Z [info] [otlp] span-id=cecbcc1384f1eb26 written to GITHUB_OUTPUT
+detection	Setup Scripts	2026-10-29T03:09:36.6193103Z [info] [otlp] parent-span-id=87751d1cc27b4cd0 written to GITHUB_OUTPUT
+detection	Setup Scripts	2026-10-29T03:09:36.6202255Z [info] [otlp] GITHUB_AW_OTEL_TRACE_ID written to GITHUB_ENV
+detection	Setup Scripts	2026-10-29T03:09:36.6204332Z [info] [otlp] GITHUB_AW_OTEL_PARENT_SPAN_ID written to GITHUB_ENV
+detection	Setup Scripts	2026-10-29T03:09:36.6205939Z [info] [otlp] GITHUB_AW_OTEL_JOB_START_MS written to GITHUB_ENV
+detection	Download activation artifact	﻿2026-10-29T03:09:36.7366809Z ##[group]Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+detection	Download activation artifact	2026-10-29T03:09:36.7367360Z with:
+detection	Download activation artifact	2026-10-29T03:09:36.7367733Z   name: activation
+detection	Download activation artifact	2026-10-29T03:09:36.7368095Z   path: /tmp/gh-aw
+detection	Download activation artifact	2026-10-29T03:09:36.7368615Z   merge-multiple: false
+detection	Download activation artifact	2026-10-29T03:09:36.7369003Z   repository: andreleocl/duckdb-triage-agent
+detection	Download activation artifact	2026-10-29T03:09:36.7369389Z   run-id: 40810270665
+detection	Download activation artifact	2026-10-29T03:09:36.7369775Z   skip-decompress: false
+detection	Download activation artifact	2026-10-29T03:09:36.7370200Z   digest-mismatch: error
+detection	Download activation artifact	2026-10-29T03:09:36.7370545Z env:
+detection	Download activation artifact	2026-10-29T03:09:36.7370900Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+detection	Download activation artifact	2026-10-29T03:09:36.7371312Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+detection	Download activation artifact	2026-10-29T03:09:36.7372122Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+detection	Download activation artifact	2026-10-29T03:09:36.7372994Z   OTEL_EXPORTER_OTLP_HEADERS: 
+detection	Download activation artifact	2026-10-29T03:09:36.7373399Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+detection	Download activation artifact	2026-10-29T03:09:36.7373934Z   GH_AW_OTLP_IF_MISSING: ignore
+detection	Download activation artifact	2026-10-29T03:09:36.7374286Z   GH_AW_RUNTIME_FEATURES: 
+detection	Download activation artifact	2026-10-29T03:09:36.7374688Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+detection	Download activation artifact	2026-10-29T03:09:36.7375156Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: cecbcc1384f1eb26
+detection	Download activation artifact	2026-10-29T03:09:36.7375549Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243376619
+detection	Download activation artifact	2026-10-29T03:09:36.7375972Z ##[endgroup]
+detection	Download activation artifact	2026-10-29T03:09:36.9752001Z Downloading single artifact
+detection	Download activation artifact	2026-10-29T03:09:37.2340908Z Preparing to download the following artifacts:
+detection	Download activation artifact	2026-10-29T03:09:37.2342409Z - activation (ID: 12870351064, Size: 85478, Expected Digest: sha256:89011068c5c530dc8cf2a2521f3a20082c4be08c7549f3c2a6f8447ca0ba7ac8)
+detection	Download activation artifact	2026-10-29T03:09:37.6786471Z Redirecting to blob download url: https://productionresultssa14.blob.core.windows.net/actions-results/ac4bb203-7638-4bba-98fd-f311e2414d13/workflow-job-run-faf238ba-1a39-5023-b171-161bb8615ed1/artifacts/b15526c9c0e75acea3d1f8055de216c85f0330baf8604e13d8c6ce90fb90d6d7.zip
+detection	Download activation artifact	2026-10-29T03:09:37.6788547Z Starting download of artifact to: /tmp/gh-aw
+detection	Download activation artifact	2026-10-29T03:09:37.9110468Z (node:4128) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+detection	Download activation artifact	2026-10-29T03:09:37.9112549Z (Use `node --trace-deprecation ...` to show where the warning was created)
+detection	Download activation artifact	2026-10-29T03:09:38.0099571Z SHA256 digest of downloaded artifact is 89011068c5c530dc8cf2a2521f3a20082c4be08c7549f3c2a6f8447ca0ba7ac8
+detection	Download activation artifact	2026-10-29T03:09:38.0100677Z Artifact download completed successfully.
+detection	Download activation artifact	2026-10-29T03:09:38.0101407Z Total of 1 artifact(s) downloaded
+detection	Download activation artifact	2026-10-29T03:09:38.0103974Z Download artifact has finished successfully
+detection	Download agent output artifact	﻿2026-10-29T03:09:38.0249673Z ##[group]Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+detection	Download agent output artifact	2026-10-29T03:09:38.0250207Z with:
+detection	Download agent output artifact	2026-10-29T03:09:38.0250612Z   pattern: {agent,agent-output-fallback}
+detection	Download agent output artifact	2026-10-29T03:09:38.0251010Z   merge-multiple: true
+detection	Download agent output artifact	2026-10-29T03:09:38.0251369Z   path: /tmp/gh-aw/
+detection	Download agent output artifact	2026-10-29T03:09:38.0251821Z   repository: andreleocl/duckdb-triage-agent
+detection	Download agent output artifact	2026-10-29T03:09:38.0252181Z   run-id: 40810270665
+detection	Download agent output artifact	2026-10-29T03:09:38.0252655Z   skip-decompress: false
+detection	Download agent output artifact	2026-10-29T03:09:38.0253011Z   digest-mismatch: error
+detection	Download agent output artifact	2026-10-29T03:09:38.0253423Z env:
+detection	Download agent output artifact	2026-10-29T03:09:38.0253739Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+detection	Download agent output artifact	2026-10-29T03:09:38.0254114Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+detection	Download agent output artifact	2026-10-29T03:09:38.0255054Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+detection	Download agent output artifact	2026-10-29T03:09:38.0255911Z   OTEL_EXPORTER_OTLP_HEADERS: 
+detection	Download agent output artifact	2026-10-29T03:09:38.0256384Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+detection	Download agent output artifact	2026-10-29T03:09:38.0256865Z   GH_AW_OTLP_IF_MISSING: ignore
+detection	Download agent output artifact	2026-10-29T03:09:38.0257274Z   GH_AW_RUNTIME_FEATURES: 
+detection	Download agent output artifact	2026-10-29T03:09:38.0257680Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+detection	Download agent output artifact	2026-10-29T03:09:38.0258388Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: cecbcc1384f1eb26
+detection	Download agent output artifact	2026-10-29T03:09:38.0258863Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243376619
+detection	Download agent output artifact	2026-10-29T03:09:38.0259213Z ##[endgroup]
+detection	Download agent output artifact	2026-10-29T03:09:38.4112953Z Found 6 artifact(s)
+detection	Download agent output artifact	2026-10-29T03:09:38.4115507Z Filtering artifacts by pattern '{agent,agent-output-fallback}'
+detection	Download agent output artifact	2026-10-29T03:09:38.4143047Z Preparing to download the following artifacts:
+detection	Download agent output artifact	2026-10-29T03:09:38.4144926Z - agent-output-fallback (ID: 12870485611, Size: 2279, Expected Digest: sha256:9d845f0c233211d2b9560a8b1d099c8c3766689731183a8c0aa7cfc1b1b3c989)
+detection	Download agent output artifact	2026-10-29T03:09:38.4147006Z - agent (ID: 12869798681, Size: 72947, Expected Digest: sha256:555f939f70cf2708f5d5d05e0c6513c86560989ff643959c2de701c66627bc11)
+detection	Download agent output artifact	2026-10-29T03:09:38.8630287Z Redirecting to blob download url: https://productionresultssa14.blob.core.windows.net/actions-results/ac4bb203-7638-4bba-98fd-f311e2414d13/workflow-job-run-aab130c1-ede5-5ee8-9310-bf42509db0fa/artifacts/daa0da78a4f899948f184de1c2267d4cff63de5d280692a88333f56508605a86.zip
+detection	Download agent output artifact	2026-10-29T03:09:38.8642819Z Starting download of artifact to: /tmp/gh-aw
+detection	Download agent output artifact	2026-10-29T03:09:38.8734363Z Redirecting to blob download url: https://productionresultssa14.blob.core.windows.net/actions-results/ac4bb203-7638-4bba-98fd-f311e2414d13/workflow-job-run-aab130c1-ede5-5ee8-9310-bf42509db0fa/artifacts/d4f0bc5a29de06b510f9aa428f1eedba926012b591fef7a518e776a7c9bd1824.zip
+detection	Download agent output artifact	2026-10-29T03:09:38.8735841Z Starting download of artifact to: /tmp/gh-aw
+detection	Download agent output artifact	2026-10-29T03:09:39.0979579Z (node:4140) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+detection	Download agent output artifact	2026-10-29T03:09:39.0981060Z (Use `node --trace-deprecation ...` to show where the warning was created)
+detection	Download agent output artifact	2026-10-29T03:09:39.1108667Z SHA256 digest of downloaded artifact is 9d845f0c233211d2b9560a8b1d099c8c3766689731183a8c0aa7cfc1b1b3c989
+detection	Download agent output artifact	2026-10-29T03:09:39.1109413Z Artifact download completed successfully.
+detection	Download agent output artifact	2026-10-29T03:09:39.2069620Z SHA256 digest of downloaded artifact is 555f939f70cf2708f5d5d05e0c6513c86560989ff643959c2de701c66627bc11
+detection	Download agent output artifact	2026-10-29T03:09:39.2070873Z Artifact download completed successfully.
+detection	Download agent output artifact	2026-10-29T03:09:39.2071526Z Total of 2 artifact(s) downloaded
+detection	Download agent output artifact	2026-10-29T03:09:39.2075503Z Download artifact has finished successfully
+detection	Setup agent output environment variable	﻿2026-10-29T03:09:39.2216125Z ##[group]Run mkdir -p /tmp/gh-aw/
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2216858Z ^[[36;1mmkdir -p /tmp/gh-aw/^[[0m
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2217364Z ^[[36;1mfind "/tmp/gh-aw/" -type f -print^[[0m
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2217987Z ^[[36;1mif [ -f "/tmp/gh-aw/agent_output.json" ]; then^[[0m
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2218901Z ^[[36;1m  echo "GH_AW_AGENT_OUTPUT=/tmp/gh-aw/agent_output.json" >> "$GITHUB_OUTPUT"^[[0m
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2219436Z ^[[36;1mfi^[[0m
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2237969Z shell: /usr/bin/bash -e {0}
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2238785Z env:
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2239174Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2239648Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2240523Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2241461Z   OTEL_EXPORTER_OTLP_HEADERS: 
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2241902Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2242461Z   GH_AW_OTLP_IF_MISSING: ignore
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2242865Z   GH_AW_RUNTIME_FEATURES: 
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2243325Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2243846Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: cecbcc1384f1eb26
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2244273Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243376619
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2244706Z ##[endgroup]
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2327243Z /tmp/gh-aw/agent/model-resolution.json
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2327950Z /tmp/gh-aw/base/.github/aw/actions-lock.json
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2328806Z /tmp/gh-aw/base/.github/CODEOWNERS
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2329507Z /tmp/gh-aw/base/.github/workflows/issue-triage.lock.yml
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2330200Z /tmp/gh-aw/base/.github/workflows/issue-triage.md
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2331140Z /tmp/gh-aw/base/.github/workflows/checks.yml
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2331732Z /tmp/gh-aw/base/.github/codex/LICENSE
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2332315Z /tmp/gh-aw/base/.github/codex/detection-config.toml
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2333084Z /tmp/gh-aw/base/.github/codex/model-catalog.json
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2333690Z /tmp/gh-aw/base/.github/codex/README.md
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2334230Z /tmp/gh-aw/github_rate_limits.jsonl
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2334715Z /tmp/gh-aw/mcp-logs/mcp-gateway.log
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2335137Z /tmp/gh-aw/mcp-logs/gateway.md
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2335556Z /tmp/gh-aw/mcp-logs/configuration.jsonl
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2335981Z /tmp/gh-aw/mcp-logs/observed-url-domains.json
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2336452Z /tmp/gh-aw/mcp-logs/rpc-messages.jsonl
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2336964Z /tmp/gh-aw/mcp-logs/tools.json
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2337344Z /tmp/gh-aw/mcp-logs/safeoutputs.log
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2337733Z /tmp/gh-aw/otel.jsonl
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2338115Z /tmp/gh-aw/agent-stdio.log
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2338746Z /tmp/gh-aw/safeoutputs.jsonl
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2339185Z /tmp/gh-aw/agent_execution.json
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2339558Z /tmp/gh-aw/agent-session.jsonl
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2339968Z /tmp/gh-aw/aw_info.json
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2340310Z /tmp/gh-aw/awf-config.json
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2340860Z /tmp/gh-aw/agent_output.json
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2341273Z /tmp/gh-aw/skill_inventory.json
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2341620Z /tmp/gh-aw/agent_usage.json
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2342233Z /tmp/gh-aw/models.json
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2342614Z /tmp/gh-aw/pre-agent-audit.txt
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2343042Z /tmp/gh-aw/aw-prompts/prompt.txt
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2343419Z /tmp/gh-aw/aw-prompts/user.txt
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2343847Z /tmp/gh-aw/aw-prompts/prompt-template.txt
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2344305Z /tmp/gh-aw/aw-prompts/system.txt
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2344708Z /tmp/gh-aw/aw-prompts/prompt-import-tree.json
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2345163Z /tmp/gh-aw/agent-errors.jsonl
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2345540Z /tmp/gh-aw/agent_execution_exit_code.txt
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2346060Z /tmp/gh-aw/sandbox/firewall/audit/image-manifest.json
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2346552Z /tmp/gh-aw/sandbox/firewall/audit/sensitive-paths.json
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2347073Z /tmp/gh-aw/sandbox/firewall/audit/docker-compose.redacted.yml
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2347613Z /tmp/gh-aw/sandbox/firewall/audit/awf-resolved-config.json
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2348418Z /tmp/gh-aw/sandbox/firewall/audit/policy-manifest.json
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2349194Z /tmp/gh-aw/sandbox/firewall/audit/squid.conf
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2349669Z /tmp/gh-aw/sandbox/firewall/logs/access.log
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2350081Z /tmp/gh-aw/sandbox/firewall/logs/audit.jsonl
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2350590Z /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2351141Z /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/otel.jsonl
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2351701Z /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/agent-runtime/started-at-ms
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2352356Z /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-tracker-audit.jsonl
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2352892Z /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/models.json
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2353416Z /tmp/gh-aw/sandbox/firewall/logs/cache.log
+detection	Setup agent output environment variable	2026-10-29T03:09:39.2353855Z /tmp/gh-aw/sandbox/firewall/awf-reflect.json
+detection	Initialize detection execution evidence	﻿2026-10-29T03:09:39.2401358Z ##[group]Run mkdir -p "/tmp/gh-aw/threat-detection"
+detection	Initialize detection execution evidence	2026-10-29T03:09:39.2401969Z ^[[36;1mmkdir -p "/tmp/gh-aw/threat-detection"^[[0m
+detection	Initialize detection execution evidence	2026-10-29T03:09:39.2402545Z ^[[36;1mevidence_tmp="/tmp/gh-aw/threat-detection/execution.json.tmp"^[[0m
+detection	Initialize detection execution evidence	2026-10-29T03:09:39.2403360Z ^[[36;1mprintf '{"version":1,"component":"detection","run_id":%s,"run_attempt":%s,"state":"not_started"}\n' "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" > "$evidence_tmp"^[[0m
+detection	Initialize detection execution evidence	2026-10-29T03:09:39.2404189Z ^[[36;1mmv "$evidence_tmp" "/tmp/gh-aw/threat-detection/execution.json"^[[0m
+detection	Initialize detection execution evidence	2026-10-29T03:09:39.2416858Z shell: /usr/bin/bash -e {0}
+detection	Initialize detection execution evidence	2026-10-29T03:09:39.2417239Z env:
+detection	Initialize detection execution evidence	2026-10-29T03:09:39.2417612Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+detection	Initialize detection execution evidence	2026-10-29T03:09:39.2418088Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+detection	Initialize detection execution evidence	2026-10-29T03:09:39.2419135Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+detection	Initialize detection execution evidence	2026-10-29T03:09:39.2420051Z   OTEL_EXPORTER_OTLP_HEADERS: 
+detection	Initialize detection execution evidence	2026-10-29T03:09:39.2420581Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+detection	Initialize detection execution evidence	2026-10-29T03:09:39.2421112Z   GH_AW_OTLP_IF_MISSING: ignore
+detection	Initialize detection execution evidence	2026-10-29T03:09:39.2421538Z   GH_AW_RUNTIME_FEATURES: 
+detection	Initialize detection execution evidence	2026-10-29T03:09:39.2421974Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+detection	Initialize detection execution evidence	2026-10-29T03:09:39.2422465Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: cecbcc1384f1eb26
+detection	Initialize detection execution evidence	2026-10-29T03:09:39.2422945Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243376619
+detection	Initialize detection execution evidence	2026-10-29T03:09:39.2423374Z ##[endgroup]
+detection	Clear inherited Copilot session state	﻿2026-10-29T03:09:39.2509971Z ##[group]Run rm -rf /tmp/gh-aw/sandbox/agent/logs/copilot-session-state
+detection	Clear inherited Copilot session state	2026-10-29T03:09:39.2510681Z ^[[36;1mrm -rf /tmp/gh-aw/sandbox/agent/logs/copilot-session-state^[[0m
+detection	Clear inherited Copilot session state	2026-10-29T03:09:39.2522771Z shell: /usr/bin/bash -e {0}
+detection	Clear inherited Copilot session state	2026-10-29T03:09:39.2523179Z env:
+detection	Clear inherited Copilot session state	2026-10-29T03:09:39.2523584Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+detection	Clear inherited Copilot session state	2026-10-29T03:09:39.2524033Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+detection	Clear inherited Copilot session state	2026-10-29T03:09:39.2524929Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+detection	Clear inherited Copilot session state	2026-10-29T03:09:39.2525774Z   OTEL_EXPORTER_OTLP_HEADERS: 
+detection	Clear inherited Copilot session state	2026-10-29T03:09:39.2526358Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+detection	Clear inherited Copilot session state	2026-10-29T03:09:39.2526845Z   GH_AW_OTLP_IF_MISSING: ignore
+detection	Clear inherited Copilot session state	2026-10-29T03:09:39.2527208Z   GH_AW_RUNTIME_FEATURES: 
+detection	Clear inherited Copilot session state	2026-10-29T03:09:39.2527666Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+detection	Clear inherited Copilot session state	2026-10-29T03:09:39.2528164Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: cecbcc1384f1eb26
+detection	Clear inherited Copilot session state	2026-10-29T03:09:39.2528954Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243376619
+detection	Clear inherited Copilot session state	2026-10-29T03:09:39.2529344Z ##[endgroup]
+detection	Clean stale firewall files from agent artifact	﻿2026-10-29T03:09:39.2601355Z ##[group]Run rm -rf /tmp/gh-aw/sandbox/firewall/logs
+detection	Clean stale firewall files from agent artifact	2026-10-29T03:09:39.2601860Z ^[[36;1mrm -rf /tmp/gh-aw/sandbox/firewall/logs^[[0m
+detection	Clean stale firewall files from agent artifact	2026-10-29T03:09:39.2602373Z ^[[36;1mrm -rf /tmp/gh-aw/sandbox/firewall/audit^[[0m
+detection	Clean stale firewall files from agent artifact	2026-10-29T03:09:39.2614061Z shell: /usr/bin/bash -e {0}
+detection	Clean stale firewall files from agent artifact	2026-10-29T03:09:39.2614439Z env:
+detection	Clean stale firewall files from agent artifact	2026-10-29T03:09:39.2614835Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+detection	Clean stale firewall files from agent artifact	2026-10-29T03:09:39.2615234Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+detection	Clean stale firewall files from agent artifact	2026-10-29T03:09:39.2616186Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+detection	Clean stale firewall files from agent artifact	2026-10-29T03:09:39.2617071Z   OTEL_EXPORTER_OTLP_HEADERS: 
+detection	Clean stale firewall files from agent artifact	2026-10-29T03:09:39.2617484Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+detection	Clean stale firewall files from agent artifact	2026-10-29T03:09:39.2617947Z   GH_AW_OTLP_IF_MISSING: ignore
+detection	Clean stale firewall files from agent artifact	2026-10-29T03:09:39.2618611Z   GH_AW_RUNTIME_FEATURES: 
+detection	Clean stale firewall files from agent artifact	2026-10-29T03:09:39.2619090Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+detection	Clean stale firewall files from agent artifact	2026-10-29T03:09:39.2619735Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: cecbcc1384f1eb26
+detection	Clean stale firewall files from agent artifact	2026-10-29T03:09:39.2620157Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243376619
+detection	Clean stale firewall files from agent artifact	2026-10-29T03:09:39.2620615Z ##[endgroup]
+detection	Download container images	﻿2026-10-29T03:09:39.2703887Z ##[group]Run bash "${RUNNER_TEMP}/gh-aw/actions/download_docker_images.sh" ghcr.io/github/gh-aw-firewall/agent:0.28.70@sha256:b15ab48cbbab02904eb9bbd359a398db59690eebbea1e6934d47ed2bb407dd34 ghcr.io/github/gh-aw-firewall/api-proxy:0.28.70@sha256:9ac8f9c7294e892c916de3da9d2588dfd8cd4931e5c39b00143266d7ed9fd52a ghcr.io/github/gh-aw-firewall/squid:0.28.70@sha256:b5bc53f4becfd96e926e63c83831f1b3c9512f713c83161d2b8c9b7204b3e917
+detection	Download container images	2026-10-29T03:09:39.2706642Z ^[[36;1mbash "${RUNNER_TEMP}/gh-aw/actions/download_docker_images.sh" ghcr.io/github/gh-aw-firewall/agent:0.28.70@sha256:b15ab48cbbab02904eb9bbd359a398db59690eebbea1e6934d47ed2bb407dd34 ghcr.io/github/gh-aw-firewall/api-proxy:0.28.70@sha256:9ac8f9c7294e892c916de3da9d2588dfd8cd4931e5c39b00143266d7ed9fd52a ghcr.io/github/gh-aw-firewall/squid:0.28.70@sha256:b5bc53f4becfd96e926e63c83831f1b3c9512f713c83161d2b8c9b7204b3e917^[[0m
+detection	Download container images	2026-10-29T03:09:39.2719010Z shell: /usr/bin/bash -e {0}
+detection	Download container images	2026-10-29T03:09:39.2719411Z env:
+detection	Download container images	2026-10-29T03:09:39.2719831Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+detection	Download container images	2026-10-29T03:09:39.2720372Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+detection	Download container images	2026-10-29T03:09:39.2721240Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+detection	Download container images	2026-10-29T03:09:39.2722099Z   OTEL_EXPORTER_OTLP_HEADERS: 
+detection	Download container images	2026-10-29T03:09:39.2722596Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+detection	Download container images	2026-10-29T03:09:39.2723014Z   GH_AW_OTLP_IF_MISSING: ignore
+detection	Download container images	2026-10-29T03:09:39.2723437Z   GH_AW_RUNTIME_FEATURES: 
+detection	Download container images	2026-10-29T03:09:39.2723849Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+detection	Download container images	2026-10-29T03:09:39.2724400Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: cecbcc1384f1eb26
+detection	Download container images	2026-10-29T03:09:39.2724866Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243376619
+detection	Download container images	2026-10-29T03:09:39.2725262Z ##[endgroup]
+detection	Download container images	2026-10-29T03:09:39.2770288Z Starting download of 3 image(s) with max 4 concurrent downloads...
+detection	Download container images	2026-10-29T03:09:39.2827205Z Attempt 1 of 3: Pulling ghcr.io/github/gh-aw-firewall/squid:0.28.70@sha256:b5bc53f4becfd96e926e63c83831f1b3c9512f713c83161d2b8c9b7204b3e917...
+detection	Download container images	2026-10-29T03:09:39.2829143Z Attempt 1 of 3: Pulling ghcr.io/github/gh-aw-firewall/api-proxy:0.28.70@sha256:9ac8f9c7294e892c916de3da9d2588dfd8cd4931e5c39b00143266d7ed9fd52a...
+detection	Download container images	2026-10-29T03:09:39.2830703Z Attempt 1 of 3: Pulling ghcr.io/github/gh-aw-firewall/agent:0.28.70@sha256:b15ab48cbbab02904eb9bbd359a398db59690eebbea1e6934d47ed2bb407dd34...
+detection	Download container images	2026-10-29T03:09:40.0196502Z ghcr.io/github/gh-aw-firewall/squid:0.28.70@sha256:b5bc53f4becfd96e926e63c83831f1b3c9512f713c83161d2b8c9b7204b3e917
+detection	Download container images	2026-10-29T03:09:40.0201541Z Successfully pulled ghcr.io/github/gh-aw-firewall/squid:0.28.70@sha256:b5bc53f4becfd96e926e63c83831f1b3c9512f713c83161d2b8c9b7204b3e917
+detection	Download container images	2026-10-29T03:09:40.0202861Z Tagging digest-pinned image as ghcr.io/github/gh-aw-firewall/squid:0.28.70
+detection	Download container images	2026-10-29T03:09:40.0358833Z Aliasing ghcr.io/github/gh-aw-firewall/squid:0.28.70 as ghcr.io/github/gh-aw-firewall/squid:latest
+detection	Download container images	2026-10-29T03:09:50.7106818Z ghcr.io/github/gh-aw-firewall/api-proxy:0.28.70@sha256:9ac8f9c7294e892c916de3da9d2588dfd8cd4931e5c39b00143266d7ed9fd52a
+detection	Download container images	2026-10-29T03:09:50.7124112Z Successfully pulled ghcr.io/github/gh-aw-firewall/api-proxy:0.28.70@sha256:9ac8f9c7294e892c916de3da9d2588dfd8cd4931e5c39b00143266d7ed9fd52a
+detection	Download container images	2026-10-29T03:09:50.7126196Z Tagging digest-pinned image as ghcr.io/github/gh-aw-firewall/api-proxy:0.28.70
+detection	Download container images	2026-10-29T03:09:50.7307856Z Aliasing ghcr.io/github/gh-aw-firewall/api-proxy:0.28.70 as ghcr.io/github/gh-aw-firewall/api-proxy:latest
+detection	Download container images	2026-10-29T03:09:52.1225853Z ghcr.io/github/gh-aw-firewall/agent:0.28.70@sha256:b15ab48cbbab02904eb9bbd359a398db59690eebbea1e6934d47ed2bb407dd34
+detection	Download container images	2026-10-29T03:09:52.1242703Z Successfully pulled ghcr.io/github/gh-aw-firewall/agent:0.28.70@sha256:b15ab48cbbab02904eb9bbd359a398db59690eebbea1e6934d47ed2bb407dd34
+detection	Download container images	2026-10-29T03:09:52.1243605Z Tagging digest-pinned image as ghcr.io/github/gh-aw-firewall/agent:0.28.70
+detection	Download container images	2026-10-29T03:09:52.1414486Z Aliasing ghcr.io/github/gh-aw-firewall/agent:0.28.70 as ghcr.io/github/gh-aw-firewall/agent:latest
+detection	Download container images	2026-10-29T03:09:52.1581199Z All images downloaded successfully
+detection	Check if detection needed	﻿2026-10-29T03:09:52.1624148Z ##[group]Run if [[ -n "$OUTPUT_TYPES" || "$HAS_PATCH" == "true" ]]; then
+detection	Check if detection needed	2026-10-29T03:09:52.1624866Z ^[[36;1mif [[ -n "$OUTPUT_TYPES" || "$HAS_PATCH" == "true" ]]; then^[[0m
+detection	Check if detection needed	2026-10-29T03:09:52.1625387Z ^[[36;1m  echo "run_detection=true" >> "$GITHUB_OUTPUT"^[[0m
+detection	Check if detection needed	2026-10-29T03:09:52.1625988Z ^[[36;1m  echo "Detection will run: output_types=$OUTPUT_TYPES, has_patch=$HAS_PATCH"^[[0m
+detection	Check if detection needed	2026-10-29T03:09:52.1626524Z ^[[36;1melse^[[0m
+detection	Check if detection needed	2026-10-29T03:09:52.1626940Z ^[[36;1m  echo "run_detection=false" >> "$GITHUB_OUTPUT"^[[0m
+detection	Check if detection needed	2026-10-29T03:09:52.1627491Z ^[[36;1m  echo "Detection skipped: no agent outputs or patches to analyze"^[[0m
+detection	Check if detection needed	2026-10-29T03:09:52.1628005Z ^[[36;1mfi^[[0m
+detection	Check if detection needed	2026-10-29T03:09:52.1642055Z shell: /usr/bin/bash -e {0}
+detection	Check if detection needed	2026-10-29T03:09:52.1642492Z env:
+detection	Check if detection needed	2026-10-29T03:09:52.1642871Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+detection	Check if detection needed	2026-10-29T03:09:52.1643281Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+detection	Check if detection needed	2026-10-29T03:09:52.1644189Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+detection	Check if detection needed	2026-10-29T03:09:52.1645185Z   OTEL_EXPORTER_OTLP_HEADERS: 
+detection	Check if detection needed	2026-10-29T03:09:52.1645631Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+detection	Check if detection needed	2026-10-29T03:09:52.1646072Z   GH_AW_OTLP_IF_MISSING: ignore
+detection	Check if detection needed	2026-10-29T03:09:52.1646484Z   GH_AW_RUNTIME_FEATURES: 
+detection	Check if detection needed	2026-10-29T03:09:52.1646959Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+detection	Check if detection needed	2026-10-29T03:09:52.1647429Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: cecbcc1384f1eb26
+detection	Check if detection needed	2026-10-29T03:09:52.1647907Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243376619
+detection	Check if detection needed	2026-10-29T03:09:52.1648525Z   OUTPUT_TYPES: submit_triage
+detection	Check if detection needed	2026-10-29T03:09:52.1648922Z   HAS_PATCH: false
+detection	Check if detection needed	2026-10-29T03:09:52.1649287Z ##[endgroup]
+detection	Check if detection needed	2026-10-29T03:09:52.1684095Z Detection will run: output_types=submit_triage, has_patch=false
+detection	Clear MCP Config for detection	﻿2026-10-29T03:09:52.1722594Z ##[group]Run rm -f "${RUNNER_TEMP}/gh-aw/mcp-config/mcp-servers.json"
+detection	Clear MCP Config for detection	2026-10-29T03:09:52.1723223Z ^[[36;1mrm -f "${RUNNER_TEMP}/gh-aw/mcp-config/mcp-servers.json"^[[0m
+detection	Clear MCP Config for detection	2026-10-29T03:09:52.1723760Z ^[[36;1mrm -f "$HOME/.copilot/mcp-config.json"^[[0m
+detection	Clear MCP Config for detection	2026-10-29T03:09:52.1724261Z ^[[36;1mrm -f "$GITHUB_WORKSPACE/.gemini/settings.json"^[[0m
+detection	Clear MCP Config for detection	2026-10-29T03:09:52.1736885Z shell: /usr/bin/bash -e {0}
+detection	Clear MCP Config for detection	2026-10-29T03:09:52.1737426Z env:
+detection	Clear MCP Config for detection	2026-10-29T03:09:52.1737790Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+detection	Clear MCP Config for detection	2026-10-29T03:09:52.1738572Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+detection	Clear MCP Config for detection	2026-10-29T03:09:52.1739524Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+detection	Clear MCP Config for detection	2026-10-29T03:09:52.1740454Z   OTEL_EXPORTER_OTLP_HEADERS: 
+detection	Clear MCP Config for detection	2026-10-29T03:09:52.1740863Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+detection	Clear MCP Config for detection	2026-10-29T03:09:52.1741342Z   GH_AW_OTLP_IF_MISSING: ignore
+detection	Clear MCP Config for detection	2026-10-29T03:09:52.1741734Z   GH_AW_RUNTIME_FEATURES: 
+detection	Clear MCP Config for detection	2026-10-29T03:09:52.1742300Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+detection	Clear MCP Config for detection	2026-10-29T03:09:52.1742771Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: cecbcc1384f1eb26
+detection	Clear MCP Config for detection	2026-10-29T03:09:52.1743245Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243376619
+detection	Clear MCP Config for detection	2026-10-29T03:09:52.1743697Z ##[endgroup]
+detection	Prepare threat detection files	﻿2026-10-29T03:09:52.1837699Z ##[group]Run bash "${RUNNER_TEMP}/gh-aw/actions/prepare_threat_detection_files.sh"
+detection	Prepare threat detection files	2026-10-29T03:09:52.1838671Z ^[[36;1mbash "${RUNNER_TEMP}/gh-aw/actions/prepare_threat_detection_files.sh"^[[0m
+detection	Prepare threat detection files	2026-10-29T03:09:52.1850628Z shell: /usr/bin/bash -e {0}
+detection	Prepare threat detection files	2026-10-29T03:09:52.1851036Z env:
+detection	Prepare threat detection files	2026-10-29T03:09:52.1851453Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+detection	Prepare threat detection files	2026-10-29T03:09:52.1851899Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+detection	Prepare threat detection files	2026-10-29T03:09:52.1852764Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+detection	Prepare threat detection files	2026-10-29T03:09:52.1853619Z   OTEL_EXPORTER_OTLP_HEADERS: 
+detection	Prepare threat detection files	2026-10-29T03:09:52.1854118Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+detection	Prepare threat detection files	2026-10-29T03:09:52.1854540Z   GH_AW_OTLP_IF_MISSING: ignore
+detection	Prepare threat detection files	2026-10-29T03:09:52.1854960Z   GH_AW_RUNTIME_FEATURES: 
+detection	Prepare threat detection files	2026-10-29T03:09:52.1855374Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+detection	Prepare threat detection files	2026-10-29T03:09:52.1855923Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: cecbcc1384f1eb26
+detection	Prepare threat detection files	2026-10-29T03:09:52.1856459Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243376619
+detection	Prepare threat detection files	2026-10-29T03:09:52.1856901Z ##[endgroup]
+detection	Prepare threat detection files	2026-10-29T03:09:52.1980192Z Prepared threat detection files:
+detection	Prepare threat detection files	2026-10-29T03:09:52.1991067Z total 24
+detection	Prepare threat detection files	2026-10-29T03:09:52.1991536Z drwxr-xr-x 3 runner runner 4096 Oct 29 03:09 .
+detection	Prepare threat detection files	2026-10-29T03:09:52.1992167Z drwxr-xr-x 8 runner runner 4096 Oct 29 03:09 ..
+detection	Prepare threat detection files	2026-10-29T03:09:52.1993035Z -rw-r--r-- 1 runner runner  481 Oct 29 03:09 agent_output.json
+detection	Prepare threat detection files	2026-10-29T03:09:52.1993779Z drwxr-xr-x 2 runner runner 4096 Oct 29 03:09 aw-prompts
+detection	Prepare threat detection files	2026-10-29T03:09:52.1994518Z -rw-r--r-- 1 runner runner 1519 Oct 29 03:09 aw_info.json
+detection	Prepare threat detection files	2026-10-29T03:09:52.1994970Z -rw-r--r-- 1 runner runner   97 Oct 29 03:09 execution.json
+detection	Extend detector model lookup timeout	﻿2026-10-29T03:09:52.2031852Z ##[group]Run python - <<'PY'
+detection	Extend detector model lookup timeout	2026-10-29T03:09:52.2032335Z ^[[36;1mpython - <<'PY'^[[0m
+detection	Extend detector model lookup timeout	2026-10-29T03:09:52.2032730Z ^[[36;1mimport os^[[0m
+detection	Extend detector model lookup timeout	2026-10-29T03:09:52.2033122Z ^[[36;1mfrom pathlib import Path^[[0m
+detection	Extend detector model lookup timeout	2026-10-29T03:09:52.2033650Z ^[[36;1mpath = Path(os.environ["RUNNER_TEMP"]) / "gh-aw/actions/awf_reflect.cjs"^[[0m
+detection	Extend detector model lookup timeout	2026-10-29T03:09:52.2034278Z ^[[36;1msource = path.read_text(encoding="utf-8")^[[0m
+detection	Extend detector model lookup timeout	2026-10-29T03:09:52.2034784Z ^[[36;1mold = "const AWF_MODELS_URL_TIMEOUT_MS = 3000;"^[[0m
+detection	Extend detector model lookup timeout	2026-10-29T03:09:52.2035214Z ^[[36;1mif source.count(old) != 1:^[[0m
+detection	Extend detector model lookup timeout	2026-10-29T03:09:52.2035818Z ^[[36;1m    raise SystemExit("Unexpected gh-aw model lookup implementation; review timeout workaround")^[[0m
+detection	Extend detector model lookup timeout	2026-10-29T03:09:52.2036628Z ^[[36;1mpath.write_text(source.replace(old, "const AWF_MODELS_URL_TIMEOUT_MS = 15000;"), encoding="utf-8")^[[0m
+detection	Extend detector model lookup timeout	2026-10-29T03:09:52.2037167Z ^[[36;1mPY^[[0m
+detection	Extend detector model lookup timeout	2026-10-29T03:09:52.2049543Z shell: /usr/bin/bash -e {0}
+detection	Extend detector model lookup timeout	2026-10-29T03:09:52.2050055Z env:
+detection	Extend detector model lookup timeout	2026-10-29T03:09:52.2050393Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+detection	Extend detector model lookup timeout	2026-10-29T03:09:52.2050921Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+detection	Extend detector model lookup timeout	2026-10-29T03:09:52.2051797Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+detection	Extend detector model lookup timeout	2026-10-29T03:09:52.2052854Z   OTEL_EXPORTER_OTLP_HEADERS: 
+detection	Extend detector model lookup timeout	2026-10-29T03:09:52.2053278Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+detection	Extend detector model lookup timeout	2026-10-29T03:09:52.2053725Z   GH_AW_OTLP_IF_MISSING: ignore
+detection	Extend detector model lookup timeout	2026-10-29T03:09:52.2054133Z   GH_AW_RUNTIME_FEATURES: 
+detection	Extend detector model lookup timeout	2026-10-29T03:09:52.2054587Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+detection	Extend detector model lookup timeout	2026-10-29T03:09:52.2055093Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: cecbcc1384f1eb26
+detection	Extend detector model lookup timeout	2026-10-29T03:09:52.2055568Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243376619
+detection	Extend detector model lookup timeout	2026-10-29T03:09:52.2055953Z ##[endgroup]
+detection	Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333	﻿2026-10-29T03:09:52.2411044Z ##[group]Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+detection	Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333	2026-10-29T03:09:52.2411557Z with:
+detection	Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333	2026-10-29T03:09:52.2412015Z   name: codex-model-catalog
+detection	Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333	2026-10-29T03:09:52.2412406Z   path: /tmp/gh-aw/model-catalog
+detection	Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333	2026-10-29T03:09:52.2412866Z   merge-multiple: false
+detection	Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333	2026-10-29T03:09:52.2413297Z   repository: andreleocl/duckdb-triage-agent
+detection	Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333	2026-10-29T03:09:52.2413756Z   run-id: 40810270665
+detection	Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333	2026-10-29T03:09:52.2414148Z   skip-decompress: false
+detection	Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333	2026-10-29T03:09:52.2414527Z   digest-mismatch: error
+detection	Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333	2026-10-29T03:09:52.2414921Z env:
+detection	Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333	2026-10-29T03:09:52.2415260Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+detection	Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333	2026-10-29T03:09:52.2415727Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+detection	Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333	2026-10-29T03:09:52.2416622Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+detection	Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333	2026-10-29T03:09:52.2417520Z   OTEL_EXPORTER_OTLP_HEADERS: 
+detection	Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333	2026-10-29T03:09:52.2417997Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+detection	Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333	2026-10-29T03:09:52.2418780Z   GH_AW_OTLP_IF_MISSING: ignore
+detection	Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333	2026-10-29T03:09:52.2419181Z   GH_AW_RUNTIME_FEATURES: 
+detection	Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333	2026-10-29T03:09:52.2419670Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+detection	Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333	2026-10-29T03:09:52.2420179Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: cecbcc1384f1eb26
+detection	Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333	2026-10-29T03:09:52.2420668Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243376619
+detection	Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333	2026-10-29T03:09:52.2421063Z ##[endgroup]
+detection	Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333	2026-10-29T03:09:52.3770597Z Downloading single artifact
+detection	Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333	2026-10-29T03:09:52.6126135Z Preparing to download the following artifacts:
+detection	Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333	2026-10-29T03:09:52.6127579Z - codex-model-catalog (ID: 12869947079, Size: 24381, Expected Digest: sha256:6c20106ec834a04fa104f7ebb102488e6f936a60b1bdb2918fda1f38546298c4)
+detection	Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333	2026-10-29T03:09:53.0734128Z Redirecting to blob download url: https://productionresultssa14.blob.core.windows.net/actions-results/ac4bb203-7638-4bba-98fd-f311e2414d13/workflow-job-run-faf238ba-1a39-5023-b171-161bb8615ed1/artifacts/e3a4d11c29f0c89bd6a08682efe746048b243003b3326b9dea116eae7dd42131.zip
+detection	Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333	2026-10-29T03:09:53.0736310Z Starting download of artifact to: /tmp/gh-aw/model-catalog
+detection	Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333	2026-10-29T03:09:53.3088716Z (node:4440) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+detection	Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333	2026-10-29T03:09:53.3089884Z (Use `node --trace-deprecation ...` to show where the warning was created)
+detection	Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333	2026-10-29T03:09:53.3589817Z SHA256 digest of downloaded artifact is 6c20106ec834a04fa104f7ebb102488e6f936a60b1bdb2918fda1f38546298c4
+detection	Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333	2026-10-29T03:09:53.3590776Z Artifact download completed successfully.
+detection	Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333	2026-10-29T03:09:53.3591219Z Total of 1 artifact(s) downloaded
+detection	Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333	2026-10-29T03:09:53.3593703Z Download artifact has finished successfully
+detection	Configure detector model catalogue	﻿2026-10-29T03:09:53.3709833Z ##[group]Run mkdir -p /tmp/gh-aw/detection-codex-home
+detection	Configure detector model catalogue	2026-10-29T03:09:53.3710768Z ^[[36;1mmkdir -p /tmp/gh-aw/detection-codex-home^[[0m
+detection	Configure detector model catalogue	2026-10-29T03:09:53.3711843Z ^[[36;1mcp /tmp/gh-aw/model-catalog/detection-config.toml /tmp/gh-aw/detection-codex-home/config.toml^[[0m
+detection	Configure detector model catalogue	2026-10-29T03:09:53.3731050Z shell: /usr/bin/bash -e {0}
+detection	Configure detector model catalogue	2026-10-29T03:09:53.3731758Z env:
+detection	Configure detector model catalogue	2026-10-29T03:09:53.3732292Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+detection	Configure detector model catalogue	2026-10-29T03:09:53.3732837Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+detection	Configure detector model catalogue	2026-10-29T03:09:53.3734266Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+detection	Configure detector model catalogue	2026-10-29T03:09:53.3735839Z   OTEL_EXPORTER_OTLP_HEADERS: 
+detection	Configure detector model catalogue	2026-10-29T03:09:53.3736362Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+detection	Configure detector model catalogue	2026-10-29T03:09:53.3736794Z   GH_AW_OTLP_IF_MISSING: ignore
+detection	Configure detector model catalogue	2026-10-29T03:09:53.3737269Z   GH_AW_RUNTIME_FEATURES: 
+detection	Configure detector model catalogue	2026-10-29T03:09:53.3737742Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+detection	Configure detector model catalogue	2026-10-29T03:09:53.3738805Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: cecbcc1384f1eb26
+detection	Configure detector model catalogue	2026-10-29T03:09:53.3739280Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243376619
+detection	Configure detector model catalogue	2026-10-29T03:09:53.3739790Z ##[endgroup]
+detection	Setup threat detection	﻿2026-10-29T03:09:53.3903080Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+detection	Setup threat detection	2026-10-29T03:09:53.3903624Z with:
+detection	Setup threat detection	2026-10-29T03:09:53.3904884Z   script: const path = require('path');
+detection	Setup threat detection	const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+detection	Setup threat detection	const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+detection	Setup threat detection	setupGlobals(core, github, context, exec, io, getOctokit);
+detection	Setup threat detection	const { main } = require(path.join(actionsDir, 'setup_threat_detection.cjs'));
+detection	Setup threat detection	await main();
+detection	Setup threat detection	
+detection	Setup threat detection	2026-10-29T03:09:53.3908459Z   github-token: ***
+detection	Setup threat detection	2026-10-29T03:09:53.3908946Z   debug: false
+detection	Setup threat detection	2026-10-29T03:09:53.3909331Z   user-agent: actions/github-script
+detection	Setup threat detection	2026-10-29T03:09:53.3909748Z   result-encoding: json
+detection	Setup threat detection	2026-10-29T03:09:53.3910133Z   retries: 0
+detection	Setup threat detection	2026-10-29T03:09:53.3910581Z   retry-exempt-status-codes: 400,401,403,404,422
+detection	Setup threat detection	2026-10-29T03:09:53.3911024Z env:
+detection	Setup threat detection	2026-10-29T03:09:53.3911351Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+detection	Setup threat detection	2026-10-29T03:09:53.3911783Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+detection	Setup threat detection	2026-10-29T03:09:53.3912696Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+detection	Setup threat detection	2026-10-29T03:09:53.3913701Z   OTEL_EXPORTER_OTLP_HEADERS: 
+detection	Setup threat detection	2026-10-29T03:09:53.3914123Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+detection	Setup threat detection	2026-10-29T03:09:53.3914579Z   GH_AW_OTLP_IF_MISSING: ignore
+detection	Setup threat detection	2026-10-29T03:09:53.3915021Z   GH_AW_RUNTIME_FEATURES: 
+detection	Setup threat detection	2026-10-29T03:09:53.3915474Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+detection	Setup threat detection	2026-10-29T03:09:53.3915956Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: cecbcc1384f1eb26
+detection	Setup threat detection	2026-10-29T03:09:53.3916431Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243376619
+detection	Setup threat detection	2026-10-29T03:09:53.3916910Z   WORKFLOW_NAME: DuckDB issue triage
+detection	Setup threat detection	2026-10-29T03:09:53.3917503Z   WORKFLOW_DESCRIPTION: Manually assess one sandbox issue and publish a validated clarification.
+detection	Setup threat detection	2026-10-29T03:09:53.3918027Z   HAS_PATCH: false
+detection	Setup threat detection	2026-10-29T03:09:53.3918550Z   GH_AW_DETECTION_CONTINUE_ON_ERROR: false
+detection	Setup threat detection	2026-10-29T03:09:53.3919006Z   GH_AW_DETECTION_SKIP_PROMPT_SUMMARY: true
+detection	Setup threat detection	2026-10-29T03:09:53.3919471Z ##[endgroup]
+detection	Setup threat detection	2026-10-29T03:09:53.4911949Z Removed framework system prompt block from /tmp/gh-aw/threat-detection/aw-prompts/prompt.txt
+detection	Setup threat detection	2026-10-29T03:09:53.4912943Z Prompt file found: /tmp/gh-aw/threat-detection/aw-prompts/prompt.txt (11959 bytes)
+detection	Setup threat detection	2026-10-29T03:09:53.4914636Z Agent output file found: /tmp/gh-aw/threat-detection/agent_output.json (481 bytes)
+detection	Setup threat detection	2026-10-29T03:09:53.4921632Z Skipping threat detection prompt step summary (external detector renders its own prompt)
+detection	Setup threat detection	2026-10-29T03:09:53.4923500Z Threat detection setup completed
+detection	Ensure threat-detection directory and log	﻿2026-10-29T03:09:53.5019426Z ##[group]Run mkdir -p /tmp/gh-aw/threat-detection
+detection	Ensure threat-detection directory and log	2026-10-29T03:09:53.5020033Z ^[[36;1mmkdir -p /tmp/gh-aw/threat-detection^[[0m
+detection	Ensure threat-detection directory and log	2026-10-29T03:09:53.5020609Z ^[[36;1mtouch /tmp/gh-aw/threat-detection/detection.log^[[0m
+detection	Ensure threat-detection directory and log	2026-10-29T03:09:53.5034713Z shell: /usr/bin/bash -e {0}
+detection	Ensure threat-detection directory and log	2026-10-29T03:09:53.5035149Z env:
+detection	Ensure threat-detection directory and log	2026-10-29T03:09:53.5035546Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+detection	Ensure threat-detection directory and log	2026-10-29T03:09:53.5035937Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+detection	Ensure threat-detection directory and log	2026-10-29T03:09:53.5036933Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+detection	Ensure threat-detection directory and log	2026-10-29T03:09:53.5037809Z   OTEL_EXPORTER_OTLP_HEADERS: 
+detection	Ensure threat-detection directory and log	2026-10-29T03:09:53.5038436Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+detection	Ensure threat-detection directory and log	2026-10-29T03:09:53.5038911Z   GH_AW_OTLP_IF_MISSING: ignore
+detection	Ensure threat-detection directory and log	2026-10-29T03:09:53.5039553Z   GH_AW_RUNTIME_FEATURES: 
+detection	Ensure threat-detection directory and log	2026-10-29T03:09:53.5040011Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+detection	Ensure threat-detection directory and log	2026-10-29T03:09:53.5040622Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: cecbcc1384f1eb26
+detection	Ensure threat-detection directory and log	2026-10-29T03:09:53.5041104Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243376619
+detection	Ensure threat-detection directory and log	2026-10-29T03:09:53.5041617Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+detection	Ensure threat-detection directory and log	2026-10-29T03:09:53.5042051Z ##[endgroup]
+detection	Install AWF binary	﻿2026-10-29T03:09:53.5128680Z ##[group]Run bash "${RUNNER_TEMP}/gh-aw/actions/install_awf_binary.sh" v0.28.70 --rootless
+detection	Install AWF binary	2026-10-29T03:09:53.5129428Z ^[[36;1mbash "${RUNNER_TEMP}/gh-aw/actions/install_awf_binary.sh" v0.28.70 --rootless^[[0m
+detection	Install AWF binary	2026-10-29T03:09:53.5141738Z shell: /usr/bin/bash -e {0}
+detection	Install AWF binary	2026-10-29T03:09:53.5142223Z env:
+detection	Install AWF binary	2026-10-29T03:09:53.5142578Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+detection	Install AWF binary	2026-10-29T03:09:53.5143018Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+detection	Install AWF binary	2026-10-29T03:09:53.5143905Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+detection	Install AWF binary	2026-10-29T03:09:53.5144851Z   OTEL_EXPORTER_OTLP_HEADERS: 
+detection	Install AWF binary	2026-10-29T03:09:53.5145360Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+detection	Install AWF binary	2026-10-29T03:09:53.5145804Z   GH_AW_OTLP_IF_MISSING: ignore
+detection	Install AWF binary	2026-10-29T03:09:53.5146209Z   GH_AW_RUNTIME_FEATURES: 
+detection	Install AWF binary	2026-10-29T03:09:53.5146695Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+detection	Install AWF binary	2026-10-29T03:09:53.5147264Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: cecbcc1384f1eb26
+detection	Install AWF binary	2026-10-29T03:09:53.5147756Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243376619
+detection	Install AWF binary	2026-10-29T03:09:53.5148393Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+detection	Install AWF binary	2026-10-29T03:09:53.5148872Z ##[endgroup]
+detection	Install AWF binary	2026-10-29T03:09:53.5285455Z Installing awf with checksum verification (version: v0.28.70, os: Linux, arch: x86_64)
+detection	Install AWF binary	2026-10-29T03:09:53.5308145Z Cleaning up stale AWF chroot directories...
+detection	Install AWF binary	2026-10-29T03:09:53.5542551Z Downloading checksums from 'https://github.com/github/gh-aw-firewall/releases/download/v0.28.70/checksums.txt'...
+detection	Install AWF binary	2026-10-29T03:09:53.8614293Z Node.js >= 20 detected (v22.23.4), using lightweight bundle...
+detection	Install AWF binary	2026-10-29T03:09:53.8615514Z Downloading bundle from 'https://github.com/github/gh-aw-firewall/releases/download/v0.28.70/awf-bundle.js'...
+detection	Install AWF binary	2026-10-29T03:09:54.2319005Z Verifying SHA256 checksum for awf-bundle.js...
+detection	Install AWF binary	2026-10-29T03:09:54.2395376Z ✓ Checksum verification passed for awf-bundle.js
+detection	Install AWF binary	2026-10-29T03:09:54.2446857Z ✓ Installed awf bundle to /home/runner/.local/lib/awf/awf-bundle.js
+detection	Install AWF binary	2026-10-29T03:09:54.6726724Z 0.28.70
+detection	Install AWF binary	2026-10-29T03:09:54.6783967Z ✓ AWF installation complete
+detection	Setup Node.js	﻿2026-10-29T03:09:54.6865411Z ##[group]Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+detection	Setup Node.js	2026-10-29T03:09:54.6865871Z with:
+detection	Setup Node.js	2026-10-29T03:09:54.6866139Z   node-version: 24
+detection	Setup Node.js	2026-10-29T03:09:54.6866438Z   package-manager-cache: false
+detection	Setup Node.js	2026-10-29T03:09:54.6866751Z   check-latest: false
+detection	Setup Node.js	2026-10-29T03:09:54.6869406Z   token: ***
+detection	Setup Node.js	2026-10-29T03:09:54.6869675Z env:
+detection	Setup Node.js	2026-10-29T03:09:54.6869947Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+detection	Setup Node.js	2026-10-29T03:09:54.6870317Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+detection	Setup Node.js	2026-10-29T03:09:54.6871142Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+detection	Setup Node.js	2026-10-29T03:09:54.6871972Z   OTEL_EXPORTER_OTLP_HEADERS: 
+detection	Setup Node.js	2026-10-29T03:09:54.6872325Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+detection	Setup Node.js	2026-10-29T03:09:54.6872697Z   GH_AW_OTLP_IF_MISSING: ignore
+detection	Setup Node.js	2026-10-29T03:09:54.6873008Z   GH_AW_RUNTIME_FEATURES: 
+detection	Setup Node.js	2026-10-29T03:09:54.6873364Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+detection	Setup Node.js	2026-10-29T03:09:54.6873819Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: cecbcc1384f1eb26
+detection	Setup Node.js	2026-10-29T03:09:54.6874186Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243376619
+detection	Setup Node.js	2026-10-29T03:09:54.6874564Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+detection	Setup Node.js	2026-10-29T03:09:54.6874917Z ##[endgroup]
+detection	Setup Node.js	2026-10-29T03:09:54.8164177Z Found in cache @ /opt/hostedtoolcache/node/24.22.1/x64
+detection	Setup Node.js	2026-10-29T03:09:54.8950406Z ##[group]Environment details
+detection	Setup Node.js	2026-10-29T03:09:55.2456630Z node: v24.22.1
+detection	Setup Node.js	2026-10-29T03:09:55.2457083Z npm: 11.19.1
+detection	Setup Node.js	2026-10-29T03:09:55.2457397Z yarn: 1.22.22
+detection	Setup Node.js	2026-10-29T03:09:55.2458528Z ##[endgroup]
+detection	Install Codex CLI	﻿2026-10-29T03:09:55.2613413Z ##[group]Run npm install --ignore-scripts -g @openai/codex@0.164.0
+detection	Install Codex CLI	2026-10-29T03:09:55.2613944Z ^[[36;1mnpm install --ignore-scripts -g @openai/codex@0.164.0^[[0m
+detection	Install Codex CLI	2026-10-29T03:09:55.2633827Z shell: /usr/bin/bash -e {0}
+detection	Install Codex CLI	2026-10-29T03:09:55.2634146Z env:
+detection	Install Codex CLI	2026-10-29T03:09:55.2634396Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+detection	Install Codex CLI	2026-10-29T03:09:55.2634719Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+detection	Install Codex CLI	2026-10-29T03:09:55.2635503Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+detection	Install Codex CLI	2026-10-29T03:09:55.2636251Z   OTEL_EXPORTER_OTLP_HEADERS: 
+detection	Install Codex CLI	2026-10-29T03:09:55.2636571Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+detection	Install Codex CLI	2026-10-29T03:09:55.2636909Z   GH_AW_OTLP_IF_MISSING: ignore
+detection	Install Codex CLI	2026-10-29T03:09:55.2637216Z   GH_AW_RUNTIME_FEATURES: 
+detection	Install Codex CLI	2026-10-29T03:09:55.2637547Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+detection	Install Codex CLI	2026-10-29T03:09:55.2637928Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: cecbcc1384f1eb26
+detection	Install Codex CLI	2026-10-29T03:09:55.2638498Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243376619
+detection	Install Codex CLI	2026-10-29T03:09:55.2638864Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+detection	Install Codex CLI	2026-10-29T03:09:55.2639199Z ##[endgroup]
+detection	Install Codex CLI	2026-10-29T03:10:01.4042895Z 
+detection	Install Codex CLI	2026-10-29T03:10:01.4047704Z added 2 packages in 6s
+detection	Prepare Codex config for threat-detect	﻿2026-10-29T03:10:01.4433917Z ##[group]Run mkdir -p "${RUNNER_TEMP}/gh-aw/mcp-config" "/tmp/gh-aw/mcp-config" "/tmp/gh-aw/mcp-config/logs/"
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4434699Z ^[[36;1mmkdir -p "${RUNNER_TEMP}/gh-aw/mcp-config" "/tmp/gh-aw/mcp-config" "/tmp/gh-aw/mcp-config/logs/"^[[0m
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4435324Z ^[[36;1mprintf '%s\n' "{\"mcpServers\":{}}" > "${RUNNER_TEMP}/gh-aw/mcp-config/mcp-servers.json"^[[0m
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4435896Z ^[[36;1m# Point Codex at the AWF OpenAI proxy and disable websocket startup.^[[0m
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4436497Z ^[[36;1mcat > "${RUNNER_TEMP}/gh-aw/mcp-config/config.toml" << GH_AW_CODEX_DETECTION_CONFIG_af28c8b5454431f5_EOF^[[0m
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4437000Z ^[[36;1mmodel_provider = "openai-proxy"^[[0m
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4437311Z ^[[36;1m^[[0m
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4437620Z ^[[36;1m[history]^[[0m
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4437890Z ^[[36;1mpersistence = "none"^[[0m
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4438168Z ^[[36;1m^[[0m
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4438517Z ^[[36;1m[model_providers.openai-proxy]^[[0m
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4438849Z ^[[36;1mname = "OpenAI AWF proxy"^[[0m
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4439231Z ^[[36;1mbase_url = "http://172.30.0.30:10000"^[[0m
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4439582Z ^[[36;1mapi_base = "http://172.30.0.30:10000"^[[0m
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4439919Z ^[[36;1mwss_base = "ws://172.30.0.30:10000"^[[0m
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4440233Z ^[[36;1menv_key = "CODEX_API_KEY"^[[0m
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4440536Z ^[[36;1mwire_api = "responses"^[[0m
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4440840Z ^[[36;1mrequires_openai_auth = false^[[0m
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4441159Z ^[[36;1msupports_websockets = false^[[0m
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4441518Z ^[[36;1mGH_AW_CODEX_DETECTION_CONFIG_af28c8b5454431f5_EOF^[[0m
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4442019Z ^[[36;1mcp "${RUNNER_TEMP}/gh-aw/mcp-config/config.toml" "/tmp/gh-aw/mcp-config/config.toml"^[[0m
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4442629Z ^[[36;1mchmod 600 "${RUNNER_TEMP}/gh-aw/mcp-config/config.toml" "/tmp/gh-aw/mcp-config/config.toml"^[[0m
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4455896Z shell: /usr/bin/bash -e {0}
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4456227Z env:
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4456491Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4456823Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4457605Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4458474Z   OTEL_EXPORTER_OTLP_HEADERS: 
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4458804Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4459141Z   GH_AW_OTLP_IF_MISSING: ignore
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4459567Z   GH_AW_RUNTIME_FEATURES: 
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4459900Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4460293Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: cecbcc1384f1eb26
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4460632Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243376619
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4460997Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+detection	Prepare Codex config for threat-detect	2026-10-29T03:10:01.4461334Z ##[endgroup]
+detection	Install threat-detect binary	﻿2026-10-29T03:10:01.5564839Z ##[group]Run bash "${RUNNER_TEMP}/gh-aw/actions/install_threat_detect_binary.sh" v0.5.3 --artifact-base-url https://github.com/github/gh-aw-threat-detection/releases/download --sha256-amd64 7cfab3bd02717968a0584ddd3790cff22550059e36d6f656c4f35e9d27851009 --sha256-arm64 6f355949af98e7b5527a958ac11431bd7867db45c0191b94c3a205c662181cc6
+detection	Install threat-detect binary	2026-10-29T03:10:01.5566940Z ^[[36;1mbash "${RUNNER_TEMP}/gh-aw/actions/install_threat_detect_binary.sh" v0.5.3 --artifact-base-url https://github.com/github/gh-aw-threat-detection/releases/download --sha256-amd64 7cfab3bd02717968a0584ddd3790cff22550059e36d6f656c4f35e9d27851009 --sha256-arm64 6f355949af98e7b5527a958ac11431bd7867db45c0191b94c3a205c662181cc6^[[0m
+detection	Install threat-detect binary	2026-10-29T03:10:01.5581316Z shell: /usr/bin/bash -e {0}
+detection	Install threat-detect binary	2026-10-29T03:10:01.5581614Z env:
+detection	Install threat-detect binary	2026-10-29T03:10:01.5581877Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+detection	Install threat-detect binary	2026-10-29T03:10:01.5582211Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+detection	Install threat-detect binary	2026-10-29T03:10:01.5583001Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+detection	Install threat-detect binary	2026-10-29T03:10:01.5583801Z   OTEL_EXPORTER_OTLP_HEADERS: 
+detection	Install threat-detect binary	2026-10-29T03:10:01.5584129Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+detection	Install threat-detect binary	2026-10-29T03:10:01.5584473Z   GH_AW_OTLP_IF_MISSING: ignore
+detection	Install threat-detect binary	2026-10-29T03:10:01.5584754Z   GH_AW_RUNTIME_FEATURES: 
+detection	Install threat-detect binary	2026-10-29T03:10:01.5585082Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+detection	Install threat-detect binary	2026-10-29T03:10:01.5585479Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: cecbcc1384f1eb26
+detection	Install threat-detect binary	2026-10-29T03:10:01.5585832Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243376619
+detection	Install threat-detect binary	2026-10-29T03:10:01.5586196Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+detection	Install threat-detect binary	2026-10-29T03:10:01.5586532Z ##[endgroup]
+detection	Install threat-detect binary	2026-10-29T03:10:01.5667230Z Installing threat-detect with compiler-pinned checksum verification (version: v0.5.3, os: Linux, arch: x86_64)
+detection	Install threat-detect binary	2026-10-29T03:10:01.5765763Z Downloading binary from "https://github.com/github/gh-aw-threat-detection/releases/download/v0.5.3/threat-detect-linux-amd64"...
+detection	Install threat-detect binary	2026-10-29T03:10:01.9592500Z Verifying SHA256 checksum for threat-detect-linux-amd64...
+detection	Install threat-detect binary	2026-10-29T03:10:01.9646669Z ✓ Checksum verification passed for threat-detect-linux-amd64
+detection	Install threat-detect binary	2026-10-29T03:10:01.9742713Z threat-detect v0.5.3
+detection	Install threat-detect binary	2026-10-29T03:10:01.9747721Z ✓ threat-detect installation complete
+detection	Execute threat detection with AWF	﻿2026-10-29T03:10:01.9818987Z ##[group]Run mkdir -p "/tmp/gh-aw/threat-detection"
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9819838Z ^[[36;1mmkdir -p "/tmp/gh-aw/threat-detection"^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9820298Z ^[[36;1mevidence_tmp="/tmp/gh-aw/threat-detection/execution.json.tmp"^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9821024Z ^[[36;1mprintf '{"version":1,"component":"detection","run_id":%s,"run_attempt":%s,"state":"started"}\n' "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" > "$evidence_tmp"^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9821733Z ^[[36;1mmv "$evidence_tmp" "/tmp/gh-aw/threat-detection/execution.json"^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9822191Z ^[[36;1mexport GH_AW_AWF_EXECUTION_COMPONENT="detection"^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9822701Z ^[[36;1mexport GH_AW_AWF_EXECUTION_EVIDENCE_FILE="/tmp/gh-aw/threat-detection/execution.json"^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9823164Z ^[[36;1mset -o pipefail^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9823530Z ^[[36;1mprintf '%s' "$(date +%s%3N)" > /tmp/gh-aw/agent_cli_start_ms.txt^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9823987Z ^[[36;1m(umask 177 && touch /tmp/gh-aw/threat-detection/detection.log)^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9824396Z ^[[36;1mGH_AW_MAX_AI_CREDITS="20"^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9824747Z ^[[36;1mif [[ ! "$GH_AW_MAX_AI_CREDITS" =~ ^[0-9]+$ ]]; then^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9825103Z ^[[36;1m  GH_AW_MAX_AI_CREDITS="20"^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9825400Z ^[[36;1mfi^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9825760Z ^[[36;1m^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9826181Z ^[[36;1mif [[ "${GH_AW_ADMISSION_RESULT:-}" == "admitted" && -n "${GH_AW_ADMISSION_MAX_AI_CREDITS:-}" ]]; then^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9826854Z ^[[36;1m  if [[ ! "$GH_AW_ADMISSION_MAX_AI_CREDITS" =~ ^[1-9][0-9]{0,9}$ ]] || (( GH_AW_ADMISSION_MAX_AI_CREDITS > 2147483647 )); then^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9827459Z ^[[36;1m    echo "ERR_ADMISSION: Invalid runtime admission allowance." >&2^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9827855Z ^[[36;1m    exit 1^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9828122Z ^[[36;1m  fi^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9828732Z ^[[36;1m  GH_AW_MAX_AI_CREDITS="$GH_AW_ADMISSION_MAX_AI_CREDITS"^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9829178Z ^[[36;1m  echo "Admission allowance applied (value withheld)."^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9829532Z ^[[36;1melse^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9829994Z ^[[36;1m  echo "No component admission allowance; retaining existing budget policy (value withheld)."^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9830449Z ^[[36;1mfi^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9830767Z ^[[36;1munset GH_AW_ADMISSION_RESULT GH_AW_ADMISSION_MAX_AI_CREDITS^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9845660Z ^[[36;1mprintf '%s\n' "{\"\$schema\":\"https://github.com/github/gh-aw-firewall/releases/download/v0.28.70/awf-config.schema.json\",\"network\":{\"allowDomains\":[\"172.30.0.1\",\"api.github.com\",\"api.openai.com\",\"github.com\",\"host.docker.internal\"]},\"apiProxy\":{\"enabled\":true,\"enableTokenSteering\":true,\"maxRuns\":500,\"maxCacheMisses\":5,\"maxAiCredits\":${GH_AW_MAX_AI_CREDITS},\"providers\":{\"openai\":{\"models\":{\"gpt-5-mini\":{\"cost\":{\"cache_read\":\"2.5000000000000002e-08\",\"input\":\"2.5e-07\",\"output\":\"2e-06\"}}}}},\"models\":{\"agent\":[\"sonnet-6x\",\"gpt-6\",\"gpt-5.4\",\"gpt-5.5\",\"gpt-5.6\",\"gpt-5.3\",\"gemini-pro\",\"any\"],\"antigravity\":[\"copilot/antigravity*\",\"google/antigravity*\",\"gemini/antigravity*\"],\"any\":[\"copilot/*\",\"anthropic/*\",\"openai/*\",\"google/*\",\"gemini/*\"],\"auto\":[\"copilot/auto\",\"large\"],\"claude\":[\"agent\"],\"codex\":[\"agent\"],\"coding\":[\"copilot/gpt-5*codex*\",\"openai/gpt-5*codex*\",\"gpt-5-codex\",\"kimi\"],\"computer-use\":[\"copilot/*computer-use*\",\"google/*computer-use*\",\"gemini/*computer-use*\",\"openai/*computer-use*\"],\"copilot\":[\"agent\"],\"deep-research\":[\"copilot/deep-research*\",\"copilot/o3-deep-research*\",\"copilot/o4-mini-deep-research*\",\"google/deep-research*\",\"gemini/deep-research*\",\"openai/o3-deep-research*\",\"openai/o4-mini-deep-research*\"],\"detection\":[\"small\"],\"evals\":[\"small\"],\"fable\":[\"copilot/*fable*\",\"anthropic/*fable*\"],\"gemini\":[\"agent\"],\"gemini-3-flash\":[\"copilot/gemini-3*flash*\",\"google/gemini-3*flash*\",\"gemini/gemini-3*flash*\"],\"gemini-3-pro\":[\"copilot/gemini-3*pro*\",\"google/gemini-3*pro*\",\"google/nano-banana*\",\"gemini/gemini-3*pro*\"],\"gemini-3.1-flash\":[\"copilot/gemini-3.1*flash*\",\"google/gemini-3.1*flash*\",\"gemini/gemini-3.1*flash*\"],\"gemini-3.1-pro\":[\"copilot/gemini-3.1*pro*\",\"google/gemini-3.1*pro*\",\"gemini/gemini-3.1*pro*\"],\"gemini-3.5-flash\":[\"copilot/gemini-3.5*flash*\",\"google/gemini-3.5*flash*\",\"gemini/gemini-3.5*flash*\"],\"gemini-3.6-flash\":[\"copilot/gemini-3.6*flash*\",\"google/gemini-3.6*flash*\",\"gemini/gemini-3.6*flash*\"],\"gemini-3.7-flash\":[\"copilot/gemini-3.7*flash*\",\"google/gemini-3.7*flash*\",\"gemini/gemini-3.7*flash*\"],\"gemini-3.8-flash\":[\"copilot/gemini-3.8*flash*\",\"google/gemini-3.8*flash*\",\"gemini/gemini-3.8*flash*\"],\"gemini-flash\":[\"copilot/gemini-*flash*\",\"google/gemini-*flash*\",\"gemini/gemini-*flash*\"],\"gemini-flash-lite\":[\"copilot/gemini-*flash*lite*\",\"google/gemini-*flash*lite*\",\"gemini/gemini-*flash*lite*\"],\"gemini-omni\":[\"copilot/gemini-omni*\",\"google/gemini-omni*\",\"gemini/gemini-omni*\"],\"gemini-pro\":[\"copilot/gemini-*pro*\",\"google/gemini-*pro*\",\"gemini/gemini-*pro*\"],\"gemma\":[\"copilot/gemma*\",\"google/gemma*\",\"gemini/gemma*\"],\"gpt-5\":[\"copilot/gpt-5*\",\"openai/gpt-5*\"],\"gpt-5-codex\":[\"copilot/gpt-5*codex*\",\"openai/gpt-5*codex*\"],\"gpt-5-mini\":[\"copilot/gpt-5*mini*\",\"openai/gpt-5*mini*\"],\"gpt-5-nano\":[\"copilot/gpt-5*nano*\",\"openai/gpt-5*nano*\"],\"gpt-5-pro\":[\"copilot/gpt-5*pro*\",\"openai/gpt-5*pro*\"],\"gpt-5.1\":[\"copilot/gpt-5.1*\",\"openai/gpt-5.1*\"],\"gpt-5.2\":[\"copilot/gpt-5.2*\",\"openai/gpt-5.2*\"],\"gpt-5.3\":[\"copilot/gpt-5.3*\",\"openai/gpt-5.3*\"],\"gpt-5.4\":[\"copilot/gpt-5.4*\",\"openai/gpt-5.4*\"],\"gpt-5.5\":[\"copilot/gpt-5.5*\",\"openai/gpt-5.5*\"],\"gpt-5.6\":[\"copilot/gpt-5.6*\",\"openai/gpt-5.6*\"],\"gpt-6\":[\"copilot/gpt-6*\",\"openai/gpt-6*\"],\"grok\":[\"copilot/*grok*\",\"openai/*grok*\"],\"haiku\":[\"copilot/*haiku*\",\"anthropic/*haiku*\"],\"image-generation\":[\"copilot/gpt-image*\",\"openai/gpt-image*\",\"openai/chatgpt-image*\",\"copilot/gemini-*image*\",\"google/gemini-*image*\",\"gemini/gemini-*image*\",\"google/imagen*\"],\"kimi\":[\"copilot/kimi*\",\"openai/kimi*\"],\"kiwi\":[\"copilot/kiwi*\",\"openai/kiwi*\"],\"large\":[\"sonnet\",\"gpt-6\",\"gpt-5-pro\",\"gpt-5\",\"gemini-pro\"],\"lyria\":[\"google/lyria*\",\"gemini/lyria*\",\"copilot/lyria*\"],\"mai-code\":[\"copilot/MAI-Code*\",\"copilot/mai-code*\",\"openai/MAI-Code*\"],\"mini\":[\"haiku\",\"gpt-5-mini\",\"gpt-5-nano\",\"gemini-flash-lite\"],\"nano-banana\":[\"copilot/nano-banana*\",\"google/nano-banana*\",\"gemini/nano-banana*\"],\"opus\":[\"copilot/*opus*\",\"anthropic/*opus*\"],\"opusplan\":[\"opus?effort=high\"],\"raptor-mini\":[\"copilot/raptor*\",\"openai/raptor*\"],\"reasoning\":[\"copilot/o1*\",\"copilot/o3*\",\"copilot/o4*\",\"openai/o1*\",\"openai/o3*\",\"openai/o4*\"],\"robotics\":[\"copilot/*robotics*\",\"google/*robotics*\",\"gemini/*robotics*\"],\"small\":[\"mini\"],\"small-agent\":[\"haiku\",\"gpt-5-mini\",\"gemini-flash\"],\"sonnet\":[\"copilot/*sonnet*\",\"anthropic/*sonnet*\"],\"sonnet-6x\":[\"copilot/*sonnet-4.5*\",\"copilot/*sonnet-4.6*\",\"copilot/*sonnet-5*\",\"copilot/*sonnet-4-5-*\",\"anthropic/*sonnet-4-5-*\",\"copilot/*sonnet-4-6*\",\"anthropic/*sonnet-4-6*\",\"anthropic/*sonnet-5*\"],\"summarization\":[\"haiku\",\"gpt-5-mini\",\"gemini-flash-lite\",\"mini\"],\"veo\":[\"google/veo*\",\"gemini/veo*\"],\"vision\":[\"copilot/gemini-*image*\",\"google/gemini-*image*\",\"gemini/gemini-*image*\",\"copilot/gemini-*flash*\",\"google/gemini-*flash*\",\"gemini/gemini-*flash*\"]}},\"container\":{\"imageTag\":\"0.28.70,squid=sha256:b5bc53f4becfd96e926e63c83831f1b3c9512f713c83161d2b8c9b7204b3e917,agent=sha256:b15ab48cbbab02904eb9bbd359a398db59690eebbea1e6934d47ed2bb407dd34,api-proxy=sha256:9ac8f9c7294e892c916de3da9d2588dfd8cd4931e5c39b00143266d7ed9fd52a,cli-proxy=sha256:372ac51a5cccffdfe484f3f7be427d2d1c566e8ae550d55bd45d9fd166a154b4\",\"agentTimeout\":5},\"logging\":{\"proxyLogsDir\":\"/tmp/gh-aw/sandbox/firewall/logs\",\"auditDir\":\"/tmp/gh-aw/sandbox/firewall/audit\"}}" > "${RUNNER_TEMP}/gh-aw/awf-config.json"^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9861918Z ^[[36;1mcp "${RUNNER_TEMP}/gh-aw/awf-config.json" /tmp/gh-aw/awf-config.json^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9862478Z ^[[36;1mexport GH_AW_MODELS_JSON_PATH="/tmp/gh-aw/models.json"^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9862943Z ^[[36;1mGH_AW_DOCKER_HOST=""^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9863329Z ^[[36;1mif [[ "${DOCKER_HOST:-}" =~ ^tcp:// ]]; then^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9863738Z ^[[36;1m  GH_AW_DOCKER_HOST="${DOCKER_HOST}"^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9864118Z ^[[36;1mfi^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9864419Z ^[[36;1mif [[ "${DOCKER_HOST:-}" =~ ^tcp:// ]]; then^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9865728Z ^[[36;1m  _GH_AW_CHROOT_JSON=$(jq -c --arg src "${RUNNER_TEMP}/gh-aw" --arg user "$(id -un)" --argjson uid "$(id -u)" --argjson gid "$(id -g)" --arg home "${RUNNER_TEMP}/gh-aw/home" '.chroot={"binariesSourcePath":$src,"identity":{"user":$user,"uid":$uid,"gid":$gid,"home":$home}}' "${RUNNER_TEMP}/gh-aw/awf-config.json") || { echo "chroot config patch failed" >&2; exit 1; }^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9867116Z ^[[36;1m  printf '%s\n' "$_GH_AW_CHROOT_JSON" > "${RUNNER_TEMP}/gh-aw/awf-config.json"^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9867612Z ^[[36;1mfi^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9867886Z ^[[36;1mGH_AW_TOOL_CACHE_MOUNT=""^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9868516Z ^[[36;1mGH_AW_TOOL_CACHE="${RUNNER_TOOL_CACHE:?RUNNER_TOOL_CACHE must be set}"^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9869096Z ^[[36;1mif [ -d "$GH_AW_TOOL_CACHE" ]; then^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9869500Z ^[[36;1m  if [[ "$GH_AW_TOOL_CACHE" != /opt/* ]]; then^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9869982Z ^[[36;1m    GH_AW_TOOL_CACHE_MOUNT="$GH_AW_TOOL_CACHE:$GH_AW_TOOL_CACHE:ro"^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9870424Z ^[[36;1m  fi^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9870709Z ^[[36;1mfi^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9871052Z ^[[36;1m# shellcheck disable=SC1003,SC2016,SC2086^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9873628Z ^[[36;1mawf --config "${RUNNER_TEMP}/gh-aw/awf-config.json" --container-workdir "${GITHUB_WORKSPACE}" --mount "${RUNNER_TEMP}/gh-aw:${RUNNER_TEMP}/gh-aw:ro" --mount "${RUNNER_TEMP}/gh-aw:/host${RUNNER_TEMP}/gh-aw:ro" ${GH_AW_TOOL_CACHE_MOUNT:+--mount "$GH_AW_TOOL_CACHE_MOUNT"} ${GH_AW_DOCKER_HOST:+--docker-host "$GH_AW_DOCKER_HOST"} --env-all --exclude-env ACTIONS_ID_TOKEN_REQUEST_TOKEN --exclude-env ACTIONS_ID_TOKEN_REQUEST_URL --exclude-env CODEX_API_KEY --exclude-env COPILOT_GITHUB_TOKEN --exclude-env GH_AW_OTLP_ALL_HEADERS --exclude-env GH_AW_OTLP_ENDPOINTS --exclude-env OPENAI_API_KEY --exclude-env OTEL_EXPORTER_OTLP_ENDPOINT --exclude-env OTEL_EXPORTER_OTLP_HEADERS --mount /tmp/gh-aw:/tmp/gh-aw:rw --mount /tmp/gh-aw/threat-detection:/tmp/gh-aw/threat-detection:rw --log-level info --skip-pull \^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9877832Z ^[[36;1m  -- /bin/bash -c 'set +o histexpand; : "${RUNNER_TOOL_CACHE:?RUNNER_TOOL_CACHE must be set}"; GH_AW_TOOL_CACHE="$RUNNER_TOOL_CACHE"; GH_AW_TOOL_BINS="$(find "$GH_AW_TOOL_CACHE" -maxdepth 5 -type d -name bin 2>/dev/null | tr "\n" ":")"; GH_AW_TOOL_BINS="${GH_AW_TOOL_BINS%:}"; export PATH="$PATH${GH_AW_TOOL_BINS:+:}$GH_AW_TOOL_BINS"; [ -n "$GOROOT" ] && export PATH="$GOROOT/bin:$PATH" || true; [ -n "$ERLANG_HOME" ] && export PATH="$ERLANG_HOME/bin:$PATH" || true && threat-detect --engine codex --output /tmp/gh-aw/threat-detection/detection_result.json /tmp/gh-aw/threat-detection' 2>&1 | tee -a /tmp/gh-aw/threat-detection/detection.log^[[0m
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9892721Z shell: /usr/bin/bash -e {0}
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9893053Z env:
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9893318Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9893656Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9894486Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9895290Z   OTEL_EXPORTER_OTLP_HEADERS: 
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9895896Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9896317Z   GH_AW_OTLP_IF_MISSING: ignore
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9896629Z   GH_AW_RUNTIME_FEATURES: 
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9896979Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9897496Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: cecbcc1384f1eb26
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9897855Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243376619
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9898344Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9898690Z   AWF_REFLECT_ENABLED: 1
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9899722Z   CODEX_API_KEY: ***
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9900032Z   CODEX_HOME: /tmp/gh-aw/detection-codex-home
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9900377Z   GH_AW_HARNESS_MAX_RETRIES: 0
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9900674Z   GH_AW_LLM_PROVIDER: openai
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9900970Z   GH_AW_LLM_PROVIDER_EXPLICIT: 1
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9901264Z   GH_AW_MAX_TURNS: 
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9901620Z   GH_AW_MCP_CONFIG: /home/runner/work/_temp/gh-aw/mcp-config/config.toml
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9902029Z   GH_AW_MODEL_DETECTION_CODEX: gpt-5-mini
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9902349Z   GH_AW_PHASE: detection
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9902622Z   GH_AW_VERSION: v0.93.5
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9902893Z   GITHUB_AW: true
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9903196Z   GITHUB_STEP_SUMMARY: /tmp/gh-aw/agent-step-summary.md
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9903641Z   GIT_AUTHOR_EMAIL: github-actions[bot]@users.noreply.github.com
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9904040Z   GIT_AUTHOR_NAME: github-actions[bot]
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9904438Z   GIT_COMMITTER_EMAIL: github-actions[bot]@users.noreply.github.com
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9904925Z   GIT_COMMITTER_NAME: github-actions[bot]
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9905881Z   OPENAI_API_KEY: ***
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9906169Z   RUNNER_TEMP: /home/runner/work/_temp
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9906484Z   RUST_LOG: warn
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9906835Z   TRACEPARENT: 00-e25ae10f94863f0b17051e6dfbd1a8c4-cecbcc1384f1eb26-01
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9907292Z   WORKFLOW_NAME: DuckDB issue triage
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9907847Z   WORKFLOW_DESCRIPTION: Manually assess one sandbox issue and publish a validated clarification.
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9908438Z   HAS_PATCH: false
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9908722Z   GH_AW_DETECTION_CONTINUE_ON_ERROR: false
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9909046Z ##[endgroup]
+detection	Execute threat detection with AWF	2026-10-29T03:10:01.9993941Z No component admission allowance; retaining existing budget policy (value withheld).
+detection	Execute threat detection with AWF	2026-10-29T03:10:02.4047207Z [INFO] Auto-detected DNS servers from /run/systemd/resolve/resolv.conf: 168.63.129.16
+detection	Execute threat detection with AWF	2026-10-29T03:10:02.4079783Z [INFO] Agent timeout set to 5 minutes
+detection	Execute threat detection with AWF	2026-10-29T03:10:02.4082729Z [WARN] ⚠️  Using --env-all: All host environment variables will be passed to container
+detection	Execute threat detection with AWF	2026-10-29T03:10:02.4083383Z [WARN]    This may expose sensitive credentials if logs or configs are shared
+detection	Execute threat detection with AWF	2026-10-29T03:10:02.4085545Z [WARN] ⚠️  Host access enabled with host.docker.internal in allowed domains
+detection	Execute threat detection with AWF	2026-10-29T03:10:02.4086539Z [WARN]    Containers can access ANY service running on the host machine
+detection	Execute threat detection with AWF	2026-10-29T03:10:02.4087243Z [WARN]    Only use this for trusted workloads (e.g., MCP gateways)
+detection	Execute threat detection with AWF	2026-10-29T03:10:02.4088377Z [INFO] API proxy enabled: OpenAI=true, Anthropic=false, Copilot=false, Gemini=false, Vertex=false
+detection	Execute threat detection with AWF	2026-10-29T03:10:07.4232819Z [INFO] Allowed domains: 172.30.0.1, api.github.com, api.openai.com, github.com, host.docker.internal
+detection	Execute threat detection with AWF	2026-10-29T03:10:07.4778454Z [INFO] Network-isolation mode: enforcing egress via Docker network topology (no host iptables, no sudo).
+detection	Execute threat detection with AWF	2026-10-29T03:10:07.4779429Z [INFO] Generating configuration files...
+detection	Execute threat detection with AWF	2026-10-29T03:10:07.6340638Z [INFO] API proxy sidecar enabled - API keys will be held securely in sidecar container
+detection	Execute threat detection with AWF	2026-10-29T03:10:07.6341434Z [INFO] API proxy will route through Squid to respect domain whitelisting
+detection	Execute threat detection with AWF	2026-10-29T03:10:07.8537798Z [INFO] Starting containers...
+detection	Execute threat detection with AWF	2026-10-29T03:10:08.0144290Z  Network awf-wovcnu_awf-ext  Creating
+detection	Execute threat detection with AWF	2026-10-29T03:10:08.0437972Z  Network awf-wovcnu_awf-ext  Created
+detection	Execute threat detection with AWF	2026-10-29T03:10:08.0446529Z  Network awf-net  Creating
+detection	Execute threat detection with AWF	2026-10-29T03:10:08.0653058Z  Network awf-net  Created
+detection	Execute threat detection with AWF	2026-10-29T03:10:08.0661796Z  Container awf-squid  Creating
+detection	Execute threat detection with AWF	2026-10-29T03:10:08.0662688Z  Container awf-api-proxy  Creating
+detection	Execute threat detection with AWF	2026-10-29T03:10:08.0906719Z  Container awf-squid  Created
+detection	Execute threat detection with AWF	2026-10-29T03:10:08.0920282Z  Container awf-api-proxy  Created
+detection	Execute threat detection with AWF	2026-10-29T03:10:08.0921092Z  Container awf-agent  Creating
+detection	Execute threat detection with AWF	2026-10-29T03:10:08.1043946Z  Container awf-agent  Created
+detection	Execute threat detection with AWF	2026-10-29T03:10:08.1059922Z  Container awf-api-proxy  Starting
+detection	Execute threat detection with AWF	2026-10-29T03:10:08.1069188Z  Container awf-squid  Starting
+detection	Execute threat detection with AWF	2026-10-29T03:10:08.2591180Z  Container awf-api-proxy  Started
+detection	Execute threat detection with AWF	2026-10-29T03:10:08.2956265Z  Container awf-squid  Started
+detection	Execute threat detection with AWF	2026-10-29T03:10:08.2957138Z  Container awf-squid  Waiting
+detection	Execute threat detection with AWF	2026-10-29T03:10:08.2957760Z  Container awf-api-proxy  Waiting
+detection	Execute threat detection with AWF	2026-10-29T03:10:13.7970308Z  Container awf-api-proxy  Healthy
+detection	Execute threat detection with AWF	2026-10-29T03:10:13.7970900Z  Container awf-squid  Healthy
+detection	Execute threat detection with AWF	2026-10-29T03:10:13.7971326Z  Container awf-agent  Starting
+detection	Execute threat detection with AWF	2026-10-29T03:10:13.9289730Z  Container awf-agent  Started
+detection	Execute threat detection with AWF	2026-10-29T03:10:14.0334224Z [SUCCESS] Containers started successfully
+detection	Execute threat detection with AWF	2026-10-29T03:10:14.0342942Z [INFO] Executing agent command...
+detection	Execute threat detection with AWF	2026-10-29T03:10:14.0373893Z [INFO] Agent timeout: 5 minutes
+detection	Execute threat detection with AWF	2026-10-29T03:10:14.6902693Z [entrypoint] Agentic Workflow Firewall - Agent Container
+detection	Execute threat detection with AWF	2026-10-29T03:10:14.6903255Z [entrypoint] ==================================
+detection	Execute threat detection with AWF	2026-10-29T03:10:15.8281220Z [entrypoint] Configuring DNS...
+detection	Execute threat detection with AWF	2026-10-29T03:10:15.8837376Z [entrypoint] DNS configured with Docker embedded DNS (127.0.0.11) only
+detection	Execute threat detection with AWF	2026-10-29T03:10:15.8838110Z [entrypoint] iptables-init skipped (proxy-based egress): skipping init container wait
+detection	Execute threat detection with AWF	2026-10-29T03:10:15.8852150Z [health-check] API Proxy Pre-flight Check
+detection	Execute threat detection with AWF	2026-10-29T03:10:15.8852891Z [health-check] ==========================================
+detection	Execute threat detection with AWF	2026-10-29T03:10:15.8855474Z [health-check] Checking OpenAI API proxy configuration...
+detection	Execute threat detection with AWF	2026-10-29T03:10:15.8856518Z [health-check] ✓ OpenAI/Codex placeholder key in agent environment (credential isolation active)
+detection	Execute threat detection with AWF	2026-10-29T03:10:15.8857247Z [health-check] Testing connectivity to OpenAI API proxy at http://172.30.0.30:10000...
+detection	Execute threat detection with AWF	2026-10-29T03:10:15.9856106Z [health-check] ✓ OpenAI API proxy is reachable at http://172.30.0.30:10000
+detection	Execute threat detection with AWF	2026-10-29T03:10:15.9857361Z [health-check] ==========================================
+detection	Execute threat detection with AWF	2026-10-29T03:10:15.9858467Z [health-check] ✓ All API proxy health checks passed
+detection	Execute threat detection with AWF	2026-10-29T03:10:15.9859371Z [health-check] ✓ Credential isolation verified
+detection	Execute threat detection with AWF	2026-10-29T03:10:15.9860111Z [health-check] ✓ Connectivity established
+detection	Execute threat detection with AWF	2026-10-29T03:10:15.9860740Z [health-check] ==========================================
+detection	Execute threat detection with AWF	2026-10-29T03:10:15.9864214Z [entrypoint] Pre-seeding JVM build tool proxy configuration (squid-proxy:3128)...
+detection	Execute threat detection with AWF	2026-10-29T03:10:16.1276766Z [entrypoint] ✓ Created Maven proxy config (/host/home/runner/.m2/settings.xml)
+detection	Execute threat detection with AWF	2026-10-29T03:10:16.1356784Z [entrypoint] ✓ Created Gradle proxy config (/host/home/runner/.gradle/gradle.properties)
+detection	Execute threat detection with AWF	2026-10-29T03:10:16.1815637Z [entrypoint] ✓ Set JAVA_TOOL_OPTIONS with proxy and nonProxyHosts flags
+detection	Execute threat detection with AWF	2026-10-29T03:10:16.1816420Z [entrypoint] Proxy configuration:
+detection	Execute threat detection with AWF	2026-10-29T03:10:16.1817022Z [entrypoint]   HTTP_PROXY=http://172.30.0.10:3128
+detection	Execute threat detection with AWF	2026-10-29T03:10:16.1817613Z [entrypoint]   HTTPS_PROXY=http://172.30.0.10:3128
+detection	Execute threat detection with AWF	2026-10-29T03:10:16.1818147Z [entrypoint] Network information:
+detection	Execute threat detection with AWF	2026-10-29T03:10:16.1997999Z [entrypoint]   IP address: 172.30.0.20 
+detection	Execute threat detection with AWF	2026-10-29T03:10:16.2009657Z [entrypoint]   Hostname: 58d4a62f5f8f
+detection	Execute threat detection with AWF	2026-10-29T03:10:16.5457671Z [entrypoint] ==================================
+detection	Execute threat detection with AWF	2026-10-29T03:10:16.5458601Z [entrypoint] Chroot mode enabled - dropping CAP_SYS_CHROOT and CAP_SYS_ADMIN
+detection	Execute threat detection with AWF	2026-10-29T03:10:16.5522565Z [entrypoint] Switching to awfuser (UID: 1001, GID: 1001)
+detection	Execute threat detection with AWF	2026-10-29T03:10:16.5525247Z [entrypoint] Executing command: /bin/bash -c /bin/bash -c 'set +o histexpand; : "${RUNNER_TOOL_CACHE:?RUNNER_TOOL_CACHE must be set}"; GH_AW_TOOL_CACHE="$RUNNER_TOOL_CACHE"; GH_AW_TOOL_BINS="$(find "$GH_AW_TOOL_CACHE" -maxdepth 5 -type d -name bin 2>/dev/null | tr "\n" ":")"; GH_AW_TOOL_BINS="${GH_AW_TOOL_BINS%:}"; export PATH="$PATH${GH_AW_TOOL_BINS:+:}$GH_AW_TOOL_BINS"; [ -n "$GOROOT" ] && export PATH="$GOROOT/bin:$PATH" || true; [ -n "$ERLANG_HOME" ] && export PATH="$ERLANG_HOME/bin:$PATH" || true && threat-detect --engine codex --output /tmp/gh-aw/threat-detection/detection_result.json /tmp/gh-aw/threat-detection'
+detection	Execute threat detection with AWF	2026-10-29T03:10:16.5527225Z 
+detection	Execute threat detection with AWF	2026-10-29T03:10:16.5527522Z [entrypoint] Chroot mode: running command inside host filesystem (/host)
+detection	Execute threat detection with AWF	2026-10-29T03:10:16.6923964Z [entrypoint] Mounted procfs at /host/proc (nosuid,nodev,noexec,hidepid=2)
+detection	Execute threat detection with AWF	2026-10-29T03:10:16.7035455Z [entrypoint] Bind-mounted container cgroup subtree at /host/sys/fs/cgroup (ro)
+detection	Execute threat detection with AWF	2026-10-29T03:10:16.7220796Z [entrypoint] One-shot token library copied to chroot at /run/awf-lib/one-shot-token.so
+detection	Execute threat detection with AWF	2026-10-29T03:10:17.4255840Z [entrypoint] Chromium/Playwright runtime libraries staged for chroot at /host/run/awf-lib/browser-libs
+detection	Execute threat detection with AWF	2026-10-29T03:10:22.4635202Z [entrypoint] Filtered host CA trust staged at /run/awf-lib/trust/ca-certificates.crt (host store unchanged)
+detection	Execute threat detection with AWF	2026-10-29T03:10:22.4654217Z [entrypoint] DNS configuration created in chroot (/host/etc/resolv.conf)
+detection	Execute threat detection with AWF	2026-10-29T03:10:22.4858552Z [entrypoint] Running as host user: runner (UID: 1001)
+detection	Execute threat detection with AWF	2026-10-29T03:10:22.4859706Z [entrypoint] Chroot working directory: /home/runner/work/duckdb-triage-agent/duckdb-triage-agent
+detection	Execute threat detection with AWF	2026-10-29T03:10:22.4888339Z [entrypoint] Using host PATH for chroot
+detection	Execute threat detection with AWF	2026-10-29T03:10:22.4918952Z [entrypoint] Adding JAVA_HOME/bin to PATH: /usr/lib/jvm/temurin-17-jdk-amd64/bin
+detection	Execute threat detection with AWF	2026-10-29T03:10:22.4949990Z [entrypoint] DNS configuration will be removed on exit
+detection	Execute threat detection with AWF	2026-10-29T03:10:22.4980586Z [entrypoint] Transferred /host/tmp/gh-aw ownership to chroot user (1001:1001)
+detection	Execute threat detection with AWF	2026-10-29T03:10:23.5414397Z [entrypoint] Unsetting sensitive tokens from parent shell environment...
+detection	Execute threat detection with AWF	2026-10-29T03:10:23.5415092Z [entrypoint] Unset OPENAI_API_KEY from /proc/1/environ
+detection	Execute threat detection with AWF	2026-10-29T03:10:23.5415613Z [entrypoint] Unset CODEX_API_KEY from /proc/1/environ
+detection	Execute threat detection with AWF	2026-10-29T03:10:23.5635990Z [threat-detect] run start: version=v0.5.3 engine=codex model=gpt-5-mini retries=0 max_turns=50 engine_timeout=5m0s
+detection	Execute threat detection with AWF	2026-10-29T03:10:23.5643464Z [threat-detect] artifacts loaded: dir=/tmp/gh-aw/threat-detection prompt_bytes=11959 agent_output_bytes=481 patch_files=0 all_primary_inputs_missing=false
+detection	Execute threat detection with AWF	2026-10-29T03:10:23.5644931Z [threat-detect] artifact inventory (7 entries):
+detection	Execute threat detection with AWF	2026-10-29T03:10:23.5649010Z [threat-detect]   agent_output.json bytes=481 kind=file consumed=true
+detection	Execute threat detection with AWF	2026-10-29T03:10:23.5650119Z [threat-detect]   aw-prompts/prompt-import-tree.json bytes=18269 kind=file consumed=true
+detection	Execute threat detection with AWF	2026-10-29T03:10:23.5651165Z [threat-detect]   aw-prompts/prompt-template.txt bytes=5776 kind=file consumed=true
+detection	Execute threat detection with AWF	2026-10-29T03:10:23.5652057Z [threat-detect]   aw-prompts/prompt.txt bytes=11959 kind=file consumed=true
+detection	Execute threat detection with AWF	2026-10-29T03:10:23.5652959Z [threat-detect]   aw_info.json bytes=1519 kind=file consumed=true
+detection	Execute threat detection with AWF	2026-10-29T03:10:23.5653741Z [threat-detect]   detection.log bytes=5339 kind=file consumed=false
+detection	Execute threat detection with AWF	2026-10-29T03:10:23.5654552Z [threat-detect]   execution.json bytes=93 kind=file consumed=false
+detection	Execute threat detection with AWF	2026-10-29T03:10:23.5655968Z [threat-detect] result destinations: output=/tmp/gh-aw/threat-detection/detection_result.json full_output=/tmp/gh-aw/threat-detection/detection_result_full.json
+detection	Execute threat detection with AWF	2026-10-29T03:10:23.5658082Z Prompt context: workflow_name="DuckDB issue triage" (defaulted=false) workflow_description="Manually assess one sandbox issue and publish a validated clarification." (defaulted=false) custom_prompt_applied=false custom_prompt_source=none custom_prompt_bytes=0
+detection	Execute threat detection with AWF	2026-10-29T03:10:23.5660697Z [threat-detect] prompt built: prompt_bytes=49236 framework_scaffolding_detected=true framework_scaffolding_host_removed=true framework_scaffolding_markers=<safe-output-tools>
+detection	Execute threat detection with AWF	2026-10-29T03:10:23.5661852Z [threat-detect] eligibility: prompt_injection=true secret_leak=true malicious_patch=false
+detection	Execute threat detection with AWF	2026-10-29T03:10:23.5662408Z [threat-detect] detection attempt 1 of 1
+detection	Execute threat detection with AWF	2026-10-29T03:10:23.5663217Z [threat-detect] engine invoke: engine=codex model="gpt-5-mini" command="node (/opt/hostedtoolcache/node/24.22.1/x64/bin/node)" args=13
+detection	Execute threat detection with AWF	2026-10-29T03:10:23.5664907Z [threat-detect] engine argv: "/home/runner/work/_temp/gh-aw/actions/codex_harness.cjs" "codex" "exec" "-c" "model=gpt-5-mini" "-c" "web_search=disabled" "-c" "fetch=disabled" "--dangerously-bypass-approvals-and-sandbox" "--skip-git-repo-check" "--prompt-file" "<prompt-file>"
+detection	Execute threat detection with AWF	2026-10-29T03:10:23.6989129Z [engine] [codex-harness] 2026-10-29T03:10:23.670Z starting: command=codex maxRetries=0 initialDelayMs=5000 backoffMultiplier=2 maxDelayMs=60000 nodeVersion=v24.22.1 platform=linux
+detection	Execute threat detection with AWF	2026-10-29T03:10:23.6995449Z [engine] [codex-harness] 2026-10-29T03:10:23.699Z secrets: CODEX_API_KEY=set (length=28) OPENAI_API_KEY=set (length=28)
+detection	Execute threat detection with AWF	2026-10-29T03:10:23.6997234Z [engine] [codex-harness] 2026-10-29T03:10:23.699Z resolved --prompt-file: path=/tmp/threat-detect-prompt-262007867.txt size=49236B
+detection	Execute threat detection with AWF	2026-10-29T03:10:23.7002508Z [engine] [codex-harness] 2026-10-29T03:10:23.699Z awf-reflect: fetching http://api-proxy:10000/reflect (timeout=60000ms)
+detection	Execute threat detection with AWF	2026-10-29T03:10:24.7269990Z [engine] [codex-harness] 2026-10-29T03:10:24.725Z awf-reflect: fetched 134 model(s) from http://api-proxy:10000/v1/models
+detection	Execute threat detection with AWF	2026-10-29T03:10:24.7278104Z [engine] [codex-harness] 2026-10-29T03:10:24.726Z awf-reflect: saved 21738B to /tmp/gh-aw/agent/awf-reflect.json
+detection	Execute threat detection with AWF	2026-10-29T03:10:24.7306431Z [engine] [codex-harness] 2026-10-29T03:10:24.730Z model alias resolution: 'gpt-5-mini' is a live model id (provider=openai); not resolving it as an alias
+detection	Execute threat detection with AWF	2026-10-29T03:10:24.7314765Z [engine] [codex-harness] 2026-10-29T03:10:24.730Z model resolution: engine=codex role=main configured=gpt-5-mini resolved=gpt-5-mini provider=openai status=exact
+detection	Execute threat detection with AWF	2026-10-29T03:10:24.7328021Z [engine] [codex-harness] 2026-10-29T03:10:24.732Z awf-reflect: provider=openai mapped to endpoint provider=openai baseUrl=http://api-proxy:10000
+detection	Execute threat detection with AWF	2026-10-29T03:10:24.7333551Z [engine] [codex-harness] 2026-10-29T03:10:24.732Z configured OPENAI_BASE_URL from /reflect for provider=openai: http://api-proxy:10000
+detection	Execute threat detection with AWF	2026-10-29T03:10:24.7350728Z [engine] [codex-harness] 2026-10-29T03:10:24.734Z context-rebuild circuit breaker: enabled=true maxRebuildFactor=25 minCumulativeInputTokens=1000000 pollIntervalMs=15000
+detection	Execute threat detection with AWF	2026-10-29T03:10:24.7365598Z [engine] [codex-harness] 2026-10-29T03:10:24.736Z attempt 1: spawning: codex exec --model gpt-5-mini -c model=gpt-5-mini -c web_search=disabled -c fetch=disabled --dangerously-bypass-approvals-and-sandbox --skip-git-repo-check <prompt via stdin>
+detection	Execute threat detection with AWF	2026-10-29T03:10:24.7421791Z [engine] [codex-harness] 2026-10-29T03:10:24.741Z attempt 1: process started (pid=1917)
+detection	Execute threat detection with AWF	2026-10-29T03:10:24.8628076Z [engine] WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir "/tmp" (codex_home: AbsolutePathBuf("/tmp/gh-aw/detection-codex-home"))
+detection	Execute threat detection with AWF	2026-10-29T03:10:25.2154266Z [engine] 2026-10-29T03:10:25.214459Z  WARN codex_core_plugins::manager: remote installed plugin bundle sync failed error=chatgpt authentication required for remote plugin catalog; api key auth is not supported
+detection	Execute threat detection with AWF	2026-10-29T03:10:25.2446398Z [engine] {"type":"thread.started","thread_id":"01a185a3-29cc-7fe3-8043-ed51f07fb1a3"}
+detection	Execute threat detection with AWF	2026-10-29T03:10:25.2496963Z [engine] {"type":"item.completed","item":{"id":"item_0","type":"error","message":"Codex is ignoring 1 unrecognized configuration setting. Check for typos or deprecated settings.\n  session-flags: `fetch` is ignored."}}
+detection	Execute threat detection with AWF	2026-10-29T03:10:25.2499686Z [engine] {"type":"item.completed","item":{"id":"item_1","type":"error","message":"Codex is ignoring 1 unrecognized configuration setting. Check for typos or deprecated settings.\n  session-flags: `fetch` is ignored."}}
+detection	Execute threat detection with AWF	2026-10-29T03:10:25.2694243Z [engine] {"type":"turn.started"}
+detection	Execute threat detection with AWF	2026-10-29T03:10:25.3404584Z [engine] 2026-10-29T03:10:25.339521Z  WARN codex_core_plugins::manager: failed to warm featured plugin ids cache error=failed to send remote featured plugin request to https://chatgpt.com/backend-api/plugins/featured?platform=codex: error sending request for url (https://chatgpt.com/backend-api/plugins/featured?platform=codex)
+detection	Execute threat detection with AWF	2026-10-29T03:10:27.8271984Z [engine] 2026-10-29T03:10:27.826280Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt[0]: prompt must be at most 128 characters path=file:///tmp/gh-aw/detection-codex-home/.tmp/plugins/plugins/ngs-analysis/.codex-plugin/plugin.json
+detection	Execute threat detection with AWF	2026-10-29T03:10:27.8287932Z [engine] 2026-10-29T03:10:27.828248Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt[0]: prompt must be at most 128 characters path=file:///tmp/gh-aw/detection-codex-home/.tmp/plugins/plugins/ngs-analysis/.codex-plugin/plugin.json
+detection	Execute threat detection with AWF	2026-10-29T03:10:28.7077348Z [engine] {"type":"item.completed","item":{"id":"item_2","type":"reasoning","text":"**Reading the output file**\n\nI need to read the agent_output.json file. I'll start by saying that we're going to check the contents of this file, as a preamble according to Codex guidelines. Then I'll move on to call functions.exec_command to actually read the file's output. I want to make sure everything is clear and organized, so the user knows what to expect. Let's go ahead and get that file info!"}}
+detection	Execute threat detection with AWF	2026-10-29T03:10:28.9327466Z [engine] {"type":"item.completed","item":{"id":"item_3","type":"agent_message","text":"I'll inspect the saved agent output file to find any injected instructions, secrets, or malicious patches and then report findings. I'll open `/tmp/gh-aw/threat-detection/agent_output.json`."}}
+detection	Execute threat detection with AWF	2026-10-29T03:10:29.0148050Z [engine] {"type":"item.started","item":{"id":"item_4","type":"command_execution","command":"/bin/bash -lc \"sed -n '1,240p' /tmp/gh-aw/threat-detection/agent_output.json\"","aggregated_output":"","exit_code":null,"status":"in_progress"}}
+detection	Execute threat detection with AWF	2026-10-29T03:10:29.0160329Z [engine] {"type":"item.completed","item":{"id":"item_4","type":"command_execution","command":"/bin/bash -lc \"sed -n '1,240p' /tmp/gh-aw/threat-detection/agent_output.json\"","aggregated_output":"{\"items\":[{\"type\":\"submit_triage\",\"comment\":\"no_action\",\"label\":\"no_action\",\"rationale\":\"The report supplies a complete, minimal SQL statement, exact DuckDB version (1.5.2), client (official CLI), OS (Ubuntu 24.04), and states an in-memory default database—these are sufficient to reproduce and there is no evidence of missing essential reproduction data; the reporter also notes this is a constructed practice cancellation, so no further clarification is needed.\"}],\"errors\":[]}","exit_code":0,"status":"completed"}}
+detection	Execute threat detection with AWF	2026-10-29T03:10:32.6960023Z [engine] {"type":"item.started","item":{"id":"item_5","type":"command_execution","command":"/bin/bash -lc 'threat_detection_result --prompt-injection false --secret-leak false --malicious-patch false'","aggregated_output":"","exit_code":null,"status":"in_progress"}}
+detection	Execute threat detection with AWF	2026-10-29T03:10:32.6974623Z [engine] {"type":"item.completed","item":{"id":"item_5","type":"command_execution","command":"/bin/bash -lc 'threat_detection_result --prompt-injection false --secret-leak false --malicious-patch false'","aggregated_output":"THREAT_DETECTION_RESULT_RECORDED: analysis complete; stop now and produce no further output.\n","exit_code":0,"status":"completed"}}
+detection	Execute threat detection with AWF	2026-10-29T03:10:32.8209095Z [threat-detect] attempt 1 outcome=recorded
+detection	Execute threat detection with AWF	2026-10-29T03:10:32.8212554Z [threat-detect] full result written: path=/tmp/gh-aw/threat-detection/detection_result_full.json reasons=0 warnings=0
+detection	Execute threat detection with AWF	2026-10-29T03:10:32.8213371Z THREAT_DETECTION_STATUS: reason=result_recorded exit=0
+detection	Execute threat detection with AWF	2026-10-29T03:10:32.8256496Z [entrypoint] Relaxed /host/tmp/gh-aw group permissions for host-side post-processing
+detection	Execute threat detection with AWF	2026-10-29T03:10:34.0978446Z [INFO] Stopping containers...
+detection	Execute threat detection with AWF	2026-10-29T03:10:34.2552460Z  Container awf-agent  Stopping
+detection	Execute threat detection with AWF	2026-10-29T03:10:34.2555289Z  Container awf-agent  Stopped
+detection	Execute threat detection with AWF	2026-10-29T03:10:34.2555783Z  Container awf-agent  Removing
+detection	Execute threat detection with AWF	2026-10-29T03:10:34.2964065Z  Container awf-agent  Removed
+detection	Execute threat detection with AWF	2026-10-29T03:10:34.2964720Z  Container awf-api-proxy  Stopping
+detection	Execute threat detection with AWF	2026-10-29T03:10:34.2965387Z  Container awf-squid  Stopping
+detection	Execute threat detection with AWF	2026-10-29T03:10:34.3816251Z  Container awf-api-proxy  Stopped
+detection	Execute threat detection with AWF	2026-10-29T03:10:34.3817095Z  Container awf-api-proxy  Removing
+detection	Execute threat detection with AWF	2026-10-29T03:10:34.3874559Z  Container awf-api-proxy  Removed
+detection	Execute threat detection with AWF	2026-10-29T03:10:35.4288409Z  Container awf-squid  Stopped
+detection	Execute threat detection with AWF	2026-10-29T03:10:35.4289153Z  Container awf-squid  Removing
+detection	Execute threat detection with AWF	2026-10-29T03:10:35.4353917Z  Container awf-squid  Removed
+detection	Execute threat detection with AWF	2026-10-29T03:10:35.4361061Z  Network awf-net  Removing
+detection	Execute threat detection with AWF	2026-10-29T03:10:35.4362647Z  Network awf-wovcnu_awf-ext  Removing
+detection	Execute threat detection with AWF	2026-10-29T03:10:35.4768710Z  Network awf-net  Removed
+detection	Execute threat detection with AWF	2026-10-29T03:10:35.5625151Z  Network awf-wovcnu_awf-ext  Removed
+detection	Execute threat detection with AWF	2026-10-29T03:10:35.6666771Z [SUCCESS] Containers stopped successfully
+detection	Execute threat detection with AWF	2026-10-29T03:10:35.6674870Z [INFO] API proxy logs available at: /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs
+detection	Execute threat detection with AWF	2026-10-29T03:10:35.6675895Z [INFO] Token usage log available at: /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+detection	Execute threat detection with AWF	2026-10-29T03:10:35.6707830Z [INFO] CLI proxy logs available at: /tmp/gh-aw/sandbox/firewall/logs/cli-proxy-logs
+detection	Execute threat detection with AWF	2026-10-29T03:10:35.6755862Z [INFO] Squid logs available at: /tmp/gh-aw/sandbox/firewall/logs
+detection	Execute threat detection with AWF	2026-10-29T03:10:35.6782338Z [INFO] Audit artifacts available at: /tmp/gh-aw/sandbox/firewall/audit
+detection	Execute threat detection with AWF	2026-10-29T03:10:36.0194971Z [SUCCESS] Command completed successfully
+detection	Execute threat detection with AWF	2026-10-29T03:10:36.0195614Z Process exiting with code: 0
+detection	Copy detection firewall logs	﻿2026-10-29T03:10:36.0291309Z ##[group]Run mkdir -p /tmp/gh-aw/threat-detection/sandbox/firewall
+detection	Copy detection firewall logs	2026-10-29T03:10:36.0291849Z ^[[36;1mmkdir -p /tmp/gh-aw/threat-detection/sandbox/firewall^[[0m
+detection	Copy detection firewall logs	2026-10-29T03:10:36.0292726Z ^[[36;1mif [ -d /tmp/gh-aw/sandbox/firewall/logs ]; then mkdir -p /tmp/gh-aw/threat-detection/sandbox/firewall/logs && cp -r /tmp/gh-aw/sandbox/firewall/logs/. /tmp/gh-aw/threat-detection/sandbox/firewall/logs/; fi^[[0m
+detection	Copy detection firewall logs	2026-10-29T03:10:36.0294162Z ^[[36;1mif [ -d /tmp/gh-aw/sandbox/firewall/audit ]; then mkdir -p /tmp/gh-aw/threat-detection/sandbox/firewall/audit && cp -r /tmp/gh-aw/sandbox/firewall/audit/. /tmp/gh-aw/threat-detection/sandbox/firewall/audit/; fi^[[0m
+detection	Copy detection firewall logs	2026-10-29T03:10:36.0310178Z shell: /usr/bin/bash -e {0}
+detection	Copy detection firewall logs	2026-10-29T03:10:36.0310519Z env:
+detection	Copy detection firewall logs	2026-10-29T03:10:36.0310775Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+detection	Copy detection firewall logs	2026-10-29T03:10:36.0311106Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+detection	Copy detection firewall logs	2026-10-29T03:10:36.0311895Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+detection	Copy detection firewall logs	2026-10-29T03:10:36.0312695Z   OTEL_EXPORTER_OTLP_HEADERS: 
+detection	Copy detection firewall logs	2026-10-29T03:10:36.0313020Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+detection	Copy detection firewall logs	2026-10-29T03:10:36.0313365Z   GH_AW_OTLP_IF_MISSING: ignore
+detection	Copy detection firewall logs	2026-10-29T03:10:36.0313654Z   GH_AW_RUNTIME_FEATURES: 
+detection	Copy detection firewall logs	2026-10-29T03:10:36.0313986Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+detection	Copy detection firewall logs	2026-10-29T03:10:36.0314384Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: cecbcc1384f1eb26
+detection	Copy detection firewall logs	2026-10-29T03:10:36.0314736Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243376619
+detection	Copy detection firewall logs	2026-10-29T03:10:36.0315105Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+detection	Copy detection firewall logs	2026-10-29T03:10:36.0315584Z   AWF_TOKEN_USAGE_LOG: /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+detection	Copy detection firewall logs	2026-10-29T03:10:36.0316027Z ##[endgroup]
+detection	Redact secrets in detection logs	﻿2026-10-29T03:10:36.0482491Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+detection	Redact secrets in detection logs	2026-10-29T03:10:36.0483161Z with:
+detection	Redact secrets in detection logs	2026-10-29T03:10:36.0485279Z   script: const path = require('path');
+detection	Redact secrets in detection logs	const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+detection	Redact secrets in detection logs	const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+detection	Redact secrets in detection logs	setupGlobals(core, github, context, exec, io, getOctokit);
+detection	Redact secrets in detection logs	const { main } = require(path.join(actionsDir, 'redact_secrets.cjs'));
+detection	Redact secrets in detection logs	const { persistDetectionMasks } = require(path.join(actionsDir, 'detection_mask_state.cjs'));
+detection	Redact secrets in detection logs	await main({ additionalDirectories: ["/tmp/gh-aw/threat-detection/sandbox/firewall"], persistDetectionMasks });
+detection	Redact secrets in detection logs	
+detection	Redact secrets in detection logs	2026-10-29T03:10:36.0489747Z   github-token: ***
+detection	Redact secrets in detection logs	2026-10-29T03:10:36.0490125Z   debug: false
+detection	Redact secrets in detection logs	2026-10-29T03:10:36.0490477Z   user-agent: actions/github-script
+detection	Redact secrets in detection logs	2026-10-29T03:10:36.0490947Z   result-encoding: json
+detection	Redact secrets in detection logs	2026-10-29T03:10:36.0491319Z   retries: 0
+detection	Redact secrets in detection logs	2026-10-29T03:10:36.0491726Z   retry-exempt-status-codes: 400,401,403,404,422
+detection	Redact secrets in detection logs	2026-10-29T03:10:36.0492340Z env:
+detection	Redact secrets in detection logs	2026-10-29T03:10:36.0492685Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+detection	Redact secrets in detection logs	2026-10-29T03:10:36.0493164Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+detection	Redact secrets in detection logs	2026-10-29T03:10:36.0494411Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+detection	Redact secrets in detection logs	2026-10-29T03:10:36.0495644Z   OTEL_EXPORTER_OTLP_HEADERS: 
+detection	Redact secrets in detection logs	2026-10-29T03:10:36.0496138Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+detection	Redact secrets in detection logs	2026-10-29T03:10:36.0496670Z   GH_AW_OTLP_IF_MISSING: ignore
+detection	Redact secrets in detection logs	2026-10-29T03:10:36.0497107Z   GH_AW_RUNTIME_FEATURES: 
+detection	Redact secrets in detection logs	2026-10-29T03:10:36.0497587Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+detection	Redact secrets in detection logs	2026-10-29T03:10:36.0498190Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: cecbcc1384f1eb26
+detection	Redact secrets in detection logs	2026-10-29T03:10:36.0498925Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243376619
+detection	Redact secrets in detection logs	2026-10-29T03:10:36.0499449Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+detection	Redact secrets in detection logs	2026-10-29T03:10:36.0500134Z   AWF_TOKEN_USAGE_LOG: /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+detection	Redact secrets in detection logs	2026-10-29T03:10:36.0500980Z   GH_AW_SECRET_NAMES: CODEX_API_KEY,GH_AW_DEFAULT_OTLP_ENDPOINT,GH_AW_DEFAULT_OTLP_HEADERS,OPENAI_API_KEY
+detection	Redact secrets in detection logs	2026-10-29T03:10:36.0501472Z   SECRET_CODEX_API_KEY: 
+detection	Redact secrets in detection logs	2026-10-29T03:10:36.0501773Z   SECRET_GH_AW_DEFAULT_OTLP_ENDPOINT: 
+detection	Redact secrets in detection logs	2026-10-29T03:10:36.0502090Z   SECRET_GH_AW_DEFAULT_OTLP_HEADERS: 
+detection	Redact secrets in detection logs	2026-10-29T03:10:36.0503125Z   SECRET_OPENAI_API_KEY: ***
+detection	Redact secrets in detection logs	2026-10-29T03:10:36.0503423Z ##[endgroup]
+detection	Parse threat detection token usage for step summary	﻿2026-10-29T03:10:37.2123999Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.2124930Z with:
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.2126726Z   script: const path = require('path');
+detection	Parse threat detection token usage for step summary	const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+detection	Parse threat detection token usage for step summary	const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+detection	Parse threat detection token usage for step summary	setupGlobals(core, github, context, exec, io, getOctokit);
+detection	Parse threat detection token usage for step summary	const { main } = require(path.join(actionsDir, 'parse_token_usage.cjs'));
+detection	Parse threat detection token usage for step summary	await main();
+detection	Parse threat detection token usage for step summary	
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.2134253Z   github-token: ***
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.2134679Z   debug: false
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.2135043Z   user-agent: actions/github-script
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.2135479Z   result-encoding: json
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.2135847Z   retries: 0
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.2136255Z   retry-exempt-status-codes: 400,401,403,404,422
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.2136748Z env:
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.2137087Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.2137546Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.2139008Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.2140372Z   OTEL_EXPORTER_OTLP_HEADERS: 
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.2140866Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.2141376Z   GH_AW_OTLP_IF_MISSING: ignore
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.2141812Z   GH_AW_RUNTIME_FEATURES: 
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.2142317Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.2142933Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: cecbcc1384f1eb26
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.2143491Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243376619
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.2144023Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.2144793Z   AWF_TOKEN_USAGE_LOG: /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.2145646Z   GH_AW_TOKEN_USAGE_SUMMARY_TITLE: Threat Detection Token Usage
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.2146240Z   GH_AW_PHASE: detection
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.2146820Z   GH_AW_AGENT_USAGE_PATH: /tmp/gh-aw/threat-detection/detection_usage.json
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.2147642Z   GH_AW_AGENT_USAGE_JSONL_PATH: /tmp/gh-aw/threat-detection/detection_usage.jsonl
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.2148485Z   GH_AW_WRITE_EMPTY_USAGE: true
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.2148940Z ##[endgroup]
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.3517096Z Parsing token usage from 1 file(s): /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl (1214 bytes)
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.3864304Z Threat Detection Token Usage
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.3864721Z 
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.3865675Z # | Alias | Input | Output | Cache Read | Cache Write | ΔAI Credits | AI Credits | Duration 
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.3866179Z 
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.3866506Z  1 | gpt50mini | 18,714 | 143 | 0 | 0 | 0.49645 | 0.49645 | 3.7s 
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.3867213Z  2 | gpt50mini | 19,003 | 217 | 18,688 | 0 | 0.097995 | 0.594445 | 3.6s 
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.3867874Z  Total |  | 37,717 | 360 | 18,688 | 0 |  | 0.594445 | 7.3s 
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.3868450Z 
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.3869782Z Legend: `Alias` shows the model shorthand used in the table. `ΔAI Credits` is the per-request cost, and `AI Credits` is the running total mirrored from AWF fields for reporting.
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.3870872Z Token usage summary appended to step summary
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.3885962Z Primary model: gpt-5-mini-2025-08-07
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.3886554Z AI Credits: 0.594445
+detection	Parse threat detection token usage for step summary	2026-10-29T03:10:37.3886982Z Ambient context: 18714
+detection	Redact secrets in detection artifacts	﻿2026-10-29T03:10:37.4056112Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+detection	Redact secrets in detection artifacts	2026-10-29T03:10:37.4056560Z with:
+detection	Redact secrets in detection artifacts	2026-10-29T03:10:37.4058377Z   script: const path = require('path');
+detection	Redact secrets in detection artifacts	const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+detection	Redact secrets in detection artifacts	const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+detection	Redact secrets in detection artifacts	setupGlobals(core, github, context, exec, io, getOctokit);
+detection	Redact secrets in detection artifacts	const { main } = require(path.join(actionsDir, 'redact_secrets.cjs'));
+detection	Redact secrets in detection artifacts	const { persistDetectionMasks } = require(path.join(actionsDir, 'detection_mask_state.cjs'));
+detection	Redact secrets in detection artifacts	await main({ additionalDirectories: ["/tmp/gh-aw/threat-detection/sandbox/firewall"], persistDetectionMasks });
+detection	Redact secrets in detection artifacts	
+detection	Redact secrets in detection artifacts	2026-10-29T03:10:37.4062592Z   github-token: ***
+detection	Redact secrets in detection artifacts	2026-10-29T03:10:37.4062855Z   debug: false
+detection	Redact secrets in detection artifacts	2026-10-29T03:10:37.4063131Z   user-agent: actions/github-script
+detection	Redact secrets in detection artifacts	2026-10-29T03:10:37.4063451Z   result-encoding: json
+detection	Redact secrets in detection artifacts	2026-10-29T03:10:37.4063722Z   retries: 0
+detection	Redact secrets in detection artifacts	2026-10-29T03:10:37.4064068Z   retry-exempt-status-codes: 400,401,403,404,422
+detection	Redact secrets in detection artifacts	2026-10-29T03:10:37.4064454Z env:
+detection	Redact secrets in detection artifacts	2026-10-29T03:10:37.4064712Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+detection	Redact secrets in detection artifacts	2026-10-29T03:10:37.4065034Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+detection	Redact secrets in detection artifacts	2026-10-29T03:10:37.4065831Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+detection	Redact secrets in detection artifacts	2026-10-29T03:10:37.4066602Z   OTEL_EXPORTER_OTLP_HEADERS: 
+detection	Redact secrets in detection artifacts	2026-10-29T03:10:37.4066938Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+detection	Redact secrets in detection artifacts	2026-10-29T03:10:37.4067287Z   GH_AW_OTLP_IF_MISSING: ignore
+detection	Redact secrets in detection artifacts	2026-10-29T03:10:37.4067588Z   GH_AW_RUNTIME_FEATURES: 
+detection	Redact secrets in detection artifacts	2026-10-29T03:10:37.4067921Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+detection	Redact secrets in detection artifacts	2026-10-29T03:10:37.4068561Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: cecbcc1384f1eb26
+detection	Redact secrets in detection artifacts	2026-10-29T03:10:37.4068926Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243376619
+detection	Redact secrets in detection artifacts	2026-10-29T03:10:37.4069301Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+detection	Redact secrets in detection artifacts	2026-10-29T03:10:37.4069783Z   AWF_TOKEN_USAGE_LOG: /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+detection	Redact secrets in detection artifacts	2026-10-29T03:10:37.4070277Z   GH_AW_PRIMARY_MODEL: gpt-5-mini-2025-08-07
+detection	Redact secrets in detection artifacts	2026-10-29T03:10:37.4070598Z   GH_AW_AIC: 0.594445
+detection	Redact secrets in detection artifacts	2026-10-29T03:10:37.4070886Z   GH_AW_AMBIENT_CONTEXT: 18714
+detection	Redact secrets in detection artifacts	2026-10-29T03:10:37.4071344Z   GH_AW_SECRET_NAMES: CODEX_API_KEY,GH_AW_DEFAULT_OTLP_ENDPOINT,GH_AW_DEFAULT_OTLP_HEADERS,OPENAI_API_KEY
+detection	Redact secrets in detection artifacts	2026-10-29T03:10:37.4071821Z   SECRET_CODEX_API_KEY: 
+detection	Redact secrets in detection artifacts	2026-10-29T03:10:37.4072105Z   SECRET_GH_AW_DEFAULT_OTLP_ENDPOINT: 
+detection	Redact secrets in detection artifacts	2026-10-29T03:10:37.4072419Z   SECRET_GH_AW_DEFAULT_OTLP_HEADERS: 
+detection	Redact secrets in detection artifacts	2026-10-29T03:10:37.4073348Z   SECRET_OPENAI_API_KEY: ***
+detection	Redact secrets in detection artifacts	2026-10-29T03:10:37.4073638Z ##[endgroup]
+detection	Render detection log	﻿2026-10-29T03:10:38.5601384Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+detection	Render detection log	2026-10-29T03:10:38.5602108Z with:
+detection	Render detection log	2026-10-29T03:10:38.5603635Z   script: const path = require('path');
+detection	Render detection log	const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+detection	Render detection log	const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+detection	Render detection log	setupGlobals(core, github, context, exec, io, getOctokit);
+detection	Render detection log	const { main } = require(path.join(actionsDir, 'render_detection_log.cjs'));
+detection	Render detection log	await main();
+detection	Render detection log	
+detection	Render detection log	2026-10-29T03:10:38.5609651Z   github-token: ***
+detection	Render detection log	2026-10-29T03:10:38.5610240Z   debug: false
+detection	Render detection log	2026-10-29T03:10:38.5610876Z   user-agent: actions/github-script
+detection	Render detection log	2026-10-29T03:10:38.5611565Z   result-encoding: json
+detection	Render detection log	2026-10-29T03:10:38.5611962Z   retries: 0
+detection	Render detection log	2026-10-29T03:10:38.5612371Z   retry-exempt-status-codes: 400,401,403,404,422
+detection	Render detection log	2026-10-29T03:10:38.5612847Z env:
+detection	Render detection log	2026-10-29T03:10:38.5613191Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+detection	Render detection log	2026-10-29T03:10:38.5613684Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+detection	Render detection log	2026-10-29T03:10:38.5614897Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+detection	Render detection log	2026-10-29T03:10:38.5616105Z   OTEL_EXPORTER_OTLP_HEADERS: 
+detection	Render detection log	2026-10-29T03:10:38.5616573Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+detection	Render detection log	2026-10-29T03:10:38.5617076Z   GH_AW_OTLP_IF_MISSING: ignore
+detection	Render detection log	2026-10-29T03:10:38.5617475Z   GH_AW_RUNTIME_FEATURES: 
+detection	Render detection log	2026-10-29T03:10:38.5617954Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+detection	Render detection log	2026-10-29T03:10:38.5618810Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: cecbcc1384f1eb26
+detection	Render detection log	2026-10-29T03:10:38.5619327Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243376619
+detection	Render detection log	2026-10-29T03:10:38.5619832Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+detection	Render detection log	2026-10-29T03:10:38.5620551Z   AWF_TOKEN_USAGE_LOG: /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+detection	Render detection log	2026-10-29T03:10:38.5621246Z   GH_AW_PRIMARY_MODEL: gpt-5-mini-2025-08-07
+detection	Render detection log	2026-10-29T03:10:38.5621939Z   GH_AW_AIC: 0.594445
+detection	Render detection log	2026-10-29T03:10:38.5622317Z   GH_AW_AMBIENT_CONTEXT: 18714
+detection	Render detection log	2026-10-29T03:10:38.5622716Z ##[endgroup]
+detection	Render detection log	2026-10-29T03:10:38.6788450Z ##[group]Detection Log
+detection	Render detection log	2026-10-29T03:10:38.6793953Z ::stop-commands::***
+detection	Render detection log	2026-10-29T03:10:38.6794961Z [INFO] Auto-detected DNS servers from /run/systemd/resolve/resolv.conf: 168.63.129.16
+detection	Render detection log	2026-10-29T03:10:38.6795714Z [INFO] Agent timeout set to 5 minutes
+detection	Render detection log	2026-10-29T03:10:38.6796928Z [WARN] ⚠️  Using --env-all: All host environment variables will be passed to container
+detection	Render detection log	2026-10-29T03:10:38.6797823Z [WARN]    This may expose sensitive credentials if logs or configs are shared
+detection	Render detection log	2026-10-29T03:10:38.6798969Z [WARN] ⚠️  Host access enabled with host.docker.internal in allowed domains
+detection	Render detection log	2026-10-29T03:10:38.6799847Z [WARN]    Containers can access ANY service running on the host machine
+detection	Render detection log	2026-10-29T03:10:38.6800491Z [WARN]    Only use this for trusted workloads (e.g., MCP gateways)
+detection	Render detection log	2026-10-29T03:10:38.6801178Z [INFO] API proxy enabled: OpenAI=true, Anthropic=false, Copilot=false, Gemini=false, Vertex=false
+detection	Render detection log	2026-10-29T03:10:38.6802013Z [INFO] Allowed domains: 172.30.0.1, api.github.com, api.openai.com, github.com, host.docker.internal
+detection	Render detection log	2026-10-29T03:10:38.6802880Z [INFO] Network-isolation mode: enforcing egress via Docker network topology (no host iptables, no sudo).
+detection	Render detection log	2026-10-29T03:10:38.6803523Z [INFO] Generating configuration files...
+detection	Render detection log	2026-10-29T03:10:38.6804158Z [INFO] API proxy sidecar enabled - API keys will be held securely in sidecar container
+detection	Render detection log	2026-10-29T03:10:38.6804878Z [INFO] API proxy will route through Squid to respect domain whitelisting
+detection	Render detection log	2026-10-29T03:10:38.6805456Z [INFO] Starting containers...
+detection	Render detection log	2026-10-29T03:10:38.6805911Z  Network awf-wovcnu_awf-ext  Creating
+detection	Render detection log	2026-10-29T03:10:38.6806327Z  Network awf-wovcnu_awf-ext  Created
+detection	Render detection log	2026-10-29T03:10:38.6806649Z  Network awf-net  Creating
+detection	Render detection log	2026-10-29T03:10:38.6806932Z  Network awf-net  Created
+detection	Render detection log	2026-10-29T03:10:38.6807245Z  Container awf-squid  Creating
+detection	Render detection log	2026-10-29T03:10:38.6807568Z  Container awf-api-proxy  Creating
+detection	Render detection log	2026-10-29T03:10:38.6807948Z  Container awf-squid  Created
+detection	Render detection log	2026-10-29T03:10:38.6808940Z  Container awf-api-proxy  Created
+detection	Render detection log	2026-10-29T03:10:38.6809594Z  Container awf-agent  Creating
+detection	Render detection log	2026-10-29T03:10:38.6810067Z  Container awf-agent  Created
+detection	Render detection log	2026-10-29T03:10:38.6810567Z  Container awf-api-proxy  Starting
+detection	Render detection log	2026-10-29T03:10:38.6811066Z  Container awf-squid  Starting
+detection	Render detection log	2026-10-29T03:10:38.6811543Z  Container awf-api-proxy  Started
+detection	Render detection log	2026-10-29T03:10:38.6812243Z  Container awf-squid  Started
+detection	Render detection log	2026-10-29T03:10:38.6812760Z  Container awf-squid  Waiting
+detection	Render detection log	2026-10-29T03:10:38.6813317Z  Container awf-api-proxy  Waiting
+detection	Render detection log	2026-10-29T03:10:38.6813892Z  Container awf-api-proxy  Healthy
+detection	Render detection log	2026-10-29T03:10:38.6814431Z  Container awf-squid  Healthy
+detection	Render detection log	2026-10-29T03:10:38.6814805Z  Container awf-agent  Starting
+detection	Render detection log	2026-10-29T03:10:38.6815184Z  Container awf-agent  Started
+detection	Render detection log	2026-10-29T03:10:38.6815709Z [SUCCESS] Containers started successfully
+detection	Render detection log	2026-10-29T03:10:38.6816256Z [INFO] Executing agent command...
+detection	Render detection log	2026-10-29T03:10:38.6816783Z [INFO] Agent timeout: 5 minutes
+detection	Render detection log	2026-10-29T03:10:38.6817481Z [entrypoint] Agentic Workflow Firewall - Agent Container
+detection	Render detection log	2026-10-29T03:10:38.6818403Z [entrypoint] ==================================
+detection	Render detection log	2026-10-29T03:10:38.6819104Z [entrypoint] Configuring DNS...
+detection	Render detection log	2026-10-29T03:10:38.6819948Z [entrypoint] DNS configured with Docker embedded DNS (127.0.0.11) only
+detection	Render detection log	2026-10-29T03:10:38.6821089Z [entrypoint] iptables-init skipped (proxy-based egress): skipping init container wait
+detection	Render detection log	2026-10-29T03:10:38.6822046Z [health-check] API Proxy Pre-flight Check
+detection	Render detection log	2026-10-29T03:10:38.6822878Z [health-check] ==========================================
+detection	Render detection log	2026-10-29T03:10:38.6823748Z [health-check] Checking OpenAI API proxy configuration...
+detection	Render detection log	2026-10-29T03:10:38.6825080Z [health-check] ✓ OpenAI/Codex placeholder key in agent environment (credential isolation active)
+detection	Render detection log	2026-10-29T03:10:38.6826300Z [health-check] Testing connectivity to OpenAI API proxy at http://172.30.0.30:10000...
+detection	Render detection log	2026-10-29T03:10:38.6827453Z [health-check] ✓ OpenAI API proxy is reachable at http://172.30.0.30:10000
+detection	Render detection log	2026-10-29T03:10:38.6829531Z [health-check] ==========================================
+detection	Render detection log	2026-10-29T03:10:38.6830261Z [health-check] ✓ All API proxy health checks passed
+detection	Render detection log	2026-10-29T03:10:38.6830898Z [health-check] ✓ Credential isolation verified
+detection	Render detection log	2026-10-29T03:10:38.6831463Z [health-check] ✓ Connectivity established
+detection	Render detection log	2026-10-29T03:10:38.6832123Z [health-check] ==========================================
+detection	Render detection log	2026-10-29T03:10:38.6833558Z [entrypoint] Pre-seeding JVM build tool proxy configuration (squid-proxy:3128)...
+detection	Render detection log	2026-10-29T03:10:38.6834765Z [entrypoint] ✓ Created Maven proxy config (/host/home/runner/.m2/settings.xml)
+detection	Render detection log	2026-10-29T03:10:38.6835893Z [entrypoint] ✓ Created Gradle proxy config (/host/home/runner/.gradle/gradle.properties)
+detection	Render detection log	2026-10-29T03:10:38.6836941Z [entrypoint] ✓ Set JAVA_TOOL_OPTIONS with proxy and nonProxyHosts flags
+detection	Render detection log	2026-10-29T03:10:38.6837649Z [entrypoint] Proxy configuration:
+detection	Render detection log	2026-10-29T03:10:38.6838379Z [entrypoint]   HTTP_PROXY=http://172.30.0.10:3128
+detection	Render detection log	2026-10-29T03:10:38.6839149Z [entrypoint]   HTTPS_PROXY=http://172.30.0.10:3128
+detection	Render detection log	2026-10-29T03:10:38.6839743Z [entrypoint] Network information:
+detection	Render detection log	2026-10-29T03:10:38.6840279Z [entrypoint]   IP address: 172.30.0.20 
+detection	Render detection log	2026-10-29T03:10:38.6840833Z [entrypoint]   Hostname: 58d4a62f5f8f
+detection	Render detection log	2026-10-29T03:10:38.6841404Z [entrypoint] ==================================
+detection	Render detection log	2026-10-29T03:10:38.6842186Z [entrypoint] Chroot mode enabled - dropping CAP_SYS_CHROOT and CAP_SYS_ADMIN
+detection	Render detection log	2026-10-29T03:10:38.6843030Z [entrypoint] Switching to awfuser (UID: 1001, GID: 1001)
+detection	Render detection log	2026-10-29T03:10:38.6846940Z [entrypoint] Executing command: /bin/bash -c /bin/bash -c 'set +o histexpand; : "${RUNNER_TOOL_CACHE:?RUNNER_TOOL_CACHE must be set}"; GH_AW_TOOL_CACHE="$RUNNER_TOOL_CACHE"; GH_AW_TOOL_BINS="$(find "$GH_AW_TOOL_CACHE" -maxdepth 5 -type d -name bin 2>/dev/null | tr "\n" ":")"; GH_AW_TOOL_BINS="${GH_AW_TOOL_BINS%:}"; export PATH="$PATH${GH_AW_TOOL_BINS:+:}$GH_AW_TOOL_BINS"; [ -n "$GOROOT" ] && export PATH="$GOROOT/bin:$PATH" || true; [ -n "$ERLANG_HOME" ] && export PATH="$ERLANG_HOME/bin:$PATH" || true && threat-detect --engine codex --output /tmp/gh-aw/threat-detection/detection_result.json /tmp/gh-aw/threat-detection'
+detection	Render detection log	2026-10-29T03:10:38.6850244Z 
+detection	Render detection log	2026-10-29T03:10:38.6850706Z [entrypoint] Chroot mode: running command inside host filesystem (/host)
+detection	Render detection log	2026-10-29T03:10:38.6851446Z [entrypoint] Mounted procfs at /host/proc (nosuid,nodev,noexec,hidepid=2)
+detection	Render detection log	2026-10-29T03:10:38.6852168Z [entrypoint] Bind-mounted container cgroup subtree at /host/sys/fs/cgroup (ro)
+detection	Render detection log	2026-10-29T03:10:38.6853083Z [entrypoint] One-shot token library copied to chroot at /run/awf-lib/one-shot-token.so
+detection	Render detection log	2026-10-29T03:10:38.6853921Z [entrypoint] Chromium/Playwright runtime libraries staged for chroot at /host/run/awf-lib/browser-libs
+detection	Render detection log	2026-10-29T03:10:38.6854835Z [entrypoint] Filtered host CA trust staged at /run/awf-lib/trust/ca-certificates.crt (host store unchanged)
+detection	Render detection log	2026-10-29T03:10:38.6855633Z [entrypoint] DNS configuration created in chroot (/host/etc/resolv.conf)
+detection	Render detection log	2026-10-29T03:10:38.6856432Z [entrypoint] Running as host user: runner (UID: 1001)
+detection	Render detection log	2026-10-29T03:10:38.6857248Z [entrypoint] Chroot working directory: /home/runner/work/duckdb-triage-agent/duckdb-triage-agent
+detection	Render detection log	2026-10-29T03:10:38.6857789Z [entrypoint] Using host PATH for chroot
+detection	Render detection log	2026-10-29T03:10:38.6858453Z [entrypoint] Adding JAVA_HOME/bin to PATH: /usr/lib/jvm/temurin-17-jdk-amd64/bin
+detection	Render detection log	2026-10-29T03:10:38.6859095Z [entrypoint] DNS configuration will be removed on exit
+detection	Render detection log	2026-10-29T03:10:38.6859798Z [entrypoint] Transferred /host/tmp/gh-aw ownership to chroot user (1001:1001)
+detection	Render detection log	2026-10-29T03:10:38.6860462Z [entrypoint] Unsetting sensitive tokens from parent shell environment...
+detection	Render detection log	2026-10-29T03:10:38.6861044Z [entrypoint] Unset OPENAI_API_KEY from /proc/1/environ
+detection	Render detection log	2026-10-29T03:10:38.6861720Z [entrypoint] Unset CODEX_API_KEY from /proc/1/environ
+detection	Render detection log	2026-10-29T03:10:38.6862622Z [threat-detect] run start: version=v0.5.3 engine=codex model=gpt-5-mini retries=0 max_turns=50 engine_timeout=5m0s
+detection	Render detection log	2026-10-29T03:10:38.6863925Z [threat-detect] artifacts loaded: dir=/tmp/gh-aw/threat-detection prompt_bytes=11959 agent_output_bytes=481 patch_files=0 all_primary_inputs_missing=false
+detection	Render detection log	2026-10-29T03:10:38.6865275Z [threat-detect] artifact inventory (7 entries):
+detection	Render detection log	2026-10-29T03:10:38.6866011Z [threat-detect]   agent_output.json bytes=481 kind=file consumed=true
+detection	Render detection log	2026-10-29T03:10:38.6866715Z [threat-detect]   aw-prompts/prompt-import-tree.json bytes=18269 kind=file consumed=true
+detection	Render detection log	2026-10-29T03:10:38.6867378Z [threat-detect]   aw-prompts/prompt-template.txt bytes=5776 kind=file consumed=true
+detection	Render detection log	2026-10-29T03:10:38.6867982Z [threat-detect]   aw-prompts/prompt.txt bytes=11959 kind=file consumed=true
+detection	Render detection log	2026-10-29T03:10:38.6868718Z [threat-detect]   aw_info.json bytes=1519 kind=file consumed=true
+detection	Render detection log	2026-10-29T03:10:38.6869248Z [threat-detect]   detection.log bytes=5339 kind=file consumed=false
+detection	Render detection log	2026-10-29T03:10:38.6869777Z [threat-detect]   execution.json bytes=93 kind=file consumed=false
+detection	Render detection log	2026-10-29T03:10:38.6870645Z [threat-detect] result destinations: output=/tmp/gh-aw/threat-detection/detection_result.json full_output=/tmp/gh-aw/threat-detection/detection_result_full.json
+detection	Render detection log	2026-10-29T03:10:38.6872159Z Prompt context: workflow_name="DuckDB issue triage" (defaulted=false) workflow_description="Manually assess one sandbox issue and publish a validated clarification." (defaulted=false) custom_prompt_applied=false custom_prompt_source=none custom_prompt_bytes=0
+detection	Render detection log	2026-10-29T03:10:38.6873706Z [threat-detect] prompt built: prompt_bytes=49236 framework_scaffolding_detected=true framework_scaffolding_host_removed=true framework_scaffolding_markers=<safe-output-tools>
+detection	Render detection log	2026-10-29T03:10:38.6874678Z [threat-detect] eligibility: prompt_injection=true secret_leak=true malicious_patch=false
+detection	Render detection log	2026-10-29T03:10:38.6875237Z [threat-detect] detection attempt 1 of 1
+detection	Render detection log	2026-10-29T03:10:38.6875975Z [threat-detect] engine invoke: engine=codex model="gpt-5-mini" command="node (/opt/hostedtoolcache/node/24.22.1/x64/bin/node)" args=13
+detection	Render detection log	2026-10-29T03:10:38.6877520Z [threat-detect] engine argv: "/home/runner/work/_temp/gh-aw/actions/codex_harness.cjs" "codex" "exec" "-c" "model=gpt-5-mini" "-c" "web_search=disabled" "-c" "fetch=disabled" "--dangerously-bypass-approvals-and-sandbox" "--skip-git-repo-check" "--prompt-file" "<prompt-file>"
+detection	Render detection log	2026-10-29T03:10:38.6879644Z [engine] [codex-harness] 2026-10-29T03:10:23.670Z starting: command=codex maxRetries=0 initialDelayMs=5000 backoffMultiplier=2 maxDelayMs=60000 nodeVersion=v24.22.1 platform=linux
+detection	Render detection log	2026-10-29T03:10:38.6880744Z [engine] [codex-harness] 2026-10-29T03:10:23.699Z secrets: CODEX_API_KEY=set (length=28) OPENAI_API_KEY=set (length=28)
+detection	Render detection log	2026-10-29T03:10:38.6881672Z [engine] [codex-harness] 2026-10-29T03:10:23.699Z resolved --prompt-file: path=/tmp/threat-detect-prompt-262007867.txt size=49236B
+detection	Render detection log	2026-10-29T03:10:38.6882664Z [engine] [codex-harness] 2026-10-29T03:10:23.699Z awf-reflect: fetching http://api-proxy:10000/reflect (timeout=60000ms)
+detection	Render detection log	2026-10-29T03:10:38.6883553Z [engine] [codex-harness] 2026-10-29T03:10:24.725Z awf-reflect: fetched 134 model(s) from http://api-proxy:10000/v1/models
+detection	Render detection log	2026-10-29T03:10:38.6884491Z [engine] [codex-harness] 2026-10-29T03:10:24.726Z awf-reflect: saved 21738B to /tmp/gh-aw/agent/awf-reflect.json
+detection	Render detection log	2026-10-29T03:10:38.6885487Z [engine] [codex-harness] 2026-10-29T03:10:24.730Z model alias resolution: 'gpt-5-mini' is a live model id (provider=openai); not resolving it as an alias
+detection	Render detection log	2026-10-29T03:10:38.6886768Z [engine] [codex-harness] 2026-10-29T03:10:24.730Z model resolution: engine=codex role=main configured=gpt-5-mini resolved=gpt-5-mini provider=openai status=exact
+detection	Render detection log	2026-10-29T03:10:38.6888004Z [engine] [codex-harness] 2026-10-29T03:10:24.732Z awf-reflect: provider=openai mapped to endpoint provider=openai baseUrl=http://api-proxy:10000
+detection	Render detection log	2026-10-29T03:10:38.6889220Z [engine] [codex-harness] 2026-10-29T03:10:24.732Z configured OPENAI_BASE_URL from /reflect for provider=openai: http://api-proxy:10000
+detection	Render detection log	2026-10-29T03:10:38.6890433Z [engine] [codex-harness] 2026-10-29T03:10:24.734Z context-rebuild circuit breaker: enabled=true maxRebuildFactor=25 minCumulativeInputTokens=1000000 pollIntervalMs=15000
+detection	Render detection log	2026-10-29T03:10:38.6892224Z [engine] [codex-harness] 2026-10-29T03:10:24.736Z attempt 1: spawning: codex exec --model gpt-5-mini -c model=gpt-5-mini -c web_search=disabled -c fetch=disabled --dangerously-bypass-approvals-and-sandbox --skip-git-repo-check <prompt via stdin>
+detection	Render detection log	2026-10-29T03:10:38.6893687Z [engine] [codex-harness] 2026-10-29T03:10:24.741Z attempt 1: process started (pid=1917)
+detection	Render detection log	2026-10-29T03:10:38.6894955Z [engine] WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir "/tmp" (codex_home: AbsolutePathBuf("/tmp/gh-aw/detection-codex-home"))
+detection	Render detection log	2026-10-29T03:10:38.6896596Z [engine] 2026-10-29T03:10:25.214459Z  WARN codex_core_plugins::manager: remote installed plugin bundle sync failed error=chatgpt authentication required for remote plugin catalog; api key auth is not supported
+detection	Render detection log	2026-10-29T03:10:38.6897761Z [engine] {"type":"thread.started","thread_id":"01a185a3-29cc-7fe3-8043-ed51f07fb1a3"}
+detection	Render detection log	2026-10-29T03:10:38.6899290Z [engine] {"type":"item.completed","item":{"id":"item_0","type":"error","message":"Codex is ignoring 1 unrecognized configuration setting. Check for typos or deprecated settings.\n  session-flags: `fetch` is ignored."}}
+detection	Render detection log	2026-10-29T03:10:38.6901056Z [engine] {"type":"item.completed","item":{"id":"item_1","type":"error","message":"Codex is ignoring 1 unrecognized configuration setting. Check for typos or deprecated settings.\n  session-flags: `fetch` is ignored."}}
+detection	Render detection log	2026-10-29T03:10:38.6901997Z [engine] {"type":"turn.started"}
+detection	Render detection log	2026-10-29T03:10:38.6903580Z [engine] 2026-10-29T03:10:25.339521Z  WARN codex_core_plugins::manager: failed to warm featured plugin ids cache error=failed to send remote featured plugin request to https://chatgpt.com/backend-api/plugins/featured?platform=codex: error sending request for url (https://chatgpt.com/backend-api/plugins/featured?platform=codex)
+detection	Render detection log	2026-10-29T03:10:38.6905832Z [engine] 2026-10-29T03:10:27.826280Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt[0]: prompt must be at most 128 characters path=file:///tmp/gh-aw/detection-codex-home/.tmp/plugins/plugins/ngs-analysis/.codex-plugin/plugin.json
+detection	Render detection log	2026-10-29T03:10:38.6907865Z [engine] 2026-10-29T03:10:27.828248Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt[0]: prompt must be at most 128 characters path=file:///tmp/gh-aw/detection-codex-home/.tmp/plugins/plugins/ngs-analysis/.codex-plugin/plugin.json
+detection	Render detection log	2026-10-29T03:10:38.6910714Z [engine] {"type":"item.completed","item":{"id":"item_2","type":"reasoning","text":"**Reading the output file**\n\nI need to read the agent_output.json file. I'll start by saying that we're going to check the contents of this file, as a preamble according to Codex guidelines. Then I'll move on to call functions.exec_command to actually read the file's output. I want to make sure everything is clear and organized, so the user knows what to expect. Let's go ahead and get that file info!"}}
+detection	Render detection log	2026-10-29T03:10:38.6913405Z [engine] {"type":"item.completed","item":{"id":"item_3","type":"agent_message","text":"I'll inspect the saved agent output file to find any injected instructions, secrets, or malicious patches and then report findings. I'll open `/tmp/gh-aw/threat-detection/agent_output.json`."}}
+detection	Render detection log	2026-10-29T03:10:38.6915253Z [engine] {"type":"item.started","item":{"id":"item_4","type":"command_execution","command":"/bin/bash -lc \"sed -n '1,240p' /tmp/gh-aw/threat-detection/agent_output.json\"","aggregated_output":"","exit_code":null,"status":"in_progress"}}
+detection	Render detection log	2026-10-29T03:10:38.6920145Z [engine] {"type":"item.completed","item":{"id":"item_4","type":"command_execution","command":"/bin/bash -lc \"sed -n '1,240p' /tmp/gh-aw/threat-detection/agent_output.json\"","aggregated_output":"{\"items\":[{\"type\":\"submit_triage\",\"comment\":\"no_action\",\"label\":\"no_action\",\"rationale\":\"The report supplies a complete, minimal SQL statement, exact DuckDB version (1.5.2), client (official CLI), OS (Ubuntu 24.04), and states an in-memory default database—these are sufficient to reproduce and there is no evidence of missing essential reproduction data; the reporter also notes this is a constructed practice cancellation, so no further clarification is needed.\"}],\"errors\":[]}","exit_code":0,"status":"completed"}}
+detection	Render detection log	2026-10-29T03:10:38.6923840Z [engine] {"type":"item.started","item":{"id":"item_5","type":"command_execution","command":"/bin/bash -lc 'threat_detection_result --prompt-injection false --secret-leak false --malicious-patch false'","aggregated_output":"","exit_code":null,"status":"in_progress"}}
+detection	Render detection log	2026-10-29T03:10:38.6926317Z [engine] {"type":"item.completed","item":{"id":"item_5","type":"command_execution","command":"/bin/bash -lc 'threat_detection_result --prompt-injection false --secret-leak false --malicious-patch false'","aggregated_output":"THREAT_DETECTION_RESULT_RECORDED: analysis complete; stop now and produce no further output.\n","exit_code":0,"status":"completed"}}
+detection	Render detection log	2026-10-29T03:10:38.6927701Z [threat-detect] attempt 1 outcome=recorded
+detection	Render detection log	2026-10-29T03:10:38.6928586Z [threat-detect] full result written: path=/tmp/gh-aw/threat-detection/detection_result_full.json reasons=0 warnings=0
+detection	Render detection log	2026-10-29T03:10:38.6929339Z THREAT_DETECTION_STATUS: reason=result_recorded exit=0
+detection	Render detection log	2026-10-29T03:10:38.6929912Z [entrypoint] Relaxed /host/tmp/gh-aw group permissions for host-side post-processing
+detection	Render detection log	2026-10-29T03:10:38.6930456Z [INFO] Stopping containers...
+detection	Render detection log	2026-10-29T03:10:38.6930808Z  Container awf-agent  Stopping
+detection	Render detection log	2026-10-29T03:10:38.6931124Z  Container awf-agent  Stopped
+detection	Render detection log	2026-10-29T03:10:38.6931446Z  Container awf-agent  Removing
+detection	Render detection log	2026-10-29T03:10:38.6931749Z  Container awf-agent  Removed
+detection	Render detection log	2026-10-29T03:10:38.6932075Z  Container awf-api-proxy  Stopping
+detection	Render detection log	2026-10-29T03:10:38.6932557Z  Container awf-squid  Stopping
+detection	Render detection log	2026-10-29T03:10:38.6932942Z  Container awf-api-proxy  Stopped
+detection	Render detection log	2026-10-29T03:10:38.6933273Z  Container awf-api-proxy  Removing
+detection	Render detection log	2026-10-29T03:10:38.6933608Z  Container awf-api-proxy  Removed
+detection	Render detection log	2026-10-29T03:10:38.6933916Z  Container awf-squid  Stopped
+detection	Render detection log	2026-10-29T03:10:38.6934241Z  Container awf-squid  Removing
+detection	Render detection log	2026-10-29T03:10:38.6934632Z  Container awf-squid  Removed
+detection	Render detection log	2026-10-29T03:10:38.6934933Z  Network awf-net  Removing
+detection	Render detection log	2026-10-29T03:10:38.6935252Z  Network awf-wovcnu_awf-ext  Removing
+detection	Render detection log	2026-10-29T03:10:38.6935568Z  Network awf-net  Removed
+detection	Render detection log	2026-10-29T03:10:38.6935884Z  Network awf-wovcnu_awf-ext  Removed
+detection	Render detection log	2026-10-29T03:10:38.6936259Z [SUCCESS] Containers stopped successfully
+detection	Render detection log	2026-10-29T03:10:38.6936895Z [INFO] API proxy logs available at: /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs
+detection	Render detection log	2026-10-29T03:10:38.6937617Z [INFO] Token usage log available at: /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+detection	Render detection log	2026-10-29T03:10:38.6938443Z [INFO] CLI proxy logs available at: /tmp/gh-aw/sandbox/firewall/logs/cli-proxy-logs
+detection	Render detection log	2026-10-29T03:10:38.6939153Z [INFO] Squid logs available at: /tmp/gh-aw/sandbox/firewall/logs
+detection	Render detection log	2026-10-29T03:10:38.6939681Z [INFO] Audit artifacts available at: /tmp/gh-aw/sandbox/firewall/audit
+detection	Render detection log	2026-10-29T03:10:38.6940124Z [SUCCESS] Command completed successfully
+detection	Render detection log	2026-10-29T03:10:38.6940489Z Process exiting with code: 0
+detection	Render detection log	2026-10-29T03:10:38.6941194Z ::***::
+detection	Render detection log	2026-10-29T03:10:38.6941667Z ##[endgroup]
+detection	Render detection log	2026-10-29T03:10:38.6942081Z Log rendered (14737 bytes): /tmp/gh-aw/threat-detection/detection.log
+detection	Upload threat detection artifact	﻿2026-10-29T03:10:38.6994900Z ##[group]Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+detection	Upload threat detection artifact	2026-10-29T03:10:38.6995393Z with:
+detection	Upload threat detection artifact	2026-10-29T03:10:38.6995649Z   name: detection
+detection	Upload threat detection artifact	2026-10-29T03:10:38.6996756Z   path: /tmp/gh-aw/threat-detection/detection_result.json
+detection	Upload threat detection artifact	/tmp/gh-aw/threat-detection/execution.json
+detection	Upload threat detection artifact	/tmp/gh-aw/threat-detection/detection_usage.json
+detection	Upload threat detection artifact	/tmp/gh-aw/threat-detection/detection_usage.jsonl
+detection	Upload threat detection artifact	/tmp/gh-aw/threat-detection/sandbox/firewall/logs/
+detection	Upload threat detection artifact	/tmp/gh-aw/threat-detection/sandbox/firewall/audit/
+detection	Upload threat detection artifact	
+detection	Upload threat detection artifact	2026-10-29T03:10:38.6997901Z   if-no-files-found: ignore
+detection	Upload threat detection artifact	2026-10-29T03:10:38.6998392Z   retention-days: 0
+detection	Upload threat detection artifact	2026-10-29T03:10:38.6998693Z   compression-level: 6
+detection	Upload threat detection artifact	2026-10-29T03:10:38.6998982Z   overwrite: false
+detection	Upload threat detection artifact	2026-10-29T03:10:38.6999390Z   include-hidden-files: false
+detection	Upload threat detection artifact	2026-10-29T03:10:38.6999698Z   archive: true
+detection	Upload threat detection artifact	2026-10-29T03:10:38.6999956Z env:
+detection	Upload threat detection artifact	2026-10-29T03:10:38.7000217Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+detection	Upload threat detection artifact	2026-10-29T03:10:38.7000550Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+detection	Upload threat detection artifact	2026-10-29T03:10:38.7001390Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+detection	Upload threat detection artifact	2026-10-29T03:10:38.7002243Z   OTEL_EXPORTER_OTLP_HEADERS: 
+detection	Upload threat detection artifact	2026-10-29T03:10:38.7002584Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+detection	Upload threat detection artifact	2026-10-29T03:10:38.7002945Z   GH_AW_OTLP_IF_MISSING: ignore
+detection	Upload threat detection artifact	2026-10-29T03:10:38.7003246Z   GH_AW_RUNTIME_FEATURES: 
+detection	Upload threat detection artifact	2026-10-29T03:10:38.7003596Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+detection	Upload threat detection artifact	2026-10-29T03:10:38.7004015Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: cecbcc1384f1eb26
+detection	Upload threat detection artifact	2026-10-29T03:10:38.7004382Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243376619
+detection	Upload threat detection artifact	2026-10-29T03:10:38.7004768Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+detection	Upload threat detection artifact	2026-10-29T03:10:38.7005280Z   AWF_TOKEN_USAGE_LOG: /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+detection	Upload threat detection artifact	2026-10-29T03:10:38.7005787Z   GH_AW_PRIMARY_MODEL: gpt-5-mini-2025-08-07
+detection	Upload threat detection artifact	2026-10-29T03:10:38.7006128Z   GH_AW_AIC: 0.594445
+detection	Upload threat detection artifact	2026-10-29T03:10:38.7006452Z   GH_AW_AMBIENT_CONTEXT: 18714
+detection	Upload threat detection artifact	2026-10-29T03:10:38.7006769Z ##[endgroup]
+detection	Upload threat detection artifact	2026-10-29T03:10:38.8521550Z Multiple search paths detected. Calculating the least common ancestor of all paths
+detection	Upload threat detection artifact	2026-10-29T03:10:38.8524943Z The least common ancestor is /tmp/gh-aw/threat-detection. This will be the root directory of the artifact
+detection	Upload threat detection artifact	2026-10-29T03:10:38.8526035Z With the provided path, there will be 17 files uploaded
+detection	Upload threat detection artifact	2026-10-29T03:10:38.8529024Z Artifact name is valid!
+detection	Upload threat detection artifact	2026-10-29T03:10:38.8529656Z Root directory input is valid!
+detection	Upload threat detection artifact	2026-10-29T03:10:39.2062475Z Uploading artifact: detection.zip
+detection	Upload threat detection artifact	2026-10-29T03:10:39.2101358Z Beginning upload of artifact content to blob storage
+detection	Upload threat detection artifact	2026-10-29T03:10:39.5413626Z Uploaded bytes 21406
+detection	Upload threat detection artifact	2026-10-29T03:10:39.6032397Z Finished uploading artifact content to blob storage!
+detection	Upload threat detection artifact	2026-10-29T03:10:39.6034064Z SHA256 digest of uploaded artifact is 7433e4e283859e3a8220605b32ae95cd74a932371ed238234ce24a5c26d5d929
+detection	Upload threat detection artifact	2026-10-29T03:10:39.6035156Z Finalizing artifact upload
+detection	Upload threat detection artifact	2026-10-29T03:10:40.2076303Z Artifact detection successfully finalized. Artifact ID 12869738912
+detection	Upload threat detection artifact	2026-10-29T03:10:40.2077476Z Artifact detection has been successfully uploaded! Final size is 21406 bytes. Artifact ID is 12869738912
+detection	Upload threat detection artifact	2026-10-29T03:10:40.2080853Z Artifact download URL: https://github.com/andreleocl/duckdb-triage-agent/actions/runs/40810270665/artifacts/12869738912
+detection	Conclude threat detection	﻿2026-10-29T03:10:40.2196274Z ##[group]Run bash "${RUNNER_TEMP}/gh-aw/actions/conclude_threat_detection.sh" /tmp/gh-aw/threat-detection/detection_result.json
+detection	Conclude threat detection	2026-10-29T03:10:40.2197212Z ^[[36;1mbash "${RUNNER_TEMP}/gh-aw/actions/conclude_threat_detection.sh" /tmp/gh-aw/threat-detection/detection_result.json^[[0m
+detection	Conclude threat detection	2026-10-29T03:10:40.2211775Z shell: /usr/bin/bash -e {0}
+detection	Conclude threat detection	2026-10-29T03:10:40.2212117Z env:
+detection	Conclude threat detection	2026-10-29T03:10:40.2212390Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+detection	Conclude threat detection	2026-10-29T03:10:40.2212721Z   OTEL_SERVICE_NAME: gh-aw.issue-triage
+detection	Conclude threat detection	2026-10-29T03:10:40.2213511Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=DuckDB%20issue%20triage,gh-aw.repository=andreleocl/duckdb-triage-agent,gh-aw.run.id=40810270665,github.run_id=40810270665,gh-aw.engine.id=codex
+detection	Conclude threat detection	2026-10-29T03:10:40.2214292Z   OTEL_EXPORTER_OTLP_HEADERS: 
+detection	Conclude threat detection	2026-10-29T03:10:40.2214630Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+detection	Conclude threat detection	2026-10-29T03:10:40.2214975Z   GH_AW_OTLP_IF_MISSING: ignore
+detection	Conclude threat detection	2026-10-29T03:10:40.2215274Z   GH_AW_RUNTIME_FEATURES: 
+detection	Conclude threat detection	2026-10-29T03:10:40.2215620Z   GITHUB_AW_OTEL_TRACE_ID: e25ae10f94863f0b17051e6dfbd1a8c4
+detection	Conclude threat detection	2026-10-29T03:10:40.2216065Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: cecbcc1384f1eb26
+detection	Conclude threat detection	2026-10-29T03:10:40.2216426Z   GITHUB_AW_OTEL_JOB_START_MS: 1793243376619
+detection	Conclude threat detection	2026-10-29T03:10:40.2216792Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+detection	Conclude threat detection	2026-10-29T03:10:40.2217276Z   AWF_TOKEN_USAGE_LOG: /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+detection	Conclude threat detection	2026-10-29T03:10:40.2217872Z   GH_AW_PRIMARY_MODEL: gpt-5-mini-2025-08-07
+detection	Conclude threat detection	2026-10-29T03:10:40.2218320Z   GH_AW_AIC: 0.594445
+detection	Conclude threat detection	2026-10-29T03:10:40.2218632Z   GH_AW_AMBIENT_CONTEXT: 18714
+detection	Conclude threat detection	2026-10-29T03:10:40.2218930Z   RUN_DETECTION: true
+detection	Conclude threat detection	2026-10-29T03:10:40.2219228Z   DETECTION_AGENTIC_EXECUTION_OUTCOME: success
+detection	Conclude threat detection	2026-10-29T03:10:40.2219580Z   THREAT_DETECT_INSTALL_OUTCOME: success
+detection	Conclude threat detection	2026-10-29T03:10:40.2219908Z   GH_AW_DETECTION_CONTINUE_ON_ERROR: false
+detection	Conclude threat detection	2026-10-29T03:10:40.2220227Z ##[endgroup]
+detection	Conclude threat detection	2026-10-29T03:10:40.2304326Z ════════════════════════════════════════════════════════
+detection	Conclude threat detection	2026-10-29T03:10:40.2305196Z 🛡️  Threat Detection: Parse Results & Conclude
+detection	Conclude threat detection	2026-10-29T03:10:40.2305966Z ════════════════════════════════════════════════════════
+detection	Conclude threat detection	2026-10-29T03:10:40.2306570Z 📋 RUN_DETECTION env: "true"
+detection	Conclude threat detection	2026-10-29T03:10:40.2307136Z 📋 continue-on-error: false
+detection	Conclude threat detection	2026-10-29T03:10:40.2307681Z 📋 detection execution outcome: "success"
+detection	Conclude threat detection	2026-10-29T03:10:40.2308506Z 📁 Threat detection directory: /tmp/gh-aw/threat-detection
+detection	Conclude threat detection	2026-10-29T03:10:40.2309195Z 📄 Detection log path: /tmp/gh-aw/threat-detection/detection.log
+detection	Conclude threat detection	2026-10-29T03:10:40.2309951Z 📄 Structured result path: /tmp/gh-aw/threat-detection/detection_result.json
+detection	Conclude threat detection	2026-10-29T03:10:40.2310730Z 📄 Full result path: /tmp/gh-aw/threat-detection/detection_result_full.json
+detection	Conclude threat detection	2026-10-29T03:10:40.2311478Z 🔍 Detection is required. Proceeding to parse detection result...
+detection	Conclude threat detection	2026-10-29T03:10:40.2312538Z 🔎 Checking for structured result file: /tmp/gh-aw/threat-detection/detection_result.json
+detection	Conclude threat detection	2026-10-29T03:10:40.2313521Z ✔️  Structured result file found and parsed successfully.
+detection	Conclude threat detection	2026-10-29T03:10:40.2314122Z ✔️  Full result file found; recovered 0 reason(s).
+detection	Conclude threat detection	2026-10-29T03:10:40.2314634Z 📋 Threat detection verdict (from structured result file):
+detection	Conclude threat detection	2026-10-29T03:10:40.2315033Z    prompt_injection : false
+detection	Conclude threat detection	2026-10-29T03:10:40.2315346Z    secret_leak      : false
+detection	Conclude threat detection	2026-10-29T03:10:40.2315637Z    malicious_patch  : false
+detection	Conclude threat detection	2026-10-29T03:10:40.2315929Z    reasons          : (none)
+detection	Conclude threat detection	2026-10-29T03:10:40.2316237Z    warnings         : (none)
+detection	Conclude threat detection	2026-10-29T03:10:40.2316692Z ✅ No security threats detected. Safe outputs may proceed.
+detection	Conclude threat detection	2026-10-29T03:10:40.2317230Z ════════════════════════════════════════════════════════
+detection	Conclude threat detection	2026-10-29T03:10:40.2317680Z 🛡️  Threat detection conclusion complete.
+detection	Conclude threat detection	2026-10-29T03:10:40.2318178Z ════════════════════════════════════════════════════════
+detection	Post Setup Node.js	﻿2026-10-29T03:10:40.2407454Z Post job cleanup.
+detection	Post Setup Scripts	﻿2026-10-29T03:10:40.3665702Z Post job cleanup.
+detection	Post Setup Scripts	2026-10-29T03:10:40.4337292Z [info] [otlp] sending conclusion span "gh-aw.detection.conclusion" to configured endpoints
+detection	Post Setup Scripts	2026-10-29T03:10:40.4528692Z [info] [otlp] conclusion span export attempted
+detection	Post Setup Scripts	2026-10-29T03:10:40.4529473Z Cleaning up /tmp/gh-aw...
+detection	Post Setup Scripts	2026-10-29T03:10:41.2458965Z Cleaned up /tmp/gh-aw
+detection	Post Setup Scripts	2026-10-29T03:10:41.2544746Z No /tmp/awf-*-chroot-home directories found
+detection	Post Setup Scripts	2026-10-29T03:10:41.2623728Z No /tmp/awf-chroot-* directories found
+detection	Complete job	﻿2026-10-29T03:10:41.2747184Z Evaluate and set job outputs
+detection	Complete job	2026-10-29T03:10:41.2753141Z Set output 'aic'
+detection	Complete job	2026-10-29T03:10:41.2754776Z Set output 'detection_conclusion'
+detection	Complete job	2026-10-29T03:10:41.2755667Z Set output 'detection_success'
+detection	Complete job	2026-10-29T03:10:41.2756094Z Set output 'run_detection'
+detection	Complete job	2026-10-29T03:10:41.2756737Z Cleaning up orphan processes

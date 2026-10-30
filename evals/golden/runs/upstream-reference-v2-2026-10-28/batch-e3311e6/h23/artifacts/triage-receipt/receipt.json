@@ -1,0 +1,47 @@
+{
+  "status": "published",
+  "proposal": {
+    "label": "needs reproducible example",
+    "comment": "Could you share a small, shareable dataset (or SQL to create it) that still triggers the error when you run the same `COPY ... TO '(redacted) command, plus the exact `COPY` command you used (including any options) and the complete error/stack trace? Also include whether you use `httpfs` for S3 access and its config/version (or client settings) so we can reproduce intermittent 503s during upload.",
+    "rationale": "The report alleges S3 uploads were throttled and partial writes produced NULLs in NOT NULL columns, but no reproducible input, exact COPY command/options, or httpfs/S3 configuration and full error text are supplied. Without a small dataset plus the precise command and transport config, the failure cannot be reproduced or investigated."
+  },
+  "actions": [
+    "add_comment",
+    "add_label"
+  ],
+  "run_id": "40639796476",
+  "configuration_sha": "e3311e64aa639fb29dd5e4d519a19503d3c2f6ee",
+  "input_sha256": "6b302f42772e0455793f933408f60d0454bf94d1fb0d9b4e50abd953bea97137",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "/comments?per_page=100&page=1",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/comments",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/labels",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

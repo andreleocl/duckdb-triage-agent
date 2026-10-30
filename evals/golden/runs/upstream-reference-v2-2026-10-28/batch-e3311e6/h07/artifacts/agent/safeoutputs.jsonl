@@ -1,0 +1,1 @@
+{"comment":"no_action","label":"no_action","rationale":"The report includes a self-contained SQL reproducer, DuckDB version, client (CLI), OS (mac arm), and clear internal error stack trace. No essential reproduction steps, data, or environment details are missing for first-pass triage.","type":"submit_triage"}

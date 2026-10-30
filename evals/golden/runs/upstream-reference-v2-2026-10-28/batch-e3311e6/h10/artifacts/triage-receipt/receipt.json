@@ -1,0 +1,47 @@
+{
+  "status": "published",
+  "proposal": {
+    "label": "needs more info",
+    "comment": "Thanks \u2014 we can\u2019t reproduce the crash from the information given. Please attach the complete crash output (stderr) or a stack/backtrace produced when DuckDB segfaults, and confirm the exact DuckDB build you used (release tag or commit hash and how it was installed \u2014 e.g. pip wheel, binary download, or built from source). Also provide the OS and CPU architecture (e.g. Ubuntu 22.04 x86_64) and whether the crash reproduces on the latest DuckDB release. With those details we can run an equivalent binary and collect a debugger trace.",
+    "rationale": "The SQL reproducer is complete, but a crashing segfault requires the exact DuckDB build/binary and the crash stderr/stack trace plus OS/CPU to reproduce and debug. Without the build identifier and crash output, the failure cannot be followed."
+  },
+  "actions": [
+    "add_comment",
+    "add_label"
+  ],
+  "run_id": "40633697986",
+  "configuration_sha": "e3311e64aa639fb29dd5e4d519a19503d3c2f6ee",
+  "input_sha256": "bdb56c96dfc81b0567d1271d1765d78d3b6292fb2ab9efc5fdeb4385caa8074d",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "/comments?per_page=100&page=1",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/comments",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/labels",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

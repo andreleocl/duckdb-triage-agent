@@ -1,0 +1,11 @@
+{
+  "purpose": "Verify disabled-start gate without inference or publication",
+  "repository": "andreleocl/duckdb-triage-agent",
+  "issue_number": 4,
+  "workflow_id": 397903855,
+  "configuration_sha": "1b4a032f912acc8c36ab34f46899174ca59dfdfe",
+  "workflow_sha256": "3d9aadda0ba276b04c7de2e1e7e2ebfddb5a21d23af9a0f0dcdd1b5f25ee88bf",
+  "started_at_utc": "2026-10-29T02:49:16.777272+00:00",
+  "expected": "All jobs skipped; no agent or detector execution, no issue mutation",
+  "limitations": "Not an active cancellation or phone test; no billing reconciliation"
+}

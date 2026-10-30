@@ -1,0 +1,47 @@
+{
+  "status": "published",
+  "proposal": {
+    "label": "needs more info",
+    "comment": "Could you provide the build-system files and pip/setuptools versions? Specifically, please attach the contents of `tools/pythonpkg/pyproject.toml` (or `setup.py` if present) and the output of `pip --version` and `python -c \"import setuptools; print(setuptools.__version__)\"`. These will show which build dependency provides `package_build` and whether the build environment installed it.",
+    "rationale": "The report shows a ModuleNotFoundError for `package_build` during pip's isolated build step. Reproducing this requires the package build-system declaration (pyproject.toml or setup.py) to know which build dependency should provide `package_build`, and the reporter's `pip`/`setuptools` versions to determine whether build dependencies are being installed into the isolated environment. Without these files and version details I cannot follow the exact failing setup."
+  },
+  "actions": [
+    "add_comment",
+    "add_label"
+  ],
+  "run_id": "40640682186",
+  "configuration_sha": "e3311e64aa639fb29dd5e4d519a19503d3c2f6ee",
+  "input_sha256": "bc330f865c61340a4e633fcd59a2c24a6c6927ed275663072055bf8fca2d1b4d",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "/comments?per_page=100&page=1",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/comments",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/labels",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

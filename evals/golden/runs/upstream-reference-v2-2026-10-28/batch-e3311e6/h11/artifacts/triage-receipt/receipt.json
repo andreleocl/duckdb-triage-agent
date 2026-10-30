@@ -1,0 +1,20 @@
+{
+  "status": "no_action",
+  "proposal": {
+    "label": null,
+    "comment": null,
+    "rationale": "The report provides a concrete, self-contained MRE, exact DuckDB and extension versions (1.5.5), Python and ipykernel details, OS (Windows 11/Server), and interrupt method. All essential reproduction steps and commands are present so no further clarification is required for first-pass completeness triage."
+  },
+  "actions": [],
+  "run_id": "40634178931",
+  "configuration_sha": "e3311e64aa639fb29dd5e4d519a19503d3c2f6ee",
+  "input_sha256": "865069f10142b45c51b71974eac0b73a079dac4f00e78e983850f420c9adb06f",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "status": "published",
+  "proposal": {
+    "label": "needs reproducible example",
+    "comment": "Could you provide a small, shareable table definition and sample data (e.g., CREATE TABLE + INSERTs or a short CSV) that still shows the difference between `SELECT DISTINCT [Varcharfield]` and `SELECT [Varcharfield] ... GROUP BY [Varcharfield]` when run in DuckDB 1.5, together with the exact DuckDB UI commands you used and the complete outputs of both queries? The sample should reproduce the non-unique results for `DISTINCT` so we can follow the failure.",
+    "rationale": "The report gives the two queries and environment details but no concrete table data or a minimal reproducer. Without a sample dataset or CREATE/INSERT statements that trigger the difference, the failure cannot be reproduced or investigated further."
+  },
+  "actions": [
+    "add_comment",
+    "add_label"
+  ],
+  "run_id": "40634611831",
+  "configuration_sha": "e3311e64aa639fb29dd5e4d519a19503d3c2f6ee",
+  "input_sha256": "77fcc5875087d115b18c093a88fc6b7c6bf0af7f90f9fe4fa0fe851e3cb6651b",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "/comments?per_page=100&page=1",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/comments",
+      "status": "succeeded",
+      "attempt": 1
+    },
+    {
+      "method": "POST",
+      "endpoint": "/labels",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

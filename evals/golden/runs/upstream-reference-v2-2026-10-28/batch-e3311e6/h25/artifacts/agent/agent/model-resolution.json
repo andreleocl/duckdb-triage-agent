@@ -1,0 +1,11 @@
+[
+  {
+    "engine": "codex",
+    "role": "main",
+    "configured_model": "gpt-5-mini",
+    "resolved_model": "gpt-5-mini",
+    "provider": "openai",
+    "status": "exact",
+    "cause": null
+  }
+]

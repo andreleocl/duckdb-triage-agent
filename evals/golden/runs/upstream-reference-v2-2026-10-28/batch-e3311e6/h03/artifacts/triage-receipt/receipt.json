@@ -1,0 +1,20 @@
+{
+  "status": "no_action",
+  "proposal": {
+    "label": null,
+    "comment": null,
+    "rationale": "Report provides a complete, minimal SQL reproducer, DuckDB version (1.5.5), OS, and client; the failure is specific and reproducible as-written. No additional environment or data is required for first-pass triage."
+  },
+  "actions": [],
+  "run_id": "40630341511",
+  "configuration_sha": "e3311e64aa639fb29dd5e4d519a19503d3c2f6ee",
+  "input_sha256": "24975dfbcf6086b59e784e9eeb51a1e451e0a085f7cd98659fc5983162eb3335",
+  "api_operations": [
+    {
+      "method": "GET",
+      "endpoint": "",
+      "status": "succeeded",
+      "attempt": 1
+    }
+  ]
+}

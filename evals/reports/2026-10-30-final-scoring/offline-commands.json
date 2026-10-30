@@ -1,0 +1,36 @@
+{
+  "model_calls": 0,
+  "scoring_commands": [
+    {
+      "command": [
+        "python",
+        "evals/score.py",
+        "--actual",
+        "evals/reports/2026-10-30-final-scoring/actual.jsonl",
+        "--reviews",
+        "evals/reports/2026-10-30-final-scoring/frozen-criteria-reviews.jsonl"
+      ],
+      "exit_code": 1,
+      "stderr": "",
+      "meaning": "1 = complete structured inputs but acceptance gates failed; not a command malfunction."
+    },
+    {
+      "command": [
+        "python",
+        "evals/score.py",
+        "--actual",
+        "evals/reports/2026-10-30-final-scoring/actual.jsonl",
+        "--reviews",
+        "evals/reports/2026-10-30-final-scoring/manual-reviews.jsonl"
+      ],
+      "exit_code": 1,
+      "stderr": "",
+      "meaning": "1 = complete structured inputs but acceptance gates failed; not a command malfunction."
+    }
+  ],
+  "frozen_validation": {
+    "status": "valid",
+    "cases": 28,
+    "agent_runs": 0
+  }
+}

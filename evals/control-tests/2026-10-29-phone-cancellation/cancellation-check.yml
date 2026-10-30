@@ -1,0 +1,14 @@
+name: Cancellation check (no model calls)
+
+on:
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  wait-for-cancellation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Wait for the owner to cancel from a phone
+        run: sleep 600
